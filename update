@@ -1,0 +1,4 @@
+2wwwtmp bbr.pdf
+#
+#cp bbr.pdf /tmp
+#browser http://biostat.mc.vanderbilt.edu/wiki/bin/attach/Main/ClinStat?filename=bbr.pdf;revInfo=1

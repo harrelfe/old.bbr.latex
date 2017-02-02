@@ -1,0 +1,208 @@
+\chapter{General Overview of Biostatistics} \katz{1-3}  \ems{2} \abd{1.1,p.23-4}
+
+\quoteit{There are no routine statistical questions, only questionable
+  statistical routines.}{Sir David R.\ Cox}
+
+\quoteit{It's much easier to get a \emph{result} than it is to get an
+  \emph{answer}.}{Christie Aschwanden, \texttt{FireThirtyEight}}
+
+\section{What is Biostatistics?}
+\bi
+\item Statistics applied to biomedical problems
+\item Decision making in the face of uncertainty or variability
+\item Design and analysis of experiments; detective work in
+  observational studies (in epidemiology, outcomes research, etc.)
+\item Attempt to remove bias or find alternative explanations to those
+  posited by researchers with vested interests
+\item Experimental design, measurement, description, statistical graphics,
+  data analysis, inference
+\ei
+
+To optimize its value, biostatistics needs to be fully integrated into
+biomedical research and we must recognize that experimental design and
+execution (e.g., randomization and masking) are all important.
+
+\subsection{Fundamental Principles of Statistics}
+\bi
+\item Use methods grounded in theory or extensive simulation
+\item Understand uncertainty
+\item Design experiments to maximize information and understand
+  sources of variability
+\item Use all information in data during analysis
+\item Use discovery and estimation procedures not likely to claim that
+  noise is signal
+\item Strive for optimal quantification of evidence about effects
+\item Give decision makers the inputs (\emph{other} than the utility
+  function\footnote{The utility function is also called the loss or
+    cost function.  It specifies, for example, the damage done by
+    making various decisions such as treating patients who don't have
+    the disease or failing to treat those who do.  The optimum Bayes
+    decision is the one that minimizes expected loss.  This decision
+    conditions on full information and uses for example predicted risk
+    rather than whether or not the predicted risk is high.}) that
+  optimize decisions
+\item Present information in ways that are intuitive, maximize
+  information content, and are correctly perceived
+\ei
+
+
+\section{Types of Data Analysis and Inference}
+ \bi
+ \item Description: what happened to \emph{past} patients
+ \item Inference from specific (a sample) to general (a population)
+ \bi
+  \item Hypothesis testing: test a hypothesis about population or
+   long-run effects
+  \item Estimation: approximate a population or long term average
+   quantity
+  \item Prediction: predict the responses of other patients \emph{like yours}
+   based on analysis of patterns of responses in your patients
+  \ei
+\ei
+
+\section{Types of Measurements by Their Role in the Study} \katz{3} \abd{1.3}
+\bi
+ \item Response variable (clinical endpoint, final lab measurements,
+   etc.)
+ \item Independent variable (predictor or descriptor variable) ---
+   something measured when a patient begins to be studied, before the
+   response; often not controllable by 
+   investigator, e.g. sex, weight, height, smoking history
+ \item Adjustment variable (confounder) --- a variable not of major
+   interest but one needing accounting for because it explains an
+   apparent effect of a variable of major interest or because it
+   describes heterogeneity in severity of risk factors across patients
+ \item Experimental variable, e.g. the treatment or dose to which a
+   patient is randomized; this is an independent variable under the
+   control of the researcher
+ \ei
+
+\begin{table}[h!]
+ \caption{Common alternatives for describing independent and response variables}
+\begin{center}
+\begin{tabular}{ll} \hline \hline
+Response variable & Independent variable \\ \hline
+Outcome variable & Exposure variable \\
+Dependent variable & Predictor variable \\
+$y$-variables &  $x$-variable \\
+Case-control group &  Risk factor \\
+ & Explanatory variable \\ \hline \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Proper Response Variables}
+It is too often the case that researchers concoct response variables $Y$
+in such a way that makes the variables \emph{seem} to be easy to
+interpret, but which contain several hidden problems:
+\bi
+\item $Y$ may be a categorization/dichotomization of an underlying
+  continuous response variable.  The cutpoint used for the
+  dichtomization is never consistent with data (see
+  Figure~\ref{fig:info-thresholds}), 
+  is arbitrary (P.~\pageref{pg:info-gia14opt}), and causes a huge loss of
+  statistical information and power (P.~\pageref{pg:info-fed09con}).
+\item $Y$ may be based on a change in a subject's condition whereas
+  what is truly important is the subject's most recent condition
+  (P.~\pageref{pg:change-anova}).
+\item $Y$ may be based on change when the underlying variable is not
+  monotonically related to the ultimate outcome, indicating that
+  positive change is good for some subjects and bad for others
+  (Fig.~\ref{fig:change-suppcr}).
+\ei
+A proper response variable that optimizes power is one that
+\bi
+\item Captures the underlying structure or process
+\item Has low measurement error
+\item Has the highest resolution available, e.g.
+ \bi
+ \item is continuous if the underlying measurement is continuous
+ \item is ordinal with several categories if the underlying
+   measurement is ordinal
+ \item is binary only if the underlying process is truly
+   all-or-nothing
+ \ei
+\item Has the same interpretation for every type of subject, and
+  especially has a direction such that higher values are always good
+  or always bad
+\ei
+
+\section{Types of Measurements According to Coding} \katz{3} \ems{2.2}\abd{1.3}
+\bi
+ \item Binary: yes/no, present/absent
+ \item Categorical (nominal, polytomous, discrete): more than 2 values
+   that are not necessarily in special order
+ \item Ordinal: a categorical variable whose possible values are in a
+   special order, e.g., by severity of symptom or disease; spacing
+   between categories is not assumed to be useful
+  \bi
+  \item Ordinal variables that are not continuous often have heavy
+    ties at one or more values requiring the use of statistical
+    methods that allow for strange distributions and handle ties well
+  \item Continuous are also ordinal but ordinal variables may or may
+    not be continuous
+  \ei
+ \item Count: a discrete variable that (in theory) has no upper limit, e.g. the number of ER visits in a day, the number of traffic accidents in a month
+ \item Continuous: a numeric variable having many possible values
+   representing an underlying spectrum
+ \item Continuous variables have the most statistical information
+  (assuming the raw values are used in the data analysis) and
+  are usually the easiest to standardize across hospitals
+ \item Turning continuous variables
+  into categories by using intervals of values is arbitrary and
+  requires more patients to yield the same statistical information
+  (precision or power)
+ \item Errors are not reduced by categorization unless that's the only
+   way to get a subject to answer the question (e.g.,
+ income\footnote{But note how the Census Bureau tries to maximize the
+ information collected.  They first ask for income in
+ dollars.  Subjects refusing to answer are asked to choose from among
+ 10 or 20 categories.  Those not checking a category are asked to
+ choose from fewer categories.})
+\ei
+
+\section{Preprocessing}\label{sec:overview-preprocessing}
+\bi
+\item In vast majority of situations it is best to analyze the rawest
+  form of the data
+\item Pre-processing of data (e.g., normalization) is sometimes
+  necessary when the data are high-dimensional
+\item Otherwise normalizing factors should be part of the final
+  analysis
+\item A particularly bad practice in animal studies is to subtract or
+  divide by measurements in a control group (or the experimental group
+  at baseline), then to analyze the
+  experimental group as if it is the only group.  Many things go
+  wrong:
+ \bi
+ \item The normalization assumes that there is no biologic variability
+   or measurement error in the control animals' measurements
+ \item The data may have the property that it is inappropriate to
+   either subtract or divide by other groups' measurements.  Division,
+   subtraction, and percent change are highly parametric
+   assumption-laden bases for analysis.
+ \item A correlation between animals is induced by dividing by a
+   random variable
+\ei
+\item A symptom of the problem is a graph in which the
+  experimental group starts off with values 0.0 or 1.0
+\item The only situation in which pre-analysis normalization is OK in
+  small datasets is in pre-post design or certain crossover studies
+  for which it is appropriate to subject baseline values from
+  follow-up values
+\ei
+See also Section~\ref{sec:descript-change}.
+
+\section{Random Variables}
+\bi
+\item A potential measurement $X$
+\item $X$ might mean a blood pressure that will be measured on a
+  randomly chosen US resident
+\item Once the subject is chosen and the measurement is made, we have
+  a sample value of this variable
+\item Statistics often uses $X$ to denote a potentially observed value
+  from some population and $x$ for an already-observed value (i.e., a
+  constant)
+\ei
+
+

@@ -1,0 +1,4 @@
+cd ..
+rsync -ravzu --delete audio/ data.vanderbilt.edu:/home/www/fh/bbr/audio/
+
+

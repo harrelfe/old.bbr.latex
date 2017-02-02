@@ -1,0 +1,14 @@
+## Loading required package: Hmisc
+## Loading required package: lattice
+## Loading required package: survival
+## Loading required package: Formula
+## Loading required package: ggplot2
+## 
+## Attaching package: 'Hmisc'
+## The following objects are masked from 'package:base':
+## 
+##     format.pval, round.POSIXt, trunc.POSIXt, units
+`geom_smooth()` using method = 'gam'
+`geom_smooth()` using method = 'gam'
+Warning: Removed 1439 rows containing non-finite values (stat_smooth).
+Warning: Removed 1439 rows containing missing values (geom_point).

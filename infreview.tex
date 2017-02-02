@@ -1,0 +1,100 @@
+\chapter{Statistical Inference Review}
+\bi
+\item Emphasize confidence limits, which can be computed from adjusted
+  or unadjusted analyses, with or without taking into account multiple
+  comparisons
+\item $P$-values can accompany CLs if formal hypothesis testing needed
+\item When possible construct $P$-values to be consistent with how CLs
+  are computed
+\ei
+
+\section{Types of Analyses}
+\bi
+\item Except for one-sample tests, all tests can be thought of as
+  testing for an association between at least one variable with at
+  least one other variable
+\item Testing for group differences is the same as testing for
+  association between group and response
+\item Testing for association between two continuous variables can be
+  done using correlation (especially for unadjusted analysis) or
+  regression methods; in simple cases the two are equivalent
+\item Testing for association between group and outcome, when there
+  are more than 2 groups which are not in some solid
+  order\footnote{The dose of a drug or the severity of pain are
+    examples of ordered variables.} means comparing a summary of the
+  response between $k$ groups, sometimes in a pairwise fashion
+\ei
+
+\section{Covariable-Unadjusted Analyses}
+Appropriate when
+\bi
+\item Only interested in assessing the relationship between a single
+   $X$ and the response, or
+\item Treatments are randomized and there are no strong prognostic
+   factors that are measureable
+\item Study is observational and variables capturing confounding are
+   unavailable (place strong caveats in the paper)
+\ei
+See ~\ref{chap:ancova}.   %%% ?? TODO
+
+\subsection{Analyzing Paired Responses}
+\begin{center}\begin{tabular}{lll} \hline
+Type of Response & Recommended Test & Most Frequent Test \\ \hline
+binary     & McNemar & McNemar \\
+continuous & Wilcoxon signed-rank & paired $t$-test \\ \hline
+\end{tabular}\end{center}
+
+\subsection{Comparing Two Groups}
+\begin{minipage}{\textwidth}
+\begin{center}\begin{tabular}{lll} \hline
+Type of Response & Recommended Test & Most Frequent Test \\ \hline
+binary     & $2\times 2 \chi^{2}$ & $\chi^{2}$, Fisher's exact test \\
+ordinal    & Wilcoxon 2-sample & Wilcoxon 2-sample \\
+continuous & Wilcoxon 2-sample & 2-sample $t$-test \\
+time to event\footnote{The response variable may be
+  right-censored, which happens if the subject ceased being followed
+     before having the event.  The value of the response variable, for
+   example, for a subject followed 2 years without having the event is
+   2+.} & Cox model\footnote{If the treatment is expected to have more
+   early effect with the effect lessening over time, an accelerated
+   failure time model such as the lognormal model is recommended.}&
+ log-rank\footnote{The log-rank is a special case 
+   of the Cox model.  The Cox model provides slightly more accurate
+   $P$-values than the $\chi^2$ statistic from the log-rank test.} \\
+ \hline
+\end{tabular}\end{center}\end{minipage}
+
+\subsection{Comparing $>2$ Groups}
+\begin{center}\begin{tabular}{lll} \hline
+Type of Response & Recommended Test & Most Frequent Test \\ \hline
+binary     & $r\times 2 \chi^{2}$ & $\chi^{2}$, Fisher's exact test \\
+ordinal    & Kruskal-Wallis & Kruskal-Wallis \\
+continuous & Kruskal-Wallis & ANOVA \\
+time to event & Cox model & log-rank \\ \hline
+\end{tabular}\end{center}
+
+\subsection{Correlating Two Continuous Variables}
+Recommended: Spearman $\rho$ \\
+Most frequently seen: Pearson $r$
+
+\section{Covariable-Adjusted Analyses}
+\bi
+\item To adjust for imbalances in prognostic factors in an
+  observational study or for strong patient heterogeneity in a
+  randomized study
+\item Analysis of covariance is preferred over stratification,
+  especially if continuous adjustment variables are present or there
+  are many adjustment variables
+ \bi
+ \item Continuous response: multiple linear regression with
+   appropriate transformation of $Y$
+ \item Binary response: binary logistic regression model
+ \item Ordinal response: proportional odds ordinal logistic regression
+   model
+ \item Time to event response, possibly right-censored: 
+  \bi
+  \item chronic disease: Cox proportional hazards model
+  \item acute disease: accelerated failure time model
+  \ei
+ \ei
+\ei

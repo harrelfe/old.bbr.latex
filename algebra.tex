@@ -1,0 +1,73 @@
+\chapter{Algebra Review}
+\section{Overview}
+Algebra and probability are underlying frameworks for basic statistics.  The
+following elements of algebra are particularly important:
+\bi
+\item Understanding symbols as variables, and what they can stand for
+\item Factoring out common terms: $axw + bx = x(aw + b)$
+\item Factoring out negation of a series of added terms: $-a - b = -
+  (a + b)$
+\item Simplification of fractions
+\item Addition, subtraction, multiplication, and division of fractions
+\item Exponentiation with both fractional and whole number exponents
+\item Re-writing exponentials of sums: $b^{u + v} = b^{u}\times b^{v}$
+\item Logarithms
+ \bi
+ \item log to the base $b$ of $x$ = $\log_{b}x$ is the number $y$ such
+   that $b^{y} = x$ 
+ \item $\log_{b}b = 1$
+ \item $\log_{b}b^{x} = x \log_{b}b = x$
+ \item $\log_{b}a^{x} = x \log_{b}a$
+ \item $\log_{b}a^{-x} = -x \log_{b}a$
+ \item $\log_{b}(xy) = \log_{b}x + \log_{b}y$
+ \item $\log_{b}\frac{x}{y} = \log_{b}x - \log_{b}y$
+ \item When $b = e = 2.71828\ldots$, the base of the natural log,
+   $\log_{e}(x)$ is often written as $\ln{x}$ or just $\log(x)$
+ \item $\log e = \ln e = 1$
+ \ei
+\item Anti-logarithms: anti-log to the base $b$ of $x$ is $b^{x}$
+ \bi
+ \item The natural anti-logarithm is $e^{x}$, often often written as
+   $\exp(x)$
+ \item Anti-log is the inverse function of log; it ``undoes'' a log
+ \ei
+\item Understanding functions in general, including $\min(x, a)$ and
+  $\max(x, a)$
+\item Understanding indicator variables such as $[x=3]$ which can be
+  thought of as true if $x=3$, false otherwise, or 1 if $x=3$, 0
+  otherwise
+ \bi
+ \item $[x=3]\times y$ is $y$ if $x=3$, 0 otherwise
+ \item $[x=3]\times[y=2] = [x=3 \textrm{~and~} y=2]$
+ \item $[x=3] + 3\times [y=2] = 4$ if $x=3$ and $y=2$, $3$ if $y=2$
+   and $x\neq 3$
+ \item $x\times \max(x, 0) = x^{2}[x>0]$
+ \item $\max(x, 0)$ or $w \times [x>0]$ are algebraic ways of saying
+   to ignore something if a condition is not met
+ \ei
+\item Quadratic equations
+\item Graphing equations
+\ei
+Once you get to multiple regression, some elements of vectors/linear
+algebra are helpful, for example the vector or dot product, also
+called the inner product:
+\bi
+\item Let $x$ stand for a vector of quantities $x_{1}, x_{2}, \ldots,
+  x_{p}$ (e.g., the values of $p$ variables for an animal such as age,
+  blood pressure, etc.)
+\item Let $\beta$ stand for another vector of quantities $\beta_{1},
+  \beta_{2}, \ldots, \beta_{p}$ (e.g., weights / regression
+  coefficients / slopes)
+\item Then $x\beta$ is shorthand for $\beta_{1}x_{1}+\beta_{2}x_{2} +
+  \ldots + \beta_{p}x_{p}$
+\item $x\beta$ might represent a predicted value in multiple
+  regression, and is known then as the \emph{linear predictor}
+\ei
+
+\section{Some Resources}
+\bi
+\item \url{http://tutorial.math.lamar.edu/pdf/Algebra_Cheat_Sheet.pdf}
+\item \url{https://www.khanacademy.org/math/algebra}
+\item \url{http://biostat.mc.vanderbilt.edu/PrereqAlgebra}
+\item \url{http://www.purplemath.com/modules/index.htm}
+\ei

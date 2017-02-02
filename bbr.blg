@@ -1,0 +1,22 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'bbr.blg'
+[41] biber:290> INFO - === Sat Dec 10, 2016, 15:35:18
+[55] Biber.pm:347> INFO - Reading 'bbr.bcf'
+[166] Biber.pm:741> INFO - Found 99 citekeys in bib section 0
+[179] Biber.pm:3150> INFO - Processing section 0
+[222] Biber.pm:3307> INFO - Looking for bibtex format file '/home/harrelfe/bib/harrelfe.bib' for section 0
+[461] bibtex.pm:1124> INFO - Decoding LaTeX character macros into UTF-8
+[711] bibtex.pm:985> INFO - Found BibTeX data source '/home/harrelfe/bib/harrelfe.bib'
+[718] Utils.pm:147> WARN - Duplicate entry key: 'sch16pro' in file '/home/harrelfe/bib/harrelfe.bib', skipping ...
+[2068] Utils.pm:147> WARN - I didn't find a database entry for '[' (section 0)
+[3081] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3081] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3081] Biber.pm:3027> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
+[3082] Biber.pm:3031> INFO - No sort tailoring available for locale 'en-US'
+[3401] bbl.pm:519> INFO - Writing 'bbr.bbl' with encoding 'ascii'
+[3405] Utils.pm:147> WARN - The entry 'amb02sel' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[3415] Utils.pm:147> WARN - The entry 'hol04con' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[3421] Utils.pm:147> WARN - The entry 'par10eff' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[3427] Utils.pm:147> WARN - The entry 'tor85how' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[3430] bbl.pm:615> INFO - Output to bbr.bbl
+[3430] Biber.pm:108> INFO - WARNINGS: 6

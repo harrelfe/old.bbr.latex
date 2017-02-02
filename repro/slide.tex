@@ -1,0 +1,320 @@
+\chapter{Reproducible Research}
+\quoteit{Disconfirmation bias: giving expected results a relatively
+  free pass but rigorously checking non-intuitive results}{\citet{nuz15how}}
+\section{Non-reproducible Research}
+\bi
+\item Misunderstanding statistics
+\item ``Investigator'' moving the target
+\item Lack of a blinded analytic plan
+\item Tweaking instrumentation / removing ``outliers''
+\item Floating definitions of response variables
+\item Pre-statistician ``normalization'' of data and background subtraction 
+\item Poorly studied high-dimensional feature selection
+\item Programming errors
+\item Lack of documentation
+\item Failing to script multiple-step procedures
+ \bi
+ \item using spreadsheets and other interactive approaches for data
+ manipulation
+ \ei
+\item Copying and pasting results into manuscripts
+\item Insufficient detail in scientific articles
+\item No audit trail
+\ei
+
+\section{General Importance of Sound Methodology}
+\subsection{Translation of Research Evidence from Animals to Humans}
+\bi
+\item Screened articles having preventive or therapeutic intervention
+  in in vivo animal model, $> 500$ citations (\citet{hac06tra}) 
+\item 76 ``positive'' studies identified
+\item Median 14 years for potential translation
+\item 37 judged to have good methodological quality (flat over time)
+\item 28 of 76 replicated in human randomized trials; 34 remain untested
+\item $\uparrow$ 10\% methodology score $\uparrow$ odds of
+replication $\times$ 1.28 (0.95 CL 0.97--1.69)
+\item Dose-response demonstrations: $\uparrow$ odds $\times$ 3.3 (1.1--10.1)
+\ei
+Note: The article misinterpreted $P$-values
+
+\subsection{Other Problems}
+\bi
+\item Rhine and ESP: ``the student's extra-sensory perception ability
+has gone through a marked decline''
+\item Floating definitions of $X$ or $Y$: association between physical
+  symmetry and mating behavior; acupuncture
+\item Selective reporting and publication bias
+\item Journals seek confirming rather than conflicting data
+\item Damage caused by hypothesis tests and cutoffs
+\item Ioannidis: $\frac{1}{3}$ of articles in \emph{Nature} never get
+  \textbf{cited}, let alone replicated 
+\item Biologic and lab variability
+\item Unquestioning acceptance of research by the ``famous''
+  \bi
+  \item Weak coupling ratio exhibited by decaying neutrons fell by 10
+    SDs from 1969--2001
+  \ei
+\ei
+
+\subsection{What's Gone Wrong with Omics \& Biomarkers?}
+\bi
+\item Gene expression-based
+prognostic signatures in lung cancer: Ready for clinical use? (\citet{sub10gen})
+\item NSCLC gene expression studies 2002--2009, $n \geq 50$
+\item 16 studies found
+\item Scored on appropriateness of protocol, stat validation, medical
+utility
+\item Average quality score: 3.1 of 7 points
+\item No study showed prediction improvement over known risk factors;
+  many failed to validate
+\item Most studies did not even consider factors in guidelines
+ \bi
+ \item Completeness of resection only considered in 7
+ \item Similar for tumor size
+ \item Some only adjusted for age and sex
+ \ei
+\ei
+
+\subsubsection{Natural History of New Fields}
+\quoteit{
+Each new field has a rapid exponential growth of its literature over
+5--8 years (``new field phase''), followed by an ``established field''
+phase when growth rates are more modest, and then an ``over-maturity''
+phase, where the rates of growth are similar to the growth of the
+scientific literature at large or even smaller.  There is a parallel
+in the spread of an infectious epidemic that emerges rapidly and gets
+established when a large number of scientists (and articles) are
+infected with these concepts.  Then momentum decreases, although many
+scientists remain infected and continue to work on this field.  New
+omics infections continuously arise in the scientific community.}{\citet{ion10exp}}
+
+\includegraphics[width=\textwidth]{nytimes.png}
+
+\section{Strong Inference}
+\quoteit{Cognitive biases are hitting the accelerator of science: the
+  process spotting potentially important scientific relationships.
+  Countering those biases comes down to strengthening the `brake': the
+  ability to slow down, be sceptical of findings and eliminate false
+  positives and dead ends.}{\citet{nuz15how}}
+
+\includegraphics[width=\textwidth]{/home/harrelfe/doc/Papers/scientificMethod/pla64str.png}
+
+\citet{pla64str}
+
+\bi
+\item Devise alternative hypotheses
+\item Devise an experiment with alternative possible outcomes each of
+which will exclude a hypothesis
+\item Carry out the experiment
+\item Repeat
+\item Regular, explicit use of alternative hypotheses \& sharp
+exclusions $\rightarrow$ rapid \& powerful progress
+\item ``Our conclusions \ldots might be invalid if \ldots (i) \ldots
+(ii) \ldots (iii) \ldots We shall describe experiments which eliminate
+these alternatives.''\cite{pla64str}
+\ei
+
+
+\section{Pre-Specified Analytic Plans}
+\quoteit{I have enormous flexibility in how I analyze my data and what
+  I choose to report.  This creates a conflict of interest.  The only
+  way to avoid this is for me to tie my hands in advance.
+  Precommitment to my analysis and reporting plan mitigates the
+  influence of these cognitive biases.}{Brian Nosek, Center for Open
+  Science\cite{nuz15how}}
+
+\bi
+\item Long the norm in multi-center RCTs
+\item Needs to be so in \textbf{all} fields of research using data to
+draw inferences~\cite{rub07des}
+\item Front-load planning with investigator
+ \bi
+ \item too many temptations later once see results (e.g., $P=0.0501$)
+ \ei
+\item SAP is signed, dated, filed
+\item Pre-specification of reasons for exceptions, with exceptions
+documented (when, why, what)
+\item Becoming a policy in VU Biostatistics
+\ei
+
+
+\section{Summary}
+Methodologic experts have much to offer:
+\bi
+\item Biostatisticians and clinical epidemiologists play important
+roles in
+ \bi
+ \item assessing the needed information content for a given problem
+   complexity
+ \item minimizing bias
+ \item maximizing reproducibility
+ \ei
+\item For more information see:
+\bi
+\item \co{ctspedia.org}
+\item \co{reproducibleresearch.net}
+\item \co{groups.google.com/group/reproducible-research}
+\ei
+\ei
+
+\section{Software}\label{sec:repro-software}
+\subsection{Goals of Reproducible Analysis/Reporting}
+\bi
+\item Be able to reproduce your own results
+\item Allow others to reproduce your results
+
+  \quoteit{Time turns each one of us into another person, and by
+    making effort to communicate with strangers, we help ourselves to
+    communicate with our future selves.}{Schwab and Claerbout}
+\item Reproduce an entire report, manuscript, dissertation, book with
+a single system command when changes occur in:
+ \bi
+ \item operating system, stat software, graphics engines, source data, derived
+ variables, analysis, interpretation
+ \ei
+\item Save time
+\item Provide the ultimate documentation of work done for a paper
+\ei
+See \url{http://biostat.mc.vanderbilt.edu/StatReport}
+
+\subsection{History of Literate Programming}
+\bi
+\item Donald Knuth found his own programming to be sub-optimal
+\item Reasons for programming attack not documented in code; code hard to read
+\item Invented \textbf{literate programming} in 1984
+ \bi
+ \item mix code with documentation in same file
+ \item ``pretty printing'' customized to each, using \TeX
+ \item not covered here: a new way of programming
+ \ei
+\item Knuth invented the \co{noweb} system for combining two types of
+ information in one file
+ \bi
+ \item \emph{weaving} to separate non-program code
+ \item \emph{tangling} to separate program code
+ \ei
+\ei
+See \url{http://www.ctan.org/tex-archive/help/LitProg-FAQ}
+\bi
+\item Leslie Lamport made \TeX\ easier to use with a comprehensive
+ macro package \LaTeX\ in 1986
+\item Allows the writer to concern herself with structures of ideas,
+not typesetting
+\item \LaTeX\ is easily modifiable by users: new macros,
+variables, \emph{if-then} structures, executing system commands (Perl,
+etc.), drawing commands, etc.
+\item S system: Chambers, Becker, Wilks of Bell Labs, 1976
+\item \R\ created by Ihaka and Gentleman in 1993, grew partly as a response
+ to non-availability of S-Plus on Linux and Mac
+\item Friedrich Leisch developed Sweave in 2002
+\item Yihui Xie developed \co{knitr} in 2011
+\ei
+
+\begin{figure}\begin{center}{\smaller[-2] A Bad Alternative to \co{knitr}}\\%
+\includegraphics[width=.6\textwidth]{/home/harrelfe/projects/SOM/persMed/excel.png}
+\end{center}\end{figure}
+
+\subsection{\co{knitr} Approach}
+\bi
+\item \co{knitr} is an \R\ package on CRAN
+\item Uses \co{noweb} and an \co{sweave} style in \LaTeX; see
+\url{yihui.name/knitr}, \cite{knitrbook}, \url{http://yihui.github.com/knitr}
+\item \co{knitr} also works with \co{Markdown} and other languages
+\item \co{knitr} is tightly integrated into \co{RStudio}
+\item \emph{Insertions} are a major component
+ \bi
+ \item \R\ printout after code chunk producing the output; plain tables
+ \item single \co{pdf} or \co{postscript} graphic after chunk,
+ generates \LaTeX\ \co{includegraphics} command
+ \item direct insertion of \LaTeX\ code produced by \R\ functions
+ \item computed values inserted outside of code chunks
+ \ei
+\item Major advantages over Microsoft Word: composition time, batch
+ mode, easily maintained scripts, beauty
+\item \co{knitr} produces self-documenting reports with nice graphics,
+to be given to clients
+ \bi
+ \item showing code demonstrates you are not doing ``pushbutton'' research
+ \ei
+\ei
+
+\subsection{\co{knitr} Features}
+\bi
+\item \R\ code set off by lines containing only \verb|<<>>=|
+\item \LaTeX\ text starts with a line containing only \verb|@|
+\item \co{knitr} senses when a chunk produces a graphic (even without
+  \emph{print()} and
+  automatically includes the graphic in \LaTeX
+\item All other lines sent to \LaTeX\ verbatim, \R\ code and output sent to
+  \LaTeX\ by default but this can easily be overridden
+\item Can specify that a chunk produces markup that is directly
+  typeset; this is how complex \LaTeX\ tables generated by \R
+\item Can include calculated variables directly in sentences, e.g.\\
+ \verb|And the final answer is 3|.
+ will produce ``And the final answer is 3.''
+\item Easy to customize chunk options and add advanced features such
+  as automatically creating a \LaTeX\ \co{figure} environment if a
+  caption is given in the chunk header
+\item Setup for advanced features, including code pretty-printing,
+  shown at \url{http://biostat.mc.vanderbilt.edu/KnitrHowto}
+\item Simplified interface to \co{tikz} graphics
+\item Simplified implementation of caching
+\item More automatic pretty--printing; support
+  for \LaTeX\ \co{listings} package built--in
+\ei
+See  \url{http://biostat.mc.vanderbilt.edu/KnitrHowto}
+
+\subsubsection{Summary}
+{\smaller[2]
+Much of research that uses data analysis is not reproducible.
+This can be for a variety of reasons, the most major one being poor
+design and poor science.  Other causes include tweaking of
+instrumentation, the use of poorly studied high-dimensional feature
+selection algorithms, programming errors, lack of adequate
+documentation of what was done, too much copy and paste of results
+into manuscripts, and the use of spreadsheets and other interactive
+data manipulation and analysis tools that do not provide a usable
+audit trail of how results were obtained.  Even when a research
+journal allows the authors the ``luxury'' of having space to describe
+their methods, such text can never be specific enough for readers to
+exactly reproduce what was done.  All too often, the authors
+themselves are not able to reproduce their own results.  Being able to
+reproduce an entire report or manuscript by issuing a single operating
+system command when any element of the data change, the statistical
+computing system is updated, graphics engines are improved, or the
+approach to analysis is improved, is also a major time saver.}
+
+{\smaller[2]
+It has been said that the analysis code provides the ultimate
+documentation of the ``what, when, and how'' for data analyses.  Eminent
+computer scientist Donald Knuth invented literate programming in 1984
+to provide programmers with the ability to mix code with documentation
+in the same file, with ``pretty printing'' customized to each.
+Lamport's \LaTeX, an offshoot of Knuth's \TeX\ typesetting system, became
+a prime tool for printing beautiful program documentation and manuals.
+When Friedrich Leisch developed Sweave in 2002, Knuth's literate
+programming model exploded onto the statistical computing scene with a
+highly functional and easy to use coding standard using \R\ and \LaTeX\
+and for which the Emacs text editor has special dual editing modes
+using ESS.  This approach has now been extended to other computing
+systems and to word processors.  Using \R\ with \LaTeX\ to construct
+reproducible statistical reports remains the most flexible approach
+and yields the most beautiful reports, while using only free software.
+One of the advantages of this platform is that there are many
+high-level \R\ functions for producing \LaTeX\ markup code directly, and
+the output of these functions are easily directly to the \LaTeX\ output
+stream created by \co{knitr}.}
+
+\section{Further Reading}
+An excellent book is \citet{irr}.  See also
+\bi
+\item \url{reproducibleresearch.net}
+\item \url{cran.r-project.org/web/views/ReproducibleResearch.html}
+\item \url{www.nature.com/nature/focus/reproducibility}
+\item \url{biostat.mc.vanderbilt.edu/ReproducibleResearchTutorial}
+\item \url{biostat.mc.vanderbilt.edu/KnitrHowto}
+\item \url{biostat.mc.vanderbilt.edu/StatReport}
+\item \url{groups.google.com/forum/#!forum/reproducible-research}
+\ei
+
+    

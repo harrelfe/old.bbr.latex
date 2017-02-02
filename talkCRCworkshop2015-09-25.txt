@@ -1,0 +1,6 @@
+How Should a Biostatistics Short Course for Biomedical Researchers Be Designed?
+Frank E Harrell Jr
+Professor and Department Chair, Biostatistics
+
+Many researchers do not have the opportunity to enroll in the MSCI or MPH programs.  At our daily biostatistics clinics we see some issues arise frequently, especially related to study design and measurement.  It would accelerate research (as well as assist in understanding data from the health system) if researchers had a better understanding of biostatistical principles, measurement, and data analysis.
+In this informal talk I will summarize the content we have used in previous biostatistics short course sequences (see the first link - Biostatistics in Biomedical Research - at http://biostat.mc.vanderbilt.edu/ClinStat) and solicit input from attendees about the content and format of a new course.  We will also discuss the relative merits of the traditional classroom approach vs. prepackaged videos.

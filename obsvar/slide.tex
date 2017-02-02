@@ -1,0 +1,483 @@
+% Converted obsVar.pdf using newocr.com
+% Usage: knitr slide
+
+
+\chapter{Analysis of Observer Variability and Measurement
+  Agreement}\blfootnote{FE Harrell, 1987}\label{chap:obsvar}
+\section{Intra- and Inter-observer Disagreement}
+Before using a measurement instrument or diagnostic technique
+routinely, a researcher may wish to quantify the extent to which two
+determinations of the measurement, made by two different observers
+or measurement devices, disagree (inter-observer variability).  She
+may also wish to quantify the repeatability of one observer in making
+the measurement at different times (intra-observer variability). To
+make these assessments, she has each observer make the measurement
+for each of a number of experimental units (e.g., subjects).
+
+The measurements being analyzed may be continuous, ordinal, or binary
+(yes/no). Ordinal measurements must be coded such that distances between
+values reflects the relative importance of disagreement. For example, if a
+measurement has the values 1, 2, 3 for poor, fair, good, it is assumed that
+``good'' is as different from ``fair'' as ``fair'' is from
+``poor''. if this is  not the case, a different coding should be used,
+such as coding 0 for ``poor'' if poor should be twice as far from
+``fair'' as ``fair'' is from ``good''. Measurements that are yes/no or
+positive/negative should be coded as 1 or 0. The reason for this will
+be seen below.  
+
+There are many statistical methods for quantifying inter- and
+intra-observer variability.  Correlation coefficients are frequently reported,
+but a perfect correlation can result even when the measurements disagree by a
+factor of 10.  Variance components analysis and intra-class
+correlation are often used, but these make many assumptions, do not
+handle missing data very well, and are difficult to interpret. Some
+analysts, in assessing 
+inter-observer agreement when each observer makes several determinations,
+compute differences between the average determinations for each observer.
+This method clearly yields a biased measurement of inter-observer agreement
+because it cancels the intra-observer variability.
+
+A general and descriptive method for assessing observer variability
+will now be presented. The methods uses a general type of statistic
+called the $U$ statistic, invented by
+Hoeffding~\cite{hoe48cla}\footnote{The Wilcoxon test and the $c$-index
+  are other examples of $U$ statistics.}. For definiteness, an
+analysis for 3 observers and 2 readings per observer will be
+shown. When designing such a study, the researcher should remember
+that the number of experximental units is usually the critical factor
+in determining the precision of estimates. There is not much to gain
+from having each observer make more than a few readings or from having
+30 observers in the study (although if few observers are used, these
+are assumed to be ``typical'' observers).
+
+The intra-observer disagreement for a single subject or unit is defined
+as the average of the intra-observer absolute measurement differences. In
+other words, intra-observer disagreement is the average absolute difference
+between any two measurements from the same observer. The inter-observer
+disagreement for one unit is defined as the average absolute difference
+between any two readings from different observers. Disagreement measures are
+computed separately for each unit and combined over units (by taking the mean
+or median for example) to get an overall summary measure.  Units
+having more readings get more weight.  When a reading is
+missing, that reading does not enter into any calculation and the denominator
+used in finding the mean disagreement is reduced by one.
+
+Suppose that for one patient, observers A, B, and C make the following
+determinations on two separate occasions, all on the
+same patient:
+\begin{center}\begin{tabular}{ccc}
+A & B & C \\
+5,7 & 8,5 & 6,7
+\end{tabular}\end{center}
+For that patient, the mean intra-observer difference is $(|5-7| +
+|8-5| + |6-7|)/3 = \frac{2+3+1}{3} = 2$. The mean inter-observer difference is
+$(|5-8| + |5-5| + |5-6|+ |5-7| + |7-8| + |7-5| + |7-6| + |7-7|+ |8-6|
++ |8-7| + |5-6| + |5-7|)/12 = (3+0+1+2+1+2+1+0+2+1+1+2)/12 =
+\frac{16}{12} = 1.33$. 
+If the first reading for observer A were unobtainable, the mean
+intra-observer difference for that patient would be $(|8-5| + |6-7|)/2
+= \frac{3+1}{2} = 2$ and the mean inter-observer difference would be $(|7-8|
++ |7-5| + |7-6| + |7-7| + |8-6| + |8-7| + |5-6| + |5-7|)/8 =
+(1+2+1+0+2+1+1+2)/8 = \frac{10}{8} = 1.25$. 
+
+The computations are carried out in like manner for each patient and
+summarized as follows:
+
+\begin{center}\begin{tabular}{ccc}
+Patient & Intra-observer & Inter-observer\\
+        & Difference     & Difference\\ \hline
+1 & 2.00 & 1.33\\
+2 & 1.00 & 3.50\\
+3 & 1.50 & 2.66\\
+. & .    & .\\
+. & .    & .\\
+$n$ & . & . \\ \hline
+\textbf{Overall Average} (or median) & 1.77 & 2.23\\
+$Q_{1}$ & 0.30 & 0.38\\
+$Q_{3}$ & 2.15 & 2.84\\
+\end{tabular}\end{center}
+
+Here is an example using \R\ to compute mean inter- and
+intra-observer absolute differences for 4 subjects each assessed
+twice by each of 3 observers.  The first subject consists of data
+above.  The calculations are first done for the first subject alone,
+to check against computations above.
+\begin{Schunk}
+\begin{Sinput}
+d <- expand.grid(rep=1:2, observer=c('A','B','C'), subject=1:4)
+d$y <- c(5,7, 8,5, 6,7,
+         7,6, 8,6, 9,7,
+         7,5, 4,6, 10,11,
+         7,6, 5,6, 9,8)
+d
+\end{Sinput}
+\begin{Soutput}
+   rep observer subject  y
+1    1        A       1  5
+2    2        A       1  7
+3    1        B       1  8
+4    2        B       1  5
+5    1        C       1  6
+6    2        C       1  7
+7    1        A       2  7
+8    2        A       2  6
+9    1        B       2  8
+10   2        B       2  6
+11   1        C       2  9
+12   2        C       2  7
+13   1        A       3  7
+14   2        A       3  5
+15   1        B       3  4
+16   2        B       3  6
+17   1        C       3 10
+18   2        C       3 11
+19   1        A       4  7
+20   2        A       4  6
+21   1        B       4  5
+22   2        B       4  6
+23   1        C       4  9
+24   2        C       4  8
+\end{Soutput}
+\begin{Sinput}
+# Function to compute mean absolute discrepancies
+mad <- function(y, obs, subj) {
+  nintra <- ninter <- sumintra <- suminter <- 0
+  n <- length(y)
+  for(i in 1 : (n - 1)) {
+    for(j in (i + 1) : n) {
+      if(subj[i] == subj[j]) {
+        dif <- abs(y[i] - y[j])
+        if(! is.na(dif)) {
+          if(obs[i] == obs[j]) {
+            nintra   <- nintra + 1
+            sumintra <- sumintra + dif
+          }
+          else {
+            ninter   <- ninter + 1
+            suminter <- suminter + dif
+          }
+        }
+      }
+    }
+  }
+  c(nintra=nintra, intra=sumintra / nintra,
+    ninter=ninter, inter=suminter / ninter)
+}
+  
+# Compute statistics for first subject
+with(subset(d, subject == 1), mad(y, observer, subject))
+\end{Sinput}
+\begin{Soutput}
+   nintra     intra    ninter     inter 
+ 3.000000  2.000000 12.000000  1.333333 
+\end{Soutput}
+\begin{Sinput}
+# Compute for all subjects
+with(d, mad(y, observer, subject))
+\end{Sinput}
+\begin{Soutput}
+   nintra     intra    ninter     inter 
+12.000000  1.583333 48.000000  2.125000 
+\end{Soutput}
+\end{Schunk}
+Zhouwen Liu in the Vanderbilt Department of Biostatistics has
+developed much more general purpose software for this in \R.  Its web
+page is
+\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}.
+The following example loads the source code and runs the above
+example.  The \R\ functions implement bootstrap nonparametric
+percentile confidence limits for mean absolute discrepency measures.
+\begin{Schunk}
+\begin{Sinput}
+source(paste('http://biostat.mc.vanderbilt.edu/wiki/pub/Main',
+             'AnalysisOfObserverVariability/observerVariability_3_3.R',
+             sep='/'))
+\end{Sinput}
+\begin{Soutput}
+YOU ARE RUNNING A DEMO VERSION 3_2 
+\end{Soutput}
+\begin{Sinput}
+require(Hmisc)
+with(d, {
+  intra <- intraVar(subject, observer, y)
+  print(intra)
+  summary(intra)
+  set.seed(2)
+  b=bootStrap(intra, by = 'subject', times=1000)
+  # Get 0.95 CL for mean absolute intra-observer difference
+  print(quantile(b, c(0.025, 0.975)))
+  inter <- interVar(subject, observer, y)
+  print(inter)
+  summary(inter)
+  b <- bootStrap(inter, by = 'subject', times=1000)
+  # Get 0.95 CL for mean absolute inter-observer difference
+  print(quantile(b, c(0.025, 0.975)))
+})
+\end{Sinput}
+\begin{Soutput}
+Intra-Variability 
+
+Measures by Subjects and Raters
+   subject rater variability N
+1        1     A           2 1
+2        1     B           3 1
+3        1     C           1 1
+4        2     A           1 1
+5        2     B           2 1
+6        2     C           2 1
+7        3     A           2 1
+8        3     B           2 1
+9        3     C           1 1
+10       4     A           1 1
+11       4     B           1 1
+12       4     C           1 1
+
+Measures by Subjects
+  subject variability N
+1       1    2.000000 3
+2       2    1.666667 3
+3       3    1.666667 3
+4       4    1.000000 3
+
+Measures by Raters
+  subject variability N
+1       A        1.50 4
+2       B        2.00 4
+3       C        1.25 4
+Intra-variability summary:
+
+Measures by Subjects and Raters
+Variability mean:  1.583333 
+Variability median:  1.5 
+Variability range:  1 3 
+Variability quantile: 
+0%:  1   25%:  1   50%:  1.5   75%:  2   100%:  3 
+
+Measures by Subjects
+Variability mean:  1.583333 
+Variability median:  1.666667 
+Variability range:  1 2 
+Variability quantile: 
+0%:  1   25%:  1.5   50%:  1.666667   75%:  1.75   100%:  2 
+
+Measures by Raters
+Variability mean:  1.583333 
+Variability median:  1.5 
+Variability range:  1.25 2 
+Variability quantile: 
+0%:  1.25   25%:  1.375   50%:  1.5   75%:  1.75   100%:  2 
+    2.5%    97.5% 
+1.166667 1.916667 
+Input object size:	 3320 bytes;	 9 variables
+Renamed variable	 rater 	to rater1 
+Renamed variable	 disagreement 	to variability 
+Dropped variables	 diff,std,auxA1,auxA2 
+New object size:	 1472 bytes;	 5 variables
+Inter-Variability 
+
+Measures for All Pairs of Raters
+   subject rater1 rater2 variability N
+1        1      1      2         1.5 4
+5        2      1      2         1.0 4
+9        3      1      2         1.5 4
+13       4      1      2         1.0 4
+17       1      1      3         1.0 4
+21       2      1      3         1.5 4
+25       3      1      3         4.5 4
+29       4      1      3         2.0 4
+33       1      2      3         1.5 4
+37       2      2      3         1.5 4
+41       3      2      3         5.5 4
+45       4      2      3         3.0 4
+
+Measures by Rater Pairs
+  rater1 rater2 variability  N
+1      1      2       1.250 16
+2      1      3       2.250 16
+3      2      3       2.875 16
+
+Measures by Subjects
+  subject variability  N
+1       1    1.333333 12
+2       2    1.333333 12
+3       3    3.833333 12
+4       4    2.000000 12
+Inter-variability summary:
+Measures for All Pairs of Raters
+Variability mean:  2.125 
+Variability median:  1.5 
+Variability range:  1 5.5 
+Variability quantile: 
+0%:  1   25%:  1.375   50%:  1.5   75%:  2.25   100%:  5.5 
+
+Measures by Rater Pairs only
+Variability mean:  2.125 
+Variability median:  2.25 
+Variability range:  1.25 2.875 
+Variability quantile: 
+0%:  1.25   25%:  1.75   50%:  2.25   75%:  2.5625   100%:  2.875 
+
+Measures by Subjects
+Variability mean:  2.125 
+Variability median:  1.666667 
+Variability range:  1.333333 3.833333 
+Variability quantile: 
+0%:  1.333333   25%:  1.333333   50%:  1.666667   75%:  2.458333   100%:  3.833333 
+    2.5%    97.5% 
+1.333333 3.208333 
+\end{Soutput}
+\end{Schunk}
+From the above output, the 0.95 CL for the mean absolute
+intra-observer difference is $[1.17, 1.92]$ and is $[1.33, 3.21]$ for the
+inter-observer difference.  The bootstrap confidence intervals use the
+cluster bootstrap to account for correlations of multiple readings
+from the same subject.
+
+When the measurement of interest is a yes/no determination such as
+presence or absence of a disease these difference statistics are generalizations of the fraction of units in which there is exact agreement in the yes/no
+determination, when the absolute differences are summarized by averaging. To
+see this, consider the following data with only one observer:
+\begin{center}\begin{tabular}{ccccc}
+Patient & Determinations & $D_{1}, D_{2}$ & Agreement? & $|D_{1} -D_{2}|$\\ \hline
+1 &Y Y& 1 1&Y&0\\
+2 &Y N& 1 0&N&1\\
+3 &N Y& 0 1&N&1\\
+4 &N N& 0 0&Y&0\\
+5 &N N& 0 0&Y&0\\
+6 &Y N& 1 0&N&1\\ \hline
+\end{tabular}\end{center}
+The average $|D_{1} - D_{2}|$ is $\frac{3}{6} = 0.5$ which is equal to the
+proportion of cases in which the two readings disagree.
+
+An advantage of this method of summarizing observer differences is that
+the investigator can judge what is an acceptable difference and he can relate
+this directly to the summary disagreement statistic.
+
+\section{Comparison of Measurements with a Standard}
+When the true measurement is known for each unit (or the true diagnosis
+is known for each patient), similar calculations can he used to quantify the
+extent of errors in the measurements. For each unit, the average (over
+observers) difference from the true value is computed and these differences
+are summarized over the units. For example, if for unit \#1 observer A measures 5 and 7, observer 8 measured 8 and 5, and the true value is 6, the
+average absolute error is $(|5-6|+|7-6|+ |8-6|+|5-6|)/4 = \frac{1+1+2+1}{4}
+= \frac{5}{4} = 1.25$
+
+\section{Special Case: Assessing Agreement In Two Binary Variables}
+\subsection{Measuring Agreement Between Two Observers}
+Suppose that each of $n$ patients undergoes two diagnostic tests that can
+yield only the values positive and negative. The data can be summarized in
+the following frequency table.
+\begin{center}\begin{tabular}{cccc}
+& & Test 2 & \\
+      &   & + - &  \\
+Test 1    & + & a b & g\\
+          & - & c d & h\\
+          &   & e f & n
+\end{tabular}\end{center}
+An estimate of the probability that the two tests agree is 
+$p_{A}=\frac{a+d}{n}$. An approximate 0.95
+confidence interval for the true probability is derived from
+$p_{A} \pm 1.96 \sqrt{p_{A} (1 - p_{A})/n}$~\footnote{A more accurate confidence 
+interval can be obtained using Wilson's method as provided by the \R\
+\co{Hmisc} package \co{binconf} function.}
+If the disease being tested is very rare or very common, the two tests
+will agree with high probability by chance alone. The $\kappa$ statistic is one 
+way to measure agreement that is corrected for chance agreement.
+\begin{equation}
+\kappa = \frac{p_{A} - p_{C}}{1 - p_{C}}
+\end{equation}
+where $p_{C}$ is the expected agreement proportion if the two observers are
+completely independent. The statistic can be simplified to
+\begin{equation}
+\kappa = \frac{2 (ad - bc)}{gf + eh}.
+\end{equation}
+It the two tests are in perfect agreement, $\kappa=1$. If the two agree at the 
+level
+expected by chance, $\kappa=0$. If the level of agreement is less than one would
+obtain by chance alone, $\kappa < 0$.
+
+A formal test of significance of the difference in the probabilities of
+for the two tests is obtained using McNemar's test. The null hypothesis is
+that the probability of + for test 1 is equal to the probability of + for test
+2, or equivalently that the probability of observing a $+-$ is the same as that
+of observing $-+$. The normal deviate test statistic is given by
+\begin{equation}
+z = \frac{b - c}{\sqrt{b + c}}.
+\end{equation}
+
+\subsection{Measuring Agreement Between One Observer and a Standard}
+Suppose that each of n patients is studied with a diagnostic test and
+that the true diagnosis is determined, resulting in the following frequency
+table:
+\begin{center}\begin{tabular}{cccc}
+& & Diagnosis & \\
+          &   & + - &  \\
+Test      & + & a b & g\\
+          & - & c d & h\\
+          &   & e f & n\\
+\end{tabular}\end{center}
+The following measures are frequently used to describe the agreement between
+the test and the true diagnosis.  Here $T^{+}$ denotes a positive test, $D^{-}$ 
+denotes  no disease, etc.
+\begin{center}\begin{tabular}{ccc}
+Quantity & Probability Being Estimated & Formula \\ \hline
+Correct diagnosis probability & Prob$(T = D)$ &  $\frac{a+d}{n}$ \\
+Sensitivity & Prob$(T^{+} | D^{+})$ & $\frac{a}{e}$ \\
+Specificity & Prob$(T^{-} | D^{-})$ & $\frac{d}{f}$ \\
+Accuracy of a positive test & Prob$(D^{+} | T_{+})$ & $\frac{a}{g}$ \\
+Accuracy of a negative test & Prob$(D^{-} | T_{-})$ & $\frac{d}{h}$
+\end{tabular}\end{center}
+The first and last two measures are usually preferred.
+Note that when the disease is very rare or very common, the correct
+diagnosis probability will be high by chance alone. Since the sensitivity and
+specificity are calculated conditional on the diagnosis, the prevalence of
+disease does not directly affect these measures.  But sensitivity and 
+specificity will vary with every patient characteristic related to the actual 
+ignored severity of disease.  
+
+When estimating any of these quantities, Wilson confidence intervals are useful
+adjunct statistics.  A less accurate 0.95 confidence interval is obtained
+from $p \pm 1.96\sqrt{\frac{p(1-p)}{n}}$ where $p$ is the proportion
+and $m$ is its denominator.
+
+
+\section{Problems}
+\begin{enumerate}
+\item Three technicians, using different machines, make 3 readings each. For the
+data that follow, calculate estimates of inter- and intra-technician
+discrepancy.
+\begin{center}\begin{tabular}{ccc}
+ & Technician & \\
+ 1 & 2 & 3 \\ \hline
+ Reading & Reading & Reading \\ \hline
+ 1 2 3 & 1 2 3 & 1 2 3 \\ \hline
+18 17 14 & 16 15 16 & 12 15 12 \\
+20 21 20 & 14 12    & 13 \\
+26 20 23 & 18 20    & 22 24\\
+19 17    & 16       & 21 23\\
+28 24    & 32 29    & 29 25\\ \hline
+\end{tabular}\end{center}
+
+\item Forty-one patients each receive two tests yielding the frequency table
+shown below. Calculate a measure of agreement (or disagreement) along with an
+associated 0.95 confidence interval. Also calculate a chance-corrected measure
+of agreement. Test the null hypothesis that the the tests have the same
+probability of being positive and the same probability of being negative. In
+other words, test the hypothesis that the chance of observing $+-$ is the same
+as observing $-+$.
+\begin{center}\begin{tabular}{ccc}
+ & & Test 2\\
+ & &  + - \\
+Test 1 & + & 29 ~8\\
+       & - & ~0 ~4\\ \hline
+\end{tabular}\end{center}
+\end{enumerate}
+
+\section{References}
+Landis JR, Koch GG: A review of statistical methods in the analysis of
+data arising from observer reliability studies (Part II), \emph{Statistica
+Neerlandica} \textbf{29}:151-619 1975.
+
+Landis JR, Koch GG: An application of hierarchical $\kappa$-type statistics
+in the assessment of majority agreement among multiple observers.
+\emph{Biometrics} \textbf{33}:363-74, 1977.

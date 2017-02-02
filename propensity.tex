@@ -1,0 +1,163 @@
+\chapter{Modeling for Observational Treatment Comparisons}
+\section{Propensity Score}
+\bi
+\item In observational studies comparing treatments, need to adjust
+  for nonrandom treatment selection
+\item Number of confounding variables can be quite large
+\item May be too large to adjust for them using multiple regression,
+  due to overfitting (may have more potential confounders than 
+  outcome events)
+\item Assume that all factors related to treatment selection that are
+  prognostic are collected
+\item Use them in a flexible regression model to predict treatment
+  actually received (e.g., logistic model allowing nonlinear effects)
+\item \textbf{Propensity score} (PS) = estimated probability of getting
+  treatment B vs.\ treatment A
+\item Use of the PS allows one to aggressively
+  adjust for confounders by simulating a randomized trial
+\item Doing an adjusted analysis where the adjustment variable is the
+  PS simultaneously adjusts for all the variables in the
+  score \emph{insofar} as confounding is concerned (but \textbf{not
+    with regard to outcome heterogeneity})
+\item If after adjusting for the score there were a residual imbalance
+  for one of the variables, that would imply that the variable was
+  not correctly modeled in the PS
+\item E.g.: after holding PS constant there are more subjects above
+  age 70 in treatment B; means that age$>70$ is still predictive of
+  treatment received after adjusting for PS, or age$>70$ was not
+  modeled correctly.
+\item An additive (in the logit) model where all continuous baseline variables are splined will result in adequate adjustment in the majority of cases---certainly better than categorization.  Lack of fit will then come from omitted interaction effects.  E.g.: if older males are much more likely to receive treatment B than treatment A than what would be expected from the effects of age and sex alone, adjustment for the additive propensity would not adequately balance for age and sex.
+\ei
+
+\section{Assessing Treatment Effect}
+\bi
+\item Eliminate patients in intervals of PS where there is no overlap
+  between A and B, or include an interaction between treatment and a
+  baseline characteristic\footnote{To quote Gelman and
+    Hill~\cite[Section 10.3]{gel06dat}, ``Ultimately, one good
+    solution may be a multilevel model that includes treatment
+    interactions so that inferences explicitly recognize the decrease
+    precision that can be obtained outside the region of overlap.''}
+\item Many researchers stratify the PS into quintiles, get treatment
+  differences within the quintiles, and average these to get
+  adjustment treatment effects
+\item Often results in imbalances in outer quintiles due to skewed
+  distributions of PS there
+\item Can do a matched pairs analysis but depends on matching
+  tolerance and many patients will be discarded when their case has
+  already been matched
+\item Usually better to adjust for PS in a regression model
+\item Model: $Y = \textrm{treat} + \log\frac{PS}{1-PS} +$
+  nonlinear functions of $\log\frac{PS}{1-PS} +$ important prognostic
+    variables
+\item Prognostic variables need to be in outcome ($Y$) model even
+  though they are also in the PS, to account for subject outcome heterogeneity
+  (susceptibility bias)
+\item If outcome is binary and can afford to ignore prognostic
+  variables, use nonparametric regression to relate PS to outcome
+  separately in actual treatment A vs.\ B groups
+\item Plotting these two curves with PS on $x$-axis and looking at
+  vertical distances between curves is an excellent
+  way to adjust for PS continuously without assuming a model
+\ei
+
+\subsection{Problems with Propensity Score Matching}
+\bi
+\item The choice of the matching algorithm is not principle-based so
+  is mainly arbitrary.  Most matching algorithms are dependent on the
+  order of observations in the dataset.  Arbitrariness of matching
+  algorithms creates a type of non-reproducibility. 
+\item Non-matched observations are discarded, resulting in a loss of
+  precision and power.
+\item Matching not only discards hard-to-match observations (thus
+  helping the analyst correctly concentrate on the propensity overlap
+  region) but also discards many ``good'' matches in the overlap
+  region.
+\item Matching does not do effective interpolation on the interior of
+  the overlap region.
+\item The choice of the main analysis when matching is used is not
+  well worked out in the statistics literature.  Most analysts just
+  ignore the matching during the outcome analysis.
+\item Even with matching one must use covariate adjustment for strong
+  prognostic factors to get the right treatment effects, due to
+  non-collapsibility of odds and hazards ratios.
+\item Matching hides interactions with treatment and covariates.
+\ei
+Most users of propensity score matching do not even entertain the
+notion that the treatment effect may interact with propensity to
+treat, must less entertain the thought of individual patient
+characteristics interacting with treatment.
+
+\section{Recommended Statistical Analysis Plan}
+\be
+\item Be very liberal in selecting a large list of potential confounder variables that are measured pre-treatment.
+\item Model the probability of receiving treatment using a flexible statistical model that makes minimal assumptions (e.g., rich additive model that assumes smooth predictor effects).
+\item Examine the distribution of estimated propensity score separately for the treatment groups.
+\item If there is a non-overlap region of the two distributions, and
+  you don't want to use a more conservative interaction analysis (see below), exclude those subjects from the analysis.  Recursive partitioning can be used to predict membership in the non-overlap region from baseline characteristics so that the research findings with regard to applicability/generalizability can be better understood.
+\item Use covariate adjustment for propensity score for subjects in the overlap region.  Expand logit propensity using a restricted cubic spline so as to not assume linearity in the logit in relating propensity to outcome.
+\item As a secondary analysis use a chunk test to assess whether there
+  is an interaction with propensity to treat and actual treatment.
+  For example, one may find that physicians are correctly judging that
+  one subset of patients should usually be treated a certain way.
+\item Instead of removing subjects outside the overlap region, allow
+  propensity or individual predictors to interact with treatment.
+  Treatment effect estimates in the presence of interactions are
+  self-penalizing for not having sufficient overlap.  Suppose for
+  example that age were the only adjustment covariate and a propensity
+  score was not needed.  Suppose that for those with age less than 70
+  there were sufficiently many subjects from either treatment for
+  every interval of age but that when age exceeded 70 there were only
+  5 subjects on treatment B.  Including an age $\times$ treatment
+  interaction in the model and obtaining the estimated outcome difference 
+  for treatment A vs.\ treatment B as a function of age will have
+  a confidence band with minimum width at the mean age, and
+  above age 70 the confidence band will be very wide.  This is to be
+  expected and is an honest way to report what we know about the
+  treatment effect adjusted for age.   If there were no age $\times$
+  treatment interaction, omitting the interaction term would yield a
+  proper model with a relatively narrow confidence interval, and if
+  the shape of the age relationship were correctly specified the
+  treatment effect estimate would be valid.  So one can say that not
+  having comparable subjects on both treatments for some intervals of
+  covariates means that either (1) inference should be restricted to
+  the overlap region, or (2) the inference is based on model assumptions.
+\ee
+
+\section{Reasons for Failure of Propensity Analysis}
+Propensity analysis may not sufficiently adjust for confounding in nonrandomized studies when
+\bi
+\item prognostic factors that are confounders are not measured and are not highly correlated with factors that are measured
+\item the propensity modeling was too parsimoneous (e.g., if the researchers excluded baseline variables just because they were insignificant)
+\item the propensity model assumed linearity of effects when some were really nonlinear (this would cause an imbalance in something other than the mean to not be handled)
+\item the propensity model should have had important interaction terms that were not included (e.g., if there is only an age imbalance in males)
+\item the researchers attempted to extrapolate beyond ranges of overlap in propensity scores in the two groups (this happens with covariate adjustment sometimes, but can happen with quantile stratification if outer quantiles are very imbalanced)
+\ei
+
+\section{Sensitivity Analysis}
+\bi
+\item For $n$ patients in the analysis, generate $n$ random values of
+  a hypothetical unmeasured confounder $U$
+\item Constrain $U$ so that the effect of $U$ on the response $Y$ is
+  given by an adjusted odds ratio of $OR_{Y}$ and so that $U$'s distribution is
+  unbalanced in group A vs.\ B to the tune of an odds ratio of
+  $OR_{treat}$.
+\item Solve for how large $OR_{Y}$ and $OR_{treat}$ must be before the
+  adjusted treatment effect reverses sign or changes in statistical
+  significance
+\item The larger are $OR_Y$ and $OR_{treat}$ the less plausible it is
+  that such an unmeasured confounder exists
+\ei
+See the \R\ \co{rms} package \co{sensuc} function.
+
+\section{Reasons To Not Use Propensity Analysis}
+Chen et al.~\cite{che16too} demonstrated advantages of using a unified
+regression model to adjust for ``too many'' predictors by using
+penalized maximum likelihood estimation, where the exposure variable
+coefficients are not penalized but all the adjustment variable
+coefficients have a quandratic (ridge) penalty.
+
+\section{Further Reading}
+\href{http://www.stat.columbia.edu/~gelman/arm/chap10.pdf}{Gelman} has
+a nice chapter on causal inference and matching from Gelman and
+Hill~\cite{gel06dat}. 

@@ -1,0 +1,359 @@
+% Usage: knitr slide
+<<echo=FALSE>>=
+require(Hmisc)
+knitrSet('rmsintro', width=80)
+@
+
+\def\apacue{1}
+\chapter{Introduction to the \R\ \co{rms} Package:
+  The Linear Model}\label{chap:rmsintro}
+\begin{flushright}\small
+\textcolor{blue}{From \emph{Biostatistics for Biomedical
+      Research} \\\url{biostat.mc.vanderbilt.edu/ClinStat}}
+\end{flushright}
+Some of the purposes of the \co{rms} package are to
+\bi
+\item make everyday statistical modeling easier to do
+\item make modern statistical methods easy to incorporate into everyday work
+\item make it easy to use the bootstrap to validate models
+\item provide ``model presentation graphics''
+\ei
+  
+\section{Formula Language and Fitting Function}%\sound{rrms-1}
+\bi
+\item Statistical formula in S:
+<<eval=FALSE>>=
+y ~ x1 + x2 + x3
+@
+\co{y} \emph{is modeled as} $\alpha + \beta_{1}x_{1} + \beta_{2}x_{2}
++ \beta_{3} x_{3}$.
+\item \co{y} is the dependent variable/response/outcome, \co{x}'s are
+  predictors (independent variables)
+\item The formula is the first argument to a \emph{fitting}
+  function (just as it is the first argument to a \co{trellis}
+  graphics function)
+\item \co{rms} (\emph{regression modeling strategies}) package~\cite{rrms}
+  makes many aspects of regression modeling
+  and graphical display of model results easier to do
+\item \co{rms} does a lot of bookkeeping to
+  remember details about the \emph{design matrix} for the model and to
+  use these details in making automatic hypothesis tests, estimates,
+  and plots.  The design matrix is the matrix of independent variables
+  after coding them numerically and adding nonlinear and product terms
+  if needed.
+\item \co{rms} package fitting function for ordinary least squares
+  regression (what is often called the \emph{linear model} or
+  \emph{multiple linear regression}): \co{ols}
+\item Example:\ipacue
+<<eval=FALSE>>=
+f <- ols(y ~ age + sys.bp, data=mydata)
+@
+\item \co{age} and \co{sys.bp} are the two predictors (independent
+variables) assumed to have linear and additive effects (do not
+interact or have synergism)
+\item \co{mydata} is an \R\ \emph{data frame} containing at least
+  three columns for the model's variables
+\item \co{f} (the \emph{fit object}) is an \R\ list object, containing
+  coefficients, variances, and many other quantities
+\item Below, the fit object will be \co{f} throughout.  In practice,
+  use any legal \R\  name, e.g. \co{fit.full.model}
+\ei
+
+\section{Operating on the Fit Object}%\sound{rrms-2}
+\bi
+\item Regression coefficient estimates may be obtained by any of the
+  methods listed below
+<<eval=FALSE>>=
+f$coefficients
+f$coef          # abbreviation
+coef(f)         # use the coef extractor function
+coef(f)[1]      # get intercept
+f$coef[2]       # get 2nd coefficient (1st slope)
+f$coef['age']   # get coefficient of age
+coef(f)['age']  # ditto
+@
+\item But often we use \emph{methods} which do something more
+  interesting with the model fit.
+ \begin{description}
+ \item[\co{print(f)}]: print coefficients, standard errors, $t$-test,
+   other statistics; can also just type \co{f} to print
+ \item[\co{fitted(f)}]: compute $\hat{y}$
+ \item[\co{predict(f, newdata)}]: get predicted values, for subjects
+   described in data frame \co{newdata}\footnote{You can get
+     confidence limits for predicted means or predicted individual
+     responses using the \co{conf.int} and \co{conf.type} arguments to
+     \co{predict}.  \co{predict(f)} without the \co{newdata} argument
+     yields the same result as \co{fitted(f)}.}
+ \item[\co{r <- resid(f)}]: compute the vector of $n$ residuals
+   (here, store it in \co{r})
+ \item[\co{formula(f)}]: print the regression formula fitted
+ \item[\co{anova(f)}]: print ANOVA table for all total and partial
+   effects
+ \item[\co{summary(f)}]: print estimates partial effects using
+   meaningful changes in predictors
+ \item[\co{Predict(f)}]: compute predicted values varying a few
+   predictors at a time (convenient for plotting)
+ \item[\co{ggplot(p)}]: plot partial effects, with predictor ranging
+   over the $x$-axis, where \co{p} is the result of \co{Predict}
+ \item[\co{g <- Function(f)}]: create an \R\ function that
+   evaluates the analytic form of the fitted function
+ \item[\co{nomogram(f)}]: draw a nomogram of the model
+ \end{description}
+\ei
+
+\section{The \co{rms} \co{datadist} Function}%sound{rrms-3}%
+\ipacue
+To use \co{Predict, summary}, or \co{nomogram} in the \co{rms}
+  package, you need to let \co{rms} first compute summaries of the
+  distributional characteristics of the predictors:
+<<eval=FALSE>>=
+dd <- datadist(x1,x2,x3,...)   # generic form
+dd <- datadist(age, sys.bp, sex)
+dd <- datadist(mydataframe)    # for a whole data frame
+options(datadist='dd')         # let rms know where to find
+@
+Note that the name \co{dd} can be any name you choose as long as you
+use the same name in quotes to \co{options} that you specify
+(unquoted) to the left of <- \co{datadist(...)}.  It is best to
+invoke \co{datadist} early in your program before fitting any
+models.  That way the \co{datadist} information is stored in the fit
+  object so the model is self-contained.  That allows you to make
+  plots in later sessions without worrying about \co{datadist}.  \\
+\co{datadist} must be re-run if you add a new predictor or recode an
+old one.  You can update it using for example
+<<eval=FALSE>>=
+dd <- datadist(dd, cholesterol, height)
+# Adds or replaces cholesterol, height summary stats in dd
+@
+
+\section{Short Example}\label{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
+Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
+  of Biostatistics} and originally from Landrigan PJ~\emph{et al}, Lancet
+1:708-715, March 29, 1975.  The study was of psychological and
+neurologic well-being of children who lived near a lead smelting
+plant.  The primary outcome measures are the Wechsler full-scale IQ
+score (\co{iqf}) and the finger-wrist tapping score \co{maxfwt}.  The
+dataset is available at \url{vanderbilt.mc.vanderbilt.edu/DataSets}
+and can be automatically downloaded and \co{load()}'d into \R\ using
+the \co{Hmisc} package \co{getHdata} function.  For now we just
+analyze lead exposure levels in 1972 and 1973, age, and
+\co{maxfwt}\footnote{\co{maxfwt} might be better analyzed as an
+  ordinal variable but as will be seen by residual plots it is also
+  reasonably considered to be continuous and to satisfy ordinary
+  regression assumptions.}.
+
+\textbf{Note}: To easily run all the following commands, open \ipacue
+\url{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/code.zip}
+and then open the file \co{8-rmsintro.r} contained in the \co{.zip}
+file using \co{RStudio}.  Commands listed in previous sections were
+not actually executed so they are marked with the \R\ comment symbol
+(\#) and can be ignored.
+
+<<lead>>=
+# For an Rmarkdown version of similar analyses see
+# https://github.com/harrelfe/rscripts/raw/master/lead-ols.md
+require(rms)    # also loads the Hmisc package
+getHdata(lead)
+# Subset variables just so contents() and describe() output is short
+# Override units of measurement to make them legal R expressions
+lead <- upData(lead,
+               keep=c('ld72', 'ld73', 'age', 'maxfwt'),
+               labels=c(age='Age'),
+               units=c(age='years', ld72='mg/100*ml', ld73='mg/100*ml'))
+
+contents(lead)
+describe(lead)   # (*\ipacue*)
+dd <- datadist(lead); options(datadist='dd')
+dd    # show what datadist computed (*\ipacue*)
+# Fit an ordinary linear regression model with 3 predictors assumed linear
+f <- ols(maxfwt ~ age + ld72 + ld73, data=lead)
+f         # same as print(f)  (*\ipacue*)
+coef(f)   # retrieve coefficients
+specs(f, long=TRUE)   # show how parameters are assigned to predictors, (*\ipacue*)
+                      # and predictor distribution summaries driving plots
+g <- Function(f)  # create an R function that represents the fitted model (*\ipacue*)
+# Note that the default values for g's arguments are medians
+g
+# Estimate mean maxfwt at age 10, .1 quantiles of ld72, ld73 and .9 quantile of ld73
+# keeping ld72 at .1 quantile
+g(age=10, ld72=21, ld73=c(21, 47))  # more exposure in 1973 decreased y by 6
+# Get the same estimates another way but also get std. errors (*\ipacue*)
+predict(f, data.frame(age=10, ld72=21, ld73=c(21, 47)), se.fit=TRUE)
+@
+
+\section{Operating on Residuals}\sound{rrms-5}
+Residuals may be summarized and plotted just like any raw data
+variable.
+\bi
+\item To plot residuals vs.\ each predictor, and to make a q-q plot to check normality of residuals, use these examples:
+<<h=5,w=5,top=1>>=
+r <- resid(f)
+par(mfrow=c(2,2))   # 2x2 matrix of plots
+plot(fitted(f), r); abline(h=0)  # yhat vs. r
+with(lead, plot(age,  r));    abline(h=0)
+with(lead, plot(ld73, r));    abline(h=0)
+qqnorm(r)           # linearity indicates normality
+qqline(as.numeric(r))
+@
+\ei
+
+\section{Plotting Partial Effects}\sound{rrms-6}
+\bi
+\item \co{Predict} and \co{ggplot} makes one plot for each predictor
+\item Predictor is on $x$-axis, $\hat{y}$ on the $y$-axis
+\item Predictors not shown in plot are set to constants
+ \bi
+ \item median for continuous predictors
+ \item mode for categorical ones
+ \ei
+\item For categorical predictor, estimates are shown only at data
+  values
+\item 0.95 pointwise confidence limits for $\hat{E}(y|x)$ are shown
+  (add \co{conf.int=FALSE} to \co{Predict()} to suppress CLs)
+\item Example: \ipacue
+<<w=6,h=5>>=
+ggplot(Predict(f))
+@
+\item To take control of which predictors are plotted, or to specify
+  customized options: \ipacue
+<<>>=
+ggplot(Predict(f, age))   # plot age effect, using default range,
+                          # 10th smallest to 10th largest age
+@
+<<>>=
+ggplot(Predict(f, age=3:15))  # plot age=3,4,...,15 (*\ipacue*)
+@
+<<>>=
+ggplot(Predict(f, age=seq(3,16,length=150)))   # plot age=3-16, 150 points (*\ipacue*)
+@
+\item To get confidence limits for $\hat{y}$: \ipacue
+<<>>=
+ggplot(Predict(f, age, conf.type='individual'))
+@
+\item To show both types of 0.99 confidence limits on one plot: \ipacue
+<<>>=
+p1 <- Predict(f, age, conf.int=0.99, conf.type='individual')
+p2 <- Predict(f, age, conf.int=0.99, conf.type='mean')
+p <- rbind(Individual=p1, Mean=p2)
+ggplot(p)
+@
+\item Non-plotted variables are set to reference values (median and
+  mode by default)
+\item To control the settings of non-plotted values use e.g. \ipacue
+<<>>=
+ggplot(Predict(f, ld73, age=3))
+@
+\item To make separate lines for two ages: \ipacue
+<<>>=
+ggplot(Predict(f, ld73, age=c(3,9)))  # add ,conf.int=FALSE to suppress conf. bands
+@
+\item To plot a 3-d surface for two continuous predictors against
+  $\hat{y}$; color coding for predicted mean \co{maxfwt} \ipacue
+<<w=7,h=5>>=
+bplot(Predict(f, ld72, ld73))
+@
+\ei
+
+\section{Nomograms: Overall Depiction of Fitted Models} \sound{rrms-7}\ipacue
+<<w=6,h=4>>=
+plot(nomogram(f))
+@
+See
+\url{http://stats.stackexchange.com/questions/155430/clarifications-regarding-reading-a-nomogram}
+for excellent examples showing how to read such nomograms.
+
+\subsection{Point Estimates for Partial Effects} \sound{rrms-8}\ipacue
+The \co{summary} function can compute point estimates and confidence
+intervals for effects of individual predictors, holding other
+predictors to selected constants.  The constants you hold other
+predictors to will only matter when the other predictors interact with
+the predictor whose effects are being displayed.
+
+How predictors are changed depend on the type of predictor:
+\bi
+\item Categorical predictors: differences against the reference (most
+  frequent) cell by default
+\item Continuous predictors: inter-quartile-range effects by default
+\ei
+The estimated effects depend on the type of model:
+\bi
+\item \co{ols}: differences in means
+\item logistic models: odds ratios and their logs
+\item Cox models: hazard ratios and their logs
+\item quantile regression: differences in quantiles
+\ei
+
+<<>>=
+summary(f)         # inter-quartile-range effects (*\ipacue*)
+summary(f, age=5)  # adjust age to 5 when examining ld72,ld73
+                   # (no effect since no interactions in model)
+summary(f, ld73=c(20, 40))  # effect of changing ld73 from 20 to 40
+@
+
+When a predictor has a linear effect, its slope is the one-unit change
+in $Y$ when the predictor increases by one unit.  So the following
+trick can be used to get a confidence interval for a slope: use
+\co{summary} to get the confidence interval for the one-unit change:
+
+<<>>=
+summary(f, age=5:6)    # starting age irrelevant since age is linear (*\ipacue*)
+@
+
+There is a \co{plot} method for \co{summary} results.  By default it
+shows 0.9, 0.95, and 0.99 confidence limits. \ipacue
+<<h=2.5,top=2>>=
+plot(summary(f))
+@
+
+\section{Getting Predicted Values}\sound{rrms-9}
+\bi
+\item Using \co{predict}
+<<>>=
+predict(f, data.frame(age=3, ld72=21, ld73=21))
+# must specify all variables in the model
+
+predict(f, data.frame(age=c(3, 10), ld72=21, ld73=c(21, 47)))
+# predictions for (3,21,21) and (10,21,47)
+
+newdat <- expand.grid(age=c(4, 8), ld72=c(21, 47), ld73=c(21, 47))
+newdat
+predict(f, newdat)     # 8 predictions
+
+predict(f, newdat, conf.int=0.95)  # also get CLs for mean (*\ipacue*)
+predict(f, newdat, conf.int=0.95, conf.type='individual')  # CLs for indiv.
+@
+See also \co{gendata}.
+\item The brute-force way
+<<>>=
+# Model is b1 + b2*age + b3*ld72 + b4*ld73
+b <- coef(f)
+# For 3 year old with both lead exposures 21
+b[1] + b[2]*3 + b[3]*21 + b[4]*21
+@
+\item Using \co{Function} function \ipacue
+<<>>=
+g <- Function(f)
+g(age=c(3, 8), ld72=21, ld73=21)       # 2 predictions
+g(age=3)              # 3 year old at median ld72, ld73
+@
+\ei
+
+\section{ANOVA}\sound{rrms-10}
+\bi
+\item Use \co{anova(fitobject)} to get all total effects and
+  individual partial effects
+\item Use \co{anova(f,age,sex)} to get combined partial effects of
+  \co{age} and \co{sex}, for example
+\item Store result of \co{anova} in an object in you want to print it
+  various ways, or to plot it:
+<<>>=
+an <- anova(f)
+an                     # same as print(an)
+print(an, 'names')     # print names of variables being tested
+print(an, 'subscripts')# print subscripts in coef(f) (ignoring (*\ipacue*)
+                       # the intercept) being tested
+print(an, 'dots')      # a dot in each position being tested
+anova(f, ld72, ld73)   # combine effects into a 2 d.f. test (*\ipacue*)
+@
+\ei
+\def\apacue{0}

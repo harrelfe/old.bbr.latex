@@ -1,0 +1,288 @@
+\documentclass{report}
+% Usage: rubber -d bbr
+% sudo apt-get install biber
+% biber bbr
+%
+% Short URL: http://goo.gl/jv6vyV
+% Full: http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/bbr.pdf
+% More up to date: http://biostat.mc.vanderbilt.edu/tmp/bbr.pdf
+
+\usepackage[bib=/home/harrelfe/bib/harrelfe.bib]{hslide}
+%\renewcommand{\mpfill}{\hfill}   % see hslide.sty
+
+\usepackage{knitrl}
+%\usepackage{attachfile}   % for attaching audio files
+
+%\newcommand{\sound}[1]{\marginpar{\hfill\textattachfile{#1.mp3}{\includegraphics[width=0.6cm]{sound.png}}}}
+
+\newcommand{\sound}[1]{\marginpar{\href{http://data.vanderbilt.edu/fh/bbr/audio/#1.m3u}{\includegraphics[width=0.45cm]{sound.png}}}}
+
+\newcommand{\movie}[1]{\marginpar{\href{#1}{\includegraphics[width=0.6cm]{movie.png}}}}
+
+\newcommand{\disc}[1]{\marginpar{\href{http://vbiostatcourse.slack.com/messages/bbr/search/#1}{\rotatebox{270}{\fbox{\small\textcolor{blue}{#1}}}}}}
+
+\newcommand{\blog}[1]{\marginpar{\href{http://fharrell.com/#1}{\rotatebox{270}{\fbox{\small\textcolor{blue}{blog}}}}}}
+
+
+\renewcommand{\cite}[1]{\supercite{#1}}
+\newcommand{\citet}[1]{\textcite{#1}}
+\newcommand{\citep}[2]{\parencite[#2]{#1}}  % #2 is page or section #
+
+\newcommand{\attrib}[1]{\vspace{-4ex}\begin{flushright}\textcolor{blue}{\smaller
+      #1}\end{flushright}}
+\newcommand{\quoteit}[2]{~~~~~~\parbox{4.5in}{\normalsize#1}\hfill\parbox{1.5in}{\normalsize\textcolor{blue}{#2}}}
+
+\newcommand{\tsz}{\Large}   % Table size
+\newcommand{\tszs}{\large}  % Next smallest table size
+
+\newcommand{\Co}[1]{\texttt{\smaller #1}}
+\newcommand{\co}[1]{\texttt{\smaller #1}}
+
+\newcommand{\ignore}[1]{}
+
+\newcommand{\btable}[2]{
+    \begin{center}#2
+    \begin{tabular}{#1}
+}
+
+\newcommand{\etable}{
+    \end{tabular}
+    \end{center}
+}
+
+\graphicspath{{R/}{descript/}{htest/}{prop/}{nonpar/}{corr/}{rmsintro/}{reg/}{multgroup/}{ancova/}{change/}{serial/}{obsvar/}{info/}{dx/}{hdata/}{repro/}}
+
+\newcommand{\fig}[3]{\begin{figure}[!htbp]
+        \leavevmode
+        \centerline{\scalebox{#3}{\includegraphics{#1.pdf}}}
+        \caption{\large#2}
+        \label{#1}
+        \end{figure}}
+
+\newcommand{\bfig}[2]{\begin{figure}[!htbp]
+        \leavevmode
+        \centerline{\includegraphics{#1.pdf}}
+        \caption{\large#2}
+        \label{#1}
+        \end{figure}}
+
+
+\renewcommand{\thefootnote}{\alph{footnote}}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+\newcommand{\sfbox}[1]{%
+\setlength{\fboxrule}{0.05pt}\setlength{\fboxsep}{1pt}%
+\fbox{\scriptsize #1}%
+\setlength{\fboxrule}{0.4pt}\setlength{\fboxsep}{3pt}}
+
+%\newcommand{\rref}[1]{\marginpar{\sfbox{#1}}}
+%\newcommand{\ems}[1]{\marginpar{\sfbox{EMS$#1$}}}
+\newcommand{\ems}[1]{}
+%\newcommand{\abd}[1]{\marginpar{\parbox{1in}{\textcolor{blue}{ABD$#1$}}}}
+%\newcommand{\abd}[1]{\textcolor{blue}{\sfbox{ABD$#1$}}}
+%\newcommand{\rms}[1]{\marginpar{\parbox{1in}{\textcolor{blue}{\sfbox{RMS$#1$}}}}}
+%\newcommand{\rms}[1]{\textcolor{blue}{\sfbox{RMS$#1$}}}
+%\newcommand{\bookref}[2]{\marginpar{\hfill\textcolor{blue}{\small#1#2}}}
+\newcommand{\bookref}[2]{\marginpar{\rotatebox{270}{\textcolor{blue}{\small#1#2}}}}
+\newcommand{\abd}[1]{\bookref{ABD}{#1}}
+\newcommand{\rms}[1]{\bookref{RMS}{#1}}
+%\setlength\marginparwidth{1.5in}
+%\setlength\marginparsep{-0.5in} ?
+\newcommand{\ros}[1]{}
+\newcommand{\altman}[1]{}
+\newcommand{\katz}[1]{}
+
+\newcommand{\twoheadleftarrow}{<\leftarrow}
+
+\begin{document}
+\author{ }
+
+\vspace*{\stretch{1}}
+\noindent\rule{\linewidth}{1mm}
+\begin{flushright}
+\Huge
+\textsc{Biostatistics for\\Biomedical Research}\\[2ex]
+%Sessions 1, 3--4, 6, 7 \\[2ex]
+\huge Frank E Harrell Jr \\ James C Slaughter \\
+\Large
+Department of Biostatistics \\
+Vanderbilt University School of Medicine \\
+\texttt{f.harrell@vanderbilt.edu} \\ \texttt{james.c.slaughter@vanderbilt.edu}
+\\[2ex] \url{biostat.mc.vanderbilt.edu/ClinStat}\\
+Questions/discussions:\\Slack channel \texttt{bbr} in 
+\href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
+Blog: \href{http://fharrell.com}{fharrell.com}
+\\[2ex]
+\small
+\end{flushright}
+\rule{\linewidth}{1mm}
+\vspace*{\stretch{2}}
+\begin{center}
+\vspace{.5in}
+\small
+Copyright 2001-2017 FE Harrell \& JC Slaughter ~~~ All Rights Reserved
+\\ \hfill \scriptsize Updated \today
+\end{center}
+
+\thispagestyle{empty}
+\pagenumbering{roman}
+\pagestyle{headings}
+
+\setcounter{tocdepth}{1}
+%{\smaller \textbf{Glossary of statistical terms}:
+%\url{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/glossary.pdf}}
+
+
+\tableofcontents
+\bigskip
+\need 3.5in
+\textbf{Changes Since 2015-03-26}\footnote{As of 2015-12-06 chapters after
+chapter 1 are renumbered by increasing by 1 because of insertion of algebra
+review chapter.}
+
+\begin{center}\small
+\begin{tabular}{lll}
+Section & Date Modified & Description \\ \hline
+9.11    & 2015-04-02 & New section on model validation \\
+3.3.5   & 2015-04-07 & Color image plots showing interactions \\
+4       & 2015-04-12 & Added \R\ code for all calculations \\
+1.4     & 2015-04-14 & Added how-to REDCap enhanced import \\
+17.7    & 2015-04-17 & New section \\
+16.2.1  & 2015-04-21 & New section \\
+1-3     & 2015-04-21 & Added section numbers in ABD \\
+4.1, 4.10 & 2015-04-22 & New sections \\
+1.2-1.3 & 2015-04-23 & Re-wrote section 1.3, slight change to 1.2\\
+1.4     & 2015-04-25 & Fetch importREDCap function in a new way\\
+4.10    & 2015-04-25 & New subsection on multiplicity\\
+13      & 2015-04-26 & Added back several missing pages\\
+code.zip&            & Updated\\
+1.3     & 2015-05-03 & Added options() before use getRs\\
+1.3     & 2015-05-04 & Added screenshots of RStudio setup\\
+4.3     & 2015-05-05 & Clarified Bayesian/frequentist example and
+                       added interim analysis\\
+3       & 2015-05-06 & Improved formatting of 2 graphs\\
+9       & 2015-05-18 & Added more output in lead case study\\
+1.4, 1.5& 2015-05-19 & New sections with info about chunk headers, R
+                       Markdown\\
+12.6.1  & 2015-05-29 & New subsection on relative vs. absolute risk
+                       for HTE\\
+12.6.2  & 2015-05-31 & New example showing $|$risk reduction$|$ by\\
+        &            & background risk and interacting factor\\
+1.6-1.8 & 2015-06-24 & Edited section, added new csv import example\\
+20      & 2015-10-18 & Added quotes and new reference\\
+9.11    & 2015-10-21 & Added text about what model validation really
+                       does\\
+18.3    & 2015-10-23 & Expanded decision making steps\\
+2       & 2015-12-06 & New chapter - algebra overview\\
+10      & 2015-12-06 & Expanded with more bullet points\\
+10.5.4  & 2015-12-30 & Added code to run least squares fitting demo\\
+1.1     & 2016-01-09 & Added new R specialty packages for biomedical research\\
+10      & 2016-01-10 & Added hyperlink to a Youtube video for the start of\\
+        &            & the chapter, and audio hyperlinks for other sections,\\
+        &            & with audio cues indicated with red letters in
+                       right margin\\
+8.5.2   & 2016-01-20 & Improve correlation precision graph\\
+        & 2016-01-20 & Updated ggplot2 twice for stat\_binhex call\\
+10.6    & 2016-01-23 & Removed 2 subsections that duplicated RMS\\
+14.8    & 2016-01-31 & Added video for regression to the mean\\
+10.10.4 & 2016-02-02 & Inserted 1-line section to refer to chapter 9 for full example\\
+9       & 2016-05-28 & Added text giving the reasons for the \co{rms} package\\
+17.1,17.3-4    &            & More information about propensity score
+                              analysis\\
+4.3.2   & 2016-06-21 & Added frequency multi-way dot chart\\
+17.6    & 2016-12-01 & New short section on alternatives to
+                       propensity\\
+17      & 2016-12-04 & Added material on covariate interactions\\
+5.4     & 2016-12-10 & Added best reference on misinterpretations of\\
+        &            & p-values, with quotes in new subsection 5.4.1\\
+        & 2017-01-25 & Began adding slack discussion keys\\
+20.3    & 2017-02-01 & Suggested stat plan wording for ranking genes\\
+13      &            & Slack discussion keys added\\
+\hline
+\end{tabular}\end{center}
+
+Blue symbols in the right margin starting with ABD designate
+section numbers (and occasionally page numbers preceeded by $p$)
+% in Rosner's sixth edition (numbers given by R$nn$), page numbers in
+% Altman, Machin, Bryant, and Gardner (numbers given by A$nn$),
+% section numbers in Katz (numbers given by K$nn$), or section numbers
+%in Essential Medical Statistics (EMS$nn$) by Kirkwood and Sterne,
+%second edition (2003).}
+in \emph{The Analysis of Biological Data, Second Edition} by MC Whitlock and D
+Schluter, Greenwood Village CO, Roberts and Company, 2015.  Likewise, right
+blue symbols starting with RMS designate section numbers in \emph{Regression
+Modeling Strategies, 2nd ed.} by FE Harrell, Springer, 2015.
+
+\includegraphics[width=0.6cm]{movie.png} in the right margin indicates
+a hyperlink to a YouTube video related to the subject.
+
+\includegraphics[width=0.6cm]{sound.png} in the right margin is a
+hyperlink to an audio file\footnote{The first time you click on one of
+  these, some browsers download the audio file and give you the
+  opportunity to right click to open the file on your local audio
+  player, then the browser asks if you always want to open files of
+  this type.  Select ``yes''.} elaborating on the notes.  Red letters and
+numbers in the right margin are cues referred to within the audio
+recordings.
+
+\href{http://data.vanderbilt.edu/fh/bbr/audio/all.m3u}{Here} is a link
+to the playlist for all audio files in these notes.
+
+Rotated boxed blue text in the right margin at the start of a section
+represents \disc{howto}
+the mnemonic key for linking to discussions about that section in
+\url{vbiostatcourse.slack.com} channel \verb|#bbr|.  Anyone starting a
+new discussion about a topic related to the section should include the
+mnemonic somewhere in the posting,
+and the posting should be marked to \co{slack} as threaded.  The
+mnemonic in the right margin is also a hyperlink to a search in the
+\verb|bbr| channel for messages containing the mnemonic.  When you
+click on it the relevant messages will appear in the search results on
+the right side of the \co{slack} browser window.
+
+Members of
+the \verb|slack| group can also create submnemonics for subsections or
+other narrower-scope parts of the notes.  When creating keys ``on the
+fly,'' use names of the form \verb|chapterkey-sectionkey-yourkey|
+where \verb|sectionkey| is defined in the notes.
+That way a search on \verb|chapterkey-sectionkey| will also bring up
+notes related to \verb|yourkey|.
+
+Several longer and more discussed subsections in the text have already
+been given short keys in these notes.
+
+\textcolor{blue}{blog} in the right margin is a link to a blog entry
+that further discusses the topic.
+
+\clearpage
+\pagenumbering{bychapter}
+
+\Large
+%\huge
+
+\input{R/slide}
+\input{algebra}
+\input{overview}
+\input{descript/slide}
+\input{htest/slide}
+\input{prop/slide}
+\input{nonpar/slide}
+\input{corr/slide}
+\input{rmsintro/slide}
+\input{reg/slide}
+\input{multgroup/slide}
+\input{infreview}
+\input{ancova/slide}
+\input{change/slide}
+\input{serial/slide}
+\input{obsvar/slide}
+\input{propensity}
+\input{info/slide}
+\input{dx/slide}
+\input{hdata/slide}
+\input{repro/slide}
+
+\dobib
+\end{document}

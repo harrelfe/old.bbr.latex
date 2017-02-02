@@ -1,0 +1,57 @@
+pushd ~/doc/bbr
+
+rtangle R/slide
+mv -f slide.R Tangle/1-R.r
+
+rtangle descript/slide
+mv -f slide.R Tangle/4-descriptive.r
+
+rtangle htest/slide
+mv -f slide.R Tangle/5-hypothesis.r
+
+rtangle prop/slide
+mv -f slide.R Tangle/6-proportions.r
+
+rtangle nonpar/slide
+mv -f slide.R Tangle/7-nonparametric.r
+
+rtangle corr/slide
+mv -f slide.R Tangle/8-correlation.r
+
+rtangle rmsintro/slide
+mv -f slide.R Tangle/9-rmsintro.r
+
+rtangle reg/slide
+mv -f slide.R Tangle/10-regression.r
+
+rtangle multgroup/slide
+mv -f slide.R Tangle/11-multiple.r
+
+rtangle ancova/slide
+mv -f slide.R Tangle/13-ancova.r
+
+rtangle change/slide
+mv -f slide.R Tangle/14-transformations.r
+
+rtangle serial/slide
+mv -f slide.R Tangle/15-serial.r
+
+rtangle obsvar/slide
+mv -f slide.R Tangle/16-observer.r
+
+rtangle info/slide
+mv -f slide.R Tangle/18-information.r
+
+rtangle dx/slide
+mv -f slide.R Tangle/19-diagnosis.r
+
+rtangle hdata/slide
+mv -f slide.R Tangle/20-highDimensional.r
+
+rtangle repro/slide
+mv -f slide.R Tangle/21-reproducible.r
+
+cd Tangle
+rm -f /tmp/code.zip
+zip /tmp/code *.r
+browser http://biostat.mc.vanderbilt.edu/wiki/bin/attach/Main/ClinStat?filename=code.zip;revInfo=1

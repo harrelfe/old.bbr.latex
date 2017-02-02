@@ -1,0 +1,3382 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{aka97pow}{article}{}
+      \name{author}{3}{}{%
+        {{hash=593a1c8eceb34ba5b041c20d2ac6c979}{%
+           family={Akazawa},
+           family_i={A\bibinitperiod},
+           given={Kouhei},
+           given_i={K\bibinitperiod}}}%
+        {{hash=4ddf20f01b8072af3d073d6b7fe1b247}{%
+           family={Nakamura},
+           family_i={N\bibinitperiod},
+           given={Tsuyoshi},
+           given_i={T\bibinitperiod}}}%
+        {{hash=2b64348858901fcf6fe5bb6e44cf244d}{%
+           family={Palesch},
+           family_i={P\bibinitperiod},
+           given={Yuko},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{7558c36879de88536859b76a508d19a5}
+      \strng{fullhash}{7558c36879de88536859b76a508d19a5}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Power of logrank test and {Cox} regression model in clinical trials with heterogeneous samples}
+      \field{volume}{16}
+      \field{year}{1997}
+      \field{pages}{583\bibrangedash 597}
+      \range{pages}{15}
+      \keyw{baseline-characteristics,covariable-adjustment,loss-of-power-of-unadjusted-tests,model-identification,model-misspecification,quantifying-prognostic-spectrum-of-adjustors,simulation-setup,*import}
+    \endentry
+    \entry{ali09fac}{article}{}
+      \name{author}{6}{}{%
+        {{hash=c3c7008f6c18a5274b1919a4e3c48b5b}{%
+           family={Aliferis},
+           family_i={A\bibinitperiod},
+           given={Constantin\bibnamedelima F.},
+           given_i={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=91d5f7a78d678a2305f4c39f861284c6}{%
+           family={Statnikov},
+           family_i={S\bibinitperiod},
+           given={Alexander},
+           given_i={A\bibinitperiod}}}%
+        {{hash=cc54d70ad26f30d64590a823f13f93c3}{%
+           family={Tsamardinos},
+           family_i={T\bibinitperiod},
+           given={Ioannis},
+           given_i={I\bibinitperiod}}}%
+        {{hash=67eabb308992c1264ecb3ecf53d70feb}{%
+           family={Schildcrout},
+           family_i={S\bibinitperiod},
+           given={Jonathan\bibnamedelima S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=eefdd3e83a0c01b9d6fb4ce80d3641c1}{%
+           family={Shepherd},
+           family_i={S\bibinitperiod},
+           given={Bryan\bibnamedelima E.},
+           given_i={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7183e905970fc3dc29a257cc24d2ac16}
+      \strng{fullhash}{c8ae12544540c5d207c6b05fbf9cab73}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{refutation of mic05pre}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{3}
+      \field{title}{{Factors influencing the statistical power of complex data analysis protocols for molecular signature development from microarray data}}
+      \field{volume}{4}
+      \field{year}{2009}
+      \keyw{*import}
+    \endentry
+    \entry{alt95abs}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7f3cabee516989b3c7ca06ddcedbdae8}{%
+           family={Altman},
+           family_i={A\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=8ce0d226aa7701c7c27d40924119e85f}{%
+           family={Bland},
+           family_i={B\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{81e778a43f396952af2da92c9d50eb7c}
+      \strng{fullhash}{81e778a43f396952af2da92c9d50eb7c}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ}
+      \field{title}{{Absence of evidence is not evidence of absence}}
+      \field{volume}{311}
+      \field{year}{1995}
+      \field{pages}{485}
+      \range{pages}{1}
+      \keyw{interpretation-of-negative-or-nonsignificant-findings,statistical-significance,teaching-mds,*import}
+    \endentry
+    \entry{amb02sim}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f8e884bbbe32c6130579c9d57fa2a6b2}{%
+           family={Ambler},
+           family_i={A\bibinitperiod},
+           given={Gareth},
+           given_i={G\bibinitperiod}}}%
+        {{hash=fe5acb0cb5969eb0c79947f2e4e54c1b}{%
+           family={Brady},
+           family_i={B\bibinitperiod},
+           given={Anthony\bibnamedelima R.},
+           given_i={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d77ac0af604c52daf07a18aced65b51b}{%
+           family={Royston},
+           family_i={R\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Ltd.}%
+      }
+      \strng{namehash}{fd62e464b95eaf6b279acb6219abf384}
+      \strng{fullhash}{fd62e464b95eaf6b279acb6219abf384}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Prognostic models are designed to predict a clinical outcome in individuals or groups of individuals with a particular disease or condition. To avoid bias many researchers advocate the use of full models developed by prespecifying predictors. Variable selection is not employed and the resulting models may be large and complicated. In practice more parsimonious models that retain most of the prognostic information may be preferred. We investigate the effect on various performance measures, including mean square error and prognostic classification, of three methods for estimating full models (including penalized estimation and Tibshirani's lasso) and consider two methods (backwards elimination and a new proposal called stepdown) for simplifying full models. Simulation studies based on two medical data sets suggest that simplified models can be found that perform nearly as well as, or sometimes even better than, full models. Optimizing the Akaike information criterion appears to be appropriate for choosing the degree of simplification.}}
+      \field{annotation}{ordinary backward stepdown worked well when there was a large fraction of truly irrelevant predictors}
+      \field{issn}{0277-6715}
+      \field{journaltitle}{Stat Med}
+      \field{month}{12}
+      \field{number}{24}
+      \field{title}{{Simplifying a prognostic model: a simulation study based on clinical data.}}
+      \field{volume}{21}
+      \field{year}{2002}
+      \field{pages}{3803\bibrangedash 3822}
+      \range{pages}{20}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.1422
+      \endverb
+      \keyw{aic,model-approximation,model-simplification,penalization,pre-conditioning,prognosis,roc,variable-selection}
+    \endentry
+    \entry{amb02sel}{article}{}
+      \name{author}{2}{}{%
+        {{hash=19389a924fd1c6b38f98e05cb4427ef8}{%
+           family={Ambroise},
+           family_i={A\bibinitperiod},
+           given={Christophe},
+           given_i={C\bibinitperiod}}}%
+        {{hash=09586cb2d90a2336087ab7943b65700b}{%
+           family={McLachlan},
+           family_i={M\bibinitperiod},
+           given={Geoffrey\bibnamedelima J.},
+           given_i={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Laboratoire Heudiasyc, Unit\'{e} Mixte de Recherche/Centre National de la Recherche Scientifique 6599, 60200 Compi\`{e}gne, France.}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{8a7b33c0f4fa81d37dac168fe596a6f5}
+      \strng{fullhash}{8a7b33c0f4fa81d37dac168fe596a6f5}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{In the context of cancer diagnosis and treatment, we consider the problem of constructing an accurate prediction rule on the basis of a relatively small number of tumor tissue samples of known type containing the expression data on very many (possibly thousands) genes. Recently, results have been presented in the literature suggesting that it is possible to construct a prediction rule from only a few genes such that it has a negligible prediction error rate. However, in these results the test error or the leave-one-out cross-validated error is calculated without allowance for the selection bias. There is no allowance because the rule is either tested on tissue samples that were used in the first instance to select the genes being used in the rule or because the cross-validation of the rule is not external to the selection process; that is, gene selection is not performed in training the rule at each stage of the cross-validation process. We describe how in practice the selection bias can be assessed and corrected for by either performing a cross-validation or applying the bootstrap external to the selection process. We recommend using 10-fold rather than leave-one-out cross-validation, and concerning the bootstrap, we suggest using the so-called .632+ bootstrap error estimate designed to handle overfitted prediction rules. Using two published data sets, we demonstrate that when correction is made for the selection bias, the cross-validated error is no longer zero for a subset of only a few genes.}}
+      \field{annotation}{Relied on an improper accuracy score (proportion classified correct) so had to use the .632 bootstrap unnecessarily}
+      \field{issn}{1091-6490}
+      \field{journaltitle}{PNASs}
+      \field{month}{05}
+      \field{number}{10}
+      \field{title}{{Selection bias in gene extraction on the basis of microarray gene-expression data}}
+      \field{volume}{99}
+      \field{year}{2002}
+      \field{pages}{6562\bibrangedash 6566}
+      \range{pages}{5}
+      \verb{url}
+      \verb http://dx.doi.org/10.1073/pnas.102102699
+      \endverb
+      \keyw{bad-biomarker-research,bad-science,bad-statistics,model-uncertainty,selection-bias,univariable-screening}
+    \endentry
+    \entry{and99tes}{article}{}
+      \name{author}{3}{}{%
+        {{hash=76802634583cc6e143aad623805fe588}{%
+           family={Andersen},
+           family_i={A\bibinitperiod},
+           given={Per\bibnamedelima K.},
+           given_i={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e30181ada09296d122368d4f55950d9e}{%
+           family={Klein},
+           family_i={K\bibinitperiod},
+           given={John\bibnamedelima P.},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=4b49b026d58f56324f865cb098d5c795}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={{Mei-Jie}},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{68e4d5d290aff6ddb06a8aac205838b0}
+      \strng{fullhash}{68e4d5d290aff6ddb06a8aac205838b0}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Testing for centre effects in multi-centre survival studies: {A} monte carlo comparison of fixed and random effects tests}
+      \field{volume}{18}
+      \field{year}{1999}
+      \field{pages}{1489\bibrangedash 1500}
+      \range{pages}{12}
+      \keyw{center-effects,fixed-vs-random-effects,frailty-model,ignoring-center-effects-biases-treatment-effect,multi-center-rct,see-sar96hie,*import}
+    \endentry
+    \entry{bes76dev}{article}{}
+      \name{author}{4}{}{%
+        {{hash=92957afdee60bbb0d61bafae944932db}{%
+           family={Best},
+           family_i={B\bibinitperiod},
+           given={William\bibnamedelima R.},
+           given_i={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ac77f9e8bbdd19e9a5ee2d28a5b96e98}{%
+           family={Becktel},
+           family_i={B\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fe1264f7081f84b8d94604e12bf7df54}{%
+           family={Singleton},
+           family_i={S\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           given_i={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=5c46379dfded9598cc27fcc85f22bb31}{%
+           family={Kern},
+           family_i={K\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c1576b4def43cdf7734aec95d8a16e9}
+      \strng{fullhash}{3a7b97910f150f58e09e0614854fecad}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{development of CDAI}
+      \field{journaltitle}{Gastroent}
+      \field{title}{Development of a {Crohn's} disease activity index}
+      \field{volume}{70}
+      \field{year}{1976}
+      \field{pages}{439\bibrangedash 444}
+      \range{pages}{6}
+      \keyw{*import}
+    \endentry
+    \entry{bor07sta}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3d889471ddfc896adb631816a873db7c}{%
+           family={Bordley},
+           family_i={B\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d889471ddfc896adb631816a873db7c}
+      \strng{fullhash}{3d889471ddfc896adb631816a873db7c}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chance}
+      \field{number}{3}
+      \field{title}{{Statistical decisionmaking without math}}
+      \field{volume}{20}
+      \field{year}{2007}
+      \field{pages}{39\bibrangedash 44}
+      \range{pages}{6}
+      \keyw{decision-theory,graphics,statistical-decision-theory,*import}
+    \endentry
+    \entry{bra91usi}{article}{}
+      \name{author}{7}{}{%
+        {{hash=105ad84a12df2fdd813a77db7da16350}{%
+           family={Brazer},
+           family_i={B\bibinitperiod},
+           given={Scott\bibnamedelima R.},
+           given_i={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=9392002a637738771d9359c3e9b6f4c2}{%
+           family={Pancotto},
+           family_i={P\bibinitperiod},
+           given={Frank\bibnamedelima S.},
+           given_i={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=48f18da829d23cefb3eae81519909f11}{%
+           family={{Long\bibnamedelimb III}},
+           family_i={L\bibinitperiod},
+           given={Thomas\bibnamedelima T.},
+           given_i={T\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=50b45a1c90dd4d1dafc38d048202285b}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Kerry\bibnamedelima L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=fafbec400b8318827545bf61301ad9ad}{%
+           family={Tyor},
+           family_i={T\bibinitperiod},
+           given={Malcolm\bibnamedelima P.},
+           given_i={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d692f79096093f10acec1ffac4eceae8}{%
+           family={Pryor},
+           family_i={P\bibinitperiod},
+           given={David\bibnamedelima B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7995169361908828b57bb31d17cdfc3}
+      \strng{fullhash}{3c403d87a3c5983fd6ff7bbed25363af}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Clin Epi}
+      \field{title}{{Using ordinal logistic regression to estimate the likelihood of colorectal neoplasia}}
+      \field{volume}{44}
+      \field{year}{1991}
+      \field{pages}{1263\bibrangedash 1270}
+      \range{pages}{8}
+      \keyw{multivariable-modelling,nomogram,ordinal-logistic-model,ordinal-response,teaching-mds,tutorial,*import}
+    \endentry
+    \entry{bri08ski}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d3b5be24105c393ac5088054f8a1e56d}{%
+           family={Briggs},
+           family_i={B\bibinitperiod},
+           given={William\bibnamedelima M.},
+           given_i={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1308e0c6d9338137b0214248013e13d6}{%
+           family={Zaretzki},
+           family_i={Z\bibinitperiod},
+           given={Russell},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{55f017095e1c9652f49010e6981cd8ec}
+      \strng{fullhash}{55f017095e1c9652f49010e6981cd8ec}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"statistics such as the AUC are not especially relevant to someone who must make a decision about a particular $x\_{c}$. ... ROC curves lack or obscure several quantities that are necessary for evaluating the operational effectiveness of diagnostic tests. ... ROC curves were first used to check how radio \emph{receivers} (like radar receivers) operated over a range of frequencies. ... This is not how most ROC curves are used now, particularly in medicine. The receiver of a diagnostic measurement ... wants to make a decision based on some $x\_{c}$, and is not especially interested in how well he would have done had he used some different cutoff."; in the discussion David Hand states "when integrating to yield the overall AUC measure, it is necessary to decide what weight to give each value in the integration. The AUC implicitly does this using a weighting derived empirically from the data. This is nonsensical. The relative importance of misclassifying a case as a noncase, compared to the reverse, cannot come from the data itself. It must come externally, from considerations of the severity one attaches to the different kinds of misclassifications."; see Lin, Kvam, Lu Stat in Med 28:798-813;2009}
+      \field{journaltitle}{Biometrics}
+      \field{title}{The skill plot: {A} graphical technique for evaluating continuous diagnostic tests (with discussion)}
+      \field{volume}{64}
+      \field{year}{2008}
+      \field{pages}{250\bibrangedash 261}
+      \range{pages}{12}
+      \keyw{diagnosis,diagnostic-accuracy,predictive-accuracy,roc-curve,sensitivity,skill-plot,skill-score,specificity,*import}
+    \endentry
+    \entry{cal82pro}{article}{}
+      \name{author}{8}{}{%
+        {{hash=6a05d65041a0194ef8e05c588297648e}{%
+           family={Califf},
+           family_i={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=407e6b210099b09c1b9a8b61886ac1f0}{%
+           family={McKinnis},
+           family_i={M\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2f5077d247e5abb3499d88830dedff76}{%
+           family={Burks},
+           family_i={B\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=93e65a7c26a296e25f82900fc4bba2ba}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={K.\bibnamedelimi L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0711de322d46c3321ef8f6209f7f7e08}{%
+           family={Harrell\bibnamedelima FE},
+           family_i={H\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={V.\bibnamedelimi S.},
+           given_i={V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=32b0191b476f30a7b406a197a7f182c0}{%
+           family={Pryor},
+           family_i={P\bibinitperiod},
+           given={D.\bibnamedelimi B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3d6f706aa7c76141cd21af4418ee1ffb}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={G.\bibnamedelimi S.},
+           given_i={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=222b57b54523bf54c0bbf1eb3fd5c12c}{%
+           family={Rosati},
+           family_i={R\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{fullhash}{f47063d864b20e30b4de042fd7834e9b}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am J Card}
+      \field{title}{{Prognostic implications of ventricular arrhythmias during 24 hour ambulatory monitoring in patients undergoing cardiac catheterization for coronary artery disease}}
+      \field{volume}{50}
+      \field{year}{1982}
+      \field{pages}{23\bibrangedash 31}
+      \range{pages}{9}
+      \keyw{*import}
+    \endentry
+    \entry{cal89}{article}{}
+      \true{moreauthor}
+      \name{author}{4}{}{%
+        {{hash=6a05d65041a0194ef8e05c588297648e}{%
+           family={Califf},
+           family_i={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=93e65a7c26a296e25f82900fc4bba2ba}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={K.\bibnamedelimi L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9016182f21a5c905980c1e4c4cb3d13b}{%
+           family={Rankin},
+           family_i={R\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{fullhash}{64d1a768a753320a6b1b8b3be75a2648}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA}
+      \field{title}{{The evolution of medical and surgical therapy for coronary artery disease}}
+      \field{volume}{261}
+      \field{year}{1989}
+      \field{pages}{2077\bibrangedash 2086}
+      \range{pages}{10}
+      \keyw{*import}
+    \endentry
+    \entry{che16too}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b6a034d9f1703830c5ffa431afb03b0b}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Qingxia},
+           given_i={Q\bibinitperiod}}}%
+        {{hash=0a106e60dafa64a7b73232bc67dfa404}{%
+           family={Nian},
+           family_i={N\bibinitperiod},
+           given={Hui},
+           given_i={H\bibinitperiod}}}%
+        {{hash=f1c33722bad02d76cf15bd614b7c4efb}{%
+           family={Zhu},
+           family_i={Z\bibinitperiod},
+           given={Yuwei},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=77d4364545b2e2db8c66801e7cd6f275}{%
+           family={Talbot},
+           family_i={T\bibinitperiod},
+           given={H.\bibnamedelimi Keipp},
+           given_i={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=483e1f8f0144d801b56b5d40b83e666c}{%
+           family={Griffin},
+           family_i={G\bibinitperiod},
+           given={Marie\bibnamedelima R.},
+           given_i={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{16859c9bbc326ef540c197c40ef5d5d1}
+      \strng{fullhash}{bfca40c50410f20e40b71aaf685aac19}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{02776715}
+      \field{journaltitle}{Stat Med}
+      \field{month}{11}
+      \field{number}{25}
+      \field{title}{{Too many covariates and too few cases? - a comparative study}}
+      \field{volume}{35}
+      \field{year}{2016}
+      \field{pages}{4546\bibrangedash 4558}
+      \range{pages}{13}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.7021
+      \endverb
+      \keyw{covariable-adjustment,covariate-adjustment,penalization,penalized-estimation,penalized-mle,propensity-score}
+    \endentry
+    \entry{cle84sci}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c04807b4bc38a1601765f6a136d6f17d}{%
+           family={Cleveland},
+           family_i={C\bibinitperiod},
+           given={William\bibnamedelima S.},
+           given_i={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{fullhash}{c04807b4bc38a1601765f6a136d6f17d}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am Statistician}
+      \field{note}{C/R 85v39 p238-9}
+      \field{title}{{Graphs in scientific publications}}
+      \field{volume}{38}
+      \field{year}{1984}
+      \field{pages}{261\bibrangedash 269}
+      \range{pages}{9}
+      \keyw{graphics,reporting,teaching-mds,*import}
+    \endentry
+    \entry{cle94ele}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c04807b4bc38a1601765f6a136d6f17d}{%
+           family={Cleveland},
+           family_i={C\bibinitperiod},
+           given={William\bibnamedelima S.},
+           given_i={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Summit, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Hobart Press}%
+      }
+      \strng{namehash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{fullhash}{c04807b4bc38a1601765f6a136d6f17d}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Elements of Graphing Data}}
+      \field{year}{1994}
+      \keyw{graphics,teaching-mds,*import}
+    \endentry
+    \entry{col00sym}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e7bc9f4af76873f5e1f28ad5d04d44a3}{%
+           family={Cole},
+           family_i={C\bibinitperiod},
+           given={T.\bibnamedelimi J.},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
+      \strng{fullhash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Sympercents: symmetric percentage differences on the 100 $\log_{e}$ scale simplify the presentation of log transformed data}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{3109\bibrangedash 3125}
+      \range{pages}{17}
+      \keyw{change,measuring-change,quantifying-change,teaching-mds,*import}
+    \endentry
+    \entry{cpmp04poi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=067f6e4eb4fd94e6c2a4da95d8d4955f}{%
+           family={{Committee\bibnamedelimb for\bibnamedelimb Proprietary\bibnamedelimb Medicinal\bibnamedelimb Products}},
+           family_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
+      \strng{fullhash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Points to consider on adjustment for baseline covariates}}
+      \field{volume}{23}
+      \field{year}{2004}
+      \field{pages}{701\bibrangedash 709}
+      \range{pages}{9}
+      \keyw{analysis-of-covariance,baseline-covariates,covariate-adjustment,policy,randomized-trials,rct,*import}
+    \endentry
+    \entry{coo96mul}{article}{}
+      \name{author}{2}{}{%
+        {{hash=09148fde1378c22a11130860309653fc}{%
+           family={Cook},
+           family_i={C\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=58c34d4ca1c727bed6d52f58ed046702}{%
+           family={Farewell},
+           family_i={F\bibinitperiod},
+           given={Vern\bibnamedelima T.},
+           given_i={V\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{057c7b87fab177e784cf3bf582711d73}
+      \strng{fullhash}{057c7b87fab177e784cf3bf582711d73}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{argues that if results are intended to be interpreted marginally, there may be no need for controlling experimentwise error rate}
+      \field{journaltitle}{J Roy Stat Soc A}
+      \field{title}{{Multiplicity considerations in the design and analysis of clinical trials}}
+      \field{volume}{159}
+      \field{year}{1996}
+      \field{pages}{93\bibrangedash 110}
+      \range{pages}{18}
+      \keyw{multiple-endpoints,multiple-treatments,multiplicity,p-value-adjustment,type-i-error,*import}
+    \endentry
+    \entry{davis-repmeas}{book}{}
+      \name{author}{1}{}{%
+        {{hash=482cf770fa676e2649acf6116ac94b6a}{%
+           family={Davis},
+           family_i={D\bibinitperiod},
+           given={Charles\bibnamedelima S.},
+           given_i={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{482cf770fa676e2649acf6116ac94b6a}
+      \strng{fullhash}{482cf770fa676e2649acf6116ac94b6a}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Statistical Methods for the Analysis of Repeated Measurements}}
+      \field{year}{2002}
+      \keyw{*import}
+    \endentry
+    \entry{diggle-longit}{book}{}
+      \name{author}{4}{}{%
+        {{hash=76b7c48d58b2b264418f884de95a6d53}{%
+           family={Diggle},
+           family_i={D\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           given_i={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3166cec730c719acf65a88f317a89be2}{%
+           family={Heagerty},
+           family_i={H\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+        {{hash=3259647b1e22a631b8fee654fb161889}{%
+           family={Liang},
+           family_i={L\bibinitperiod},
+           given={Kung-Yee},
+           given_i={K\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=73b25f0d5d5c9411f2f6dc196f0c98ce}{%
+           family={Zeger},
+           family_i={Z\bibinitperiod},
+           given={Scott\bibnamedelima L.},
+           given_i={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford UK}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{3c41592927f50d43a404c94257747d50}
+      \strng{fullhash}{700b93fcbb4fe5125fe4ceb3402a9e41}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{second}
+      \field{title}{{Analysis of Longitudinal Data}}
+      \field{year}{2002}
+      \keyw{*import}
+    \endentry
+    \entry{dupmod}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a650b6aef29395a8edcc25fdd80d715d}{%
+           family={Dupont},
+           family_i={D\bibinitperiod},
+           given={William\bibnamedelima D.},
+           given_i={W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a650b6aef29395a8edcc25fdd80d715d}
+      \strng{fullhash}{a650b6aef29395a8edcc25fdd80d715d}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{second}
+      \field{title}{{Statistical Modeling for Biomedical Researchers}}
+      \field{year}{2008}
+      \keyw{*import}
+    \endentry
+    \entry{edw99mod}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ec58316fb3cb15aaa01b1f3d00a464b1}{%
+           family={Edwards},
+           family_i={E\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Statistics Department, Novo Nordisk}%
+      }
+      \list{location}{1}{%
+        {DK-2880 Bagsvaerd, Denmark. {\tt DEd@novo.dk}}%
+      }
+      \strng{namehash}{ec58316fb3cb15aaa01b1f3d00a464b1}
+      \strng{fullhash}{ec58316fb3cb15aaa01b1f3d00a464b1}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{On model pre-specification in confirmatory randomized studies}}
+      \field{volume}{18}
+      \field{year}{1999}
+      \field{pages}{771\bibrangedash 785}
+      \range{pages}{15}
+      \keyw{analysis-plan,covariable-adjustment-in-rct,pharmaceutical,statistics-sop,*import}
+    \endentry
+    \entry{efr77sti}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5470455fc7dceb3ccf6db38cb22a113d}{%
+           family={Efron},
+           family_i={E\bibinitperiod},
+           given={Bradley},
+           given_i={B\bibinitperiod}}}%
+        {{hash=822c8f70fc11e57b2430a566676cbcf6}{%
+           family={Morris},
+           family_i={M\bibinitperiod},
+           given={Carl},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{05a5d797b9c4e693cf68d8b7d36ce57a}
+      \strng{fullhash}{05a5d797b9c4e693cf68d8b7d36ce57a}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sci Am}
+      \field{number}{5}
+      \field{title}{{Stein's paradox in statistics}}
+      \field{volume}{236}
+      \field{year}{1977}
+      \field{pages}{119\bibrangedash 127}
+      \range{pages}{9}
+      \keyw{baseball-batting-average-example,shrinkage,*import}
+    \endentry
+    \entry{fed09con}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2ebd148a4c49ba68de7a3fce5b3c2e34}{%
+           family={Fedorov},
+           family_i={F\bibinitperiod},
+           given={Valerii},
+           given_i={V\bibinitperiod}}}%
+        {{hash=0b06edf3cca60b251cb08c8b234acadb}{%
+           family={Mannino},
+           family_i={M\bibinitperiod},
+           given={Frank},
+           given_i={F\bibinitperiod}}}%
+        {{hash=19cd50521bb5453c6bd7956171bc6a26}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Rongmei},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{47e5ec646023763f3b941868082773ee}
+      \strng{fullhash}{47e5ec646023763f3b941868082773ee}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{optimal cutpoint depends on unknown parameters;should only entertain dichotomization when "estimating a value of the cumulative distribution and when the assumed model is very different from the true model";nice graphics}
+      \field{journaltitle}{Pharm Stat}
+      \field{title}{{Consequences of dichotomization}}
+      \field{volume}{8}
+      \field{year}{2009}
+      \field{pages}{50\bibrangedash 61}
+      \range{pages}{12}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/pst.331
+      \endverb
+      \keyw{categorization-of-outcome-variable,continuous-variables,cutpoints,dichotomization,graphics,loss-of-information,loss-of-power,response,teaching-mds,theoretical-calculations,*import}
+    \endentry
+    \entry{for95mod}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8cf57ef7327a43df0e03fc3be76fffaa}{%
+           family={Ford},
+           family_i={F\bibinitperiod},
+           given={Ian},
+           given_i={I\bibinitperiod}}}%
+        {{hash=8e1492536255ff3937d75beb59fd5d39}{%
+           family={Norrie},
+           family_i={N\bibinitperiod},
+           given={John},
+           given_i={J\bibinitperiod}}}%
+        {{hash=b295951dab3e88c8dfba3885d6e693e0}{%
+           family={Ahmadi},
+           family_i={A\bibinitperiod},
+           given={Susan},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a6e597b46d8e19cca76b17d9486b8aa}
+      \strng{fullhash}{9a6e597b46d8e19cca76b17d9486b8aa}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Model inconsistency, illustrated by the {Cox} proportional hazards model}
+      \field{volume}{14}
+      \field{year}{1995}
+      \field{pages}{735\bibrangedash 746}
+      \range{pages}{12}
+      \keyw{adjusted-estimates,baseline-imbalances,covariable-adjustment,model-identification,model-misspecification,rct,*import}
+    \endentry
+    \entry{gai84bia}{article}{}
+      \name{author}{3}{}{%
+        {{hash=35a31b6e294e68feee347d5d20ddb0ec}{%
+           family={Gail},
+           family_i={G\bibinitperiod},
+           given={M.\bibnamedelimi H.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ed056d438b511cdbc05effa7e3189be3}{%
+           family={Wieand},
+           family_i={W\bibinitperiod},
+           given={S.},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f37499abcfc03c1d0e0927238ccf1530}{%
+           family={Piantadosi},
+           family_i={P\bibinitperiod},
+           given={S.},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3555b940f4c5f45ac8e552145dffc687}
+      \strng{fullhash}{3555b940f4c5f45ac8e552145dffc687}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{bias if omitted covariables and model is nonlinear}
+      \field{journaltitle}{Biometrika}
+      \field{title}{{Biased estimates of treatment effect in randomized experiments with nonlinear regressions and omitted covariates}}
+      \field{volume}{71}
+      \field{year}{1984}
+      \field{pages}{431\bibrangedash 444}
+      \range{pages}{14}
+      \keyw{covariable-adjustment,*import}
+    \endentry
+    \entry{gai86adj}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=04a67c176afb94388ea58843b3bdd4b0}{%
+           family={Gail},
+           family_i={G\bibinitperiod},
+           given={Mitchell\bibnamedelima H.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=3d00879af1e168c24c6d53007678a5cc}{%
+           family={Moolgavkar},
+           family_i={M\bibinitperiod},
+           given={S.\bibnamedelimi H.},
+           given_i={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e175817f280f4be1df84247d27e9c921}{%
+           family={Prentice},
+           family_i={P\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           given_i={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{04a67c176afb94388ea58843b3bdd4b0}
+      \strng{fullhash}{04a67c176afb94388ea58843b3bdd4b0}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{unadjusted test can have larger type I error than nominal}
+      \field{booktitle}{Modern Statistical Methods in Chronic Disease Epi}
+      \field{title}{{Adjusting for covariates that have the same distribution in exposed and unexposed cohorts}}
+      \field{year}{1986}
+      \field{pages}{3\bibrangedash 18}
+      \range{pages}{16}
+      \keyw{covariable-adjustment,multiple-models-studied,omitted-covariable,power-loss,*import}
+    \endentry
+    \entry{gel06dat}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           family_i={G\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=1fd6540b91678ae8d3f51574305d2455}{%
+           family={Hill},
+           family_i={H\bibinitperiod},
+           given={Jennifer},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{602df721bcd10fe1eca95cb5554d134b}
+      \strng{fullhash}{602df721bcd10fe1eca95cb5554d134b}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Data Analysis Using Regression and Multilevel/Hierarchical Models is a comprehensive manual for the applied researcher who wants to perform data analysis using linear and nonlinear regression and multilevel models. The book introduces a wide variety of models, whilst at the same time instructing the reader in how to fit these models using available software packages. The book illustrates the concepts by working through scores of real data examples that have arisen from the authors\&\#8217; own applied research, with programming codes provided for each one. Topics covered include causal inference, including regression, poststratification, matching, regression discontinuity, and instrumental variables, as well as multilevel logistic regression and missing-data imputation. Practical tips regarding building, fitting, and understanding are provided throughout.}}
+      \field{edition}{1}
+      \field{howpublished}{Paperback}
+      \field{isbn}{052168689X}
+      \field{month}{12}
+      \field{title}{{Data Analysis Using Regression and Multilevel/Hierarchical Models}}
+      \field{year}{2006}
+      \verb{url}
+      \verb http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20&path=ASIN/052168689X
+      \endverb
+      \keyw{causal-inference,hierarchical-model,propensity-score}
+    \endentry
+    \entry{gia14opt}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7883beda7862094b6c3e93fec722ec4f}{%
+           family={Giannoni},
+           family_i={G\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=45c0b6c5414baca1f5dca32ce3e48810}{%
+           family={Baruah},
+           family_i={B\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=6b02e42ebf275d250da4269cd8b5fdc5}{%
+           family={Leong},
+           family_i={L\bibinitperiod},
+           given={T.},
+           given_i={T\bibinitperiod}}}%
+        {{hash=8133a01b1027f73e95f165dfb793c5ef}{%
+           family={Rehman},
+           family_i={R\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           given_i={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=f030f5ae9b4b1a1096bd4a18c2be18c9}{%
+           family={Pastormerlo},
+           family_i={P\bibinitperiod},
+           given={L.\bibnamedelimi E.},
+           given_i={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9597b2eb342d3ef8eed3ef869f20072f}{%
+           family={Coats},
+           family_i={C\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6d2a4c02da0e64dc3f4ec58c9a7536a3}{%
+           family={Francis},
+           family_i={F\bibinitperiod},
+           given={D.\bibnamedelimi P.},
+           given_i={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b49c089fc5e5b703cfbbab05893a18df}
+      \strng{fullhash}{9f70c545579d21ffd30c016863e6eb2a}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clinicians are sometimes advised to make decisions using thresholds in measured variables, derived from prognostic studies. We studied why there are conflicting apparently-optimal prognostic thresholds, for example in exercise peak oxygen uptake (pVO2), ejection fraction (EF), and Brain Natriuretic Peptide (BNP) in heart failure (HF). Studies testing pVO2, EF or BNP prognostic thresholds in heart failure, published between 1990 and 2010, listed on Pubmed. First, we examined studies testing pVO2, EF or BNP prognostic thresholds. Second, we created repeated simulations of 1500 patients to identify whether an apparently-optimal prognostic threshold indicates step change in risk. 33 studies (8946 patients) tested a pVO2 threshold. 18 found it prognostically significant: the actual reported threshold ranged widely (10-18 ml/kg/min) but was overwhelmingly controlled by the individual study population's mean pVO2 ($r = 0.86, p<0.00001$). In contrast, the 15 negative publications were testing thresholds 199{\%} further from their means (p = 0.0001). Likewise, of 35 EF studies (10220 patients), the thresholds in the 22 positive reports were strongly determined by study means ($r = 0.90, p<0.0001$). Similarly, in the 19 positives of 20 BNP studies (9725 patients): $r = 0.86 (p<0.0001)$. Second, survival simulations always discovered a "most significant" threshold, even when there was definitely no step change in mortality. With linear increase in risk, the apparently-optimal threshold was always near the sample mean ($r = 0.99, p<0.001$). This study cannot report the best threshold for any of these variables; instead it explains how common clinical research procedures routinely produce false thresholds. First, shifting (and/or disappearance) of an apparently-optimal prognostic threshold is strongly determined by studies' average pVO2, EF or BNP. Second, apparently-optimal thresholds always appear, even with no step in prognosis. Emphatic therapeutic guidance based on thresholds from observational studies may be ill-founded. We should not assume that optimal thresholds, or any thresholds, exist.}
+      \field{journaltitle}{PLoS ONE}
+      \field{number}{1}
+      \field{title}{{Do optimal prognostic thresholds in continuous physiological variables really exist? {A}nalysis of origin of apparent thresholds, with systematic review for peak oxygen consumption, ejection fraction and {B}{N}{P}}}
+      \field{volume}{9}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://dx.doi.org/10.1371/journal.pone.0081699
+      \endverb
+      \keyw{categorization,categorizing-continuous-variables,ctsafac}
+    \endentry
+    \entry{gne07str}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cf94799d213c0ab2fd2012473da7440b}{%
+           family={Gneiting},
+           family_i={G\bibinitperiod},
+           given={Tilmann},
+           given_i={T\bibinitperiod}}}%
+        {{hash=53596fce608f49350a0fbe346aeddbe1}{%
+           family={Raftery},
+           family_i={R\bibinitperiod},
+           given={Adrian\bibnamedelima E.},
+           given_i={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{48eb4b2274f6dc64b3104fb46d644084}
+      \strng{fullhash}{48eb4b2274f6dc64b3104fb46d644084}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{wonderful review article except missing references from Scandanavian and German medical decision making literature}
+      \field{journaltitle}{J Am Stat Assoc}
+      \field{title}{{Strictly proper scoring rules, prediction, and estimation}}
+      \field{volume}{102}
+      \field{year}{2007}
+      \field{pages}{359\bibrangedash 378}
+      \range{pages}{20}
+      \keyw{accuracy,bayes-factor,brier-score,coherent,continuous-ranked-probability-score,cross-validation,entropy,kernel-score,loss-function,minimum-contrast-estimation,negative-definite-function,prediction,prediction-interval,predictive-distribution,proper-scoring-rule,quantile-forecast,skill-score,strictly-proper,utility-function,*import}
+    \endentry
+    \entry{gre00whe}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c5b4c7113701e4de7900f78e0f2fd1fd}{%
+           family={Greenland},
+           family_i={G\bibinitperiod},
+           given={Sander},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5b4c7113701e4de7900f78e0f2fd1fd}
+      \strng{fullhash}{c5b4c7113701e4de7900f78e0f2fd1fd}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{use of statistics in epidemiology is largely primitive;stepwise variable selection on confounders leaves important confounders uncontrolled;composition matrix;example with far too many significant predictors with many regression coefficients absurdly inflated when overfit;lack of evidence for dietary effects mediated through constituents;shrinkage instead of variable selection;larger effect on confidence interval width than on point estimates with variable selection;uncertainty about variance of random effects is just uncertainty about prior opinion;estimation of variance is pointless;instead the analysis should be repeated using different values;"if one feels compelled to estimate $\tau^2$, I would recommend giving it a proper prior concentrated amount contextually reasonable values";claim about ordinary MLE being unbiased is misleading because it assumes the model is correct and is the only model entertained;shrinkage towards compositional model;"models need to be complex to capture uncertainty about the relations...an honest uncertainty assessment requires parameters for all effects that we know may be present. This advice is implicit in an antiparsimony principle often attributed to L. J. Savage 'All models should be as big as an elephant (see Draper, 1995)'". See also gus06per.}
+      \field{journaltitle}{Biometrics}
+      \field{title}{{When should epidemiologic regressions use random coefficients?}}
+      \field{volume}{56}
+      \field{year}{2000}
+      \field{pages}{915\bibrangedash 921}
+      \range{pages}{7}
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/j.0006-341X.2000.00915.x
+      \endverb
+      \keyw{bayesian-methods,causal-inference,empirical-bayes-estimators,epidemiologic-method,hierarchical-regression,mixed-models,multilevel-modeling,random-coefficient-regression,shrinkage,variance-components,*import}
+    \endentry
+    \entry{gre16sta}{article}{}
+      \name{author}{7}{}{%
+        {{hash=c5b4c7113701e4de7900f78e0f2fd1fd}{%
+           family={Greenland},
+           family_i={G\bibinitperiod},
+           given={Sander},
+           given_i={S\bibinitperiod}}}%
+        {{hash=380da656e5360a8f12655e8ea531d682}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={StephenJ},
+           given_i={S\bibinitperiod}}}%
+        {{hash=3b36d969d518095f8bed74b613e09079}{%
+           family={Rothman},
+           family_i={R\bibinitperiod},
+           given={KennethJ},
+           given_i={K\bibinitperiod}}}%
+        {{hash=5f088783ee75f9f0908eeb4fa9571a31}{%
+           family={Carlin},
+           family_i={C\bibinitperiod},
+           given={JohnB},
+           given_i={J\bibinitperiod}}}%
+        {{hash=a111879064f2132ac8db27fb3e3bc75d}{%
+           family={Poole},
+           family_i={P\bibinitperiod},
+           given={Charles},
+           given_i={C\bibinitperiod}}}%
+        {{hash=942e9fae4198598f9ad5d703ebd0f333}{%
+           family={Goodman},
+           family_i={G\bibinitperiod},
+           given={StevenN},
+           given_i={S\bibinitperiod}}}%
+        {{hash=5ce6bf42d01103efaeb232afe926b01a}{%
+           family={Altman},
+           family_i={A\bibinitperiod},
+           given={DouglasG},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{b825a78368fc89b30b758edc176111a0}
+      \strng{fullhash}{de6a3b15865c37b2d72f0ca7653294dd}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Best article on misinterpretation of p-values. Pithy summaries.}
+      \field{booktitle}{European Journal of Epi}
+      \field{number}{4}
+      \field{title}{{Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations}}
+      \field{volume}{31}
+      \field{year}{2016}
+      \field{pages}{337\bibrangedash 350}
+      \range{pages}{14}
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s10654-016-0149-3
+      \endverb
+      \keyw{general,misinterpretation-of-p-values,p-values}
+    \endentry
+    \entry{hac06tra}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1d934328cbcaeec51785f5308f1690b4}{%
+           family={Hackam},
+           family_i={H\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=29f913707425cb9d4b47c1b893a8c892}{%
+           family={Redelmeier},
+           family_i={R\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           given_i={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7c5f3ec7e2a03b29af14cd4a260878d}
+      \strng{fullhash}{f7c5f3ec7e2a03b29af14cd4a260878d}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{review of basic science literature that documents systemic methodologic shortcomings. In a personal communication on 20Oct06 the authors reported that they found a few more biostatistical problems that could not make it into the JAMA article (for space constraints);none of the articles contained a sample size calculation;none of the articles identified a primary outcome measure;none of the articles mentioned whether they tested assumptions or did distributional testing (though a few used non-parametric tests);most articles had more than 30 endpoints (but few adjusted for multiplicity, as noted in the article)}
+      \field{journaltitle}{JAMA}
+      \field{title}{{Translation of research evidence from animals to humans}}
+      \field{volume}{296}
+      \field{year}{2006}
+      \field{pages}{1731\bibrangedash 1732}
+      \range{pages}{2}
+      \keyw{*import}
+    \endentry
+    \entry{Hmisc}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{fullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{\texttt{Hmisc}: {A} package of miscellaneous \textsc{R} functions}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://biostat.mc.vanderbilt.edu/Hmisc
+      \endverb
+      \keyw{*import}
+    \endentry
+    \entry{rrms}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{fullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{biostat.mc.vanderbilt.edu/Rrms}
+      \field{note}{Implements methods in Regression Modeling Strategies, 2nd edition}
+      \field{title}{{rms: R functions for biostatistical/epidemiologic modeling, testing, estimation, validation, graphics, prediction, and typesetting by storing enhanced model design attributes in the fit}}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://biostat.mc.vanderbilt.edu/rms
+      \endverb
+      \keyw{group-rms,*import}
+    \endentry
+    \entry{har98dev}{article}{}
+      \name{author}{9}{}{%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d88e94d8af870242278af75139792bdf}{%
+           family={Margolis},
+           family_i={M\bibinitperiod},
+           given={Peter\bibnamedelima A.},
+           given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0f4de42d642ac35e7bcd52768cd5239f}{%
+           family={Gove},
+           family_i={G\bibinitperiod},
+           given={Sandy},
+           given_i={S\bibinitperiod}}}%
+        {{hash=21c0361378e8d013a27e4cf37297a70c}{%
+           family={Mason},
+           family_i={M\bibinitperiod},
+           given={Karen\bibnamedelima E.},
+           given_i={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ae383d335fbb9937157aff851fb6ca8e}{%
+           family={Mulholland},
+           family_i={M\bibinitperiod},
+           given={E.\bibnamedelimi Kim},
+           given_i={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b7d4abe701078eb3ae9388ab7e865e7b}{%
+           family={Lehmann},
+           family_i={L\bibinitperiod},
+           given={Deborah},
+           given_i={D\bibinitperiod}}}%
+        {{hash=523edba8774ca5a9a07e8a06822aea71}{%
+           family={Muhe},
+           family_i={M\bibinitperiod},
+           given={Lulu},
+           given_i={L\bibinitperiod}}}%
+        {{hash=c58c48a5428105a662d82fb463fc7581}{%
+           family={Gatchalian},
+           family_i={G\bibinitperiod},
+           given={Salvacion},
+           given_i={S\bibinitperiod}}}%
+        {{hash=353d10e8370f985330cc1fcef0bb4113}{%
+           family={Eichenwald},
+           family_i={E\bibinitperiod},
+           given={Heinz\bibnamedelima F.},
+           given_i={H\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{5dbdbecabf540b09ec1f64f29eb2ad6b}
+      \strng{fullhash}{362736390a5456df8ad8f60de1d440d5}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Development of a clinical prediction model for an ordinal outcome: {The World Health Organization ARI Multicentre Study} of clinical signs and etiologic agents of pneumonia, sepsis, and meningitis in young infants}
+      \field{volume}{17}
+      \field{year}{1998}
+      \field{pages}{909\bibrangedash 944}
+      \range{pages}{36}
+      \verb{url}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0258(19980430)17:8%3C909::AID-SIM753%3E3.0.CO;2-O/abstract
+      \endverb
+      \keyw{cart,continuation-ratio-model,data-reduction,diagnosis,differential-penalization,imputation,model-approximation,nomogram,ordinal-response,penalized-maximum-likelihood-estimation,predictive-accuracy,proportional-odds-model,scaling,screening,shrinkage,validation,variable-clustering,verification-bias,*import}
+    \endentry
+    \entry{hau98sho}{article}{}
+      \name{author}{3}{}{%
+        {{hash=949fc75bed37218de246af667fd3a19c}{%
+           family={Hauck},
+           family_i={H\bibinitperiod},
+           given={Walter\bibnamedelima W.},
+           given_i={W\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=bd8cca0d27df34829759efd581bf5e6b}{%
+           family={Anderson},
+           family_i={A\bibinitperiod},
+           given={Sharon},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f3be1e1a73b0adc5f1c882366101c941}{%
+           family={Marcus},
+           family_i={M\bibinitperiod},
+           given={Sue\bibnamedelima M.},
+           given_i={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{47e48287b9a7469c12cdd75e21798fec}
+      \strng{fullhash}{47e48287b9a7469c12cdd75e21798fec}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"For use in a clinician-patient context, there is only a single person, that patient, of interest. The subject-specific measure then best reflects the risks or benefits for that patient. Gail has noted this previously [ENAR Presidential Invited Address, April 1990], arguing that one goal of a clinical trial ought to be to predict the direction and size of a treatment benefit for a patient with specific covariate values. In contrast, population-averaged estimates of treatment effect compare outcomes in groups of patients. The groups being compared are determined by whatever covariates are included in the model. The treatment effect is then a comparison of average outcomes, where the averaging is over all omitted covariates."}
+      \field{journaltitle}{Controlled Clin Trials}
+      \field{title}{{Should we adjust for covariates in nonlinear regression analyses of randomized trials?}}
+      \field{volume}{19}
+      \field{year}{1998}
+      \field{pages}{249\bibrangedash 256}
+      \range{pages}{8}
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0197-2456(97)00147-5
+      \endverb
+      \keyw{ancova,attenuation-of-treatment-effect-estimate,balance,baseline,bias,covariable-adjustment,covariate-adjustment,efficiency,rct,study-design,subject-specific-vs-population-averaged-estimates,*import}
+    \endentry
+    \entry{hla09cri}{article}{}
+      \name{author}{18}{}{%
+        {{hash=60706764098974f87ab8b93ba722adbf}{%
+           family={Hlatky},
+           family_i={H\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ca49b74b446c09c39907b21a31c45d94}{%
+           family={Greenland},
+           family_i={G\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+        {{hash=d878b599593dcb949d571d9d98c8de2b}{%
+           family={Arnett},
+           family_i={A\bibinitperiod},
+           given={D.\bibnamedelimi K.},
+           given_i={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=ba28174ea277fe022f7afb6712febfbb}{%
+           family={Ballantyne},
+           family_i={B\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=876e1def517fa74c3a50e8b7b700ca51}{%
+           family={Criqui},
+           family_i={C\bibinitperiod},
+           given={M.\bibnamedelimi H.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4f56c175b01f7dd11fd655bf38e3fee1}{%
+           family={Elkind},
+           family_i={E\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           given_i={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9f4a779df9d8b01b3975cb4ef8897be8}{%
+           family={Go},
+           family_i={G\bibinitperiod},
+           given={A.\bibnamedelimi S.},
+           given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=bfbaa707bcce358773083b82f564963f}{%
+           family={Hong},
+           family_i={H\bibinitperiod},
+           given={Y.},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=3795890c52e416e31fb5a77f433f895c}{%
+           family={Howard},
+           family_i={H\bibinitperiod},
+           given={B.\bibnamedelimi V.},
+           given_i={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=9109064d3032bbea790301e29cdd52dd}{%
+           family={Howard},
+           family_i={H\bibinitperiod},
+           given={V.\bibnamedelimi J.},
+           given_i={V\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=094fdb6ec6df06a0712dd5d09d872102}{%
+           family={Hsue},
+           family_i={H\bibinitperiod},
+           given={P.\bibnamedelimi Y.},
+           given_i={P\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=10f9eecef798c09e76ed3887adf79c00}{%
+           family={Kramer},
+           family_i={K\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ee3d8f40622b7e367fab04fe6d6dc546}{%
+           family={{McConnell}},
+           family_i={M\bibinitperiod},
+           given={J.\bibnamedelimi P.},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=6e3b1bc14c301e31f6d0b0e7a21627a1}{%
+           family={Normand},
+           family_i={N\bibinitperiod},
+           given={S.\bibnamedelimi L.},
+           given_i={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9829de3a834ffe7e6b816916571d90d4}{%
+           family={{O'Donnell}},
+           family_i={O\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=028ae5e7b4fe93d268689163b5c59b56}{%
+           family={Smith},
+           family_i={S\bibinitperiod},
+           given={S.\bibnamedelimi C.},
+           given_i={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fe56146b5f855228198f6c5ec34d3a80}{%
+           family={Wilson},
+           family_i={W\bibinitperiod},
+           given={P.\bibnamedelimi W.},
+           given_i={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
+      \strng{fullhash}{32a9028ecc14a0ab36d7f54ef48684ee}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{graph with different symbols for diseased and non-diseased}
+      \field{journaltitle}{Circulation}
+      \field{note}{American Heart Association Expert Panel on Subclinical Atherosclerotic Diseases and Emerging Risk Factors and the Stroke Council}
+      \field{number}{17}
+      \field{title}{Criteria for evaluation of novel markers of cardiovascular risk: a scientific statement from the {American} {Heart} {Association}}
+      \field{volume}{119}
+      \field{year}{2009}
+      \field{pages}{2408\bibrangedash 2416}
+      \range{pages}{9}
+      \keyw{biomarker-research,post--vs-pre-test-probability,predictive-accuracy,*import}
+    \endentry
+    \entry{hla84fac}{article}{}
+      \name{author}{6}{}{%
+        {{hash=60706764098974f87ab8b93ba722adbf}{%
+           family={Hlatky},
+           family_i={H\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=32b0191b476f30a7b406a197a7f182c0}{%
+           family={Pryor},
+           family_i={P\bibinitperiod},
+           given={D.\bibnamedelimi B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6a05d65041a0194ef8e05c588297648e}{%
+           family={Califf},
+           family_i={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a330f2a660a67a3674b050db4ee14f68}{%
+           family={Mark},
+           family_i={M\bibinitperiod},
+           given={D.\bibnamedelimi B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=222b57b54523bf54c0bbf1eb3fd5c12c}{%
+           family={Rosati},
+           family_i={R\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
+      \strng{fullhash}{ca245166cd962cc6351beb26a1d6af6b}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am J Med}
+      \field{title}{Factors affecting the sensitivity and specificity of exercise electrocardiography. {M}ultivariable analysis}
+      \field{volume}{77}
+      \field{year}{1984}
+      \field{pages}{64\bibrangedash 71}
+      \range{pages}{8}
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934384904376#
+      \endverb
+      \keyw{diagnosis,non-constancy-of-sensitivity-and-specificity,sensitivity,specificity,teaching-mds,*import}
+    \endentry
+    \entry{hoe48cla}{article}{}
+      \name{author}{1}{}{%
+        {{hash=26d3c01664dc4b0c60afbdf4153437e2}{%
+           family={Hoeffding},
+           family_i={H\bibinitperiod},
+           given={Wassily},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{26d3c01664dc4b0c60afbdf4153437e2}
+      \strng{fullhash}{26d3c01664dc4b0c60afbdf4153437e2}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Partially reprinted in: Kotz, S., Johnson, N.L. (1992) Breakthroughs in Statistics, Vol I, pp 308-334. Springer-Verlag. ISBN 0-387-94037-5}
+      \field{journaltitle}{Ann Math Stat}
+      \field{title}{{A class of statistics with asymptotically normal distributions}}
+      \field{volume}{19}
+      \field{year}{1948}
+      \field{pages}{293\bibrangedash 325}
+      \range{pages}{33}
+      \keyw{*import}
+    \endentry
+    \entry{hol04con}{article}{}
+      \name{author}{3}{}{%
+        {{hash=923cd712da83011be2cea75f26b079c1}{%
+           family={Holl\"{a}nder},
+           family_i={H\bibinitperiod},
+           given={Norbert},
+           given_i={N\bibinitperiod}}}%
+        {{hash=27482c3433fc543e6d2ab2c7e64d4ed9}{%
+           family={Sauerbrei},
+           family_i={S\bibinitperiod},
+           given={Willi},
+           given_i={W\bibinitperiod}}}%
+        {{hash=08f0638a831e3f3bb8c4d175295d2292}{%
+           family={Schumacher},
+           family_i={S\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e446d3e22b56fa08152c41f077c83cad}
+      \strng{fullhash}{e446d3e22b56fa08152c41f077c83cad}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{true type I error can be much greater than nominal level;one example where nominal is 0.05 and true is 0.5;minimum P-value method;CART;recursive partitioning;bootstrap method for correcting confidence interval;based on heuristic shrinkage coefficient;"It should be noted, however, that the optimal cutpoint approach has disadvantages. One of these is that in almost every study where this method is applied, another cutpoint will emerge. This makes comparisons across studies extremely difficult or even impossible. Altman et al. point out this problem for studies of the prognostic relevance of the S-phase fraction in breast cancer published in the literature. They identified 19 different cutpoints used in the literature; some of them were solely used because they emerged as the `optimal' cutpoint in a specific data set. In a meta-analysis on the relationship between cathepsin-D content and disease-free survival in node-negative breast cancer patients, 12 studies were in included with 12 different cutpoints ... Interestingly, neither cathepsin-D nor the S-phase fraction are recommended to be used as prognostic markers in breast cancer in the recent update of the American Society of Clinical Oncology."; dichotomization; categorizing continuous variables; refs alt94dan, sch94out, alt98sub}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Confidence intervals for the effect of a prognostic factor after selection of an `optimal' cutpoint}}
+      \field{volume}{23}
+      \field{year}{2004}
+      \field{pages}{1701\bibrangedash 1713}
+      \range{pages}{13}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.1611
+      \endverb
+      \keyw{categorization,cutpoints,teaching-mds,*import}
+    \endentry
+    \entry{car89pre}{article}{}
+      \name{author}{1}{}{%
+        {{hash=48b973ec20eef9085f59c9e3a89c7837}{%
+           family={{Investigators}},
+           family_i={I\bibinitperiod},
+           given={{Cast}},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{48b973ec20eef9085f59c9e3a89c7837}
+      \strng{fullhash}{48b973ec20eef9085f59c9e3a89c7837}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEJM}
+      \field{number}{6}
+      \field{title}{Preliminary report: {Effect} of Encainide and Flecainide on mortality in a randomized trial of arrhythmia suppression after myocardial infarction}
+      \field{volume}{321}
+      \field{year}{1989}
+      \field{pages}{406\bibrangedash 412}
+      \range{pages}{7}
+      \keyw{cardiac-arrhythmia-suppression-trial,cast,*import}
+    \endentry
+    \entry{ioa97imp}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cd6863fdb173ee5543606371dfdd8d89}{%
+           family={Ioannidis},
+           family_i={I\bibinitperiod},
+           given={John\bibnamedelimb P.\bibnamedelimi A.},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d23a118d3d98339307d85d39d23bcf24}{%
+           family={Lau},
+           family_i={L\bibinitperiod},
+           given={Joseph},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed379279a0fd4cd265218cce977a3c96}
+      \strng{fullhash}{ed379279a0fd4cd265218cce977a3c96}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{high risk patients can dominate clinical trials results;high risk patients may be imbalanced even if overall study is balanced;magnesium;differential treatment effect by patient risk;GUSTO;small vs. large trials vs. meta-analysis}
+      \field{journaltitle}{J Clin Epi}
+      \field{title}{{The impact of high-risk patients on the results of clinical trials}}
+      \field{volume}{50}
+      \field{year}{1997}
+      \field{pages}{1089\bibrangedash 1098}
+      \range{pages}{10}
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0895-4356(97)00149-2
+      \endverb
+      \keyw{clinical-trials,generalizability,publication-bias,rct,reporting,teaching-mds,*import}
+    \endentry
+    \entry{ion10exp}{article}{}
+      \name{author}{1}{}{%
+        {{hash=444277b10b25c4b9618dfc6f6a99bdb2}{%
+           family={Ionnidis},
+           family_i={I\bibinitperiod},
+           given={John\bibnamedelimb P.\bibnamedelimi A.},
+           given_i={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{444277b10b25c4b9618dfc6f6a99bdb2}
+      \strng{fullhash}{444277b10b25c4b9618dfc6f6a99bdb2}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"Each new field has a rapid exponential growth of its literature over 5--8 years (`new field phase'), followed by an `established field' phase when growth rates are more modest, and then an `over-maturity' phase, where the rates of growth are similar to the growth of the scientific literature at large or even smaller. There is a parallel in the spread of an infectious epidemic that emerges rapidly and gets established when a large number of scientists (and articles) are infected with these concepts. Then momentum decreases, although many scientists remain infected and continue to work on this field. New omics infections continuously arise in the scientific community.";"A large number of personal genomic tests are already sold in the market, mostly with direct to consumer advertisement and for `recreational genomics' purposes (translate: information for the fun of information)."}
+      \field{journaltitle}{J Clin Epi}
+      \field{title}{{Expectations, validity, and reality in omics}}
+      \field{volume}{63}
+      \field{year}{2010}
+      \field{pages}{945\bibrangedash 949}
+      \range{pages}{5}
+      \keyw{gene-expression-profiling,genomics,metabolomics,omics,personalized-medicine,pharmacogenomics,proteomics,transcriptomics,validity,*import}
+    \endentry
+    \entry{kai89}{article}{}
+      \name{author}{1}{}{%
+        {{hash=08eeb65860b12826c4895e5855b474cc}{%
+           family={Kaiser},
+           family_i={K\bibinitperiod},
+           given={Lee},
+           given_i={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{08eeb65860b12826c4895e5855b474cc}
+      \strng{fullhash}{08eeb65860b12826c4895e5855b474cc}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Adjusting for baseline: {C}hange or percentage change?}
+      \field{volume}{8}
+      \field{year}{1989}
+      \field{pages}{1183\bibrangedash 1190}
+      \range{pages}{8}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.4780081002
+      \endverb
+      \keyw{change,measurement,measuring-change,miscellaneous,one-sample-problem,percent-change,research-methods,teaching-mds,*import}
+    \endentry
+    \entry{ken07lim}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f8260be0eb5847cc89f2118d0d65b419}{%
+           family={Kent},
+           family_i={K\bibinitperiod},
+           given={David\bibnamedelima M.},
+           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=513f2c41f4f24c3d4dad2eca72f63ab9}{%
+           family={Hayward},
+           family_i={H\bibinitperiod},
+           given={Rodney},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac1f0e8b39178f8e892713c4e62ae850}
+      \strng{fullhash}{ac1f0e8b39178f8e892713c4e62ae850}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{variation in absolute risk reduction in RCTs;failure of subgroup analysis;covariable adjustment;covariate adjustment;nice summary of individual patient absolute benefit vs. patient risk}
+      \field{journaltitle}{JAMA}
+      \field{title}{{Limitations of applying summary results of clinical trials to individual patients}}
+      \field{volume}{298}
+      \field{year}{2007}
+      \field{pages}{1209\bibrangedash 1212}
+      \range{pages}{4}
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.298.10.1209
+      \endverb
+      \keyw{generalizability,rct,*import}
+    \endentry
+    \entry{kna93cli}{article}{}
+      \name{author}{10}{}{%
+        {{hash=f01415a6f1374431f101787b33d9477f}{%
+           family={Knaus},
+           family_i={K\bibinitperiod},
+           given={William\bibnamedelima A.},
+           given_i={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c2274e3addc30ef5c39ee35677b9c4bf}{%
+           family={Fisher},
+           family_i={F\bibinitperiod},
+           given={Charles\bibnamedelima J.},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3fe338c09a64b4abdefd9a5d4ef5c6f7}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={Douglas\bibnamedelima P.},
+           given_i={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9ecdbfcbaf68d28820ff9aee170993b3}{%
+           family={Opan},
+           family_i={O\bibinitperiod},
+           given={Steven\bibnamedelima M.},
+           given_i={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d159a0a5ba035d9fdf6ee2218d450801}{%
+           family={Sadoff},
+           family_i={S\bibinitperiod},
+           given={Jerald\bibnamedelima C.},
+           given_i={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fa6ea53400ff65c441b75ee77991e23c}{%
+           family={Draper},
+           family_i={D\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           given_i={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5c80be47e9b72841fc7c354dad9146c6}{%
+           family={Walawander},
+           family_i={W\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           given_i={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c34893fba87cbe964a70f2574e52c922}{%
+           family={Conboy},
+           family_i={C\bibinitperiod},
+           given={Kathleen},
+           given_i={K\bibinitperiod}}}%
+        {{hash=8be21ce24a566a187874ad0b64606d69}{%
+           family={Grasela},
+           family_i={G\bibinitperiod},
+           given={Thaddeus\bibnamedelima H.},
+           given_i={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b25c263478a3e267e839be162dbf7dc6}
+      \strng{fullhash}{85fd39c3f60c62fb77617e1310082ed3}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA}
+      \field{title}{The clinical evaluation of new drugs for sepsis: {A} prospective study design based on survival analysis}
+      \field{volume}{270}
+      \field{year}{1993}
+      \field{pages}{1233\bibrangedash 1241}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.270.10.1233
+      \endverb
+      \keyw{bootstrap,calibration,clinical-trials,interaction,log-normal-model,rct,risk-models,study-design,validation,*import}
+    \endentry
+    \entry{koe78reg}{article}{}
+      \name{author}{2}{}{%
+        {{hash=15fd210a0c581de4365c01c6ba13c6ef}{%
+           family={Koenker},
+           family_i={K\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=e9f5ecdbe89e42033854bb7224e2e272}{%
+           family={Bassett},
+           family_i={B\bibinitperiod},
+           given={G.},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7000e6359b5f5614876e019d20a9783f}
+      \strng{fullhash}{7000e6359b5f5614876e019d20a9783f}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{title}{{Regression quantiles}}
+      \field{volume}{46}
+      \field{year}{1978}
+      \field{pages}{33\bibrangedash 50}
+      \range{pages}{18}
+      \keyw{quantile-regression,*import}
+    \endentry
+    \entry{kro93spu}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2be7195d005db13032c4e0c04de0e2c}{%
+           family={Kronmal},
+           family_i={K\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2be7195d005db13032c4e0c04de0e2c}
+      \strng{fullhash}{a2be7195d005db13032c4e0c04de0e2c}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{spurious correlation in using ratio variables even if all component variables of ratios are uncorrelated; division of only the dependent variable by an independent variable can result in regression coefficient estimates for the other independent variables that result in inappropriate conclusions;use of a ratio as an independent variable can result in inadequate adjustment for component variables of the ratio;ratio variables should only be used in a full model containing all the component variables;results of regression analyses incorporating ratios are not readily comparable across studies}
+      \field{journaltitle}{J Roy Stat Soc A}
+      \field{title}{{Spurious correlation and the fallacy of the ratio standard revisited}}
+      \field{volume}{156}
+      \field{year}{1993}
+      \field{pages}{379\bibrangedash 392}
+      \range{pages}{14}
+      \keyw{change,ratio,*import}
+    \endentry
+    \entry{len01som}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ecfbfbea27319aefa096b0c3a5105ca3}{%
+           family={Lenth},
+           family_i={L\bibinitperiod},
+           given={Russell\bibnamedelima V.},
+           given_i={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecfbfbea27319aefa096b0c3a5105ca3}
+      \strng{fullhash}{ecfbfbea27319aefa096b0c3a5105ca3}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{problems with Cohen's method}
+      \field{journaltitle}{Am Statistician}
+      \field{title}{{Some practical guidelines for effective sample size determination}}
+      \field{volume}{55}
+      \field{year}{2001}
+      \field{pages}{187\bibrangedash 193}
+      \range{pages}{7}
+      \verb{url}
+      \verb http://dx.doi.org/10.1198/000313001317098149
+      \endverb
+      \keyw{guidelines,sample-size,teaching-mds,*import}
+    \endentry
+    \entry{mar85mod}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6375653783f2c0355c30c0a711a1e44f}{%
+           family={Maritz},
+           family_i={M\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6375653783f2c0355c30c0a711a1e44f}
+      \strng{fullhash}{6375653783f2c0355c30c0a711a1e44f}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Models and the use of signed rank tests}}
+      \field{volume}{4}
+      \field{year}{1985}
+      \field{pages}{145\bibrangedash 153}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.4780040205
+      \endverb
+      \keyw{change,measuring-change,one-sample-problem,percent-change,signed-rank-test,teaching-mds,*import}
+    \endentry
+    \entry{mat15inc}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3758d02acf9a57617a7f4b1e81531abe}{%
+           family={Matthews},
+           family_i={M\bibinitperiod},
+           given={J.\bibnamedelimi N.\bibnamedelimi S.},
+           given_i={J\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c098c9d331ca276fa7ffb1f3fcfd0d97}{%
+           family={Badi},
+           family_i={B\bibinitperiod},
+           given={N.\bibnamedelimi H.},
+           given_i={N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6289655abf6781ebe912b7eb4706045a}
+      \strng{fullhash}{6289655abf6781ebe912b7eb4706045a}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{02776715}
+      \field{journaltitle}{Stat Med}
+      \field{month}{08}
+      \field{number}{19}
+      \field{title}{{Inconsistent treatment estimates from mis-specified logistic regression analyses of randomized trials}}
+      \field{volume}{34}
+      \field{year}{2015}
+      \field{pages}{2681\bibrangedash 2694}
+      \range{pages}{14}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.6508
+      \endverb
+      \keyw{ancova,binary-logistic-model,covariable-adjustment,covariate-adjustment}
+    \endentry
+    \entry{mat90ana}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3758d02acf9a57617a7f4b1e81531abe}{%
+           family={Matthews},
+           family_i={M\bibinitperiod},
+           given={J.\bibnamedelimi N.\bibnamedelimi S.},
+           given_i={J\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=52f053b8920d5d4076a244ef065113f8}{%
+           family={Altman},
+           family_i={A\bibinitperiod},
+           given={Douglas\bibnamedelima G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e04d447ca61dc595c17217f7dc84c064}{%
+           family={Campbell},
+           family_i={C\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d77ac0af604c52daf07a18aced65b51b}{%
+           family={Royston},
+           family_i={R\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{04e45fcc8ae05480ed4ebf9ab4cb6a2b}
+      \strng{fullhash}{d2eb0b65af56d69d7fd18e3fcf0e3ffb}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ}
+      \field{note}{Letter to editor by S. Senn in same issue}
+      \field{title}{{Analysis of serial measurements in medical research}}
+      \field{volume}{300}
+      \field{year}{1990}
+      \field{pages}{230\bibrangedash 235}
+      \range{pages}{6}
+      \verb{url}
+      \verb http://dx.doi.org/10.1136/bmj.300.6719.230
+      \endverb
+      \keyw{growth-curve,peak-vs-growth-relationships,relating-peak-to-time-to-peak,repeated-measurements,serial-data,summary-measures,teaching-mds,*import}
+    \endentry
+    \entry{mic05pre}{article}{}
+      \name{author}{3}{}{%
+        {{hash=cf34b3463a39fb6f0268766e084d82f5}{%
+           family={Michiels},
+           family_i={M\bibinitperiod},
+           given={Stefan},
+           given_i={S\bibinitperiod}}}%
+        {{hash=7c37327efceac6b9216e36147d5e7755}{%
+           family={Koscielny},
+           family_i={K\bibinitperiod},
+           given={Serge},
+           given_i={S\bibinitperiod}}}%
+        {{hash=2002249cc3f3fb40f35f36d5cf833404}{%
+           family={Hill},
+           family_i={H\bibinitperiod},
+           given={Catherine},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ed0506b687a11d27f1055da3a268b4}
+      \strng{fullhash}{69ed0506b687a11d27f1055da3a268b4}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{comment on p. 454;validation;microarray;bioinformatics;machine learning;nearest centroid;severe problems with data splitting;high variability of list of genes;problems with published studies;nice results for effect of training sample size on misclassification error;nice use of confidence intervals on accuracy estimates;unstable molecular signatures;high instability due to dependence on selection of training sample}
+      \field{journaltitle}{Lancet}
+      \field{title}{{Prediction of cancer outcome with microarrays: a multiple random validation strategy}}
+      \field{volume}{365}
+      \field{year}{2005}
+      \field{pages}{488\bibrangedash 492}
+      \range{pages}{5}
+      \keyw{*import}
+    \endentry
+    \entry{moo03sen}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7f8bdf9fba7c58cef156887ecffced17}{%
+           family={Moons},
+           family_i={M\bibinitperiod},
+           given={Karel\bibnamedelimb G.\bibnamedelimi M.},
+           given_i={K\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{4496f6923a1a88c1e4db4935b6604688}
+      \strng{fullhash}{4496f6923a1a88c1e4db4935b6604688}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acad Rad}
+      \field{note}{Editorial}
+      \field{title}{{Sensitivity and specificity should be de-emphasized in diagnostic accuracy studies}}
+      \field{volume}{10}
+      \field{year}{2003}
+      \field{pages}{670\bibrangedash 672}
+      \range{pages}{3}
+      \keyw{accuracy,diagnosis,reasons-for-avoiding-sensitivity-and-specificity,*import}
+    \endentry
+    \entry{moo97lim}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7f8bdf9fba7c58cef156887ecffced17}{%
+           family={Moons},
+           family_i={M\bibinitperiod},
+           given={Karel\bibnamedelimb G.\bibnamedelimi M.},
+           given_i={K\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f85c18f35bee33f1fde67c224cba31df}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Es},
+           family_i={E\bibinitperiod},
+           given={Gerrit-Anne},
+           given_i={G\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=ee7e789977f8a3e4e97c8fd061186fb0}{%
+           family={Deckers},
+           family_i={D\bibinitperiod},
+           given={Jaap\bibnamedelima W.},
+           given_i={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=1210a2004c0850d2085568290140633b}{%
+           family={Habbema},
+           family_i={H\bibinitperiod},
+           given={J.\bibnamedelimi D.\bibnamedelimi F.},
+           given_i={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=8e58c44e76b2fc838ae912f190e211f2}{%
+           family={Grobbee},
+           family_i={G\bibinitperiod},
+           given={Diederick\bibnamedelima E.},
+           given_i={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{032d1e1f60061588814baa36ba1e32e1}
+      \strng{fullhash}{20097f5f8c6739c345a53a9ded30c580}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{non-constancy of sensitivity, specificity, likelihood ratio in a real example}
+      \field{journaltitle}{Epi}
+      \field{number}{1}
+      \field{title}{Limitations of sensitivity, specificity, likelihood ratio, and {Bayes'} theorem in assessing diagnostic probabilities: {A} clinical example}
+      \field{volume}{8}
+      \field{year}{1997}
+      \field{pages}{12\bibrangedash 17}
+      \range{pages}{6}
+      \keyw{coronary-artery-disease,diagnosis,diagnostic-accuracy,sensitivity,specificity,*import}
+    \endentry
+    \entry{moo95dea}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c032b03697dcd6a52895070fda72fcf8}{%
+           family={Moore},
+           family_i={M\bibinitperiod},
+           given={Thomas\bibnamedelima J.},
+           given_i={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Simon \& Shuster}%
+      }
+      \strng{namehash}{c032b03697dcd6a52895070fda72fcf8}
+      \strng{fullhash}{c032b03697dcd6a52895070fda72fcf8}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{review in Stat in Med 16:2507-2510, 1997}
+      \field{title}{{Deadly Medicine: Why Tens of Thousands of Patients Died in America's Worst Drug Disaster}}
+      \field{year}{1995}
+      \keyw{*import}
+    \endentry
+    \entry{mul83ris}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aee94b3f2153b6b38dd1d26657c6bf81}{%
+           family={{Multicenter\bibnamedelimb Postinfarction\bibnamedelimb Research\bibnamedelimb Group}},
+           family_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{aee94b3f2153b6b38dd1d26657c6bf81}
+      \strng{fullhash}{aee94b3f2153b6b38dd1d26657c6bf81}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{We assessed the role of physiologic measurements of heart function in predicting mortality after myocardial infarction. Most of the 866 patients enrolled in our multicenter study underwent 24-hour Holter monitoring and determination of the resting radionuclide ventricular ejection fraction before discharge. Univariate analyses showed a progressive increase in cardiac mortality during one year as the ejection fraction fell below 0.40 and as the number of ventricular ectopic depolarizations exceeded one per hour. Only four risk factors among eight prespecified variables were independent predictors of mortality: an ejection fraction below 0.40, ventricular ectopy of 10 or more depolarizations per hour, advanced New York Heart Association functional class before infarction, and rales heard in the upper two thirds of the lung fields while the patient was in the coronary-care unit. Various combinations of these four factors identified five risk subgroups with two-year mortality rates ranging from 3 per cent (no factors) to 60 per cent (all four factors).}}
+      \field{annotation}{terrible example of dichotomizing continuous variables;figure ins Papers/modelingPredictors}
+      \field{journaltitle}{NEJM}
+      \field{title}{{Risk stratification and survival after myocardial infarction}}
+      \field{volume}{309}
+      \field{year}{1983}
+      \field{pages}{331\bibrangedash 336}
+      \range{pages}{6}
+      \keyw{*import}
+    \endentry
+    \entry{mur13inf}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ecce72a5ea40923119fddd54fad3d0cf}{%
+           family={Murrell},
+           family_i={M\bibinitperiod},
+           given={Paul},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecce72a5ea40923119fddd54fad3d0cf}
+      \strng{fullhash}{ecce72a5ea40923119fddd54fad3d0cf}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Excellent brief how-to list; incorporated into graphscourse}
+      \field{journaltitle}{J Comp Graph Stat}
+      \field{number}{1}
+      \field{title}{InfoVis and statistical graphics: {Comment}}
+      \field{volume}{22}
+      \field{year}{2013}
+      \field{pages}{33\bibrangedash 37}
+      \range{pages}{5}
+      \verb{eprint}
+      \verb http://www.tandfonline.com/doi/pdf/10.1080/10618600.2012.751875
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.751875
+      \endverb
+      \keyw{*import}
+    \endentry
+    \entry{nag11ana}{article}{}
+      \name{author}{6}{}{%
+        {{hash=a47b30fadd116ae66961952936ef9a51}{%
+           family={Naggara},
+           family_i={N\bibinitperiod},
+           given={O.},
+           given_i={O\bibinitperiod}}}%
+        {{hash=c82b4f69eb44cc314560efdcc8558dbb}{%
+           family={Raymond},
+           family_i={R\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=8a948e97413d584d342555e395e5b8bd}{%
+           family={Guilbert},
+           family_i={G\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+        {{hash=9b4a51b6553ca6c29075756a07040288}{%
+           family={Roy},
+           family_i={R\bibinitperiod},
+           given={D.},
+           given_i={D\bibinitperiod}}}%
+        {{hash=9fa4e82f7e859f3ff46c08c2b7d75828}{%
+           family={Weill},
+           family_i={W\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=7f3cabee516989b3c7ca06ddcedbdae8}{%
+           family={Altman},
+           family_i={A\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{89ac4e217c1c0b8aef240ae5ba337e27}
+      \strng{fullhash}{f7d297c682f51bfe8961de13527897a9}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{In medical research analyses, continuous variables are often converted into categoric variables by grouping values into $\geq 2$ categories. The simplicity achieved by creating $\geq 2$ artificial groups has a cost: Grouping may create rather than avoid problems. In particular, dichotomization leads to a considerable loss of power and incomplete correction for confounding factors. The use of data-derived ``optimal" cut-points can lead to serious bias and should at least be tested on independent observations to assess their validity. Both problems are illustrated by the way the results of a registry on unruptured intracranial aneurysms are commonly used. Extreme caution should restrict the application of such results to clinical decision-making. Categorization of continuous data, especially dichotomization, is unnecessary for statistical analysis. Continuous explanatory variables should be left alone in statistical models.}}
+      \field{journaltitle}{Am J Neuroradiol}
+      \field{number}{3}
+      \field{title}{Analysis by categorizing or dichotomizing continuous variables is inadvisable: {An} example from the natural history of unruptured aneurysms}
+      \field{volume}{32}
+      \field{year}{2011}
+      \field{pages}{437\bibrangedash 440}
+      \range{pages}{4}
+      \verb{eprint}
+      \verb http://www.ajnr.org/content/32/3/437.full.pdf+html
+      \endverb
+      \verb{url}
+      \verb http://www.ajnr.org/content/32/3/437.abstract
+      \endverb
+      \keyw{cutpoints,teaching-mds,*import}
+    \endentry
+    \entry{neu98est}{article}{}
+      \name{author}{1}{}{%
+        {{hash=237d7e9702057d48102f273bfaee31ba}{%
+           family={Neuhaus},
+           family_i={N\bibinitperiod},
+           given={John\bibnamedelima M.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{237d7e9702057d48102f273bfaee31ba}
+      \strng{fullhash}{237d7e9702057d48102f273bfaee31ba}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"to improve the efficiency of estimated covariate effects of interest, analysts of randomized clinical trial data should adjust for covariates that are strongly associated with the outcome, and ... analysts of observational data should not adjust for covariates that do not confound the association of interest"}
+      \field{journaltitle}{J Am Stat Assoc}
+      \field{title}{{Estimation efficiency with omitted covariates in generalized linear models}}
+      \field{volume}{93}
+      \field{year}{1998}
+      \field{pages}{1124\bibrangedash 1129}
+      \range{pages}{6}
+      \keyw{confounding,efficiency,model-misspecification,omitted-covariable,rct,*import}
+    \endentry
+    \entry{nuz15how}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a3232b31c3c41fa79bf0364699929fba}{%
+           family={Nuzzo},
+           family_i={N\bibinitperiod},
+           given={Regina},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3232b31c3c41fa79bf0364699929fba}
+      \strng{fullhash}{a3232b31c3c41fa79bf0364699929fba}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{10}
+      \field{number}{7572}
+      \field{title}{{How scientists fool themselves --- and how they can stop}}
+      \field{volume}{526}
+      \field{year}{2015}
+      \field{pages}{182\bibrangedash 185}
+      \range{pages}{4}
+      \keyw{bad-science,reproducibility}
+    \endentry
+    \entry{obr88com}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1bfd0b26b9e7828021025de6c2b1629a}{%
+           family={O'Brien},
+           family_i={O\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           given_i={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bfd0b26b9e7828021025de6c2b1629a}
+      \strng{fullhash}{1bfd0b26b9e7828021025de6c2b1629a}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{I consider the problem of testing that two populations are identical with respect to the distribution of a continuous variable against the alternative that values tend to be larger in one population. I observe that the t, rank-sum, and log-rank tests are insensitive for a large class of alternatives that may be expected to occur commonly in practice, propose a criterion for identifying this problem in a particular data set, and propose corresponding extensions of the conventional methods. The proposed methods should be useful for both identifying and interpreting group differences.}}
+      \field{annotation}{see Hauck WW, Hyslop T, Anderson S (2000) Stat in Med 19:887-899}
+      \field{journaltitle}{J Am Stat Assoc}
+      \field{title}{Comparing two samples: {Extensions} of the $t$, rank-sum, and log-rank test}
+      \field{volume}{83}
+      \field{year}{1988}
+      \field{pages}{52\bibrangedash 61}
+      \range{pages}{10}
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478564#.U_sn0XVdU3E
+      \endverb
+      \keyw{hotelling,logistic,multivariate,*import}
+    \endentry
+    \entry{ohm96car}{article}{}
+      \name{author}{14}{}{%
+        {{hash=a3c0ebc7533cec529268ee36de81dadc}{%
+           family={Ohman},
+           family_i={O\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           given_i={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9f1e6c800d093ca295f20970019c3933}{%
+           family={Armstrong},
+           family_i={A\bibinitperiod},
+           given={P.\bibnamedelimi W.},
+           given_i={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=05911a61023a1e756816ec4c38b1c51b}{%
+           family={Christenson},
+           family_i={C\bibinitperiod},
+           given={R.\bibnamedelimi H.},
+           given_i={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7705b2068932313ae009a70d99897492}{%
+           family={Granger},
+           family_i={G\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           given_i={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2e4af7623ee8592f08ed22dc8a982c00}{%
+           family={Katus},
+           family_i={K\bibinitperiod},
+           given={H.\bibnamedelimi A.},
+           given_i={H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=154cd8728f9919dc765462b016cd6283}{%
+           family={Hamm},
+           family_i={H\bibinitperiod},
+           given={C.\bibnamedelimi W.},
+           given_i={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=379541b712e8c03e187adc1f134fb678}{%
+           family={O'Hannesian},
+           family_i={O\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3d6f706aa7c76141cd21af4418ee1ffb}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={G.\bibnamedelimi S.},
+           given_i={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=12e4155ecad6359dc5fa14d4d0dc969c}{%
+           family={Kleiman},
+           family_i={K\bibinitperiod},
+           given={N.\bibnamedelimi S.},
+           given_i={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6a05d65041a0194ef8e05c588297648e}{%
+           family={Califf},
+           family_i={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d53656a7c71511c9c4bd2751ce65c430}{%
+           family={Topol},
+           family_i={T\bibinitperiod},
+           given={E.\bibnamedelimi J.},
+           given_i={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=93e65a7c26a296e25f82900fc4bba2ba}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={K.\bibnamedelimi L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6a2c6764d28be3a012b86e2a7823ff02}{%
+           family={{Investigators}},
+           family_i={I\bibinitperiod},
+           given={{The\bibnamedelimb G.}},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd77b2d83fd38e0b8ecae3dad33b2ab7}
+      \strng{fullhash}{cebc8c6bc21d00d9a3b9cba905a17a63}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEJM}
+      \field{title}{Cardiac troponin {T} levels for risk stratification in acute myocardial ischemia}
+      \field{volume}{335}
+      \field{year}{1996}
+      \field{pages}{1333\bibrangedash 1341}
+      \range{pages}{9}
+      \keyw{clinical-prediction,medical-paper-examples-of-nonparametric-regression-and-splines,*import}
+    \endentry
+    \entry{par10eff}{article}{}
+      \true{moreauthor}
+      \name{author}{3}{}{%
+        {{hash=67ce14278bc7846127741ffd5b2e7af9}{%
+           family={Par\'{e}},
+           family_i={P\bibinitperiod},
+           given={Guillaume},
+           given_i={G\bibinitperiod}}}%
+        {{hash=ba3e36e32aeb6de4e4b931b27533478c}{%
+           family={Mehta},
+           family_i={M\bibinitperiod},
+           given={Shamir\bibnamedelima R.},
+           given_i={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=c44ee2c49259f38305e9d7a5c5b16214}{%
+           family={Yusuf},
+           family_i={Y\bibinitperiod},
+           given={Salim},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e895d126754cb3756e90b51643c2cff3}
+      \strng{fullhash}{53ed6151940fedc13571ef2cf3e7c68d}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEJM}
+      \field{note}{August 29, 2010}
+      \field{title}{Effects of {CYP2C19} genotype on outcomes of clopidogrel treatment}
+      \field{volume}{online}
+      \field{year}{2010}
+      \keyw{*import}
+    \endentry
+    \entry{pau08pre}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a0480e95683b724415eaf6686c04c931}{%
+           family={Paul},
+           family_i={P\bibinitperiod},
+           given={Debashis},
+           given_i={D\bibinitperiod}}}%
+        {{hash=fd192648c7757331105f601c94260006}{%
+           family={Bair},
+           family_i={B\bibinitperiod},
+           given={Eric},
+           given_i={E\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           family_i={H\bibinitperiod},
+           given={Trevor},
+           given_i={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           family_i={T\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2fb6e89510ddbaf00fd558b034180b92}
+      \strng{fullhash}{fedf8e33216ac316da6500fcc77a6cdd}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{develop consistent $\hat{Y}$ using a latent variable structure, using for example supervised principal components. Then run stepwise regression or lasso predicting $\hat{Y}$ (lasso worked better). Can run into problems when a predictor has importance in an adjusted sense but has no marginal correlation with $Y$;model approximation;model simplification}
+      \field{journaltitle}{Ann Stat}
+      \field{number}{4}
+      \field{title}{{``Preconditioning'' for feature selection and regression in high-dimensional problems}}
+      \field{volume}{36}
+      \field{year}{2008}
+      \field{pages}{1595\bibrangedash 1619}
+      \range{pages}{25}
+      \verb{url}
+      \verb http://dx.doi.org/10.1214/009053607000000578
+      \endverb
+      \keyw{lasso,model-approximation,model-selection,penalized-mle,pmle,pre-conditioning,prediction-error,shinkage,*import}
+    \endentry
+    \entry{pen08eva}{article}{}
+      \name{author}{4}{}{%
+        {{hash=812bd892f35b523d9be1ac420c3e3e7d}{%
+           family={Pencina},
+           family_i={P\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0e42d26067c7bc9ecb814488644ad097}{%
+           family={{D'Agostino\bibnamedelimb Sr}},
+           family_i={D\bibinitperiod},
+           given={Ralph\bibnamedelima B.},
+           given_i={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=9357d6e293149c951b1651e9ca889331}{%
+           family={{D'Agostino\bibnamedelimb Jr}},
+           family_i={D\bibinitperiod},
+           given={Ralph\bibnamedelima B.},
+           given_i={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ba1badd337ad177a60c9b9b617ea4ed8}{%
+           family={Vasan},
+           family_i={V\bibinitperiod},
+           given={Ramachandran\bibnamedelima S.},
+           given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0283d1bb498214bbafbddde5671f60d}
+      \strng{fullhash}{09ca4b27b99c609a3f3774d39dc60ded}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{small differences in ROC area can still be very meaningful;example of insignificant test for difference in ROC areas with very significant results from new method;Yates' discrimination slope;reclassification table;limiting version of this based on whether and amount by which probabilities rise for events and lower for non-events when compare new model to old;comparing two models;see letter to the editor by Van Calster and Van Huffel, Stat in Med 29:318-319, 2010 and by Cook and Paynter, Stat in Med 31:93-97, 2012}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Evaluating the added predictive ability of a new marker: {From} area under the {ROC} curve to reclassification and beyond}
+      \field{volume}{27}
+      \field{year}{2008}
+      \field{pages}{157\bibrangedash 172}
+      \range{pages}{16}
+      \keyw{auc,biomarker,c-index,discrimination,model-performance,risk-prediction,*import}
+    \endentry
+    \entry{pla64str}{article}{}
+      \name{author}{1}{}{%
+        {{hash=92e1b9856251236913e21454b0f87f36}{%
+           family={Platt},
+           family_i={P\bibinitperiod},
+           given={John\bibnamedelima R.},
+           given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{92e1b9856251236913e21454b0f87f36}
+      \strng{fullhash}{92e1b9856251236913e21454b0f87f36}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{3642}
+      \field{title}{{Strong inference}}
+      \field{volume}{146}
+      \field{year}{1964}
+      \field{pages}{347\bibrangedash 353}
+      \range{pages}{7}
+      \keyw{*import}
+    \endentry
+    \entry{plo14mod}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1c06f1e80eb8cb3f609ff1950897cbda}{%
+           prefix={van\bibnamedelima der},
+           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           family={Ploeg},
+           family_i={P\bibinitperiod},
+           given={Tjeerd},
+           given_i={T\bibinitperiod}}}%
+        {{hash=75a10493fc2b731a3c226b9f6cf23a43}{%
+           family={Austin},
+           family_i={A\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           given_i={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=00fad84519e71e8ad21fafe496f26025}{%
+           family={Steyerberg},
+           family_i={S\bibinitperiod},
+           given={Ewout\bibnamedelima W.},
+           given_i={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {BioMed Central Ltd}%
+      }
+      \strng{namehash}{b1e4203ca2ac473fce1abd4ee086656a}
+      \strng{fullhash}{b1e4203ca2ac473fce1abd4ee086656a}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Modern modelling techniques may potentially provide more accurate predictions of binary outcomes than classical techniques. We aimed to study the predictive performance of different modelling techniques in relation to the effective sample size (``data hungriness'').}}
+      \field{annotation}{Would be better to use proper accuracy scores in the assessment. Too much emphasis on optimism as opposed to final discrimination measure. But much good practical information. Recursive partitioning fared poorly.}
+      \field{issn}{1471-2288}
+      \field{journaltitle}{BMC medical research methodology}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{{Modern modelling techniques are data hungry: a simulation study for predicting dichotomous endpoints.}}
+      \field{volume}{14}
+      \field{year}{2014}
+      \field{pages}{137+}
+      \range{pages}{-1}
+      \verb{url}
+      \verb http://dx.doi.org/10.1186/1471-2288-14-137
+      \endverb
+      \keyw{events-per-variable,random-forest,recursive-partitioning,rms,study-design,svm,validation}
+    \endentry
+    \entry{pry83}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d692f79096093f10acec1ffac4eceae8}{%
+           family={Pryor},
+           family_i={P\bibinitperiod},
+           given={David\bibnamedelima B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=50b45a1c90dd4d1dafc38d048202285b}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Kerry\bibnamedelima L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=623499e1f69a5b4e53f96af9ccc8f81a}{%
+           family={Califf},
+           family_i={C\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=41faf9b676bc904ef6c4bcb96983487a}{%
+           family={Rosati},
+           family_i={R\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2049dfca67724ea1cca0dbea7bca16bf}
+      \strng{fullhash}{1fb5e17e893da64ba24e159284271c6f}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am J Med}
+      \field{title}{{Estimating the likelihood of significant coronary artery disease}}
+      \field{volume}{75}
+      \field{year}{1983}
+      \field{pages}{771\bibrangedash 780}
+      \range{pages}{10}
+      \keyw{*import}
+    \endentry
+    \entry{raa00how}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5c9d44076d8652e6e1bce95dce6743e0}{%
+           family={Raab},
+           family_i={R\bibinitperiod},
+           given={Gillian\bibnamedelima M.},
+           given_i={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=724173a0b2814bdcff72f6652375dc17}{%
+           family={Day},
+           family_i={D\bibinitperiod},
+           given={Simon},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a7d3bb3629e2b66de4a3606bd186defa}{%
+           family={Sales},
+           family_i={S\bibinitperiod},
+           given={Jill},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4045858c08c04e2758d4a526dc9e35c}
+      \strng{fullhash}{b4045858c08c04e2758d4a526dc9e35c}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{how correlated with outcome must a variable before adding it helps more than hurts, as a function of sample size;planning;design;variable selection}
+      \field{journaltitle}{Controlled Clin Trials}
+      \field{title}{{How to select covariates to include in the analysis of a clinical trial}}
+      \field{volume}{21}
+      \field{year}{2004}
+      \field{pages}{330\bibrangedash 342}
+      \range{pages}{13}
+      \keyw{ancova,covariable-adjustment,rct,*import}
+    \endentry
+    \entry{rob91som}{article}{}
+      \name{author}{2}{}{%
+        {{hash=853e2581fe359197dc7854779558a22f}{%
+           family={Robinson},
+           family_i={R\bibinitperiod},
+           given={L.\bibnamedelimi D.},
+           given_i={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=7c79a1ad2050aaac36deffa891668c9d}{%
+           family={Jewell},
+           family_i={J\bibinitperiod},
+           given={N.\bibnamedelimi P.},
+           given_i={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f98ea99200025441a6897364ba99d33b}
+      \strng{fullhash}{f98ea99200025441a6897364ba99d33b}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int Stat Rev}
+      \field{title}{{Some surprising results about covariate adjustment in logistic regression models}}
+      \field{volume}{59}
+      \field{year}{1991}
+      \field{pages}{227\bibrangedash 240}
+      \range{pages}{14}
+      \keyw{covariable-adjustment,logistic-model,study-design,*import}
+    \endentry
+    \entry{roy06dic}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d77ac0af604c52daf07a18aced65b51b}{%
+           family={Royston},
+           family_i={R\bibinitperiod},
+           given={Patrick},
+           given_i={P\bibinitperiod}}}%
+        {{hash=52f053b8920d5d4076a244ef065113f8}{%
+           family={Altman},
+           family_i={A\bibinitperiod},
+           given={Douglas\bibnamedelima G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=27482c3433fc543e6d2ab2c7e64d4ed9}{%
+           family={Sauerbrei},
+           family_i={S\bibinitperiod},
+           given={Willi},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{207231ae7912803a74c824dc3fb591c6}
+      \strng{fullhash}{207231ae7912803a74c824dc3fb591c6}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{destruction of statistical inference when cutpoints are chosen using the response variable; varying effect estimates when change cutpoints;difficult to interpret effects when dichotomize;nice plot showing effect of categorization; PBC data}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Dichotomizing continuous predictors in multiple regression: a bad idea}}
+      \field{volume}{25}
+      \field{year}{2006}
+      \field{pages}{127\bibrangedash 141}
+      \range{pages}{15}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.2331
+      \endverb
+      \keyw{categorization,clinical-research,continuous-covariates,cutpoints,dichotomization,efficiency,regression,residual-confounding,teaching-mds,*import}
+    \endentry
+    \entry{rub07des}{article}{}
+      \name{author}{1}{}{%
+        {{hash=37fe180f849ae0085cba2b45692be375}{%
+           family={Rubin},
+           family_i={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           given_i={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{37fe180f849ae0085cba2b45692be375}
+      \strng{fullhash}{37fe180f849ae0085cba2b45692be375}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{The design \emph{versus} the analysis of observational studies for causal effects: {Parallels} with the design of randomized studies}
+      \field{volume}{26}
+      \field{year}{2007}
+      \field{pages}{20\bibrangedash 36}
+      \range{pages}{17}
+      \keyw{assignment-mechanism,blinding-as-much-of-the-analysis-to-outcome-data-as-possible,causal-inference,good-review-article,objective-analysis-of-observational-studies,objective-design,propensity-score,tobacco-litigation,*import}
+    \endentry
+    \entry{sar96hie}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=8e2033d02688f8960e375954a77c7f6e}{%
+           family={Sargent},
+           family_i={S\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           given_i={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=745dbcc272ac9d58c261f60965151fe0}{%
+           family={Hodges},
+           family_i={H\bibinitperiod},
+           given={James\bibnamedelima S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9efb33f38933195e167558172656a00d}
+      \strng{fullhash}{9efb33f38933195e167558172656a00d}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Presented at the Joint Statistical Meetings, Chicago; see and99tes}
+      \field{title}{A hierarchical model method for subgroup analysis of time-to-event data in the {Cox} regression setting}
+      \field{year}{1996}
+      \keyw{cox-model,differential-treatment-effect,mmc,shrinkage,shrinkage-of-treatment-by-covariable-interaction,subgroup-analysis,*import}
+    \endentry
+    \entry{sch83sam}{article}{}
+      \name{author}{1}{}{%
+        {{hash=480edfef1f04370ce4875e2b86ec3fc6}{%
+           family={Schoenfeld},
+           family_i={S\bibinitperiod},
+           given={David\bibnamedelima A.},
+           given_i={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{480edfef1f04370ce4875e2b86ec3fc6}
+      \strng{fullhash}{480edfef1f04370ce4875e2b86ec3fc6}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrics}
+      \field{title}{{Sample size formulae for the proportional hazards regression model}}
+      \field{volume}{39}
+      \field{year}{1983}
+      \field{pages}{499\bibrangedash 503}
+      \range{pages}{5}
+      \keyw{cox-model,sample-size,study-design,*import}
+    \endentry
+    \entry{sch00gen}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8b3fec3d8b3b5b3ca8aa39fc50c93906}{%
+           family={Schwemer},
+           family_i={S\bibinitperiod},
+           given={Greg},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
+      \strng{fullhash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Controlled Clin Trials}
+      \field{title}{{General linear models for multicenter clinical trials}}
+      \field{volume}{21}
+      \field{year}{2000}
+      \field{pages}{21\bibrangedash 29}
+      \range{pages}{9}
+      \keyw{interaction,multicenter-rct,pooling,treatment-by-center-interaction,treatment-by-site,type-ii-ss,type-iii-ss,*import}
+    \endentry
+    \entry{sen04con}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4971ea16a9a5bff50baab1fe43d121b7}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={Stephen},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{fullhash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{p. 3735: "in the pharmaceutical industry, in analyzing the data, if a linear model is employed, it is usual to fit centre as a factor but unusual to fit block.";p. 3739: a large trial "is not less vulnerable to chance covariate imbalance";p. 3741:"There is no place, in my view, for classical minimization" (vs. the method of Atkinson);"If an investigator uses such [allocation based on covariates] schemes, she or he is honour bound, in my opinion, as a very minimum, to adjust for the factors used to balance, since the fact that they are being used to balance is an implicit declaration that they will have prognostic value.";"The point of view is sometimes defended that analyses that ignore covariates are superior because they are simpler. I do not accept this. A value of $\pi=3$ is a simple one and accurate to one significant figure ... However very few would seriously maintain that if should generally be adopted by engineers.";p. 3742: "as Fisher pointed out ... if we balance by a predictive covariate but do not fit the covariate in the model, not only do we not exploit the covariate, we actually increase the expected declared standard error."; p. 3744:"I would like to see standard errors for group means abolished."; p. 3744:"A common habit, however, in analyzing trials with three or more arms is to pool the variances from all arms when calculating the standard error of a given contrast. In my view this is a curious practice ... it relies on an assumption of additivity of \emph{all} treatments when comparing only \emph{two}. ... a classical $t$-test is robust to heteroschedasticity provide that sample sizes are equal in the groups being compared and that the variance is internal to those two groups but is not robust where an external estimate is being used."; p. 3745: "By adjusting main effects for interactions a type III analysis is similarly illogical to Neyman's hypothesis test."; "Guyatt \emph{et al.} ... found a 'method for estimating the proportion of patients who benefit from a treatment ... In fact they had done no such thing."; p. 3746: "When I checked the Web of Science on 29 June 2003, the paper by Horwitz \emph{et al.} had been cited 28 times and that by Guyatt \emph{et al.} had been cited 79 times. The letters pointing out the fallacies had been cited only 8 and 5 times respectively."; "if we pool heterogeneous strata, the odds ratio of the treatment effect will be different from that in every stratum, even if from stratum to stratum it does not vary."; p. 3747: "Part of the problem with Poisson, proportional hazard and logistic regression approaches is that they use a single parameter, the linear predictor, with no equivalent of the variance parameter in the Normal case. This means that lack of fit impacts on the estimate of the predictor. ... what is the value of randomization if, in all except the Normal case, we cannot guarantee to have unbiased estimates. My view ... was that the form of analysis envisaged (that is to say, which factors and covariates should be fitted) justified the allocation and \emph{not vice versa}."; "use the additive measure at the point of analysis and transform to the relevant scale at the point of implementation. This transformation at the point of medical decision-making will require auxiliary information on the level of background risk of the patient."; p. 3748:"The decision to fit prognostic factors has a far more dramatic effect on the precision of our inferences than the choice of an allocation based on covariates or randomization approach and one of my chief objections to the allocation based on covariates approach is that trialists have tended to use the fact that they have balanced as an excuse for not fitting. This is a grave mistake."}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Controversies concerning randomization and additivity in clinical trials}}
+      \field{volume}{23}
+      \field{year}{2004}
+      \field{pages}{3729\bibrangedash 3753}
+      \range{pages}{25}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.2074
+      \endverb
+      \keyw{additivity,baseline,covariable-adjustment,covariate-adjustment,randomization,rct,study-design,*import}
+    \endentry
+    \entry{sensta}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4971ea16a9a5bff50baab1fe43d121b7}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={Stephen},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester, England}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{fullhash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{title}{{Statistical Issues in Drug Development}}
+      \field{year}{2008}
+      \keyw{*import}
+    \endentry
+    \entry{sen05dic}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=3259ffd6a7eb7d2246ef393306d20235}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sydney}%
+      }
+      \strng{namehash}{3259ffd6a7eb7d2246ef393306d20235}
+      \strng{fullhash}{3259ffd6a7eb7d2246ef393306d20235}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the International Statistical Institute, 55th Session}
+      \field{title}{{Dichotomania: an obsessive compulsive disorder that is badly affecting the quality of analysis of pharmaceutical trials}}
+      \field{year}{2005}
+      \keyw{*import}
+    \endentry
+    \entry{sen10com}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4971ea16a9a5bff50baab1fe43d121b7}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={Stephen},
+           given_i={S\bibinitperiod}}}%
+        {{hash=e4e7b320c9d76f9d3b7abf1a42ebe2e8}{%
+           family={Anisimov},
+           family_i={A\bibinitperiod},
+           given={Vladimir\bibnamedelima V.},
+           given_i={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ae3f3643ef126ee787e1270c155d7299}{%
+           family={Fedorov},
+           family_i={F\bibinitperiod},
+           given={Valerii\bibnamedelima V.},
+           given_i={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2176d6c0a2fe3e479170cd3ef9e8a698}
+      \strng{fullhash}{2176d6c0a2fe3e479170cd3ef9e8a698}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"fitting covariates may make a more valuable and instructive contribution to inferences about treatment effects than only balancing them"}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Comparisons of minimization and {Atkinson's} algorithm}
+      \field{volume}{29}
+      \field{year}{2010}
+      \field{pages}{721\bibrangedash 730}
+      \range{pages}{10}
+      \keyw{clniical-trials,covariate-balance,covariates,dynamic-allocation,optimal-design,randomization,rct,*import}
+    \endentry
+    \entry{sen00rep}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4971ea16a9a5bff50baab1fe43d121b7}{%
+           family={Senn},
+           family_i={S\bibinitperiod},
+           given={Stephen},
+           given_i={S\bibinitperiod}}}%
+        {{hash=7189dceac891a3c3854737ce21b9ede6}{%
+           family={Stevens},
+           family_i={S\bibinitperiod},
+           given={Lynda},
+           given_i={L\bibinitperiod}}}%
+        {{hash=84cdf738287dd7a3df74cf1f5e9a38f0}{%
+           family={Chaturvedi},
+           family_i={C\bibinitperiod},
+           given={Nish},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f58418903e6d13d007540bb62f440331}
+      \strng{fullhash}{f58418903e6d13d007540bb62f440331}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{Repeated measures in clinical trials: {Simple} strategies for analysis using summary measures}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{861\bibrangedash 877}
+      \range{pages}{17}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/(SICI)1097-0258(20000330)19:6%3C861::AID-SIM407%3E3.0.CO;2-F
+      \endverb
+      \keyw{auc,repeated-measures,serial-data,slope,summary-measures,teaching-mds,*import}
+    \endentry
+    \entry{she04inf}{article}{}
+      \name{author}{3}{}{%
+        {{hash=793dfea82e732dc974bf33f90b3a3b28}{%
+           family={Shen},
+           family_i={S\bibinitperiod},
+           given={Xiaotong},
+           given_i={X\bibinitperiod}}}%
+        {{hash=2e82f806c870b69199bc65280b1df52b}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={{Hsin-Cheng}},
+           given_i={H\bibinitperiod}}}%
+        {{hash=663989c151823944485798f247325a6d}{%
+           family={Ye},
+           family_i={Y\bibinitperiod},
+           given={Jimmy},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{484f2eb84bc9bd9613233160c43e11e0}
+      \strng{fullhash}{484f2eb84bc9bd9613233160c43e11e0}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{uses optimal approximation for estimating mean and variance of complex statistics adjusting for model selection}
+      \field{journaltitle}{J Am Stat Assoc}
+      \field{title}{{Inference after model selection}}
+      \field{volume}{99}
+      \field{year}{2004}
+      \field{pages}{751\bibrangedash 762}
+      \range{pages}{12}
+      \keyw{model-approximation,model-selection,model-uncertainty,pre-conditioning,variable-selection,*import}
+    \endentry
+    \entry{sig99tre}{article}{}
+      \name{author}{2}{}{%
+        {{hash=42e7f665e32e528aac0678d6540edd1c}{%
+           family={Sigueira},
+           family_i={S\bibinitperiod},
+           given={Arminda\bibnamedelima L.},
+           given_i={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a36d4c71f157391b6597df98e1a70f0d}{%
+           family={Taylor},
+           family_i={T\bibinitperiod},
+           given={Jeremy\bibnamedelimb M.\bibnamedelimi G.},
+           given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a1ed14de642d633046092942d9b7532}
+      \strng{fullhash}{3a1ed14de642d633046092942d9b7532}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Box-Cox transformation of a covariable;validity of inference for treatment effect when treat exponent for covariable as fixed}
+      \field{journaltitle}{J Am Stat Assoc}
+      \field{title}{Treatment effects in a logistic model involving the {Box-Cox} transformation}
+      \field{volume}{94}
+      \field{year}{1999}
+      \field{pages}{240\bibrangedash 246}
+      \range{pages}{7}
+      \keyw{*import}
+    \endentry
+    \entry{spa89}{article}{}
+      \name{author}{3}{}{%
+        {{hash=33e480388319a4b78836500e1ba17d51}{%
+           family={Spanos},
+           family_i={S\bibinitperiod},
+           given={Alan},
+           given_i={A\bibinitperiod}}}%
+        {{hash=11dc2bced6a1eb03ef27ee31e3e2acb1}{%
+           family={Harrell},
+           family_i={H\bibinitperiod},
+           given={Frank\bibnamedelima E.},
+           given_i={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=a00c8897b8ac9c3e5697d88e1e2a524d}{%
+           family={Durack},
+           family_i={D\bibinitperiod},
+           given={David\bibnamedelima T.},
+           given_i={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c49e3fef05187645233e1862e4466989}
+      \strng{fullhash}{c49e3fef05187645233e1862e4466989}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA}
+      \field{title}{Differential diagnosis of acute meningitis: {A}n analysis of the predictive value of initial observations}
+      \field{volume}{262}
+      \field{year}{1989}
+      \field{pages}{2700\bibrangedash 2707}
+      \range{pages}{8}
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.262.19.2700
+      \endverb
+      \keyw{diagnosis,logistic-model,meningitis,multivariable-modeling,*import}
+    \endentry
+    \entry{ste00cli}{article}{}
+      \name{author}{3}{}{%
+        {{hash=00fad84519e71e8ad21fafe496f26025}{%
+           family={Steyerberg},
+           family_i={S\bibinitperiod},
+           given={Ewout\bibnamedelima W.},
+           given_i={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=40cdb3a71b739c4bc9ee543ac594223b}{%
+           family={Bossuyt},
+           family_i={B\bibinitperiod},
+           given={Patrick\bibnamedelimb M.\bibnamedelimi M.},
+           given_i={P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=50b45a1c90dd4d1dafc38d048202285b}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Kerry\bibnamedelima L.},
+           given_i={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{05144d2de5d854581bf55f5042c2db4d}
+      \strng{fullhash}{05144d2de5d854581bf55f5042c2db4d}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am Heart J}
+      \field{note}{Editorial, pp.\ 761-763}
+      \field{title}{Clinical trials in acute myocardial infarction: {Should} we adjust for baseline characteristics?}
+      \field{volume}{139}
+      \field{year}{2000}
+      \field{pages}{745\bibrangedash 751}
+      \range{pages}{7}
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0002-8703(00)90001-2
+      \endverb
+      \keyw{ancova,covariable-adjustment,*import}
+    \endentry
+    \entry{irr}{book}{}
+      \name{author}{3}{}{%
+        {{hash=2f18fc23a917fe1f0c74958b593f4e71}{%
+           family={Stodden},
+           family_i={S\bibinitperiod},
+           given={Victoria},
+           given_i={V\bibinitperiod}}}%
+        {{hash=206bc8e5c879d4926dffd8eed005bcc7}{%
+           family={Leisch},
+           family_i={L\bibinitperiod},
+           given={Friedrich},
+           given_i={F\bibinitperiod}}}%
+        {{hash=fa107819515aa7437aa7efc12d4c54e5}{%
+           family={Peng},
+           family_i={P\bibinitperiod},
+           given={Roger\bibnamedelima D.},
+           given_i={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=2f18fc23a917fe1f0c74958b593f4e71}{%
+           family={Stodden},
+           family_i={S\bibinitperiod},
+           given={Victoria},
+           given_i={V\bibinitperiod}}}%
+        {{hash=206bc8e5c879d4926dffd8eed005bcc7}{%
+           family={Leisch},
+           family_i={L\bibinitperiod},
+           given={Friedrich},
+           given_i={F\bibinitperiod}}}%
+        {{hash=fa107819515aa7437aa7efc12d4c54e5}{%
+           family={Peng},
+           family_i={P\bibinitperiod},
+           given={Roger\bibnamedelima D.},
+           given_i={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton, FL}%
+      }
+      \list{publisher}{2}{%
+        {CRC Press/Taylor}%
+        {Francis}%
+      }
+      \strng{namehash}{feecad815ba47bb7960efb58a177608c}
+      \strng{fullhash}{feecad815ba47bb7960efb58a177608c}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{In computational science, reproducibility requires that researchers make code and data available to others so that the data can be analyzed in a similar manner as in the original publication. Code must be available to be distributed, data must be accessible in a readable format, and a platform must be available for widely distributing the data and code. In addition, both data and code need to be licensed permissively enough so that others can reproduce the work without a substantial legal burden. Implementing Reproducible Research covers many of the elements necessary for conducting and distrib.}}
+      \field{isbn}{9781466561595}
+      \field{title}{{Implementing Reproducible Research}}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.worldcat.org/isbn/9781466561595
+      \endverb
+      \keyw{reporting,reproducibility,statistical-computing,statistical-report}
+    \endentry
+    \entry{sub10gen}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d528eeb2b738e62984c62530af4f81d4}{%
+           family={Subramanian},
+           family_i={S\bibinitperiod},
+           given={Jyothi},
+           given_i={J\bibinitperiod}}}%
+        {{hash=6888e07ac8440b3bea794b7843c4229c}{%
+           family={Simon},
+           family_i={S\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2962415a9ae553c9e5ad2f9a5952c6a}
+      \strng{fullhash}{e2962415a9ae553c9e5ad2f9a5952c6a}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{none demonstrated to have clinical utility;bioinformatics;quality scoring of papers}
+      \field{journaltitle}{J Nat Cancer Inst}
+      \field{title}{Gene expression-based prognostic signatures in lung cancer: {Ready} for clinical use?}
+      \field{volume}{102}
+      \field{year}{2010}
+      \field{pages}{464\bibrangedash 474}
+      \range{pages}{11}
+      \keyw{bioinformatics,biomarker,genomic-signatures,quality-assessment,*import}
+    \endentry
+    \entry{R}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=616983f2ba14a1f8c933006442711e25}{%
+           family={Team},
+           family_i={T\bibinitperiod},
+           given={R\bibnamedelima Development\bibnamedelima Core},
+           given_i={R\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{616983f2ba14a1f8c933006442711e25}
+      \strng{fullhash}{616983f2ba14a1f8c933006442711e25}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{www.r-project.org}
+      \field{isbn}{3-900051-07-0}
+      \field{title}{{R: A language and environment for statistical computing}}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.R-project.org
+      \endverb
+      \keyw{group-rms,*import}
+    \endentry
+    \entry{tor85how}{article}{}
+      \name{author}{3}{}{%
+        {{hash=86a10e0a9da737ef595b7021bd9e1679}{%
+           family={T\"{o}rnqvist},
+           family_i={T\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=634125083e017af47a73b2943a8db6e6}{%
+           family={Vartia},
+           family_i={V\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+        {{hash=fa5685a7667a2ef68f73b0b3935c4256}{%
+           family={Vartia},
+           family_i={V\bibinitperiod},
+           given={Y.\bibnamedelimi O.},
+           given_i={Y\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{19aa7861ac2f082f11075d219eb057b1}
+      \strng{fullhash}{19aa7861ac2f082f11075d219eb057b1}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Am Statistician}
+      \field{title}{{How should relative changes be measured?}}
+      \field{volume}{39}
+      \field{year}{1985}
+      \field{pages}{43\bibrangedash 46}
+      \range{pages}{4}
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/00031305.1985.10479385
+      \endverb
+      \keyw{change,measuring-change,one-sample-problem,percent-change,teaching-mds,*import}
+    \endentry
+    \entry{tuk93tig}{article}{}
+      \name{author}{1}{}{%
+        {{hash=26f8106c3e152e61fb92d4a2bd368224}{%
+           family={Tukey},
+           family_i={T\bibinitperiod},
+           given={John\bibnamedelima W.},
+           given_i={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{26f8106c3e152e61fb92d4a2bd368224}
+      \strng{fullhash}{26f8106c3e152e61fb92d4a2bd368224}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{showed that asking clinicians to make up regression coefficients out of thin air is better than not adjusting for covariables}
+      \field{journaltitle}{Controlled Clin Trials}
+      \field{title}{{Tightening the Clinical Trial}}
+      \field{volume}{14}
+      \field{year}{1993}
+      \field{pages}{266\bibrangedash 285}
+      \range{pages}{20}
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/0197-2456(93)90225-3
+      \endverb
+      \keyw{ancova,baseline,covariable-adjustment,randomization,rct,regression,*import}
+    \endentry
+    \entry{kla15est}{article}{}
+      \name{author}{5}{}{%
+        {{hash=3da70746f6f3c8df26806588262ea487}{%
+           family={{van\bibnamedelimb Klaveren}},
+           family_i={v\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=374198228024f1dcce426097584ba9a3}{%
+           family={Vergouwe},
+           family_i={V\bibinitperiod},
+           given={Yvonne},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=078e14e7a9d278f16acf3e7812948ff6}{%
+           family={Farooq},
+           family_i={F\bibinitperiod},
+           given={Vasim},
+           given_i={V\bibinitperiod}}}%
+        {{hash=60c78dfdb7b49a3d5b1a3c23eefa38d1}{%
+           family={Serruys},
+           family_i={S\bibinitperiod},
+           given={Patrick\bibnamedelima W.},
+           given_i={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=00fad84519e71e8ad21fafe496f26025}{%
+           family={Steyerberg},
+           family_i={S\bibinitperiod},
+           given={Ewout\bibnamedelima W.},
+           given_i={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6228f9d2660f88fb7d1acde704e9f76}
+      \strng{fullhash}{236c851a6178100bd589d778f6b6d419}
+      \field{sortinit}{v}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Objectives We aimed to compare modeling approaches to estimate the individual survival benefit of treatment with either coronary artery bypass graft surgery (CABG) or percutaneous coronary intervention (PCI) for patients with complex coronary artery disease. Study Design and Setting We estimated survival with Cox regression models that included the treatment variable (CABG/PCI) interacting with either an internally developed overall prognostic index (PI) or with individual prognostic factors. We analyzed data of patients who were randomized in the Synergy between Percutaneous Coronary Intervention with Taxus and Cardiac Surg trial (1,800 patients, 178 deaths). Results A negligible interaction with the PI (P = 0.51) led to 4-year survival estimates in favor of CABG for all patients. In contrast, individual interactions indicated substantial relative treatment effect heterogeneity (overall interaction P = 0.004), and estimates of 4-year survival were numerically in favor of CABG for 1,275 of 1,800 patients (71\%; 519 with 95\% confidence). To test the more complex model with individual interactions, we first used penalized regression, resulting in smaller but largely consistent individual estimates of the survival difference between CABG and PCI. Second, strong treatment interactions were confirmed at external validation in 2,891 patients from a multinational registry. Conclusion Modeling strategies that omit interactions may result in misleading estimates of absolute treatment benefit for individual patients with the potential hazard of suboptimal decision making.}}
+      \field{issn}{08954356}
+      \field{journaltitle}{Journal of Clinical Epi}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{{Estimates of absolute treatment benefit for individual patients required careful modeling of statistical interactions}}
+      \field{volume}{68}
+      \field{year}{2015}
+      \field{pages}{1366\bibrangedash 1374}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.jclinepi.2015.02.012
+      \endverb
+      \keyw{absolute-benefit,absolute-vs-relative-treatment-effect,interaction}
+    \endentry
+    \entry{vic08dec}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fe6294041b61109066602d11a9fe297d}{%
+           family={Vickers},
+           family_i={V\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe6294041b61109066602d11a9fe297d}
+      \strng{fullhash}{fe6294041b61109066602d11a9fe297d}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{limitations of accuracy metrics;incorporating clinical consequences;nice example of calculation of expected outcome;drawbacks of conventional decision analysis, especially because of the difficulty of eliciting the expected harm of a missed diagnosis;use of a threshold on the probability of disease for taking some action;decision curve;has other good references to decision analysis}
+      \field{journaltitle}{Am Statistician}
+      \field{number}{4}
+      \field{title}{{Decision analysis for the evaluation of diagnostic tests, prediction models, and molecular markers}}
+      \field{volume}{62}
+      \field{year}{2008}
+      \field{pages}{314\bibrangedash 320}
+      \range{pages}{7}
+      \keyw{decision-support-techniques,decision-theory,outcome-assessment,prognosis,*import}
+    \endentry
+    \entry{vic08aga}{article}{}
+      \name{author}{3}{}{%
+        {{hash=fe6294041b61109066602d11a9fe297d}{%
+           family={Vickers},
+           family_i={V\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=20ddc28909b3a40fcb645581765900d6}{%
+           family={Basch},
+           family_i={B\bibinitperiod},
+           given={Ethan},
+           given_i={E\bibinitperiod}}}%
+        {{hash=89d46f79144af5bbdf8f0d0bcb96db8d}{%
+           family={Kattan},
+           family_i={K\bibinitperiod},
+           given={Michael\bibnamedelima W.},
+           given_i={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{74a274044beb20f2a9b7e1565a48397e}
+      \strng{fullhash}{74a274044beb20f2a9b7e1565a48397e}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{"The act of diagnosis requires that patients be placed in a binary category of either having or not having a certain disease. Accordingly, the diseases of particular concern for industrialized countries---such as type 2 diabetes, obesity, or depression---require that a somewhat arbitrary cut-point be chosen on a continuous scale of measurement (for example, a fasting glucose level $>6.9$ mmol/L [$>125$ mg/dL] for type 2 diabetes). These cut-points do not ade- quately reflect disease biology, may inappropriately treat patients on either side of the cut-point as 2 homogenous risk groups, fail to incorporate other risk factors, and are invariable to patient preference."}
+      \field{journaltitle}{Ann Int Med}
+      \field{title}{{Against diagnosis}}
+      \field{volume}{149}
+      \field{year}{2008}
+      \field{pages}{200\bibrangedash 203}
+      \range{pages}{4}
+      \keyw{*import}
+    \endentry
+    \entry{wai06fin}{article}{}
+      \name{author}{1}{}{%
+        {{hash=048f97c34e783f7b503ee1aa339b6b13}{%
+           family={Wainer},
+           family_i={W\bibinitperiod},
+           given={Howard},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{048f97c34e783f7b503ee1aa339b6b13}
+      \strng{fullhash}{048f97c34e783f7b503ee1aa339b6b13}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{can find bins that yield either positive or negative association;especially pertinent when effects are small;"With four parameters, I can fit an elephant; with five, I can make it wiggle its trunk." - John von Neumann}
+      \field{journaltitle}{Chance}
+      \field{number}{1}
+      \field{title}{Finding what is not there through the unfortunate binning of results: {The} {Mendel} effect}
+      \field{volume}{19}
+      \field{year}{2006}
+      \field{pages}{49\bibrangedash 56}
+      \range{pages}{8}
+      \keyw{bad,cutpoints,teaching-mds,*import}
+    \endentry
+    \entry{whi05adj}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c6abac5590a6c14cb32798e94687c96a}{%
+           family={White},
+           family_i={W\bibinitperiod},
+           given={Ian\bibnamedelima R.},
+           given_i={I\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=6206914796f069a4997b1df3b00a99bf}{%
+           family={Thompson},
+           family_i={T\bibinitperiod},
+           given={Simon\bibnamedelima G.},
+           given_i={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1af057ff4e8175db01312ef687a11410}
+      \strng{fullhash}{1af057ff4e8175db01312ef687a11410}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Adjusting for partially missing baseline measurements in randomized trials}}
+      \field{volume}{24}
+      \field{year}{2005}
+      \field{pages}{993\bibrangedash 1007}
+      \range{pages}{15}
+      \keyw{analysis-of-covariance,ancova,imputation,missing-baseline,missing-covariate,power,randomized-trials,rct,statistical-analysis-plan,*import}
+    \endentry
+    \entry{knitrbook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=25ce25b9d444076e0963bcf9fa3a6f92}{%
+           family={Xie},
+           family_i={X\bibinitperiod},
+           given={Yihui},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall}%
+      }
+      \strng{namehash}{25ce25b9d444076e0963bcf9fa3a6f92}
+      \strng{fullhash}{25ce25b9d444076e0963bcf9fa3a6f92}
+      \field{sortinit}{X}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{second}
+      \field{isbn}{978-1-4987-1696-3}
+      \field{title}{Dynamic Documents with R and \texttt{knitr}, second edition}
+      \field{year}{2015}
+      \keyw{*import}
+    \endentry
+    \entry{yam99inv}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d6a8d6921b37a17ea576b2b4f2053c29}{%
+           family={Yamaguchi},
+           family_i={Y\bibinitperiod},
+           given={Takuhiro},
+           given_i={T\bibinitperiod}}}%
+        {{hash=73bfc1db08cf6b342a35e92189484b58}{%
+           family={Ohashi},
+           family_i={O\bibinitperiod},
+           given={Yasuo},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6ba0f1f63bc542164606253178d07cf}
+      \strng{fullhash}{a6ba0f1f63bc542164606253178d07cf}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{title}{{Investigating centre effects in a multi-centre clinical trial of superficial bladder cancer}}
+      \field{volume}{18}
+      \field{year}{1999}
+      \field{pages}{1961\bibrangedash 1971}
+      \range{pages}{11}
+      \keyw{cox-random-effects-model,mixed-effects,multi-center-rct,multi-site-rct,penalized-partial-likelihood,treatment-by-center-interaction,*import}
+    \endentry
+  \endsortlist
+  \missing{[}
+\endrefsection
+\endinput
+

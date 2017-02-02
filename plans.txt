@@ -1,0 +1,17 @@
+Sent to Kathy Hartmann 2015-06-09 for NCATS X02 proposal to host a
+regional Clinical and Translational Scientist Summer Institute that
+will feature a scientific focus as well as a career development
+component for approximately 20-25 participants (local and traveling
+from other institutions). Since the first institute would not be here
+at VU until 2017, it is not crucial that a description of our interest
+be exactly what ends up being taught. Rather this seems a chance to
+advertise, very briefly where we have unique strengths. I can think of
+ideal content from each of your areas.
+-----------------------------------------------------------
+
+Frank Harrell Jr, Chair of the Department of Biostatistics, Vanderbilt School of Medicine, along with some of his colleagues, have created a course and comprehensive notes entitled Biostatistics for Biomedical Research.  This is an intensive 3-5 day course that can also be given as a regular semester course.  The purpose of the course is to expose biomedical researchers to modern biostatistical methods, highlighting those methods that make fewer assumptions, including nonparametric statistics and robust statistical measures.  In addition to covering traditional estimation and inferential techniques, the course includes several components that have been increasingly important in the past few years, including challenges of high-dimensional data analysis, modeling for observational treatment comparisons, analysis of differential treatment effect (heterogeneity of treatment effect), statistical methods for biomarker research, medical diagnostic research, and methods for reproducible research.
+
+
+Course notes are available at http://biostat.mc.vanderbilt.edu/ClinStat.
+
+ 

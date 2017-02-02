@@ -1,0 +1,14 @@
+Carryover effect will be described by comparing differences between S
+and P when S was first to S - P when P was first.  The results of the
+carryover effect assessment will not alter the final analysis (because
+that would alter the alpha level as described by S Senn and others)
+but will provide a possible cautionary note.  The statistical test to
+be used is the Wilcoxon signed rank test on the combined set of
+differences (S - P when S was first and S - P when P was first).
+Before applying this test, mean-difference (Bland-Altman) plots will
+be used to check that PCr recovery time is properly transformed so
+that differences may be analyzed outside the context of the baseline
+level. [OMIT least squares and any discussion of baseline covariates
+as you are using each patient as her own control so covariates cancel
+out].  Secondary analyses will use linear models to see if S - P
+differences vary with baseline covariates such as BMI, race, and sex.

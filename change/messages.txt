@@ -1,0 +1,23 @@
+## Loading required package: Hmisc
+## Loading required package: lattice
+## Loading required package: survival
+## Loading required package: Formula
+## Loading required package: ggplot2
+## 
+## Attaching package: 'Hmisc'
+## The following objects are masked from 'package:base':
+## 
+##     format.pval, round.POSIXt, trunc.POSIXt, units
+Loading required package: data.table
+`stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.
+Warning in wilcox.test.default(x = c(4.1, 6.3, 7.8, 8.5, 8.9, 10.4, 11.5, : cannot compute exact p-value with ties
+Warning in wilcox.test.default(x = c(1.41098697371026, 1.84054963339749, : cannot compute exact p-value with ties
+Loading required package: rms
+Loading required package: SparseM
+
+Attaching package: 'SparseM'
+The following object is masked from 'package:base':
+
+    backsolve
+Warning: `show_guide` has been deprecated. Please use `show.legend` instead.

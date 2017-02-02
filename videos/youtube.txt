@@ -1,0 +1,51 @@
+Youtube google verification via home phone: 470951
+
+RegressionIntro.m4v			https://youtu.be/IiJ6pMs2BiA
+
+1. Regression Introduction
+This is the first video in a series by Frank Harrell that serves as prerequisites for his Regression Modeling Strategies course that goes along with his book by that title (2nd edition, Springer, 2015).  This series covers Chapter 10 of Biostatistics for Biomedical Research, a set of notes available from http://biostat.mc.vanderbilt.edu/ClinStat.  This first video covers what it means to hold a variable constant, stratification vs. matching vs. regression, purpose of statistical models, advantages of modeling, and introduces nonparametric regression.
+
+Tags: tutorial statistics regression
+------------------------------------------------------------------------
+categorizingPredictors.mp4		https://youtu.be/-GEgR71KtwI
+
+Hazards of Categorizing Continuous Predictors
+
+This material is from the Information Loss chapter of Biostatistics for Biomedical Research available from http://biostat.mc.vanderbilt.edu/ClinStat.  It deals with the pitfalls of categorizing (dichotomizing, thresholding) continuous predictor variables.
+
+Tags: tutorial statistics regression categorization dichotomization,
+information loss
+-----------------------------------------------------------------------
+classificationDecisionMaking.mp4		https://youtu.be/1yYrDVN_AYc
+
+Up-Front Classification is at Odds with Optimum Decision Making
+
+This material is from the Information Loss chapter of Biostatistics for Biomedical Research available from http://biostat.mc.vanderbilt.edu/ClinStat.  It defines the information that serves as inputs to optimum decisions and shows that using classification instead of prediction is often not a good idea.  Advantages of probabilistic thinking are briefly discussed.
+
+Tags: tutorial statistics classification, decision making, probabilistic thinking
+----------------------------------------------------------------------
+classificationAccuracy.mp4		https://youtu.be/FDTwEZ3KcyA
+
+Problems with Classification Accuracy
+
+This material is from the Information Loss chapter of Biostatistics for Biomedical Research available from http://biostat.mc.vanderbilt.edu/ClinStat.  It describes disadvantages of classification as compared with prediction, and shows the downsides of the proportion classified 'correctly' as an accuracy score.
+
+Tags: tutorial statistics classification, accuracy scores, predictive
+accuracy scoring rules
+-----------------------------------------------------------------------
+demoLeastSquares.mp4		https://youtu.be/4SPCQRCxuWI
+
+Demo of Simple Linear Least Squares Regression and 3 Other Fitting Methods
+
+This is a demonstration using least squares, least sum of absolute residuals regresion, and least median squared residual regression.  The latter two are more robust to outliers.  All three approaches were forced to fit straight lines here.  A fourth method that does not assume linearity, the loess nonparametric smooter, is also demonstrated.  The R code for the demo may be found at https://github.com/harrelfe/rscripts/blob/master/demoLeastSquares.r.  It can be run under RStudio (with clicked data points only showing for an instant until data entry is complete) using the R commands require(Hmisc); getRs('demoLeastSquares.r') or under plain R using the commands require(Hmisc); getRs('demoLeastSquares.r', put='source').
+
+Tags: tutorial, statistics, regression, least squares, simple linear regression
+robust regression, loess nonparametric smoother
+----------------------------------------------------------------------
+regressionMean.mp4    https://youtu.be/yWoKLDy8IQA
+
+Regression to the Mean
+
+This is a discussion with examples of what is regression to the mean and what can cause it.  Regression to the mean is one of the most important data phenomena.  This material is taken from Biostatistics for Biomedical Research, available at http://biostat.mc.vanderbilt.edu/ClinStat .
+
+Tags: tutorial, statistics, regression, shrinkage, regression to the mean

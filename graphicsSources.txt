@@ -1,0 +1,2 @@
+dotplot.ps from ~/doc/teaching/hes/statcomp/sols/ps/final.dotplot.ps
+ecdf.ps	   from ~/doc/teaching/hes/statcomp/sols/ps/k.ecdf.ps

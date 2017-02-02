@@ -1,0 +1,42 @@
+﻿TABLE 1
+Sources of Variation in Clinical Trials
+Label
+Source
+Description
+A
+Between treatments
+The average difference between treatments over all randomizations (and hence over all patients).  The ‘true’ mean difference between treatments
+B
+Between patients
+The average difference between patients.  (Averaged over both experimental and control treatments.)
+C
+Patient-by-
+treatment interaction
+The extent to which the difference between treatment differs from one patient to another.  (Equivalently, the extent to which the difference between patients being given the same treatment depends on treatment given.)
+D
+Within-patient error
+The variability shown from treatment period to treatment period when the same patient is given the same treatment
+
+
+
+
+
+TABLE 2
+Identifiability and Clinical Trials
+Type of Trial
+Description
+Identifiable Effects
+Error Term
+Parallel
+Each patient receives one treatment
+A
+B + C + D
+Cross-over
+Each patient receives each treatment in one period only
+A and B
+C + D
+Repeated period cross-overs (sets of n-of-1 trials)
+Each patient receives each treatment in at least two periods
+A and B and C
+E
+

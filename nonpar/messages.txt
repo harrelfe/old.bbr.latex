@@ -1,0 +1,36 @@
+## Loading required package: Hmisc
+## Loading required package: grid
+## Loading required package: lattice
+## Loading required package: survival
+## Loading required package: Formula
+## Loading required package: ggplot2
+## 
+## Attaching package: 'Hmisc'
+## 
+## The following objects are masked from 'package:base':
+## 
+##     format.pval, round.POSIXt, trunc.POSIXt, units
+Warning in wilcox.test.default(drug2, drug1, paired = TRUE): cannot compute exact p-value with ties
+Warning in wilcox.test.default(drug2, drug1, paired = TRUE): cannot compute exact p-value with zeroes
+Warning in wilcox.test.default(drug2 - drug1): cannot compute exact p-value with ties
+Warning in wilcox.test.default(drug2 - drug1): cannot compute exact p-value with zeroes
+Warning in wilcox.test.default(drug2 - drug1, correct = FALSE): cannot compute exact p-value with ties
+Warning in wilcox.test.default(drug2 - drug1, correct = FALSE): cannot compute exact p-value with zeroes
+stat_bindot: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+Warning in wilcox.test.default(x = c(244, 2500, 61, 114, 168, 57, 38, 18: cannot compute exact p-value with ties
+stat_bindot: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+Warning in wilcox.test.default(male, female, conf.int = TRUE): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male, female, conf.int = TRUE): cannot compute exact confidence intervals with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+Warning in wilcox.test.default(male - dif[i], female): cannot compute exact p-value with ties
+stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
