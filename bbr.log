@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  1 FEB 2017 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  3 FEB 2017 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,21 +741,22 @@ File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
 (./info/abstract.aux))
 \openout1 = `bbr.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 107.
+
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
@@ -777,8 +778,8 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 99.
-Package biblatex Info: Reference segment=0 on input line 99.
+Package biblatex Info: Reference section=0 on input line 107.
+Package biblatex Info: Reference segment=0 on input line 107.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count322
@@ -852,7 +853,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 99.
+Package hyperref Info: Link coloring ON on input line 107.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -861,9 +862,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 99.
-LaTeX Info: Redefining \pageref on input line 99.
-LaTeX Info: Redefining \nameref on input line 99.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 
 (./bbr.out) (./bbr.out)
 \@outlinefile=\write5
@@ -873,43 +874,43 @@ LaTeX Info: Redefining \nameref on input line 99.
 
 
 LaTeX Font Warning: Font shape `T1/aess/m/sc' undefined
-(Font)              using `T1/aess/m/n' instead on input line 106.
+(Font)              using `T1/aess/m/n' instead on input line 114.
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 112.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 120.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 113.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 121.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 113.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 121.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 113
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 121
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 113
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 121
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 113.
+(Font)              <14.4> on input line 121.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 113.
+(Font)              <10> on input line 121.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 113.
+(Font)              <7> on input line 121.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./bbr.toc
@@ -1477,23 +1478,23 @@ Overfull \hbox (7.82993pt too wide) detected at line 705
 
  [8]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 143.
+(Font)              <8> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 143.
+(Font)              <6> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 146.
+(Font)              <9> on input line 154.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 213.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 221.
  <movie.png, id=908, 128.48pt x 128.48pt>
 File: movie.png Graphic file (type png)
  <use movie.png>
-Package pdftex.def Info: movie.png used on input line 218.
+Package pdftex.def Info: movie.png used on input line 226.
 (pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
 
 <sound.png, id=910, 61.6704pt x 61.6704pt>
 File: sound.png Graphic file (type png)
  <use sound.png>
-Package pdftex.def Info: sound.png used on input line 221.
+Package pdftex.def Info: sound.png used on input line 229.
 (pdftex.def)             Requested size: 17.07182pt x 17.07185pt.
  [9 <./movie.png>]
 [10 <./sound.png>] (./R/slide.tex
@@ -3010,18 +3011,18 @@ Package pdftex.def Info: sound.png used on input line 277.
 
 LaTeX Warning: Marginpar on page 13-11 moved.
 
-<ancova/cox-cabg-hazard-ratio.pdf, id=4986, 397.485pt x 289.08pt>
-File: ancova/cox-cabg-hazard-ratio.pdf Graphic file (type pdf)
+<slinks/cox-cabg-hazard-ratio.pdf, id=4986, 397.485pt x 289.08pt>
+File: slinks/cox-cabg-hazard-ratio.pdf Graphic file (type pdf)
 
-<use ancova/cox-cabg-hazard-ratio.pdf>
-Package pdftex.def Info: ancova/cox-cabg-hazard-ratio.pdf used on input line 29
+<use slinks/cox-cabg-hazard-ratio.pdf>
+Package pdftex.def Info: slinks/cox-cabg-hazard-ratio.pdf used on input line 29
 3.
 (pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
 File: sound.png Graphic file (type png)
  <use sound.png>
 Package pdftex.def Info: sound.png used on input line 295.
 (pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
- [11] [12 <./ancova/cox-cabg-hazard-ratio.pdf>] [13]
+ [11] [12 <./slinks/cox-cabg-hazard-ratio.pdf>] [13]
 Overfull \hbox (2.35445pt too wide) in paragraph at lines 395--402
 []\T1/aess/m/n/14.4 Develop a model with am-ple flexibly-modeled main ef-fects 
 and clin-i-cally pre-specified
@@ -3797,40 +3798,43 @@ input line 214.
 
 
 ] [2] [3]
-Overfull \hbox (18.94763pt too wide) in paragraph at lines 287--287
+Overfull \hbox (18.94763pt too wide) in paragraph at lines 295--295
 []\T1/aess/m/n/8 high risk pa-tients can dom-i-nate clin-i-cal tri-als re-sults
 ;high risk pa-tients may be im-bal-anced even if over-all study is bal-anced;ma
 gnesium;differential
  []
 
 [4] [5] [6]
-Overfull \hbox (2.2033pt too wide) in paragraph at lines 287--287
+Overfull \hbox (2.2033pt too wide) in paragraph at lines 295--295
 \T1/aess/m/sc/10 den, Friedrich Leisch, and Roger D. Peng. Boca Ra-ton, FL: CRC
  Press/-Tay-lor and Fran-cis, 2014. isbn: 9781466561595.
  []
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
  (./bbr.aux (./info/abstract.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 296.
 Package rerunfilecheck Info: File `bbr.out' has not changed.
 (rerunfilecheck)             Checksum: 52F2734095A504E1E81F086FC9EC2771;12786.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'bbr.run.xml'.
 \openout1 = `bbr.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23507 strings out of 494953
- 375139 string characters out of 6180977
- 997009 words of memory out of 5000000
- 22150 multiletter control sequences out of 15000+600000
+ 23509 strings out of 494953
+ 375093 string characters out of 6180977
+ 996963 words of memory out of 5000000
+ 22151 multiletter control sequences out of 15000+600000
  152745 words of font info for 227 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,16n,95p,3834b,1967s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3872,7 +3876,7 @@ exmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
 vetic/uhvr8a.pfb>
-Output written on bbr.pdf (455 pages, 5502084 bytes).
+Output written on bbr.pdf (455 pages, 5502085 bytes).
 PDF statistics:
  8790 PDF objects out of 8907 (max. 8388607)
  7970 compressed objects within 80 object streams

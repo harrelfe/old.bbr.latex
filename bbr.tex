@@ -59,6 +59,14 @@
         \label{#1}
         \end{figure}}
 
+\newcommand{\figs}[3]{\begin{figure}[!htbp]
+        \leavevmode
+        \centerline{\scalebox{#3}{\includegraphics{slinks/#1.pdf}}}
+        \caption{\large#2}
+        \label{#1}
+        \end{figure}}
+
+
 \newcommand{\bfig}[2]{\begin{figure}[!htbp]
         \leavevmode
         \centerline{\includegraphics{#1.pdf}}
