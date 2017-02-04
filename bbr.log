@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  4 FEB 2017 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  4 FEB 2017 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3829,7 +3829,7 @@ Package logreq Info: Writing requests to 'bbr.run.xml'.
 Here is how much of TeX's memory you used:
  23512 strings out of 494953
  375106 string characters out of 6180977
- 996962 words of memory out of 5000000
+ 996963 words of memory out of 5000000
  22154 multiletter control sequences out of 15000+600000
  155635 words of font info for 229 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -3873,7 +3873,7 @@ nts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
 hvr8a.pfb>
-Output written on bbr.pdf (455 pages, 5507895 bytes).
+Output written on bbr.pdf (455 pages, 5508049 bytes).
 PDF statistics:
  8791 PDF objects out of 8907 (max. 8388607)
  7970 compressed objects within 80 object streams
