@@ -88,7 +88,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.5}Graphs for Describing Statistical Model Fits}{4-23}{subsection.4.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Graphing Effect of Two Continuous Variables on $Y$}{4-25}{subsubsection*.30}
+\contentsline {subsubsection}{Graphing Effect of Two Continuous Variables on $Y$}{4-28}{subsubsection*.30}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Tables}{4-30}{section.4.4}
 \defcounter {refsection}{0}\relax 

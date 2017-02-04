@@ -358,10 +358,10 @@ ggplot(d, aes(x=Freq, y=agec)) + geom_point() +
 \end{figure}
 \end{Schunk}
 
-\fig{desc-proportions-txreg}{Dot chart for categorical demographic
+\figs{desc-proportions-txreg}{Dot chart for categorical demographic
   variables, stratified by treatment and region}{1}
 
-\fig{aevents}{Dot chart showing proportion of subjects having adverse
+\figs{aevents}{Dot chart showing proportion of subjects having adverse
   events by treatment, sorted by risk difference, produced by the \R\
   \co{greport} package.  See \co{test.Rnw}
   at \protect\url{biostat.mc.vanderbilt.edu/Greport}}{1}
@@ -520,7 +520,7 @@ Box plots are inadequate for displaying bimodality.  Violin plots show
 the entire distribution well if the variable being summarized is
 fairly continuous.
 
-\fig{cchem-byx-cont-a}{One-half violin plots for longitudinal data, stratified
+\figs{cchem-byx-cont-a}{One-half violin plots for longitudinal data, stratified
   by treatment.  Density estimates for groups with insufficient sample
   sizes are faded.  Density plots are back--to--back for treatment A
   and B.  Points are treatment medians.  When the black vertical line
@@ -640,85 +640,79 @@ dd <- datadist(nhgh); options(datadist='dd')
 g        <- function(x) 0.09 - x ^ - (1 / 1.75)
 ginverse <- function(y) (0.09 - y) ^ -1.75
 f <- ols(g(gh) ~ rcs(age, 4) + re + sex + rcs(bmi, 4), data=nhgh)
-# If not using LaTeX, just use print(f), anova(f)
 cat('{\\small\n')
 \end{Sinput}
 {\small
 \begin{Sinput}
-print(f, latex=TRUE)
+f
 \end{Sinput}
 
-\vspace{1ex}
-
-\centerline{\textbf{Linear Regression Model}}
-\vspace{1ex}
-
-\begin{verbatim}
-ols(formula = g(gh) ~ rcs(age, 4) + re + sex + rcs(bmi, 4), data = nhgh)
-\end{verbatim}
-\centerline{\begin{tabular}{|c|c|c|}\hline
-&Model Likelihood&Discrimination\\ 
-&Ratio Test&Indexes\\ 
+ \centerline{\textbf{Linear Regression Model}}
+ 
+ \begin{verbatim}
+ ols(formula = g(gh) ~ rcs(age, 4) + re + sex + rcs(bmi, 4), data = nhgh)
+ \end{verbatim}
+ 
+ {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|}\hline
+&Model Likelihood&Discrimination\\
+&Ratio Test&Indexes\\\hline
+Obs~\hfill 6795&LR $\chi^{2}$~\hfill 1861.16&$R^{2}$~\hfill 0.240\\
+$\sigma$~\hfill 0.0235&d.f.~\hfill 11&$R^{2}_{\textrm{adj}}$~\hfill 0.238\\
+d.f.~\hfill 6783&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.015\\
 \hline
-Obs~\hfill 6795&LR $\chi^{2}$~\hfill 1861.16&$R^{2}$~\hfill 0.240\\ 
-$\sigma$~\hfill 0.0235&d.f.~\hfill 11&$R^{2}_{\textrm{adj}}$~\hfill 0.238\\ 
-d.f.~\hfill 6783&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.015\\ 
-\hline
-\end{tabular}}
-
-\begin{center}
-Residuals 
-
-\begin{tabular}{ccccc}
-Min&1Q&Median&3Q&Max\\
-$-0.09736$&$-0.01208$&$-0.002201$&$0.008237$&$0.1689$ \\ 
 \end{tabular}
+\end{center}}
+ \begin{center}
+ Residuals
+ 
 
-\end{center}
-
-\vspace{1ex}
-
-%latex.default(U, file = file, first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", math.col.names = TRUE, append = TRUE)%
-\setlongtables\begin{longtable}{lrrrr}\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\textrm{~Coef~}$}&\multicolumn{1}{c}{$\textrm{~S.E.~}$}&\multicolumn{1}{c}{$t$}&\multicolumn{1}{c}{$\textrm{Pr}(>|t|)$}\tabularnewline
-\hline
-\endhead
-\hline
-\endfoot
-Intercept&~-0.2884~&~0.0048~&-60.45&$<0.0001$\tabularnewline
-age&~ 0.0002~&~0.0001~&  3.34&0.0008\tabularnewline
-age'&~ 0.0010~&~0.0001~&  7.63&$<0.0001$\tabularnewline
-age''&~-0.0040~&~0.0005~& -8.33&$<0.0001$\tabularnewline
-re=Other Hispanic&~-0.0013~&~0.0011~& -1.20&0.2318\tabularnewline
-re=Non-Hispanic White&~-0.0082~&~0.0008~&-10.55&$<0.0001$\tabularnewline
-re=Non-Hispanic Black&~-0.0013~&~0.0009~& -1.34&0.1797\tabularnewline
-re=Other Race Including Multi-Racial&~ 0.0006~&~0.0014~&  0.47&0.6411\tabularnewline
-sex=female&~-0.0022~&~0.0006~& -3.90&$<0.0001$\tabularnewline
-bmi&~-0.0006~&~0.0002~& -2.54&0.0111\tabularnewline
-bmi'&~ 0.0059~&~0.0009~&  6.44&$<0.0001$\tabularnewline
-bmi''&~-0.0161~&~0.0025~& -6.40&$<0.0001$\tabularnewline
-\hline
-\end{longtable}
-\addtocounter{table}{-1}
-
+ \begin{tabular}{ccccc}
+Min&1Q&Median&3Q&Max\\
+$-0.09736$&$-0.01208$&$-0.002201$&$0.008237$&$0.1689$\\
+\end{tabular}
+ \end{center}
+ 
+ %latex.default(U, file = "", first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", already.math.col.names = TRUE,     append = TRUE)%
+ \setlongtables\begin{longtable}{lrrrr}\hline
+ \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\hat{\beta}$}&\multicolumn{1}{c}{S.E.}&\multicolumn{1}{c}{$t$}&\multicolumn{1}{c}{Pr$(>|t|)$}\tabularnewline
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ Intercept&~-0.2884~&~0.0048~&-60.45&\textless 0.0001\tabularnewline
+ age&~ 0.0002~&~0.0001~&  3.34&0.0008\tabularnewline
+ age'&~ 0.0010~&~0.0001~&  7.63&\textless 0.0001\tabularnewline
+ age''&~-0.0040~&~0.0005~& -8.33&\textless 0.0001\tabularnewline
+ re=Other Hispanic&~-0.0013~&~0.0011~& -1.20&0.2318\tabularnewline
+ re=Non-Hispanic White&~-0.0082~&~0.0008~&-10.55&\textless 0.0001\tabularnewline
+ re=Non-Hispanic Black&~-0.0013~&~0.0009~& -1.34&0.1797\tabularnewline
+ re=Other Race Including Multi-Racial&~ 0.0006~&~0.0014~&  0.47&0.6411\tabularnewline
+ sex=female&~-0.0022~&~0.0006~& -3.90&\textless 0.0001\tabularnewline
+ bmi&~-0.0006~&~0.0002~& -2.54&0.0111\tabularnewline
+ bmi'&~ 0.0059~&~0.0009~&  6.44&\textless 0.0001\tabularnewline
+ bmi''&~-0.0161~&~0.0025~& -6.40&\textless 0.0001\tabularnewline
+ \hline
+ \end{longtable}
+ \addtocounter{table}{-1}
 \begin{Sinput}
-latex(anova(f), dec.ss=3, dec.ms=3, file='', table.env=FALSE)
+print(anova(f), dec.ss=3, dec.ms=3)
 \end{Sinput}
-%latex.default(dstats, cdec = dig, title = title, caption = if (table.env) caption else NULL,     rowlabel = "", col.just = rep("r", length(sn)), table.env = table.env,     ...)%
-\begin{center}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Analysis of Variance for \texttt{\smaller g(gh)}}\begin{center}
 \begin{tabular}{lrrrrr}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{Partial SS}&\multicolumn{1}{c}{MS}&\multicolumn{1}{c}{$F$}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-age&$   3$&$0.732$&$0.244$&$441.36$&$<0.0001$\tabularnewline
-~~{\it Nonlinear}&$   2$&$0.040$&$0.020$&$ 35.83$&$<0.0001$\tabularnewline
-re&$   4$&$0.096$&$0.024$&$ 43.22$&$<0.0001$\tabularnewline
-sex&$   1$&$0.008$&$0.008$&$ 15.17$&~1e-04\tabularnewline
-bmi&$   3$&$0.184$&$0.061$&$110.79$&$<0.0001$\tabularnewline
-~~{\it Nonlinear}&$   2$&$0.023$&$0.011$&$ 20.75$&$<0.0001$\tabularnewline
-TOTAL NONLINEAR&$   4$&$0.068$&$0.017$&$ 30.94$&$<0.0001$\tabularnewline
-{\bf REGRESSION }&$  11$&$1.181$&$0.107$&$194.29$&$<0.0001$\tabularnewline
-{\bf ERROR }&$6783$&$3.749$&$0.001$&$$&\tabularnewline
+age&   3&0.732&0.244&441.36&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear}&   2&0.040&0.020& 35.83&\textless 0.0001\tabularnewline
+re&   4&0.096&0.024& 43.22&\textless 0.0001\tabularnewline
+sex&   1&0.008&0.008& 15.17&\textless 0.0001\tabularnewline
+bmi&   3&0.184&0.061&110.79&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear}&   2&0.023&0.011& 20.75&\textless 0.0001\tabularnewline
+TOTAL NONLINEAR&   4&0.068&0.017& 30.94&\textless 0.0001\tabularnewline
+\textbf{REGRESSION}&  11&1.181&0.107&194.29&\textless 0.0001\tabularnewline
+\textbf{ERROR}&6783&3.749&0.001&&\tabularnewline
 \hline
 \end{tabular}\end{center}
 \begin{Sinput}

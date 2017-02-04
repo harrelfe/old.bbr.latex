@@ -2,6 +2,7 @@
 <<echo=FALSE>>=
 require(Hmisc)
 knitrSet('descript')
+options(prType='latex')    # for print, anova, summary
 @
 
 \chapter{Descriptive Statistics, Distributions, and Graphics}   \ros{2,5}\ems{3}
@@ -297,10 +298,10 @@ ggplot(d, aes(x=Freq, y=agec)) + geom_point() +
   xlab('Frequency') + ylab('Age')
 @
 
-\fig{desc-proportions-txreg}{Dot chart for categorical demographic
+\figs{desc-proportions-txreg}{Dot chart for categorical demographic
   variables, stratified by treatment and region}{1}
 
-\fig{aevents}{Dot chart showing proportion of subjects having adverse
+\figs{aevents}{Dot chart showing proportion of subjects having adverse
   events by treatment, sorted by risk difference, produced by the \R\
   \co{greport} package.  See \co{test.Rnw}
   at \protect\url{biostat.mc.vanderbilt.edu/Greport}}{1}
@@ -398,7 +399,7 @@ Box plots are inadequate for displaying bimodality.  Violin plots show
 the entire distribution well if the variable being summarized is
 fairly continuous.
 
-\fig{cchem-byx-cont-a}{One-half violin plots for longitudinal data, stratified
+\figs{cchem-byx-cont-a}{One-half violin plots for longitudinal data, stratified
   by treatment.  Density estimates for groups with insufficient sample
   sizes are faded.  Density plots are back--to--back for treatment A
   and B.  Points are treatment medians.  When the black vertical line
@@ -508,10 +509,9 @@ dd <- datadist(nhgh); options(datadist='dd')
 g        <- function(x) 0.09 - x ^ - (1 / 1.75)
 ginverse <- function(y) (0.09 - y) ^ -1.75
 f <- ols(g(gh) ~ rcs(age, 4) + re + sex + rcs(bmi, 4), data=nhgh)
-# If not using LaTeX, just use print(f), anova(f)
 cat('{\\small\n')
-print(f, latex=TRUE)
-latex(anova(f), dec.ss=3, dec.ms=3, file='', table.env=FALSE)
+f
+print(anova(f), dec.ss=3, dec.ms=3)
 cat('}\n')
 # Show partial effects of all variables in the model, on the original scale
 ggplot(Predict(f, fun=ginverse),   # Fig. (*\ref{fig:descript-rmsa}*)

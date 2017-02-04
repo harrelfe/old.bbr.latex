@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  3 FEB 2017 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  4 FEB 2017 13:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1705,22 +1705,22 @@ Package pdftex.def Info: descript/descript-counts-dotchart-1.pdf used on input
 line 355.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<descript/desc-proportions-txreg.pdf, id=1474, 505.89pt x 325.215pt>
-File: descript/desc-proportions-txreg.pdf Graphic file (type pdf)
+<slinks/desc-proportions-txreg.pdf, id=1474, 505.89pt x 325.215pt>
+File: slinks/desc-proportions-txreg.pdf Graphic file (type pdf)
 
-<use descript/desc-proportions-txreg.pdf>
-Package pdftex.def Info: descript/desc-proportions-txreg.pdf used on input line
- 362.
+<use slinks/desc-proportions-txreg.pdf>
+Package pdftex.def Info: slinks/desc-proportions-txreg.pdf used on input line 3
+62.
 (pdftex.def)             Requested size: 505.88875pt x 325.2142pt.
 
-<descript/aevents.pdf, id=1475, 505.89pt x 433.62pt>
-File: descript/aevents.pdf Graphic file (type pdf)
-
-<use descript/aevents.pdf>
-Package pdftex.def Info: descript/aevents.pdf used on input line 367.
+<slinks/aevents.pdf, id=1475, 505.89pt x 433.62pt>
+File: slinks/aevents.pdf Graphic file (type pdf)
+ <use slinks/aevents.pdf>
+Package pdftex.def Info: slinks/aevents.pdf used on input line 367.
 (pdftex.def)             Requested size: 505.88875pt x 433.61894pt.
- [13 <./descript/descript-counts-dotchart-1.pdf>]
-[14 <./descript/desc-proportions-txreg.pdf>] [15 <./descript/aevents.pdf>]
+
+[13 <./descript/descript-counts-dotchart-1.pdf>] [14 <./slinks/desc-proportions
+-txreg.pdf>] [15 <./slinks/aevents.pdf>]
 <descript/descript-pH-1.pdf, id=1529, 361.35pt x 289.08pt>
 File: descript/descript-pH-1.pdf Graphic file (type pdf)
 
@@ -1765,15 +1765,15 @@ Package pdftex.def Info: descript/descript-glybox-1.pdf used on input line 513.
 
 (pdftex.def)             Requested size: 433.61894pt x 361.34912pt.
 
-<descript/cchem-byx-cont-a.pdf, id=1647, 505.89pt x 397.485pt>
-File: descript/cchem-byx-cont-a.pdf Graphic file (type pdf)
+<slinks/cchem-byx-cont-a.pdf, id=1647, 505.89pt x 397.485pt>
+File: slinks/cchem-byx-cont-a.pdf Graphic file (type pdf)
 
-<use descript/cchem-byx-cont-a.pdf>
-Package pdftex.def Info: descript/cchem-byx-cont-a.pdf used on input line 529.
+<use slinks/cchem-byx-cont-a.pdf>
+Package pdftex.def Info: slinks/cchem-byx-cont-a.pdf used on input line 529.
 (pdftex.def)             Requested size: 505.88875pt x 397.48402pt.
  [19 <./descript/descript-bwplot-1.pdf>]
 [20 <./descript/descript-bpplt-1.pdf>] [21 <./descript/descript-glybox-1.pdf>]
-[22 <./descript/cchem-byx-cont-a.pdf>]
+[22 <./slinks/cchem-byx-cont-a.pdf>]
 <descript/descript-cldif-1.pdf, id=1728, 289.08pt x 216.81pt>
 File: descript/descript-cldif-1.pdf Graphic file (type pdf)
 
@@ -1781,17 +1781,25 @@ File: descript/descript-cldif-1.pdf Graphic file (type pdf)
 Package pdftex.def Info: descript/descript-cldif-1.pdf used on input line 581.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [23 <./descript/descript-cldif-1.pdf>]
-[24]
+LaTeX Font Info:    Try loading font information for T1+phv on input line 656.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+) [24]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4.1 on input line 695.
+
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <9> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 714.
- <descript/descript-rmsa-1.pdf, id=1776, 578.16pt x 361.35pt>
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 708.
+<descript/descript-rmsa-1.pdf, id=1776, 578.16pt x 361.35pt>
 File: descript/descript-rmsa-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsa-1.pdf>
-Package pdftex.def Info: descript/descript-rmsa-1.pdf used on input line 735.
+Package pdftex.def Info: descript/descript-rmsa-1.pdf used on input line 729.
 (pdftex.def)             Requested size: 578.15858pt x 361.34912pt.
 
-Overfull \hbox (73.43092pt too wide) in paragraph at lines 740--745
+Overfull \hbox (73.43092pt too wide) in paragraph at lines 734--739
 \T1/aett/m/n/14.4 stackexchange . com / questions / 155430 / clarifications-[]r
 egarding-[]reading-[]a-[]nomogram$[][]
  []
@@ -1800,35 +1808,35 @@ egarding-[]reading-[]a-[]nomogram$[][]
 File: descript/descript-rmsb-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsb-1.pdf>
-Package pdftex.def Info: descript/descript-rmsb-1.pdf used on input line 750.
+Package pdftex.def Info: descript/descript-rmsb-1.pdf used on input line 744.
 (pdftex.def)             Requested size: 505.88875pt x 216.80946pt.
 
 <descript/descript-rmsc-1.pdf, id=1783, 361.35pt x 361.35pt>
 File: descript/descript-rmsc-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsc-1.pdf>
-Package pdftex.def Info: descript/descript-rmsc-1.pdf used on input line 761.
+Package pdftex.def Info: descript/descript-rmsc-1.pdf used on input line 755.
 (pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 767.
-
-<descript/image-sepsis.pdf, id=1784, 724.7075pt x 574.145pt>
+(Font)              <17.28> on input line 761.
+ [25] [26 <./descript/descript-rmsa-1.pdf> <./descript/descript-rmsb-1.pdf>] [2
+7 <./descript/descript-rmsc-1.pdf>]
+<descript/image-sepsis.pdf, id=1841, 724.7075pt x 574.145pt>
 File: descript/image-sepsis.pdf Graphic file (type pdf)
 
 <use descript/image-sepsis.pdf>
-Package pdftex.def Info: descript/image-sepsis.pdf used on input line 774.
+Package pdftex.def Info: descript/image-sepsis.pdf used on input line 768.
 (pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
- [25] [26 <./descript/descript-rmsa-1.pdf> <./descript/descript-rmsb-1.pdf>] [2
-7 <./descript/descript-rmsc-1.pdf>]
+
 <descript/image-stroke.pdf, id=1842, 724.7075pt x 574.145pt>
 File: descript/image-stroke.pdf Graphic file (type pdf)
 
 <use descript/image-stroke.pdf>
-Package pdftex.def Info: descript/image-stroke.pdf used on input line 780.
+Package pdftex.def Info: descript/image-stroke.pdf used on input line 774.
 (pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
  [28 <./descript/image-sepsis.pdf, page is rotated 90 degrees>] [29 <./descript
 /image-stroke.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 852--854
+Underfull \hbox (badness 10000) in paragraph at lines 846--848
 
  []
 
@@ -1838,29 +1846,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [30
 
 
-] [31] <descript/descript-dynamite-1.pdf, id=1873, 397.485pt x 216.81pt>
+] [31] <descript/descript-dynamite-1.pdf, id=1874, 397.485pt x 216.81pt>
 File: descript/descript-dynamite-1.pdf Graphic file (type pdf)
 
 <use descript/descript-dynamite-1.pdf>
-Package pdftex.def Info: descript/descript-dynamite-1.pdf used on input line 88
-4.
+Package pdftex.def Info: descript/descript-dynamite-1.pdf used on input line 87
+8.
 (pdftex.def)             Requested size: 397.48402pt x 216.80946pt.
  [32
 
 
- <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1896,
+ <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1897,
  433.62pt x 144.54pt>
 File: descript/descript-tplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-tplot-1.pdf>
-Package pdftex.def Info: descript/descript-tplot-1.pdf used on input line 914.
+Package pdftex.def Info: descript/descript-tplot-1.pdf used on input line 908.
 (pdftex.def)             Requested size: 433.61894pt x 144.53963pt.
 
-<descript/descript-vplot-1.pdf, id=1897, 433.62pt x 180.675pt>
+<descript/descript-vplot-1.pdf, id=1898, 433.62pt x 180.675pt>
 File: descript/descript-vplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-vplot-1.pdf>
-Package pdftex.def Info: descript/descript-vplot-1.pdf used on input line 932.
+Package pdftex.def Info: descript/descript-vplot-1.pdf used on input line 926.
 (pdftex.def)             Requested size: 433.61894pt x 180.67455pt.
 ) (./htest/slide.tex [33 <./descript/descript-tplot-1.pdf>] [34 <./descript/des
 cript-vplot-1.pdf>]
@@ -1890,7 +1898,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [10] [11] [12] [13
 
 ]
-<htest/htest-tpdfs-1.pdf, id=2044, 361.35pt x 271.0125pt>
+<htest/htest-tpdfs-1.pdf, id=2045, 361.35pt x 271.0125pt>
 File: htest/htest-tpdfs-1.pdf Graphic file (type pdf)
 
 <use htest/htest-tpdfs-1.pdf>
@@ -1914,7 +1922,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [29
 
-] [30] <htest/htest-smmoe-1.pdf, id=2294, 289.08pt x 216.81pt>
+] [30] <htest/htest-smmoe-1.pdf, id=2295, 289.08pt x 216.81pt>
 File: htest/htest-smmoe-1.pdf Graphic file (type pdf)
 
 <use htest/htest-smmoe-1.pdf>
@@ -1934,7 +1942,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [35
 
-] <htest/htest-sleepa-1.pdf, id=2342, 361.35pt x 216.81pt>
+] <htest/htest-sleepa-1.pdf, id=2343, 361.35pt x 216.81pt>
 File: htest/htest-sleepa-1.pdf Graphic file (type pdf)
 
 <use htest/htest-sleepa-1.pdf>
@@ -1952,7 +1960,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [38
 
 
-] <htest/htest-tplot-1.pdf, id=2398, 361.35pt x 216.81pt>
+] <htest/htest-tplot-1.pdf, id=2399, 361.35pt x 216.81pt>
 File: htest/htest-tplot-1.pdf Graphic file (type pdf)
 
 <use htest/htest-tplot-1.pdf>
@@ -2028,7 +2036,7 @@ $\OT1/lmr/m/n/14.4 0\OML/lmm/m/it/14.4 :\OT1/lmr/m/n/14.4 95$ \T1/aess/m/n/14.4
 
 ] [11] [12
 
-] <prop/prop-mmeor-1.pdf, id=2621, 505.89pt x 433.62pt>
+] <prop/prop-mmeor-1.pdf, id=2622, 505.89pt x 433.62pt>
 File: prop/prop-mmeor-1.pdf Graphic file (type pdf)
 
 <use prop/prop-mmeor-1.pdf>
@@ -2050,14 +2058,14 @@ Chapter 7.
 ] [5] [6] [7] [8] [9
 
 ] [10]
-<nonpar/nonpar-calpro-1.pdf, id=2877, 433.62pt x 216.81pt>
+<nonpar/nonpar-calpro-1.pdf, id=2878, 433.62pt x 216.81pt>
 File: nonpar/nonpar-calpro-1.pdf Graphic file (type pdf)
 
 <use nonpar/nonpar-calpro-1.pdf>
 Package pdftex.def Info: nonpar/nonpar-calpro-1.pdf used on input line 463.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-<nonpar/nonpar-calpror-1.pdf, id=2879, 433.62pt x 216.81pt>
+<nonpar/nonpar-calpror-1.pdf, id=2880, 433.62pt x 216.81pt>
 File: nonpar/nonpar-calpror-1.pdf Graphic file (type pdf)
 
 <use nonpar/nonpar-calpror-1.pdf>
@@ -2070,7 +2078,7 @@ le
  []
 
 [12 <./nonpar/nonpar-calpror-1.pdf>] [13]
-<nonpar/nonpar-checkhl-1.pdf, id=2965, 289.08pt x 216.81pt>
+<nonpar/nonpar-checkhl-1.pdf, id=2966, 289.08pt x 216.81pt>
 File: nonpar/nonpar-checkhl-1.pdf Graphic file (type pdf)
 
 <use nonpar/nonpar-checkhl-1.pdf>
@@ -2079,7 +2087,7 @@ Package pdftex.def Info: nonpar/nonpar-checkhl-1.pdf used on input line 595.
  [14 <./nonpar/nonpar-checkhl-1.pdf>] [15
 
 ]
-<nonpar/nonpar-diffmedboot-1.pdf, id=2999, 289.08pt x 216.81pt>
+<nonpar/nonpar-diffmedboot-1.pdf, id=3000, 289.08pt x 216.81pt>
 File: nonpar/nonpar-diffmedboot-1.pdf Graphic file (type pdf)
 
 <use nonpar/nonpar-diffmedboot-1.pdf>
@@ -2099,7 +2107,7 @@ Chapter 8.
 
 ] [3] [4
 
-] <corr/corr-corrplota-1.pdf, id=3061, 469.755pt x 361.35pt>
+] <corr/corr-corrplota-1.pdf, id=3062, 469.755pt x 361.35pt>
 File: corr/corr-corrplota-1.pdf Graphic file (type pdf)
 
 <use corr/corr-corrplota-1.pdf>
@@ -2108,7 +2116,7 @@ Package pdftex.def Info: corr/corr-corrplota-1.pdf used on input line 153.
  [5
 
 ] [6 <./corr/corr-corrplota-1.pdf>]
-<corr/corr-corrplotb-1.pdf, id=3125, 433.62pt x 433.62pt>
+<corr/corr-corrplotb-1.pdf, id=3126, 433.62pt x 433.62pt>
 File: corr/corr-corrplotb-1.pdf Graphic file (type pdf)
 
 <use corr/corr-corrplotb-1.pdf>
@@ -2121,21 +2129,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [9
 
 
-] [10] <corr/corr-baplot-1.pdf, id=3199, 397.485pt x 325.215pt>
+] [10] <corr/corr-baplot-1.pdf, id=3200, 397.485pt x 325.215pt>
 File: corr/corr-baplot-1.pdf Graphic file (type pdf)
 
 <use corr/corr-baplot-1.pdf>
 Package pdftex.def Info: corr/corr-baplot-1.pdf used on input line 333.
 (pdftex.def)             Requested size: 397.48402pt x 325.2142pt.
  [11 <./corr/corr-baplot-1.pdf>]
-<corr/corr-phtimediff-1.pdf, id=3347, 361.35pt x 289.08pt>
+<corr/corr-phtimediff-1.pdf, id=3348, 361.35pt x 289.08pt>
 File: corr/corr-phtimediff-1.pdf Graphic file (type pdf)
 
 <use corr/corr-phtimediff-1.pdf>
 Package pdftex.def Info: corr/corr-phtimediff-1.pdf used on input line 359.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
  [12 <./corr/corr-phtimediff-1.pdf>]
-<corr/corr-moe-1.pdf, id=3365, 505.89pt x 397.485pt>
+<corr/corr-moe-1.pdf, id=3366, 505.89pt x 397.485pt>
 File: corr/corr-moe-1.pdf Graphic file (type pdf)
  <use corr/corr-moe-1.pdf>
 Package pdftex.def Info: corr/corr-moe-1.pdf used on input line 384.
@@ -2189,7 +2197,7 @@ File: sound.png Graphic file (type png)
 Package pdftex.def Info: sound.png used on input line 347.
 (pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
 
-<rmsintro/rmsintro-unnamed-chunk-7-1.pdf, id=3620, 361.35pt x 361.35pt>
+<rmsintro/rmsintro-unnamed-chunk-7-1.pdf, id=3621, 361.35pt x 361.35pt>
 File: rmsintro/rmsintro-unnamed-chunk-7-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-7-1.pdf>
@@ -2207,7 +2215,7 @@ Package pdftex.def Info: sound.png used on input line 369.
 
 LaTeX Warning: Marginpar on page 9-10 moved.
 
-<rmsintro/rmsintro-unnamed-chunk-8-1.pdf, id=3641, 433.62pt x 361.35pt>
+<rmsintro/rmsintro-unnamed-chunk-8-1.pdf, id=3642, 433.62pt x 361.35pt>
 File: rmsintro/rmsintro-unnamed-chunk-8-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-8-1.pdf>
@@ -2217,7 +2225,7 @@ line 389.
  [10
 
 ]
-<rmsintro/rmsintro-unnamed-chunk-9-1.pdf, id=3648, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-9-1.pdf, id=3649, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-9-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-9-1.pdf>
@@ -2225,7 +2233,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-9-1.pdf used on input
 line 401.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<rmsintro/rmsintro-unnamed-chunk-10-1.pdf, id=3649, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-10-1.pdf, id=3650, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-10-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-10-1.pdf>
@@ -2234,7 +2242,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-10-1.pdf used on input
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [11 <./rmsintro/rmsintro-unnamed-chunk-8-1.pdf> <./rmsintro/rmsintro-unnamed-c
 hunk-9-1.pdf>]
-<rmsintro/rmsintro-unnamed-chunk-11-1.pdf, id=3678, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-11-1.pdf, id=3679, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-11-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-11-1.pdf>
@@ -2242,7 +2250,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-11-1.pdf used on input
  line 419.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<rmsintro/rmsintro-unnamed-chunk-12-1.pdf, id=3679, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-12-1.pdf, id=3680, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-12-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-12-1.pdf>
@@ -2251,7 +2259,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-12-1.pdf used on input
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [12 <./rmsintro/rmsintro-unnamed-chunk-10-1.pdf> <./rmsintro/rmsintro-unnamed-
 chunk-11-1.pdf>]
-<rmsintro/rmsintro-unnamed-chunk-13-1.pdf, id=3706, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-13-1.pdf, id=3707, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-13-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-13-1.pdf>
@@ -2259,7 +2267,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-13-1.pdf used on input
  line 442.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<rmsintro/rmsintro-unnamed-chunk-14-1.pdf, id=3707, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-14-1.pdf, id=3708, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-14-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-14-1.pdf>
@@ -2268,7 +2276,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-14-1.pdf used on input
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [13 <./rmsintro/rmsintro-unnamed-chunk-12-1.pdf> <./rmsintro/rmsintro-unnamed-
 chunk-13-1.pdf>]
-<rmsintro/rmsintro-unnamed-chunk-15-1.pdf, id=3737, 289.08pt x 216.81pt>
+<rmsintro/rmsintro-unnamed-chunk-15-1.pdf, id=3738, 289.08pt x 216.81pt>
 File: rmsintro/rmsintro-unnamed-chunk-15-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-15-1.pdf>
@@ -2276,7 +2284,7 @@ Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-15-1.pdf used on input
  line 464.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<rmsintro/rmsintro-unnamed-chunk-16-1.pdf, id=3738, 505.89pt x 361.35pt>
+<rmsintro/rmsintro-unnamed-chunk-16-1.pdf, id=3739, 505.89pt x 361.35pt>
 File: rmsintro/rmsintro-unnamed-chunk-16-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-16-1.pdf>
@@ -2322,7 +2330,7 @@ LaTeX Warning: Marginpar on page 9-16 moved.
 [16
 
  <./rmsintro/rmsintro-unnamed-chunk-17-1.pdf>] [17]
-<rmsintro/rmsintro-unnamed-chunk-20-1.pdf, id=3828, 289.08pt x 180.675pt>
+<rmsintro/rmsintro-unnamed-chunk-20-1.pdf, id=3829, 289.08pt x 180.675pt>
 File: rmsintro/rmsintro-unnamed-chunk-20-1.pdf Graphic file (type pdf)
 
 <use rmsintro/rmsintro-unnamed-chunk-20-1.pdf>
@@ -2417,14 +2425,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
 [7
 
-] <reg/reg-glratio-1.pdf, id=4061, 289.08pt x 216.81pt>
+] <reg/reg-glratio-1.pdf, id=4062, 289.08pt x 216.81pt>
 File: reg/reg-glratio-1.pdf Graphic file (type pdf)
 
 <use reg/reg-glratio-1.pdf>
 Package pdftex.def Info: reg/reg-glratio-1.pdf used on input line 254.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<reg/reg-age-abm-1.pdf, id=4063, 289.08pt x 216.81pt>
+<reg/reg-age-abm-1.pdf, id=4064, 289.08pt x 216.81pt>
 File: reg/reg-age-abm-1.pdf Graphic file (type pdf)
 
 <use reg/reg-age-abm-1.pdf>
@@ -2445,7 +2453,7 @@ LaTeX Warning: Marginpar on page 10-9 moved.
 
 LaTeX Warning: Marginpar on page 10-9 moved.
 
-<reg/reg-simple-linear-reg-1.pdf, id=4091, 289.08pt x 216.81pt>
+<reg/reg-simple-linear-reg-1.pdf, id=4092, 289.08pt x 216.81pt>
 File: reg/reg-simple-linear-reg-1.pdf Graphic file (type pdf)
 
 <use reg/reg-simple-linear-reg-1.pdf>
@@ -2488,7 +2496,7 @@ Package pdftex.def Info: sound.png used on input line 447.
 
 LaTeX Warning: Marginpar on page 10-14 moved.
 
-[14] <reg/reg-both-type-cls-1.pdf, id=4158, 289.08pt x 216.81pt>
+[14] <reg/reg-both-type-cls-1.pdf, id=4159, 289.08pt x 216.81pt>
 File: reg/reg-both-type-cls-1.pdf Graphic file (type pdf)
 
 <use reg/reg-both-type-cls-1.pdf>
@@ -2507,7 +2515,7 @@ LaTeX Warning: Marginpar on page 10-17 moved.
 
 LaTeX Warning: Marginpar on page 10-17 moved.
 
-<reg/reg-exresid-1.pdf, id=4194, 433.62pt x 433.62pt>
+<reg/reg-exresid-1.pdf, id=4195, 433.62pt x 433.62pt>
 File: reg/reg-exresid-1.pdf Graphic file (type pdf)
 
 <use reg/reg-exresid-1.pdf>
@@ -2536,14 +2544,14 @@ LaTeX Warning: Marginpar on page 10-23 moved.
 
 [23
 
-] <reg/reg-bmi-1.pdf, id=4274, 433.62pt x 325.215pt>
+] <reg/reg-bmi-1.pdf, id=4275, 433.62pt x 325.215pt>
 File: reg/reg-bmi-1.pdf Graphic file (type pdf)
 
 <use reg/reg-bmi-1.pdf>
 Package pdftex.def Info: reg/reg-bmi-1.pdf used on input line 810.
 (pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
  [24] [25 <./reg/reg-bmi-1.pdf>]
-<reg/reg-bmiq-1.pdf, id=4302, 289.08pt x 216.81pt>
+<reg/reg-bmiq-1.pdf, id=4303, 289.08pt x 216.81pt>
 File: reg/reg-bmiq-1.pdf Graphic file (type pdf)
  <use reg/reg-bmiq-1.pdf>
 Package pdftex.def Info: reg/reg-bmiq-1.pdf used on input line 892.
@@ -2583,13 +2591,7 @@ File: sound.png Graphic file (type png)
  <use sound.png>
 Package pdftex.def Info: sound.png used on input line 994.
 (pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
- [30]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 1059.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-) [31]
+ [30] [31]
 <reg/reg-dreg2-1.pdf, id=4411, 289.08pt x 216.81pt>
 File: reg/reg-dreg2-1.pdf Graphic file (type pdf)
  <use reg/reg-dreg2-1.pdf>
@@ -3811,8 +3813,11 @@ Overfull \hbox (2.2033pt too wide) in paragraph at lines 295--295
  []
 
 [7]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
- [8]
+[8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
  (./bbr.aux (./info/abstract.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
@@ -3823,63 +3828,61 @@ Package rerunfilecheck Info: File `bbr.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'bbr.run.xml'.
 \openout1 = `bbr.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23509 strings out of 494953
- 375093 string characters out of 6180977
+ 23512 strings out of 494953
+ 375106 string characters out of 6180977
  996963 words of memory out of 5000000
- 22151 multiletter control sequences out of 15000+600000
- 152745 words of font info for 227 fonts, out of 8000000 for 9000
+ 22154 multiletter control sequences out of 15000+600000
+ 155635 words of font info for 229 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,16n,95p,3834b,1967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy
-.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
+hare/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc
 /dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
-17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-sy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/hel
-vetic/uhvr8a.pfb>
-Output written on bbr.pdf (455 pages, 5502085 bytes).
+m/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+si9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
+b10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
+hvr8a.pfb>
+Output written on bbr.pdf (455 pages, 5507917 bytes).
 PDF statistics:
- 8790 PDF objects out of 8907 (max. 8388607)
+ 8791 PDF objects out of 8907 (max. 8388607)
  7970 compressed objects within 80 object streams
- 4033 named destinations out of 4296 (max. 500000)
+ 4032 named destinations out of 4296 (max. 500000)
  1991 words of extra memory for PDF output out of 10000 (max. 10000000)
 
