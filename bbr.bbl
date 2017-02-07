@@ -1088,48 +1088,48 @@
            family_i={G\bibinitperiod},
            given={Sander},
            given_i={S\bibinitperiod}}}%
-        {{hash=380da656e5360a8f12655e8ea531d682}{%
+        {{hash=3259ffd6a7eb7d2246ef393306d20235}{%
            family={Senn},
            family_i={S\bibinitperiod},
-           given={StephenJ},
-           given_i={S\bibinitperiod}}}%
-        {{hash=3b36d969d518095f8bed74b613e09079}{%
+           given={Stephen\bibnamedelima J.},
+           given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d5fffb4dda97577f847e34db84d4f08f}{%
            family={Rothman},
            family_i={R\bibinitperiod},
-           given={KennethJ},
-           given_i={K\bibinitperiod}}}%
-        {{hash=5f088783ee75f9f0908eeb4fa9571a31}{%
+           given={Kenneth\bibnamedelima J.},
+           given_i={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=40c60e4e0832fcac64a68a5249bfc022}{%
            family={Carlin},
            family_i={C\bibinitperiod},
-           given={JohnB},
-           given_i={J\bibinitperiod}}}%
+           given={John\bibnamedelima B.},
+           given_i={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
         {{hash=a111879064f2132ac8db27fb3e3bc75d}{%
            family={Poole},
            family_i={P\bibinitperiod},
            given={Charles},
            given_i={C\bibinitperiod}}}%
-        {{hash=942e9fae4198598f9ad5d703ebd0f333}{%
+        {{hash=802ce669d98230ee49b4c9c8d352c4a8}{%
            family={Goodman},
            family_i={G\bibinitperiod},
-           given={StevenN},
-           given_i={S\bibinitperiod}}}%
-        {{hash=5ce6bf42d01103efaeb232afe926b01a}{%
+           given={Steven\bibnamedelima N.},
+           given_i={S\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=52f053b8920d5d4076a244ef065113f8}{%
            family={Altman},
            family_i={A\bibinitperiod},
-           given={DouglasG},
-           given_i={D\bibinitperiod}}}%
+           given={Douglas\bibnamedelima G.},
+           given_i={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer Netherlands}%
       }
       \strng{namehash}{b825a78368fc89b30b758edc176111a0}
-      \strng{fullhash}{de6a3b15865c37b2d72f0ca7653294dd}
+      \strng{fullhash}{5cc2896e7eca8765a99d56aeed2d36d7}
       \field{sortinit}{G}
       \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Best article on misinterpretation of p-values. Pithy summaries.}
-      \field{booktitle}{European Journal of Epi}
+      \field{journaltitle}{European Journal of Epi}
       \field{number}{4}
       \field{title}{{Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations}}
       \field{volume}{31}

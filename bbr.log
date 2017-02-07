@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  4 FEB 2017 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  7 FEB 2017 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3828,8 +3828,8 @@ Package logreq Info: Writing requests to 'bbr.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  23512 strings out of 494953
- 375106 string characters out of 6180977
- 996963 words of memory out of 5000000
+ 375127 string characters out of 6180977
+ 997005 words of memory out of 5000000
  22154 multiletter control sequences out of 15000+600000
  155635 words of font info for 229 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

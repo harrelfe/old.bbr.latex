@@ -79,7 +79,7 @@
       <file>bbr.bcf</file>
     </requires>
     <requires type="editable">
-      <file>harrelfe.bib</file>
+      <file>slinks/harrelfe.bib</file>
     </requires>
   </external>
 </requests>

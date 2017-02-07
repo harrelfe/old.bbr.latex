@@ -1,4 +1,7 @@
 To run pdflatex on bbr.tex you'll need several things including various images that are symbolically linked to subdirectories here, a bibliographic database, and LaTeX style files.  The style files are available at https://github.com/harrelfe/rlatex .  It is recommended that you use the "easy install" method documented there.
 
-To create ~/bib/harrelfe.bib on your system email f.harrell@vanderbilt.edu to get the .bib file.
+The symbolic links are gradually being moved to the slinks directory, including the bibliographic database.
+
+Email f.harrell@vanderbilt.edu to get a zip file containing all the real files that can replace the symbolic links in slinks.
+
 
