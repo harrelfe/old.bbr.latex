@@ -8,6 +8,33 @@ options(prType='latex')
 \def\apacue{1}
 \chapter{Analysis of Covariance in Randomized Studies}\label{chap:ancova}
 
+{\smaller[-1] \textbf{Hierarchy of Causal Inference for Treatment Efficacy}}
+
+\bigskip
+
+Let $P_{i}$ denote patient $i$ and the treatments be denoted by $A$
+and $B$.  Thus $P_{2}^{B}$ represents patient 2 on treatment $B$.
+$\overline{P}_{1}$ represents the average outcome over a sample of
+patients from which patient 1 was selected.
+
+\medskip
+
+\begin{tabular}{ll}
+\textbf{Design} & \textbf{Patients Compared} \\ \hline
+6-period crossover & $P_{1}^{A}$ vs $P_{1}^{B}$ (directly measure HTE)\\
+2-period crossover & $P_{1}^{A}$ vs $P_{1}^{B}$ \\
+RCT in idential twins & $P_{1}^{A}$ vs $P_{1}^{B}$ \\
+$\parallel$ group RCT & $\overline{P}_{1}^{A}$ vs $\overline{P}_{2}^{B}$, 
+$P_{1}=P_{2}$ on avg \\
+Observational, good artificial control & $\overline{P}_{1}^{A}$ vs 
+$\overline{P}_{2}^{B}$, $P_{1}=P_{2}$ hopefully on avg\\
+Observational, poor artificial control & $\overline{P}_{1}^{A}$ vs 
+$\overline{P}_{2}^{B}$, $P_{1}\neq P_{2}$ on avg\\
+Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
+ \hline
+\end{tabular}
+
+
 \section{Covariable Adjustment in Linear
   Models}\sound{anc-1}\disc{ancova-linear} 
 \bi
@@ -407,6 +434,70 @@ Another way to state the HTE estimation strategy is as follows.
   provide a risk calculator to estimate background risk to plug into
   the $x$-axis.
 \ee
+
+Consider simulated two-treatment clinical trial data to illustrate the ``always adjust for all main effects but consider interactions one at a time'' approach to analyzing and displaying evidence for differential treatment effec.  After that we will illustrate a simultaneous interaction analysis.  Simulate time-to-event data from an exponential distribution, and fit Cox proportional hazards models to estimate the interaction between age and treatment and between sex and treatment.  The true age effect is simulated as linear in the log hazard and the treatment effect on the log relative hazard scale is proportional to how far above 60 years is a patient's age, with no treatment benefit before age 60.  This is a non-simple interaction that could be exactly modeled with a linear spline function, but assume that the analyst does not know the true form of the interaction so she allows for a more general smooth form using a restricted cubic spline function.  The data are simulated so that there is no sex interaction.
+
+<<htesim,results='asis'>>=
+require(rms)
+options(prType='latex')   # for cph print, anova
+set.seed(1)
+n <- 3000    # total of 3000 subjects
+age <- rnorm(n, 60, 12)
+label(age) <- 'Age'
+sex   <- factor(sample(c('Male', 'Female'), n, rep=TRUE))
+treat <- factor(sample(c('A', 'B'), n, rep=TRUE))
+cens  <- 15 * runif(n)     # censoring time
+h <- 0.02 * exp(0.04 * (age - 60) + 0.4 * (sex == 'Female') -  
+                0.04 * (treat == 'B') * pmax(age - 60, 0))
+dt <- -log(runif(n)) / h
+label(dt) <- 'Time Until Death or Censoring'
+e <- ifelse(dt <= cens, 1, 0)
+dt <- pmin(dt, cens)
+units(dt) <- 'Year'
+dd <- datadist(age, sex, treat); options(datadist='dd')
+S <- Surv(dt, e)
+f <- cph(S ~ sex + rcs(age, 4) * treat)
+f
+anova(f)
+@
+The model fitted above allows for a general age $\times$ treatment interaction.  Let's explore this interaction by plotting the age effect separately by treatment group, then plotting the treatment B:A hazard ratio as a function of age.
+<<hteplot>>=
+ggplot(Predict(f, age, treat), rdata=data.frame(age, treat))
+ages <- seq(30, 87, length=200)
+k <- contrast(f, list(treat='B', age=ages), list(treat='A', age=ages))
+class(k) <- 'data.frame'
+ggplot(k, aes(x=age, y=exp(Contrast))) + scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
+  geom_ribbon(aes(ymin=exp(Lower), ymax=exp(Upper)), fill='gray80') +
+  geom_line() +
+  ylab('B:A Hazard Ratio') + xlab('Age')
+@
+
+Re-fit the model allowing for a sex interaction (but not an age interaction) and display the results.
+<<hteplot2,results='asis'>>=
+g <- cph(S ~ sex * treat + rcs(age, 4))
+g
+anova(g)
+ggplot(Predict(g, sex, treat))
+k <- contrast(g, list(treat='B', sex=levels(sex)), list(treat='A', sex=levels(sex)))
+class(k) <- 'data.frame'
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+  geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
+  xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
+@
+The above analysis signified a treatment effect for both sex groups (both confidence limits exclude a hazard ratio of 1.0), whereas this should only be the case when age exceeds 60.  No sex $\times$ treatment interaction was indicated.
+Re-do the previous analysis adjusting for an age $\times$ treatment interaction while estimating the sex $\times$ treatment interaction.  For this purpose we must specify an age value when estimating the treatment effects by sex.  Here we set age to 50 years.  Were age and sex correlated, the joint analysis would have been harder to interpret.
+<<htejoint,results='asis'>>=
+h <- cph(S ~ treat * (rcs(age, 4) + sex))
+anova(h)
+ggplot(Predict(h, sex, treat, age=50))
+k <- contrast(h, list(treat='B', sex=levels(sex), age=50),
+                 list(treat='A', sex=levels(sex), age=50))
+class(k) <- 'data.frame'
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+  geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
+  xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
+@
+This is a more accurate representation of the true underlying model, and is easy to interpret because (1) age and sex are uncorrelated in the simulation model used, and (2) only two interactions were considered. 
 
 \subsubsection{Absolute vs.\ Relative Treatment Effects Revisited}\sound{anc-9}\disc{ancova-absolute}
 Statistical models are typically chosen so as to maximize the

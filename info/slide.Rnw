@@ -302,6 +302,11 @@ exp(coef(cph(S ~ age >= 50, subset=age > 40)))
 exp(coef(cph(S ~ age >= 50, subset=age > 40 & age < 60)))
 @
 
+See
+\href{https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-12-21}{this} 
+for excellent graphical examples of the harm of categorizing
+predictors, especially when using quantile groups.
+
 \subsection{Categorizing Outcomes}\label{sec:info-catoutcomes}
 \bi
 \item Arbitrary, low power, can be difficult to interpret

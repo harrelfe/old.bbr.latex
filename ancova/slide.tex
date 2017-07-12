@@ -4,6 +4,33 @@
 \def\apacue{1}
 \chapter{Analysis of Covariance in Randomized Studies}\label{chap:ancova}
 
+{\smaller[-1] \textbf{Hierarchy of Causal Inference for Treatment Efficacy}}
+
+\bigskip
+
+Let $P_{i}$ denote patient $i$ and the treatments be denoted by $A$
+and $B$.  Thus $P_{2}^{B}$ represents patient 2 on treatment $B$.
+$\overline{P}_{1}$ represents the average outcome over a sample of
+patients from which patient 1 was selected.
+
+\medskip
+
+\begin{tabular}{ll}
+\textbf{Design} & \textbf{Patients Compared} \\ \hline
+6-period crossover & $P_{1}^{A}$ vs $P_{1}^{B}$ (directly measure HTE)\\
+2-period crossover & $P_{1}^{A}$ vs $P_{1}^{B}$ \\
+RCT in idential twins & $P_{1}^{A}$ vs $P_{1}^{B}$ \\
+$\parallel$ group RCT & $\overline{P}_{1}^{A}$ vs $\overline{P}_{2}^{B}$, 
+$P_{1}=P_{2}$ on avg \\
+Observational, good artificial control & $\overline{P}_{1}^{A}$ vs 
+$\overline{P}_{2}^{B}$, $P_{1}=P_{2}$ hopefully on avg\\
+Observational, poor artificial control & $\overline{P}_{1}^{A}$ vs 
+$\overline{P}_{2}^{B}$, $P_{1}\neq P_{2}$ on avg\\
+Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
+ \hline
+\end{tabular}
+
+
 \section{Covariable Adjustment in Linear
   Models}\sound{anc-1}\disc{ancova-linear} 
 \bi
@@ -412,6 +439,232 @@ Another way to state the HTE estimation strategy is as follows.
   the $x$-axis.
 \ee
 
+Consider simulated two-treatment clinical trial data to illustrate the ``always adjust for all main effects but consider interactions one at a time'' approach to analyzing and displaying evidence for differential treatment effec.  After that we will illustrate a simultaneous interaction analysis.  Simulate time-to-event data from an exponential distribution, and fit Cox proportional hazards models to estimate the interaction between age and treatment and between sex and treatment.  The true age effect is simulated as linear in the log hazard and the treatment effect on the log relative hazard scale is proportional to how far above 60 years is a patient's age, with no treatment benefit before age 60.  This is a non-simple interaction that could be exactly modeled with a linear spline function, but assume that the analyst does not know the true form of the interaction so she allows for a more general smooth form using a restricted cubic spline function.  The data are simulated so that there is no sex interaction.
+
+\begin{Sinput}
+require(rms)
+\end{Sinput}
+\begin{Sinput}
+options(prType='latex')   # for cph print, anova
+set.seed(1)
+n <- 3000    # total of 3000 subjects
+age <- rnorm(n, 60, 12)
+label(age) <- 'Age'
+sex   <- factor(sample(c('Male', 'Female'), n, rep=TRUE))
+treat <- factor(sample(c('A', 'B'), n, rep=TRUE))
+cens  <- 15 * runif(n)     # censoring time
+h <- 0.02 * exp(0.04 * (age - 60) + 0.4 * (sex == 'Female') -  
+                0.04 * (treat == 'B') * pmax(age - 60, 0))
+dt <- -log(runif(n)) / h
+label(dt) <- 'Time Until Death or Censoring'
+e <- ifelse(dt <= cens, 1, 0)
+dt <- pmin(dt, cens)
+units(dt) <- 'Year'
+dd <- datadist(age, sex, treat); options(datadist='dd')
+S <- Surv(dt, e)
+f <- cph(S ~ sex + rcs(age, 4) * treat)
+f
+\end{Sinput}
+
+ \centerline{\textbf{Cox Proportional Hazards Model}}
+ 
+ \begin{verbatim}
+ cph(formula = S ~ sex + rcs(age, 4) * treat)
+ \end{verbatim}
+ 
+ {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|}\hline
+&Model Tests&Discrimination\\
+&&Indexes\\\hline
+Obs~\hfill 3000&LR $\chi^{2}$~\hfill 126.48&$R^{2}$~\hfill 0.046\\
+Events~\hfill 456&d.f.~\hfill 8&$D_{xy}$~\hfill 0.292\\
+Center~\hfill 1.5014&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.556\\
+&Score $\chi^{2}$~\hfill 148.58&$g_{r}$~\hfill 1.743\\
+&Pr$(>\chi^{2})$~\hfill 0.0000&\\
+\hline
+\end{tabular}
+\end{center}}
+ 
+ %latex.default(U, file = "", first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", already.math.col.names = TRUE,     append = TRUE)%
+ \setlongtables\begin{longtable}{lrrrr}\hline
+ \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\hat{\beta}$}&\multicolumn{1}{c}{S.E.}&\multicolumn{1}{c}{Wald $Z$}&\multicolumn{1}{c}{Pr$(>|Z|)$}\tabularnewline
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ sex=Male&~-0.3794~&~0.0958~&-3.96&\textless 0.0001\tabularnewline
+ age&~ 0.0269~&~0.0239~& 1.13&0.2605\tabularnewline
+ age'&~ 0.0542~&~0.0587~& 0.92&0.3556\tabularnewline
+ age''&~-0.2361~&~0.2315~&-1.02&0.3077\tabularnewline
+ treat=B&~ 0.0218~&~1.6648~& 0.01&0.9895\tabularnewline
+ age $\times$ treat=B&~-0.0008~&~0.0353~&-0.02&0.9815\tabularnewline
+ age' $\times$ treat=B&~-0.0650~&~0.0890~&-0.73&0.4650\tabularnewline
+ age'' $\times$ treat=B&~ 0.2525~&~0.3579~& 0.71&0.4805\tabularnewline
+ \hline
+ \end{longtable}
+ \addtocounter{table}{-1}
+\begin{Sinput}
+anova(f)
+\end{Sinput}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Wald Statistics for \texttt{\smaller S}}\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
+\hline
+sex& 15.70&1&\textless 0.0001\tabularnewline
+age  (Factor+Higher Order Factors)& 81.64&6&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}&  9.97&3&0.0188\tabularnewline
+~~\emph{Nonlinear (Factor+Higher Order Factors)}&  1.41&4&0.8430\tabularnewline
+treat  (Factor+Higher Order Factors)& 33.82&4&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}&  9.97&3&0.0188\tabularnewline
+age $\times$ treat  (Factor+Higher Order Factors)&  9.97&3&0.0188\tabularnewline
+~~\emph{Nonlinear}&  0.54&2&0.7651\tabularnewline
+~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  0.54&2&0.7651\tabularnewline
+TOTAL NONLINEAR&  1.41&4&0.8430\tabularnewline
+TOTAL NONLINEAR + INTERACTION& 10.59&5&0.0600\tabularnewline
+TOTAL&134.12&8&\textless 0.0001\tabularnewline
+\hline
+\end{tabular}\end{center}
+
+The model fitted above allows for a general age $\times$ treatment interaction.  Let's explore this interaction by plotting the age effect separately by treatment group, then plotting the treatment B:A hazard ratio as a function of age.
+\begin{Schunk}
+\begin{Sinput}
+ggplot(Predict(f, age, treat), rdata=data.frame(age, treat))
+ages <- seq(30, 87, length=200)
+k <- contrast(f, list(treat='B', age=ages), list(treat='A', age=ages))
+class(k) <- 'data.frame'
+ggplot(k, aes(x=age, y=exp(Contrast))) + scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
+  geom_ribbon(aes(ymin=exp(Lower), ymax=exp(Upper)), fill='gray80') +
+  geom_line() +
+  ylab('B:A Hazard Ratio') + xlab('Age')
+\end{Sinput}
+
+
+\centerline{\includegraphics{ancova-hteplot-1} \includegraphics{ancova-hteplot-2} }
+
+\end{Schunk}
+
+Re-fit the model allowing for a sex interaction (but not an age interaction) and display the results.
+\begin{Sinput}
+g <- cph(S ~ sex * treat + rcs(age, 4))
+g
+\end{Sinput}
+
+ \centerline{\textbf{Cox Proportional Hazards Model}}
+ 
+ \begin{verbatim}
+ cph(formula = S ~ sex * treat + rcs(age, 4))
+ \end{verbatim}
+ 
+ {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|}\hline
+&Model Tests&Discrimination\\
+&&Indexes\\\hline
+Obs~\hfill 3000&LR $\chi^{2}$~\hfill 116.79&$R^{2}$~\hfill 0.043\\
+Events~\hfill 456&d.f.~\hfill 6&$D_{xy}$~\hfill 0.285\\
+Center~\hfill 1.3019&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.603\\
+&Score $\chi^{2}$~\hfill 118.46&$g_{r}$~\hfill 1.828\\
+&Pr$(>\chi^{2})$~\hfill 0.0000&\\
+\hline
+\end{tabular}
+\end{center}}
+ 
+ %latex.default(U, file = "", first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", already.math.col.names = TRUE,     append = TRUE)%
+ \setlongtables\begin{longtable}{lrrrr}\hline
+ \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\hat{\beta}$}&\multicolumn{1}{c}{S.E.}&\multicolumn{1}{c}{Wald $Z$}&\multicolumn{1}{c}{Pr$(>|Z|)$}\tabularnewline
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ sex=Male&~-0.3333~&~0.1222~&-2.73&0.0064\tabularnewline
+ treat=B&~-0.4351~&~0.1249~&-3.48&0.0005\tabularnewline
+ age&~ 0.0264~&~0.0176~& 1.50&0.1337\tabularnewline
+ age'&~ 0.0293~&~0.0441~& 0.67&0.5060\tabularnewline
+ age''&~-0.1387~&~0.1759~&-0.79&0.4304\tabularnewline
+ sex=Male $\times$ treat=B&~-0.1217~&~0.1963~&-0.62&0.5354\tabularnewline
+ \hline
+ \end{longtable}
+ \addtocounter{table}{-1}
+\begin{Sinput}
+anova(g)
+\end{Sinput}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Wald Statistics for \texttt{\smaller S}}\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
+\hline
+sex  (Factor+Higher Order Factors)& 16.19&2&0.0003\tabularnewline
+~~\emph{All Interactions}&  0.38&1&0.5354\tabularnewline
+treat  (Factor+Higher Order Factors)& 25.63&2&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}&  0.38&1&0.5354\tabularnewline
+age& 72.80&3&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear}&  0.89&2&0.6420\tabularnewline
+sex $\times$ treat  (Factor+Higher Order Factors)&  0.38&1&0.5354\tabularnewline
+TOTAL NONLINEAR + INTERACTION&  1.27&3&0.7367\tabularnewline
+TOTAL&111.89&6&\textless 0.0001\tabularnewline
+\hline
+\end{tabular}\end{center}
+\begin{Sinput}
+ggplot(Predict(g, sex, treat))
+k <- contrast(g, list(treat='B', sex=levels(sex)), list(treat='A', sex=levels(sex)))
+class(k) <- 'data.frame'
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+  geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
+  xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
+\end{Sinput}
+
+
+\centerline{\includegraphics{ancova-hteplot2-1} \includegraphics{ancova-hteplot2-2} }
+
+
+The above analysis signified a treatment effect for both sex groups (both confidence limits exclude a hazard ratio of 1.0), whereas this should only be the case when age exceeds 60.  No sex $\times$ treatment interaction was indicated.
+Re-do the previous analysis adjusting for an age $\times$ treatment interaction while estimating the sex $\times$ treatment interaction.  For this purpose we must specify an age value when estimating the treatment effects by sex.  Here we set age to 50 years.  Were age and sex correlated, the joint analysis would have been harder to interpret.
+\begin{Sinput}
+h <- cph(S ~ treat * (rcs(age, 4) + sex))
+anova(h)
+\end{Sinput}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Wald Statistics for \texttt{\smaller S}}\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
+\hline
+treat  (Factor+Higher Order Factors)& 34.18&5&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 10.33&4&0.0353\tabularnewline
+age  (Factor+Higher Order Factors)& 81.66&6&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}&  9.94&3&0.0191\tabularnewline
+~~\emph{Nonlinear (Factor+Higher Order Factors)}&  1.36&4&0.8505\tabularnewline
+sex  (Factor+Higher Order Factors)& 16.06&2&0.0003\tabularnewline
+~~\emph{All Interactions}&  0.36&1&0.5502\tabularnewline
+treat $\times$ age  (Factor+Higher Order Factors)&  9.94&3&0.0191\tabularnewline
+~~\emph{Nonlinear}&  0.50&2&0.7788\tabularnewline
+~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  0.50&2&0.7788\tabularnewline
+treat $\times$ sex  (Factor+Higher Order Factors)&  0.36&1&0.5502\tabularnewline
+TOTAL NONLINEAR&  1.36&4&0.8505\tabularnewline
+TOTAL INTERACTION& 10.33&4&0.0353\tabularnewline
+TOTAL NONLINEAR + INTERACTION& 10.95&6&0.0898\tabularnewline
+TOTAL&133.11&9&\textless 0.0001\tabularnewline
+\hline
+\end{tabular}\end{center}
+\begin{Sinput}
+ggplot(Predict(h, sex, treat, age=50))
+k <- contrast(h, list(treat='B', sex=levels(sex), age=50),
+                 list(treat='A', sex=levels(sex), age=50))
+class(k) <- 'data.frame'
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+  geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
+  xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
+\end{Sinput}
+
+
+\centerline{\includegraphics{ancova-htejoint-1} \includegraphics{ancova-htejoint-2} }
+
+
+This is a more accurate representation of the true underlying model, and is easy to interpret because (1) age and sex are uncorrelated in the simulation model used, and (2) only two interactions were considered. 
+
 \subsubsection{Absolute vs.\ Relative Treatment Effects Revisited}\sound{anc-9}\disc{ancova-absolute}
 Statistical models are typically chosen so as to maximize the
 likelihood of the model fitting the data and processes that generated
@@ -602,8 +855,6 @@ text(med, 2, 'Median', srt=45, adj=0)
 \begin{Sinput}
 load('gusto.rda')
 require(rms)
-\end{Sinput}
-\begin{Sinput}
 dd <- datadist(gusto); options(datadist='dd')
 f <- lrm(day30 ~ tx + age * Killip + pmin(sysbp, 120) +
            lsp(pulse, 50) + pmi + miloc, data=gusto)

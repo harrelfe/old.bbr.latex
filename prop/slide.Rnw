@@ -409,7 +409,10 @@ or
 # Standard error of log odds ratio:
 selor <- sqrt(1 / (n1 * p1 * (1 - p1)) + 1 / (n2 * p2 * (1 - p2)))
 # Get 0.95 confidence limits
-exp(log(or) + c(-1, 1) * qnorm(0.975) * selor)
+cls <- exp(log(or) + c(-1, 1) * qnorm(0.975) * selor)
+cls
+tcls <- paste0(round(or, 2), ' (0.95 CI: [', round(cls[1], 2),
+               ', ', round(cls[2], 2), '])')
 # Multiplying a constant by the vector -1, 1 does +/-
 x <- matrix(c(6, 19, 11, 100), nrow=2, byrow=TRUE)
 x
@@ -422,7 +425,7 @@ Ignore the warning about the $\chi^2$ approximation.
  \item Compare odds of death in the emergency group
    $\left(\frac{\hat{p}_1}{1-\hat{p}_1}\right)$ to odds of death in
    non-emergency group  $\left(\frac{\hat{p}_2}{1-\hat{p}_2}\right)$ 
- \item Emergency cases have 2.87 (0.95 CI: [0.95, 3.36]) fold
+ \item Emergency cases have \Sexpr{tcls} fold
    increased odds times of death during surgery compared to
    non-emergency cases. 
  \ei

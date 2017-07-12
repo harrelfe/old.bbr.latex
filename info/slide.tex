@@ -311,13 +311,13 @@ describe(age)
 \end{Sinput}
 \begin{Soutput}
 age 
-      n missing  unique    Info    Mean     .05     .10     .25     .50 
-   1000       0    1000       1   49.86   29.28   33.93   41.63   49.58 
-    .75     .90     .95 
-  58.26   65.89   70.93 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+    1000        0     1000        1    49.86    14.01    29.28    33.93 
+     .25      .50      .75      .90      .95 
+   41.63    49.58    58.26    65.89    70.93 
 
-lowest : 13.90 14.04 14.72 15.33 18.85
-highest: 79.97 81.79 82.11 86.67 95.72 
+lowest : 13.90342 14.03661 14.72272 15.33295 18.84666
+highest: 79.97194 81.79000 82.10889 86.66891 95.72332
 \end{Soutput}
 \begin{Sinput}
 cens <- 15 * runif(n)
@@ -369,6 +369,11 @@ exp(coef(cph(S ~ age >= 50, subset=age > 40 & age < 60)))
 \end{Soutput}
 \end{Schunk}
 
+See
+\href{https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-12-21}{this} 
+for excellent graphical examples of the harm of categorizing
+predictors, especially when using quantile groups.
+
 \subsection{Categorizing Outcomes}\label{sec:info-catoutcomes}
 \bi
 \item Arbitrary, low power, can be difficult to interpret
@@ -386,8 +391,15 @@ exp(coef(cph(S ~ age >= 50, subset=age > 40 & age < 60)))
 Is a mean difference of 5.4mmHg more difficult to interpret than
 A:17\% vs.\ B:22\% hit clinical target?
 
-``Responder'' analysis in clinical trials results in huge information loss
-and arbitrariness.
+``Responder'' analysis in clinical trials results in huge information loss and arbitrariness.  Some issue:
+\bi
+\item Responder analyses use cutpoints on continuous or ordinal variables and cite earlier data supporting their choice of cutpoints.  No example has been produced where the earlier data actually support the cutpoint.
+\item Many responder analyses are based on change scores when they should be based solely on the follow-up outcome variable, adjusted for baseline as a covariate.
+\item The cutpoints are always arbitrary.
+\item There is a huge power loss (see Section~\ref{sec:info-catoutcomes}).
+\item The responder probability is often a function of variables that one does not want it to be a function of (see graph above).
+\ei
+
 
 \citet{fed09con} is one of the best papers quantifying the information
 and power loss from categorizing continuous outcomes.  One of their
