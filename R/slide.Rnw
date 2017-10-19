@@ -224,7 +224,7 @@ best to debug your commands a piece at a time.  The fastest way to do
 this is to go to some line inside your first chunk and click the green
 \co{C} just above and to the right of your script.  Click on \co{Run
   Current Chunk} then on \co{Run Next Chunk}.  Shortcut keys for these
-are \co{Ctrl+Alt+C} and \co{Ctrl+Alt+N}.  You can also click on a
+are \co{Ctrl+Alt+C} and \co{Ctrl+Alt+N} (\co{Command+Option+C} and \co{Command+Option+N} for Mac).  You can also click on a
 single line of code and run it by clicking on \co{Run}.
 
 Whenever you get a strange execution error it is sometimes helpful to
@@ -311,7 +311,7 @@ Also see the excellent tutorial on importing from Excel found at \url{http://www
 
 The \co{Hmisc} \co{upData} function may be used to rename variables
 and provide variable and value labels and units of measurement.
-Here is another example where the there is a \co{junk} variable to
+Here is another example where there is a \co{junk} variable to
 delete after importing, and a categorical variable is coded as
 integers and need to have value labels defined after
 importing.  We show how \co{csv.get} automatically renamed one illegal
@@ -354,7 +354,7 @@ d <- data.frame(age=c(10,20,30), sex=c('male','female','male'),
 Large files may be stored in \R\ binary format using \co{save(...,
   compress=TRUE)}, which creates an incredibly compact representation
 of the data in a file usually suffixed with \co{.rda}.  This allows
-extremely fast loading of of the data frame in your next \R\ session
+extremely fast loading of the data frame in your next \R\ session
 using \co{load(...)}.  The \co{Hmisc} \co{Save} and \co{Load}
 functions make this even easier.
 

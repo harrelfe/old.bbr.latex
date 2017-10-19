@@ -1,21 +1,15 @@
-[0] Config.pm:340> INFO - This is Biber 2.4
-[1] Config.pm:343> INFO - Logfile is 'bbr.blg'
-[60] biber:290> INFO - === Tue Feb  7, 2017, 11:25:30
-[80] Biber.pm:347> INFO - Reading 'bbr.bcf'
-[224] Biber.pm:741> INFO - Found 99 citekeys in bib section 0
-[242] Biber.pm:3150> INFO - Processing section 0
-[300] Biber.pm:3307> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
-[634] bibtex.pm:1124> INFO - Decoding LaTeX character macros into UTF-8
-[942] bibtex.pm:985> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
-[2644] Utils.pm:147> WARN - I didn't find a database entry for '[' (section 0)
-[4325] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4325] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4325] Biber.pm:3027> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
-[4326] Biber.pm:3031> INFO - No sort tailoring available for locale 'en-US'
-[4804] bbl.pm:519> INFO - Writing 'bbr.bbl' with encoding 'ascii'
-[4810] Utils.pm:147> WARN - The entry 'amb02sel' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[4826] Utils.pm:147> WARN - The entry 'hol04con' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[4836] Utils.pm:147> WARN - The entry 'par10eff' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[4846] Utils.pm:147> WARN - The entry 'tor85how' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[4849] bbl.pm:615> INFO - Output to bbr.bbl
-[4850] Biber.pm:108> INFO - WARNINGS: 5
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is 'bbr.blg'
+[36] biber-darwin:276> INFO - === Thu Oct 19, 2017, 06:25:33
+[36] Biber.pm:333> INFO - Reading 'bbr.bcf'
+[123] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
+[138] Biber.pm:2977> INFO - Processing section 0
+[149] Biber.pm:3115> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
+[362] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[558] bibtex.pm:895> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
+[868] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[868] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[868] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[868] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[879] bbl.pm:505> INFO - Writing 'bbr.bbl' with encoding 'ascii'
+[880] bbl.pm:596> INFO - Output to bbr.bbl
