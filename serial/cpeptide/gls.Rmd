@@ -1,0 +1,92 @@
+---
+title: "Reanalysis of Paper by Ali et al."
+author: "FE Harrell"
+date: '`r Sys.Date()`'
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+csl: american-medical-association.csl
+editor_options: 
+  chunk_output_type: inline
+---
+This is a reanalysis of the main C-peptide result in "Metabolic and immune effects of immunotherapy with proinsulin peptide in human new-onset type 1 diabetes" by Ali _et al._, Science Translational Medicine 9, 2017-08-09.  The main challenges for the primary C-peptide analyses are to properly analyze serial (longitudinal) data within patient, and to obtain a reliable statistical assessment of the evidence for differences among the three treatments.
+
+The R statistical computing system is used for the analysis.  See the chapter in [BBR](http://biostat.mc.vanderbilt.edu/ClinStat) on serial data for more details about the statistical analysis used here.
+
+# Preliminaries
+
+```{r setup}
+require(Hmisc)
+knitrSet(lang='markdown', w=6, h=4)
+```
+```{r setup2}
+require(rms)
+options(prType='html')   # for anova and printing fit results
+d <- csv.get('dat.txt', header=TRUE, sep='')
+d <- upData(d, baseline=baseline/100,
+            m3=m3/100, m6=m6/100, m9=m9/100, m12=m12/100,
+            tx=c(rep('hf', 9), rep('lf', 10), rep('placebo', 8)))
+
+base <- subset(d, select=c(ptno, baseline))
+
+# Reshape from wide to tall and thin dataset
+z <- reshape(d, idvar='ptno', varying=c('baseline', 'm3', 'm6', 'm9', 'm12'), v.names='cpeptide',
+             timevar='week', times=c(0, 3, 6, 9, 12), direction='long')
+
+i <- with(z, order(ptno, week))
+z <- z[i, ]
+```
+
+The first step in any analysis is to plot raw data, especially when the number of subjects is not huge.  For serial data we use a "spaghetti plot" of each patient's time-response profile, starting with a graph on the original scale for C-peptide.  Besides never showing such a display, another problem with the paper is its use of normalization to the baseline value, which covers up some possible important features of the data such as whether patients starting very high or very low had different trajectories over time.  Always plot the rawest form of the data, with no normalization, and seldom use normalization in the analyses either.  Treatments are distinguished by colors in the plot below.
+
+```{r spag}
+ggplot(z, aes(x=week, y=cpeptide, group=factor(ptno), color=tx)) + geom_line()
+```
+
+In the above graph, the original scale results in compression of the curves making it difficult to see trends, and gives too much influence to a couple of patients with very high C-peptide levels.  Let's redraw the graph using log C-peptide.
+
+```{r spagl}
+ggplot(z, aes(x=week, y=log10(cpeptide), group=factor(ptno), color=tx)) + geom_line()
+```
+
+The influence of the high values is much less, the the distribution of the values on the y-axis direction informally looks suitable for an analysis that assumes normality.  But the patient-to-patient (biologic) variability is so great that only a much larger sample size would have made it possible to draw any conclusions from the C-peptide data.
+
+Next merge baseline C-peptide with all the follow-up values, preserving a tall and thin data format.
+
+```{r merge}
+z <- subset(z, week > 0)
+z <- merge(base, z, by='ptno')
+```
+
+# Formal Analysis Using A Serial Data Model
+The simplest generalization of the t-test or ANOVA to serial data is generalized least squares.  We use the AR1 correlation structure, which has been found to fit serial data very often.  This specifies an exponentially declining correlation between two measurements on the same patient, as a function of the time between the measurements.
+
+For such a small number of patients, the only hope to analyzing serial data is to assume a smooth time-response mean profile.  Here we assume the curves are quadratic (which contains linear trends as a special case).  We model treatment effect by interacting the three treatments with the linear and quadratic terms, and we adjust for log baseline (we are analyzing log follow-up C-peptide).  The test for treatment is a "chunk" test (a multiple degree of freedom test) of all the terms in the model involving treatment.  This tests for a treatment main effect or a treatment by time interaction effect.  This could also be interpreted, more naturally, as testing whether there is a difference between any two treatments at **any** time point.
+
+```{r gls,results='asis'}
+require(nlme)
+dd <- datadist(z); options(datadist='dd')
+f <- Gls(log10(cpeptide) ~ pol(week, 2) * tx + log10(baseline),
+         correlation=corCAR1(form = ~ week | ptno), data=z)
+f
+anova(f)
+```
+
+The key test is the overall chunk test for treatment with 6 d.f.  The p-value is 0.56, indicating no evidence from these samples for any effect of treatment at any time.  Note that the authors also found no overall differences, but then dangerously proceeded to look for an effect at each time, without adjusting for multiple tests.  They found one time point  where there was evidence for a treatment effect.  Note that if one wants to be able to make a statement at any time point, it is important to first do the chunk test for all times combined.
+
+Now lets plot the predicted means (after logging the raw data) as a function of follow-up time, using the fitted quadratic equations, along with 0.95 pointwise confidence bands.  These bands can be turned off by clicking in the legend on the right.
+
+```{r pred}
+wks <- seq(3, 12, length=100)
+plotp(Predict(f, week=wks, tx))
+```
+
+
+# Computing Environment[^2] {#compenv}
+`r markupSpecs$html$session()`
+
+
+<!---
+To update html output on the server: cdata gls.html bbr/examples
+-->

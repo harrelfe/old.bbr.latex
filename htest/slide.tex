@@ -483,7 +483,7 @@ pwr.t.test(d = delta / sigma, power = 0.9, sig.level = 0.05, type='one.sample')
 
      One-sample t test power calculation 
 
-              n = 43.99551
+              n = 43.99548
               d = 0.5
       sig.level = 0.05
           power = 0.9
@@ -529,7 +529,11 @@ increasing the sample size by a factor of four improves the precision
 by a factor of two.
 \bi
 \item May want to estimate $\mu$ to within a margin of error of $\pm
-  \delta$ with 0.95 confidence
+  \delta$ with 0.95 confidence\footnote{Adcock~\cite{adc97sam}
+    presents both frequentist and Bayesian methods and for precision
+    emphasizes solving for $n$ such that the probability of being
+    within $\epsilon$ of the true value is controlled, as opposed to
+    using confidence interval widths explicitly.}
 \item ``0.95 confident'' that a confidence interval includes the true
   value of $\mu$
 \item If $\sigma$ were known but we still used the $t$ distribution in
@@ -654,13 +658,40 @@ n = \frac{1}{4}\left[\frac{1.96}{\delta}\right]^{2} = \frac{0.96}{\delta^{2}}
 \ei
 \begin{Schunk}
 \begin{Sinput}
-delta <- 0.1
-n <- 0.25 * (qnorm(0.975) / delta) ^ 2
-n
+nprec <- function(delta) round(0.25 * (qnorm(0.975) / delta) ^ 2)
+nprec(0.1)
 \end{Sinput}
 \begin{Soutput}
-[1] 96.03647
+[1] 96
 \end{Soutput}
+\end{Schunk}
+
+To achive a margin of error of $\pm 0.05$ even in the worst case where
+$p=0.5$ one needs $n=384$.
+
+To put this in the context of relative errors, suppose that one wants
+to estimate the odds that an event will occur, to within a certain
+multiplicative margin of error (MMOE) with 0.95 confidence.  What is
+the MMOE as a function of the unknown $p$ when $n=384$?  The standard
+error of the log odds is approximately $\sqrt{\frac{1}{n p (1 - p)}}$,
+and the half-width of a 0.95 confidence interval for the log odds is
+approximately 1.96 times that.  Fix $n=384$ and vary $p$ to get the
+MMOE that is associated with the same sample size as a universal
+absolute margin of error of 0.05.
+
+\begin{Schunk}
+\begin{Sinput}
+p <- seq(0.01, 0.99, length=200)
+mmoe <- exp(1.96 / sqrt(384 * p * (1 - p)))
+plot(p, mmoe, type='l', xlab='Unknown Probability p', ylab='MMOE')
+minor.tick()
+\end{Sinput}
+\begin{figure}[htbp]
+
+\centerline{\includegraphics{htest-moeor-1} }
+
+\caption[Multiplicative margin of error in estimating odds when $n=384$ and the margin of error in estimating the absolute probability is $\leq 0.05$]{Multiplicative margin of error in estimating odds when $n=384$ and the margin of error in estimating the absolute probability is $\leq 0.05$.}\label{fig:htest-moeor}
+\end{figure}
 \end{Schunk}
 
 \section{Paired Data and One-Sample Tests}  \altman{31-32}\abd{11}

@@ -1,6 +1,10 @@
 \chapter{Reproducible Research}
 \quoteit{Disconfirmation bias: giving expected results a relatively
   free pass but rigorously checking non-intuitive results}{\citet{nuz15how}}
+
+An excellent article on how to do reproducible research is
+\cite{mun17man} for which the pdf file is openly available.
+
 \section{Non-reproducible Research}
 \bi
 \item Misunderstanding statistics
@@ -308,6 +312,7 @@ stream created by \co{knitr}.}
 \section{Further Reading}
 An excellent book is \citet{irr}.  See also
 \bi
+\item \url{https://github.com/SISBID/Module3}: course by Baggerly and Broman
 \item \url{reproducibleresearch.net}
 \item \url{cran.r-project.org/web/views/ReproducibleResearch.html}
 \item \url{www.nature.com/nature/focus/reproducibility}

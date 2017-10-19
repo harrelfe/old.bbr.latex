@@ -1,0 +1,8 @@
+Introduction to Nonparametric Statistical Tests
+
+This workshop will cover some guidelines on when to use nonparametric
+statistical tests, and will describe some of the most commonly used
+tests.  Descriptives statistics that go along with these tests will be
+briefly covered, and the proportional odds ordinal regression model
+will be briefly described as a generalization of common nonparametric
+tests.
