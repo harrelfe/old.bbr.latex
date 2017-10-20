@@ -1,15 +1,15 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'bbr.blg'
-[36] biber-darwin:276> INFO - === Thu Oct 19, 2017, 06:25:33
-[36] Biber.pm:333> INFO - Reading 'bbr.bcf'
-[123] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
-[138] Biber.pm:2977> INFO - Processing section 0
-[149] Biber.pm:3115> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
-[362] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[558] bibtex.pm:895> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
-[868] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[868] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[868] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
-[868] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
-[879] bbl.pm:505> INFO - Writing 'bbr.bbl' with encoding 'ascii'
-[880] bbl.pm:596> INFO - Output to bbr.bbl
+[33] biber-darwin:276> INFO - === Thu Oct 19, 2017, 19:21:55
+[33] Biber.pm:333> INFO - Reading 'bbr.bcf'
+[107] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
+[123] Biber.pm:2977> INFO - Processing section 0
+[137] Biber.pm:3115> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
+[318] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[505] bibtex.pm:895> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
+[774] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[774] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[774] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[774] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[784] bbl.pm:505> INFO - Writing 'bbr.bbl' with encoding 'ascii'
+[785] bbl.pm:596> INFO - Output to bbr.bbl

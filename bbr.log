@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 OCT 2017 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 OCT 2017 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,12 +927,12 @@ Overfull \hbox (2.82993pt too wide) detected at line 73
 
 
 Overfull \hbox (2.82993pt too wide) detected at line 93
- []\T1/aess/m/n/10 4-29
+ []\T1/aess/m/n/10 4-30
  []
 
 
 Overfull \hbox (2.82993pt too wide) detected at line 95
- []\T1/aess/m/n/10 4-31
+ []\T1/aess/m/n/10 4-32
  []
 
 )
@@ -1310,27 +1310,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 761.
  [25] [26 <./descript/descript-rmsa-1.pdf> <./descript/descript-rmsb-1.pdf>] [2
 7 <./descript/descript-rmsc-1.pdf>]
+<descript/image-sepsis.pdf, id=1080, 724.7075pt x 574.145pt>
+File: descript/image-sepsis.pdf Graphic file (type pdf)
 
-./descript/slide.tex:768: LaTeX Error: File `image-sepsis' not found.
+<use descript/image-sepsis.pdf>
+Package pdftex.def Info: descript/image-sepsis.pdf used on input line 768.
+(pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.768 ...aphics[width=.9\textwidth]{image-sepsis}}
-                                                  
-? 
+<descript/image-stroke.pdf, id=1081, 724.7075pt x 574.145pt>
+File: descript/image-stroke.pdf Graphic file (type pdf)
 
-./descript/slide.tex:774: LaTeX Error: File `image-stroke' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.774 ...aphics[width=.9\textwidth]{image-stroke}}
-                                                  
-? 
-[28]
+<use descript/image-stroke.pdf>
+Package pdftex.def Info: descript/image-stroke.pdf used on input line 774.
+(pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
+ [28 <./descript/image-sepsis.pdf, page is rotated 90 degrees>] [29 <./descript
+/image-stroke.pdf, page is rotated 90 degrees>]
 Underfull \hbox (badness 10000) in paragraph at lines 846--848
 
  []
@@ -1338,20 +1332,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 846--848
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29
+[30
 
 
-] [30] <descript/descript-dynamite-1.pdf, id=1101, 397.485pt x 216.81pt>
+] [31] <descript/descript-dynamite-1.pdf, id=1114, 397.485pt x 216.81pt>
 File: descript/descript-dynamite-1.pdf Graphic file (type pdf)
 
 <use descript/descript-dynamite-1.pdf>
 Package pdftex.def Info: descript/descript-dynamite-1.pdf used on input line 87
 8.
 (pdftex.def)             Requested size: 397.48402pt x 216.80946pt.
- [31
+ [32
 
 
- <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1125,
+ <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1137,
  433.62pt x 144.54pt>
 File: descript/descript-tplot-1.pdf Graphic file (type pdf)
 
@@ -1359,14 +1353,14 @@ File: descript/descript-tplot-1.pdf Graphic file (type pdf)
 Package pdftex.def Info: descript/descript-tplot-1.pdf used on input line 908.
 (pdftex.def)             Requested size: 433.61894pt x 144.53963pt.
 
-<descript/descript-vplot-1.pdf, id=1126, 433.62pt x 180.675pt>
+<descript/descript-vplot-1.pdf, id=1138, 433.62pt x 180.675pt>
 File: descript/descript-vplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-vplot-1.pdf>
 Package pdftex.def Info: descript/descript-vplot-1.pdf used on input line 926.
 (pdftex.def)             Requested size: 433.61894pt x 180.67455pt.
-) [32 <./descript/descript-tplot-1.pdf>]
-[33 <./descript/descript-vplot-1.pdf>]
+) [33 <./descript/descript-tplot-1.pdf>]
+[34 <./descript/descript-vplot-1.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
  [1
 
@@ -1390,10 +1384,10 @@ Package logreq Info: Writing requests to 'bbr.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17885 strings out of 493089
- 282396 string characters out of 6134842
+ 17877 strings out of 493089
+ 282549 string characters out of 6134842
  840317 words of memory out of 5000000
- 20423 multiletter control sequences out of 15000+600000
+ 20431 multiletter control sequences out of 15000+600000
  103552 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,95p,1128b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1436,10 +1430,10 @@ pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on bbr.pdf (66 pages, 1313511 bytes).
+Output written on bbr.pdf (67 pages, 1340966 bytes).
 PDF statistics:
- 1426 PDF objects out of 1440 (max. 8388607)
- 1253 compressed objects within 13 object streams
- 507 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1439 PDF objects out of 1440 (max. 8388607)
+ 1263 compressed objects within 13 object streams
+ 508 named destinations out of 1000 (max. 500000)
+ 359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

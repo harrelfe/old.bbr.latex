@@ -90,8 +90,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Graphing Effect of Two Continuous Variables on $Y$}{4-28}{subsubsection*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Tables}{4-29}{section.4.4}
+\contentsline {section}{\numberline {4.4}Tables}{4-30}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Bar Plots with Error Bars}{4-31}{section.4.5}
+\contentsline {section}{\numberline {4.5}Bar Plots with Error Bars}{4-32}{section.4.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliography}{5-1}{figure.caption.36}
