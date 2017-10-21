@@ -1,15 +1,22 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'bbr.blg'
-[33] biber-darwin:276> INFO - === Thu Oct 19, 2017, 19:21:55
-[33] Biber.pm:333> INFO - Reading 'bbr.bcf'
-[107] Biber.pm:645> INFO - Found 7 citekeys in bib section 0
-[123] Biber.pm:2977> INFO - Processing section 0
-[137] Biber.pm:3115> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
-[318] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[30] biber-darwin:276> INFO - === Fri Oct 20, 2017, 14:40:57
+[30] Biber.pm:333> INFO - Reading 'bbr.bcf'
+[115] Biber.pm:645> INFO - Found 101 citekeys in bib section 0
+[131] Biber.pm:2977> INFO - Processing section 0
+[141] Biber.pm:3115> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
+[320] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
 [505] bibtex.pm:895> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
-[774] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[774] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[774] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
-[774] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
-[784] bbl.pm:505> INFO - Writing 'bbr.bbl' with encoding 'ascii'
-[785] bbl.pm:596> INFO - Output to bbr.bbl
+[798] Utils.pm:146> WARN - I didn't find a database entry for '[' (section 0)
+[1404] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1404] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1404] Biber.pm:2854> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1404] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[1606] bbl.pm:505> INFO - Writing 'bbr.bbl' with encoding 'ascii'
+[1609] Utils.pm:146> WARN - The entry 'amb02sel' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1615] Utils.pm:146> WARN - The entry 'hol04con' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1619] Utils.pm:146> WARN - The entry 'mun17man' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1621] Utils.pm:146> WARN - The entry 'par10eff' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1625] Utils.pm:146> WARN - The entry 'tor85how' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1626] bbl.pm:596> INFO - Output to bbr.bbl
+[1626] Biber.pm:106> INFO - WARNINGS: 6

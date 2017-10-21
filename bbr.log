@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 OCT 2017 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 OCT 2017 18:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -739,7 +739,7 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 \@quotelevel=\count286
 \@quotereset=\count287
 
-(./bbr.aux)
+(./bbr.aux (./info/abstract.aux))
 \openout1 = `bbr.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
@@ -758,7 +758,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
 LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Try loading font information for T1+aess on input line 105.
 
- (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aess.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 Package biblatex Info: No input encoding detected.
@@ -769,8 +770,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bbr.bbl' found.
+ (./bbr.bbl
 
-(./bbr.bbl)
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                [
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 105.
 Package biblatex Info: Reference segment=0 on input line 105.
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -867,9 +875,9 @@ LaTeX Info: Redefining \nameref on input line 105.
 
 
 LaTeX Font Warning: Font shape `T1/aess/m/sc' undefined
-(Font)              using `T1/aess/m/n' instead on input line 143.
+(Font)              using `T1/aess/m/n' instead on input line 116.
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 149.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 122.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -927,12 +935,536 @@ Overfull \hbox (2.82993pt too wide) detected at line 73
 
 
 Overfull \hbox (2.82993pt too wide) detected at line 93
- []\T1/aess/m/n/10 4-30
+ []\T1/aess/m/n/10 4-31
  []
 
 
 Overfull \hbox (2.82993pt too wide) detected at line 95
- []\T1/aess/m/n/10 4-32
+ []\T1/aess/m/n/10 4-33
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 113
+ []\T1/aess/m/n/10 5-13
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 123
+ []\T1/aess/m/n/10 5-20
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 131
+ []\T1/aess/m/n/10 5-23
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 133
+ []\T1/aess/m/n/10 5-24
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 147
+ []\T1/aess/m/n/10 5-30
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 157
+ []\T1/aess/m/n/10 5-32
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 167
+ []\T1/aess/m/n/10 5-36
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 177
+ []\T1/aess/m/n/10 5-39
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 187
+ []\T1/aess/m/n/10 5-42
+ []
+
+[3]
+Overfull \hbox (2.82993pt too wide) detected at line 213
+ []\T1/aess/m/n/10 6-10
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 215
+ []\T1/aess/m/n/10 6-12
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 217
+ []\T1/aess/m/n/10 6-14
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 243
+ []\T1/aess/m/n/10 7-15
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 245
+ []\T1/aess/m/n/10 7-17
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 247
+ []\T1/aess/m/n/10 7-18
+ []
+
+
+LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
+(Font)              using `T1/aett/m/n' instead on input line 267.
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 279
+ []\T1/aess/m/n/10 9-10
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 281
+ []\T1/aess/m/n/10 9-16
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 285
+ []\T1/aess/m/n/10 9-19
+ []
+
+[4]
+Overfull \hbox (2.82993pt too wide) detected at line 287
+ []\T1/aess/m/n/10 9-21
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 291
+ []\T1/aess/m/n/10 10-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 293
+ []\T1/aess/m/n/10 10-5
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 295
+ []\T1/aess/m/n/10 10-6
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 297
+ []\T1/aess/m/n/10 10-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 299
+ []\T1/aess/m/n/10 10-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 319
+ []\T1/aess/m/n/10 10-23
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 321
+ []\T1/aess/m/n/10 10-28
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 339
+ []\T1/aess/m/n/10 10-39
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 347
+ []\T1/aess/m/n/10 10-41
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 349
+ []\T1/aess/m/n/10 10-43
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 367
+ []\T1/aess/m/n/10 10-53
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 371
+ []\T1/aess/m/n/10 11-1
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 373
+ []\T1/aess/m/n/10 11-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 375
+ []\T1/aess/m/n/10 11-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 385
+ []\T1/aess/m/n/10 11-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 387
+ []\T1/aess/m/n/10 11-11
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 389
+ []\T1/aess/m/n/10 11-12
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 391
+ []\T1/aess/m/n/10 11-13
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 393
+ []\T1/aess/m/n/10 11-15
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 395
+ []\T1/aess/m/n/10 11-17
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 397
+ []\T1/aess/m/n/10 11-18
+ []
+
+[5]
+Overfull \hbox (2.82993pt too wide) detected at line 401
+ []\T1/aess/m/n/10 12-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 403
+ []\T1/aess/m/n/10 12-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 413
+ []\T1/aess/m/n/10 12-5
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 417
+ []\T1/aess/m/n/10 13-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 419
+ []\T1/aess/m/n/10 13-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 433
+ []\T1/aess/m/n/10 13-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 437
+ []\T1/aess/m/n/10 13-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 439
+ []\T1/aess/m/n/10 13-10
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 441
+ []\T1/aess/m/n/10 13-11
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 459
+ []\T1/aess/m/n/10 13-31
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 461
+ []\T1/aess/m/n/10 13-33
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 463
+ []\T1/aess/m/n/10 13-34
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 469
+ []\T1/aess/m/n/10 13-37
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 471
+ []\T1/aess/m/n/10 13-38
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 475
+ []\T1/aess/m/n/10 14-1
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 477
+ []\T1/aess/m/n/10 14-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 483
+ []\T1/aess/m/n/10 14-6
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 485
+ []\T1/aess/m/n/10 14-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 487
+ []\T1/aess/m/n/10 14-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 489
+ []\T1/aess/m/n/10 14-11
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 491
+ []\T1/aess/m/n/10 14-12
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 497
+ []\T1/aess/m/n/10 14-15
+ []
+
+[6]
+Overfull \hbox (2.82993pt too wide) detected at line 501
+ []\T1/aess/m/n/10 15-1
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 503
+ []\T1/aess/m/n/10 15-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 511
+ []\T1/aess/m/n/10 15-6
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 523
+ []\T1/aess/m/n/10 16-1
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 525
+ []\T1/aess/m/n/10 16-8
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 527
+ []\T1/aess/m/n/10 16-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 533
+ []\T1/aess/m/n/10 16-12
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 535
+ []\T1/aess/m/n/10 16-13
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 539
+ []\T1/aess/m/n/10 17-1
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 541
+ []\T1/aess/m/n/10 17-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 545
+ []\T1/aess/m/n/10 17-5
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 547
+ []\T1/aess/m/n/10 17-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 549
+ []\T1/aess/m/n/10 17-8
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 551
+ []\T1/aess/m/n/10 17-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 553
+ []\T1/aess/m/n/10 17-10
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 557
+ []\T1/aess/m/n/10 18-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 561
+ []\T1/aess/m/n/10 18-4
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 563
+ []\T1/aess/m/n/10 18-6
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 579
+ []\T1/aess/m/n/10 18-17
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 585
+ []\T1/aess/m/n/10 18-19
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 589
+ []\T1/aess/m/n/10 18-24
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 595
+ []\T1/aess/m/n/10 18-29
+ []
+
+[7]
+Overfull \hbox (7.82993pt too wide) detected at line 603
+ []\T1/aess/m/n/10 18-35
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 607
+ []\T1/aess/m/n/10 19-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 617
+ []\T1/aess/m/n/10 19-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 619
+ []\T1/aess/m/n/10 19-8
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 621
+ []\T1/aess/m/n/10 19-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 625
+ []\T1/aess/m/n/10 19-13
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 633
+ []\T1/aess/m/n/10 19-14
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 637
+ []\T1/aess/m/n/10 19-16
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 639
+ []\T1/aess/m/n/10 19-17
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 641
+ []\T1/aess/m/n/10 19-19
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 645
+ []\T1/aess/m/n/10 20-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 647
+ []\T1/aess/m/n/10 20-5
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 667
+ []\T1/aess/m/n/10 20-10
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 675
+ []\T1/aess/m/n/10 21-2
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 677
+ []\T1/aess/m/n/10 21-3
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 687
+ []\T1/aess/m/n/10 21-6
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 689
+ []\T1/aess/m/n/10 21-7
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 691
+ []\T1/aess/m/n/10 21-8
+ []
+
+
+Overfull \hbox (2.82993pt too wide) detected at line 693
+ []\T1/aess/m/n/10 21-9
+ []
+
+
+Overfull \hbox (7.82993pt too wide) detected at line 705
+ []\T1/aess/m/n/10 21-14
  []
 
 )
@@ -941,13 +1473,13 @@ Overfull \hbox (2.82993pt too wide) detected at line 95
 
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 260.
- <movie.png, id=151, 128.48pt x 128.48pt>
+ [8] <movie.png, id=908, 128.48pt x 128.48pt>
 File: movie.png Graphic file (type png)
  <use movie.png>
 Package pdftex.def Info: movie.png used on input line 265.
 (pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
 
-<sound.png, id=153, 61.6704pt x 61.6704pt>
+<sound.png, id=910, 61.6704pt x 61.6704pt>
 File: sound.png Graphic file (type png)
  <use sound.png>
 Package pdftex.def Info: sound.png used on input line 268.
@@ -956,12 +1488,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 273.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 273.
- [3 <./movie.png> <./sound.png>] (./R/slide.tex
+ [9 <./movie.png> <./sound.png>] (./R/slide.tex
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 13.
+(Font)              <14.4> on input line 17.
 LaTeX Font Info:    Try loading font information for OMS+aess on input line 22.
 
 LaTeX Font Info:    No file OMSaess.fd. on input line 22.
@@ -989,20 +1521,16 @@ ttp : / / www . ats . ucla . edu / stat / r$[][] \T1/aess/m/n/14.4 and [][]$\T1
 /aett/m/n/14.4 http : / / www . introductoryr .
  []
 
-
-LaTeX Warning: Reference `sec:repro-software' on page 1-3 undefined on input li
-ne 80.
-
 [3
 
-] [4] <R/rstudioOptions.png, id=213, 570.13pt x 368.37625pt>
+] [4] <R/rstudioOptions.png, id=967, 570.13pt x 368.37625pt>
 File: R/rstudioOptions.png Graphic file (type png)
 
 <use R/rstudioOptions.png>
 Package pdftex.def Info: R/rstudioOptions.png used on input line 125.
 (pdftex.def)             Requested size: 252.94499pt x 163.43507pt.
 
-<R/rstudioSweave.png, id=214, 540.0175pt x 367.3725pt>
+<R/rstudioSweave.png, id=968, 540.0175pt x 367.3725pt>
 File: R/rstudioSweave.png Graphic file (type png)
 
 <use R/rstudioSweave.png>
@@ -1070,31 +1598,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
 ] [3] [4
 
-]
+] [5
 
-LaTeX Warning: Reference `fig:info-thresholds' on page 3-5 undefined on input l
-ine 102.
-
-
-LaTeX Warning: Reference `pg:info-gia14opt' on page 3-5 undefined on input line
- 103.
-
-
-LaTeX Warning: Reference `pg:info-fed09con' on page 3-5 undefined on input line
- 104.
-
-[5
-
-]
-
-LaTeX Warning: Reference `pg:change-anova' on page 3-6 undefined on input line 
-107.
-
-
-LaTeX Warning: Reference `fig:change-suppcr' on page 3-6 undefined on input lin
-e 111.
-
-[6] [7
+] [6] [7
 
 ] [8
 
@@ -1111,14 +1617,14 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <8> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 26.
 [1
 
-] <descript/descript-pdfcdf-1.pdf, id=537, 433.62pt x 216.81pt>
+] <descript/descript-pdfcdf-1.pdf, id=1301, 433.62pt x 216.81pt>
 File: descript/descript-pdfcdf-1.pdf Graphic file (type pdf)
 
 <use descript/descript-pdfcdf-1.pdf>
 Package pdftex.def Info: descript/descript-pdfcdf-1.pdf used on input line 68.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [2]
-<descript/descript-normalhist-1.pdf, id=551, 289.08pt x 216.81pt>
+<descript/descript-normalhist-1.pdf, id=1316, 289.08pt x 216.81pt>
 File: descript/descript-normalhist-1.pdf Graphic file (type pdf)
 
 <use descript/descript-normalhist-1.pdf>
@@ -1126,28 +1632,28 @@ Package pdftex.def Info: descript/descript-normalhist-1.pdf used on input line
 83.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<descript/descript-bimode-1.pdf, id=553, 289.08pt x 216.81pt>
+<descript/descript-bimode-1.pdf, id=1318, 289.08pt x 216.81pt>
 File: descript/descript-bimode-1.pdf Graphic file (type pdf)
 
 <use descript/descript-bimode-1.pdf>
 Package pdftex.def Info: descript/descript-bimode-1.pdf used on input line 99.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [3 <./descript/descript-pdfcdf-1.pdf> <./descript/descript-normalhist-1.pdf>]
-<descript/descript-orda-1.pdf, id=583, 289.08pt x 216.81pt>
+<descript/descript-orda-1.pdf, id=1348, 289.08pt x 216.81pt>
 File: descript/descript-orda-1.pdf Graphic file (type pdf)
 
 <use descript/descript-orda-1.pdf>
 Package pdftex.def Info: descript/descript-orda-1.pdf used on input line 127.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [4 <./descript/descript-bimode-1.pdf>]
-<descript/descript-ordb-1.pdf, id=602, 289.08pt x 216.81pt>
+<descript/descript-ordb-1.pdf, id=1367, 289.08pt x 216.81pt>
 File: descript/descript-ordb-1.pdf Graphic file (type pdf)
 
 <use descript/descript-ordb-1.pdf>
 Package pdftex.def Info: descript/descript-ordb-1.pdf used on input line 141.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<descript/descript-ordc-1.pdf, id=606, 289.08pt x 216.81pt>
+<descript/descript-ordc-1.pdf, id=1371, 289.08pt x 216.81pt>
 File: descript/descript-ordc-1.pdf Graphic file (type pdf)
 
 <use descript/descript-ordc-1.pdf>
@@ -1176,7 +1682,7 @@ Overfull \hbox (18.4819pt too wide) in paragraph at lines 253--258
 [10
 
 
-] <descript/descript-spaghetti-1.pdf, id=684, 505.89pt x 361.35pt>
+] <descript/descript-spaghetti-1.pdf, id=1449, 505.89pt x 361.35pt>
 File: descript/descript-spaghetti-1.pdf Graphic file (type pdf)
 
 <use descript/descript-spaghetti-1.pdf>
@@ -1184,7 +1690,7 @@ Package pdftex.def Info: descript/descript-spaghetti-1.pdf used on input line 3
 13.
 (pdftex.def)             Requested size: 505.88875pt x 361.34912pt.
  [11] [12 <./descript/descript-spaghetti-1.pdf>]
-<descript/descript-counts-dotchart-1.pdf, id=711, 289.08pt x 216.81pt>
+<descript/descript-counts-dotchart-1.pdf, id=1476, 289.08pt x 216.81pt>
 File: descript/descript-counts-dotchart-1.pdf Graphic file (type pdf)
 
 <use descript/descript-counts-dotchart-1.pdf>
@@ -1192,7 +1698,7 @@ Package pdftex.def Info: descript/descript-counts-dotchart-1.pdf used on input
 line 355.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-<slinks/desc-proportions-txreg.pdf, id=712, 505.89pt x 325.215pt>
+<slinks/desc-proportions-txreg.pdf, id=1477, 505.89pt x 325.215pt>
 File: slinks/desc-proportions-txreg.pdf Graphic file (type pdf)
 
 <use slinks/desc-proportions-txreg.pdf>
@@ -1200,7 +1706,7 @@ Package pdftex.def Info: slinks/desc-proportions-txreg.pdf used on input line 3
 62.
 (pdftex.def)             Requested size: 505.88875pt x 325.2142pt.
 
-<slinks/aevents.pdf, id=713, 505.89pt x 433.62pt>
+<slinks/aevents.pdf, id=1478, 505.89pt x 433.62pt>
 File: slinks/aevents.pdf Graphic file (type pdf)
  <use slinks/aevents.pdf>
 Package pdftex.def Info: slinks/aevents.pdf used on input line 367.
@@ -1208,198 +1714,2184 @@ Package pdftex.def Info: slinks/aevents.pdf used on input line 367.
 
 [13 <./descript/descript-counts-dotchart-1.pdf>] [14 <./slinks/desc-proportions
 -txreg.pdf>] [15 <./slinks/aevents.pdf>]
-<descript/descript-pH-1.pdf, id=768, 361.35pt x 289.08pt>
+<descript/descript-pH-1.pdf, id=1532, 361.35pt x 289.08pt>
 File: descript/descript-pH-1.pdf Graphic file (type pdf)
 
 <use descript/descript-pH-1.pdf>
 Package pdftex.def Info: descript/descript-pH-1.pdf used on input line 409.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 
-<descript/descript-pHh2-1.pdf, id=770, 397.485pt x 325.215pt>
+<descript/descript-pHh2-1.pdf, id=1534, 397.485pt x 325.215pt>
 File: descript/descript-pHh2-1.pdf Graphic file (type pdf)
 
 <use descript/descript-pHh2-1.pdf>
 Package pdftex.def Info: descript/descript-pHh2-1.pdf used on input line 439.
 (pdftex.def)             Requested size: 397.48402pt x 325.2142pt.
  [16] [17 <./descript/descript-pH-1.pdf> <./descript/descript-pHh2-1.pdf>]
-<descript/descript-ecdf-1.pdf, id=855, 433.62pt x 325.215pt>
+<descript/descript-ecdf-1.pdf, id=1620, 433.62pt x 325.215pt>
 File: descript/descript-ecdf-1.pdf Graphic file (type pdf)
 
 <use descript/descript-ecdf-1.pdf>
-Package pdftex.def Info: descript/descript-ecdf-1.pdf used on input line 465.
+Package pdftex.def Info: descript/descript-ecdf-1.pdf used on input line 468.
 (pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 467.
+(Font)              <9> on input line 470.
  [18 <./descript/descript-ecdf-1.pdf>]
-<descript/descript-bwplot-1.pdf, id=880, 361.35pt x 234.8775pt>
+<descript/descript-bwplot-1.pdf, id=1644, 361.35pt x 234.8775pt>
 File: descript/descript-bwplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-bwplot-1.pdf>
-Package pdftex.def Info: descript/descript-bwplot-1.pdf used on input line 482.
+Package pdftex.def Info: descript/descript-bwplot-1.pdf used on input line 485.
 
 (pdftex.def)             Requested size: 361.34912pt x 234.87692pt.
 
-<descript/descript-bpplt-1.pdf, id=883, 397.485pt x 271.0125pt>
+<descript/descript-bpplt-1.pdf, id=1647, 397.485pt x 271.0125pt>
 File: descript/descript-bpplt-1.pdf Graphic file (type pdf)
 
 <use descript/descript-bpplt-1.pdf>
-Package pdftex.def Info: descript/descript-bpplt-1.pdf used on input line 496.
+Package pdftex.def Info: descript/descript-bpplt-1.pdf used on input line 499.
 (pdftex.def)             Requested size: 397.48402pt x 271.01183pt.
 
-<descript/descript-glybox-1.pdf, id=885, 433.62pt x 361.35pt>
+<descript/descript-glybox-1.pdf, id=1649, 433.62pt x 361.35pt>
 File: descript/descript-glybox-1.pdf Graphic file (type pdf)
 
 <use descript/descript-glybox-1.pdf>
-Package pdftex.def Info: descript/descript-glybox-1.pdf used on input line 513.
+Package pdftex.def Info: descript/descript-glybox-1.pdf used on input line 516.
 
 (pdftex.def)             Requested size: 433.61894pt x 361.34912pt.
 
-<slinks/cchem-byx-cont-a.pdf, id=886, 505.89pt x 397.485pt>
+<slinks/cchem-byx-cont-a.pdf, id=1650, 505.89pt x 397.485pt>
 File: slinks/cchem-byx-cont-a.pdf Graphic file (type pdf)
 
 <use slinks/cchem-byx-cont-a.pdf>
-Package pdftex.def Info: slinks/cchem-byx-cont-a.pdf used on input line 529.
+Package pdftex.def Info: slinks/cchem-byx-cont-a.pdf used on input line 532.
 (pdftex.def)             Requested size: 505.88875pt x 397.48402pt.
  [19 <./descript/descript-bwplot-1.pdf>]
 [20 <./descript/descript-bpplt-1.pdf>] [21 <./descript/descript-glybox-1.pdf>]
 [22 <./slinks/cchem-byx-cont-a.pdf>]
-<descript/descript-cldif-1.pdf, id=966, 289.08pt x 216.81pt>
+<descript/descript-cldif-1.pdf, id=1723, 289.08pt x 216.81pt>
 File: descript/descript-cldif-1.pdf Graphic file (type pdf)
 
 <use descript/descript-cldif-1.pdf>
-Package pdftex.def Info: descript/descript-cldif-1.pdf used on input line 581.
+Package pdftex.def Info: descript/descript-cldif-1.pdf used on input line 584.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
  [23 <./descript/descript-cldif-1.pdf>]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 656.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1phv.fd
+[24]
+LaTeX Font Info:    Try loading font information for T1+phv on input line 659.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-) [24]
-
-LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 702.
-
+)
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <9> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 708.
-<descript/descript-rmsa-1.pdf, id=1016, 578.16pt x 361.35pt>
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 711.
+
+<descript/descript-rmsa-1.pdf, id=1776, 578.16pt x 361.35pt>
 File: descript/descript-rmsa-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsa-1.pdf>
-Package pdftex.def Info: descript/descript-rmsa-1.pdf used on input line 729.
+Package pdftex.def Info: descript/descript-rmsa-1.pdf used on input line 732.
 (pdftex.def)             Requested size: 578.15858pt x 361.34912pt.
 
-Overfull \hbox (73.43092pt too wide) in paragraph at lines 734--739
+Overfull \hbox (73.43092pt too wide) in paragraph at lines 737--742
 \T1/aett/m/n/14.4 stackexchange . com / questions / 155430 / clarifications-[]r
 egarding-[]reading-[]a-[]nomogram$[][]
  []
 
-<descript/descript-rmsb-1.pdf, id=1021, 505.89pt x 216.81pt>
+[25] [26 <./descript/descript-rmsa-1.pdf>]
+<descript/descript-rmsb-1.pdf, id=1817, 505.89pt x 216.81pt>
 File: descript/descript-rmsb-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsb-1.pdf>
-Package pdftex.def Info: descript/descript-rmsb-1.pdf used on input line 744.
+Package pdftex.def Info: descript/descript-rmsb-1.pdf used on input line 747.
 (pdftex.def)             Requested size: 505.88875pt x 216.80946pt.
 
-<descript/descript-rmsc-1.pdf, id=1023, 361.35pt x 361.35pt>
+<descript/descript-rmsc-1.pdf, id=1819, 361.35pt x 361.35pt>
 File: descript/descript-rmsc-1.pdf Graphic file (type pdf)
 
 <use descript/descript-rmsc-1.pdf>
-Package pdftex.def Info: descript/descript-rmsc-1.pdf used on input line 755.
+Package pdftex.def Info: descript/descript-rmsc-1.pdf used on input line 758.
 (pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 761.
- [25] [26 <./descript/descript-rmsa-1.pdf> <./descript/descript-rmsb-1.pdf>] [2
-7 <./descript/descript-rmsc-1.pdf>]
-<descript/image-sepsis.pdf, id=1080, 724.7075pt x 574.145pt>
+(Font)              <17.28> on input line 764.
+
+<descript/image-sepsis.pdf, id=1820, 724.7075pt x 574.145pt>
 File: descript/image-sepsis.pdf Graphic file (type pdf)
 
 <use descript/image-sepsis.pdf>
-Package pdftex.def Info: descript/image-sepsis.pdf used on input line 768.
+Package pdftex.def Info: descript/image-sepsis.pdf used on input line 771.
 (pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
 
-<descript/image-stroke.pdf, id=1081, 724.7075pt x 574.145pt>
+<descript/image-stroke.pdf, id=1821, 724.7075pt x 574.145pt>
 File: descript/image-stroke.pdf Graphic file (type pdf)
 
 <use descript/image-stroke.pdf>
-Package pdftex.def Info: descript/image-stroke.pdf used on input line 774.
+Package pdftex.def Info: descript/image-stroke.pdf used on input line 777.
 (pdftex.def)             Requested size: 455.2979pt x 360.71454pt.
- [28 <./descript/image-sepsis.pdf, page is rotated 90 degrees>] [29 <./descript
-/image-stroke.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 10000) in paragraph at lines 846--848
+ [27 <./descript/descript-rmsb-1.pdf>] [28 <./descript/descript-rmsc-1.pdf>] [2
+9 <./descript/image-sepsis.pdf, page is rotated 90 degrees>] [30 <./descript/im
+age-stroke.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30
+[31
 
 
-] [31] <descript/descript-dynamite-1.pdf, id=1114, 397.485pt x 216.81pt>
+] [32] <descript/descript-dynamite-1.pdf, id=1884, 397.485pt x 216.81pt>
 File: descript/descript-dynamite-1.pdf Graphic file (type pdf)
 
 <use descript/descript-dynamite-1.pdf>
-Package pdftex.def Info: descript/descript-dynamite-1.pdf used on input line 87
-8.
+Package pdftex.def Info: descript/descript-dynamite-1.pdf used on input line 88
+1.
 (pdftex.def)             Requested size: 397.48402pt x 216.80946pt.
- [32
+ [33
 
 
- <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1137,
+ <./descript/descript-dynamite-1.pdf>] <descript/descript-tplot-1.pdf, id=1907,
  433.62pt x 144.54pt>
 File: descript/descript-tplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-tplot-1.pdf>
-Package pdftex.def Info: descript/descript-tplot-1.pdf used on input line 908.
+Package pdftex.def Info: descript/descript-tplot-1.pdf used on input line 911.
 (pdftex.def)             Requested size: 433.61894pt x 144.53963pt.
 
-<descript/descript-vplot-1.pdf, id=1138, 433.62pt x 180.675pt>
+<descript/descript-vplot-1.pdf, id=1908, 433.62pt x 180.675pt>
 File: descript/descript-vplot-1.pdf Graphic file (type pdf)
 
 <use descript/descript-vplot-1.pdf>
-Package pdftex.def Info: descript/descript-vplot-1.pdf used on input line 926.
+Package pdftex.def Info: descript/descript-vplot-1.pdf used on input line 929.
 (pdftex.def)             Requested size: 433.61894pt x 180.67455pt.
-) [33 <./descript/descript-tplot-1.pdf>]
-[34 <./descript/descript-vplot-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
- [1
+) (./htest/slide.tex [34 <./descript/descript-tplot-1.pdf>] [35 <./descript/des
+cript-vplot-1.pdf>]
+Chapter 5.
+[1
+
+] [2] [3
+
+] [4] [5
+
+] [6] [7] [8]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <24.88> on input line 186.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 186.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 186.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 186.
+
+[9
+
+] [10] [11] [12] [13
+
+]
+<htest/htest-tpdfs-1.pdf, id=2055, 361.35pt x 271.0125pt>
+File: htest/htest-tpdfs-1.pdf Graphic file (type pdf)
+
+<use htest/htest-tpdfs-1.pdf>
+Package pdftex.def Info: htest/htest-tpdfs-1.pdf used on input line 370.
+(pdftex.def)             Requested size: 361.34912pt x 271.01183pt.
+ [14 <./htest/htest-tpdfs-1.pdf>] [15] [16]
+[17] [18] [19] [20
+
+] [21]
+<htest/htest-moeor-1.pdf, id=2194, 289.08pt x 216.81pt>
+File: htest/htest-moeor-1.pdf Graphic file (type pdf)
+
+<use htest/htest-moeor-1.pdf>
+Package pdftex.def Info: htest/htest-moeor-1.pdf used on input line 691.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [22 <./htest/htest-moeor-1.pdf>] [23
+
+] [24
+
+]
+[25] [26] [27] [28] [29]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 965.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 965.
+
+[30
+
+] [31] <htest/htest-smmoe-1.pdf, id=2322, 289.08pt x 216.81pt>
+File: htest/htest-smmoe-1.pdf Graphic file (type pdf)
+
+<use htest/htest-smmoe-1.pdf>
+Package pdftex.def Info: htest/htest-smmoe-1.pdf used on input line 1062.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [32
+
+] [33 <./htest/htest-smmoe-1.pdf>] [34]
+[35]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1141.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1141.
+
+[36
+
+] <htest/htest-sleepa-1.pdf, id=2372, 361.35pt x 216.81pt>
+File: htest/htest-sleepa-1.pdf Graphic file (type pdf)
+
+<use htest/htest-sleepa-1.pdf>
+Package pdftex.def Info: htest/htest-sleepa-1.pdf used on input line 1223.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+ [37] [38 <./htest/htest-sleepa-1.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1260.
+
+[39
+
+
+] <htest/htest-tplot-1.pdf, id=2426, 361.35pt x 216.81pt>
+File: htest/htest-tplot-1.pdf Graphic file (type pdf)
+
+<use htest/htest-tplot-1.pdf>
+Package pdftex.def Info: htest/htest-tplot-1.pdf used on input line 1345.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+ [40] [41 <./htest/htest-tplot-1.pdf>] [42
 
 
 ]
+[43] [44] [45]) (./prop/slide.tex [46]
+Chapter 6.
+
+Overfull \hbox (4.94577pt too wide) in paragraph at lines 10--11
+[]\T1/aess/m/n/14.4 Independent vari-ables: Ex-posed/Not, Treat-men-t/-Con-trol
+, Knock-out/Wild Type,
+ []
+
+[1
+
+] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+[3]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\chi' on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 112.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 112.
+
+[4
+
+] [5] [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[7
+
+] [8] [9
+
+]
+Overfull \hbox (0.48705pt too wide) in paragraph at lines 291--292
+[]\T1/aess/m/n/14.4 The new treat-ment is found to de-crease in-fec-tions by $\
+OT1/lmr/m/n/14.4 0\OML/lmm/m/it/14.4 :\OT1/lmr/m/n/14.4 06$ \T1/aess/m/n/14.4 (
+$\OT1/lmr/m/n/14.4 0\OML/lmm/m/it/14.4 :\OT1/lmr/m/n/14.4 95$ \T1/aess/m/n/14.4
+ CI: $\OT1/lmr/m/n/14.4 [0\OML/lmm/m/it/14.4 :\OT1/lmr/m/n/14.4 11\OML/lmm/m/it
+/14.4 ; \OT1/lmr/m/n/14.4 0\OML/lmm/m/it/14.4 :\OT1/lmr/m/n/14.4 01]$\T1/aess/m
+/n/14.4 ).
+ []
+
+[10
+
+] [11] [12
+
+] <prop/prop-mmeor-1.pdf, id=2649, 505.89pt x 433.62pt>
+File: prop/prop-mmeor-1.pdf Graphic file (type pdf)
+
+<use prop/prop-mmeor-1.pdf>
+Package pdftex.def Info: prop/prop-mmeor-1.pdf used on input line 384.
+(pdftex.def)             Requested size: 505.88875pt x 433.61894pt.
+ [13 <./prop/prop-mmeor-1.pdf>] [14
+
+] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 548--551
+
+ []
+
+) (./nonpar/slide.tex [17]
+Chapter 7.
+[1
+
+] [2] [3] [4
+
+] [5] [6] [7] [8] [9
+
+] [10]
+<nonpar/nonpar-calpro-1.pdf, id=2908, 433.62pt x 216.81pt>
+File: nonpar/nonpar-calpro-1.pdf Graphic file (type pdf)
+
+<use nonpar/nonpar-calpro-1.pdf>
+Package pdftex.def Info: nonpar/nonpar-calpro-1.pdf used on input line 463.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+
+<nonpar/nonpar-calpror-1.pdf, id=2910, 433.62pt x 216.81pt>
+File: nonpar/nonpar-calpror-1.pdf Graphic file (type pdf)
+
+<use nonpar/nonpar-calpror-1.pdf>
+Package pdftex.def Info: nonpar/nonpar-calpror-1.pdf used on input line 479.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+ [11 <./nonpar/nonpar-calpro-1.pdf>]
+Overfull \hbox (3.1897pt too wide) in paragraph at lines 515--515
+[]|[]\T1/aess/bx/n/20.74 Point and In-ter-val Es-ti-mates for Wilcoxon Two-Samp
+le
+ []
+
+[12 <./nonpar/nonpar-calpror-1.pdf>] [13]
+<nonpar/nonpar-checkhl-1.pdf, id=2996, 289.08pt x 216.81pt>
+File: nonpar/nonpar-checkhl-1.pdf Graphic file (type pdf)
+
+<use nonpar/nonpar-checkhl-1.pdf>
+Package pdftex.def Info: nonpar/nonpar-checkhl-1.pdf used on input line 595.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [14 <./nonpar/nonpar-checkhl-1.pdf>] [15
+
+]
+<nonpar/nonpar-diffmedboot-1.pdf, id=3032, 289.08pt x 216.81pt>
+File: nonpar/nonpar-diffmedboot-1.pdf Graphic file (type pdf)
+
+<use nonpar/nonpar-diffmedboot-1.pdf>
+Package pdftex.def Info: nonpar/nonpar-diffmedboot-1.pdf used on input line 661
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [16 <./nonpar/nonpar-diffmedboot-1.pdf>]
+[17
+
+]) (./corr/slide.tex [18
+
+]
+Chapter 8.
+[1
+
+] [2
+
+] [3] [4
+
+] <corr/corr-corrplota-1.pdf, id=3092, 469.755pt x 361.35pt>
+File: corr/corr-corrplota-1.pdf Graphic file (type pdf)
+
+<use corr/corr-corrplota-1.pdf>
+Package pdftex.def Info: corr/corr-corrplota-1.pdf used on input line 153.
+(pdftex.def)             Requested size: 469.75386pt x 361.34912pt.
+ [5
+
+] [6 <./corr/corr-corrplota-1.pdf>]
+<corr/corr-corrplotb-1.pdf, id=3156, 433.62pt x 433.62pt>
+File: corr/corr-corrplotb-1.pdf Graphic file (type pdf)
+
+<use corr/corr-corrplotb-1.pdf>
+Package pdftex.def Info: corr/corr-corrplotb-1.pdf used on input line 231.
+(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+ [7] [8 <./corr/corr-corrplotb-1.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9
+
+
+] [10] <corr/corr-baplot-1.pdf, id=3230, 397.485pt x 325.215pt>
+File: corr/corr-baplot-1.pdf Graphic file (type pdf)
+
+<use corr/corr-baplot-1.pdf>
+Package pdftex.def Info: corr/corr-baplot-1.pdf used on input line 333.
+(pdftex.def)             Requested size: 397.48402pt x 325.2142pt.
+ [11 <./corr/corr-baplot-1.pdf>]
+<corr/corr-phtimediff-1.pdf, id=3378, 361.35pt x 289.08pt>
+File: corr/corr-phtimediff-1.pdf Graphic file (type pdf)
+
+<use corr/corr-phtimediff-1.pdf>
+Package pdftex.def Info: corr/corr-phtimediff-1.pdf used on input line 359.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+ [12 <./corr/corr-phtimediff-1.pdf>]
+<corr/corr-moe-1.pdf, id=3396, 505.89pt x 397.485pt>
+File: corr/corr-moe-1.pdf Graphic file (type pdf)
+ <use corr/corr-moe-1.pdf>
+Package pdftex.def Info: corr/corr-moe-1.pdf used on input line 384.
+(pdftex.def)             Requested size: 505.88875pt x 397.48402pt.
+) (./rmsintro/slide.tex [13
+
+] [14 <./corr/corr-moe-1.pdf>]
+Chapter 9.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\smaller ' on input line 6.
+
+[1
+
+] [2
+
+] [3
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\smaller ' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\smaller ' on input line 107.
+
+[4
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 136.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-5 moved.
+
+
+Overfull \hbox (20.2325pt too wide) in paragraph at lines 152--158
+[]\T1/aess/bx/n/14.4 Note\T1/aess/m/n/14.4 : To eas-ily run all the fol-low-ing
+ com-mands, open [][]$\T1/aett/bx/n/14.4 http : / / biostat . mc . vanderbilt .
+
+ []
+
+[5
+
+] [6] [7] [8]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 347.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+<rmsintro/rmsintro-unnamed-chunk-7-1.pdf, id=3651, 361.35pt x 361.35pt>
+File: rmsintro/rmsintro-unnamed-chunk-7-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-7-1.pdf used on input 
+line 364.
+(pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
+ [9
+
+ <./rmsintro/rmsintro-unnamed-chunk-7-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 369.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-10 moved.
+
+<rmsintro/rmsintro-unnamed-chunk-8-1.pdf, id=3673, 433.62pt x 361.35pt>
+File: rmsintro/rmsintro-unnamed-chunk-8-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-8-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-8-1.pdf used on input 
+line 389.
+(pdftex.def)             Requested size: 433.61894pt x 361.34912pt.
+ [10
+
+]
+<rmsintro/rmsintro-unnamed-chunk-9-1.pdf, id=3680, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-9-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-9-1.pdf used on input 
+line 401.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<rmsintro/rmsintro-unnamed-chunk-10-1.pdf, id=3681, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-10-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-10-1.pdf used on input
+ line 410.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [11 <./rmsintro/rmsintro-unnamed-chunk-8-1.pdf> <./rmsintro/rmsintro-unnamed-c
+hunk-9-1.pdf>]
+<rmsintro/rmsintro-unnamed-chunk-11-1.pdf, id=3709, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-11-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-11-1.pdf used on input
+ line 419.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<rmsintro/rmsintro-unnamed-chunk-12-1.pdf, id=3710, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-12-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-12-1.pdf used on input
+ line 429.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [12 <./rmsintro/rmsintro-unnamed-chunk-10-1.pdf> <./rmsintro/rmsintro-unnamed-
+chunk-11-1.pdf>]
+<rmsintro/rmsintro-unnamed-chunk-13-1.pdf, id=3737, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-13-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-13-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-13-1.pdf used on input
+ line 442.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<rmsintro/rmsintro-unnamed-chunk-14-1.pdf, id=3738, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-14-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-14-1.pdf used on input
+ line 454.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [13 <./rmsintro/rmsintro-unnamed-chunk-12-1.pdf> <./rmsintro/rmsintro-unnamed-
+chunk-13-1.pdf>]
+<rmsintro/rmsintro-unnamed-chunk-15-1.pdf, id=3769, 289.08pt x 216.81pt>
+File: rmsintro/rmsintro-unnamed-chunk-15-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-15-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-15-1.pdf used on input
+ line 464.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<rmsintro/rmsintro-unnamed-chunk-16-1.pdf, id=3770, 505.89pt x 361.35pt>
+File: rmsintro/rmsintro-unnamed-chunk-16-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-16-1.pdf used on input
+ line 475.
+(pdftex.def)             Requested size: 505.88875pt x 361.34912pt.
+ [14 <./rmsintro/rmsintro-unnamed-chunk-14-1.pdf> <./rmsintro/rmsintro-unnamed-
+chunk-15-1.pdf>] [15 <./rmsintro/rmsintro-unnamed-chunk-16-1.pdf>]
+Overfull \hbox (14.32076pt too wide) in paragraph at lines 480--480
+[]|[]\T1/aess/bx/n/24.88 Nomograms: Over-all De-pic-tion of Fit-ted Mod-
+ []
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 480.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-16 moved.
+
+<rmsintro/rmsintro-unnamed-chunk-17-1.pdf, id=3810, 433.62pt x 289.08pt>
+File: rmsintro/rmsintro-unnamed-chunk-17-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-17-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-17-1.pdf used on input
+ line 487.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (193.13748pt too wide) in paragraph at lines 490--493
+[]\T1/aess/m/n/14.4 See [][]$\T1/aett/bx/n/14.4 http : / / stats . stackexchang
+e . com / questions / 155430 / clarifications-[]regarding-[]reading-[]a-[]nomog
+ram$[][]
+ []
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 494.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-16 moved.
+
+[16
+
+ <./rmsintro/rmsintro-unnamed-chunk-17-1.pdf>] [17]
+<rmsintro/rmsintro-unnamed-chunk-20-1.pdf, id=3859, 289.08pt x 180.675pt>
+File: rmsintro/rmsintro-unnamed-chunk-20-1.pdf Graphic file (type pdf)
+
+<use rmsintro/rmsintro-unnamed-chunk-20-1.pdf>
+Package pdftex.def Info: rmsintro/rmsintro-unnamed-chunk-20-1.pdf used on input
+ line 579.
+(pdftex.def)             Requested size: 289.07928pt x 180.67455pt.
+ [18 <./rmsintro/rmsintro-unnamed-chunk-20-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 583.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-19 moved.
+
+[19
+
+] [20]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 692.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 9-21 moved.
+
+[21
+
+]) (./reg/slide.tex [22]
+Chapter 10.
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 5.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [1
+
+] [2]
+File: movie.png Graphic file (type png)
+ <use movie.png>
+Package pdftex.def Info: movie.png used on input line 57.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+
+
+LaTeX Warning: Marginpar on page 10-3 moved.
+
+[3
+
+] [4]
+
+LaTeX Warning: Marginpar on page 10-5 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+[5
+
+] [6
+
+]
+
+LaTeX Warning: Marginpar on page 10-7 moved.
+
+
+LaTeX Warning: Marginpar on page 10-7 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+[7
+
+] <reg/reg-glratio-1.pdf, id=4092, 289.08pt x 216.81pt>
+File: reg/reg-glratio-1.pdf Graphic file (type pdf)
+
+<use reg/reg-glratio-1.pdf>
+Package pdftex.def Info: reg/reg-glratio-1.pdf used on input line 254.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<reg/reg-age-abm-1.pdf, id=4094, 289.08pt x 216.81pt>
+File: reg/reg-age-abm-1.pdf Graphic file (type pdf)
+
+<use reg/reg-age-abm-1.pdf>
+Package pdftex.def Info: reg/reg-age-abm-1.pdf used on input line 269.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [8 <./reg/reg-glratio-1.pdf> <./reg/reg-age-abm-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 278.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-9 moved.
+
+
+LaTeX Warning: Marginpar on page 10-9 moved.
+
+
+LaTeX Warning: Marginpar on page 10-9 moved.
+
+<reg/reg-simple-linear-reg-1.pdf, id=4123, 289.08pt x 216.81pt>
+File: reg/reg-simple-linear-reg-1.pdf Graphic file (type pdf)
+
+<use reg/reg-simple-linear-reg-1.pdf>
+Package pdftex.def Info: reg/reg-simple-linear-reg-1.pdf used on input line 310
+.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [9
+
+
+] [10 <./reg/reg-simple-linear-reg-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 337.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-11 moved.
+
+[11
+
+]
+File: movie.png Graphic file (type png)
+ <use movie.png>
+Package pdftex.def Info: movie.png used on input line 381.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 393.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-12 moved.
+
+[12] [13]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 447.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-14 moved.
+
+[14] <reg/reg-both-type-cls-1.pdf, id=4189, 289.08pt x 216.81pt>
+File: reg/reg-both-type-cls-1.pdf Graphic file (type pdf)
+
+<use reg/reg-both-type-cls-1.pdf>
+Package pdftex.def Info: reg/reg-both-type-cls-1.pdf used on input line 524.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [15] [16 <./reg/reg-both-type-cls-1.pdf>]
+File: sound.png Graphic file (type png)
+
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 533.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-17 moved.
+
+
+LaTeX Warning: Marginpar on page 10-17 moved.
+
+<reg/reg-exresid-1.pdf, id=4226, 433.62pt x 433.62pt>
+File: reg/reg-exresid-1.pdf Graphic file (type pdf)
+
+<use reg/reg-exresid-1.pdf>
+Package pdftex.def Info: reg/reg-exresid-1.pdf used on input line 579.
+(pdftex.def)             Requested size: 433.61894pt x 433.61894pt.
+ [17
+
+] [18 <./reg/reg-exresid-1.pdf>] [19
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 639--644
+
+ []
+
+[20] [21] [22]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 747.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-23 moved.
+
+
+LaTeX Warning: Marginpar on page 10-23 moved.
+
+[23
+
+] <reg/reg-bmi-1.pdf, id=4305, 433.62pt x 325.215pt>
+File: reg/reg-bmi-1.pdf Graphic file (type pdf)
+
+<use reg/reg-bmi-1.pdf>
+Package pdftex.def Info: reg/reg-bmi-1.pdf used on input line 810.
+(pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
+ [24] [25 <./reg/reg-bmi-1.pdf>]
+<reg/reg-bmiq-1.pdf, id=4333, 289.08pt x 216.81pt>
+File: reg/reg-bmiq-1.pdf Graphic file (type pdf)
+ <use reg/reg-bmiq-1.pdf>
+Package pdftex.def Info: reg/reg-bmiq-1.pdf used on input line 892.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+[26] [27 <./reg/reg-bmiq-1.pdf>]
+
+LaTeX Warning: Marginpar on page 10-28 moved.
+
+
+LaTeX Warning: Marginpar on page 10-28 moved.
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 901.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-28 moved.
+
+
+LaTeX Warning: Marginpar on page 10-28 moved.
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 932.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [28
+
+
+]
+
+LaTeX Warning: Marginpar on page 10-29 moved.
+
+[29]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 994.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [30] [31]
+<reg/reg-dreg2-1.pdf, id=4441, 289.08pt x 216.81pt>
+File: reg/reg-dreg2-1.pdf Graphic file (type pdf)
+ <use reg/reg-dreg2-1.pdf>
+Package pdftex.def Info: reg/reg-dreg2-1.pdf used on input line 1103.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<reg/reg-dreg3-1.pdf, id=4442, 542.025pt x 252.945pt>
+File: reg/reg-dreg3-1.pdf Graphic file (type pdf)
+
+<use reg/reg-dreg3-1.pdf>
+Package pdftex.def Info: reg/reg-dreg3-1.pdf used on input line 1118.
+(pdftex.def)             Requested size: 542.02367pt x 252.94438pt.
+ <reg/reg-dreg4-1.pdf, id=4443, 361.35pt x 361.35pt>
+File: reg/reg-dreg4-1.pdf Graphic file (type pdf)
+
+<use reg/reg-dreg4-1.pdf>
+Package pdftex.def Info: reg/reg-dreg4-1.pdf used on input line 1127.
+(pdftex.def)             Requested size: 361.34912pt x 361.34912pt.
+ [32 <./reg/reg-dreg2-1.pdf> <./reg/reg-dreg3-1.pdf>]
+File: sound.png Graphic file (type png)
+
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 1133.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-33 moved.
+
+[33 <./reg/reg-dreg4-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1183.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [34]
+
+LaTeX Warning: Marginpar on page 10-35 moved.
+
+
+LaTeX Warning: Marginpar on page 10-35 moved.
+
+[35]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1240.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-36 moved.
+
+
+LaTeX Warning: Marginpar on page 10-36 moved.
+
+[36] <reg/reg-mult-reg-assume-twovar-1.pdf, id=4508, 325.215pt x 252.945pt>
+File: reg/reg-mult-reg-assume-twovar-1.pdf Graphic file (type pdf)
+
+<use reg/reg-mult-reg-assume-twovar-1.pdf>
+Package pdftex.def Info: reg/reg-mult-reg-assume-twovar-1.pdf used on input lin
+e 1275.
+(pdftex.def)             Requested size: 325.2142pt x 252.94438pt.
+ [37 <./reg/reg-mult-reg-assume-twovar-1.pdf>] [38]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1304.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-39 moved.
+
+[39
+
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1332.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-40 moved.
+
+
+LaTeX Warning: Marginpar on page 10-40 moved.
+
+[40]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1370.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-41 moved.
+
+
+LaTeX Warning: Marginpar on page 10-41 moved.
+
+[41
+
+] [42]
+
+LaTeX Warning: Marginpar on page 10-43 moved.
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 1404.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-43 moved.
+
+
+LaTeX Warning: Marginpar on page 10-43 moved.
+
+[43
+
+]pdfTeX warning (ext4): destination with the same identifier (name{table.10.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1480  \setlongtables\begin{longtable}{lrrrr}
+                                              \hline
+Overfull \hbox (12.63504pt too wide) in alignment at lines 1480--1483
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.63504pt too wide) in alignment at lines 1483--1485
+ [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 1488.
+
+
+Overfull \hbox (12.63504pt too wide) in alignment at lines 1485--1490
+ [] [] [] [] [] 
+ []
+
+<reg/reg-olslead-1.pdf, id=4573, 361.35pt x 126.4725pt>
+File: reg/reg-olslead-1.pdf Graphic file (type pdf)
+
+<use reg/reg-olslead-1.pdf>
+Package pdftex.def Info: reg/reg-olslead-1.pdf used on input line 1497.
+(pdftex.def)             Requested size: 361.34912pt x 126.47218pt.
+ [44]
+Overfull \hbox (22.8091pt too wide) in paragraph at lines 1510--1511
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[45 <./reg/reg-olslead-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1532.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-46 moved.
+
+[46
+
+]pdfTeX warning (ext4): destination with the same identifier (name{table.10.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1595  \setlongtables\begin{longtable}{lrrrr}
+                                              \hline
+Overfull \hbox (5.59354pt too wide) in alignment at lines 1595--1598
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (5.59354pt too wide) in alignment at lines 1598--1600
+ [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 1604.
+
+
+Overfull \hbox (5.59354pt too wide) in alignment at lines 1600--1606
+ [] [] [] [] [] 
+ []
+
+<reg/reg-leadgrage-1.pdf, id=4620, 469.755pt x 252.945pt>
+File: reg/reg-leadgrage-1.pdf Graphic file (type pdf)
+
+<use reg/reg-leadgrage-1.pdf>
+Package pdftex.def Info: reg/reg-leadgrage-1.pdf used on input line 1613.
+(pdftex.def)             Requested size: 469.75386pt x 252.94438pt.
+ [47 <./reg/reg-leadgrage-1.pdf>]
+Overfull \hbox (10.0449pt too wide) in paragraph at lines 1626--1627
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.80913pt too wide) in paragraph at lines 1627--1628
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 1673.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-48 moved.
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1704--1706
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1708
+
+ []
+
+[49]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1739.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-50 moved.
+
+[50]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1785.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-51 moved.
+
+[51] [52]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1803.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 10-53 moved.
+
+
+LaTeX Warning: Marginpar on page 10-53 moved.
+
+
+LaTeX Warning: Marginpar on page 10-53 moved.
+
+[53
+
+]
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 1882.
+
+ [54] [55] [56]) (./multgroup/slide.tex [57]
+Chapter 11.
+[1
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 26.
+
+[2
+
+] [3
+
+] [4] [5]
+<multgroup/multgroup-walking-1.pdf, id=4739, 361.35pt x 162.6075pt>
+File: multgroup/multgroup-walking-1.pdf Graphic file (type pdf)
+
+<use multgroup/multgroup-walking-1.pdf>
+Package pdftex.def Info: multgroup/multgroup-walking-1.pdf used on input line 1
+69.
+(pdftex.def)             Requested size: 361.34912pt x 162.6071pt.
+ [6] [7 <./multgroup/multgroup-walking-1.pdf>] [8] [9
+
+] [10] [11
+
+] [12
+
+]
+Overfull \hbox (1.50826pt too wide) in paragraph at lines 380--380
+[]|[]\T1/aess/bx/n/24.88 Non-Parametric ANOVA: Kruskal-Wallis Test| 
+ []
+
+[13
+
+] [14] [15
+
+] [16] [17
+
+] [18
+
+]) (./infreview.tex [19]
+Chapter 12.
+[1
+
+] [2
+
+]
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <6> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 58.
+ [3
+
+] [4]) (./ancova/slide.tex [5
+
+]
+Chapter 13.
+[1
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 35.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-2 moved.
+
+
+LaTeX Warning: Marginpar on page 13-2 moved.
+
+[2
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 50.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-3 moved.
+
+
+LaTeX Warning: Marginpar on page 13-3 moved.
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 77.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [3
+
+]
+
+LaTeX Warning: Marginpar on page 13-4 moved.
+
+[4] <ancova/ancova-gustohistrisk-1.pdf, id=4939, 289.08pt x 216.81pt>
+File: ancova/ancova-gustohistrisk-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-gustohistrisk-1.pdf>
+Package pdftex.def Info: ancova/ancova-gustohistrisk-1.pdf used on input line 1
+27.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+LaTeX Font Info:    Calculating math sizes for size <7.50002> on input line 129
+.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.50002> on input line 129.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.24998> on input line 129.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <3.75> on input line 129.
+ [5 <./ancova/ancova-gustohistrisk-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 156.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-6 moved.
+
+[6]
+
+LaTeX Warning: Marginpar on page 13-7 moved.
+
+[7
+
+] [8]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 218.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-9 moved.
+
+
+LaTeX Warning: Marginpar on page 13-9 moved.
+
+[9
+
+]
+
+LaTeX Warning: Marginpar on page 13-10 moved.
+
+[10
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 254.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-11 moved.
+
+[11
+
+]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 304.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-12 moved.
+
+<slinks/cox-cabg-hazard-ratio.pdf, id=5020, 397.485pt x 289.08pt>
+File: slinks/cox-cabg-hazard-ratio.pdf Graphic file (type pdf)
+
+<use slinks/cox-cabg-hazard-ratio.pdf>
+Package pdftex.def Info: slinks/cox-cabg-hazard-ratio.pdf used on input line 32
+0.
+(pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 322.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [12] [13 <./slinks/cox-cabg-hazard-ratio.pdf>] [14]
+Overfull \hbox (2.35445pt too wide) in paragraph at lines 422--429
+[]\T1/aess/m/n/14.4 Develop a model with am-ple flexibly-modeled main ef-fects 
+and clin-i-cally pre-specified
+ []
+
+[15] [16] [17] <ancova/ancova-hteplot-1.pdf, id=5096, 289.08pt x 216.81pt>
+File: ancova/ancova-hteplot-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-hteplot-1.pdf>
+Package pdftex.def Info: ancova/ancova-hteplot-1.pdf used on input line 544.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<ancova/ancova-hteplot-2.pdf, id=5097, 289.08pt x 216.81pt>
+File: ancova/ancova-hteplot-2.pdf Graphic file (type pdf)
+
+<use ancova/ancova-hteplot-2.pdf>
+Package pdftex.def Info: ancova/ancova-hteplot-2.pdf used on input line 544.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [18 <./ancova/ancova-hteplot-1.pdf> <./ancova/ancova-hteplot-2.pdf>]pdfTeX war
+ning (ext4): destination with the same identifier (name{table.13.1}) has been a
+lready used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.573  \setlongtables\begin{longtable}{lrrrr}
+                                             \hline [19]
+<ancova/ancova-hteplot2-1.pdf, id=5134, 289.08pt x 216.81pt>
+File: ancova/ancova-hteplot2-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-hteplot2-1.pdf>
+Package pdftex.def Info: ancova/ancova-hteplot2-1.pdf used on input line 619.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<ancova/ancova-hteplot2-2.pdf, id=5135, 289.08pt x 216.81pt>
+File: ancova/ancova-hteplot2-2.pdf Graphic file (type pdf)
+
+<use ancova/ancova-hteplot2-2.pdf>
+Package pdftex.def Info: ancova/ancova-hteplot2-2.pdf used on input line 619.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [20 <./ancova/ancova-hteplot2-1.pdf> <./ancova/ancova-hteplot2-2.pdf>]
+<ancova/ancova-htejoint-1.pdf, id=5163, 289.08pt x 216.81pt>
+File: ancova/ancova-htejoint-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-htejoint-1.pdf>
+Package pdftex.def Info: ancova/ancova-htejoint-1.pdf used on input line 663.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<ancova/ancova-htejoint-2.pdf, id=5164, 289.08pt x 216.81pt>
+File: ancova/ancova-htejoint-2.pdf Graphic file (type pdf)
+
+<use ancova/ancova-htejoint-2.pdf>
+Package pdftex.def Info: ancova/ancova-htejoint-2.pdf used on input line 663.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 668.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [21 <./ancova/ancova-htejoint-1.pdf> <./ancova/ancova-htejoint-2.pdf>]
+
+LaTeX Warning: Marginpar on page 13-22 moved.
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 715--715
+[][]\T1/aess/m/n/10 Stephen Senn in [][]$\T1/aett/m/n/10 http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
+\T1/aett/m/n/10 / / errorstatistics .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
+\T1/aett/m/n/10 com / 2013 / 04 / 19 /
+ []
+
+
+Overfull \hbox (108.9346pt too wide) in paragraph at lines 715--715
+\T1/aett/m/n/10 stephen-[]senn-[]when-[]relevance-[]is-[]irrelevant$[][][] 
+ []
+
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 718.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [22]
+
+LaTeX Warning: Marginpar on page 13-23 moved.
+
+
+LaTeX Warning: Marginpar on page 13-23 moved.
+
+<ancova/ancova-or-diff-1.pdf, id=5212, 397.485pt x 289.08pt>
+File: ancova/ancova-or-diff-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-or-diff-1.pdf>
+Package pdftex.def Info: ancova/ancova-or-diff-1.pdf used on input line 755.
+(pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 769.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [23] [24 <./ancova/ancova-or-diff-1.pdf>] <ancova/ancova-ordiff-1.pdf, id=5264
+, 397.485pt x 289.08pt>
+File: ancova/ancova-ordiff-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-ordiff-1.pdf>
+Package pdftex.def Info: ancova/ancova-ordiff-1.pdf used on input line 814.
+(pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 826.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-25 moved.
+
+[25 <./ancova/ancova-ordiff-1.pdf>]
+<ancova/ancova-gusto-histdelt-1.pdf, id=5286, 361.35pt x 289.08pt>
+File: ancova/ancova-gusto-histdelt-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-gusto-histdelt-1.pdf>
+Package pdftex.def Info: ancova/ancova-gusto-histdelt-1.pdf used on input line 
+848.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+ [26 <./ancova/ancova-gusto-histdelt-1.pdf>]pdfTeX warning (ext4): destination 
+with the same identifier (name{table.13.1}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.887  \setlongtables\begin{longtable}{lrrrr}
+                                             \hline [27]
+<ancova/ancova-gusto-nomogram-1.pdf, id=5323, 505.89pt x 433.62pt>
+File: ancova/ancova-gusto-nomogram-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-gusto-nomogram-1.pdf>
+Package pdftex.def Info: ancova/ancova-gusto-nomogram-1.pdf used on input line 
+961.
+(pdftex.def)             Requested size: 505.88875pt x 433.61894pt.
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 967.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-28 moved.
+
+<ancova/ancova-hr-vs-surv-1.pdf, id=5326, 397.485pt x 289.08pt>
+File: ancova/ancova-hr-vs-surv-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-hr-vs-surv-1.pdf>
+Package pdftex.def Info: ancova/ancova-hr-vs-surv-1.pdf used on input line 995.
+
+(pdftex.def)             Requested size: 397.48402pt x 289.07928pt.
+ [28] [29 <./ancova/ancova-gusto-nomogram-1.pdf>] [30 <./ancova/ancova-hr-vs-su
+rv-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 1003.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 13-31 moved.
+
+
+LaTeX Warning: Marginpar on page 13-31 moved.
+
+<ancova/ancova-gusto-histcost-1.pdf, id=5394, 361.35pt x 289.08pt>
+File: ancova/ancova-gusto-histcost-1.pdf Graphic file (type pdf)
+
+<use ancova/ancova-gusto-histcost-1.pdf>
+Package pdftex.def Info: ancova/ancova-gusto-histcost-1.pdf used on input line 
+1025.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+ [31
+
+] [32 <./ancova/ancova-gusto-histcost-1.pdf>]
+
+LaTeX Warning: Marginpar on page 13-33 moved.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1061
+
+ []
+
+[33
+
+]
+
+LaTeX Warning: Marginpar on page 13-34 moved.
+
+[34
+
+]
+
+LaTeX Warning: Marginpar on page 13-35 moved.
+
+[35]
+
+LaTeX Warning: Marginpar on page 13-36 moved.
+
+[36] [37
+
+]) (./change/slide.tex [38
+
+]
+Chapter 14.
+[1
+
+] [2
+
+] <change/change-diabetes-1.pdf, id=5505, 433.62pt x 180.675pt>
+File: change/change-diabetes-1.pdf Graphic file (type pdf)
+
+<use change/change-diabetes-1.pdf>
+Package pdftex.def Info: change/change-diabetes-1.pdf used on input line 77.
+(pdftex.def)             Requested size: 433.61894pt x 180.67455pt.
+ [3 <./change/change-diabetes-1.pdf>]
+[4] [5] [6
+
+] [7
+
+] <change/change-suppcr-1.pdf, id=5617, 361.35pt x 271.0125pt>
+File: change/change-suppcr-1.pdf Graphic file (type pdf)
+
+<use change/change-suppcr-1.pdf>
+Package pdftex.def Info: change/change-suppcr-1.pdf used on input line 276.
+(pdftex.def)             Requested size: 361.34912pt x 271.01183pt.
+ [8 <./change/change-suppcr-1.pdf>] [9
+
+]
+[10] [11
+
+] [12
+
+] [13]
+<change/change-analysis-1.pdf, id=5757, 433.62pt x 361.35pt>
+File: change/change-analysis-1.pdf Graphic file (type pdf)
+
+<use change/change-analysis-1.pdf>
+Package pdftex.def Info: change/change-analysis-1.pdf used on input line 455.
+(pdftex.def)             Requested size: 433.61894pt x 361.34912pt.
+ [14 <./change/change-analysis-1.pdf>]
+File: movie.png Graphic file (type png)
+
+<use movie.png>
+Package pdftex.def Info: movie.png used on input line 465.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+ [15
+
+]
+<change/change-baseball-1.pdf, id=5783, 397.485pt x 325.215pt>
+File: change/change-baseball-1.pdf Graphic file (type pdf)
+
+<use change/change-baseball-1.pdf>
+Package pdftex.def Info: change/change-baseball-1.pdf used on input line 535.
+(pdftex.def)             Requested size: 397.48402pt x 325.2142pt.
+) (./serial/slide.tex [16] [17 <./change/change-baseball-1.pdf>]
+Chapter 15.
+File: sound.png Graphic file (type png)
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 6.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 15-1 moved.
+
+[1
+
+] [2] [3
+
+] [4]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 114.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 15-5 moved.
+
+[5]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 135.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 15-6 moved.
+
+[6
+
+] <serial/serial-spag-1.pdf, id=5924, 505.89pt x 289.08pt>
+File: serial/serial-spag-1.pdf Graphic file (type pdf)
+
+<use serial/serial-spag-1.pdf>
+Package pdftex.def Info: serial/serial-spag-1.pdf used on input line 217.
+(pdftex.def)             Requested size: 505.88875pt x 289.07928pt.
+ [7 <./serial/serial-spag-1.pdf>]
+<serial/serial-auctwo-1.pdf, id=5970, 289.08pt x 216.81pt>
+File: serial/serial-auctwo-1.pdf Graphic file (type pdf)
+
+<use serial/serial-auctwo-1.pdf>
+Package pdftex.def Info: serial/serial-auctwo-1.pdf used on input line 232.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+<serial/serial-auc-1.pdf, id=5973, 361.35pt x 108.405pt>
+File: serial/serial-auc-1.pdf Graphic file (type pdf)
+
+<use serial/serial-auc-1.pdf>
+Package pdftex.def Info: serial/serial-auc-1.pdf used on input line 258.
+(pdftex.def)             Requested size: 361.34912pt x 108.40472pt.
+ [8 <./serial/serial-auctwo-1.pdf>] [9 <./serial/serial-auc-1.pdf>]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 265.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 15-10 moved.
+
+[10
+
+] [11]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 419.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+
+
+LaTeX Warning: Marginpar on page 15-12 moved.
+
+[12] <serial/serial-glsa-1.pdf, id=6079, 289.08pt x 216.81pt>
+File: serial/serial-glsa-1.pdf Graphic file (type pdf)
+
+<use serial/serial-glsa-1.pdf>
+Package pdftex.def Info: serial/serial-glsa-1.pdf used on input line 476.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [13]
+File: sound.png Graphic file (type png)
+ <use sound.png>
+Package pdftex.def Info: sound.png used on input line 509.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ [14 <./serial/serial-glsa-1.pdf>]
+Overfull \hbox (167.65108pt too wide) in paragraph at lines 547--547
+[]\T1/aett/bx/n/14.4 Gls(model = log(fbf) ~ race * log(dose + 1), data = d, cor
+relation = corCAR1(form = ~time |[] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.15.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.560 \setlongtables\begin{longtable}{lrrrr}
+                                            \hline [15]
+<serial/serial-glsc-1.pdf, id=6128, 433.62pt x 289.08pt>
+File: serial/serial-glsc-1.pdf Graphic file (type pdf)
+
+<use serial/serial-glsc-1.pdf>
+Package pdftex.def Info: serial/serial-glsc-1.pdf used on input line 607.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+ [16 <./serial/serial-glsc-1.pdf>]
+File: sound.png Graphic file (type png)
+
+<use sound.png>
+Package pdftex.def Info: sound.png used on input line 629.
+(pdftex.def)             Requested size: 12.80365pt x 12.80342pt.
+ <serial/serial-glsd-1.pdf, id=6148, 433.62pt x 271.0125pt>
+File: serial/serial-glsd-1.pdf Graphic file (type pdf)
+
+<use serial/serial-glsd-1.pdf>
+Package pdftex.def Info: serial/serial-glsd-1.pdf used on input line 650.
+(pdftex.def)             Requested size: 433.61894pt x 271.01183pt.
+ [17 <./serial/serial-glsd-1.pdf>]
+<serial/serial-glse-1.pdf, id=6180, 289.08pt x 216.81pt>
+File: serial/serial-glse-1.pdf Graphic file (type pdf)
+
+<use serial/serial-glse-1.pdf>
+Package pdftex.def Info: serial/serial-glse-1.pdf used on input line 670.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+) (./obsvar/slide.tex [18 <./serial/serial-glse-1.pdf>]
+Chapter 16.
+[1
+
+] [2] [3]
+Overfull \hbox (11.75732pt too wide) in paragraph at lines 183--191
+\T1/aess/m/n/14.4 gen-eral pur-pose soft-ware for this in R. Its web page is []
+[]$\T1/aett/bx/n/14.4 http : / / biostat . mc . vanderbilt .
+ []
+
+[4] [5] [6]
+Overfull \hbox (10.22102pt too wide) in paragraph at lines 325--326
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[7] [8
+
+] [9
+
+] [10] [11] [12
+
+]) (./propensity.tex [13
+
+]
+Chapter 17.
+[1
+
+] [2] [3
+
+] [4] [5
+
+] [6] [7
+
+] [8
+
+] [9
+
+]) (./info/slide.tex [10
+
+]
+Chapter 18.
+
+Underfull \hbox (badness 8019) in paragraph at lines 5--5
+[][]\T1/aess/m/n/10 Alice Dreger, \T1/aess/m/sl/10 Galileo's
+ []
+
+[1
+
+] [2
+
+] [3] [4
+
+] [5]
+File: movie.png Graphic file (type png)
+ <use movie.png>
+Package pdftex.def Info: movie.png used on input line 148.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+ [6
+
+]
+<info/info-pneuwho-1.pdf, id=6558, 361.35pt x 271.0125pt>
+File: info/info-pneuwho-1.pdf Graphic file (type pdf)
+
+<use info/info-pneuwho-1.pdf>
+Package pdftex.def Info: info/info-pneuwho-1.pdf used on input line 201.
+(pdftex.def)             Requested size: 361.34912pt x 271.01183pt.
+ [7 <./info/info-pneuwho-1.pdf>]
+<info/info-thresholds-1.pdf, id=6602, 578.16pt x 216.81pt>
+File: info/info-thresholds-1.pdf Graphic file (type pdf)
+
+<use info/info-thresholds-1.pdf>
+Package pdftex.def Info: info/info-thresholds-1.pdf used on input line 217.
+(pdftex.def)             Requested size: 578.15858pt x 216.80946pt.
+ [8
+
+ <./info/info-thresholds-1.pdf>]
+<info/wai06fin.png, id=6618, 522.95375pt x 552.0625pt>
+File: info/wai06fin.png Graphic file (type png)
+ <use info/wai06fin.png>
+Package pdftex.def Info: info/wai06fin.png used on input line 255.
+(pdftex.def)             Requested size: 273.84464pt x 289.07999pt.
+
+[9 <./info/wai06fin.png (PNG copy)>]
+<info/fig2c.png, id=6628, 641.39626pt x 657.45625pt>
+File: info/fig2c.png Graphic file (type png)
+ <use info/fig2c.png>
+Package pdftex.def Info: info/fig2c.png used on input line 268.
+(pdftex.def)             Requested size: 354.12144pt x 362.9965pt.
+
+[10 <./info/fig2c.png>] <info/roy06dicb.png, id=6637, 582.175pt x 392.46625pt>
+File: info/roy06dicb.png Graphic file (type png)
+
+<use info/roy06dicb.png>
+Package pdftex.def Info: info/roy06dicb.png used on input line 287.
+(pdftex.def)             Requested size: 354.12144pt x 238.73334pt.
+ [11 <./info/roy06dicb.png (PNG copy)>] [12]
+<info/dichotomaniaFig3.png, id=6703, 521.95pt x 401.5pt>
+File: info/dichotomaniaFig3.png Graphic file (type png)
+
+<use info/dichotomaniaFig3.png>
+Package pdftex.def Info: info/dichotomaniaFig3.png used on input line 388.
+(pdftex.def)             Requested size: 312.39987pt x 240.30193pt.
+ [13 <./info/dichotomaniaFig3.png (PNG copy)>]
+<info/fed09conFig1.png, id=6711, 1048.91875pt x 718.685pt>
+File: info/fed09conFig1.png Graphic file (type png)
+
+<use info/fed09conFig1.png>
+Package pdftex.def Info: info/fed09conFig1.png used on input line 413.
+(pdftex.def)             Requested size: 505.89pt x 346.62077pt.
+File: movie.png Graphic file (type png)
+ <use movie.png>
+Package pdftex.def Info: movie.png used on input line 418.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+ [14 <./info/fed09conFig1.png>]
+<info/mdDec.pdf, id=6722, 237.88875pt x 217.81375pt>
+File: info/mdDec.pdf Graphic file (type pdf)
+ <use info/mdDec.pdf>
+Package pdftex.def Info: info/mdDec.pdf used on input line 450.
+(pdftex.def)             Requested size: 299.93015pt x 274.6218pt.
+
+[15] <info/mdDecm.pdf, id=6727, 232.87pt x 202.7575pt>
+File: info/mdDecm.pdf Graphic file (type pdf)
+ <use info/mdDecm.pdf>
+Package pdftex.def Info: info/mdDecm.pdf used on input line 455.
+(pdftex.def)             Requested size: 315.41624pt x 274.6218pt.
+
+[16 <./info/mdDec.pdf> <./info/mdDecm.pdf>]
+File: movie.png Graphic file (type png)
+ <use movie.png>
+Package pdftex.def Info: movie.png used on input line 458.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+ [17
+
+] [18] [19
+
+]
+<info/info-psa-1.pdf, id=6798, 325.215pt x 252.945pt>
+File: info/info-psa-1.pdf Graphic file (type pdf)
+
+<use info/info-psa-1.pdf>
+Package pdftex.def Info: info/info-psa-1.pdf used on input line 584.
+(pdftex.def)             Requested size: 325.2142pt x 252.94438pt.
+ [20 <./info/info-psa-1.pdf>] [21]
+<info/info-spectrum-1.pdf, id=6900, 415.5525pt x 433.62pt>
+File: info/info-spectrum-1.pdf Graphic file (type pdf)
+
+<use info/info-spectrum-1.pdf>
+Package pdftex.def Info: info/info-spectrum-1.pdf used on input line 739.
+(pdftex.def)             Requested size: 415.55148pt x 433.61894pt.
+ [22] [23 <./info/info-spectrum-1.pdf>]
+<info/pvcDeadlyMedicine.png, id=6959, 1144.275pt x 478.78876pt>
+File: info/pvcDeadlyMedicine.png Graphic file (type png)
+
+<use info/pvcDeadlyMedicine.png>
+Package pdftex.def Info: info/pvcDeadlyMedicine.png used on input line 753.
+(pdftex.def)             Requested size: 505.89206pt x 137.31097pt.
+
+<info/mul83risFig2.jpg, id=6961, 481.8pt x 622.325pt>
+File: info/mul83risFig2.jpg Graphic file (type jpg)
+
+<use info/mul83risFig2.jpg>
+Package pdftex.def Info: info/mul83risFig2.jpg used on input line 762.
+(pdftex.def)             Requested size: 265.77008pt x 343.28249pt.
+ [24
+
+
+ <./info/pvcDeadlyMedicine.png (PNG copy)>]
+<info/mul83risFig3b.jpg, id=6971, 448.67625pt x 441.65pt>
+File: info/mul83risFig3b.jpg Graphic file (type jpg)
+
+<use info/mul83risFig3b.jpg>
+Package pdftex.def Info: info/mul83risFig3b.jpg used on input line 775.
+(pdftex.def)             Requested size: 348.76112pt x 343.28249pt.
+ [25 <./info/mul83risFig2.jpg>]
+<info/mul83risFig1.jpg, id=6978, 449.68pt x 448.67625pt>
+File: info/mul83risFig1.jpg Graphic file (type jpg)
+
+<use info/mul83risFig1.jpg>
+Package pdftex.def Info: info/mul83risFig1.jpg used on input line 789.
+(pdftex.def)             Requested size: 303.53708pt x 302.87079pt.
+ [26 <./info/mul83risFig3b.jpg>] [27 <./info/mul83risFig1.jpg>] <info/deadlyMed
+icine.jpg, id=6992, 548.0475pt x 722.7pt>
+File: info/deadlyMedicine.jpg Graphic file (type jpg)
+
+<use info/deadlyMedicine.jpg>
+Package pdftex.def Info: info/deadlyMedicine.jpg used on input line 808.
+(pdftex.def)             Requested size: 156.19516pt x 205.97159pt.
+ [28 <./info/deadlyMedicine.jpg>]
+Overfull \hbox (8.62163pt too wide) in paragraph at lines 819--819
+\T1/aess/bx/n/24.88 Clin-i-cal Out-come: Sta-tis-ti-cal and Eth-i-cal Con-
+ []
+
+[29
+
+] <info/score1.png, id=7007, 705.63625pt x 678.535pt>
+File: info/score1.png Graphic file (type png)
+ <use info/score1.png>
+Package pdftex.def Info: info/score1.png used on input line 839.
+(pdftex.def)             Requested size: 354.12144pt x 340.51945pt.
+
+<info/score2.png, id=7008, 675.52374pt x 516.93124pt>
+File: info/score2.png Graphic file (type png)
+ <use info/score2.png>
+Package pdftex.def Info: info/score2.png used on input line 840.
+(pdftex.def)             Requested size: 354.12144pt x 270.99069pt.
+
+<info/bes76devFig1.png, id=7009, 478.15pt x 632.73123pt>
+File: info/bes76devFig1.png Graphic file (type png)
+
+<use info/bes76devFig1.png>
+Package pdftex.def Info: info/bes76devFig1.png used on input line 846.
+(pdftex.def)             Requested size: 354.12144pt x 468.61926pt.
+ [30
+
+ <./info/score1.png (PNG copy)> <./info/score2.png (PNG copy)>] [31 <./info/bes
+76devFig1.png (PNG copy)>]
+<info/info-cutpointExists-1.pdf, id=7019, 361.35pt x 289.08pt>
+File: info/info-cutpointExists-1.pdf Graphic file (type pdf)
+
+<use info/info-cutpointExists-1.pdf>
+Package pdftex.def Info: info/info-cutpointExists-1.pdf used on input line 893.
+
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+ [32 <./info/info-cutpointExists-1.pdf>]
+<info/info-devlogist-1.pdf, id=7057, 289.08pt x 216.81pt>
+File: info/info-devlogist-1.pdf Graphic file (type pdf)
+
+<use info/info-devlogist-1.pdf>
+Package pdftex.def Info: info/info-devlogist-1.pdf used on input line 918.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [33 <./info/info-devlogist-1.pdf>] [34]
+[35
+
+]
+\openout2 = `info/abstract.aux'.
+
+
+No file info/abstract.tex.
+) (./dx/slide.tex
+Chapter 19.
+File: movie.png Graphic file (type png)
+<use movie.png>
+Package pdftex.def Info: movie.png used on input line 5.
+(pdftex.def)             Requested size: 17.07182pt x 17.07155pt.
+ [1
+
+
+
+] [2]
+Underfull \hbox (badness 3460) in paragraph at lines 79--79
+[]\T1/aess/m/n/10 A def-i-nite be-nign find-ing; rou-tine
+ []
+
+[3
+
+]
+Underfull \hbox (badness 1867) in paragraph at lines 116--116
+[][][][]\T1/aess/m/n/8 Vickers, Basch, and Kat-tan
+ []
+
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 162--173
+
+ []
+
+[7
+
+]
+Overfull \hbox (6.88223pt too wide) in paragraph at lines 184--184
+[]|[]\T1/aess/bx/n/24.88 Optimum In-di-vid-ual De-ci-sion Mak-ing and For-
+ []
+
+[8
+
+] <dx/cad-nomo.pdf, id=7145, 314.17375pt x 300.12125pt>
+File: dx/cad-nomo.pdf Graphic file (type pdf)
+
+<use dx/cad-nomo.pdf>
+Package pdftex.def Info: dx/cad-nomo.pdf used on input line 234.
+(pdftex.def)             Requested size: 404.71353pt x 386.63138pt.
+ <dx/abm-nomo.pdf, id=7148, 505.89pt x 469.755pt>
+File: dx/abm-nomo.pdf Graphic file (type pdf)
+
+<use dx/abm-nomo.pdf>
+Package pdftex.def Info: dx/abm-nomo.pdf used on input line 244.
+(pdftex.def)             Requested size: 455.2979pt x 422.78276pt.
+
+<dx/bra91usiNomogram.png, id=7151, 411.5375pt x 364.36125pt>
+File: dx/bra91usiNomogram.png Graphic file (type png)
+
+<use dx/bra91usiNomogram.png>
+Package pdftex.def Info: dx/bra91usiNomogram.png used on input line 254.
+(pdftex.def)             Requested size: 404.71353pt x 358.32251pt.
+ [9
+
+] [10 <./dx/cad-nomo.pdf>] [11 <./dx/abm-nomo.pdf>] [12 <./dx/bra91usiNomogram.
+png (PNG copy)>] [13
+
+
+]
+Overfull \hbox (10.06491pt too wide) in paragraph at lines 292--294
+[]\T1/aess/m/n/14.4 In-sample suf-fi-cient statis-tics: pre$\OT1/lmr/m/n/14.4 (
+\OML/lmm/m/it/14.4 X[]\OT1/lmr/m/n/14.4 )$\T1/aess/m/n/14.4 , ..., pre$\OT1/lmr
+/m/n/14.4 (\OML/lmm/m/it/14.4 X[]\OT1/lmr/m/n/14.4 )$\T1/aess/m/n/14.4 , post$\
+OT1/lmr/m/n/14.4 (\OML/lmm/m/it/14.4 X[]; T[]\OT1/lmr/m/n/14.4 )$\T1/aess/m/n/1
+4.4 , ..., post$\OT1/lmr/m/n/14.4 (\OML/lmm/m/it/14.4 X[]; T[]\OT1/lmr/m/n/14.4
+ )$ 
+ []
+
+<dx/hla09criFig3.png, id=7198, 667.49374pt x 516.93124pt>
+File: dx/hla09criFig3.png Graphic file (type png)
+
+<use dx/hla09criFig3.png>
+Package pdftex.def Info: dx/hla09criFig3.png used on input line 297.
+(pdftex.def)             Requested size: 404.71353pt x 313.43454pt.
+
+<dx/ordinal-calibrate-1.pdf, id=7201, 289.08pt x 216.81pt>
+File: dx/ordinal-calibrate-1.pdf Graphic file (type pdf)
+
+<use dx/ordinal-calibrate-1.pdf>
+Package pdftex.def Info: dx/ordinal-calibrate-1.pdf used on input line 303.
+(pdftex.def)             Requested size: 404.71353pt x 303.55177pt.
+ [14
+
+ <./dx/hla09criFig3.png (PNG copy)>]
+[15 <./dx/ordinal-calibrate-1.pdf>] [16
+
+]
+<dx/dx-du-1.pdf, id=7224, 433.62pt x 325.215pt>
+File: dx/dx-du-1.pdf Graphic file (type pdf)
+ <use dx/dx-du-1.pdf>
+Package pdftex.def Info: dx/dx-du-1.pdf used on input line 355.
+(pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
+ [17
+
+ <./dx/dx-du-1.pdf>] <dx/dx-du-acath-1.pdf, id=7256, 325.215pt x 325.215pt>
+File: dx/dx-du-acath-1.pdf Graphic file (type pdf)
+
+<use dx/dx-du-acath-1.pdf>
+Package pdftex.def Info: dx/dx-du-acath-1.pdf used on input line 376.
+(pdftex.def)             Requested size: 325.2142pt x 325.2142pt.
+ [18
+
+ <./dx/dx-du-acath-1.pdf>]) (./hdata/slide.tex
+[19
+
+]
+Chapter 20.
+[1
+
+] [2
+
+] <hdata/deadsalmon.png, id=7293, 661.47125pt x 731.73375pt>
+File: hdata/deadsalmon.png Graphic file (type png)
+
+<use hdata/deadsalmon.png>
+Package pdftex.def Info: hdata/deadsalmon.png used on input line 59.
+(pdftex.def)             Requested size: 446.26305pt x 493.6645pt.
+ [3] [4 <./hdata/deadsalmon.png>] [5
+
+] [6] [7]
+[8] [9] [10
+
+] [11] <hdata/hdata-simor-plot-1.pdf, id=7425, 505.89pt x 505.89pt>
+File: hdata/hdata-simor-plot-1.pdf Graphic file (type pdf)
+
+<use hdata/hdata-simor-plot-1.pdf>
+Package pdftex.def Info: hdata/hdata-simor-plot-1.pdf used on input line 280.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<hdata/hdata-simor-plotb-1.pdf, id=7426, 505.89pt x 505.89pt>
+File: hdata/hdata-simor-plotb-1.pdf Graphic file (type pdf)
+
+<use hdata/hdata-simor-plotb-1.pdf>
+Package pdftex.def Info: hdata/hdata-simor-plotb-1.pdf used on input line 290.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [12 <./hdata/hdata-simor-plot-1.pdf>]
+[13 <./hdata/hdata-simor-plotb-1.pdf>]
+<hdata/hdata-simor-mmoe-1.pdf, id=7458, 397.485pt x 397.485pt>
+File: hdata/hdata-simor-mmoe-1.pdf Graphic file (type pdf)
+
+<use hdata/hdata-simor-mmoe-1.pdf>
+Package pdftex.def Info: hdata/hdata-simor-mmoe-1.pdf used on input line 313.
+(pdftex.def)             Requested size: 397.48402pt x 397.48402pt.
+
+<hdata/hdata-simor-rho-1.pdf, id=7459, 397.485pt x 397.485pt>
+File: hdata/hdata-simor-rho-1.pdf Graphic file (type pdf)
+
+<use hdata/hdata-simor-rho-1.pdf>
+Package pdftex.def Info: hdata/hdata-simor-rho-1.pdf used on input line 333.
+(pdftex.def)             Requested size: 397.48402pt x 397.48402pt.
+ [14 <./hdata/hdata-simor-mmoe-1.pdf>]
+[15 <./hdata/hdata-simor-rho-1.pdf>] [16]
+<hdata/hdata-simbd-1.pdf, id=7547, 289.08pt x 216.81pt>
+File: hdata/hdata-simbd-1.pdf Graphic file (type pdf)
+
+<use hdata/hdata-simbd-1.pdf>
+Package pdftex.def Info: hdata/hdata-simbd-1.pdf used on input line 459.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ [17 <./hdata/hdata-simbd-1.pdf>] [18])
+(./repro/slide.tex [19]
+Chapter 21.
+[1
+
+] [2
+
+] [3
+
+] <repro/nytimes.png, id=7671, 1413.28pt x 770.88pt> [4]
+File: repro/nytimes.png Graphic file (type png)
+
+<use repro/nytimes.png>
+Package pdftex.def Info: repro/nytimes.png used on input line 95.
+(pdftex.def)             Requested size: 505.89pt x 275.9404pt.
+ [5 <./repro/nytimes.png (PNG copy)>]
+<repro/pla64str.png, id=7686, 862.13pt x 415.18378pt>
+File: repro/pla64str.png Graphic file (type png)
+ <use repro/pla64str.png>
+Package pdftex.def Info: repro/pla64str.png used on input line 104.
+(pdftex.def)             Requested size: 505.89pt x 243.62592pt.
+
+[6
+
+ <./repro/pla64str.png (PNG copy)>] [7
+
+] [8
+
+] [9
+
+]
+<repro/excel.png, id=7713, 880.891pt x 697.004pt>
+File: repro/excel.png Graphic file (type png)
+ <use repro/excel.png>
+Package pdftex.def Info: repro/excel.png used on input line 218.
+(pdftex.def)             Requested size: 303.53708pt x 240.16885pt.
+
+[10] [11 <./repro/excel.png>] [12] [13]) [14
+
+] [1
+
+
+] [2] [3]
+Overfull \hbox (23.94763pt too wide) in paragraph at lines 359--359
+[]\T1/aess/m/n/8 high risk pa-tients can dom-i-nate clin-i-cal tri-als re-sults
+;high risk pa-tients may be im-bal-anced even if over-all study is bal-anced;ma
+gnesium;differential
+ []
+
+[4] [5] [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
+ [8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
- (./bbr.aux)
+ (./bbr.aux (./info/abstract.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
 Package rerunfilecheck Info: File `bbr.out' has not changed.
-(rerunfilecheck)             Checksum: 821D337879F9DB6F5F414A06C6529662;1694.
+(rerunfilecheck)             Checksum: 52F2734095A504E1E81F086FC9EC2771;12786.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'bbr.run.xml'.
 \openout1 = `bbr.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17877 strings out of 493089
- 282549 string characters out of 6134842
- 840317 words of memory out of 5000000
- 20431 multiletter control sequences out of 15000+600000
- 103552 words of font info for 168 fonts, out of 8000000 for 9000
+ 23488 strings out of 493089
+ 374912 string characters out of 6134842
+ 1019191 words of memory out of 5000000
+ 22240 multiletter control sequences out of 15000+600000
+ 156905 words of font info for 233 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,95p,1128b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,95p,3831b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
-15/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2015/texmf-dist/f
-onts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/d
+cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/d
 vips/lm/lm-mathex.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmitt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+sfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsltt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmss17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -1414,26 +3906,31 @@ i9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi9
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on bbr.pdf (67 pages, 1340966 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/lm/lmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi
+7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/lm/lmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
+lmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/lm/lmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
+sy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on bbr.pdf (462 pages, 5572982 bytes).
 PDF statistics:
- 1439 PDF objects out of 1440 (max. 8388607)
- 1263 compressed objects within 13 object streams
- 508 named destinations out of 1000 (max. 500000)
- 359 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8970 PDF objects out of 10688 (max. 8388607)
+ 8126 compressed objects within 82 object streams
+ 4114 named destinations out of 4296 (max. 500000)
+ 2026 words of extra memory for PDF output out of 10000 (max. 10000000)
 

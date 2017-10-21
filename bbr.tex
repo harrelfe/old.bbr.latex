@@ -108,7 +108,7 @@
 \vspace*{\stretch{1}}
 \noindent\rule{\linewidth}{1mm}
 
-\def\originalBBR{0}  % originalBBR=1 if the original BBR; set to 0 otherwise
+\def\originalBBR{1}  % originalBBR=1 if the original BBR; set to 0 otherwise
 \ifnum\originalBBR=1
 
 \begin{flushright}
@@ -120,7 +120,7 @@
 Department of Biostatistics \\
 Vanderbilt University School of Medicine \\
 \texttt{f.harrell@vanderbilt.edu} \\ \texttt{james.c.slaughter@vanderbilt.edu}
-\\[2ex] \url{biostat.mc.vanderbilt.edu/ClinStat}\\
+\\[2ex] \href{http://biostat.mc.vanderbilt.edu/wiki/Main/ClinStat}{biostat.mc.vanderbilt.edu/ClinStat}\\
 Questions/discussions:\\Slack channel \texttt{bbr} in 
 \href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
 Blog: \href{http://fharrell.com}{fharrell.com}
@@ -280,7 +280,7 @@ to the playlist for all audio files in these notes.
 Rotated boxed blue text in the right margin at the start of a section
 represents \disc{howto}
 the mnemonic key for linking to discussions about that section in
-\url{vbiostatcourse.slack.com} channel \verb|#bbr|.  Anyone starting a
+\href{https://vbiostatcourse.slack.com}{vbiostatcourse.slack.com} channel \verb|#bbr|.  Anyone starting a
 new discussion about a topic related to the section should include the
 mnemonic somewhere in the posting,
 and the posting should be marked to \co{slack} as threaded.  The
@@ -309,7 +309,7 @@ that further discusses the topic.
 \Large
 %\huge
 
-\def\basicStat{1}     % basicStat = 1 if only include basic statistics; set to 0 otherwise
+\def\basicStat{0}     % basicStat = 1 if only include basic statistics; set to 0 otherwise
 \ifnum\basicStat=1
 \input{R/slide}
 \input{algebra}

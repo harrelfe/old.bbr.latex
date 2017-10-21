@@ -109,7 +109,7 @@ segments(x, 0, x, y)
 @ 
 The \co{getHdata} function in the \co{Hmisc} package~\cite{Hmisc}
 finds, downloads, and \co{load()}s datasets from
-\url{biostat.mc.vanderbilt.edu/DataSets}.
+\href{http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets}{biostat.mc.vanderbilt.edu/DataSets}.
 <<ordc,cap='Distribution of serum creatinine where the patient requiring dialysis is taken to have the worst renal function.  The variable is mostly continuous but is best analyzed as ordinal so that no assumption is made about how to score dialysis except for being worse than all non-dialysis patients. Data taken from NHANES where no patients were actually dialyzed.',scap='Continuous distribution with clumping at the end'>>=
 require(Hmisc)
 getHdata(nhgh)   # NHANES dataset    Fig. (*\ref{fig:descript-ordc}*):

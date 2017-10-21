@@ -82,16 +82,626 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Distributions}{4-18}{subsubsection*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Relationships}{4-19}{subsubsection*.25}
+\contentsline {subsubsection}{Relationships}{4-20}{subsubsection*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}Graphs for Summarizing Results of Studies}{4-20}{subsection.4.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Graphs for Describing Statistical Model Fits}{4-23}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.5}Graphs for Describing Statistical Model Fits}{4-24}{subsection.4.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Graphing Effect of Two Continuous Variables on $Y$}{4-28}{subsubsection*.30}
+\contentsline {subsubsection}{Graphing Effect of Two Continuous Variables on $Y$}{4-27}{subsubsection*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Tables}{4-30}{section.4.4}
+\contentsline {section}{\numberline {4.4}Tables}{4-31}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Bar Plots with Error Bars}{4-32}{section.4.5}
+\contentsline {section}{\numberline {4.5}Bar Plots with Error Bars}{4-33}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{5-1}{figure.caption.36}
+\contentsline {chapter}{\numberline {5}Hypothesis Testing}{5-1}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Overview}{5-1}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Hypotheses}{5-3}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Scientific Hypotheses and Questions}{5-3}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Statistical Hypotheses}{5-3}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Branches of Statistics}{5-5}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Errors in Hypothesis Testing; $P$ Values}{5-9}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Misinterpretation of $P$-values}{5-10}{subsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}One Sample Test for Mean}{5-13}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.1}Test}{5-13}{subsection.5.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.2}Power and Sample Size}{5-15}{subsection.5.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.3}Confidence Interval}{5-17}{subsection.5.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.4}Sample Size for a Given Precision}{5-18}{subsection.5.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}One Sample Method for a Probability}{5-20}{section.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.1}Test}{5-20}{subsection.5.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.2}Power and Sample Size}{5-21}{subsection.5.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.3}Sample Size for Given Precision}{5-21}{subsection.5.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Paired Data and One-Sample Tests}{5-23}{section.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.8}Two Sample Test for Means}{5-24}{section.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.1}Test}{5-24}{subsection.5.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.2}Power and Sample Size}{5-26}{subsection.5.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.3}Confidence Interval}{5-28}{subsection.5.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.4}Sample Size for a Given Precision}{5-28}{subsection.5.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.5}Equating Margin of Error to Detectable Difference}{5-29}{subsection.5.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.6}Checking Assumptions of the $t$-test}{5-29}{subsection.5.8.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.9}The Problem with Hypothesis Tests and $P$-values}{5-30}{section.5.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.1}Hypothesis Testing}{5-30}{subsection.5.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.2}$P$-Values}{5-30}{subsection.5.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.3}How Not to Present Results}{5-31}{subsection.5.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.4}How to Present Results}{5-31}{subsection.5.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.10}Study Design Considerations}{5-32}{section.5.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.1}Sizing a Pilot Study}{5-32}{subsection.5.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.2}Problems with Standardized Effect Sizes}{5-33}{subsection.5.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.3}Choice of Effect Size}{5-34}{subsection.5.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.4}Multiple Estimands and Hypotheses}{5-34}{subsection.5.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.11}Comprehensive Example: Two sample $t$-test}{5-36}{section.5.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.11.1}Study Description}{5-36}{subsection.5.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.11.2}Power and Sample Size}{5-36}{subsection.5.11.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.11.3}Collected Data}{5-37}{subsection.5.11.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.11.4}Statistical Test}{5-37}{subsection.5.11.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.12}Comprehensive Example: Paired $t$-test}{5-39}{section.5.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.12.1}Study Description}{5-39}{subsection.5.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.12.2}Power and Sample Size}{5-39}{subsection.5.12.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.12.3}Collected Data}{5-40}{subsection.5.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.12.4}Statistical Test}{5-41}{subsection.5.12.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.13}Comprehensive Example: Crossover design and analysis}{5-42}{section.5.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.13.1}Study Description}{5-42}{subsection.5.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.13.2}Power and Sample Size}{5-43}{subsection.5.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.13.3}Collected Data}{5-44}{subsection.5.13.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.13.4}Statistical Tests}{5-44}{subsection.5.13.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.13.5}Carryover Effects}{5-45}{subsection.5.13.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Comparing Two Proportions}{6-1}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Overview}{6-1}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Normal-Theory Test}{6-2}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}$\chi ^2$ Test}{6-4}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Fisher's Exact Test}{6-6}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Sample Size and Power for Comparing Two Independent Samples}{6-7}{section.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.6}Confidence Interval}{6-9}{section.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.7}Sample Size for a Given Precision}{6-10}{section.6.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.8}Relative Effect Measures}{6-12}{section.6.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.9}Comprehensive example}{6-14}{section.6.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.9.1}Study Description}{6-14}{subsection.6.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.9.2}Power and Sample Size}{6-14}{subsection.6.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.9.3}Collected Data}{6-15}{subsection.6.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.9.4}Statistical Test}{6-15}{subsection.6.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Fisher's Exact Test}{6-17}{subsubsection*.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Nonparametric Statistical Tests}{7-1}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}When to use non-parametric methods}{7-1}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}One Sample Test: Wilcoxon Signed-Rank}{7-4}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}One sample/Paired Test Example}{7-5}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Two Sample Test: Wilcoxon--Mann--Whitney}{7-9}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Two sample WMW example}{7-10}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Point and Interval Estimates for Wilcoxon Two-Sample Comparison}{7-13}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Confidence Intervals for Medians and Their Differences}{7-15}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Strategy}{7-17}{section.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.6}Generalizations}{7-18}{section.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Correlation}{8-1}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Overview}{8-1}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Pearson's correlation coefficient}{8-2}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Spearman's Rank Correlation}{8-4}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Correlation Examples}{8-5}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.5}Correlation and Agreement}{8-9}{section.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.1}Bland-Altman Plots}{8-10}{subsection.8.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.2}Using $r$ to Compute Sample Size}{8-13}{subsection.8.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.3}Comparing Two $r$'s}{8-13}{subsection.8.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Introduction to the {\normalfont \textsf {R}}{}\ \texttt {\smaller rms} Package: The Linear Model}{9-1}{chapter.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Formula Language and Fitting Function}{9-2}{section.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Operating on the Fit Object}{9-3}{section.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}The \texttt {\smaller rms} \texttt {\smaller datadist} Function}{9-4}{section.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.4}Short Example}{9-5}{section.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.5}Operating on Residuals}{9-9}{section.9.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.6}Plotting Partial Effects}{9-10}{section.9.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.7}Nomograms: Overall Depiction of Fitted Models}{9-16}{section.9.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7.1}Point Estimates for Partial Effects}{9-16}{subsection.9.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.8}Getting Predicted Values}{9-19}{section.9.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.9}ANOVA}{9-21}{section.9.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Simple and Multiple Regression Models}{10-1}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.1}Stratification vs.\ Matching vs.\ Regression}{10-3}{section.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.2}Purposes of Statistical Models}{10-5}{section.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.3}Advantages of Modeling}{10-6}{section.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.4}Nonparametric Regression}{10-7}{section.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.5}Simple Linear Regression}{10-9}{section.10.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.1}Notation}{10-9}{subsection.10.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.2}Two Ways of Stating the Model}{10-11}{subsection.10.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.3}Assumptions, If Inference Needed}{10-11}{subsection.10.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.4}How Can $\alpha $ and $\beta $ be Estimated?}{10-11}{subsection.10.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.5}Inference about Parameters}{10-12}{subsection.10.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.6}Estimating $\sigma $, S.E.\ of $\mathaccent "705E\relax {\beta }$; $t$-test}{10-13}{subsection.10.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.7}Interval Estimation}{10-14}{subsection.10.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.8}Assessing Goodness of Fit}{10-17}{subsection.10.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5.9}Summary: Useful Equations for Linear Regression}{10-19}{subsection.10.5.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.6}Proper Transformations and Percentiling}{10-23}{section.10.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.7}Multiple Linear Regression}{10-28}{section.10.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.1}The Model and How Parameters are Estimated}{10-28}{subsection.10.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.2}Interpretation of Parameters}{10-29}{subsection.10.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.3}Example: Estimation of Body Surface Area}{10-30}{subsection.10.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.4}What are Degrees of Freedom}{10-33}{subsection.10.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.5}Hypothesis Testing}{10-34}{subsection.10.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Testing Total Association (Global Null Hypotheses)}{10-34}{subsubsection*.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Testing Partial Effects}{10-35}{subsubsection*.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.7.6}Assessing Goodness of Fit}{10-36}{subsection.10.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.8}Multiple Regression with a Binary Predictor}{10-39}{section.10.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.8.1}Indicator Variable for Two-Level Categorical Predictors}{10-39}{subsection.10.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.8.2}Two-Sample $t$-test vs.\ Simple Linear Regression}{10-39}{subsection.10.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.8.3}Analysis of Covariance}{10-40}{subsection.10.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.9}The Correlation Coefficient Revisited}{10-41}{section.10.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.10}Using Regression for ANOVA}{10-43}{section.10.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.1}Indicator Variables}{10-43}{subsection.10.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.2}Obtaining ANOVA with Multiple Regression}{10-46}{subsection.10.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.3}One-Way Analysis of Covariance}{10-46}{subsection.10.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.4}Continuous Analysis of Lead Exposure}{10-48}{subsection.10.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.5}Two-Way ANOVA}{10-48}{subsection.10.10.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.6}Two-way ANOVA and Interaction}{10-49}{subsection.10.10.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Heterogeneity of Treatment Effect}{10-50}{subsubsection*.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.10.7}Interaction Between Categorical and Continuous Variables}{10-51}{subsection.10.10.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.11}Internal vs.\ External Model Validation}{10-53}{section.10.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Multiple Groups}{11-1}{chapter.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}Examples}{11-1}{section.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.2}The $k$-Sample Problem}{11-2}{section.11.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.3}Parametric ANOVA}{11-3}{section.11.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3.1}Model}{11-3}{subsection.11.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3.2}Hypothesis test}{11-4}{subsection.11.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3.3}Motivating Example}{11-5}{subsection.11.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3.4}Connection to Linear Regression}{11-8}{subsection.11.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.4}Why All These Distributions?}{11-9}{section.11.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.5}Software and Data Layout}{11-11}{section.11.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.6}Comparing Specific Groups}{11-12}{section.11.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.7}Non-Parametric ANOVA: Kruskal-Wallis Test}{11-13}{section.11.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.8}Two-Way ANOVA}{11-15}{section.11.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.9}Analysis of Covariance}{11-17}{section.11.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.10}Multiple Comparisons}{11-18}{section.11.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {12}Statistical Inference Review}{12-1}{chapter.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.1}Types of Analyses}{12-2}{section.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.2}Covariable-Unadjusted Analyses}{12-3}{section.12.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2.1}Analyzing Paired Responses}{12-3}{subsection.12.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2.2}Comparing Two Groups}{12-4}{subsection.12.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2.3}Comparing $>2$ Groups}{12-4}{subsection.12.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2.4}Correlating Two Continuous Variables}{12-4}{subsection.12.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.3}Covariable-Adjusted Analyses}{12-5}{section.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Analysis of Covariance in Randomized Studies}{13-1}{chapter.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.1}Covariable Adjustment in Linear Models}{13-2}{section.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.2}Covariable Adjustment in Nonlinear Models}{13-3}{section.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2.1}Hidden Assumptions in $2 \times 2$ Tables}{13-3}{subsection.13.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2.2}Models for Binary Response}{13-3}{subsection.13.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Example from GUSTO--I}{13-4}{subsubsection*.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Unadjusted / Adj.\ Logistic Estimates}{13-4}{subsubsection*.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Simple Logistic Example -- Gail 1986}{13-5}{subsubsection*.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2.3}Nonlinear Models, General}{13-6}{subsection.13.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.3}Cox / Log--Rank Test for Time to Event}{13-7}{section.13.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.3.1}Sample Size Calculation Issues}{13-8}{subsection.13.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.4}Why are Adjusted Estimates Right?}{13-9}{section.13.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.5}How Many Covariables to Use?}{13-10}{section.13.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.6}Differential and Absolute Treatment Effects}{13-11}{section.13.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.6.1}Modeling Differential Treatment Effect}{13-11}{subsection.13.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Problems With Subgroup Analysis}{13-11}{subsubsection*.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Specifying Interactions}{13-12}{subsubsection*.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Strategy for Analyzing Differential Treatment Effect}{13-13}{subsubsection*.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Absolute vs.\ Relative Treatment Effects Revisited}{13-22}{subsubsection*.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.6.2}Estimating Absolute Treatment Effects}{13-23}{subsection.13.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Absolute Treatment Effects for GUSTO--I}{13-25}{subsubsection*.86}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Absolute Benefit on Survival Prob.}{13-28}{subsubsection*.89}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.7}Cost--Effectiveness Ratios}{13-31}{section.13.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.8}Treatment Contrasts for Multi--Site Randomized Trials}{13-33}{section.13.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.9}Statistical Plan for Randomized Trials}{13-34}{section.13.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.9.1}Sites vs.\ Covariables}{13-36}{subsection.13.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.9.2}Covariable Adjustment vs.\ Allocation Based on Covariates}{13-36}{subsection.13.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.10}Summary}{13-37}{section.13.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.11}Notes}{13-38}{section.13.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {14}Transformations, Measuring Change, and Regression to the Mean}{14-1}{chapter.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.1}Transformations}{14-1}{section.14.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.2}Logarithmic Transformation}{14-2}{section.14.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2.1}Example Dataset}{14-2}{subsection.14.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2.2}Limitations of log transformations}{14-5}{subsection.14.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.3}Analysis of Paired Observations}{14-6}{section.14.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.4}What's Wrong with Change in General?}{14-7}{section.14.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.5}What's Wrong with Percent Change?}{14-9}{section.14.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.6}Objective Method for Choosing Effect Measure}{14-11}{section.14.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.7}Example Analysis: Paired Observations}{14-12}{section.14.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.7.1}Dataset description}{14-12}{subsection.14.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.7.2}Example Analysis}{14-12}{subsection.14.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.8}Regression to the Mean}{14-15}{section.14.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {15}Serial Data}{15-1}{chapter.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.1}Introduction}{15-1}{section.15.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.2}Analysis Options}{15-3}{section.15.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2.1}Joint Multivariate Models}{15-4}{subsection.15.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2.2}GEE}{15-4}{subsection.15.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2.3}Summary Measures}{15-5}{subsection.15.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15.3}Case Study}{15-6}{section.15.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3.1}Data and Summary Measures}{15-6}{subsection.15.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3.2}Nonparametric Test of Race Differences in AUC}{15-10}{subsection.15.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3.3}Nonparametric Test of General Curve Differences}{15-10}{subsection.15.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3.4}Model-Based Analysis: Generalized Least Squares}{15-12}{subsection.15.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {16}Analysis of Observer Variability and Measurement Agreement}{16-1}{chapter.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.1}Intra- and Inter-observer Disagreement}{16-1}{section.16.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.2}Comparison of Measurements with a Standard}{16-8}{section.16.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.3}Special Case: Assessing Agreement In Two Binary Variables}{16-9}{section.16.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.3.1}Measuring Agreement Between Two Observers}{16-9}{subsection.16.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.3.2}Measuring Agreement Between One Observer and a Standard}{16-10}{subsection.16.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.4}Problems}{16-12}{section.16.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16.5}References}{16-13}{section.16.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {17}Modeling for Observational Treatment Comparisons}{17-1}{chapter.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.1}Propensity Score}{17-1}{section.17.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.2}Assessing Treatment Effect}{17-3}{section.17.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {17.2.1}Problems with Propensity Score Matching}{17-3}{subsection.17.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.3}Recommended Statistical Analysis Plan}{17-5}{section.17.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.4}Reasons for Failure of Propensity Analysis}{17-7}{section.17.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.5}Sensitivity Analysis}{17-8}{section.17.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.6}Reasons To Not Use Propensity Analysis}{17-9}{section.17.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17.7}Further Reading}{17-10}{section.17.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {18}Information Loss}{18-1}{chapter.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.1}Information \& Decision Making}{18-2}{section.18.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.1.1}Information Allergy}{18-3}{subsection.18.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.2}Ignoring Readily Measured Variables}{18-4}{section.18.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.3}Categorization: Partial Use of Information}{18-6}{section.18.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.1}Categorizing Continuous Predictors}{18-6}{subsection.18.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.2}What Kinds of True Thresholds Exist?}{18-8}{subsection.18.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.3}Cutpoints are Disasters}{18-8}{subsection.18.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Lack of Meaning of Effects Based on Cutpoints}{18-10}{subsubsection*.105}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.4}Categorizing Outcomes}{18-12}{subsection.18.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.5}Classification vs.\ Probabilistic Thinking}{18-14}{subsection.18.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3.6}Components of Optimal Decisions}{18-16}{subsection.18.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.4}Problems with Classification of Predictions}{18-17}{section.18.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.4.1}Example: Damage Caused by Improper Scoring Rule}{18-17}{subsection.18.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Example where an improper accuracy score resulted in incorrect original analyses and incorrect re-analysis}{18-18}{subsubsection*.106}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.5}Value of Continuous Markers}{18-19}{section.18.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.5.1}Prognosis in Prostate Cancer}{18-19}{subsection.18.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.6}Harm from Ignoring Information}{18-24}{section.18.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.6.1}Case Study: Cardiac Anti-arrhythmic Drugs}{18-24}{subsection.18.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.6.2}CAST: Cardiac Arrhythmia Suppression Trial}{18-27}{subsection.18.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.7}Case Study in Faulty Dichotomization of a Clinical Outcome: Statistical and Ethical Concerns in Clinical Trials for Crohn's Disease}{18-29}{section.18.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.7.1}Background}{18-29}{subsection.18.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.7.2}Loss of Information from Using Cut-points}{18-33}{subsection.18.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.7.3}Ethical Concerns and Summary}{18-34}{subsection.18.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18.8}Information May Sometimes Be Costly}{18-35}{section.18.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {19}Diagnosis}{19-1}{chapter.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.1}Problems with Traditional Indexes of Diagnostic Utility}{19-3}{section.19.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Example: BI-RADS Score in Mammography}{19-3}{subsubsection*.109}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Binary Diagnosis is Problematic Anyway}{19-5}{subsubsection*.110}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Back to Sensitivity and Specificity}{19-5}{subsubsection*.111}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Sensitivity of Exercise ECG for Diagnosing CAD}{19-6}{subsubsection*.112}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.2}Problems with ROC Curves and Cutoffs}{19-7}{section.19.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.3}Optimum Individual Decision Making and Forward Risk}{19-8}{section.19.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.4}Diagnostic Risk Modeling}{19-9}{section.19.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.4.1}Example Diagnostic Models}{19-9}{subsection.19.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.5}Assessing Diagnostic Yield}{19-13}{section.19.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.5.1}Absolute Yield}{19-13}{subsection.19.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Formal Test of Added Absolute and Relative Information}{19-13}{subsubsection*.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.5.2}Assessing Relative Diagnostic Yield}{19-13}{subsection.19.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.6}Assessing Absolute Diagnostic Yield: Cohort Study}{19-14}{section.19.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Summary measures}{19-15}{subsubsection*.118}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.7}Assessing Diagnostic Yield: Case-Control \& Other Oversampling Designs}{19-16}{section.19.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.8}Example: Diagnosis of Coronary Artery Disease (CAD): Test = Total Cholesterol}{19-17}{section.19.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19.9}Summary}{19-19}{section.19.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {20}Challenges of Analyzing High-Dimensional Data}{20-1}{chapter.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.1}Background}{20-2}{section.20.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.2}Global Analytic Approaches}{20-5}{section.20.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.1}One-at-a-Time Feature Screening}{20-5}{subsection.20.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Multiplicity Corrections}{20-5}{subsubsection*.121}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.2}Forward Stepwise Variable Selection}{20-6}{subsection.20.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.3}Ranking and Selection}{20-6}{subsection.20.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.4}Joint modeling of All Features Simultaneously using Shrinkage}{20-7}{subsection.20.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.5}Random Forest}{20-8}{subsection.20.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.6}Data Reduction Following by Traditional Regression Modeling}{20-8}{subsection.20.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.7}Model Approximation}{20-9}{subsection.20.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2.8}Incorporating Biology into High-Dimensional Regression Models}{20-9}{subsection.20.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20.3}Simulated Examples}{20-10}{section.20.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.3.1}Simulation To Understand Needed Sample Sizes}{20-10}{subsection.20.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.3.2}Bootstrap Analysis for One Simulated Dataset}{20-15}{subsection.20.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {21}Reproducible Research}{21-1}{chapter.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.1}Non-reproducible Research}{21-2}{section.21.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.2}General Importance of Sound Methodology}{21-3}{section.21.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.2.1}Translation of Research Evidence from Animals to Humans}{21-3}{subsection.21.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.2.2}Other Problems}{21-3}{subsection.21.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.2.3}What's Gone Wrong with Omics \& Biomarkers?}{21-4}{subsection.21.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Natural History of New Fields}{21-5}{subsubsection*.122}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.3}Strong Inference}{21-6}{section.21.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.4}Pre-Specified Analytic Plans}{21-7}{section.21.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.5}Summary}{21-8}{section.21.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.6}Software}{21-9}{section.21.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.6.1}Goals of Reproducible Analysis/Reporting}{21-9}{subsection.21.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.6.2}History of Literate Programming}{21-9}{subsection.21.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.6.3}\texttt {\smaller knitr} Approach}{21-10}{subsection.21.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {21.6.4}\texttt {\smaller knitr} Features}{21-11}{subsection.21.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Summary}{21-12}{subsubsection*.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21.7}Further Reading}{21-14}{section.21.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{22-1}{section.21.7}
