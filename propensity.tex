@@ -26,7 +26,14 @@
   age 70 in treatment B; means that age$>70$ is still predictive of
   treatment received after adjusting for PS, or age$>70$ was not
   modeled correctly.
-\item An additive (in the logit) model where all continuous baseline variables are splined will result in adequate adjustment in the majority of cases---certainly better than categorization.  Lack of fit will then come from omitted interaction effects.  E.g.: if older males are much more likely to receive treatment B than treatment A than what would be expected from the effects of age and sex alone, adjustment for the additive propensity would not adequately balance for age and sex.
+\item An additive (in the logit) model where all continuous baseline
+  variables are splined will result in adequate adjustment in the
+  majority of cases---certainly better than categorization.  Lack of
+  fit will then come only from omitted interaction effects.  E.g.: if
+  older males are much more likely to receive treatment B than
+  treatment A than what would be expected from the effects of age and
+  sex alone, adjustment for the additive propensity would not
+  adequately balance for age and sex. 
 \ei
 
 \section{Assessing Treatment Effect}
@@ -90,17 +97,41 @@ characteristics interacting with treatment.
 
 \section{Recommended Statistical Analysis Plan}
 \be
-\item Be very liberal in selecting a large list of potential confounder variables that are measured pre-treatment.
-\item Model the probability of receiving treatment using a flexible statistical model that makes minimal assumptions (e.g., rich additive model that assumes smooth predictor effects).
-\item Examine the distribution of estimated propensity score separately for the treatment groups.
+\item Be very liberal in selecting a large list of potential
+  confounder variables that are measured pre-treatment.
+\item If the number of potential confounders is not large in
+  comparison with the effective sample size, use direct covariate
+  adjustment instead of propensity score adjustment.  For example, if
+  the outcome is binary and you have more than 5 events per covariate,
+  full covariate adjustment probably works OK.
+\item Model the probability of receiving treatment using a flexible
+  statistical model that makes minimal assumptions (e.g., rich
+  additive model that assumes smooth predictor effects).  If there are
+  more than two treatments, you will need as many propensity scores as
+  there are treatments, less one, and all of the logic propensity
+  scores will need to be adjusted for in what follows.
+\item Examine the distribution of estimated propensity score
+  separately for the treatment groups. 
 \item If there is a non-overlap region of the two distributions, and
-  you don't want to use a more conservative interaction analysis (see below), exclude those subjects from the analysis.  Recursive partitioning can be used to predict membership in the non-overlap region from baseline characteristics so that the research findings with regard to applicability/generalizability can be better understood.
-\item Use covariate adjustment for propensity score for subjects in the overlap region.  Expand logit propensity using a restricted cubic spline so as to not assume linearity in the logit in relating propensity to outcome.
+  you don't want to use a more conservative interaction analysis (see
+  below), exclude those subjects from the analysis.  Recursive
+  partitioning can be used to predict membership in the non-overlap
+  region from baseline characteristics so that the research findings
+  with regard to applicability/generalizability can be better
+  understood. 
+\item Use covariate adjustment for propensity score for subjects in
+  the overlap region.  Expand logit propensity using a restricted
+  cubic spline so as to not assume linearity in the logit in relating
+  propensity to outcome. Also include pre-specified important
+  prognostic factors in the model to account for the majority of
+  outcome heterogeneity.  It is not a problem that these prognostic
+  variables are also in the propensity score.
 \item As a secondary analysis use a chunk test to assess whether there
-  is an interaction with propensity to treat and actual treatment.
+  is an interaction with logit propensity to treat and actual treatment.
   For example, one may find that physicians are correctly judging that
   one subset of patients should usually be treated a certain way.
-\item Instead of removing subjects outside the overlap region, allow
+\item Instead of removing subjects outside the overlap region, you
+  could allow
   propensity or individual predictors to interact with treatment.
   Treatment effect estimates in the presence of interactions are
   self-penalizing for not having sufficient overlap.  Suppose for
@@ -122,7 +153,21 @@ characteristics interacting with treatment.
   having comparable subjects on both treatments for some intervals of
   covariates means that either (1) inference should be restricted to
   the overlap region, or (2) the inference is based on model assumptions.
-\ee
+  \ee
+
+Using a full regression analysis allows interactions to be explored,
+as briefly described above.
+Suppose that one uses a restricted cubic spline in the logit
+propensity to adjust for confounding, and all these spline terms are
+multiplied by the indicator variable for getting a certain treatment.
+One can make a plot with predicted outcome on the $y$-axis and PS on
+the $x$-axis, with one curve per treatment.  This allows inspection of
+parallelism (which can easily be formally tested with the chunk test)
+and whether there is a very high or very low PS region where treatment
+effects are different from the average effect.  For example, if
+physicians have a very high probability of always selecting a certain
+treatment for patients that actually get the most benefit from the
+treatment, this will be apparent from the plot.
 
 \section{Reasons for Failure of Propensity Analysis}
 Propensity analysis may not sufficiently adjust for confounding in nonrandomized studies when
