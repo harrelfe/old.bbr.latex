@@ -145,7 +145,7 @@ segments(x, 0, x, y)
 \end{Schunk}
 The \co{getHdata} function in the \co{Hmisc} package~\cite{Hmisc}
 finds, downloads, and \co{load()}s datasets from
-\url{biostat.mc.vanderbilt.edu/DataSets}.
+\href{http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets}{biostat.mc.vanderbilt.edu/DataSets}.
 \begin{Schunk}
 \begin{Sinput}
 require(Hmisc)
@@ -460,6 +460,9 @@ Ecdf(pbcr[,c('bili','albumin','protime','sgot')],  # Fig. (*\ref{fig:descript-ec
     group=pbcr$drug, col=1:2,
     label.curves=list(keys='lines'))
 \end{Sinput}
+\begin{Soutput}
+click left mouse button to proceed
+\end{Soutput}
 \begin{figure}[htbp]
 
 \centerline{\includegraphics{descript-ecdf-1} }

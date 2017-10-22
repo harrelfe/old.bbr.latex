@@ -13,7 +13,7 @@ statistical modeling, nonparametric methods, survival analysis,
 clinical trials methods, and data manipulation capabilities.  \R\ has
 the most comprehensive genomics analysis packages and has advanced
 capabilities for reproducible analysis and reporting.  \R\ also has an
-excellent graphical front-end \Co{RStudio} (\url{rstudio.org}) that
+excellent graphical front-end \Co{RStudio} (\href{https://www.rstudio.com/}{rstudio.org}) that
 has the identical look and feel on all operating systems and via a web
 browser.  Part of
 \R's appeal is the thousands of add-on packages available (at
@@ -29,12 +29,12 @@ such widely diverse areas as
 \item genomics
 \item analyzing ICD9 codes and computing comorbidity indexes
 \item downloading all annotated NHANES datasets
-\item interfacing to \url{clinicaltrials.gov}
+\item interfacing to \href{https://clinicaltrials.gov/}{clinicaltrials.gov}
 \item detecting whether a dataset contains personal identifiers of
   human subjects
 \item analysis of early phase cardiovascular drug safety studies
 \ei
-The main \R\ web site is \url{www.r-project.org}.
+The main \R\ web site is \href{https://www.r-project.org/}{www.r-project.org}.
 
 \section{Learning \R}
 Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2} and \emph{R Programming Tutorials} from Mike Marin at
@@ -43,7 +43,7 @@ A good list of books and other material for learning \R\ may be found at\\
 \url{http://www.revolutionanalytics.com/r-language-resources}.  Those
 who have used SPSS or SAS before will profit from \emph{\R\ for SAS
   and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
-\url{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
+\href{https://www.amazon.com/}{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
 \url{http://www.ats.ucla.edu/stat/r} and
 \url{http://www.introductoryr.co.uk/R_Resources_for_Beginners.html}
 are useful web sites. See also \emph{\R\ in Action, second ed.} by Robert 
@@ -59,7 +59,7 @@ Three of the best ways to learn how to analyze data in \R\ quickly are
   analysis-ready (see Section~\ref{sec:r-import} for information about
   importing your own datasets)
 \item Use example \R\ scripts as analysis templates
-\item Use \co{RStudio} (\url{rstudio.org}) to run \R
+\item Use \co{RStudio} (\href{https://www.rstudio.com/}{rstudio.org}) to run \R
 \ee
 On the first approach, the \R\ \co{Hmisc} packages's \co{getHdata}
 function finds datasets on the Vanderbilt Biostatistics \co{DataSets}
@@ -99,11 +99,11 @@ Before running examples in these notes and \R\ markdown example
 scripts, you need to do the following:
 \be
 \item Make sure your operating system is up to date enough to run the
-  most current version of \R\ at \url{www.r-project.org}.  For Mac you
+  most current version of \R\ at \href{https://www.r-project.org/}{www.r-project.org}.  For Mac you
   must have OS X Maverick or later.
-\item Install \R\ from \url{www.r-project.org} or upgrade your
+\item Install \R\ from \href{https://www.r-project.org/}{www.r-project.org} or upgrade your
   installation of \R\ to the latest version.
-\item Install \co{RStudio} from \url{rstudio.org} or update your
+\item Install \co{RStudio} from \href{https://www.rstudio.com/}{rstudio.org} or update your
   \co{RStudio} to the latest version.
 %\item Download and store the \co{.Rprofile} file using instructions at
 %  \url{http://biostat.mc.vanderbilt.edu/RConfiguration}.  This defines
@@ -224,7 +224,7 @@ best to debug your commands a piece at a time.  The fastest way to do
 this is to go to some line inside your first chunk and click the green
 \co{C} just above and to the right of your script.  Click on \co{Run
   Current Chunk} then on \co{Run Next Chunk}.  Shortcut keys for these
-are \co{Ctrl+Alt+C} and \co{Ctrl+Alt+N}.  You can also click on a
+are \co{Ctrl+Alt+C} and \co{Ctrl+Alt+N} (\co{Command+Option+C} and \co{Command+Option+N} for Mac).  You can also click on a
 single line of code and run it by clicking on \co{Run}.
 
 Whenever you get a strange execution error it is sometimes helpful to
@@ -311,7 +311,7 @@ Also see the excellent tutorial on importing from Excel found at \url{http://www
 
 The \co{Hmisc} \co{upData} function may be used to rename variables
 and provide variable and value labels and units of measurement.
-Here is another example where the there is a \co{junk} variable to
+Here is another example where there is a \co{junk} variable to
 delete after importing, and a categorical variable is coded as
 integers and need to have value labels defined after
 importing.  We show how \co{csv.get} automatically renamed one illegal
@@ -354,7 +354,7 @@ d <- data.frame(age=c(10,20,30), sex=c('male','female','male'),
 Large files may be stored in \R\ binary format using \co{save(...,
   compress=TRUE)}, which creates an incredibly compact representation
 of the data in a file usually suffixed with \co{.rda}.  This allows
-extremely fast loading of of the data frame in your next \R\ session
+extremely fast loading of the data frame in your next \R\ session
 using \co{load(...)}.  The \co{Hmisc} \co{Save} and \co{Load}
 functions make this even easier.
 

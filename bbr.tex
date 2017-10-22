@@ -66,14 +66,12 @@
         \label{#1}
         \end{figure}}
 
-
 \newcommand{\bfig}[2]{\begin{figure}[!htbp]
         \leavevmode
         \centerline{\includegraphics{#1.pdf}}
         \caption{\large#2}
         \label{#1}
         \end{figure}}
-
 
 \renewcommand{\thefootnote}{\alph{footnote}}
 \makeatletter
@@ -109,6 +107,10 @@
 
 \vspace*{\stretch{1}}
 \noindent\rule{\linewidth}{1mm}
+
+\def\originalBBR{1}  % originalBBR=1 if the original BBR; set to 0 otherwise
+\ifnum\originalBBR=1
+
 \begin{flushright}
 \Huge
 \textsc{Biostatistics for\\Biomedical Research}\\[2ex]
@@ -118,7 +120,7 @@
 Department of Biostatistics \\
 Vanderbilt University School of Medicine \\
 \texttt{f.harrell@vanderbilt.edu} \\ \texttt{james.c.slaughter@vanderbilt.edu}
-\\[2ex] \url{biostat.mc.vanderbilt.edu/ClinStat}\\
+\\[2ex] \href{http://biostat.mc.vanderbilt.edu/wiki/Main/ClinStat}{biostat.mc.vanderbilt.edu/ClinStat}\\
 Questions/discussions:\\Slack channel \texttt{bbr} in 
 \href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
 Blog: \href{http://fharrell.com}{fharrell.com}
@@ -134,6 +136,34 @@ Copyright 2001-2017 FE Harrell \& JC Slaughter ~~~ All Rights Reserved
 \\ \hfill \scriptsize Updated \today
 \end{center}
 
+\else %  set to 0 otherwise: for Biostatistics for Pharmacy Research
+
+\begin{flushright}
+\Huge
+\textsc{Biostatistics for\\Pharmacy Research}\\[2ex]
+%Sessions 1, 3--4, 6, 7 \\[2ex]
+\huge Frank E Harrell Jr \\ James C Slaughter \\ Leena Choi \\
+\Large
+Department of Biostatistics \\
+Vanderbilt University School of Medicine \\
+\texttt{f.harrell@vanderbilt.edu} \\ \texttt{james.c.slaughter@vanderbilt.edu} \\ \texttt{leena.choi@vanderbilt.edu} 
+%\\[2ex] \url{biostat.mc.vanderbilt.edu/ClinStat}\\
+%Questions/discussions:\\Slack channel \texttt{bbr} in 
+%\href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
+%Blog: \href{http://fharrell.com}{fharrell.com}
+%\\[2ex]
+\small
+\end{flushright}
+\rule{\linewidth}{1mm}
+\vspace*{\stretch{2}}
+\begin{center}
+\vspace{.5in}
+\small
+Copyright 2001-2017 FE Harrell \& JC Slaughter \& L Choi ~~~ All Rights Reserved
+\\ \hfill \scriptsize Updated \today
+\end{center}
+\fi
+
 \thispagestyle{empty}
 \pagenumbering{roman}
 \pagestyle{headings}
@@ -144,6 +174,9 @@ Copyright 2001-2017 FE Harrell \& JC Slaughter ~~~ All Rights Reserved
 
 
 \tableofcontents
+
+\def\changeHistoryShow{0}     % show change history if 1; set 0 otherwise
+\ifnum\changeHistoryShow=1
 \bigskip
 \need 3.5in
 \textbf{Changes Since 2015-03-26}\footnote{As of 2015-12-06 chapters after
@@ -214,6 +247,8 @@ code.zip&            & Updated\\
 21.1    & 2017-09-20 & Added new comprehensive ref on repro res \\
 \hline
 \end{tabular}\end{center}
+\else
+\fi
 
 Blue symbols in the right margin starting with ABD designate
 section numbers (and occasionally page numbers preceeded by $p$)
@@ -245,7 +280,7 @@ to the playlist for all audio files in these notes.
 Rotated boxed blue text in the right margin at the start of a section
 represents \disc{howto}
 the mnemonic key for linking to discussions about that section in
-\url{vbiostatcourse.slack.com} channel \verb|#bbr|.  Anyone starting a
+\href{https://vbiostatcourse.slack.com}{vbiostatcourse.slack.com} channel \verb|#bbr|.  Anyone starting a
 new discussion about a topic related to the section should include the
 mnemonic somewhere in the posting,
 and the posting should be marked to \co{slack} as threaded.  The
@@ -274,6 +309,30 @@ that further discusses the topic.
 \Large
 %\huge
 
+\def\basicStat{0}     % basicStat = 1 if only include basic statistics; set to 0 otherwise
+\ifnum\basicStat=1
+\input{R/slide}
+\input{algebra}
+\input{overview}
+\input{descript/slide}
+%\input{htest/slide}
+%\input{prop/slide}
+%\input{nonpar/slide}
+%\input{corr/slide}
+%\input{rmsintro/slide}
+%\input{reg/slide}
+%\input{multgroup/slide}
+%\input{infreview}
+%\input{ancova/slide}
+%\input{change/slide}
+%\input{serial/slide}
+%\input{obsvar/slide}
+%\input{propensity}
+%\input{info/slide}
+%\input{dx/slide}
+%\input{hdata/slide}
+%\input{repro/slide}
+\else
 \input{R/slide}
 \input{algebra}
 \input{overview}
@@ -295,6 +354,7 @@ that further discusses the topic.
 \input{dx/slide}
 \input{hdata/slide}
 \input{repro/slide}
+\fi
 
 \dobib
 \end{document}
