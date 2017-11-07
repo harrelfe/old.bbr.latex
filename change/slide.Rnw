@@ -329,7 +329,15 @@ difference measure.
   their measurements are atypical for themselves (i.e., selected \emph{because} of measurement error)
 \item Future measurements will ``regress to the mean'' because measurement errors are random
 \item For a classic misattribution of regression to the mean to a
-  treatment effect see\\ \url{http://goo.gl/UuzX5d}
+  treatment effect see
+  \href{https://www.advisory.com/Daily-Briefing/2013/09/30/How-a-hospital-used-social-workers-to-cut-readmissions}{this}\footnote{In
+    their original study, the social workers enrolled patients having 10 or 
+  more hospital admissions in the previous year and showed that after
+  their counseling, the number of admissions in the next year was less than
+  10.  The same effect might have been observed had the social workers
+  given the patients horoscopes or weather forecasts.  This was
+  reported in an abstract for the AHA meeting that has since been
+  taken down from \url{circ.ahajournals.org}.}.
 \ei
 
 Classic paper on shrinkage: Efron \& Morris~\cite{efr77sti}
