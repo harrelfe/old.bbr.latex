@@ -484,17 +484,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {14.4}What's Wrong with Change in General?}{14-7}{section.14.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.5}What's Wrong with Percent Change?}{14-9}{section.14.5}
+\contentsline {subsection}{\numberline {14.4.1}Change from Baseline in Randomized Studies}{14-7}{subsection.14.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.6}Objective Method for Choosing Effect Measure}{14-11}{section.14.6}
+\contentsline {subsection}{\numberline {14.4.2}Special Problems Caused By Non-Monotonic Relationship With Ultimate Outcome}{14-9}{subsection.14.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.7}Example Analysis: Paired Observations}{14-12}{section.14.7}
+\contentsline {section}{\numberline {14.5}What's Wrong with Percent Change?}{14-12}{section.14.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.7.1}Dataset description}{14-12}{subsection.14.7.1}
+\contentsline {section}{\numberline {14.6}Objective Method for Choosing Effect Measure}{14-14}{section.14.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.7.2}Example Analysis}{14-12}{subsection.14.7.2}
+\contentsline {section}{\numberline {14.7}Example Analysis: Paired Observations}{14-15}{section.14.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14.8}Regression to the Mean}{14-15}{section.14.8}
+\contentsline {subsection}{\numberline {14.7.1}Dataset description}{14-15}{subsection.14.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.7.2}Example Analysis}{14-15}{subsection.14.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14.8}Regression to the Mean}{14-18}{section.14.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {15}Serial Data}{15-1}{chapter.15}
 \defcounter {refsection}{0}\relax 

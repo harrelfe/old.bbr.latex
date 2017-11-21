@@ -148,6 +148,50 @@ experimental unit
 \ei
 
 \section{What's Wrong with Change in General?}
+\subsection{Change from Baseline in Randomized Studies}
+Many authors and pharmaceutical clinical trialists make the mistake of analyzing change from baseline instead of making the raw follow-up measurements the primary outcomes, covariate-adjusted for baseline.  The purpose of a parallel-group randomized clinical trial is to compare the parallel groups, not to compare a patient with herself at baseline. The central question is for two patients with the same pre measurement value of x, one given treatment A and the other treatment B, will the patients tend to have different post-treatment values? This is exactly what analysis of covariance assesses.  Within-patient change is affected strongly by regression to the mean and measurement error.  When the baseline value is one of the patient inclusion/exclusion criteria, the only meaningful change score requires one to have a second baseline measurement post patient qualification to cancel out much of the regression to the mean effect.  It is the second baseline that would be subtracted from the follow-up measurement.
+
+The savvy researcher knows that analysis of covariance is required to ``rescue'' a change score analysis. This effectively cancels out the change score and gives the right answer even if the slope of post on pre is not 1.0. But this works only in the linear model case, and it can be confusing to have the pre variable on both the left and right hand sides of the statistical model. And if $Y$ is ordinal but not interval-scaled, the difference in two ordinal variables is no longer even ordinal.  Think of how meaningless difference from baseline in ordinal pain categories are. A major problem in the use of change score summaries, even when a correct analysis of covariance has been done, is that many papers and drug product labels still quote change scores out of context.  Patient-reported outcome scales with floor or ceiling effects are particularly problematic.  Analysis of change loses the opportunity to do a robust, powerful analysis using a covariate-adjusted ordinal response model such as the proportional odds or proportional hazards model.  Such ordinal response models do not require one to be correct in how to transform $Y$.
+
+
+Not only is it very problematic to analyze change scores in parallel group designs; it is problematic to even compute them.  To compute change scores requires many assumptions to hold, e.g.:
+\be
+\item the variable is not used as an inclusion/exclusion criterion for the study, otherwise regression to the mean will be strong
+\item if the variable is used to select patients for the study, a second post-enrollment baseline is measured and this baseline is the one used for all subsequent analysis
+\item the post value must be linearly related to the pre value
+\item the variable must be perfectly transformed so that subtraction "works" and the result is not baseline-dependent
+\item the variable must not have floor and ceiling effects
+\item the variable must have a smooth distribution
+\item the slope of the pre value vs.\ the follow-up measurement must be close to 1.0 when both variables are properly transformed (using the same transformation on both)
+\ee
+
+Details about problems with analyzing change may be found \href{http://biostat.mc.vanderbilt.edu/MeasureChange}{here}, and references may be found \href{http://www.citeulike.org/user/harrelfe/tag/change}{here}.
+
+Regarding 3. above, if pre is not linearly related to post, there is no transformation that can make a change score work.  Two unpublished examples illustrate this problem.  In a large degression study using longitudinal measurements of the Hamilton-D depression scale, there was a strong nonlinear relationship between baseline Hamilton D and the final measurement.  The form of the relationship was a flattening of the effect for larger Ham D, indicating there are patients with severe depression at baseline who can achieve much larger reductions in depression than an average change score would represent (and likewise, patients with mild to moderate depression at baseline would have a reduction in depression symptoms that is far less than the average change indicates).  Doing an ordinal ANCOVA adjusting for a smooth nonlinear effect of baseline using a spline function would have been a much better analysis than the change from baseline analysis done by study leaders.  In the second example, a similar result was found for a quality of life measure, KCCQ.  Again, a flattening relationship for large KCCQ indicated that subtracting from baseline provided a nearly meaningless average change score.
+
+Regarding 7. above, often the baseline is not as relevant as thought and the slope will be less than 1.  When the treatment can cure every patient, the slope will be zero.  When the baseline variable is irrelevant, ANCOVA will estimate a slope of approximately zero and will effectively ignore the baseline.  Change will baseline will make the change score more noisy than just analyzing the final raw measurement.  In general, when the relationship between pre and post is linear, the correlation between the two must exceed 0.5 for the change score to have lower variance than the raw measurement.
+
+Bland and Altman~\cite{bla11com} have an excellent \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3286439}{article} about how misleading change from baseline is for clinical trials.  \href{http://www.fharrell.com/2017/04/statistical-errors-in-medical-literature.html#change}{This} blog article has several examples of problematic change score analyses in the clinical trials literature.
+
+The following \R\ code exemplifies how to do a powerful, robust analysis without computing change from baseline.  This analysis addresses the fundamental treatment question posed at the top of this section.  This example uses a semiparametric ANCOVA that utilizes only the ranks of $Y$ and that provides the same test statistic no matter how $Y$ is transformed.  It uses the proportional odds model, with no binning of $Y$, using the \co{rms} package \co{orm} function\footnote{\co{orm} can easily handle thousands of intercepts (thousands of distinct $Y$ values).}.  This is a generalization of the Wilcoxon test---it would be almost identical to the Wilcoxon test had the baseline effect been exactly flat.  Note that the proportional odds assumption is more likely to be satisfied than the normal residual, equal variance assumption of the ordinary linear model.
+
+<<orm, eval=FALSE>>=
+require(rms)
+# Fit a smooth flexible relationship with baseline value y0
+# (restricted cubic spline function with 4 default knots)
+f <- orm(y ~ rcs(y0, 4) + treatment)
+f
+anova(f)
+# Estimate mean y as a function of y0 and treatment
+M <- Mean(f)   # creates R function to compute the mean
+plot(Predict(f, treatment, fun=M))  # y0 set to median since not varied
+# To allow treatment to interact with baseline value in a general way:
+f <- orm(y ~ rcs(y0, 4) * treatment)
+plot(Predict(f, y0, treatment))  # plot y0 on x-axis, 2 curves for 2 treatments
+# The above plotted the linear predictor (log odds); can also plot mean
+@
+
+\subsection{Special Problems Caused By Non-Monotonic Relationship With Ultimate Outcome}
 Besides the strong assumptions made about how variables are
 transformed before a difference is calculated, there are many types of
 variables for which change can never be interpreted without reference
@@ -159,8 +203,7 @@ change in serum creatinine (SCr).  Problems with the definitions include
 \be
 \item The non-monotonic relationship between SCr and mortality
   demonstrates that it is not healthy to have very low SCr.  This implies
-  that increases in SCr for very low starting SCr is beneficial to the
-  patient instead of harmful as assumed in definitions of AKI.
+  that increases in SCr for very low starting SCr may not be harmful as assumed in definitions of AKI.
 \item Given an earlier SCr measurement and a current SCr, the earlier
   measurement is not very important in predicting mortality once one
   adjusts for the last measurement.  Hence a change in SCr is not very
@@ -252,14 +295,13 @@ proportion of subjects have SCr $< 1$.
         initial value been measured without error.  Plotting
         differences against averages rather than against initial
         values will help reduce the effect of regression to the mean.}
-\item   Plot difference in pre and post values vs. the average of the
-        pre and post values (Bland-Altman plot).  If this shows no trend, the simple
+\item   Plot difference in pre and post values vs. the pre values.  If this shows no trend, the simple
         differences are adequate summaries of the effects, i.e., they
         are independent of initial measurements.
 \item   If a systematic pattern is observed, consider repeating the
         previous step after taking logs of both the pre and post
         values.  If this removes any systematic relationship between
-        the average and the difference in logs, summarize the data
+        the baseline and the difference in logs, summarize the data
         using logs, i.e., take the effect measure as the log ratio.
 \item   Other transformations may also need to be examined
 \ei
@@ -276,7 +318,7 @@ proportion of subjects have SCr $< 1$.
 \ei
 
 \subsection{Example Analysis}
-<<analysis,w=6,h=5,cap='Bland-Altman plots for three transformations'>>=
+<<analysis,w=6,h=5,cap='Difference vs.\\ baseline plots for three transformations'>>=
 # Now add simulated some post data to the analysis of beta TG data
 # Assume that the intervention effect (pre -> post effect) is
 # multiplicative (x 1/4) and that there is a multiplicative error
@@ -284,18 +326,17 @@ proportion of subjects have SCr $< 1$.
 set.seed(13)
 d$pre  <- d$btg
 d$post <- exp(log(d$pre) + log(.25) + rnorm(24, 0, .5))
-# Make Bland-Altman (Tukey mean-difference) plots on the original and
-# log scales
-p1 <- ggplot(d, aes(x=(pre + post) / 2, y=post - pre, color=status)) +
+# Make plots on the original and log scales
+p1 <- ggplot(d, aes(x=pre, y=post - pre, color=status)) +
   geom_point() + geom_smooth() + theme(legend.position='bottom')
 # Use problematic asymmetric % change
-p2 <- ggplot(d, aes(x=exp((log(pre) + log(post))/2), y=100*(post - pre)/pre,
+p2 <- ggplot(d, aes(x=pre, y=100*(post - pre)/pre,
                     color=status)) + geom_point() + geom_smooth() +
-      xlab('Geometric Mean') + theme(legend.position='none') +
+      xlab('pre') + theme(legend.position='none') +
       ylim(-125, 0)
-p3 <- ggplot(d, aes(x=exp((log(pre) + log(post))/2), y=log(post / pre),
+p3 <- ggplot(d, aes(x=pre, y=log(post / pre),
                     color=status)) + geom_point() + geom_smooth() +
-      xlab('Geometric Mean') + theme(legend.position='none') + ylim(-2.5, 0)
+      xlab('pre') + theme(legend.position='none') + ylim(-2.5, 0)
 arrGrob(p1, p2, p3, ncol=2)   # Fig. (*\ref{fig:change-analysis}*)
 with(d, {
      print(t.test(post - pre))
