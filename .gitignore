@@ -1,6 +1,7 @@
 slinks
 obsolete
 .Rhistory
+.DS_Store
 messages.txt
 Sweavel.sty
 bbr.aux
