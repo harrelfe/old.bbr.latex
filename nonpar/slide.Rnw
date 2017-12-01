@@ -412,7 +412,8 @@ this estimator.
 \bi
 \item Assume data come from distributions with same shape and differ only in location
 \item Consider a sample of 4 males and 3 females
-\item Considers all possible differences between sample 1 and sample 2
+\item Difference in sample medians is 124 - 119.5 = 4.5
+\item Consider all possible differences between sample 1 and sample 2
 \ei
 \begin{center}\begin{tabular}{l|cccc} \hline \hline \label{pg:nonpar-mf}
  & \multicolumn{4}{c}{Female} \\
@@ -424,6 +425,7 @@ Male & 120 & 118 & 121 & 119 \\ \hline
 \bi
 \item Hodges-Lehman estimate of the sex effect: median of the 12
   differences = 4.5
+\item In this case equalled difference in sample medians just by coincidence
 \ei
 <<hlest>>=
 female <- c(120, 118, 121, 119)
@@ -476,7 +478,7 @@ r = \frac{n}{2} - 1.96*\frac{\sqrt{n}}{2} \hspace{.4cm}\textrm{and}
 \item Confidence intervals for the difference in two medians (two samples)
 \bi
 \item Assume data come from distributions with same shape and differ only in location
-\item Considers all possibly differences between sample 1 and sample 2
+\item Considers all possible differences between sample 1 and sample 2
   using male-female data on P.~\pageref{pg:nonpar-mf}
 \item An estimate of the median difference (males - females) is the median of these 12 differences, with the $3^\textrm{rd}$ and $10^\textrm{th}$ largest values giving an (approximate) 0.95 CI
 \item Median estimate = 4.5, 0.95 CI = [1, 13]
