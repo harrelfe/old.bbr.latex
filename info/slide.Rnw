@@ -625,7 +625,7 @@ underlying, permanent damage
 \citet{moo95dea}, pp.~289,49; D Graham, FDA
 
 \section{Case Study in Faulty Dichotomization of a Clinical Outcome: Statistical and Ethical Concerns in Clinical Trials for
-  Crohn's Disease}
+  Crohn's Disease}\label{sec:crohn}
 
 \subsection{Background}
 Many clinical trials are underway for studying treatments for Crohn's disease.

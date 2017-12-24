@@ -161,6 +161,99 @@ A proper response variable that optimizes power is one that
  choose from fewer categories.})
 \ei
 
+\section{Choose $Y$ to Maximize Statistical Information, Power, and Interpretability}  
+The outcome (dependent) variable $Y$ should be a high-information
+measurement that is relevant to the subject at hand.  The information
+provided by an analysis, and statistical power and precision, are
+strongly influenced by characteristics of $Y$ in addition to the
+effective sample size.
+  \bi
+  \item Noisy $Y \rightarrow$ variance $\uparrow$, effect of
+    interest $\downarrow$
+  \item Low information content/resolution also $\rightarrow$ power
+    $\downarrow$ 
+  \item Minimum information $Y$: binary outcome
+  \item Maximum information $Y$: continuous response with almost no
+    measurement error
+    \bi
+    \item Example: measure systolic blood pressure (SBP) well and
+      average 5 readings 
+    \ei
+  \item Intermediate: ordinal $Y$ with a few well-populated levels
+  \ei
+
+\subsection{Information Content}
+  \bi
+  \item Binary $Y$: 1 bit
+    \bi
+    \item all--or--nothing
+    \item no gray zone, close calls
+    \item often arbitrary
+    \ei
+  \item SBP: $\approx$ 5 bits
+    \bi
+    \item range 50-250mmHg (7 bits)
+    \item accurate to nearest 4mmHg (2 bits)
+    \ei
+  \item Time to binary event: if proportion of subjects having event is
+    small, is effectively a binary endpoint
+    \bi
+    \item becomes truly continuous and yields high power if proportion
+      with events much greater than $\frac{1}{2}$, if time to event is
+      clinically meaningful
+    \item if there are multiple events, or you pool events of
+      different severities, time to first event loses information
+    \ei
+  \ei
+  
+\subsection{Dichotomization}
+\textbf{Never} Dichotomize Continuous or Ordinal $Y$
+  \bi
+  \item Statistically optimum cutpoint is at the \textbf{unknown}
+    population median  
+    \bi
+    \item power loss is still huge
+    \ei
+  \item If you cut at say 2 SDs from the population median, the loss
+    of power can be massive, i.e., may have to increase sample size
+    $\times 4$
+  \item See Sections \ref{sec:info-catoutcomes} and \ref{sec:crohn}
+  \item Avoid ``responder analysis''
+  \item Serious ethical issues
+  \item Dumbing-down $Y$ in the quest for clinical interpretability is
+    a mistake.  Example:
+    \bi
+    \item Mean reduction in SBP 7mmHg $[2.5, 11.4]$ for B:A
+    \item Proportion of pts achieving 10mmHg SBP reduction: A:0.31, B:0.41
+      \bi
+      \item Is the difference between 0.31 and 0.41 clinically significant?
+      \item No information about reductions $> 10$ mmHg
+      \ei
+    \ei
+  \item Can always restate optimum analysis results in other clinical metrics
+  \ei
+  
+\subsection{Change from Baseline}
+\textbf{Never} use change from baseline as $Y$
+  \bi
+  \item Affected by measurement error, regression to the mean
+  \item Assumes
+    \bi
+    \item you collected a second post-qualification baseline if the
+      variable is part of inclusion/exclusion criteria
+    \item variable perfectly transformed so that subtraction works
+    \item post value linearly related to pre
+    \item slope of pre on post is near 1.0
+    \item no floor or ceiling effects
+    \item $Y$ is interval-scaled
+    \ei
+  \item Appropriate analysis ($T$=treatment) \\
+  $Y = \alpha + \beta_{1}\times T + \beta_{2} \times Y_{0}$ \\
+  Easy to also allow nonlinear function of $Y_{0}$\\
+  Also works well for ordinal $Y$ using a semiparametric model
+  \item See Section \ref{sec:changegen} and Chapter \ref{chap:ancova}
+  \ei
+
 \section{Preprocessing}\label{sec:overview-preprocessing}
 \bi
 \item In vast majority of situations it is best to analyze the rawest
