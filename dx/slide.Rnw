@@ -206,7 +206,11 @@ The steps for determining the optimum decision are:
 \item Find the decision $d$ that maximizes the expected utility
 \ee
 
-\url{http://en.wikipedia.org/wiki/Optimal_decision}
+See
+\bi
+\item \url{http://en.wikipedia.org/wiki/Optimal_decision}
+\item \url{http://www.statsathome.com/2017/10/12/bayesian-decision-theory-made-ridiculously-simple}
+\ei
 
 % From Chris Fonnesbeck 2015-10-26:
 % The way decision analysts approach the problem is by considering the expected value of perfect information (EVPI), or in this case, the expected value of sample information (EVSI). It quantifies the value of additional information essentially by differencing the average of optimal values from the optimum of the average expected value. EVPI is related to the value of learning about an underlying model, whereas EVSI is the value of collecting additional data. Estimating the loss of information due to discretization would just be a special case of an EVSI calculation.

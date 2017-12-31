@@ -38,7 +38,13 @@ Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
 \item   Continuous response variable $Y$, normal residuals
 \item   Statistical testing for baseline differences is scientifically
         incorrect (Altman \& Dor\'{e} 1990, Begg 1990, Senn 1994,
-        Austin~\etal 2010)
+        Austin~\etal\ 2010); as Bland and Altman
+        stated~\cite{bla11com}, statistical tests draw inferences
+        about \emph{populations}, and the population model here would
+        involve a repeat of the randomization to the whole population
+        hence balance would be perfect.  Therefore the null hypothesis of no
+        difference in baseline distributions between treatment groups
+        is automatically true.
 \item   If we are worried about baseline imbalance we need to search
         patient records for counter-- balancing factors
 \item   \ra imbalance is not the reason to adjust for covariables
@@ -876,7 +882,7 @@ f
 &Ratio Test&Indexes&Indexes\\\hline
 Obs~\hfill 40830&LR $\chi^{2}$~\hfill 4173.41&$R^{2}$~\hfill 0.245&$C$~\hfill 0.821\\
 ~~0~\hfill 37979&d.f.~\hfill 15&$g$~\hfill 1.490&$D_{xy}$~\hfill 0.642\\
-~~1~\hfill 2851&Pr$(>\chi^{2})$~\hfill \textless 0.0001&$g_{r}$~\hfill 4.437&$\gamma$~\hfill 0.646\\
+~~1~\hfill 2851&Pr$(>\chi^{2})$~\hfill \textless 0.0001&$g_{r}$~\hfill 4.437&$\gamma$~\hfill 0.642\\
 $\max|\frac{\partial\log L}{\partial \beta}|$~\hfill $5\!\times\!10^{-6}$&&$g_{p}$~\hfill 0.083&$\tau_{a}$~\hfill 0.083\\
 &&Brier~\hfill 0.055&\\
 \hline

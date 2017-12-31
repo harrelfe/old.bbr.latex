@@ -264,6 +264,17 @@ and analyzing observer variability studies.
   \item Solid line indicated the mean, dashed lines are approximate
     0.95 confidence intervals (assuming Normality) 
 \ei
+
+\textbf{But} there is controversy about what should be on the $x$-axis
+of the plot.  Krouwer~\cite{kro08why} concluded that:
+\bi
+\item When the two measures have nearly equal variability, i.e., when
+  comparing two ``field measurements'', the Bland-Altman approach is preferred
+\item When one measurement is a ``reference standard'' having much less
+  variation than the field measurement, the reference standard and not
+  the average of the two measurements should be on the $x$-axis
+\ei
+
 <<baplot,w=5.5,h=4.5,cap='Bland-Altman plot for the oroesophageal and conventional pH measurements, using hexagonal binning because of the large sample size.  The difference in pH mesaurements (oro.\\ -conventional) is presented on the $y$-axis and the average of the two devices on the $x$-axis.  We see poor agreement around pH values of 4-5',scap='Bland-Altman plot for 2 pH measurements'>>=
 require(Hmisc)
 getHdata(esopH)

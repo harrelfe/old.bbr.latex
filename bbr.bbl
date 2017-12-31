@@ -1946,6 +1946,42 @@
       \range{pages}{14}
       \keyw{change,ratio,*import}
     \endentry
+    \entry{kro08why}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3df0acf37e7e46643ed46fb45c991e9c}{%
+           family={Krouwer},
+           familyi={K\bibinitperiod},
+           given={Jan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Krouwer Consulting, 26 Parks Drive, Sherborn, MA 01770, U.S.A.}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Ltd.}%
+      }
+      \strng{namehash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \strng{fullhash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \strng{authornamehash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \strng{authorfullhash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0277-6715}
+      \field{journaltitle}{Statist. Med.}
+      \field{month}{2}
+      \field{number}{5}
+      \field{title}{{Why Bland-Altman plots should use X, not (Y+X)/2 when X is a reference method}}
+      \field{volume}{27}
+      \field{year}{2008}
+      \field{pages}{778\bibrangedash 780}
+      \range{pages}{3}
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.3086
+      \endverb
+      \keyw{change,smooth-bland-altman-plots}
+    \endentry
     \entry{len01som}{article}{}
       \name{author}{1}{}{%
         {{hash=ecfbfbea27319aefa096b0c3a5105ca3}{%
