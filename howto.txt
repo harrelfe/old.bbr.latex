@@ -1,0 +1,12 @@
+To link to a specific section from a web browser that has a pdf viewer plugin, put this in the text:
+
+\usepackage{hypperef}
+
+\clearpage
+\hypertarget{foo}{}
+\chapter{...}
+
+Then reference
+http://biostat.mc.vanderbilt.edu/tmp/bbr.pdf#nameddest=foo
+
+If you put \hypertarget after \chapter the browser will not show the chapter title.
