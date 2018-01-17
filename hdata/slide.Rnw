@@ -152,7 +152,7 @@ forests are ``data hungry'', requiring as many as 200 events per
 candidate variable for their apparent predictive discrimination to not
 decline when evaluated in a new sample~\cite{plo14mod}.
 
-\subsection{Data Reduction Following by Traditional Regression Modeling}
+\subsection{Data Reduction Followed by Traditional Regression Modeling}
 This approach uses techniques such as principle component analysis (PCA) whereby a large number of candidate $X$s are reduced to a few summary scores.  PCA is based on additively combining features so as to maximize the variation of the whole set of features that is explained by the summary score.  A small number of PCA scores are then put into an ordinary regression model (e.g., binary logistic model) to predict $Y$.  The result is sometimes satisfactory though no easier to interpret than shrinkage methods.
 
 \subsection{Model Approximation}

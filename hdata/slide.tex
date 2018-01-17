@@ -149,7 +149,7 @@ forests are ``data hungry'', requiring as many as 200 events per
 candidate variable for their apparent predictive discrimination to not
 decline when evaluated in a new sample~\cite{plo14mod}.
 
-\subsection{Data Reduction Following by Traditional Regression Modeling}
+\subsection{Data Reduction Followed by Traditional Regression Modeling}
 This approach uses techniques such as principle component analysis (PCA) whereby a large number of candidate $X$s are reduced to a few summary scores.  PCA is based on additively combining features so as to maximize the variation of the whole set of features that is explained by the summary score.  A small number of PCA scores are then put into an ordinary regression model (e.g., binary logistic model) to predict $Y$.  The result is sometimes satisfactory though no easier to interpret than shrinkage methods.
 
 \subsection{Model Approximation}
@@ -277,7 +277,7 @@ pl(0.1)
 \end{Sinput}
 
 
-\centerline{\includegraphics{hdata-simor-plot-1} }
+\centerline{\includegraphics[width=\maxwidth]{hdata-simor-plot-1} }
 
 \end{Schunk}
 
@@ -287,7 +287,7 @@ pl(0.3)
 \end{Sinput}
 
 
-\centerline{\includegraphics{hdata-simor-plotb-1} }
+\centerline{\includegraphics[width=\maxwidth]{hdata-simor-plotb-1} }
 
 \end{Schunk}
 The last two figures use a log scale for the $y$-axis (estimated odds
@@ -310,7 +310,7 @@ ggplot(U, aes(x=n, y=mmoe)) + geom_point() + facet_grid(Features ~ Yprev) +
 \end{Sinput}
 
 
-\centerline{\includegraphics{hdata-simor-mmoe-1} }
+\centerline{\includegraphics[width=\maxwidth]{hdata-simor-mmoe-1} }
 
 \end{Schunk}
 Horizontal red lines depict a multiplicative margin of error (MMOE) of
@@ -330,7 +330,7 @@ ggplot(U, aes(x=n, y=rho)) + geom_point() +
 \end{Sinput}
 
 
-\centerline{\includegraphics{hdata-simor-rho-1} }
+\centerline{\includegraphics[width=\maxwidth]{hdata-simor-rho-1} }
 
 \end{Schunk}
 One may desire a correlation with the truth of say 0.8 and can solve
@@ -456,7 +456,7 @@ OR: 0.21   Feature # 99   True OR: 0.71   MMOE: 0.3
 \end{Soutput}
 
 
-\centerline{\includegraphics{hdata-simbd-1} }
+\centerline{\includegraphics[width=\maxwidth]{hdata-simbd-1} }
 
 \end{Schunk}
 
