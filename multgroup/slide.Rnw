@@ -454,7 +454,7 @@ See Chapter~\ref{chap:ancova} for much more information about ANCOVA
 in RCTs.   % ???? TODO
 
 
-\section{Multiple Comparisons}\label{multcomp} \ems{12.4.3}
+\section{Multiple Comparisons}\alabel{multcomp} \ems{12.4.3}
 \bi
 \item When hypotheses are prespecified and are few in number, don't
   need to correct $P$-values or $\alpha$ level in CLs for multiple

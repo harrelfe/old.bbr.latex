@@ -308,8 +308,8 @@ ggplot(esopH2, aes(x=time, y=diffpH)) +    # Fig. (*\ref{fig:corr-phtimediff}*)
        ylab('Average of Oropharyngeal Minus Conventional pH') +
        xlab('Time of Day')
 @ 
-\clearpage
-\subsection{Using $r$ to Compute Sample Size}
+
+\subsection{Sample Size for $r$}\alabel{sec:corr-n}
 \bi
 \item Without knowledge of population variances, etc., $r$ can be
   useful for planning studies

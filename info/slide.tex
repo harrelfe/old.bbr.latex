@@ -198,7 +198,7 @@ ggplot(p, rdata=r,     # Fig. (*\ref{fig:info-pneuwho}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{info-pneuwho-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-pneuwho-1} }
 
 \caption[Risk of pneumonia with two predictors]{Estimated risk of pneumonia with respect to two predictors in WHO ARI study from \citet{har98dev}.  Tick marks show data density of respiratory rate stratified by cough.  Any cutpoint for the rate \textbf{must} depend on cough to be consistent with optimum decision making, which must be risk-based.}\label{fig:info-pneuwho}
 \end{figure}
@@ -214,7 +214,7 @@ ggplot(p, rdata=r,     # Fig. (*\ref{fig:info-pneuwho}*)
 \begin{Schunk}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{info-thresholds-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-thresholds-1} }
 
 \caption[Two kinds of thresholds]{Two kinds of thresholds.  The pattern on the left represents a discontinuity in the first derivative (slope) of the function relating a marker to outcome.  On the right there is a lowest-order discontinuity.}\label{fig:info-thresholds}
 \end{figure}
@@ -264,7 +264,7 @@ sizes.  That this method has nothing to do with biology can be readily
 seen by adding observations on either tail of the marker, resulting in
 a shift of the median toward that tail even though the relationship
 between the continuous marker and the outcome remains unchanged.
-\begin{center}\label{pg:info-gia14opt}
+\begin{center}\alabel{pg:info-gia14opt}
 \includegraphics[width=0.7\textwidth]{fig2c.png}
 \end{center}
 
@@ -374,7 +374,7 @@ See
 for excellent graphical examples of the harm of categorizing
 predictors, especially when using quantile groups.
 
-\subsection{Categorizing Outcomes}\label{sec:info-catoutcomes}
+\subsection{Categorizing Outcomes}\alabel{sec:info-catoutcomes}
 \bi
 \item Arbitrary, low power, can be difficult to interpret
 \item Example: ``The treatment is called successful if either the
@@ -410,7 +410,7 @@ observations, assuming that the dichotomization is at the
 very easy for dichotomization of $Y$ to raise the needed sample size
 by a factor of 5.
 
-\centerline{\includegraphics[width=\textwidth]{fed09conFig1}}\label{pg:info-fed09con}
+\centerline{\includegraphics[width=\textwidth]{fed09conFig1}}\alabel{pg:info-fed09con}
 \citet{fed09con}
 
 
@@ -581,7 +581,7 @@ ggplot(p, rdata=data.frame(psa), ylab='2-year Disease Recurrence Risk') +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{info-psa-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-psa-1} }
 
 \caption[Continuous PSA vs. risk]{Relationship between post-op PSA level and 2-year recurrence risk.  Horizontal lines represent the only prognoses provided by the new staging system. Data are courtesy of M Kattan from JNCI 98:715; 2006.  Modification of AJCC staging by Roach \emph{et al.} 2006.}\label{fig:info-psa}
 \end{figure}
@@ -736,7 +736,7 @@ stripplot(z ~ prognosis, data=w, lwd=1.5,    # Fig. (*\ref{fig:info-spectrum}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{info-spectrum-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-spectrum-1} }
 
 \caption[Prognostic spectrum from various models]{Prognostic spectrum from various models with model $\chi^2$ - d.f., and generalized $c$-index.  The mostly vertical segmented line connects different prognostic estimates for the same man.}\label{fig:info-spectrum}
 \end{figure}
@@ -816,7 +816,7 @@ underlying, permanent damage
 \citet{moo95dea}, pp.~289,49; D Graham, FDA
 
 \section{Case Study in Faulty Dichotomization of a Clinical Outcome: Statistical and Ethical Concerns in Clinical Trials for
-  Crohn's Disease}\label{sec:crohn}
+  Crohn's Disease}\alabel{sec:crohn}
 
 \subsection{Background}
 Many clinical trials are underway for studying treatments for Crohn's disease.
@@ -890,7 +890,7 @@ ggplot(Predict(f, fun=plogis), ylab='Probability of Response') +
 \end{Sinput}
 
 
-\centerline{\includegraphics{info-cutpointExists-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-cutpointExists-1} }
 
 \end{Schunk}
 
@@ -915,7 +915,7 @@ ggplot(Predict(f, fun=plogis), ylab='Probability of Remission')
 \end{Sinput}
 
 
-\centerline{\includegraphics{info-devlogist-1} }
+\centerline{\includegraphics[width=\maxwidth]{info-devlogist-1} }
 
 \end{Schunk}
 

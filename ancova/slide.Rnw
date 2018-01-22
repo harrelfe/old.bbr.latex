@@ -6,7 +6,7 @@ options(prType='latex')
 @
 
 \def\apacue{1}
-\chapter{Analysis of Covariance in Randomized Studies}\label{chap:ancova}
+\chapter{Analysis of Covariance in Randomized Studies}\alabel{chap:ancova}
 
 {\smaller[-1] \textbf{Hierarchy of Causal Inference for Treatment Efficacy}}
 
@@ -84,7 +84,7 @@ Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
 \item   Adjusted OR will be greater than unadjusted OR
 \ei
 
-\subsubsection{Example from GUSTO--I}\label{sec:ancova-gusto}\sound{anc-3}
+\subsubsection{Example from GUSTO--I}\alabel{sec:ancova-gusto}\sound{anc-3}
 \bi
 \item   Steyerberg, Bossuyt, Lee \cite{ste00cli}
 \item   Endpoint: 30--day mortality (0.07 overall)

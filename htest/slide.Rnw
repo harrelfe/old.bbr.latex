@@ -591,7 +591,7 @@ sum(dbinom(c(0, 1, 2, 8, 9, 10), 10, 0.5))
   from $p_{0}$
 \ei
 
-\subsection{Sample Size for Given Precision}
+\subsection{Sample Size for Given Precision}\alabel{sec:htest-p-n}
 \bi
 \item Approximate 0.95 CL: $\hat{p} \pm 1.96
   \sqrt{\hat{p}(1-\hat{p})/n}$
@@ -1170,7 +1170,7 @@ Subject & Drug 1 & Drug 2 & {\color{red}Diff (2-1)}
 Mean & $ 0.75$&$ 2.33$&$\color{red}1.58$\\
 SD & $ 1.79$&$ 2.0$&$\color{red}1.2$\\
 \hline
-\end{tabular}\label{sleeppaired}
+\end{tabular}\alabel{sleeppaired}
 \end{center}
 \end{table}
 <<tplot,w=5,h=3,cap='Raw data and box plots for paired data and their paired differences, with lines connecting points from the same subject.  Diamonds depict means.',scap='Data and box plots for paired data'>>=

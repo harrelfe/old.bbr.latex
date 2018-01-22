@@ -150,7 +150,7 @@ ggplot(d, aes(x=x, y=y)) + geom_point() + facet_wrap(~ stats) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{corr-corrplota-1} }
+\centerline{\includegraphics[width=\maxwidth]{corr-corrplota-1} }
 
 \caption[Example correlation coefficients]{Samples of size $n=50$ for X and Y are drawn from bivariate normal populations with true correlations ranging from 0.0 to 0.9. Pearson and Spearman sample correlations are shown for samples of size 50.  Besides the population correlation coefficient, each panel is labeled with the estimated Pearson $r$, its $t$ statistic, the estimated Spearman $\rho$, and its $t$ statistic}\label{fig:corr-corrplota}
 \end{figure}
@@ -228,7 +228,7 @@ plot(x,y,xlab='',ylab='')
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{corr-corrplotb-1} }
+\centerline{\includegraphics[width=\maxwidth]{corr-corrplotb-1} }
 
 \caption[Multiple datasets having same Pearson $r$]{Different observed datasets that have the same correlation.  All six plots have a sample Pearson correlation of $0.7$.}\label{fig:corr-corrplotb}
 \end{figure}
@@ -341,7 +341,7 @@ ggplot(esopH, aes(x=(conv + orophar)/2, y=diff)) +   # Fig. (*\ref{fig:corr-bapl
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{corr-baplot-1} }
+\centerline{\includegraphics[width=\maxwidth]{corr-baplot-1} }
 
 \caption[Bland-Altman plot for 2 pH measurements]{Bland-Altman plot for the oroesophageal and conventional pH measurements, using hexagonal binning because of the large sample size.  The difference in pH mesaurements (oro.\ -conventional) is presented on the $y$-axis and the average of the two devices on the $x$-axis.  We see poor agreement around pH values of 4-5}\label{fig:corr-baplot}
 \end{figure}
@@ -367,13 +367,13 @@ ggplot(esopH2, aes(x=time, y=diffpH)) +    # Fig. (*\ref{fig:corr-phtimediff}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{corr-phtimediff-1} }
+\centerline{\includegraphics[width=\maxwidth]{corr-phtimediff-1} }
 
 \caption[Difference in pH by time of day]{Difference in pH measurements (oro. - conventional) by time of day along with a loess smoother and pointwise 0.95 confidence bands.  Is the difference modified by a subject being in a supine position rather than being upright?}\label{fig:corr-phtimediff}
 \end{figure}
 \end{Schunk}
-\clearpage
-\subsection{Using $r$ to Compute Sample Size}
+
+\subsection{Sample Size for $r$}\alabel{sec:corr-n}
 \bi
 \item Without knowledge of population variances, etc., $r$ can be
   useful for planning studies
@@ -392,7 +392,7 @@ abline(h=seq(0, .4, by=0.025),
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{corr-moe-1} }
+\centerline{\includegraphics[width=\maxwidth]{corr-moe-1} }
 
 \caption[Margin of error for estimating correlation coefficient]{Margin for error (length of longer side of asymmetric 0.95 confidence interval) for $r$ in estimating $\rho$, when $\rho=0, 0.25, 0.5, 0.75$.  Calculations are based on Fisher $z$ transformation of $r$.}\label{fig:corr-moe}
 \end{figure}

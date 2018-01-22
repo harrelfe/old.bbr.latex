@@ -74,7 +74,7 @@ arrGrob(p1, p2, ncol=2)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{change-diabetes-1} }
+\centerline{\includegraphics[width=\maxwidth]{change-diabetes-1} }
 
 \caption[$\beta$-TG levels by diabetic status]{$\beta$-TG levels by diabetic status with a median line.  The left plot is on the original (non-transformed) scale and includes median lines.  The right plot displays the data on a log scale.}\label{fig:change-diabetes}
 \end{figure}
@@ -204,7 +204,7 @@ experimental unit
         largest post/pre ratios
 \ei
 
-\section{What's Wrong with Change in General?}\label{sec:changegen}
+\section{What's Wrong with Change in General?}\alabel{sec:changegen}
 \subsection{Change from Baseline in Randomized Studies}
 Many authors and pharmaceutical clinical trialists make the mistake of analyzing change from baseline instead of making the raw follow-up measurements the primary outcomes, covariate-adjusted for baseline.  The purpose of a parallel-group randomized clinical trial is to compare the parallel groups, not to compare a patient with herself at baseline. The central question is for two patients with the same pre measurement value of x, one given treatment A and the other treatment B, will the patients tend to have different post-treatment values? This is exactly what analysis of covariance assesses.  Within-patient change is affected strongly by regression to the mean and measurement error.  When the baseline value is one of the patient inclusion/exclusion criteria, the only meaningful change score requires one to have a second baseline measurement post patient qualification to cancel out much of the regression to the mean effect.  It is the second baseline that would be subtracted from the follow-up measurement.
 
@@ -298,7 +298,7 @@ w <- subset(w, crea1 < 2)
 dd <- datadist(w); options(datadist='dd')
 
 h <- lrm(hospdead ~ rcs(crea1, 5) + rcs(crea3, 5), data=w)
-anova(h)   # (*\label{pg:change-anova}*)
+anova(h)   # (*\alabel{pg:change-anova}*)
 \end{Sinput}
 \begin{Soutput}
                 Wald Statistics          Response: hospdead 
@@ -318,7 +318,7 @@ ggplot(p, ylab='Risk of Hospital Death')    # Fig. (*\ref{fig:change-suppcr}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{change-suppcr-1} }
+\centerline{\includegraphics[width=\maxwidth]{change-suppcr-1} }
 
 \caption[Hospital death as a function of creatinine]{Estimated risk of hospital death as a function of day 3 serum creatinine and sex for 7772 critically ill ICU patients having day 1 serum creatinine $< 2$ and surviving to the start of day 3 in the ICU}\label{fig:change-suppcr}
 \end{figure}
@@ -497,7 +497,7 @@ alternative hypothesis: true location is not equal to 0
 \end{Soutput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{change-analysis-1} }
+\centerline{\includegraphics[width=\maxwidth]{change-analysis-1} }
 
 \caption[Difference vs]{Difference vs.\ baseline plots for three transformations}\label{fig:change-analysis}
 \end{figure}
@@ -507,7 +507,7 @@ will not agree on each other.  They depend on the symmetry of the
 difference measure.
 \nocite{kai89,tor85how,mar85mod,kro93spu,col00sym}
 
-\section{Regression to the Mean}\label{sec:change-rttm}\movie{https://youtu.be/yWoKLDy8IQA}
+\section{Regression to the Mean}\alabel{sec:change-rttm}\movie{https://youtu.be/yWoKLDy8IQA}
 \bi
 \item One of the most important of all phenomena regarding data and estimation
 \item Occurs when subjects are selected because of their values
@@ -585,7 +585,7 @@ for(a in unique(initial)) {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{change-baseball-1} }
+\centerline{\includegraphics[width=\maxwidth]{change-baseball-1} }
 
 \caption[Baseball batting averages and regression to the mean]{Initial batting averages as estimates of final batting averages for players, along with shrunken estimates that account for regression to the mean}\label{fig:change-baseball}
 \end{figure}

@@ -4,7 +4,7 @@ require(Hmisc)
 knitrSet('r')
 @
 
-\chapter{\R}
+\chapter{\R}\alabel{chap:R}
 \section{Background}
 Computer code shown throughout these notes is \R~\cite{R}.  \R\ is free
 and is the 
@@ -231,7 +231,7 @@ Whenever you get a strange execution error it is sometimes helpful to
 show the history of all the function calls leading to that error.
 This is done by typing \co{traceback()} at the command prompt.
 
-\section{Importing Other Datasets}\label{sec:r-import}
+\section{Importing Other Datasets}\alabel{sec:r-import}
 Most of the work of getting some data sources ready for analysis involves
 reshaping datasets from wide to tall and thin, recoding variables,
 and merging multiple datasets.  \R\ has first-class capabilities for

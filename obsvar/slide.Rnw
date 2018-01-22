@@ -6,7 +6,7 @@ knitrSet('obsvar', width=80)
 @
 
 \chapter{Analysis of Observer Variability and Measurement
-  Agreement}\blfootnote{FE Harrell, 1987}\label{chap:obsvar}
+  Agreement}\blfootnote{FE Harrell, 1987}\alabel{chap:obsvar}
 \section{Intra- and Inter-observer Disagreement}
 Before using a measurement instrument or diagnostic technique
 routinely, a researcher may wish to quantify the extent to which two

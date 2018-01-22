@@ -65,7 +65,7 @@ plot(x, pt(x, 4, 6), type='l', xlab=xl, ylab='Cumulative Distribution Function')
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-pdfcdf-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-pdfcdf-1} }
 
 \caption[Density and cumulative distribution functions]{Example probability density (a) and cumulative probability distribution (b) for a positively skewed random variable (skewed to the right)}\label{fig:descript-pdfcdf}
 \end{figure}
@@ -80,7 +80,7 @@ lines(x, dnorm(x, 0, 1), col='blue', lwd=2)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-normalhist-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-normalhist-1} }
 
 \caption[Symmetric continuous distribution]{Example of a continuous distribution that is symmetric: the Gaussian (normal) distribution with mean 0 and variance 1, along with a histogram from a sample of size 1000 from this distribution}\label{fig:descript-normalhist}
 \end{figure}
@@ -96,7 +96,7 @@ abline(v=c(0, 6), col='red')   # Fig. (*\ref{fig:descript-bimode}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-bimode-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-bimode-1} }
 
 \caption[Bimodal distribution]{Example of a bimodal distribution from sampling from a mixture of normal distributions with different means and variances and estimating the underlying density function.  Vertical red lines indicate true population means of the two component populations.  Such a distribution can occur naturally or by failing to condition on a binary characteristic such as sex.}\label{fig:descript-bimode}
 \end{figure}
@@ -124,7 +124,7 @@ segments(x, 0, x, y)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-orda-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-orda-1} }
 
 \caption[Count variable with clumping at zero]{Distribution of number of days in the hospital in the year following diagnosis}\label{fig:descript-orda}
 \end{figure}
@@ -138,7 +138,7 @@ segments(x, 0, x, y)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-ordb-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-ordb-1} }
 
 \caption[Ordinal variable with strange distribution]{Distribution of a functional status score that does not have points in the middle}\label{fig:descript-ordb}
 \end{figure}
@@ -156,7 +156,7 @@ hist(scr, nclass=50, xlab='Serum Creatinine', ylab='Density', prob=TRUE)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-ordc-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-ordc-1} }
 
 \caption[Continuous distribution with clumping at the end]{Distribution of serum creatinine where the patient requiring dialysis is taken to have the worst renal function.  The variable is mostly continuous but is best analyzed as ordinal so that no assumption is made about how to score dialysis except for being worse than all non-dialysis patients. Data taken from NHANES where no patients were actually dialyzed.}\label{fig:descript-ordc}
 \end{figure}
@@ -287,7 +287,7 @@ nice cookbook.  See also \url{http://learnr.wordpress.com}.  To get
 excellent documentation with examples for any 
 \Co{ggplot2} function, google \Co{ggplot2 \emph{functionname}}.
 
-\subsection{Graphing Change vs.\ Raw Data}\label{sec:descript-change}
+\subsection{Graphing Change vs.\ Raw Data}\alabel{sec:descript-change}
 A common mistake in scientific graphics is to cover up subject
 variability by normalizing repeated measures for baseline (see
 Section~\ref{sec:overview-preprocessing}).  Among other problems, this
@@ -310,7 +310,7 @@ ggplot(cdystonia, aes(x=week, y=twstrs, color=factor(id))) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-spaghetti-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-spaghetti-1} }
 
 \caption[Spaghetti plot]{Spaghetti plot showing all the raw data on the response variable for each subject, stratified by dose and study site (1--9).  Importantly, week 0 (baseline) measurements are included.}\label{fig:descript-spaghetti}
 \end{figure}
@@ -352,7 +352,7 @@ ggplot(d, aes(x=Freq, y=agec)) + geom_point() +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-counts-dotchart-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-counts-dotchart-1} }
 
 \caption[Frequency dot chart]{Dot chart showing frequencies from cross-classifications of discrete variables for Titanic passengers}\label{fig:descript-counts-dotchart}
 \end{figure}
@@ -406,7 +406,7 @@ ggplot(esopH, aes(x=conv, y=orophar)) + geom_point(pch='.') +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-pH-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-pH-1} }
 
 \caption[Scatterplot of one measurement mode against another]{Scatterplot of one measurement mode against another}\label{fig:descript-pH}
 \end{figure}
@@ -436,7 +436,7 @@ with(esopH, ggfreqScatter(conv, orophar, bins=50, g=20) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-pHh2-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-pHh2-1} }
 
 \caption[Binned points (2500 total bins) with frequency counts shown as color and transparency level]{Binned points (2500 total bins) with frequency counts shown as color and transparency level}\label{fig:descript-pHh2}
 \end{figure}
@@ -460,12 +460,9 @@ Ecdf(pbcr[,c('bili','albumin','protime','sgot')],  # Fig. (*\ref{fig:descript-ec
     group=pbcr$drug, col=1:2,
     label.curves=list(keys='lines'))
 \end{Sinput}
-\begin{Soutput}
-click left mouse button to proceed
-\end{Soutput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-ecdf-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-ecdf-1} }
 
 \caption[Empirical cumulative distribution functions]{Empirical cumulative distributions of baseline variables  stratified by treatment in a randomized controlled trial. $m$ is the number of missing values.}\label{fig:descript-ecdf}
 \end{figure}
@@ -482,7 +479,7 @@ bwplot(dzgroup ~ crea, data=support, panel=panel.bpplot,
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-bwplot-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-bwplot-1} }
 
 \caption[Box plots with 0.05 and 0.95 quantiles]{Box plots showing the distribution of serum creatinine  stratified by major diagnosis.  Dot: mean; vertical line: median; large box:interquartile range.  The 0.05 and 0.95 quantiles are also shown, which is not the way typical box plots are drawn but is perhaps more useful.  Asymmetry of distributions can be seen by both disagreement between $Q_{3}-Q_{2}$ and $Q_{2}-Q_{1}$ and by disagreement between $Q_{2}$ and $\bar{x}$.}\label{fig:descript-bwplot}
 \end{figure}
@@ -496,7 +493,7 @@ bpplt()   # Fig. (*\ref{fig:descript-bpplt}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-bpplt-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-bpplt-1} }
 
 \caption[Schematic for extended box plot]{Schematic for extended box plot}\label{fig:descript-bpplt}
 \end{figure}
@@ -513,7 +510,7 @@ bwplot(cut2(age,g=4) ~ glyhb | wst*gender, data=diabetes,
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-glybox-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-glybox-1} }
 
 \caption[Extended box plots for glycohemoglobin]{Extended box plots for glycohemoglobin stratified by quartiles of age (vertical), two-tiles of waist circumference (horizontal), and sex (vertical)}\label{fig:descript-glybox}
 \end{figure}
@@ -581,7 +578,7 @@ abline(h=c(2 + 3.5)/2, col=gray(.85))
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-cldif-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-cldif-1} }
 
 \caption[Showing group means and differences]{Means and nonparametric bootstrap 0.95 confidence limits for glycated hemoglobin for males and females, and confidence limits for males - females.  Lower and upper $x$-axis scales have same spacings but different centers.  Confidence intervals for differences are generally wider than those for the individual constituent variables.}\label{fig:descript-cldif}
 \end{figure}
@@ -729,7 +726,7 @@ ggplot(Predict(f, fun=ginverse),   # Fig. (*\ref{fig:descript-rmsa}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-rmsa-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-rmsa-1} }
 
 \caption[Partial effects in NHANES HbA1c model]{Partial effects in NHANES HbA1c model}\label{fig:descript-rmsa}
 \end{figure}
@@ -744,7 +741,7 @@ plot(summary(f))   # Fig. (*\ref{fig:descript-rmsb}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-rmsb-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-rmsb-1} }
 
 \caption[Partial effects chart for transformed glycohemoglobin]{Partial effects chart on the transformed scale.  For age and BMI, effects are inter-quartile-range effects.  0.9, 0.95, and 0.99 confidence limits are shown.}\label{fig:descript-rmsb}
 \end{figure}
@@ -755,7 +752,7 @@ plot(nomogram(f, fun=ginverse, funlabel='Median HbA1c'))  # Fig. (*\ref{fig:desc
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-rmsc-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-rmsc-1} }
 
 \caption[Nomogram for predicting median HbA$_{1c}$]{Nomogram for predicting median HbA$_{1c}$.  To use the nomogram, use the top \Co{Points} scale to convert each predictor value to a common scale.  Add the points and read this number on the \Co{Total Points} scale, then read down to the median.}\label{fig:descript-rmsc}
 \end{figure}
@@ -770,7 +767,7 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
 \begin{figure}[!htbp]\leavevmode%
  \centerline{\includegraphics[width=.9\textwidth]{image-sepsis}}
  \caption{Estimated median survival time for critically ill adults}
- \label{fig:descript-image-sepsis}
+ \alabel{fig:descript-image-sepsis}
  \end{figure}
 
 \begin{figure}[!htbp]\leavevmode%
@@ -781,7 +778,7 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
    using a tensor spline of two restricted cubic splines and
    penalization (shrinkage).  Dark (cold color) regions are low risk,
    and bright (hot) regions are higher risk.}
- \label{fig:descript-image-stroke}
+ \alabel{fig:descript-image-stroke}
  \end{figure}
  
  Figure~\ref{fig:descript-image-stroke} is particularly interesting
@@ -878,7 +875,7 @@ ggplot(s, aes(x=smoke, y=fev, fill=sex)) +    # Fig. (*\ref{fig:descript-dynamit
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-dynamite-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-dynamite-1} }
 
 \caption[Bar plot with error bars---``dynamite plot'']{Bar plot with error bars---``dynamite plot''}\label{fig:descript-dynamite}
 \end{figure}
@@ -908,7 +905,7 @@ ggplot(FEV, aes(x=sex, y=fev)) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-tplot-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-tplot-1} }
 
 \caption[Dot plot with superimposed box plots]{Jittered raw data and box plots.  Middle vertical lines indicate medians and diamonds indicate means. Horizontal lines indicate 0.1 to 0.9 quantiles when $n\geq 10$.  The ink:information ratio for this plot is far better than a dynamite plot.}\label{fig:descript-tplot}
 \end{figure}
@@ -926,7 +923,7 @@ ggplot(FEV, aes(x=sex, y=fev)) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{descript-vplot-1} }
+\centerline{\includegraphics[width=\maxwidth]{descript-vplot-1} }
 
 \caption[Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}]{Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}}\label{fig:descript-vplot}
 \end{figure}

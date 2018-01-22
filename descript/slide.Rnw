@@ -243,7 +243,7 @@ nice cookbook.  See also \url{http://learnr.wordpress.com}.  To get
 excellent documentation with examples for any 
 \Co{ggplot2} function, google \Co{ggplot2 \emph{functionname}}.
 
-\subsection{Graphing Change vs.\ Raw Data}\label{sec:descript-change}
+\subsection{Graphing Change vs.\ Raw Data}\alabel{sec:descript-change}
 A common mistake in scientific graphics is to cover up subject
 variability by normalizing repeated measures for baseline (see
 Section~\ref{sec:overview-preprocessing}).  Among other problems, this
@@ -537,7 +537,7 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
 \begin{figure}[!htbp]\leavevmode%
  \centerline{\includegraphics[width=.9\textwidth]{image-sepsis}}
  \caption{Estimated median survival time for critically ill adults}
- \label{fig:descript-image-sepsis}
+ \alabel{fig:descript-image-sepsis}
  \end{figure}
 
 \begin{figure}[!htbp]\leavevmode%
@@ -548,7 +548,7 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
    using a tensor spline of two restricted cubic splines and
    penalization (shrinkage).  Dark (cold color) regions are low risk,
    and bright (hot) regions are higher risk.}
- \label{fig:descript-image-stroke}
+ \alabel{fig:descript-image-stroke}
  \end{figure}
  
  Figure~\ref{fig:descript-image-stroke} is particularly interesting

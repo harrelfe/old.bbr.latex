@@ -7,7 +7,7 @@
 ## Attaching package: 'Hmisc'
 ## The following objects are masked from 'package:base':
 ## 
-##     format.pval, round.POSIXt, trunc.POSIXt, units
+##     format.pval, units
 Loading required package: data.table
 `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.
 Loading required package: rms

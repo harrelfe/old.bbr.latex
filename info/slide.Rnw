@@ -245,7 +245,7 @@ sizes.  That this method has nothing to do with biology can be readily
 seen by adding observations on either tail of the marker, resulting in
 a shift of the median toward that tail even though the relationship
 between the continuous marker and the outcome remains unchanged.
-\begin{center}\label{pg:info-gia14opt}
+\begin{center}\alabel{pg:info-gia14opt}
 \includegraphics[width=0.7\textwidth]{fig2c.png}
 \end{center}
 
@@ -307,7 +307,7 @@ See
 for excellent graphical examples of the harm of categorizing
 predictors, especially when using quantile groups.
 
-\subsection{Categorizing Outcomes}\label{sec:info-catoutcomes}
+\subsection{Categorizing Outcomes}\alabel{sec:info-catoutcomes}
 \bi
 \item Arbitrary, low power, can be difficult to interpret
 \item Example: ``The treatment is called successful if either the
@@ -343,7 +343,7 @@ observations, assuming that the dichotomization is at the
 very easy for dichotomization of $Y$ to raise the needed sample size
 by a factor of 5.
 
-\centerline{\includegraphics[width=\textwidth]{fed09conFig1}}\label{pg:info-fed09con}
+\centerline{\includegraphics[width=\textwidth]{fed09conFig1}}\alabel{pg:info-fed09con}
 \citet{fed09con}
 
 
@@ -625,7 +625,7 @@ underlying, permanent damage
 \citet{moo95dea}, pp.~289,49; D Graham, FDA
 
 \section{Case Study in Faulty Dichotomization of a Clinical Outcome: Statistical and Ethical Concerns in Clinical Trials for
-  Crohn's Disease}\label{sec:crohn}
+  Crohn's Disease}\alabel{sec:crohn}
 
 \subsection{Background}
 Many clinical trials are underway for studying treatments for Crohn's disease.

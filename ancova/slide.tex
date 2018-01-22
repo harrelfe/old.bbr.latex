@@ -2,7 +2,7 @@
 
 
 \def\apacue{1}
-\chapter{Analysis of Covariance in Randomized Studies}\label{chap:ancova}
+\chapter{Analysis of Covariance in Randomized Studies}\alabel{chap:ancova}
 
 {\smaller[-1] \textbf{Hierarchy of Causal Inference for Treatment Efficacy}}
 
@@ -80,7 +80,7 @@ Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
 \item   Adjusted OR will be greater than unadjusted OR
 \ei
 
-\subsubsection{Example from GUSTO--I}\label{sec:ancova-gusto}\sound{anc-3}
+\subsubsection{Example from GUSTO--I}\alabel{sec:ancova-gusto}\sound{anc-3}
 \bi
 \item   Steyerberg, Bossuyt, Lee \cite{ste00cli}
 \item   Endpoint: 30--day mortality (0.07 overall)
@@ -130,7 +130,7 @@ with(gustomin,
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-gustohistrisk-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-gustohistrisk-1} }
 
 \caption[Distribution of baseline risk in GUSTO-I]{Distribution of baseline risk in GUSTO-I.  Kernel density estimate of risk distribution for SK treatment.  Average risk is 0.07.  See also \cite{ioa97imp}.}\label{fig:ancova-gustohistrisk}
 \end{figure}
@@ -547,7 +547,7 @@ ggplot(k, aes(x=age, y=exp(Contrast))) + scale_y_log10(minor_breaks=seq(.2, .9, 
 \end{Sinput}
 
 
-\centerline{\includegraphics{ancova-hteplot-1} \includegraphics{ancova-hteplot-2} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-hteplot-1} \includegraphics[width=\maxwidth]{ancova-hteplot-2} }
 
 \end{Schunk}
 
@@ -622,7 +622,7 @@ ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.
 \end{Sinput}
 
 
-\centerline{\includegraphics{ancova-hteplot2-1} \includegraphics{ancova-hteplot2-2} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-hteplot2-1} \includegraphics[width=\maxwidth]{ancova-hteplot2-2} }
 
 
 The above analysis signified a treatment effect for both sex groups (both confidence limits exclude a hazard ratio of 1.0), whereas this should only be the case when age exceeds 60.  No sex $\times$ treatment interaction was indicated.
@@ -666,7 +666,7 @@ ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.
 \end{Sinput}
 
 
-\centerline{\includegraphics{ancova-htejoint-1} \includegraphics{ancova-htejoint-2} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-htejoint-1} \includegraphics[width=\maxwidth]{ancova-htejoint-2} }
 
 
 This is a more accurate representation of the true underlying model, and is easy to interpret because (1) age and sex are uncorrelated in the simulation model used, and (2) only two interactions were considered. 
@@ -758,7 +758,7 @@ for(h in or) {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-or-diff-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-or-diff-1} }
 
 \caption[Absolute risk increase as a function of risk]{Absolute risk increase as a function of risk for control subject.  Numbers on curves are treatment:control odds ratios.}\label{fig:ancova-or-diff}
 \end{figure}
@@ -817,7 +817,7 @@ ggplot(d, aes(x=risk.standard, y=risk.diff, color=X)) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-ordiff-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-ordiff-1} }
 
 \caption[Absolute risk reduction by background risk and interacting factor]{Absolute risk reduction by a new treatment as a function of background risk and an interacting factor}\label{fig:ancova-ordiff}
 \end{figure}
@@ -851,7 +851,7 @@ text(med, 2, 'Median', srt=45, adj=0)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-gusto-histdelt-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-gusto-histdelt-1} }
 
 \caption[Absolute benefit vs.\ baseline risk]{Distribution of absolute risk reduction with $t$--PA vs.\ SK}\label{fig:ancova-gusto-histdelt}
 \end{figure}
@@ -964,7 +964,7 @@ plot(n, varname.label.sep=' ', xfrac=.27, lmgp=.2, cex.axis=.6)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-gusto-nomogram-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-gusto-nomogram-1} }
 
 \caption[GUSTO-I nomogram]{Nomogram to predict SK - $t$--PA mortality difference, based on the difference between two binary logistic models.}\label{fig:ancova-gusto-nomogram}
 \end{figure}
@@ -998,7 +998,7 @@ for(h in hr) {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-hr-vs-surv-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-hr-vs-surv-1} }
 
 \caption[Baseline risk, hazard ratio, and absolute effect]{Relationship between baseline risk, relative treatment effect (hazard ratio --- numbers above curves) and absolute treatment effect.}\label{fig:ancova-hr-vs-surv}
 \end{figure}
@@ -1028,7 +1028,7 @@ text(m,.01,'Cost using\n  average\n    reduction',srt=45,adj=0)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{ancova-gusto-histcost-1} }
+\centerline{\includegraphics[width=\maxwidth]{ancova-gusto-histcost-1} }
 
 \caption[Distribution of cost per life saved in GUSTO--I]{Distribution of cost per life saved in GUSTO--I}\label{fig:ancova-gusto-histcost}
 \end{figure}

@@ -28,6 +28,21 @@
 \newcommand{\citet}[1]{\textcite{#1}}
 \newcommand{\citep}[2]{\parencite[#2]{#1}}  % #2 is page or section #
 
+% Runs both \label{foo} and \hypertarget{foo}{} so that can link to
+% places from browsers using
+% e.g. fharrell.com/docs/bbr.pdf#nameddest=foo
+% \newcommand{\alabel}[1]{\label{#1}\hypertarget{#1}{}}
+\newcommand{\alabel}[1]{\label{#1}}
+
+% Redefine \label to add hypertarget anchor so that browsers can
+% directly navigate to label using foo.pdf#nameddest=...
+% See https://stackoverflow.com/questions/48322282
+\AtBeginDocument{
+ \let\oldlabel\label
+ \renewcommand{\label}[1]{\oldlabel{#1}\hypertarget{#1}{}}
+ }
+
+
 \newcommand{\attrib}[1]{\vspace{-4ex}\begin{flushright}\textcolor{blue}{\smaller
       #1}\end{flushright}}
 \newcommand{\quoteit}[2]{~~~~~~\parbox{4.5in}{\normalsize#1}\hfill\parbox{1.5in}{\normalsize\textcolor{blue}{#2}}}
@@ -56,21 +71,21 @@
         \leavevmode
         \centerline{\scalebox{#3}{\includegraphics{#1.pdf}}}
         \caption{\large#2}
-        \label{#1}
+        \alabel{#1}
         \end{figure}}
 
 \newcommand{\figs}[3]{\begin{figure}[!htbp]
         \leavevmode
         \centerline{\scalebox{#3}{\includegraphics{slinks/#1.pdf}}}
         \caption{\large#2}
-        \label{#1}
+        \alabel{#1}
         \end{figure}}
 
 \newcommand{\bfig}[2]{\begin{figure}[!htbp]
         \leavevmode
         \centerline{\includegraphics{#1.pdf}}
         \caption{\large#2}
-        \label{#1}
+        \alabel{#1}
         \end{figure}}
 
 \renewcommand{\thefootnote}{\alph{footnote}}

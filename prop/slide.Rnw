@@ -284,7 +284,7 @@ qnorm(.975)^2 / 2 / (diff ^ 2)
 
 %In the case $n_{1}=n_{2}=n, \alpha=0.05$, the confidence interval has maximum width with $p_{1}$ and $p_{2}$ are near 0.5.  As a worse case the margin of error is then $1.96/\sqrt{2n}$.  The $n$ required to achieve a margin of error of $\delta$ at the 0.95 confidence level is $1.92/\delta^{2}$.  For example, to approximate the difference in the incidence probability of stroke between males and females to at worst $\pm 0.05$ at the 0.95 level would require 768 patients in each group.
 
-\section{Relative Effect Measures}\label{sec:prop-rem}
+\section{Relative Effect Measures}\alabel{sec:prop-rem}
 \bi
 \item We have been dealing with risk differences which are measures of
   absolute effect

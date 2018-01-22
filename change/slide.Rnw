@@ -147,7 +147,7 @@ experimental unit
         largest post/pre ratios
 \ei
 
-\section{What's Wrong with Change in General?}\label{sec:changegen}
+\section{What's Wrong with Change in General?}\alabel{sec:changegen}
 \subsection{Change from Baseline in Randomized Studies}
 Many authors and pharmaceutical clinical trialists make the mistake of analyzing change from baseline instead of making the raw follow-up measurements the primary outcomes, covariate-adjusted for baseline.  The purpose of a parallel-group randomized clinical trial is to compare the parallel groups, not to compare a patient with herself at baseline. The central question is for two patients with the same pre measurement value of x, one given treatment A and the other treatment B, will the patients tend to have different post-treatment values? This is exactly what analysis of covariance assesses.  Within-patient change is affected strongly by regression to the mean and measurement error.  When the baseline value is one of the patient inclusion/exclusion criteria, the only meaningful change score requires one to have a second baseline measurement post patient qualification to cancel out much of the regression to the mean effect.  It is the second baseline that would be subtracted from the follow-up measurement.
 
@@ -231,7 +231,7 @@ w <- subset(w, crea1 < 2)
 dd <- datadist(w); options(datadist='dd')
 
 h <- lrm(hospdead ~ rcs(crea1, 5) + rcs(crea3, 5), data=w)
-anova(h)   # (*\label{pg:change-anova}*)
+anova(h)   # (*\alabel{pg:change-anova}*)
 h <- lrm(hospdead ~ sex * rcs(crea3, 5), data=w)
 p <- Predict(h, crea3, sex, fun=plogis)
 ggplot(p, ylab='Risk of Hospital Death')    # Fig. (*\ref{fig:change-suppcr}*)
@@ -352,7 +352,7 @@ will not agree on each other.  They depend on the symmetry of the
 difference measure.
 \nocite{kai89,tor85how,mar85mod,kro93spu,col00sym}
 
-\section{Regression to the Mean}\label{sec:change-rttm}\movie{https://youtu.be/yWoKLDy8IQA}
+\section{Regression to the Mean}\alabel{sec:change-rttm}\movie{https://youtu.be/yWoKLDy8IQA}
 \bi
 \item One of the most important of all phenomena regarding data and estimation
 \item Occurs when subjects are selected because of their values

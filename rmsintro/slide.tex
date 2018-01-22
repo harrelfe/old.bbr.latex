@@ -3,7 +3,7 @@
 
 \def\apacue{1}
 \chapter{Introduction to the \R\ \co{rms} Package:
-  The Linear Model}\label{chap:rmsintro}
+  The Linear Model}\alabel{chap:rmsintro}
 \begin{flushright}\small
 \textcolor{blue}{From \emph{Biostatistics for Biomedical
       Research} \\\url{biostat.mc.vanderbilt.edu/ClinStat}}
@@ -133,7 +133,7 @@ dd <- datadist(dd, cholesterol, height)
 \end{Sinput}
 \end{Schunk}
 
-\section{Short Example}\label{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
+\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
 Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
   of Biostatistics} and originally from Landrigan PJ~\emph{et al}, Lancet
 1:708-715, March 29, 1975.  The study was of psychological and
@@ -319,7 +319,7 @@ function (age = 8.375, ld72 = 34, ld73 = 30.5)
     34.105855 + 2.607845 * age - 0.024597799 * ld72 - 0.23896951 * 
         ld73
 }
-<environment: 0x65f7320>
+<environment: 0x55fc8ea2f8b8>
 \end{Soutput}
 \begin{Sinput}
 # Estimate mean maxfwt at age 10, .1 quantiles of ld72, ld73 and .9 quantile of ld73
@@ -361,7 +361,7 @@ qqline(as.numeric(r))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-7-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-7-1} }
 
 \end{Schunk}
 \ei
@@ -386,7 +386,7 @@ ggplot(Predict(f))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-8-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-8-1} }
 
 \end{Schunk}
 \item To take control of which predictors are plotted, or to specify
@@ -398,7 +398,7 @@ ggplot(Predict(f, age))   # plot age effect, using default range,
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-9-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-9-1} }
 
 \end{Schunk}
 \begin{Schunk}
@@ -407,7 +407,7 @@ ggplot(Predict(f, age=3:15))  # plot age=3,4,...,15 (*\ipacue*)
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-10-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-10-1} }
 
 \end{Schunk}
 \begin{Schunk}
@@ -416,7 +416,7 @@ ggplot(Predict(f, age=seq(3,16,length=150)))   # plot age=3-16, 150 points (*\ip
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-11-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-11-1} }
 
 \end{Schunk}
 \item To get confidence limits for $\hat{y}$: \ipacue
@@ -426,7 +426,7 @@ ggplot(Predict(f, age, conf.type='individual'))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-12-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-12-1} }
 
 \end{Schunk}
 \item To show both types of 0.99 confidence limits on one plot: \ipacue
@@ -439,7 +439,7 @@ ggplot(p)
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-13-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-13-1} }
 
 \end{Schunk}
 \item Non-plotted variables are set to reference values (median and
@@ -451,7 +451,7 @@ ggplot(Predict(f, ld73, age=3))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-14-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-14-1} }
 
 \end{Schunk}
 \item To make separate lines for two ages: \ipacue
@@ -461,7 +461,7 @@ ggplot(Predict(f, ld73, age=c(3,9)))  # add ,conf.int=FALSE to suppress conf. ba
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-15-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-15-1} }
 
 \end{Schunk}
 \item To plot a 3-d surface for two continuous predictors against
@@ -472,7 +472,7 @@ bplot(Predict(f, ld72, ld73))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-16-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-16-1} }
 
 \end{Schunk}
 \ei
@@ -484,7 +484,7 @@ plot(nomogram(f))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-17-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-17-1} }
 
 \end{Schunk}
 See
@@ -576,7 +576,7 @@ plot(summary(f))
 \end{Sinput}
 
 
-\centerline{\includegraphics{rmsintro-unnamed-chunk-20-1} }
+\centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-20-1} }
 
 \end{Schunk}
 

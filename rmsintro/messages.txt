@@ -7,7 +7,7 @@
 ## Attaching package: 'Hmisc'
 ## The following objects are masked from 'package:base':
 ## 
-##     format.pval, round.POSIXt, trunc.POSIXt, units
+##     format.pval, units
 Loading required package: rms
 Loading required package: SparseM
 

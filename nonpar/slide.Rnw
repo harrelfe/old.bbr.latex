@@ -9,7 +9,7 @@ knitrSet('nonpar')
 %d1 <- sleep$extra[sleep$group==2] - sleep$extra[sleep$group==1]
 %d1[1] <- d1[1] * -1
 
-\chapter{Nonparametric Statistical Tests}\label{chap:nonpar}\ros{9}\katz{5.4}
+\chapter{Nonparametric Statistical Tests}\alabel{chap:nonpar}\ros{9}\katz{5.4}
 \section{When to use non-parametric methods}
 \bi
 \item Short answer: Good default when $P$-values are needed
@@ -415,7 +415,7 @@ this estimator.
 \item Difference in sample medians is 124 - 119.5 = 4.5
 \item Consider all possible differences between sample 1 and sample 2
 \ei
-\begin{center}\begin{tabular}{l|cccc} \hline \hline \label{pg:nonpar-mf}
+\begin{center}\begin{tabular}{l|cccc} \hline \hline \alabel{pg:nonpar-mf}
  & \multicolumn{4}{c}{Female} \\
 Male & 120 & 118 & 121 & 119 \\ \hline
 124 & 4 & 6 & 3 & 5 \\ 
@@ -454,7 +454,7 @@ ggplot(data.frame(dif, pval), aes(x=dif, y=pval)) +
 @ 
 See Section~\ref{sec:nonpar-clmed} for a more approximate confidence interval.
 
-\section{Confidence Intervals for Medians and Their Differences} \altman{36-43}\label{sec:nonpar-clmed}
+\section{Confidence Intervals for Medians and Their Differences} \altman{36-43}\alabel{sec:nonpar-clmed}
 \bi 
 \item Confidence intervals for the median (one sample)
 \bi 

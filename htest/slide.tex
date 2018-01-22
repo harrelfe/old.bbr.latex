@@ -367,7 +367,7 @@ labcurve(w, pl=TRUE, keys='lines', col=c(1,2,4,5), lty=c(2,1,1,1),
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{htest-tpdfs-1} }
+\centerline{\includegraphics[width=\maxwidth]{htest-tpdfs-1} }
 
 \caption[$t$ distribution for varying d.f.]{Comparison of probability densities for $t_2$, $t_5$, $t_{50}$, and normal distributions}\label{fig:htest-tpdfs}
 \end{figure}
@@ -643,7 +643,7 @@ sum(dbinom(c(0, 1, 2, 8, 9, 10), 10, 0.5))
   from $p_{0}$
 \ei
 
-\subsection{Sample Size for Given Precision}
+\subsection{Sample Size for Given Precision}\alabel{sec:htest-p-n}
 \bi
 \item Approximate 0.95 CL: $\hat{p} \pm 1.96
   \sqrt{\hat{p}(1-\hat{p})/n}$
@@ -688,7 +688,7 @@ minor.tick()
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{htest-moeor-1} }
+\centerline{\includegraphics[width=\maxwidth]{htest-moeor-1} }
 
 \caption[Multiplicative margin of error in estimating odds when $n=384$ and the margin of error in estimating the absolute probability is $\leq 0.05$]{Multiplicative margin of error in estimating odds when $n=384$ and the margin of error in estimating the absolute probability is $\leq 0.05$.}\label{fig:htest-moeor}
 \end{figure}
@@ -1059,7 +1059,7 @@ nmin <- min(n[m <= 1.2])
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{htest-smmoe-1} }
+\centerline{\includegraphics[width=\maxwidth]{htest-smmoe-1} }
 
 \caption[Margin of error in estimating $\sigma$]{Multiplicative margin of error in estimating $\sigma$ as a function of sample size, with 0.95 confidence}\label{fig:htest-smmoe}
 \end{figure}
@@ -1220,7 +1220,7 @@ ggplot(sleep, aes(x=drug, y=extra, group=drug)) +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{htest-sleepa-1} }
+\centerline{\includegraphics[width=\maxwidth]{htest-sleepa-1} }
 
 \caption[Two-sample parallel group RCT]{Data for two-sample RCT.  Measurements are differences from a control period while subjects were on placebo.  Control period data were not used in the analysis except for normalization.  Diamonds depict means.}\label{fig:htest-sleepa}
 \end{figure}
@@ -1318,7 +1318,7 @@ Subject & Drug 1 & Drug 2 & {\color{red}Diff (2-1)}
 Mean & $ 0.75$&$ 2.33$&$\color{red}1.58$\\
 SD & $ 1.79$&$ 2.0$&$\color{red}1.2$\\
 \hline
-\end{tabular}\label{sleeppaired}
+\end{tabular}\alabel{sleeppaired}
 \end{center}
 \end{table}
 \begin{Schunk}
@@ -1342,7 +1342,7 @@ ggplot(d, aes(x=Drug, y=extra)) +   # Fig. (*\ref{fig:htest-tplot}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{htest-tplot-1} }
+\centerline{\includegraphics[width=\maxwidth]{htest-tplot-1} }
 
 \caption[Data and box plots for paired data]{Raw data and box plots for paired data and their paired differences, with lines connecting points from the same subject.  Diamonds depict means.}\label{fig:htest-tplot}
 \end{figure}

@@ -6,7 +6,7 @@ knitrSet('rmsintro', width=80)
 
 \def\apacue{1}
 \chapter{Introduction to the \R\ \co{rms} Package:
-  The Linear Model}\label{chap:rmsintro}
+  The Linear Model}\alabel{chap:rmsintro}
 \begin{flushright}\small
 \textcolor{blue}{From \emph{Biostatistics for Biomedical
       Research} \\\url{biostat.mc.vanderbilt.edu/ClinStat}}
@@ -126,7 +126,7 @@ dd <- datadist(dd, cholesterol, height)
 # Adds or replaces cholesterol, height summary stats in dd
 @
 
-\section{Short Example}\label{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
+\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
 Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
   of Biostatistics} and originally from Landrigan PJ~\emph{et al}, Lancet
 1:708-715, March 29, 1975.  The study was of psychological and
