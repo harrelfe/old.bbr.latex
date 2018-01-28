@@ -40,22 +40,22 @@ lead <- upData(lead,
                units=c(age='years', ld72='mg/100*ml', ld73='mg/100*ml'))
 
 contents(lead)
-describe(lead)
+describe(lead)   # (*\ipacue*)
 dd <- datadist(lead); options(datadist='dd')
-dd    # show what datadist computed
+dd    # show what datadist computed (*\ipacue*)
 # Fit an ordinary linear regression model with 3 predictors assumed linear
 f <- ols(maxfwt ~ age + ld72 + ld73, data=lead)
-f         # same as print(f)
+f         # same as print(f)  (*\ipacue*)
 coef(f)   # retrieve coefficients
-specs(f, long=TRUE)   # show how parameters are assigned to predictors,
+specs(f, long=TRUE)   # show how parameters are assigned to predictors, (*\ipacue*)
                       # and predictor distribution summaries driving plots
-g <- Function(f)  # create an R function that represents the fitted model
+g <- Function(f)  # create an R function that represents the fitted model (*\ipacue*)
 # Note that the default values for g's arguments are medians
 g
 # Estimate mean maxfwt at age 10, .1 quantiles of ld72, ld73 and .9 quantile of ld73
 # keeping ld72 at .1 quantile
 g(age=10, ld72=21, ld73=c(21, 47))  # more exposure in 1973 decreased y by 6
-# Get the same estimates another way but also get std. errors
+# Get the same estimates another way but also get std. errors (*\ipacue*)
 predict(f, data.frame(age=10, ld72=21, ld73=c(21, 47)), se.fit=TRUE)
 
 ## ----h=5,w=5,top=1-------------------------------------------------------
@@ -75,10 +75,10 @@ ggplot(Predict(f, age))   # plot age effect, using default range,
                           # 10th smallest to 10th largest age
 
 ## ------------------------------------------------------------------------
-ggplot(Predict(f, age=3:15))  # plot age=3,4,...,15
+ggplot(Predict(f, age=3:15))  # plot age=3,4,...,15 (*\ipacue*)
 
 ## ------------------------------------------------------------------------
-ggplot(Predict(f, age=seq(3,16,length=150)))   # plot age=3-16, 150 points
+ggplot(Predict(f, age=seq(3,16,length=150)))   # plot age=3-16, 150 points (*\ipacue*)
 
 ## ------------------------------------------------------------------------
 ggplot(Predict(f, age, conf.type='individual'))
@@ -102,13 +102,13 @@ bplot(Predict(f, ld72, ld73))
 plot(nomogram(f))
 
 ## ------------------------------------------------------------------------
-summary(f)         # inter-quartile-range effects
+summary(f)         # inter-quartile-range effects (*\ipacue*)
 summary(f, age=5)  # adjust age to 5 when examining ld72,ld73
                    # (no effect since no interactions in model)
 summary(f, ld73=c(20, 40))  # effect of changing ld73 from 20 to 40
 
 ## ------------------------------------------------------------------------
-summary(f, age=5:6)    # starting age irrelevant since age is linear
+summary(f, age=5:6)    # starting age irrelevant since age is linear (*\ipacue*)
 
 ## ----h=2.5,top=2---------------------------------------------------------
 plot(summary(f))
@@ -124,7 +124,7 @@ newdat <- expand.grid(age=c(4, 8), ld72=c(21, 47), ld73=c(21, 47))
 newdat
 predict(f, newdat)     # 8 predictions
 
-predict(f, newdat, conf.int=0.95)  # also get CLs for mean
+predict(f, newdat, conf.int=0.95)  # also get CLs for mean (*\ipacue*)
 predict(f, newdat, conf.int=0.95, conf.type='individual')  # CLs for indiv.
 
 ## ------------------------------------------------------------------------
@@ -142,8 +142,8 @@ g(age=3)              # 3 year old at median ld72, ld73
 an <- anova(f)
 an                     # same as print(an)
 print(an, 'names')     # print names of variables being tested
-print(an, 'subscripts')# print subscripts in coef(f) (ignoring
+print(an, 'subscripts')# print subscripts in coef(f) (ignoring (*\ipacue*)
                        # the intercept) being tested
 print(an, 'dots')      # a dot in each position being tested
-anova(f, ld72, ld73)   # combine effects into a 2 d.f. test
+anova(f, ld72, ld73)   # combine effects into a 2 d.f. test (*\ipacue*)
 

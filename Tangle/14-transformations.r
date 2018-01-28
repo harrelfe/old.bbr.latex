@@ -11,11 +11,14 @@ d <- rbind(
              btg=c(11.5, 12.1, 16.1, 17.8, 24.0, 28.8, 33.9, 40.7,
                    51.3, 56.2, 61.7, 69.2)))
 require(ggplot2)
-p1 <- ggplot(d, aes(x=status, y=btg)) +    # Fig. (*\ref{fig:change-diabetes}*)
+require(data.table)
+d <- data.table(d)
+meds <- d[, j=list(btg = median(btg)), by = status]
+p1 <- 
+  ggplot(d, aes(x=status, y=btg)) +    # Fig. (*\ref{fig:change-diabetes}*)
   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
-  geom_errorbar(stat = "hline", yintercept = "median", width=.25, size=1.3,
-                aes(ymin=..y.., ymax=..y..)) +
-  xlab('') + ylab(expression(paste(beta-TG, ' (ng/day/100 ml creatinine)'))) +
+  geom_errorbar(aes(ymin=..y.., ymax=..y..), width=.25, size=1.3, data=meds) +
+   xlab('') + ylab(expression(paste(beta-TG, ' (ng/day/100 ml creatinine)'))) + 
   coord_flip()
 p2 <- ggplot(d, aes(x=status, y=btg)) +
   scale_y_log10(breaks=c(4,5,10,15,20,30,40,60,80)) +
@@ -31,6 +34,21 @@ t.test(log(btg) ~ status, data=d)
 ## ----diabetesw-----------------------------------------------------------
 wilcox.test(btg ~ status, data=d)
 wilcox.test(log(btg) ~ status, data=d)
+
+## ----orm, eval=FALSE-----------------------------------------------------
+## require(rms)
+## # Fit a smooth flexible relationship with baseline value y0
+## # (restricted cubic spline function with 4 default knots)
+## f <- orm(y ~ rcs(y0, 4) + treatment)
+## f
+## anova(f)
+## # Estimate mean y as a function of y0 and treatment
+## M <- Mean(f)   # creates R function to compute the mean
+## plot(Predict(f, treatment, fun=M))  # y0 set to median since not varied
+## # To allow treatment to interact with baseline value in a general way:
+## f <- orm(y ~ rcs(y0, 4) * treatment)
+## plot(Predict(f, y0, treatment))  # plot y0 on x-axis, 2 curves for 2 treatments
+## # The above plotted the linear predictor (log odds); can also plot mean
 
 ## ----suppcr,w=5,h=3.75,cap='Estimated risk of hospital death as a function of day 3 serum creatinine and sex for 7772 critically ill ICU patients having day 1 serum creatinine $< 2$ and surviving to the start of day 3 in the ICU',scap='Hospital death as a function of creatinine'----
 require(rms)
@@ -52,12 +70,12 @@ w <- subset(w, crea1 < 2)
 dd <- datadist(w); options(datadist='dd')
 
 h <- lrm(hospdead ~ rcs(crea1, 5) + rcs(crea3, 5), data=w)
-anova(h)   # (*\label{pg:change-anova}*)
+anova(h)   # (*\alabel{pg:change-anova}*)
 h <- lrm(hospdead ~ sex * rcs(crea3, 5), data=w)
 p <- Predict(h, crea3, sex, fun=plogis)
 ggplot(p, ylab='Risk of Hospital Death')    # Fig. (*\ref{fig:change-suppcr}*)
 
-## ----analysis,w=6,h=5,cap='Bland-Altman plots for three transformations'----
+## ----analysis,w=6,h=5,cap='Difference vs.\\ baseline plots for three transformations'----
 # Now add simulated some post data to the analysis of beta TG data
 # Assume that the intervention effect (pre -> post effect) is
 # multiplicative (x 1/4) and that there is a multiplicative error
@@ -65,18 +83,17 @@ ggplot(p, ylab='Risk of Hospital Death')    # Fig. (*\ref{fig:change-suppcr}*)
 set.seed(13)
 d$pre  <- d$btg
 d$post <- exp(log(d$pre) + log(.25) + rnorm(24, 0, .5))
-# Make Bland-Altman (Tukey mean-difference) plots on the original and
-# log scales
-p1 <- ggplot(d, aes(x=(pre + post) / 2, y=post - pre, color=status)) +
+# Make plots on the original and log scales
+p1 <- ggplot(d, aes(x=pre, y=post - pre, color=status)) +
   geom_point() + geom_smooth() + theme(legend.position='bottom')
 # Use problematic asymmetric % change
-p2 <- ggplot(d, aes(x=exp((log(pre) + log(post))/2), y=100*(post - pre)/pre,
+p2 <- ggplot(d, aes(x=pre, y=100*(post - pre)/pre,
                     color=status)) + geom_point() + geom_smooth() +
-      xlab('Geometric Mean') + theme(legend.position='none') +
+      xlab('pre') + theme(legend.position='none') +
       ylim(-125, 0)
-p3 <- ggplot(d, aes(x=exp((log(pre) + log(post))/2), y=log(post / pre),
+p3 <- ggplot(d, aes(x=pre, y=log(post / pre),
                     color=status)) + geom_point() + geom_smooth() +
-      xlab('Geometric Mean') + theme(legend.position='none') + ylim(-2.5, 0)
+      xlab('pre') + theme(legend.position='none') + ylim(-2.5, 0)
 arrGrob(p1, p2, p3, ncol=2)   # Fig. (*\ref{fig:change-analysis}*)
 with(d, {
      print(t.test(post - pre))

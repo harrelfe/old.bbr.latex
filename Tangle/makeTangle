@@ -1,5 +1,7 @@
 pushd ~/doc/bbr
 
+rm -f Tangle/*.r
+
 rtangle R/slide
 mv -f slide.R Tangle/1-R.r
 
@@ -52,6 +54,7 @@ rtangle repro/slide
 mv -f slide.R Tangle/21-reproducible.r
 
 cd Tangle
-rm -f /tmp/code.zip
-zip /tmp/code *.r
-browser http://biostat.mc.vanderbilt.edu/wiki/bin/attach/Main/ClinStat?filename=code.zip;revInfo=1
+rm -f ~/R/blog/blogdown/static/code/bbr.zip
+zip ~/R/blog/blogdown/static/code/bbr.zip *.r
+
+#browser http://biostat.mc.vanderbilt.edu/wiki/bin/attach/Main/ClinStat?filename=code.zip;revInfo=1

@@ -1,6 +1,7 @@
 ## ----echo=FALSE----------------------------------------------------------
 require(Hmisc)
 knitrSet('descript')
+options(prType='latex')    # for print, anova, summary
 
 ## ----pdfcdf,w=6,h=3,cap='Example probability density (a) and cumulative probability distribution (b) for a positively skewed random variable (skewed to the right)',scap='Density and cumulative distribution functions'----
 x <- seq(-3, 35, length=150)
@@ -48,6 +49,16 @@ ggplot(cdystonia, aes(x=week, y=twstrs, color=factor(id))) +
        facet_grid(treat ~ site) +
        guides(color=FALSE) # Fig. (*\ref{fig:descript-spaghetti}*)
 
+## ----counts-dotchart,cap='Dot chart showing frequencies from cross-classifications of discrete variables for Titanic passengers',scap='Frequency dot chart'----
+getHdata(titanic3)
+d <- upData(titanic3,
+            agec     = cut2(age, c(10, 15, 20, 30)), print=FALSE)
+d <- with(d, as.data.frame(table(sex, pclass, agec)))
+d <- subset(d, Freq > 0)
+ggplot(d, aes(x=Freq, y=agec)) + geom_point() +
+  facet_grid(sex ~ pclass) +
+  xlab('Frequency') + ylab('Age')
+
 ## ----pH,w=5,h=4,cap='Scatterplot of one measurement mode against another'----
 getHdata(esopH)
 contents(esopH)
@@ -57,13 +68,16 @@ ggplot(esopH, aes(x=conv, y=orophar)) + geom_point(pch='.') +
   xlab(xl) + ylab(yl) +   # Fig. (*\ref{fig:descript-pH}*)
   geom_abline(intercept = 0, slope = 1)
 
-## ----pHh,w=5.5,h=4.5,cap='Hexagonal binning replacing scatterplot for large $n$'----
-require(hexbin)
-ggplot(esopH, aes(x=conv, y=orophar)) +   # Fig. (*\ref{fig:descript-pHh}*)
-  stat_binhex(aes(alpha=..count.., color=Hmisc::cut2(..count.., g=20)),
-              bins=80, range=c(.1, .9)) +
-  xlab(xl) + ylab(yl) +
-  guides(alpha=FALSE, fill=FALSE, color=guide_legend(title='Frequency'))
+## ----pHhhex,eval=FALSE,w=5.5,h=4.5,cap='Hexagonal binning replacing scatterplot for large $n$'----
+## ggplot(esopH, aes(x=conv, y=orophar)) +
+##   stat_binhex(aes(alpha=..count.., color=Hmisc::cut2(..count.., g=20)),
+##               bins=80) +
+##   xlab(xl) + ylab(yl) +
+##   guides(alpha=FALSE, fill=FALSE, color=guide_legend(title='Frequency'))
+
+## ----pHh2,w=5.5,h=4.5,cap='Binned points (2500 total bins) with frequency counts shown as color and transparency level'----
+with(esopH, ggfreqScatter(conv, orophar, bins=50, g=20) +
+              geom_abline(intercept=0, slope=1))   # Fig. (*\ref{fig:descript-pHh2}*)
 
 ## ----ecdf,w=6,h=4.5,cap='Empirical cumulative distributions of baseline variables  stratified by treatment in a randomized controlled trial. $m$ is the number of missing values.',scap='Empirical cumulative distribution functions'----
 getHdata(pbc)
@@ -118,10 +132,9 @@ dd <- datadist(nhgh); options(datadist='dd')
 g        <- function(x) 0.09 - x ^ - (1 / 1.75)
 ginverse <- function(y) (0.09 - y) ^ -1.75
 f <- ols(g(gh) ~ rcs(age, 4) + re + sex + rcs(bmi, 4), data=nhgh)
-# If not using LaTeX, just use print(f), anova(f)
 cat('{\\small\n')
-print(f, latex=TRUE)
-latex(anova(f), dec.ss=3, dec.ms=3, file='', table.env=FALSE)
+f
+print(anova(f), dec.ss=3, dec.ms=3)
 cat('}\n')
 # Show partial effects of all variables in the model, on the original scale
 ggplot(Predict(f, fun=ginverse),   # Fig. (*\ref{fig:descript-rmsa}*)

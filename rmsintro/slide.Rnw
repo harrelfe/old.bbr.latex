@@ -7,10 +7,6 @@ knitrSet('rmsintro', width=80)
 \def\apacue{1}
 \chapter{Introduction to the \R\ \co{rms} Package:
   The Linear Model}\alabel{chap:rmsintro}
-\begin{flushright}\small
-\textcolor{blue}{From \emph{Biostatistics for Biomedical
-      Research} \\\url{biostat.mc.vanderbilt.edu/ClinStat}}
-\end{flushright}
 Some of the purposes of the \co{rms} package are to
 \bi
 \item make everyday statistical modeling easier to do
@@ -143,7 +139,7 @@ analyze lead exposure levels in 1972 and 1973, age, and
   regression assumptions.}.
 
 \textbf{Note}: To easily run all the following commands, open \ipacue
-\url{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/code.zip}
+\url{http://fharrell.com/code/bbr.zip}
 and then open the file \co{8-rmsintro.r} contained in the \co{.zip}
 file using \co{RStudio}.  Commands listed in previous sections were
 not actually executed so they are marked with the \R\ comment symbol
@@ -258,8 +254,7 @@ bplot(Predict(f, ld72, ld73))
 <<w=6,h=4>>=
 plot(nomogram(f))
 @
-See
-\url{http://stats.stackexchange.com/questions/155430/clarifications-regarding-reading-a-nomogram}
+See \href{http://stats.stackexchange.com/questions/155430/clarifications-regarding-reading-a-nomogram}{this}
 for excellent examples showing how to read such nomograms.
 
 \subsection{Point Estimates for Partial Effects} \sound{rrms-8}\ipacue

@@ -57,7 +57,10 @@ or
 # Standard error of log odds ratio:
 selor <- sqrt(1 / (n1 * p1 * (1 - p1)) + 1 / (n2 * p2 * (1 - p2)))
 # Get 0.95 confidence limits
-exp(log(or) + c(-1, 1) * qnorm(0.975) * selor)
+cls <- exp(log(or) + c(-1, 1) * qnorm(0.975) * selor)
+cls
+tcls <- paste0(round(or, 2), ' (0.95 CI: [', round(cls[1], 2),
+               ', ', round(cls[2], 2), '])')
 # Multiplying a constant by the vector -1, 1 does +/-
 x <- matrix(c(6, 19, 11, 100), nrow=2, byrow=TRUE)
 x

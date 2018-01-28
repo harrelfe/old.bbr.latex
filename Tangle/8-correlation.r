@@ -83,7 +83,7 @@ getHdata(esopH)
 esopH$diff <- with(esopH, orophar - conv)
 ggplot(esopH, aes(x=(conv + orophar)/2, y=diff)) +   # Fig. (*\ref{fig:corr-baplot}*)
   stat_binhex(aes(alpha=..count.., color=Hmisc::cut2(..count.., g=20)),
-              bins=80, range=c(.1, .9)) +
+              bins=80) +
   stat_smooth() +
   geom_hline(yintercept = mean(esopH$diff, na.rm=TRUE) +
    c(-1.96, 0, 1.96) * sd(esopH$diff, na.rm=TRUE),
@@ -104,7 +104,11 @@ ggplot(esopH2, aes(x=time, y=diffpH)) +    # Fig. (*\ref{fig:corr-phtimediff}*)
        ylab('Average of Oropharyngeal Minus Conventional pH') +
        xlab('Time of Day')
 
-## ----moe,w=5,h=4,cap='Margin for error (length of longer side of asymmetric 0.95 confidence interval) for $r$ in estimating $\\rho$, when $\\rho=0, 0.25, 0.5, 0.75$.  Calculations are based on Fisher $z$ transformation of $r$.',scap='Margin of error for estimating correlation coefficient'----
+## ----moe,w=7,h=5.5,cap='Margin for error (length of longer side of asymmetric 0.95 confidence interval) for $r$ in estimating $\\rho$, when $\\rho=0, 0.25, 0.5, 0.75$.  Calculations are based on Fisher $z$ transformation of $r$.',scap='Margin of error for estimating correlation coefficient'----
 require(Hmisc)
-plotCorrPrecision(rho=c(0, .25, .5, .75))
+plotCorrPrecision(rho=c(0, .25, .5, .75),
+                  n=seq(10, 1000, length=100),
+                  ylim=c(0, .4), col=1:4, opts=list(keys='lines'))
+abline(h=seq(0, .4, by=0.025),
+       v=seq(25, 975, by=25), col=gray(.9))
 

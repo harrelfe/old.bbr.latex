@@ -61,9 +61,14 @@ pbinom(2, 10, 0.5) + 1 - pbinom(7, 10, 0.5)
 sum(dbinom(c(0, 1, 2, 8, 9, 10), 10, 0.5))
 
 ## ----nmoep---------------------------------------------------------------
-delta <- 0.1
-n <- 0.25 * (qnorm(0.975) / delta) ^ 2
-n
+nprec <- function(delta) round(0.25 * (qnorm(0.975) / delta) ^ 2)
+nprec(0.1)
+
+## ----moeor,cap='Multiplicative margin of error in estimating odds when $n=384$ and the margin of error in estimating the absolute probability is $\\leq 0.05$.'----
+p <- seq(0.01, 0.99, length=200)
+mmoe <- exp(1.96 / sqrt(384 * p * (1 - p)))
+plot(p, mmoe, type='l', xlab='Unknown Probability p', ylab='MMOE')
+minor.tick()
 
 ## ----ptwins--------------------------------------------------------------
 xbar  <- -5
@@ -124,14 +129,15 @@ drug2 <- c(1.9, .8, 1.1, .1, -.1, 4.4, 5.5, 1.6, 4.6, 3.4)
 d <- data.frame(Drug=c(rep('Drug 1', 10), rep('Drug 2', 10),
                   rep('Difference', 10)),
                 extra=c(drug1, drug2, drug2 - drug1))
+w <- data.frame(drug1, drug2, diff=drug2 - drug1)
 
 ggplot(d, aes(x=Drug, y=extra)) +   # Fig. (*\ref{fig:htest-tplot}*)
   geom_boxplot(col='lightyellow1', alpha=.3, width=.5) + 
   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
   stat_summary(fun.y=mean, geom="point", col='red', shape=18, size=5) +
-  geom_segment(aes(x='Drug 1', xend='Drug 2', y=drug1, yend=drug2),
+  geom_segment(data=w, aes(x='Drug 1', xend='Drug 2', y=drug1, yend=drug2),
                col=gray(.8)) +
-  geom_segment(aes(x='Drug 1', xend='Difference', y=drug1, yend=drug2 - drug1),
+  geom_segment(data=w, aes(x='Drug 1', xend='Difference', y=drug1, yend=drug2 - drug1),
                col=gray(.8)) +
   xlab('') + ylab('Extra Hours of Sleep') + coord_flip() 
 

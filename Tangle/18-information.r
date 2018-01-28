@@ -83,7 +83,7 @@ ggplot(p, rdata=data.frame(psa), ylab='2-year Disease Recurrence Risk') +
   geom_hline(yintercept=unique(z), col='red', size=0.2)   # Fig. (*\ref{fig:info-psa}*)
 
 ## ----spectrum,w=5.75,h=6,cap='Prognostic spectrum from various models with model $\\chi^2$ - d.f., and generalized $c$-index.  The mostly vertical segmented line connects different prognostic estimates for the same man.',scap='Prognostic spectrum from various models'----
-f <- cph(S ~ rcs(sqrt(psa),4) + pol(gs,2), surv=TRUE)    
+f <- cph(S ~ rcs(sqrt(psa),4) + pol(gs,2), surv=TRUE)
 g <- function(form, lab) {
   f <- cph(form, surv=TRUE, subset=!u)
   cat(lab,'\n'); print(coef(f))

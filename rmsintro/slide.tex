@@ -4,10 +4,6 @@
 \def\apacue{1}
 \chapter{Introduction to the \R\ \co{rms} Package:
   The Linear Model}\alabel{chap:rmsintro}
-\begin{flushright}\small
-\textcolor{blue}{From \emph{Biostatistics for Biomedical
-      Research} \\\url{biostat.mc.vanderbilt.edu/ClinStat}}
-\end{flushright}
 Some of the purposes of the \co{rms} package are to
 \bi
 \item make everyday statistical modeling easier to do
@@ -150,7 +146,7 @@ analyze lead exposure levels in 1972 and 1973, age, and
   regression assumptions.}.
 
 \textbf{Note}: To easily run all the following commands, open \ipacue
-\url{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/code.zip}
+\url{http://fharrell.com/code/bbr.zip}
 and then open the file \co{8-rmsintro.r} contained in the \co{.zip}
 file using \co{RStudio}.  Commands listed in previous sections were
 not actually executed so they are marked with the \R\ comment symbol
@@ -319,7 +315,7 @@ function (age = 8.375, ld72 = 34, ld73 = 30.5)
     34.105855 + 2.607845 * age - 0.024597799 * ld72 - 0.23896951 * 
         ld73
 }
-<environment: 0x55fc8ea2f8b8>
+<environment: 0x55ed27d8cde0>
 \end{Soutput}
 \begin{Sinput}
 # Estimate mean maxfwt at age 10, .1 quantiles of ld72, ld73 and .9 quantile of ld73
@@ -487,8 +483,7 @@ plot(nomogram(f))
 \centerline{\includegraphics[width=\maxwidth]{rmsintro-unnamed-chunk-17-1} }
 
 \end{Schunk}
-See
-\url{http://stats.stackexchange.com/questions/155430/clarifications-regarding-reading-a-nomogram}
+See \href{http://stats.stackexchange.com/questions/155430/clarifications-regarding-reading-a-nomogram}{this}
 for excellent examples showing how to read such nomograms.
 
 \subsection{Point Estimates for Partial Effects} \sound{rrms-8}\ipacue

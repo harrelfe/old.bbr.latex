@@ -10,10 +10,14 @@ w <- rbind(
   data.frame(trt='8-Week Control', months=c(13.25,11.5,12,13.5,11.5,12.35)) )
 aggregate(months ~ trt, w, function(x) c(Mean=mean(x), Variance=var(x)))
 require(ggplot2)
+require(data.table)
+w <- data.table(w)
+stats <- w[, j=list(months = mean(months), var=var(months)), by = trt]
+
 ggplot(w, aes(x=trt, y=months)) +    # Fig. (*\ref{fig:multgroup-walking}*)
   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
-  geom_errorbar(stat = "hline", yintercept = "mean", width=.7, size=1.3,
-                aes(ymin=..y.., ymax=..y..)) +
+  geom_errorbar(aes(ymin=..y.., ymax=..y..), width=.7, size=1.3,
+                data=stats) +
   xlab('') + ylab('Months Until First Walking') + coord_flip()
 
 ## ----walk-anova----------------------------------------------------------

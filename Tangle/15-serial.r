@@ -2,7 +2,7 @@
 require(Hmisc)
 knitrSet('serial', width=80)
 
-## ----download,cache=TRUE-------------------------------------------------
+## ----download------------------------------------------------------------
 require(Hmisc)
 require(data.table)   # elegant handling of aggregation
 require(ggplot2)
@@ -47,11 +47,11 @@ areat <- function(x, y) {
   if(! any(x == 400)) NA else
   sum(diff(x) * (y[-1] + y[-length(y)]))/2
 }
-  
+
 w <- d[, j=g(dose, fbf), by = list(id, race)]   # uses data.table package
 a <- d[, j=g(dose, fbf, what='area'), by = list(id, race)]
 
-ggplot(d, aes(x=dose, y=fbf, color=factor(id))) +   # Fig. (*\ref{fig:serial-spag}*)
+ggplot(d, aes(x=dose, y=fbf, color=factor(id))) +   # Fig. (*\ref{fig:serial-spag}\ipacue*)
        geom_line() + geom_line(data=w, alpha=0.25) +
        geom_text(aes(label = round(area,1)), data=a, size=2.5,
                  position=position_dodge(width=50)) +
@@ -63,10 +63,10 @@ ggplot(d, aes(x=dose, y=fbf, color=factor(id))) +   # Fig. (*\ref{fig:serial-spa
 ggplot(a, aes(x=tarea, y=area, color=race)) + geom_point() +
   geom_abline(col=gray(.8)) +
   xlab('Area by Trapezoidal Rule / 400') +
-  ylab('Area by Spline Fit / 400')          # Fig. (*\ref{fig:serial-auctwo}*)
+  ylab('Area by Spline Fit / 400')          # Fig. (*\ref{fig:serial-auctwo}\ipacue*)
 
-## ----auc,w=5,h=2.5,cap='Mean blood flow computed from the areas under the spline curves, stratified by race, along with box plots',scap='Mean blood flow by race'----
-ggplot(a, aes(x=race, y=area)) +    # Fig. (*\ref{fig:serial-auc}*)
+## ----auc,w=5,h=1.5,cap='Mean blood flow computed from the areas under the spline curves, stratified by race, along with box plots',scap='Mean blood flow by race'----
+ggplot(a, aes(x=race, y=area)) +    # Fig. (*\ref{fig:serial-auc}\ipacue*)
   geom_boxplot(alpha=.5, width=.25) + geom_point() + coord_flip() +
   ylab(expression(paste('Mean Forearm Blood Flow,  ', scriptstyle(ml/min/dl))))
 
@@ -86,12 +86,12 @@ set.seed(2)
 v <- validate(f, B=1000)
 latex(v, file='')
 
-## ----glsa----------------------------------------------------------------
+## ----glsa,cap='Residual plot for generalized least squares fit on untransformed  \\co{fbf}'----
 require(nlme)
 dd <- datadist(d); options(datadist='dd')
 a <- Gls(fbf ~ race * rcs(dose, c(20,60,150)), data=d,
          correlation=corCAR1(form = ~ dose | id))
-plot(fitted(a), resid(a))
+plot(fitted(a), resid(a))   # Fig. (*\ref{fig:serial-glsa}\ipacue*)
 
 ## ----glsb,results='asis'-------------------------------------------------
 a <- Gls(log(fbf) ~ race * rcs(log(dose + 1), log(c(20,60,150)+1)), data=d,
@@ -112,7 +112,7 @@ latex(anova(b), file='', table.env=FALSE)
 w <- data.frame(residual=resid(b), fitted=fitted(b))
 p1 <- ggplot(w, aes(x=fitted, y=residual)) + geom_point()
 p2 <- ggplot(w, aes(sample=residual)) + stat_qq()
-gridExtra::grid.arrange(p1, p2, ncol=2)   # Figure (*\ref{fig:serial-glsc}*)
+gridExtra::grid.arrange(p1, p2, ncol=2)   # Figure (*\ref{fig:serial-glsc}\ipacue*)
 
 ## ----glsd,w=6,h=3.75,cap='Pointwise and simultaneous confidence bands for median dose-response curves by race',scap='Confidence bands for median dose-response curves',cache=TRUE----
 dos <- seq(0, 400, length=150)
@@ -120,9 +120,9 @@ p <- Predict(b, dose=dos, race, fun=exp)
 s <- Predict(b, dose=dos, race, fun=exp, conf.type='simultaneous')
 ps <- rbind(Pointwise=p, Simultaneous=s)
 ggplot(ps, ylab=expression(paste('Median Forearm Blood Flow,  ',
-                          scriptstyle(ml/min/dl))))   # Fig. (*\ref{fig:serial-glsd}*)
+                          scriptstyle(ml/min/dl))))   # Fig. (*\ref{fig:serial-glsd}\ipacue*)
 
-## ----glse,cap='White:black fold change for median response as a function of dose',cache=TRUE----
+## ----glse,cap='White:black fold change for median response as a function of dose, with simultaneous confidence band',cache=TRUE----
 k <- contrast(b, list(dose=dos, race='white'),
                  list(dose=dos, race='black'), conf.type='simultaneous')
 k <- as.data.frame(k[c('dose', 'Contrast', 'Lower', 'Upper')])
@@ -130,5 +130,5 @@ ggplot(k, aes(x=dose, y=exp(Contrast))) + geom_line() +
   geom_ribbon(aes(ymin=exp(Lower), ymax=exp(Upper)), alpha=0.2, linetype=0,
               show_guide=FALSE) +
   geom_hline(yintercept=1, col='red', size=.2) +
-  ylab('White:Black Ratio of Median FBF')    # Fig. (*\ref{fig:serial-glse}*)
+  ylab('White:Black Ratio of Median FBF')    # Fig. (*\ref{fig:serial-glse}\ipacue*)
 

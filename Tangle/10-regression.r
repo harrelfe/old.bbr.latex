@@ -1,6 +1,7 @@
 ## ----echo=FALSE----------------------------------------------------------
 require(Hmisc)
 knitrSet('reg', width=80)
+options(prType='latex')
 
 ## ----glratio,cap='\\co{loess} nonparametric smoother relating CSF:blood glucose ratio to total CSF polymorph count in patients with either bacterial or viral meningitis.  Rug plot on axes plots indicate raw data values.',scap='\\co{loess} nonparametric smoother for glucose ratio'----
 require(Hmisc)
@@ -21,7 +22,7 @@ with(ABM, {
         ylab='Proportion Bacterial Meningitis')
   scat1d(age) })
 
-## ----simple-linear-reg,cap='Data from a sample of $n=100$ points along with population linear regression line.  The $x$ variable is discrete.  The conditional distribution of $y | x$ can be thought of as a vertical slice at $x$.  The unconditional distribution of $y$ is shown on the $y$-axis.',scap='Sample of $n=100$ points with a linear regression line',mgp=c(1,1,0)----
+## ----simple-linear-reg,cap='Data from a sample of $n=100$ points along with population linear regression line.  The $x$ variable is discrete.  The conditional distribution of $y | x$ can be thought of as a vertical slice at $x$.  The unconditional distribution of $y$ is shown on the $y$-axis.  To envision the conditional normal distributions assumed for the underlying population, think of a bell-shaped curve coming out of the page, with its base along one of the vertical lines of points.  The equal variance assumption dictates that the series of Gaussian curves for all the different $x$s have equal variances.',scap='Sample of $n=100$ points with a linear regression line',mgp=c(1,1,0)----
 n <- 100
 set.seed(13)
 x <- round(rnorm(n, .5, .25), 1)
@@ -33,6 +34,13 @@ axis(2, at=r, labels=FALSE)
 abline(a=0,b=1)
 histSpike(y, side=2, add=TRUE)
 abline(v=.6, lty=2)
+
+## ----lsdemo,eval=FALSE---------------------------------------------------
+## require(Hmisc)
+## getRs('demoLeastSquares.r')  # will load code into RStudio script editor
+##                              # click the Source button to run and follow
+##                              # instructions in console window
+## getRs('demoLeastSquares.r', put='source')   # if not using RStudio
 
 ## ----both-type-cls,cap='Pointwise 0.95 confidence intervals for $\\hat{y}$ (wider bands) and $\\hat{E}(y|x)$ (narrower bands).',scap='Two types of confidence bands'----
 require(rms)
@@ -60,7 +68,7 @@ x <- runif(n, -1, 1)
 y <- x ^ 2 + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
-# Fit a correctly assumed linear model 
+# Fit a correctly assumed linear model
 y <- x + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
@@ -93,6 +101,50 @@ for(i in 1 : 5) {
   points(means[i], i)
 }
 
+## ----dubois--------------------------------------------------------------
+require(rms)
+d <- read.csv(textConnection(
+'weight,height,bsa
+24.2,110.3,8473
+64.0,164.3,16720
+64.1,178.0,18375
+74.1,179.2,19000
+93.0,149.7,18592
+45.2,171.8,14901
+32.7,141.5,11869
+6.27,73.2,3699
+57.6,164.8,16451
+63.0,184.2,17981'))
+d <- upData(d, labels=c(weight='Weight', height='Height',
+                        bsa='Body Surface Area'),
+            units=c(weight='kg', height='cm', bsa='cm^2'), print=FALSE)
+d
+# Create Stata file
+getRs('r2stata.r', put='source')
+dubois <- d
+r2stata(dubois)
+# Exclude subject measured using adhesive plaster method
+d <- d[-7, ]
+
+## ----dreg,results='asis'-------------------------------------------------
+dd <- datadist(d); options(datadist='dd')
+f <- ols(log10(bsa) ~ log10(weight) + log10(height), data=d)
+f
+
+## ----dreg2---------------------------------------------------------------
+plot(fitted(f), log10(d$bsa), xlab=expression(hat(Y)),
+     ylab=expression(log[10](BSA))); abline(a=0, b=1, col=gray(.85))
+
+## ----dreg3,h=3.5,w=7.5---------------------------------------------------
+p <- Predict(f, weight=seq(5, 100, length=50),
+             height=seq(70, 190, length=50), fun=function(z) 10 ^ z)
+p1 <- bplot(p)
+p2 <- bplot(p, lfun=contourplot, cuts=20)
+arrGrob(p1, p2, ncol=2)
+
+## ----dreg4,h=5,w=5-------------------------------------------------------
+bplot(p, lfun=wireframe, zlab='BSA')
+
 ## ----mult-reg-assume-twovar,w=4.5,h=3.5,cap='Data satisfying all the assumptions of simple multiple linear regression in two predictors.  Note equal spread of points around the population regression lines for the $x_{2}=1$ and $x_{2}=0$ groups (upper and lower lines, respectively) and the equal spread across $x_1$.  The $x_{2}=1$ group has a new intercept, $\\alpha+\\beta_2$, as the $x_2$ effect is $\\beta_2$.  On the $y$ axis you can clearly see the difference between the two true population regression lines is $\\beta_{2} = 3$.',scap='Assumptions for two predictors'----
 # Generate 25 observations for each group, with true beta1=.05, true beta2=3
 d <- expand.grid(x1=1:25, x2=c(0, 1))
@@ -104,19 +156,29 @@ abline(a=3, b=.2)
 text(13, 1.3, expression(y==alpha + beta[1]*x[1]),           srt=24, cex=1.3)
 text(13, 7.1, expression(y==alpha + beta[1]*x[1] + beta[2]), srt=24, cex=1.3)
 
-## ----olslead,w=5,h=1.75--------------------------------------------------
+## ----olslead,w=5,h=1.75,results='asis'-----------------------------------
 getHdata(lead)
 dd <- datadist(lead); options(datadist='dd')
 f <- ols(maxfwt ~ group, data=lead)
 f
 ggplot(Predict(f))
-summary(f)
 
-## ----leadgrage,w=6.5,h=3.5-----------------------------------------------
+## ----olslead2------------------------------------------------------------
+options(prType='plain')
+summary(f)
+options(prType='latex')
+
+## ----leadgrage,w=6.5,h=3.5,results='asis'--------------------------------
 fa <- ols(maxfwt ~ age + group, data=lead)
 fa
 ggplot(Predict(fa, age, group))
+
+## ----<leadgrage2---------------------------------------------------------
+options(prType='plain')
 summary(fa)
+options(prType='latex')
+
+## ----leadgrage3,results='asis'-------------------------------------------
 anova(fa)
 anova(f)    # reduced model (without age)
 
