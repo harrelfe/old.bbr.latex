@@ -1477,7 +1477,7 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
 
 \section{Internal vs.\ External Model Validation}\sound{reg-21}
 \disc{reg-val}
-\blog{2017/01/split-sample-model-validation.html}
+\blog{split-val}
 \quoteit{External validation or validation on a holdout sample, when
   the predictive method was developed using feature selection, model
   selection, or machine learning, produces a non-unique \emph{example}

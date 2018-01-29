@@ -1,4 +1,4 @@
-\chapter{General Overview of Biostatistics} \katz{1-3}  \ems{2} \abd{1.1,p.23-4}
+\chapter{General Overview of Biostatistics} \katz{1-3}  \ems{2} \abd{1.1,p.23-4}\label{chap:overview}
 
 \quoteit{There are no routine statistical questions, only questionable
   statistical routines.}{Sir David R.\ Cox}
@@ -6,7 +6,7 @@
 \quoteit{It's much easier to get a \emph{result} than it is to get an
   \emph{answer}.}{Christie Aschwanden, \texttt{FireThirtyEight}}
 
-\section{What is Biostatistics?}
+\section{What is Biostatistics?}\label{sec:overview-biostat}
 \bi
 \item Statistics applied to biomedical problems
 \item Decision making in the face of uncertainty or variability
@@ -46,7 +46,7 @@ execution (e.g., randomization and masking) are all important.
 \ei
 
 
-\section{Types of Data Analysis and Inference}
+\section{Types of Data Analysis and Inference}\label{sec:overview-datatypes}
  \bi
  \item Description: what happened to \emph{past} patients
  \item Inference from specific (a sample) to general (a population)
@@ -60,7 +60,7 @@ execution (e.g., randomization and masking) are all important.
   \ei
 \ei
 
-\section{Types of Measurements by Their Role in the Study} \katz{3} \abd{1.3}
+\section{Types of Measurements by Their Role in the Study} \katz{3} \abd{1.3}\label{sec:overview-measurement-role}
 \bi
  \item Response variable (clinical endpoint, final lab measurements,
    etc.)
@@ -91,7 +91,7 @@ Case-control group &  Risk factor \\
 \end{center}
 \end{table}
 
-\subsection{Proper Response Variables}
+\subsection{Proper Response Variables}\label{overview-yproper}
 It is too often the case that researchers concoct response variables $Y$
 in such a way that makes the variables \emph{seem} to be easy to
 interpret, but which contain several hidden problems:
@@ -127,7 +127,7 @@ A proper response variable that optimizes power is one that
   or always bad
 \ei
 
-\section{Types of Measurements According to Coding} \katz{3} \ems{2.2}\abd{1.3}
+\section{Types of Measurements According to Coding} \katz{3} \ems{2.2}\abd{1.3}\label{sec:overview-coding}
 \bi
  \item Binary: yes/no, present/absent
  \item Categorical (nominal, polytomous, discrete): more than 2 values
@@ -161,8 +161,8 @@ A proper response variable that optimizes power is one that
  choose from fewer categories.})
 \ei
 
-\section{Choose $Y$ to Maximize Statistical Information, Power, and Interpretability}  
-The outcome (dependent) variable $Y$ should be a high-information
+\section{Choose $Y$ to Maximize Statistical Information, Power, and Interpretability}\label{sec:overview-ychoice}
+The outcome (dependent) variable $Y$ should be a high-information \blog{ordinal-info}
 measurement that is relevant to the subject at hand.  The information
 provided by an analysis, and statistical power and precision, are
 strongly influenced by characteristics of $Y$ in addition to the
@@ -182,7 +182,7 @@ effective sample size.
   \item Intermediate: ordinal $Y$ with a few well-populated levels
   \ei
 
-\subsection{Information Content}
+\subsection{Information Content}\label{sec:overview-info-content}
   \bi
   \item Binary $Y$: 1 bit
     \bi
@@ -206,7 +206,7 @@ effective sample size.
     \ei
   \ei
   
-\subsection{Dichotomization}
+\subsection{Dichotomization}\label{sec:overview-dichotomization}
 \textbf{Never} Dichotomize Continuous or Ordinal $Y$
   \bi
   \item Statistically optimum cutpoint is at the \textbf{unknown}
@@ -233,7 +233,7 @@ effective sample size.
   \item Can always restate optimum analysis results in other clinical metrics
   \ei
   
-\subsection{Change from Baseline}
+\subsection{Change from Baseline}\label{sec:overview-change}
 \textbf{Never} use change from baseline as $Y$
   \bi
   \item Affected by measurement error, regression to the mean
@@ -286,7 +286,7 @@ effective sample size.
 \ei
 See also Section~\ref{sec:descript-change}.
 
-\section{Random Variables}
+\section{Random Variables}\label{sec:overview-rv}
 \bi
 \item A potential measurement $X$
 \item $X$ might mean a blood pressure that will be measured on a

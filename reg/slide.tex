@@ -251,7 +251,7 @@ with(ABM, {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-glratio-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-glratio-1} }
 
 \caption[\co{loess} nonparametric smoother for glucose ratio]{\co{loess} nonparametric smoother relating CSF:blood glucose ratio to total CSF polymorph count in patients with either bacterial or viral meningitis.  Rug plot on axes plots indicate raw data values.}\label{fig:reg-glratio}
 \end{figure}
@@ -266,7 +266,7 @@ with(ABM, {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-age-abm-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-age-abm-1} }
 
 \caption[Example of super smoother]{``Super smoother'' relating age to the probability of bacterial meningitis given a patient has bacterial or viral meningitis, with a rug plot showing the age distribution.}\label{fig:reg-age-abm}
 \end{figure}
@@ -307,7 +307,7 @@ abline(v=.6, lty=2)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-simple-linear-reg-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-simple-linear-reg-1} }
 
 \caption[Sample of $n=100$ points with a linear regression line]{Data from a sample of $n=100$ points along with population linear regression line.  The $x$ variable is discrete.  The conditional distribution of $y | x$ can be thought of as a vertical slice at $x$.  The unconditional distribution of $y$ is shown on the $y$-axis.  To envision the conditional normal distributions assumed for the underlying population, think of a bell-shaped curve coming out of the page, with its base along one of the vertical lines of points.  The equal variance assumption dictates that the series of Gaussian curves for all the different $x$s have equal variances.}\label{fig:reg-simple-linear-reg}
 \end{figure}
@@ -521,7 +521,7 @@ ggplot(p, legend.position='none') +    # Fig. (*\ref{fig:reg-both-type-cls}*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-both-type-cls-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-both-type-cls-1} }
 
 \caption[Two types of confidence bands]{Pointwise 0.95 confidence intervals for $\hat{y}$ (wider bands) and $\hat{E}(y|x)$ (narrower bands).}\label{fig:reg-both-type-cls}
 \end{figure}
@@ -576,7 +576,7 @@ qqnorm(resid(f)); qqline(resid(f))
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-exresid-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-exresid-1} }
 
 \caption[Four examples of residual plots]{Using residuals to check some of the assumptions of the simple linear regression model.  Top left panel depicts non-constant $\sigma^2$, which might call for transforming $y$.  Top right panel shows constant variance but the presence of a systemic trend which indicates failure of the linearity assumption.  Bottom left panel shows the ideal situation of white noise (no trend, constant variance).  Bottom right panel shows a $q-q$ plot that demonstrates approximate normality of residuals, for a sample of size $n=50$.  Horizontal reference lines are at zero, which is by definition the mean of all residuals.}\label{fig:reg-exresid}
 \end{figure}
@@ -807,7 +807,7 @@ plot(pctile, risk, type='l', xlab='BMI Percentile', ylab='Risk')
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-bmi-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-bmi-1} }
 
 \caption[Harm of percentiling BMI in a regression model]{Harm of percentiling BMI in a regression model}\label{fig:reg-bmi}
 \end{figure}
@@ -889,7 +889,7 @@ for(i in 1 : 5) {
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-bmiq-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-bmiq-1} }
 
 \caption[What are quintile numbers modeling?]{What are quintile numbers modeling?}\label{fig:reg-bmiq}
 \end{figure}
@@ -1100,7 +1100,7 @@ plot(fitted(f), log10(d$bsa), xlab=expression(hat(Y)),
 \end{Sinput}
 
 
-\centerline{\includegraphics{reg-dreg2-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-dreg2-1} }
 
 \end{Schunk}
 
@@ -1115,7 +1115,7 @@ arrGrob(p1, p2, ncol=2)
 \end{Sinput}
 
 
-\centerline{\includegraphics{reg-dreg3-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-dreg3-1} }
 
 \end{Schunk}
 \begin{Schunk}
@@ -1124,7 +1124,7 @@ bplot(p, lfun=wireframe, zlab='BSA')
 \end{Sinput}
 
 
-\centerline{\includegraphics{reg-dreg4-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-dreg4-1} }
 
 \end{Schunk}
 Note: this plot would be a plane if all 3 variables were plotted on
@@ -1272,7 +1272,7 @@ text(13, 7.1, expression(y==alpha + beta[1]*x[1] + beta[2]), srt=24, cex=1.3)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{reg-mult-reg-assume-twovar-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-mult-reg-assume-twovar-1} }
 
 \caption[Assumptions for two predictors]{Data satisfying all the assumptions of simple multiple linear regression in two predictors.  Note equal spread of points around the population regression lines for the $x_{2}=1$ and $x_{2}=0$ groups (upper and lower lines, respectively) and the equal spread across $x_1$.  The $x_{2}=1$ group has a new intercept, $\alpha+\beta_2$, as the $x_2$ effect is $\beta_2$.  On the $y$ axis you can clearly see the difference between the two true population regression lines is $\beta_{2} = 3$.}\label{fig:reg-mult-reg-assume-twovar}
 \end{figure}
@@ -1494,7 +1494,7 @@ ggplot(Predict(f))
 \end{Sinput}
 
 
-\centerline{\includegraphics{reg-olslead-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-olslead-1} }
 
 
 \begin{Schunk}
@@ -1610,7 +1610,7 @@ ggplot(Predict(fa, age, group))
 \end{Sinput}
 
 
-\centerline{\includegraphics{reg-leadgrage-1} }
+\centerline{\includegraphics[width=\maxwidth]{reg-leadgrage-1} }
 
 
 \begin{Schunk}
@@ -1637,8 +1637,9 @@ options(prType='latex')
 \begin{Sinput}
 anova(fa)
 \end{Sinput}
-%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     rowlabel = "", col.just = rep("r", length(sn)), table.env = table.env,     ...)%
-\begin{center}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Analysis of Variance for \texttt{\smaller maxfwt}}\begin{center}
 \begin{tabular}{lrrrrr}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{Partial SS}&\multicolumn{1}{c}{MS}&\multicolumn{1}{c}{$F$}&\multicolumn{1}{c}{$P$}\tabularnewline
@@ -1652,8 +1653,9 @@ group& 2& 810.4561& 405.22806& 4.50&0.0135\tabularnewline
 \begin{Sinput}
 anova(f)    # reduced model (without age)
 \end{Sinput}
-%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     rowlabel = "", col.just = rep("r", length(sn)), table.env = table.env,     ...)%
-\begin{center}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Analysis of Variance for \texttt{\smaller maxfwt}}\begin{center}
 \begin{tabular}{lrrrrr}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{Partial SS}&\multicolumn{1}{c}{MS}&\multicolumn{1}{c}{$F$}&\multicolumn{1}{c}{$P$}\tabularnewline
@@ -1802,7 +1804,7 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
 
 \section{Internal vs.\ External Model Validation}\sound{reg-21}
 \disc{reg-val}
-\blog{2017/01/split-sample-model-validation.html}
+\blog{split-val}
 \quoteit{External validation or validation on a holdout sample, when
   the predictive method was developed using feature selection, model
   selection, or machine learning, produces a non-unique \emph{example}
