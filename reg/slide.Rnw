@@ -17,6 +17,9 @@ Regression models are used for
   variable by adjusting for other variables that partially explain the outcome
   variable $Y$
 \item confounder adjustment---getting adjusted estimates of effects
+\item checking that existing summary scores (e.g., BMI) adequately
+  summarize their component variables
+\item developing new summary scores guided by predicting outcomes
 \ei
 
 {\larger\textbf{Example}}
