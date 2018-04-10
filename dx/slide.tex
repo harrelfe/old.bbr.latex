@@ -102,6 +102,10 @@ How to Reduce False Positives and Negatives?
 \item Risk of 0.8 $\rightarrow$ Prob[error]=.2 if treat
 \ei
 
+See
+\url{http://thehealthcareblog.com/blog/2015/12/01/rethinking-about-diagnostic-tests-there-is-nothing-positive-or-negative-about-a-test-result}
+for a nice article on the subject.
+
 \subsubsection{Binary Diagnosis is Problematic Anyway}
 \quoteit{The act of diagnosis requires that patients be placed in a binary
 category of either having or not having a certain
@@ -356,7 +360,7 @@ ggplot(rbind('Significant CAD'=psig, '3 Vessel or Left Main CAD'=psev),
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{dx-du-1} }
+\centerline{\includegraphics[width=\maxwidth]{dx-du-1} }
 
 \caption[Relative effect of total cholesterol for age 40 and 70]{Relative effect of total cholesterol for age 40 and 70; Data from Duke Cardiovascular Disease Databank, $n=2258$}\label{fig:dx-du}
 \end{figure}
@@ -377,7 +381,7 @@ abline(v=.5, col='red')
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{dx-du-acath-1} }
+\centerline{\includegraphics[width=\maxwidth]{dx-du-acath-1} }
 
 \caption[Diagnostic Utility of Cholesterol for Diagnosing Significant CAD]{Diagnostic Utility of Cholesterol for Diagnosing Significant CAD.  Curves are 0.1 and 0.9 quantiles from quantile regression using restricted cubic splines}\label{fig:dx-du-acath}
 \end{figure}
