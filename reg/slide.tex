@@ -1806,7 +1806,7 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
 \ed
 
 \section{Internal vs.\ External Model Validation}\sound{reg-21}
-\disc{reg-val}
+\disc{reg-val}\label{reg-val}
 \blog{split-val}
 \quoteit{External validation or validation on a holdout sample, when
   the predictive method was developed using feature selection, model
@@ -2008,5 +2008,39 @@ example validation of an example model.  On the other hand, rigorous
 validation using resampling validates the process used to derive the
 final predictive instrument, while still providing a good estimate of
 the likely future predictive accuracy of that instrument.
+
+\subsection{Summary: Choosing Internal vs.\ External Validation}\label{reg-choose-val}
+Recall that strong internal validation uses the bootstrap in a way
+that repeats all modeling steps (feature/variable selection, transformation
+selection, parameter estimation, etc.) that utilized the outcome
+variable $Y$.
+
+Use strong internal validation if
+\bi
+\item the model is not pre-specified.  If any feature selection
+  utilizing $Y$ was done, the set of features selected will be
+  unstable, so an external validation would just validate an ``example
+  model.''  On the other hand, a strong internal validation validates
+  the model development \emph{process} and fully documents the
+  volatility of feature selection.
+\item the data come from multiple locations or times and you want to
+  understand time trends in $Y$, or geographic differences
+\item the size of the potential external validation sample and the
+  size of the training sample are not both very large
+\ei
+
+Use external validation if
+\bi
+\item measurement platforms vary (e.g., genotyping or blood analysis
+  equipment) and you want to validate the generalizability of a model
+  developed on your platform
+\item both the training data and the test datasets are very large
+  (e.g., the training data contains more than 15 events per
+  \textbf{candidate} predictor and the test data has at least 200-400 events).
+\item you don't trust the model developers to honestly perform a
+  strong internal validation
+\item the dataset available for the external validation was not
+  at all available when the model was developed
+\ei
 
 \def\apacue{0}
