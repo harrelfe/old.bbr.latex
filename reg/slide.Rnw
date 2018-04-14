@@ -1716,4 +1716,9 @@ Use external validation if
   strong internal validation
 \ei
 
+\subsection{Other Resources}
+\bi
+\item
+  \href{http://www.cecilejanssens.org/wp-content/uploads/2018/01/PredictionManual2.0.pdf}{Prediction Research Manual} by Cecile Janssens and Forike Martens
+
 \def\apacue{0}
