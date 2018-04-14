@@ -243,11 +243,21 @@ population mean.\footnote{$\bar{x}$ is the value of $\mu$ such that
  \ei
 \item SD and variance are not useful for very asymmetric data,
   e.g. ``the mean hospital cost was \$10000 $\pm$ \$15000''
+\item Gini's mean difference: mean absolute difference over all
+  possible pairs of observations.  This is highly interpretable. robust, and
+  useful for all interval-scaled data, and is even highly precise if
+  the data are normal\footnote{Gini's mean difference is labeled
+    \co{Gmd} in the output of the \R\ \Co{Hmisc} \co{describe} function,
+    and may be computed separately using the \Co{Hmisc} \co{GiniMd} function}.
 \item range: not recommended because range $\uparrow$ as $n\uparrow$
   and is dominated by a single outlier
 \item coefficient of variation: not recommended (depends too much on
   how close the mean is to zero)
 \ei
+Example of Gini's mean difference for describing patient-to-patient
+variability of systolic blood pressure: If Gini's mean difference is
+7mmHg, this means that the average disagreement (absolute difference)
+between any two patients is 7mmHg.
 \clearpage
 \section{Graphics} \ros{2.8}\katz{4.2-4.6}\altman{17-20}\abd{2,3.4}
 Cleveland~\cite{cle94ele,cle84sci} is the best source of how-to
