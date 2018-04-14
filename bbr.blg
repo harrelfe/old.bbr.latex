@@ -1,22 +1,22 @@
 [0] Config.pm:354> INFO - This is Biber 2.7 (beta)
 [0] Config.pm:357> INFO - Logfile is 'bbr.blg'
-[32] biber:303> INFO - === Fri Dec 29, 2017, 10:06:03
-[44] Biber.pm:360> INFO - Reading 'bbr.bcf'
-[115] Biber.pm:836> INFO - Found 103 citekeys in bib section 0
-[129] Biber.pm:3671> INFO - Processing section 0
-[141] Biber.pm:3841> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
-[327] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[679] bibtex.pm:1281> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
-[1070] Utils.pm:164> WARN - I didn't find a database entry for '[' (section 0)
-[1161] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1161] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1161] Biber.pm:3500> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1162] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
-[1259] bbl.pm:608> INFO - Writing 'bbr.bbl' with encoding 'ascii'
-[1263] Utils.pm:164> WARN - The entry 'amb02sel' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1276] Utils.pm:164> WARN - The entry 'hol04con' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1283] Utils.pm:164> WARN - The entry 'mun17man' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1286] Utils.pm:164> WARN - The entry 'par10eff' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1293] Utils.pm:164> WARN - The entry 'tor85how' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1296] bbl.pm:712> INFO - Output to bbr.bbl
-[1296] Biber.pm:110> INFO - WARNINGS: 6
+[36] biber:303> INFO - === Sat Apr 14, 2018, 10:40:55
+[51] Biber.pm:360> INFO - Reading 'bbr.bcf'
+[121] Biber.pm:836> INFO - Found 104 citekeys in bib section 0
+[135] Biber.pm:3671> INFO - Processing section 0
+[151] Biber.pm:3841> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
+[345] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[695] bibtex.pm:1281> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
+[1094] Utils.pm:164> WARN - I didn't find a database entry for '[' (section 0)
+[1184] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1184] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1184] Biber.pm:3500> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1184] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
+[1282] bbl.pm:608> INFO - Writing 'bbr.bbl' with encoding 'ascii'
+[1287] Utils.pm:164> WARN - The entry 'amb02sel' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1299] Utils.pm:164> WARN - The entry 'hol04con' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1305] Utils.pm:164> WARN - The entry 'mun17man' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1308] Utils.pm:164> WARN - The entry 'par10eff' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1317] Utils.pm:164> WARN - The entry 'tor85how' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[1319] bbl.pm:712> INFO - Output to bbr.bbl
+[1320] Biber.pm:110> INFO - WARNINGS: 6

@@ -1921,6 +1921,38 @@
       \range{pages}{18}
       \keyw{quantile-regression,*import}
     \endentry
+    \entry{enc9}{book}{}
+      \name{editor}{2}{}{%
+        {{hash=3e3c22dfe3b36ff075adfaa64ce7661a}{%
+           family={Kotz},
+           familyi={K\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c5f9615978a04b2d36276174929dc61c}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Norman\bibnamedelima L.},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \strng{fullhash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \strng{editornamehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \strng{editorfullhash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{{Encyclopedia of Stat Scis}}
+      \field{volume}{9}
+      \field{year}{1988}
+      \keyw{*import}
+    \endentry
     \entry{kro93spu}{article}{}
       \name{author}{1}{}{%
         {{hash=a2be7195d005db13032c4e0c04de0e2c}{%
@@ -2790,10 +2822,10 @@
       \field{abstract}{{Modern modelling techniques may potentially provide more accurate predictions of binary outcomes than classical techniques. We aimed to study the predictive performance of different modelling techniques in relation to the effective sample size (``data hungriness'').}}
       \field{annotation}{Would be better to use proper accuracy scores in the assessment. Too much emphasis on optimism as opposed to final discrimination measure. But much good practical information. Recursive partitioning fared poorly.}
       \field{issn}{1471-2288}
-      \field{journaltitle}{BMC medical research methodology}
+      \field{journaltitle}{BMC Medical Research Methodology}
       \field{month}{12}
       \field{number}{1}
-      \field{title}{{Modern modelling techniques are data hungry: a simulation study for predicting dichotomous endpoints.}}
+      \field{title}{{Modern modelling techniques are data hungry: a simulation study for predicting dichotomous endpoints}}
       \field{volume}{14}
       \field{year}{2014}
       \field{pages}{137+}

@@ -298,4 +298,149 @@ See also Section~\ref{sec:descript-change}.
   constant)
 \ei
 
+\section{Probability}\label{sec:prob}
+As described below, the meaning of \emph{probability} is in the mind
+of the beholder.  It can easily be taken to be a long-run relative
+frequency, a degree of belief, or any metric that is between 0 and 1
+that obeys certain basic rules (axioms) such as those of Kolmogorov:
+\be
+\item A probability is not negative.
+\item The probability that at least one of the events in the exhaustive list of
+  possible events occurs is 1.
+\item The probability that at least one of a sequence of mutually
+  exclusive events occurs equals the sum of the individual
+  probabilities of the events occuring.
+\ee
 
+Let $A$ and $B$ denote events, or assertions about which we seek the
+chances of their veracity.  The probabilities that $A$ or $B$ will
+happen or are true are denoted by $P(A), P(B)$.
+
+The above axioms lead to various useful properties, e.g.
+\be
+\item A probability cannot be greater than 1.
+\item If $A$ is a special case of a more general
+  event or assertion $B$, i.e., $A$ is a subset of $B$, $P(A) \leq
+  P(B)$, e.g.\ $P($animal is human$) \leq P($animal is primate$)$.
+\item The probability of the union of a set of events (i.e., the
+  probability that at least one of the events occurs) is less than or
+  equal to the sum of the individual event probabilities.
+\item The probability of the intersection of a set of events (i.e.,
+  the probability that all of the events occur) is less than or
+  equal to the minimum of all the individual probabilities.
+\item $P(A \cup B)$, the probability of the union of $A$ and $B$,
+  equals $P(A) + P(B) - P(A \cap B)$ where $A \cap B$ denotes the
+  intersection (joint occurrence) of $A$ and $B$.
+\item $P(A \cup B) \geq \max(P(A), P(B))$
+\item $P(A \cup B) \leq P(A) + P(B)$
+\item If a set of events are independent, the probability of their
+  intersection is the product of the individual probabilities.
+\ee
+
+So what are examples of what probability might actually mean?
+In the \emph{frequentist} school, the probability of
+an event denotes the limit of the long-term fraction of occurrences
+of the event.  This notion of probability implies that the same
+experiment which generated the outcome of interest can be repeated
+infinitely often\footnote{But even a coin will change after 100,000 flips.
+Likewise, some may argue that a patient is ``one of a kind'' and that
+repetitions of the same experiment are not possible.  One could
+reasonably argue that a ``repetition'' does not denote the same
+patient at the same stage of the disease, but rather \emph{any} patient
+with the same \emph{severity} of disease (measured with current
+technology).}.
+
+There are other schools of probability that do not
+require the notion of replication at all.  For example, the school of
+\emph{subjective} probability (associated with the \emph{Bayesian}
+school) ``considers probability as a measure of the degree of belief
+of a given subject in the occurrence of an event or, more generally,
+in the veracity of a given assertion'' (see P.\ 55 of~\cite{enc9}).
+de~Finetti defined subjective probability in terms of wagers and odds
+in betting.  A risk-neutral individual would be willing to wager \$$P$
+that an event will occur when the payoff is \$1 and her subjective
+probability is $P$ for the event.
+
+
+As IJ Good has written, the axioms defining the ``rules'' under which probabilities
+must operate (e.g., a probability is between 0 and 1) do not define
+what a probability actually means.  He also summizes that all
+probabilities are subjective, because they depend on the knowledge of
+the particular observer.
+
+One of the most important probability concepts is that of 
+\emph{conditional probability}  The probability of the veracity of a statement 
+or of an event $A$ occurring given that a specific condition $B$ holds or that an event 
+$B$ has already occurred, is denoted by $P(A|B)$.  This is a probability in the 
+presence of knowledge captured by $B$.  For example, if the condition $B$ is 
+that a person is male, the conditional probability is the probability of $A$ 
+for males, i.e., of males, what is the probability of $A$?.  It could
+be argued that there is no such thing as a completely  
+\emph{un}conditional probability.  In this example one is implicitly 
+conditioning on humans even if not considering the person's sex.  Most
+people would take $P($pregnancy$)$ to apply to females.
+
+Conditional probabilities may be computed directly from restricted
+subsets (e.g., males) or from this formula: $P(A|B)= \frac{P(A \cap
+  B)}{P(B)}$.  That is, the probability that $A$ is true given $B$
+occurred is the probability that both $A$ and $B$ happen (or are true)
+divided by the probability of the conditioning event $B$.
+
+\emph{Bayes' rule or theorem} is a ``conditioning reversal formula''
+and follows from the basic probability laws:  $P(A | B) = \frac{P(B | A)
+P(A)}{P(B)}$, read as the probability that event $A$ happens given
+that event $B$ has happened equals the probability that $B$ happens
+given that $A$ has happened multiplied by the (unconditional)
+probability that $A$ happens and divided by the (unconditional)
+probability that $B$ happens.  Bayes' rule follows immediately from
+the law of conditional probability, which states that $P(A | B) =
+\frac{P(A \cap B)}{P(B)}$.
+
+The entire machinary of Bayesian inference derives from only Bayes'
+theorem and the basic axioms of probability.  In contrast, frequentist
+inference requires an enormous amount of extra machinary related to
+the sample space, sufficient statistics, ancillary statistics, large
+sample theory, and if taking more then one data look, stochastic
+processes.  For many problems we still do not know how to 
+accurately compute a frequentist $p$-value.
+
+To understand conditional probabilities and Bayes' rule, consider the
+probability that a randomly chosen U.S.\ senator is female.  As of
+2017, this is $\frac{21}{100}$.  What is the probability that a
+randomly chosen female in the U.S.\ is a U.S.\ senator?
+
+\begin{eqnarray*}
+P(\mathrm{senator}|\mathrm{female}) &=& \frac{P(\mathrm{female}|\mathrm{senator}) \times P(\mathrm{senator})}{P(\mathrm{female})} \\
+ &=& \frac{\frac{21}{100} \times \frac{100}{326M}}{\frac{1}{2}} \\
+ &=& \frac{21}{163M}
+ \end{eqnarray*}
+
+So given the marginal proportions of senators and females, we can use
+Bayes' rule to convert ``of senators how many are females'' to ``of
+females how many are senators.''
+
+The domain of application of
+probability is all-important.  We assume that the true event status
+(e.g., dead/alive) is unknown, and we also assume that the information
+the probability is conditional upon (e.g.  $P(\mathrm{death}|\mathrm{male,
+age=70})$ is what we would check the probability against.  In other
+words, we do not ask whether $P(\mathrm{death} | \mathrm{male,
+  age=70})$ is accurate 
+when compared against $P(\mathrm{death} |$ male, age=70, meanbp=45, patient
+on downhill course$)$.  It is difficult to find a probability that is
+truly not conditional on anything.  What is conditioned upon is all
+important.  Probabilities are maximally useful when, as with Bayesian
+inference, they condition on what is known to provide a forecast for
+what is unknown.  These are ``forward time'' or ``forward information
+flow'' probabilities.
+
+Forward time probabilities can meaningfully be
+taken out of context more often than backward-time probabilities, as
+they don't need to consider ``what might have happened.''  In
+frequentist statistics, the $P$-value is a backward information flow
+probability, being conditional on the unknown effect size.  This is
+why $P$-values must be adjusted for multiple data looks (what might
+have happened, i.e., what data might have been observed were $H_{0}$
+true) whereas the current Bayesian posterior probability 
+merely override any posterior probabilities computed at earlier data
+looks, because they condition on current cumulative data.
