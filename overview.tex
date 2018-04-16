@@ -326,19 +326,27 @@ The above axioms lead to various useful properties, e.g.
 \item If $A$ is a special case of a more general
   event or assertion $B$, i.e., $A$ is a subset of $B$, $P(A) \leq
   P(B)$, e.g.\ $P($animal is human$) \leq P($animal is primate$)$.
+\item $P(A \cup B)$, the probability of the union of $A$ and $B$,
+  equals $P(A) + P(B) - P(A \cap B)$ where $A \cap B$ denotes the
+  intersection (joint occurrence) of $A$ and $B$ (the overlap region).
+\item If $A$ and $B$ are mutually exclusive, $P(A \cap B) = 0$ so $P(A
+  \cup B) = P(A) + P(B)$.
+\item $P(A \cup B) \geq \max(P(A), P(B))$
+\item $P(A \cup B) \leq P(A) + P(B)$
+\item $P(A \cap B) \leq \min(P(A), P(B))$
+\item $P(A | B)$, the conditional probability of $A$ given $B$ holds,
+  is $\frac{P(A \cap B)}{P(B)}$
+\item $P(A \cap B) = P(A | B) P(B)$ whether or not $A$ and $B$ are
+  independent.  If they are independent, $B$ is irrelevant to $P(A |
+  B)$ so $P(A | B) = P(A)$, leading to the following statement:
+\item If a set of events are independent, the probability of their
+  intersection is the product of the individual probabilities.
 \item The probability of the union of a set of events (i.e., the
   probability that at least one of the events occurs) is less than or
   equal to the sum of the individual event probabilities.
 \item The probability of the intersection of a set of events (i.e.,
   the probability that all of the events occur) is less than or
   equal to the minimum of all the individual probabilities.
-\item $P(A \cup B)$, the probability of the union of $A$ and $B$,
-  equals $P(A) + P(B) - P(A \cap B)$ where $A \cap B$ denotes the
-  intersection (joint occurrence) of $A$ and $B$.
-\item $P(A \cup B) \geq \max(P(A), P(B))$
-\item $P(A \cup B) \leq P(A) + P(B)$
-\item If a set of events are independent, the probability of their
-  intersection is the product of the individual probabilities.
 \ee
 
 So what are examples of what probability might actually mean?
