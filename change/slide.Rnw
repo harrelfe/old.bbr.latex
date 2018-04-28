@@ -4,7 +4,7 @@ require(Hmisc)
 knitrSet('change', width=80)
 @
 
-\chapter{Transformations, Measuring Change, and Regression to the Mean}
+\chapter{Transformations, Measuring Change, and Regression to the Mean}\alabel{chap:trans}
 
 \section{Transformations}
 
