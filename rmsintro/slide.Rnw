@@ -129,7 +129,7 @@ Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
 neurologic well-being of children who lived near a lead smelting
 plant.  The primary outcome measures are the Wechsler full-scale IQ
 score (\co{iqf}) and the finger-wrist tapping score \co{maxfwt}.  The
-dataset is available at \url{vanderbilt.mc.vanderbilt.edu/DataSets}
+dataset is available at \url{biostat.mc.vanderbilt.edu/DataSets}
 and can be automatically downloaded and \co{load()}'d into \R\ using
 the \co{Hmisc} package \co{getHdata} function.  For now we just
 analyze lead exposure levels in 1972 and 1973, age, and
