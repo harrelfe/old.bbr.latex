@@ -972,7 +972,8 @@ response variable with a symmetric distribution) estimates of the
 standard deviation or the correlation between two measurements on the
 same subject measured at two different times, or (in the case of a
 binary or time to event outcome) event probabilities in control
-subjects. 
+subjects.  An excellent resource by Senn for understanding effect
+sizes in power calculations may be found \href{https://errorstatistics.com/2014/03/17/stephen-senn-on-how-to-interpret-discrepancies-against-which-a-test-has-high-power-guest-post/amp}{here}.
 
 \subsection{Multiple Estimands and Hypotheses}
 In many experiments there are more than one estimand (what is to be
