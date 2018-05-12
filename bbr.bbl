@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \sortlist[entry]{nty/global/}
+  \datalist[entry]{nty/global//global/global}
     \entry{adc97sam}{article}{}
       \name{author}{1}{}{%
         {{hash=6bab575963cae55bdf84d9cd3760fd59}{%
@@ -29,10 +29,12 @@
       }
       \strng{namehash}{6bab575963cae55bdf84d9cd3760fd59}
       \strng{fullhash}{6bab575963cae55bdf84d9cd3760fd59}
+      \strng{bibnamehash}{6bab575963cae55bdf84d9cd3760fd59}
+      \strng{authorbibnamehash}{6bab575963cae55bdf84d9cd3760fd59}
       \strng{authornamehash}{6bab575963cae55bdf84d9cd3760fd59}
       \strng{authorfullhash}{6bab575963cae55bdf84d9cd3760fd59}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Statistician}
@@ -41,7 +43,7 @@
       \field{year}{1997}
       \field{pages}{261\bibrangedash 283}
       \range{pages}{23}
-      \keyw{average-coverage-criterion,bayes-factors,bayesian-sample-size-estimation,mcnemars-test,multinomial-distribution,*import}
+      \keyw{average-coverage-criterion,bayes,bayes-factors,bayesian-inference,bayesian-sample-size-estimation,mcnemars-test,multinomial-distribution,sample-size}
     \endentry
     \entry{aka97pow}{article}{}
       \name{author}{3}{}{%
@@ -63,10 +65,12 @@
       }
       \strng{namehash}{7558c36879de88536859b76a508d19a5}
       \strng{fullhash}{7558c36879de88536859b76a508d19a5}
+      \strng{bibnamehash}{7558c36879de88536859b76a508d19a5}
+      \strng{authorbibnamehash}{7558c36879de88536859b76a508d19a5}
       \strng{authornamehash}{7558c36879de88536859b76a508d19a5}
       \strng{authorfullhash}{7558c36879de88536859b76a508d19a5}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -112,10 +116,12 @@
       }
       \strng{namehash}{7183e905970fc3dc29a257cc24d2ac16}
       \strng{fullhash}{c8ae12544540c5d207c6b05fbf9cab73}
+      \strng{bibnamehash}{7183e905970fc3dc29a257cc24d2ac16}
+      \strng{authorbibnamehash}{7183e905970fc3dc29a257cc24d2ac16}
       \strng{authornamehash}{7183e905970fc3dc29a257cc24d2ac16}
       \strng{authorfullhash}{c8ae12544540c5d207c6b05fbf9cab73}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{refutation of mic05pre}
@@ -141,10 +147,12 @@
       }
       \strng{namehash}{81e778a43f396952af2da92c9d50eb7c}
       \strng{fullhash}{81e778a43f396952af2da92c9d50eb7c}
+      \strng{bibnamehash}{81e778a43f396952af2da92c9d50eb7c}
+      \strng{authorbibnamehash}{81e778a43f396952af2da92c9d50eb7c}
       \strng{authornamehash}{81e778a43f396952af2da92c9d50eb7c}
       \strng{authorfullhash}{81e778a43f396952af2da92c9d50eb7c}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{BMJ}
@@ -178,10 +186,12 @@
       }
       \strng{namehash}{fd62e464b95eaf6b279acb6219abf384}
       \strng{fullhash}{fd62e464b95eaf6b279acb6219abf384}
+      \strng{bibnamehash}{fd62e464b95eaf6b279acb6219abf384}
+      \strng{authorbibnamehash}{fd62e464b95eaf6b279acb6219abf384}
       \strng{authornamehash}{fd62e464b95eaf6b279acb6219abf384}
       \strng{authorfullhash}{fd62e464b95eaf6b279acb6219abf384}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{Prognostic models are designed to predict a clinical outcome in individuals or groups of individuals with a particular disease or condition. To avoid bias many researchers advocate the use of full models developed by prespecifying predictors. Variable selection is not employed and the resulting models may be large and complicated. In practice more parsimonious models that retain most of the prognostic information may be preferred. We investigate the effect on various performance measures, including mean square error and prognostic classification, of three methods for estimating full models (including penalized estimation and Tibshirani's lasso) and consider two methods (backwards elimination and a new proposal called stepdown) for simplifying full models. Simulation studies based on two medical data sets suggest that simplified models can be found that perform nearly as well as, or sometimes even better than, full models. Optimizing the Akaike information criterion appears to be appropriate for choosing the degree of simplification.}}
@@ -195,6 +205,9 @@
       \field{year}{2002}
       \field{pages}{3803\bibrangedash 3822}
       \range{pages}{20}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.1422
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.1422
       \endverb
@@ -221,10 +234,12 @@
       }
       \strng{namehash}{8a7b33c0f4fa81d37dac168fe596a6f5}
       \strng{fullhash}{8a7b33c0f4fa81d37dac168fe596a6f5}
+      \strng{bibnamehash}{8a7b33c0f4fa81d37dac168fe596a6f5}
+      \strng{authorbibnamehash}{8a7b33c0f4fa81d37dac168fe596a6f5}
       \strng{authornamehash}{8a7b33c0f4fa81d37dac168fe596a6f5}
       \strng{authorfullhash}{8a7b33c0f4fa81d37dac168fe596a6f5}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{In the context of cancer diagnosis and treatment, we consider the problem of constructing an accurate prediction rule on the basis of a relatively small number of tumor tissue samples of known type containing the expression data on very many (possibly thousands) genes. Recently, results have been presented in the literature suggesting that it is possible to construct a prediction rule from only a few genes such that it has a negligible prediction error rate. However, in these results the test error or the leave-one-out cross-validated error is calculated without allowance for the selection bias. There is no allowance because the rule is either tested on tissue samples that were used in the first instance to select the genes being used in the rule or because the cross-validation of the rule is not external to the selection process; that is, gene selection is not performed in training the rule at each stage of the cross-validation process. We describe how in practice the selection bias can be assessed and corrected for by either performing a cross-validation or applying the bootstrap external to the selection process. We recommend using 10-fold rather than leave-one-out cross-validation, and concerning the bootstrap, we suggest using the so-called .632+ bootstrap error estimate designed to handle overfitted prediction rules. Using two published data sets, we demonstrate that when correction is made for the selection bias, the cross-validated error is no longer zero for a subset of only a few genes.}}
@@ -238,6 +253,9 @@
       \field{year}{2002}
       \field{pages}{6562\bibrangedash 6566}
       \range{pages}{5}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1073/pnas.102102699
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1073/pnas.102102699
       \endverb
@@ -263,14 +281,16 @@
       }
       \strng{namehash}{68e4d5d290aff6ddb06a8aac205838b0}
       \strng{fullhash}{68e4d5d290aff6ddb06a8aac205838b0}
+      \strng{bibnamehash}{68e4d5d290aff6ddb06a8aac205838b0}
+      \strng{authorbibnamehash}{68e4d5d290aff6ddb06a8aac205838b0}
       \strng{authornamehash}{68e4d5d290aff6ddb06a8aac205838b0}
       \strng{authorfullhash}{68e4d5d290aff6ddb06a8aac205838b0}
       \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
-      \field{title}{Testing for centre effects in multi-centre survival studies: {A} monte carlo comparison of fixed and random effects tests}
+      \field{title}{Testing for centre effects in multi-centre survival studies: A monte carlo comparison of fixed and random effects tests}
       \field{volume}{18}
       \field{year}{1999}
       \field{pages}{1489\bibrangedash 1500}
@@ -302,10 +322,12 @@
       }
       \strng{namehash}{1c1576b4def43cdf7734aec95d8a16e9}
       \strng{fullhash}{3a7b97910f150f58e09e0614854fecad}
+      \strng{bibnamehash}{1c1576b4def43cdf7734aec95d8a16e9}
+      \strng{authorbibnamehash}{1c1576b4def43cdf7734aec95d8a16e9}
       \strng{authornamehash}{1c1576b4def43cdf7734aec95d8a16e9}
       \strng{authorfullhash}{3a7b97910f150f58e09e0614854fecad}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{development of CDAI}
@@ -332,10 +354,12 @@
       }
       \strng{namehash}{9ec40980f2307bab637780855a71753b}
       \strng{fullhash}{9ec40980f2307bab637780855a71753b}
+      \strng{bibnamehash}{9ec40980f2307bab637780855a71753b}
+      \strng{authorbibnamehash}{9ec40980f2307bab637780855a71753b}
       \strng{authornamehash}{9ec40980f2307bab637780855a71753b}
       \strng{authorfullhash}{9ec40980f2307bab637780855a71753b}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{In randomised trials, rather than comparing randomised groups directly some researchers carry out a significance test comparing a baseline with a final measurement separately in each group. We give several examples where this has been done. We use simulation to demonstrate that the procedure is invalid and also show this algebraically. This approach is biased and invalid, producing conclusions which are, potentially, highly misleading. The actual alpha level of this procedure can be as high as 0.50 for two groups and 0.75 for three. Randomised groups should be compared directly by two-sample methods and separate tests against baseline are highly misleading.}}
@@ -347,6 +371,9 @@
       \field{year}{2011}
       \field{pages}{264}
       \range{pages}{1}
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1745-6215-12-264
+      \endverb
       \verb{url}
       \verb https://doi.org/10.1186/1745-6215-12-264
       \endverb
@@ -362,10 +389,12 @@
       }
       \strng{namehash}{3d889471ddfc896adb631816a873db7c}
       \strng{fullhash}{3d889471ddfc896adb631816a873db7c}
+      \strng{bibnamehash}{3d889471ddfc896adb631816a873db7c}
+      \strng{authorbibnamehash}{3d889471ddfc896adb631816a873db7c}
       \strng{authornamehash}{3d889471ddfc896adb631816a873db7c}
       \strng{authorfullhash}{3d889471ddfc896adb631816a873db7c}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Chance}
@@ -417,10 +446,12 @@
       }
       \strng{namehash}{c7995169361908828b57bb31d17cdfc3}
       \strng{fullhash}{3c403d87a3c5983fd6ff7bbed25363af}
+      \strng{bibnamehash}{c7995169361908828b57bb31d17cdfc3}
+      \strng{authorbibnamehash}{c7995169361908828b57bb31d17cdfc3}
       \strng{authornamehash}{c7995169361908828b57bb31d17cdfc3}
       \strng{authorfullhash}{3c403d87a3c5983fd6ff7bbed25363af}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J Clin Epi}
@@ -446,20 +477,65 @@
       }
       \strng{namehash}{55f017095e1c9652f49010e6981cd8ec}
       \strng{fullhash}{55f017095e1c9652f49010e6981cd8ec}
+      \strng{bibnamehash}{55f017095e1c9652f49010e6981cd8ec}
+      \strng{authorbibnamehash}{55f017095e1c9652f49010e6981cd8ec}
       \strng{authornamehash}{55f017095e1c9652f49010e6981cd8ec}
       \strng{authorfullhash}{55f017095e1c9652f49010e6981cd8ec}
       \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{"statistics such as the AUC are not especially relevant to someone who must make a decision about a particular $x\_{c}$. ... ROC curves lack or obscure several quantities that are necessary for evaluating the operational effectiveness of diagnostic tests. ... ROC curves were first used to check how radio \emph{receivers} (like radar receivers) operated over a range of frequencies. ... This is not how most ROC curves are used now, particularly in medicine. The receiver of a diagnostic measurement ... wants to make a decision based on some $x\_{c}$, and is not especially interested in how well he would have done had he used some different cutoff."; in the discussion David Hand states "when integrating to yield the overall AUC measure, it is necessary to decide what weight to give each value in the integration. The AUC implicitly does this using a weighting derived empirically from the data. This is nonsensical. The relative importance of misclassifying a case as a noncase, compared to the reverse, cannot come from the data itself. It must come externally, from considerations of the severity one attaches to the different kinds of misclassifications."; see Lin, Kvam, Lu Stat in Med 28:798-813;2009}
+      \field{annotation}{"statistics such as the AUC are not especially relevant to someone who must make a decision about a particular $x\_c$. ... ROC curves lack or obscure several quantities that are necessary for evaluating the operational effectiveness of diagnostic tests. ... ROC curves were first used to check how radio \emph{receivers} (like radar receivers) operated over a range of frequencies. ... This is not how most ROC curves are used now, particularly in medicine. The receiver of a diagnostic measurement ... wants to make a decision based on some $x\_c$, and is not especially interested in how well he would have done had he used some different cutoff."; in the discussion David Hand states "when integrating to yield the overall AUC measure, it is necessary to decide what weight to give each value in the integration. The AUC implicitly does this using a weighting derived empirically from the data. This is nonsensical. The relative importance of misclassifying a case as a noncase, compared to the reverse, cannot come from the data itself. It must come externally, from considerations of the severity one attaches to the different kinds of misclassifications."; see Lin, Kvam, Lu Stat in Med 28:798-813;2009}
       \field{journaltitle}{Biometrics}
-      \field{title}{The skill plot: {A} graphical technique for evaluating continuous diagnostic tests (with discussion)}
+      \field{title}{The skill plot: A graphical technique for evaluating continuous diagnostic tests (with discussion)}
       \field{volume}{64}
       \field{year}{2008}
       \field{pages}{250\bibrangedash 261}
       \range{pages}{12}
       \keyw{diagnosis,diagnostic-accuracy,predictive-accuracy,roc-curve,sensitivity,skill-plot,skill-score,specificity,*import}
+    \endentry
+    \entry{cal89}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=6a05d65041a0194ef8e05c588297648e}{%
+           family={Califf},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=895145989a3fb8e5544481e729a3843a}{%
+           family={Harrell},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi E.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=93e65a7c26a296e25f82900fc4bba2ba}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={K.\bibnamedelimi L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9016182f21a5c905980c1e4c4cb3d13b}{%
+           family={Rankin},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{fullhash}{64d1a768a753320a6b1b8b3be75a2648}
+      \strng{bibnamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{authorbibnamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{authornamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{authorfullhash}{64d1a768a753320a6b1b8b3be75a2648}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JAMA}
+      \field{title}{{The evolution of medical and surgical therapy for coronary artery disease}}
+      \field{volume}{261}
+      \field{year}{1989}
+      \field{pages}{2077\bibrangedash 2086}
+      \range{pages}{10}
+      \keyw{*import}
     \endentry
     \entry{cal82pro}{article}{}
       \name{author}{8}{}{%
@@ -506,10 +582,12 @@
       }
       \strng{namehash}{f678ab20cd3a6ddb455b36d0359a37ca}
       \strng{fullhash}{f47063d864b20e30b4de042fd7834e9b}
+      \strng{bibnamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
+      \strng{authorbibnamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
       \strng{authornamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
       \strng{authorfullhash}{f47063d864b20e30b4de042fd7834e9b}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am J Card}
@@ -518,47 +596,6 @@
       \field{year}{1982}
       \field{pages}{23\bibrangedash 31}
       \range{pages}{9}
-      \keyw{*import}
-    \endentry
-    \entry{cal89}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{4}{}{%
-        {{hash=6a05d65041a0194ef8e05c588297648e}{%
-           family={Califf},
-           familyi={C\bibinitperiod},
-           given={R.\bibnamedelimi M.},
-           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=895145989a3fb8e5544481e729a3843a}{%
-           family={Harrell},
-           familyi={H\bibinitperiod},
-           given={F.\bibnamedelimi E.},
-           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=93e65a7c26a296e25f82900fc4bba2ba}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={K.\bibnamedelimi L.},
-           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=9016182f21a5c905980c1e4c4cb3d13b}{%
-           family={Rankin},
-           familyi={R\bibinitperiod},
-           given={J.\bibnamedelimi S.},
-           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{f678ab20cd3a6ddb455b36d0359a37ca}
-      \strng{fullhash}{64d1a768a753320a6b1b8b3be75a2648}
-      \strng{authornamehash}{f678ab20cd3a6ddb455b36d0359a37ca}
-      \strng{authorfullhash}{64d1a768a753320a6b1b8b3be75a2648}
-      \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{JAMA}
-      \field{title}{{The evolution of medical and surgical therapy for coronary artery disease}}
-      \field{volume}{261}
-      \field{year}{1989}
-      \field{pages}{2077\bibrangedash 2086}
-      \range{pages}{10}
       \keyw{*import}
     \endentry
     \entry{che16too}{article}{}
@@ -596,10 +633,12 @@
       }
       \strng{namehash}{16859c9bbc326ef540c197c40ef5d5d1}
       \strng{fullhash}{bfca40c50410f20e40b71aaf685aac19}
+      \strng{bibnamehash}{16859c9bbc326ef540c197c40ef5d5d1}
+      \strng{authorbibnamehash}{16859c9bbc326ef540c197c40ef5d5d1}
       \strng{authornamehash}{16859c9bbc326ef540c197c40ef5d5d1}
       \strng{authorfullhash}{bfca40c50410f20e40b71aaf685aac19}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{02776715}
@@ -611,6 +650,9 @@
       \field{year}{2016}
       \field{pages}{4546\bibrangedash 4558}
       \range{pages}{13}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.7021
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.7021
       \endverb
@@ -626,10 +668,12 @@
       }
       \strng{namehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{fullhash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{bibnamehash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{authorbibnamehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{authornamehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{authorfullhash}{c04807b4bc38a1601765f6a136d6f17d}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am Statistician}
@@ -657,10 +701,12 @@
       }
       \strng{namehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{fullhash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{bibnamehash}{c04807b4bc38a1601765f6a136d6f17d}
+      \strng{authorbibnamehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{authornamehash}{c04807b4bc38a1601765f6a136d6f17d}
       \strng{authorfullhash}{c04807b4bc38a1601765f6a136d6f17d}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{The Elements of Graphing Data}}
@@ -677,14 +723,16 @@
       }
       \strng{namehash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
       \strng{fullhash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
+      \strng{bibnamehash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
+      \strng{authorbibnamehash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
       \strng{authornamehash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
       \strng{authorfullhash}{e7bc9f4af76873f5e1f28ad5d04d44a3}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
-      \field{title}{Sympercents: symmetric percentage differences on the 100 $\log_{e}$ scale simplify the presentation of log transformed data}
+      \field{title}{Sympercents: symmetric percentage differences on the 100 $\log_e$ scale simplify the presentation of log transformed data}
       \field{volume}{19}
       \field{year}{2000}
       \field{pages}{3109\bibrangedash 3125}
@@ -699,10 +747,12 @@
       }
       \strng{namehash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
       \strng{fullhash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
+      \strng{bibnamehash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
+      \strng{authorbibnamehash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
       \strng{authornamehash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
       \strng{authorfullhash}{067f6e4eb4fd94e6c2a4da95d8d4955f}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -728,10 +778,12 @@
       }
       \strng{namehash}{057c7b87fab177e784cf3bf582711d73}
       \strng{fullhash}{057c7b87fab177e784cf3bf582711d73}
+      \strng{bibnamehash}{057c7b87fab177e784cf3bf582711d73}
+      \strng{authorbibnamehash}{057c7b87fab177e784cf3bf582711d73}
       \strng{authornamehash}{057c7b87fab177e784cf3bf582711d73}
       \strng{authorfullhash}{057c7b87fab177e784cf3bf582711d73}
       \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{argues that if results are intended to be interpreted marginally, there may be no need for controlling experimentwise error rate}
@@ -759,10 +811,12 @@
       }
       \strng{namehash}{482cf770fa676e2649acf6116ac94b6a}
       \strng{fullhash}{482cf770fa676e2649acf6116ac94b6a}
+      \strng{bibnamehash}{482cf770fa676e2649acf6116ac94b6a}
+      \strng{authorbibnamehash}{482cf770fa676e2649acf6116ac94b6a}
       \strng{authornamehash}{482cf770fa676e2649acf6116ac94b6a}
       \strng{authorfullhash}{482cf770fa676e2649acf6116ac94b6a}
       \field{sortinit}{D}
-      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Statistical Methods for the Analysis of Repeated Measurements}}
@@ -800,10 +854,12 @@
       }
       \strng{namehash}{3c41592927f50d43a404c94257747d50}
       \strng{fullhash}{700b93fcbb4fe5125fe4ceb3402a9e41}
+      \strng{bibnamehash}{3c41592927f50d43a404c94257747d50}
+      \strng{authorbibnamehash}{3c41592927f50d43a404c94257747d50}
       \strng{authornamehash}{3c41592927f50d43a404c94257747d50}
       \strng{authorfullhash}{700b93fcbb4fe5125fe4ceb3402a9e41}
       \field{sortinit}{D}
-      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{second}
@@ -827,10 +883,12 @@
       }
       \strng{namehash}{a650b6aef29395a8edcc25fdd80d715d}
       \strng{fullhash}{a650b6aef29395a8edcc25fdd80d715d}
+      \strng{bibnamehash}{a650b6aef29395a8edcc25fdd80d715d}
+      \strng{authorbibnamehash}{a650b6aef29395a8edcc25fdd80d715d}
       \strng{authornamehash}{a650b6aef29395a8edcc25fdd80d715d}
       \strng{authorfullhash}{a650b6aef29395a8edcc25fdd80d715d}
       \field{sortinit}{D}
-      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{second}
@@ -854,10 +912,12 @@
       }
       \strng{namehash}{ec58316fb3cb15aaa01b1f3d00a464b1}
       \strng{fullhash}{ec58316fb3cb15aaa01b1f3d00a464b1}
+      \strng{bibnamehash}{ec58316fb3cb15aaa01b1f3d00a464b1}
+      \strng{authorbibnamehash}{ec58316fb3cb15aaa01b1f3d00a464b1}
       \strng{authornamehash}{ec58316fb3cb15aaa01b1f3d00a464b1}
       \strng{authorfullhash}{ec58316fb3cb15aaa01b1f3d00a464b1}
       \field{sortinit}{E}
-      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -883,10 +943,12 @@
       }
       \strng{namehash}{05a5d797b9c4e693cf68d8b7d36ce57a}
       \strng{fullhash}{05a5d797b9c4e693cf68d8b7d36ce57a}
+      \strng{bibnamehash}{05a5d797b9c4e693cf68d8b7d36ce57a}
+      \strng{authorbibnamehash}{05a5d797b9c4e693cf68d8b7d36ce57a}
       \strng{authornamehash}{05a5d797b9c4e693cf68d8b7d36ce57a}
       \strng{authorfullhash}{05a5d797b9c4e693cf68d8b7d36ce57a}
       \field{sortinit}{E}
-      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sci Am}
@@ -918,10 +980,12 @@
       }
       \strng{namehash}{47e5ec646023763f3b941868082773ee}
       \strng{fullhash}{47e5ec646023763f3b941868082773ee}
+      \strng{bibnamehash}{47e5ec646023763f3b941868082773ee}
+      \strng{authorbibnamehash}{47e5ec646023763f3b941868082773ee}
       \strng{authornamehash}{47e5ec646023763f3b941868082773ee}
       \strng{authorfullhash}{47e5ec646023763f3b941868082773ee}
       \field{sortinit}{F}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{optimal cutpoint depends on unknown parameters;should only entertain dichotomization when "estimating a value of the cumulative distribution and when the assumed model is very different from the true model";nice graphics}
@@ -931,6 +995,9 @@
       \field{year}{2009}
       \field{pages}{50\bibrangedash 61}
       \range{pages}{12}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/pst.331
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/pst.331
       \endverb
@@ -956,10 +1023,12 @@
       }
       \strng{namehash}{9a6e597b46d8e19cca76b17d9486b8aa}
       \strng{fullhash}{9a6e597b46d8e19cca76b17d9486b8aa}
+      \strng{bibnamehash}{9a6e597b46d8e19cca76b17d9486b8aa}
+      \strng{authorbibnamehash}{9a6e597b46d8e19cca76b17d9486b8aa}
       \strng{authornamehash}{9a6e597b46d8e19cca76b17d9486b8aa}
       \strng{authorfullhash}{9a6e597b46d8e19cca76b17d9486b8aa}
       \field{sortinit}{F}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -990,10 +1059,12 @@
       }
       \strng{namehash}{3555b940f4c5f45ac8e552145dffc687}
       \strng{fullhash}{3555b940f4c5f45ac8e552145dffc687}
+      \strng{bibnamehash}{3555b940f4c5f45ac8e552145dffc687}
+      \strng{authorbibnamehash}{3555b940f4c5f45ac8e552145dffc687}
       \strng{authornamehash}{3555b940f4c5f45ac8e552145dffc687}
       \strng{authorfullhash}{3555b940f4c5f45ac8e552145dffc687}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{bias if omitted covariables and model is nonlinear}
@@ -1033,12 +1104,15 @@
       }
       \strng{namehash}{04a67c176afb94388ea58843b3bdd4b0}
       \strng{fullhash}{04a67c176afb94388ea58843b3bdd4b0}
+      \strng{bibnamehash}{04a67c176afb94388ea58843b3bdd4b0}
+      \strng{authorbibnamehash}{04a67c176afb94388ea58843b3bdd4b0}
       \strng{authornamehash}{04a67c176afb94388ea58843b3bdd4b0}
       \strng{authorfullhash}{04a67c176afb94388ea58843b3bdd4b0}
+      \strng{editorbibnamehash}{d76fc91a00f83a3054e6fb57d36e063c}
       \strng{editornamehash}{d76fc91a00f83a3054e6fb57d36e063c}
       \strng{editorfullhash}{d76fc91a00f83a3054e6fb57d36e063c}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{unadjusted test can have larger type I error than nominal}
@@ -1067,10 +1141,12 @@
       }
       \strng{namehash}{602df721bcd10fe1eca95cb5554d134b}
       \strng{fullhash}{602df721bcd10fe1eca95cb5554d134b}
+      \strng{bibnamehash}{602df721bcd10fe1eca95cb5554d134b}
+      \strng{authorbibnamehash}{602df721bcd10fe1eca95cb5554d134b}
       \strng{authornamehash}{602df721bcd10fe1eca95cb5554d134b}
       \strng{authorfullhash}{602df721bcd10fe1eca95cb5554d134b}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{Data Analysis Using Regression and Multilevel/Hierarchical Models is a comprehensive manual for the applied researcher who wants to perform data analysis using linear and nonlinear regression and multilevel models. The book introduces a wide variety of models, whilst at the same time instructing the reader in how to fit these models using available software packages. The book illustrates the concepts by working through scores of real data examples that have arisen from the authors\&\#8217; own applied research, with programming codes provided for each one. Topics covered include causal inference, including regression, poststratification, matching, regression discontinuity, and instrumental variables, as well as multilevel logistic regression and missing-data imputation. Practical tips regarding building, fitting, and understanding are provided throughout.}}
@@ -1080,6 +1156,9 @@
       \field{month}{12}
       \field{title}{{Data Analysis Using Regression and Multilevel/Hierarchical Models}}
       \field{year}{2006}
+      \verb{urlraw}
+      \verb http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/052168689X
+      \endverb
       \verb{url}
       \verb http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20%5C&path=ASIN/052168689X
       \endverb
@@ -1130,18 +1209,23 @@
       }
       \strng{namehash}{b49c089fc5e5b703cfbbab05893a18df}
       \strng{fullhash}{9f70c545579d21ffd30c016863e6eb2a}
+      \strng{bibnamehash}{b49c089fc5e5b703cfbbab05893a18df}
+      \strng{authorbibnamehash}{b49c089fc5e5b703cfbbab05893a18df}
       \strng{authornamehash}{b49c089fc5e5b703cfbbab05893a18df}
       \strng{authorfullhash}{9f70c545579d21ffd30c016863e6eb2a}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Clinicians are sometimes advised to make decisions using thresholds in measured variables, derived from prognostic studies. We studied why there are conflicting apparently-optimal prognostic thresholds, for example in exercise peak oxygen uptake (pVO2), ejection fraction (EF), and Brain Natriuretic Peptide (BNP) in heart failure (HF). Studies testing pVO2, EF or BNP prognostic thresholds in heart failure, published between 1990 and 2010, listed on Pubmed. First, we examined studies testing pVO2, EF or BNP prognostic thresholds. Second, we created repeated simulations of 1500 patients to identify whether an apparently-optimal prognostic threshold indicates step change in risk. 33 studies (8946 patients) tested a pVO2 threshold. 18 found it prognostically significant: the actual reported threshold ranged widely (10-18 ml/kg/min) but was overwhelmingly controlled by the individual study population's mean pVO2 ($r = 0.86, p<0.00001$). In contrast, the 15 negative publications were testing thresholds 199{\%} further from their means (p = 0.0001). Likewise, of 35 EF studies (10220 patients), the thresholds in the 22 positive reports were strongly determined by study means ($r = 0.90, p<0.0001$). Similarly, in the 19 positives of 20 BNP studies (9725 patients): $r = 0.86 (p<0.0001)$. Second, survival simulations always discovered a "most significant" threshold, even when there was definitely no step change in mortality. With linear increase in risk, the apparently-optimal threshold was always near the sample mean ($r = 0.99, p<0.001$). This study cannot report the best threshold for any of these variables; instead it explains how common clinical research procedures routinely produce false thresholds. First, shifting (and/or disappearance) of an apparently-optimal prognostic threshold is strongly determined by studies' average pVO2, EF or BNP. Second, apparently-optimal thresholds always appear, even with no step in prognosis. Emphatic therapeutic guidance based on thresholds from observational studies may be ill-founded. We should not assume that optimal thresholds, or any thresholds, exist.}
       \field{journaltitle}{PLoS ONE}
       \field{number}{1}
-      \field{title}{{Do optimal prognostic thresholds in continuous physiological variables really exist? {A}nalysis of origin of apparent thresholds, with systematic review for peak oxygen consumption, ejection fraction and {B}{N}{P}}}
+      \field{title}{{Do optimal prognostic thresholds in continuous physiological variables really exist? Analysis of origin of apparent thresholds, with systematic review for peak oxygen consumption, ejection fraction and BNP}}
       \field{volume}{9}
       \field{year}{2014}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1371/journal.pone.0081699
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1371/journal.pone.0081699
       \endverb
@@ -1162,10 +1246,12 @@
       }
       \strng{namehash}{48eb4b2274f6dc64b3104fb46d644084}
       \strng{fullhash}{48eb4b2274f6dc64b3104fb46d644084}
+      \strng{bibnamehash}{48eb4b2274f6dc64b3104fb46d644084}
+      \strng{authorbibnamehash}{48eb4b2274f6dc64b3104fb46d644084}
       \strng{authornamehash}{48eb4b2274f6dc64b3104fb46d644084}
       \strng{authorfullhash}{48eb4b2274f6dc64b3104fb46d644084}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{wonderful review article except missing references from Scandanavian and German medical decision making literature}
@@ -1187,10 +1273,12 @@
       }
       \strng{namehash}{c5b4c7113701e4de7900f78e0f2fd1fd}
       \strng{fullhash}{c5b4c7113701e4de7900f78e0f2fd1fd}
+      \strng{bibnamehash}{c5b4c7113701e4de7900f78e0f2fd1fd}
+      \strng{authorbibnamehash}{c5b4c7113701e4de7900f78e0f2fd1fd}
       \strng{authornamehash}{c5b4c7113701e4de7900f78e0f2fd1fd}
       \strng{authorfullhash}{c5b4c7113701e4de7900f78e0f2fd1fd}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{use of statistics in epidemiology is largely primitive;stepwise variable selection on confounders leaves important confounders uncontrolled;composition matrix;example with far too many significant predictors with many regression coefficients absurdly inflated when overfit;lack of evidence for dietary effects mediated through constituents;shrinkage instead of variable selection;larger effect on confidence interval width than on point estimates with variable selection;uncertainty about variance of random effects is just uncertainty about prior opinion;estimation of variance is pointless;instead the analysis should be repeated using different values;"if one feels compelled to estimate $\tau^2$, I would recommend giving it a proper prior concentrated amount contextually reasonable values";claim about ordinary MLE being unbiased is misleading because it assumes the model is correct and is the only model entertained;shrinkage towards compositional model;"models need to be complex to capture uncertainty about the relations...an honest uncertainty assessment requires parameters for all effects that we know may be present. This advice is implicit in an antiparsimony principle often attributed to L. J. Savage 'All models should be as big as an elephant (see Draper, 1995)'". See also gus06per.}
@@ -1200,6 +1288,9 @@
       \field{year}{2000}
       \field{pages}{915\bibrangedash 921}
       \range{pages}{7}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/j.0006-341X.2000.00915.x
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1111/j.0006-341X.2000.00915.x
       \endverb
@@ -1248,10 +1339,12 @@
       }
       \strng{namehash}{b825a78368fc89b30b758edc176111a0}
       \strng{fullhash}{5cc2896e7eca8765a99d56aeed2d36d7}
+      \strng{bibnamehash}{b825a78368fc89b30b758edc176111a0}
+      \strng{authorbibnamehash}{b825a78368fc89b30b758edc176111a0}
       \strng{authornamehash}{b825a78368fc89b30b758edc176111a0}
       \strng{authorfullhash}{5cc2896e7eca8765a99d56aeed2d36d7}
       \field{sortinit}{G}
-      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Best article on misinterpretation of p-values. Pithy summaries.}
@@ -1262,6 +1355,9 @@
       \field{year}{2016}
       \field{pages}{337\bibrangedash 350}
       \range{pages}{14}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s10654-016-0149-3
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1007/s10654-016-0149-3
       \endverb
@@ -1282,10 +1378,12 @@
       }
       \strng{namehash}{f7c5f3ec7e2a03b29af14cd4a260878d}
       \strng{fullhash}{f7c5f3ec7e2a03b29af14cd4a260878d}
+      \strng{bibnamehash}{f7c5f3ec7e2a03b29af14cd4a260878d}
+      \strng{authorbibnamehash}{f7c5f3ec7e2a03b29af14cd4a260878d}
       \strng{authornamehash}{f7c5f3ec7e2a03b29af14cd4a260878d}
       \strng{authorfullhash}{f7c5f3ec7e2a03b29af14cd4a260878d}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{review of basic science literature that documents systemic methodologic shortcomings. In a personal communication on 20Oct06 the authors reported that they found a few more biostatistical problems that could not make it into the JAMA article (for space constraints);none of the articles contained a sample size calculation;none of the articles identified a primary outcome measure;none of the articles mentioned whether they tested assumptions or did distributional testing (though a few used non-parametric tests);most articles had more than 30 endpoints (but few adjusted for multiplicity, as noted in the article)}
@@ -1307,14 +1405,19 @@
       }
       \strng{namehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{fullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{bibnamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{authorbibnamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{authornamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{authorfullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{\texttt{Hmisc}: {A} package of miscellaneous \textsc{R} functions}
+      \field{title}{\texttt{Hmisc}: A package of miscellaneous \textsc{R} functions}
       \field{year}{2015}
+      \verb{urlraw}
+      \verb http://biostat.mc.vanderbilt.edu/Hmisc
+      \endverb
       \verb{url}
       \verb http://biostat.mc.vanderbilt.edu/Hmisc
       \endverb
@@ -1330,16 +1433,21 @@
       }
       \strng{namehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{fullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{bibnamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
+      \strng{authorbibnamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{authornamehash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \strng{authorfullhash}{11dc2bced6a1eb03ef27ee31e3e2acb1}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{biostat.mc.vanderbilt.edu/Rrms}
       \field{note}{Implements methods in Regression Modeling Strategies, 2nd edition}
       \field{title}{{rms: R functions for biostatistical/epidemiologic modeling, testing, estimation, validation, graphics, prediction, and typesetting by storing enhanced model design attributes in the fit}}
       \field{year}{2016}
+      \verb{urlraw}
+      \verb http://biostat.mc.vanderbilt.edu/rms
+      \endverb
       \verb{url}
       \verb http://biostat.mc.vanderbilt.edu/rms
       \endverb
@@ -1395,10 +1503,12 @@
       }
       \strng{namehash}{5dbdbecabf540b09ec1f64f29eb2ad6b}
       \strng{fullhash}{362736390a5456df8ad8f60de1d440d5}
+      \strng{bibnamehash}{5dbdbecabf540b09ec1f64f29eb2ad6b}
+      \strng{authorbibnamehash}{5dbdbecabf540b09ec1f64f29eb2ad6b}
       \strng{authornamehash}{5dbdbecabf540b09ec1f64f29eb2ad6b}
       \strng{authorfullhash}{362736390a5456df8ad8f60de1d440d5}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -1407,6 +1517,9 @@
       \field{year}{1998}
       \field{pages}{909\bibrangedash 944}
       \range{pages}{36}
+      \verb{urlraw}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0258(19980430)17:8\%3C909::AID-SIM753\%3E3.0.CO;2-O/abstract
+      \endverb
       \verb{url}
       \verb http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0258(19980430)17:8%5C%3C909::AID-SIM753%5C%3E3.0.CO;2-O/abstract
       \endverb
@@ -1432,10 +1545,12 @@
       }
       \strng{namehash}{47e48287b9a7469c12cdd75e21798fec}
       \strng{fullhash}{47e48287b9a7469c12cdd75e21798fec}
+      \strng{bibnamehash}{47e48287b9a7469c12cdd75e21798fec}
+      \strng{authorbibnamehash}{47e48287b9a7469c12cdd75e21798fec}
       \strng{authornamehash}{47e48287b9a7469c12cdd75e21798fec}
       \strng{authorfullhash}{47e48287b9a7469c12cdd75e21798fec}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{"For use in a clinician-patient context, there is only a single person, that patient, of interest. The subject-specific measure then best reflects the risks or benefits for that patient. Gail has noted this previously [ENAR Presidential Invited Address, April 1990], arguing that one goal of a clinical trial ought to be to predict the direction and size of a treatment benefit for a patient with specific covariate values. In contrast, population-averaged estimates of treatment effect compare outcomes in groups of patients. The groups being compared are determined by whatever covariates are included in the model. The treatment effect is then a comparison of average outcomes, where the averaging is over all omitted covariates."}
@@ -1445,6 +1560,9 @@
       \field{year}{1998}
       \field{pages}{249\bibrangedash 256}
       \range{pages}{8}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0197-2456(97)00147-5
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/S0197-2456(97)00147-5
       \endverb
@@ -1545,10 +1663,12 @@
       }
       \strng{namehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{fullhash}{32a9028ecc14a0ab36d7f54ef48684ee}
+      \strng{bibnamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
+      \strng{authorbibnamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{authornamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{authorfullhash}{32a9028ecc14a0ab36d7f54ef48684ee}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{graph with different symbols for diseased and non-diseased}
@@ -1597,18 +1717,23 @@
       }
       \strng{namehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{fullhash}{ca245166cd962cc6351beb26a1d6af6b}
+      \strng{bibnamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
+      \strng{authorbibnamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{authornamehash}{ab09a2cb22599e4160e1ae504b2a1f9e}
       \strng{authorfullhash}{ca245166cd962cc6351beb26a1d6af6b}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am J Med}
-      \field{title}{Factors affecting the sensitivity and specificity of exercise electrocardiography. {M}ultivariable analysis}
+      \field{title}{Factors affecting the sensitivity and specificity of exercise electrocardiography. Multivariable analysis}
       \field{volume}{77}
       \field{year}{1984}
       \field{pages}{64\bibrangedash 71}
       \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934384904376\#
+      \endverb
       \verb{url}
       \verb http://www.sciencedirect.com/science/article/pii/0002934384904376%5C#
       \endverb
@@ -1624,10 +1749,12 @@
       }
       \strng{namehash}{26d3c01664dc4b0c60afbdf4153437e2}
       \strng{fullhash}{26d3c01664dc4b0c60afbdf4153437e2}
+      \strng{bibnamehash}{26d3c01664dc4b0c60afbdf4153437e2}
+      \strng{authorbibnamehash}{26d3c01664dc4b0c60afbdf4153437e2}
       \strng{authornamehash}{26d3c01664dc4b0c60afbdf4153437e2}
       \strng{authorfullhash}{26d3c01664dc4b0c60afbdf4153437e2}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Partially reprinted in: Kotz, S., Johnson, N.L. (1992) Breakthroughs in Statistics, Vol I, pp 308-334. Springer-Verlag. ISBN 0-387-94037-5}
@@ -1659,10 +1786,12 @@
       }
       \strng{namehash}{e446d3e22b56fa08152c41f077c83cad}
       \strng{fullhash}{e446d3e22b56fa08152c41f077c83cad}
+      \strng{bibnamehash}{e446d3e22b56fa08152c41f077c83cad}
+      \strng{authorbibnamehash}{e446d3e22b56fa08152c41f077c83cad}
       \strng{authornamehash}{e446d3e22b56fa08152c41f077c83cad}
       \strng{authorfullhash}{e446d3e22b56fa08152c41f077c83cad}
       \field{sortinit}{H}
-      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{true type I error can be much greater than nominal level;one example where nominal is 0.05 and true is 0.5;minimum P-value method;CART;recursive partitioning;bootstrap method for correcting confidence interval;based on heuristic shrinkage coefficient;"It should be noted, however, that the optimal cutpoint approach has disadvantages. One of these is that in almost every study where this method is applied, another cutpoint will emerge. This makes comparisons across studies extremely difficult or even impossible. Altman et al. point out this problem for studies of the prognostic relevance of the S-phase fraction in breast cancer published in the literature. They identified 19 different cutpoints used in the literature; some of them were solely used because they emerged as the `optimal' cutpoint in a specific data set. In a meta-analysis on the relationship between cathepsin-D content and disease-free survival in node-negative breast cancer patients, 12 studies were in included with 12 different cutpoints ... Interestingly, neither cathepsin-D nor the S-phase fraction are recommended to be used as prognostic markers in breast cancer in the recent update of the American Society of Clinical Oncology."; dichotomization; categorizing continuous variables; refs alt94dan, sch94out, alt98sub}
@@ -1672,6 +1801,9 @@
       \field{year}{2004}
       \field{pages}{1701\bibrangedash 1713}
       \range{pages}{13}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.1611
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.1611
       \endverb
@@ -1687,10 +1819,12 @@
       }
       \strng{namehash}{48b973ec20eef9085f59c9e3a89c7837}
       \strng{fullhash}{48b973ec20eef9085f59c9e3a89c7837}
+      \strng{bibnamehash}{48b973ec20eef9085f59c9e3a89c7837}
+      \strng{authorbibnamehash}{48b973ec20eef9085f59c9e3a89c7837}
       \strng{authornamehash}{48b973ec20eef9085f59c9e3a89c7837}
       \strng{authorfullhash}{48b973ec20eef9085f59c9e3a89c7837}
       \field{sortinit}{I}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEJM}
@@ -1717,10 +1851,12 @@
       }
       \strng{namehash}{ed379279a0fd4cd265218cce977a3c96}
       \strng{fullhash}{ed379279a0fd4cd265218cce977a3c96}
+      \strng{bibnamehash}{ed379279a0fd4cd265218cce977a3c96}
+      \strng{authorbibnamehash}{ed379279a0fd4cd265218cce977a3c96}
       \strng{authornamehash}{ed379279a0fd4cd265218cce977a3c96}
       \strng{authorfullhash}{ed379279a0fd4cd265218cce977a3c96}
       \field{sortinit}{I}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{high risk patients can dominate clinical trials results;high risk patients may be imbalanced even if overall study is balanced;magnesium;differential treatment effect by patient risk;GUSTO;small vs. large trials vs. meta-analysis}
@@ -1730,6 +1866,9 @@
       \field{year}{1997}
       \field{pages}{1089\bibrangedash 1098}
       \range{pages}{10}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0895-4356(97)00149-2
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/S0895-4356(97)00149-2
       \endverb
@@ -1745,10 +1884,12 @@
       }
       \strng{namehash}{444277b10b25c4b9618dfc6f6a99bdb2}
       \strng{fullhash}{444277b10b25c4b9618dfc6f6a99bdb2}
+      \strng{bibnamehash}{444277b10b25c4b9618dfc6f6a99bdb2}
+      \strng{authorbibnamehash}{444277b10b25c4b9618dfc6f6a99bdb2}
       \strng{authornamehash}{444277b10b25c4b9618dfc6f6a99bdb2}
       \strng{authorfullhash}{444277b10b25c4b9618dfc6f6a99bdb2}
       \field{sortinit}{I}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{"Each new field has a rapid exponential growth of its literature over 5--8 years (`new field phase'), followed by an `established field' phase when growth rates are more modest, and then an `over-maturity' phase, where the rates of growth are similar to the growth of the scientific literature at large or even smaller. There is a parallel in the spread of an infectious epidemic that emerges rapidly and gets established when a large number of scientists (and articles) are infected with these concepts. Then momentum decreases, although many scientists remain infected and continue to work on this field. New omics infections continuously arise in the scientific community.";"A large number of personal genomic tests are already sold in the market, mostly with direct to consumer advertisement and for `recreational genomics' purposes (translate: information for the fun of information)."}
@@ -1770,18 +1911,23 @@
       }
       \strng{namehash}{08eeb65860b12826c4895e5855b474cc}
       \strng{fullhash}{08eeb65860b12826c4895e5855b474cc}
+      \strng{bibnamehash}{08eeb65860b12826c4895e5855b474cc}
+      \strng{authorbibnamehash}{08eeb65860b12826c4895e5855b474cc}
       \strng{authornamehash}{08eeb65860b12826c4895e5855b474cc}
       \strng{authorfullhash}{08eeb65860b12826c4895e5855b474cc}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
-      \field{title}{Adjusting for baseline: {C}hange or percentage change?}
+      \field{title}{Adjusting for baseline: Change or percentage change?}
       \field{volume}{8}
       \field{year}{1989}
       \field{pages}{1183\bibrangedash 1190}
       \range{pages}{8}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.4780081002
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.4780081002
       \endverb
@@ -1802,10 +1948,12 @@
       }
       \strng{namehash}{ac1f0e8b39178f8e892713c4e62ae850}
       \strng{fullhash}{ac1f0e8b39178f8e892713c4e62ae850}
+      \strng{bibnamehash}{ac1f0e8b39178f8e892713c4e62ae850}
+      \strng{authorbibnamehash}{ac1f0e8b39178f8e892713c4e62ae850}
       \strng{authornamehash}{ac1f0e8b39178f8e892713c4e62ae850}
       \strng{authorfullhash}{ac1f0e8b39178f8e892713c4e62ae850}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{variation in absolute risk reduction in RCTs;failure of subgroup analysis;covariable adjustment;covariate adjustment;nice summary of individual patient absolute benefit vs. patient risk}
@@ -1815,6 +1963,9 @@
       \field{year}{2007}
       \field{pages}{1209\bibrangedash 1212}
       \range{pages}{4}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.298.10.1209
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1001/jama.298.10.1209
       \endverb
@@ -1875,18 +2026,23 @@
       }
       \strng{namehash}{b25c263478a3e267e839be162dbf7dc6}
       \strng{fullhash}{85fd39c3f60c62fb77617e1310082ed3}
+      \strng{bibnamehash}{b25c263478a3e267e839be162dbf7dc6}
+      \strng{authorbibnamehash}{b25c263478a3e267e839be162dbf7dc6}
       \strng{authornamehash}{b25c263478a3e267e839be162dbf7dc6}
       \strng{authorfullhash}{85fd39c3f60c62fb77617e1310082ed3}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{JAMA}
-      \field{title}{The clinical evaluation of new drugs for sepsis: {A} prospective study design based on survival analysis}
+      \field{title}{The clinical evaluation of new drugs for sepsis: A prospective study design based on survival analysis}
       \field{volume}{270}
       \field{year}{1993}
       \field{pages}{1233\bibrangedash 1241}
       \range{pages}{9}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.270.10.1233
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1001/jama.270.10.1233
       \endverb
@@ -1907,10 +2063,12 @@
       }
       \strng{namehash}{7000e6359b5f5614876e019d20a9783f}
       \strng{fullhash}{7000e6359b5f5614876e019d20a9783f}
+      \strng{bibnamehash}{7000e6359b5f5614876e019d20a9783f}
+      \strng{authorbibnamehash}{7000e6359b5f5614876e019d20a9783f}
       \strng{authornamehash}{7000e6359b5f5614876e019d20a9783f}
       \strng{authorfullhash}{7000e6359b5f5614876e019d20a9783f}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Econometrica}
@@ -1942,10 +2100,12 @@
       }
       \strng{namehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
       \strng{fullhash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \strng{bibnamehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
+      \strng{editorbibnamehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
       \strng{editornamehash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
       \strng{editorfullhash}{fca4b38749b6f5f687ae2ee1dc97ad9b}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{title}{{Encyclopedia of Stat Scis}}
@@ -1963,10 +2123,12 @@
       }
       \strng{namehash}{a2be7195d005db13032c4e0c04de0e2c}
       \strng{fullhash}{a2be7195d005db13032c4e0c04de0e2c}
+      \strng{bibnamehash}{a2be7195d005db13032c4e0c04de0e2c}
+      \strng{authorbibnamehash}{a2be7195d005db13032c4e0c04de0e2c}
       \strng{authornamehash}{a2be7195d005db13032c4e0c04de0e2c}
       \strng{authorfullhash}{a2be7195d005db13032c4e0c04de0e2c}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{spurious correlation in using ratio variables even if all component variables of ratios are uncorrelated; division of only the dependent variable by an independent variable can result in regression coefficient estimates for the other independent variables that result in inappropriate conclusions;use of a ratio as an independent variable can result in inadequate adjustment for component variables of the ratio;ratio variables should only be used in a full model containing all the component variables;results of regression analyses incorporating ratios are not readily comparable across studies}
@@ -1994,10 +2156,12 @@
       }
       \strng{namehash}{3df0acf37e7e46643ed46fb45c991e9c}
       \strng{fullhash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \strng{bibnamehash}{3df0acf37e7e46643ed46fb45c991e9c}
+      \strng{authorbibnamehash}{3df0acf37e7e46643ed46fb45c991e9c}
       \strng{authornamehash}{3df0acf37e7e46643ed46fb45c991e9c}
       \strng{authorfullhash}{3df0acf37e7e46643ed46fb45c991e9c}
       \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0277-6715}
@@ -2009,6 +2173,9 @@
       \field{year}{2008}
       \field{pages}{778\bibrangedash 780}
       \range{pages}{3}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.3086
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.3086
       \endverb
@@ -2024,10 +2191,12 @@
       }
       \strng{namehash}{ecfbfbea27319aefa096b0c3a5105ca3}
       \strng{fullhash}{ecfbfbea27319aefa096b0c3a5105ca3}
+      \strng{bibnamehash}{ecfbfbea27319aefa096b0c3a5105ca3}
+      \strng{authorbibnamehash}{ecfbfbea27319aefa096b0c3a5105ca3}
       \strng{authornamehash}{ecfbfbea27319aefa096b0c3a5105ca3}
       \strng{authorfullhash}{ecfbfbea27319aefa096b0c3a5105ca3}
       \field{sortinit}{L}
-      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{problems with Cohen's method}
@@ -2037,6 +2206,9 @@
       \field{year}{2001}
       \field{pages}{187\bibrangedash 193}
       \range{pages}{7}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1198/000313001317098149
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1198/000313001317098149
       \endverb
@@ -2052,10 +2224,12 @@
       }
       \strng{namehash}{6375653783f2c0355c30c0a711a1e44f}
       \strng{fullhash}{6375653783f2c0355c30c0a711a1e44f}
+      \strng{bibnamehash}{6375653783f2c0355c30c0a711a1e44f}
+      \strng{authorbibnamehash}{6375653783f2c0355c30c0a711a1e44f}
       \strng{authornamehash}{6375653783f2c0355c30c0a711a1e44f}
       \strng{authorfullhash}{6375653783f2c0355c30c0a711a1e44f}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -2064,6 +2238,9 @@
       \field{year}{1985}
       \field{pages}{145\bibrangedash 153}
       \range{pages}{9}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.4780040205
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.4780040205
       \endverb
@@ -2084,10 +2261,12 @@
       }
       \strng{namehash}{6289655abf6781ebe912b7eb4706045a}
       \strng{fullhash}{6289655abf6781ebe912b7eb4706045a}
+      \strng{bibnamehash}{6289655abf6781ebe912b7eb4706045a}
+      \strng{authorbibnamehash}{6289655abf6781ebe912b7eb4706045a}
       \strng{authornamehash}{6289655abf6781ebe912b7eb4706045a}
       \strng{authorfullhash}{6289655abf6781ebe912b7eb4706045a}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{02776715}
@@ -2099,6 +2278,9 @@
       \field{year}{2015}
       \field{pages}{2681\bibrangedash 2694}
       \range{pages}{14}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.6508
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.6508
       \endverb
@@ -2129,10 +2311,12 @@
       }
       \strng{namehash}{04e45fcc8ae05480ed4ebf9ab4cb6a2b}
       \strng{fullhash}{d2eb0b65af56d69d7fd18e3fcf0e3ffb}
+      \strng{bibnamehash}{04e45fcc8ae05480ed4ebf9ab4cb6a2b}
+      \strng{authorbibnamehash}{04e45fcc8ae05480ed4ebf9ab4cb6a2b}
       \strng{authornamehash}{04e45fcc8ae05480ed4ebf9ab4cb6a2b}
       \strng{authorfullhash}{d2eb0b65af56d69d7fd18e3fcf0e3ffb}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{BMJ}
@@ -2142,6 +2326,9 @@
       \field{year}{1990}
       \field{pages}{230\bibrangedash 235}
       \range{pages}{6}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1136/bmj.300.6719.230
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1136/bmj.300.6719.230
       \endverb
@@ -2167,10 +2354,12 @@
       }
       \strng{namehash}{69ed0506b687a11d27f1055da3a268b4}
       \strng{fullhash}{69ed0506b687a11d27f1055da3a268b4}
+      \strng{bibnamehash}{69ed0506b687a11d27f1055da3a268b4}
+      \strng{authorbibnamehash}{69ed0506b687a11d27f1055da3a268b4}
       \strng{authornamehash}{69ed0506b687a11d27f1055da3a268b4}
       \strng{authorfullhash}{69ed0506b687a11d27f1055da3a268b4}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{comment on p. 454;validation;microarray;bioinformatics;machine learning;nearest centroid;severe problems with data splitting;high variability of list of genes;problems with published studies;nice results for effect of training sample size on misclassification error;nice use of confidence intervals on accuracy estimates;unstable molecular signatures;high instability due to dependence on selection of training sample}
@@ -2197,10 +2386,12 @@
       }
       \strng{namehash}{4496f6923a1a88c1e4db4935b6604688}
       \strng{fullhash}{4496f6923a1a88c1e4db4935b6604688}
+      \strng{bibnamehash}{4496f6923a1a88c1e4db4935b6604688}
+      \strng{authorbibnamehash}{4496f6923a1a88c1e4db4935b6604688}
       \strng{authornamehash}{4496f6923a1a88c1e4db4935b6604688}
       \strng{authorfullhash}{4496f6923a1a88c1e4db4935b6604688}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acad Rad}
@@ -2244,16 +2435,18 @@
       }
       \strng{namehash}{032d1e1f60061588814baa36ba1e32e1}
       \strng{fullhash}{9b058b1aea6a332a47ae704f3fd3afa8}
+      \strng{bibnamehash}{032d1e1f60061588814baa36ba1e32e1}
+      \strng{authorbibnamehash}{032d1e1f60061588814baa36ba1e32e1}
       \strng{authornamehash}{032d1e1f60061588814baa36ba1e32e1}
       \strng{authorfullhash}{9b058b1aea6a332a47ae704f3fd3afa8}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{non-constancy of sensitivity, specificity, likelihood ratio in a real example}
       \field{journaltitle}{Epi}
       \field{number}{1}
-      \field{title}{Limitations of sensitivity, specificity, likelihood ratio, and {Bayes'} theorem in assessing diagnostic probabilities: {A} clinical example}
+      \field{title}{Limitations of sensitivity, specificity, likelihood ratio, and {Bayes'} theorem in assessing diagnostic probabilities: A clinical example}
       \field{volume}{8}
       \field{year}{1997}
       \field{pages}{12\bibrangedash 17}
@@ -2276,10 +2469,12 @@
       }
       \strng{namehash}{c032b03697dcd6a52895070fda72fcf8}
       \strng{fullhash}{c032b03697dcd6a52895070fda72fcf8}
+      \strng{bibnamehash}{c032b03697dcd6a52895070fda72fcf8}
+      \strng{authorbibnamehash}{c032b03697dcd6a52895070fda72fcf8}
       \strng{authornamehash}{c032b03697dcd6a52895070fda72fcf8}
       \strng{authorfullhash}{c032b03697dcd6a52895070fda72fcf8}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{review in Stat in Med 16:2507-2510, 1997}
@@ -2295,10 +2490,12 @@
       }
       \strng{namehash}{aee94b3f2153b6b38dd1d26657c6bf81}
       \strng{fullhash}{aee94b3f2153b6b38dd1d26657c6bf81}
+      \strng{bibnamehash}{aee94b3f2153b6b38dd1d26657c6bf81}
+      \strng{authorbibnamehash}{aee94b3f2153b6b38dd1d26657c6bf81}
       \strng{authornamehash}{aee94b3f2153b6b38dd1d26657c6bf81}
       \strng{authorfullhash}{aee94b3f2153b6b38dd1d26657c6bf81}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{We assessed the role of physiologic measurements of heart function in predicting mortality after myocardial infarction. Most of the 866 patients enrolled in our multicenter study underwent 24-hour Holter monitoring and determination of the resting radionuclide ventricular ejection fraction before discharge. Univariate analyses showed a progressive increase in cardiac mortality during one year as the ejection fraction fell below 0.40 and as the number of ventricular ectopic depolarizations exceeded one per hour. Only four risk factors among eight prespecified variables were independent predictors of mortality: an ejection fraction below 0.40, ventricular ectopy of 10 or more depolarizations per hour, advanced New York Heart Association functional class before infarction, and rales heard in the upper two thirds of the lung fields while the patient was in the coronary-care unit. Various combinations of these four factors identified five risk subgroups with two-year mortality rates ranging from 3 per cent (no factors) to 60 per cent (all four factors).}}
@@ -2366,10 +2563,12 @@
       }
       \strng{namehash}{b7b050d73b83d586d19d2fde36490727}
       \strng{fullhash}{33ee284b99a1f9521ddf85b618a59ca0}
+      \strng{bibnamehash}{b7b050d73b83d586d19d2fde36490727}
+      \strng{authorbibnamehash}{b7b050d73b83d586d19d2fde36490727}
       \strng{authornamehash}{b7b050d73b83d586d19d2fde36490727}
       \strng{authorfullhash}{33ee284b99a1f9521ddf85b618a59ca0}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2397-3374}
@@ -2381,6 +2580,9 @@
       \field{year}{2017}
       \field{pages}{0021+}
       \range{pages}{-1}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41562-016-0021
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1038/s41562-016-0021
       \endverb
@@ -2396,10 +2598,12 @@
       }
       \strng{namehash}{ecce72a5ea40923119fddd54fad3d0cf}
       \strng{fullhash}{ecce72a5ea40923119fddd54fad3d0cf}
+      \strng{bibnamehash}{ecce72a5ea40923119fddd54fad3d0cf}
+      \strng{authorbibnamehash}{ecce72a5ea40923119fddd54fad3d0cf}
       \strng{authornamehash}{ecce72a5ea40923119fddd54fad3d0cf}
       \strng{authorfullhash}{ecce72a5ea40923119fddd54fad3d0cf}
       \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Excellent brief how-to list; incorporated into graphscourse}
@@ -2412,6 +2616,9 @@
       \range{pages}{5}
       \verb{eprint}
       \verb http://www.tandfonline.com/doi/pdf/10.1080/10618600.2012.751875
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.751875
       \endverb
       \verb{url}
       \verb http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.751875
@@ -2453,10 +2660,12 @@
       }
       \strng{namehash}{89ac4e217c1c0b8aef240ae5ba337e27}
       \strng{fullhash}{f7d297c682f51bfe8961de13527897a9}
+      \strng{bibnamehash}{89ac4e217c1c0b8aef240ae5ba337e27}
+      \strng{authorbibnamehash}{89ac4e217c1c0b8aef240ae5ba337e27}
       \strng{authornamehash}{89ac4e217c1c0b8aef240ae5ba337e27}
       \strng{authorfullhash}{f7d297c682f51bfe8961de13527897a9}
       \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{In medical research analyses, continuous variables are often converted into categoric variables by grouping values into $\geq 2$ categories. The simplicity achieved by creating $\geq 2$ artificial groups has a cost: Grouping may create rather than avoid problems. In particular, dichotomization leads to a considerable loss of power and incomplete correction for confounding factors. The use of data-derived ``optimal" cut-points can lead to serious bias and should at least be tested on independent observations to assess their validity. Both problems are illustrated by the way the results of a registry on unruptured intracranial aneurysms are commonly used. Extreme caution should restrict the application of such results to clinical decision-making. Categorization of continuous data, especially dichotomization, is unnecessary for statistical analysis. Continuous explanatory variables should be left alone in statistical models.}}
@@ -2469,6 +2678,9 @@
       \range{pages}{4}
       \verb{eprint}
       \verb http://www.ajnr.org/content/32/3/437.full.pdf+html
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ajnr.org/content/32/3/437.abstract
       \endverb
       \verb{url}
       \verb http://www.ajnr.org/content/32/3/437.abstract
@@ -2485,10 +2697,12 @@
       }
       \strng{namehash}{237d7e9702057d48102f273bfaee31ba}
       \strng{fullhash}{237d7e9702057d48102f273bfaee31ba}
+      \strng{bibnamehash}{237d7e9702057d48102f273bfaee31ba}
+      \strng{authorbibnamehash}{237d7e9702057d48102f273bfaee31ba}
       \strng{authornamehash}{237d7e9702057d48102f273bfaee31ba}
       \strng{authorfullhash}{237d7e9702057d48102f273bfaee31ba}
       \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{"to improve the efficiency of estimated covariate effects of interest, analysts of randomized clinical trial data should adjust for covariates that are strongly associated with the outcome, and ... analysts of observational data should not adjust for covariates that do not confound the association of interest"}
@@ -2510,10 +2724,12 @@
       }
       \strng{namehash}{a3232b31c3c41fa79bf0364699929fba}
       \strng{fullhash}{a3232b31c3c41fa79bf0364699929fba}
+      \strng{bibnamehash}{a3232b31c3c41fa79bf0364699929fba}
+      \strng{authorbibnamehash}{a3232b31c3c41fa79bf0364699929fba}
       \strng{authornamehash}{a3232b31c3c41fa79bf0364699929fba}
       \strng{authorfullhash}{a3232b31c3c41fa79bf0364699929fba}
       \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
@@ -2536,10 +2752,12 @@
       }
       \strng{namehash}{1bfd0b26b9e7828021025de6c2b1629a}
       \strng{fullhash}{1bfd0b26b9e7828021025de6c2b1629a}
+      \strng{bibnamehash}{1bfd0b26b9e7828021025de6c2b1629a}
+      \strng{authorbibnamehash}{1bfd0b26b9e7828021025de6c2b1629a}
       \strng{authornamehash}{1bfd0b26b9e7828021025de6c2b1629a}
       \strng{authorfullhash}{1bfd0b26b9e7828021025de6c2b1629a}
       \field{sortinit}{O}
-      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{I consider the problem of testing that two populations are identical with respect to the distribution of a continuous variable against the alternative that values tend to be larger in one population. I observe that the t, rank-sum, and log-rank tests are insensitive for a large class of alternatives that may be expected to occur commonly in practice, propose a criterion for identifying this problem in a particular data set, and propose corresponding extensions of the conventional methods. The proposed methods should be useful for both identifying and interpreting group differences.}}
@@ -2550,6 +2768,9 @@
       \field{year}{1988}
       \field{pages}{52\bibrangedash 61}
       \range{pages}{10}
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478564\#.U\_sn0XVdU3E
+      \endverb
       \verb{url}
       \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478564%5C#.U%5C_sn0XVdU3E
       \endverb
@@ -2630,14 +2851,16 @@
       }
       \strng{namehash}{fd77b2d83fd38e0b8ecae3dad33b2ab7}
       \strng{fullhash}{cebc8c6bc21d00d9a3b9cba905a17a63}
+      \strng{bibnamehash}{fd77b2d83fd38e0b8ecae3dad33b2ab7}
+      \strng{authorbibnamehash}{fd77b2d83fd38e0b8ecae3dad33b2ab7}
       \strng{authornamehash}{fd77b2d83fd38e0b8ecae3dad33b2ab7}
       \strng{authorfullhash}{cebc8c6bc21d00d9a3b9cba905a17a63}
       \field{sortinit}{O}
-      \field{sortinithash}{f5d80ef71b5b58852663ecfd775b175a}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEJM}
-      \field{title}{Cardiac troponin {T} levels for risk stratification in acute myocardial ischemia}
+      \field{title}{Cardiac troponin T levels for risk stratification in acute myocardial ischemia}
       \field{volume}{335}
       \field{year}{1996}
       \field{pages}{1333\bibrangedash 1341}
@@ -2664,12 +2887,14 @@
            given={Salim},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{e895d126754cb3756e90b51643c2cff3}
+      \strng{namehash}{53ed6151940fedc13571ef2cf3e7c68d}
       \strng{fullhash}{53ed6151940fedc13571ef2cf3e7c68d}
-      \strng{authornamehash}{e895d126754cb3756e90b51643c2cff3}
+      \strng{bibnamehash}{53ed6151940fedc13571ef2cf3e7c68d}
+      \strng{authorbibnamehash}{53ed6151940fedc13571ef2cf3e7c68d}
+      \strng{authornamehash}{53ed6151940fedc13571ef2cf3e7c68d}
       \strng{authorfullhash}{53ed6151940fedc13571ef2cf3e7c68d}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEJM}
@@ -2704,10 +2929,12 @@
       }
       \strng{namehash}{2fb6e89510ddbaf00fd558b034180b92}
       \strng{fullhash}{fedf8e33216ac316da6500fcc77a6cdd}
+      \strng{bibnamehash}{2fb6e89510ddbaf00fd558b034180b92}
+      \strng{authorbibnamehash}{2fb6e89510ddbaf00fd558b034180b92}
       \strng{authornamehash}{2fb6e89510ddbaf00fd558b034180b92}
       \strng{authorfullhash}{fedf8e33216ac316da6500fcc77a6cdd}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{develop consistent $\hat{Y}$ using a latent variable structure, using for example supervised principal components. Then run stepwise regression or lasso predicting $\hat{Y}$ (lasso worked better). Can run into problems when a predictor has importance in an adjusted sense but has no marginal correlation with $Y$;model approximation;model simplification}
@@ -2718,6 +2945,9 @@
       \field{year}{2008}
       \field{pages}{1595\bibrangedash 1619}
       \range{pages}{25}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1214/009053607000000578
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1214/009053607000000578
       \endverb
@@ -2748,10 +2978,12 @@
       }
       \strng{namehash}{b0283d1bb498214bbafbddde5671f60d}
       \strng{fullhash}{09ca4b27b99c609a3f3774d39dc60ded}
+      \strng{bibnamehash}{b0283d1bb498214bbafbddde5671f60d}
+      \strng{authorbibnamehash}{b0283d1bb498214bbafbddde5671f60d}
       \strng{authornamehash}{b0283d1bb498214bbafbddde5671f60d}
       \strng{authorfullhash}{09ca4b27b99c609a3f3774d39dc60ded}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{small differences in ROC area can still be very meaningful;example of insignificant test for difference in ROC areas with very significant results from new method;Yates' discrimination slope;reclassification table;limiting version of this based on whether and amount by which probabilities rise for events and lower for non-events when compare new model to old;comparing two models;see letter to the editor by Van Calster and Van Huffel, Stat in Med 29:318-319, 2010 and by Cook and Paynter, Stat in Med 31:93-97, 2012}
@@ -2773,10 +3005,12 @@
       }
       \strng{namehash}{92e1b9856251236913e21454b0f87f36}
       \strng{fullhash}{92e1b9856251236913e21454b0f87f36}
+      \strng{bibnamehash}{92e1b9856251236913e21454b0f87f36}
+      \strng{authorbibnamehash}{92e1b9856251236913e21454b0f87f36}
       \strng{authornamehash}{92e1b9856251236913e21454b0f87f36}
       \strng{authorfullhash}{92e1b9856251236913e21454b0f87f36}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Science}
@@ -2813,23 +3047,28 @@
       }
       \strng{namehash}{803f1a26a69e8c98973b748ea156398e}
       \strng{fullhash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{bibnamehash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{authorbibnamehash}{803f1a26a69e8c98973b748ea156398e}
       \strng{authornamehash}{803f1a26a69e8c98973b748ea156398e}
       \strng{authorfullhash}{803f1a26a69e8c98973b748ea156398e}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{Modern modelling techniques may potentially provide more accurate predictions of binary outcomes than classical techniques. We aimed to study the predictive performance of different modelling techniques in relation to the effective sample size (``data hungriness'').}}
       \field{annotation}{Would be better to use proper accuracy scores in the assessment. Too much emphasis on optimism as opposed to final discrimination measure. But much good practical information. Recursive partitioning fared poorly.}
       \field{issn}{1471-2288}
-      \field{journaltitle}{BMC Medical Research Methodology}
+      \field{journaltitle}{BMC medical research methodology}
       \field{month}{12}
       \field{number}{1}
-      \field{title}{{Modern modelling techniques are data hungry: a simulation study for predicting dichotomous endpoints}}
+      \field{title}{{Modern modelling techniques are data hungry: a simulation study for predicting dichotomous endpoints.}}
       \field{volume}{14}
       \field{year}{2014}
       \field{pages}{137+}
       \range{pages}{-1}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1186/1471-2288-14-137
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1186/1471-2288-14-137
       \endverb
@@ -2865,10 +3104,12 @@
       }
       \strng{namehash}{2049dfca67724ea1cca0dbea7bca16bf}
       \strng{fullhash}{1fb5e17e893da64ba24e159284271c6f}
+      \strng{bibnamehash}{2049dfca67724ea1cca0dbea7bca16bf}
+      \strng{authorbibnamehash}{2049dfca67724ea1cca0dbea7bca16bf}
       \strng{authornamehash}{2049dfca67724ea1cca0dbea7bca16bf}
       \strng{authorfullhash}{1fb5e17e893da64ba24e159284271c6f}
       \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am J Med}
@@ -2899,10 +3140,12 @@
       }
       \strng{namehash}{b4045858c08c04e2758d4a526dc9e35c}
       \strng{fullhash}{b4045858c08c04e2758d4a526dc9e35c}
+      \strng{bibnamehash}{b4045858c08c04e2758d4a526dc9e35c}
+      \strng{authorbibnamehash}{b4045858c08c04e2758d4a526dc9e35c}
       \strng{authornamehash}{b4045858c08c04e2758d4a526dc9e35c}
       \strng{authorfullhash}{b4045858c08c04e2758d4a526dc9e35c}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{how correlated with outcome must a variable before adding it helps more than hurts, as a function of sample size;planning;design;variable selection}
@@ -2929,10 +3172,12 @@
       }
       \strng{namehash}{f98ea99200025441a6897364ba99d33b}
       \strng{fullhash}{f98ea99200025441a6897364ba99d33b}
+      \strng{bibnamehash}{f98ea99200025441a6897364ba99d33b}
+      \strng{authorbibnamehash}{f98ea99200025441a6897364ba99d33b}
       \strng{authornamehash}{f98ea99200025441a6897364ba99d33b}
       \strng{authorfullhash}{f98ea99200025441a6897364ba99d33b}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Int Stat Rev}
@@ -2963,10 +3208,12 @@
       }
       \strng{namehash}{207231ae7912803a74c824dc3fb591c6}
       \strng{fullhash}{207231ae7912803a74c824dc3fb591c6}
+      \strng{bibnamehash}{207231ae7912803a74c824dc3fb591c6}
+      \strng{authorbibnamehash}{207231ae7912803a74c824dc3fb591c6}
       \strng{authornamehash}{207231ae7912803a74c824dc3fb591c6}
       \strng{authorfullhash}{207231ae7912803a74c824dc3fb591c6}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{destruction of statistical inference when cutpoints are chosen using the response variable; varying effect estimates when change cutpoints;difficult to interpret effects when dichotomize;nice plot showing effect of categorization; PBC data}
@@ -2976,6 +3223,9 @@
       \field{year}{2006}
       \field{pages}{127\bibrangedash 141}
       \range{pages}{15}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.2331
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.2331
       \endverb
@@ -2991,10 +3241,12 @@
       }
       \strng{namehash}{37fe180f849ae0085cba2b45692be375}
       \strng{fullhash}{37fe180f849ae0085cba2b45692be375}
+      \strng{bibnamehash}{37fe180f849ae0085cba2b45692be375}
+      \strng{authorbibnamehash}{37fe180f849ae0085cba2b45692be375}
       \strng{authornamehash}{37fe180f849ae0085cba2b45692be375}
       \strng{authorfullhash}{37fe180f849ae0085cba2b45692be375}
       \field{sortinit}{R}
-      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -3020,10 +3272,12 @@
       }
       \strng{namehash}{9efb33f38933195e167558172656a00d}
       \strng{fullhash}{9efb33f38933195e167558172656a00d}
+      \strng{bibnamehash}{9efb33f38933195e167558172656a00d}
+      \strng{authorbibnamehash}{9efb33f38933195e167558172656a00d}
       \strng{authornamehash}{9efb33f38933195e167558172656a00d}
       \strng{authorfullhash}{9efb33f38933195e167558172656a00d}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Presented at the Joint Statistical Meetings, Chicago; see and99tes}
@@ -3041,10 +3295,12 @@
       }
       \strng{namehash}{480edfef1f04370ce4875e2b86ec3fc6}
       \strng{fullhash}{480edfef1f04370ce4875e2b86ec3fc6}
+      \strng{bibnamehash}{480edfef1f04370ce4875e2b86ec3fc6}
+      \strng{authorbibnamehash}{480edfef1f04370ce4875e2b86ec3fc6}
       \strng{authornamehash}{480edfef1f04370ce4875e2b86ec3fc6}
       \strng{authorfullhash}{480edfef1f04370ce4875e2b86ec3fc6}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Biometrics}
@@ -3065,10 +3321,12 @@
       }
       \strng{namehash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
       \strng{fullhash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
+      \strng{bibnamehash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
+      \strng{authorbibnamehash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
       \strng{authornamehash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
       \strng{authorfullhash}{8b3fec3d8b3b5b3ca8aa39fc50c93906}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Controlled Clin Trials}
@@ -3089,10 +3347,12 @@
       }
       \strng{namehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{fullhash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{bibnamehash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{authorbibnamehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{authornamehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{authorfullhash}{4971ea16a9a5bff50baab1fe43d121b7}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{p. 3735: "in the pharmaceutical industry, in analyzing the data, if a linear model is employed, it is usual to fit centre as a factor but unusual to fit block.";p. 3739: a large trial "is not less vulnerable to chance covariate imbalance";p. 3741:"There is no place, in my view, for classical minimization" (vs. the method of Atkinson);"If an investigator uses such [allocation based on covariates] schemes, she or he is honour bound, in my opinion, as a very minimum, to adjust for the factors used to balance, since the fact that they are being used to balance is an implicit declaration that they will have prognostic value.";"The point of view is sometimes defended that analyses that ignore covariates are superior because they are simpler. I do not accept this. A value of $\pi=3$ is a simple one and accurate to one significant figure ... However very few would seriously maintain that if should generally be adopted by engineers.";p. 3742: "as Fisher pointed out ... if we balance by a predictive covariate but do not fit the covariate in the model, not only do we not exploit the covariate, we actually increase the expected declared standard error."; p. 3744:"I would like to see standard errors for group means abolished."; p. 3744:"A common habit, however, in analyzing trials with three or more arms is to pool the variances from all arms when calculating the standard error of a given contrast. In my view this is a curious practice ... it relies on an assumption of additivity of \emph{all} treatments when comparing only \emph{two}. ... a classical $t$-test is robust to heteroschedasticity provide that sample sizes are equal in the groups being compared and that the variance is internal to those two groups but is not robust where an external estimate is being used."; p. 3745: "By adjusting main effects for interactions a type III analysis is similarly illogical to Neyman's hypothesis test."; "Guyatt \emph{et al.} ... found a 'method for estimating the proportion of patients who benefit from a treatment ... In fact they had done no such thing."; p. 3746: "When I checked the Web of Science on 29 June 2003, the paper by Horwitz \emph{et al.} had been cited 28 times and that by Guyatt \emph{et al.} had been cited 79 times. The letters pointing out the fallacies had been cited only 8 and 5 times respectively."; "if we pool heterogeneous strata, the odds ratio of the treatment effect will be different from that in every stratum, even if from stratum to stratum it does not vary."; p. 3747: "Part of the problem with Poisson, proportional hazard and logistic regression approaches is that they use a single parameter, the linear predictor, with no equivalent of the variance parameter in the Normal case. This means that lack of fit impacts on the estimate of the predictor. ... what is the value of randomization if, in all except the Normal case, we cannot guarantee to have unbiased estimates. My view ... was that the form of analysis envisaged (that is to say, which factors and covariates should be fitted) justified the allocation and \emph{not vice versa}."; "use the additive measure at the point of analysis and transform to the relevant scale at the point of implementation. This transformation at the point of medical decision-making will require auxiliary information on the level of background risk of the patient."; p. 3748:"The decision to fit prognostic factors has a far more dramatic effect on the precision of our inferences than the choice of an allocation based on covariates or randomization approach and one of my chief objections to the allocation based on covariates approach is that trialists have tended to use the fact that they have balanced as an excuse for not fitting. This is a grave mistake."}
@@ -3102,6 +3362,9 @@
       \field{year}{2004}
       \field{pages}{3729\bibrangedash 3753}
       \range{pages}{25}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.2074
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/sim.2074
       \endverb
@@ -3123,10 +3386,12 @@
       }
       \strng{namehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{fullhash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{bibnamehash}{4971ea16a9a5bff50baab1fe43d121b7}
+      \strng{authorbibnamehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{authornamehash}{4971ea16a9a5bff50baab1fe43d121b7}
       \strng{authorfullhash}{4971ea16a9a5bff50baab1fe43d121b7}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second}
@@ -3147,10 +3412,12 @@
       }
       \strng{namehash}{3259ffd6a7eb7d2246ef393306d20235}
       \strng{fullhash}{3259ffd6a7eb7d2246ef393306d20235}
+      \strng{bibnamehash}{3259ffd6a7eb7d2246ef393306d20235}
+      \strng{authorbibnamehash}{3259ffd6a7eb7d2246ef393306d20235}
       \strng{authornamehash}{3259ffd6a7eb7d2246ef393306d20235}
       \strng{authorfullhash}{3259ffd6a7eb7d2246ef393306d20235}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the International Statistical Institute, 55th Session}
@@ -3178,10 +3445,12 @@
       }
       \strng{namehash}{2176d6c0a2fe3e479170cd3ef9e8a698}
       \strng{fullhash}{2176d6c0a2fe3e479170cd3ef9e8a698}
+      \strng{bibnamehash}{2176d6c0a2fe3e479170cd3ef9e8a698}
+      \strng{authorbibnamehash}{2176d6c0a2fe3e479170cd3ef9e8a698}
       \strng{authornamehash}{2176d6c0a2fe3e479170cd3ef9e8a698}
       \strng{authorfullhash}{2176d6c0a2fe3e479170cd3ef9e8a698}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{"fitting covariates may make a more valuable and instructive contribution to inferences about treatment effects than only balancing them"}
@@ -3213,10 +3482,12 @@
       }
       \strng{namehash}{f58418903e6d13d007540bb62f440331}
       \strng{fullhash}{f58418903e6d13d007540bb62f440331}
+      \strng{bibnamehash}{f58418903e6d13d007540bb62f440331}
+      \strng{authorbibnamehash}{f58418903e6d13d007540bb62f440331}
       \strng{authornamehash}{f58418903e6d13d007540bb62f440331}
       \strng{authorfullhash}{f58418903e6d13d007540bb62f440331}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -3225,6 +3496,9 @@
       \field{year}{2000}
       \field{pages}{861\bibrangedash 877}
       \range{pages}{17}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/(SICI)1097-0258(20000330)19:6\%3C861::AID-SIM407\%3E3.0.CO;2-F
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1002/(SICI)1097-0258(20000330)19:6%5C%3C861::AID-SIM407%5C%3E3.0.CO;2-F
       \endverb
@@ -3250,10 +3524,12 @@
       }
       \strng{namehash}{484f2eb84bc9bd9613233160c43e11e0}
       \strng{fullhash}{484f2eb84bc9bd9613233160c43e11e0}
+      \strng{bibnamehash}{484f2eb84bc9bd9613233160c43e11e0}
+      \strng{authorbibnamehash}{484f2eb84bc9bd9613233160c43e11e0}
       \strng{authornamehash}{484f2eb84bc9bd9613233160c43e11e0}
       \strng{authorfullhash}{484f2eb84bc9bd9613233160c43e11e0}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{uses optimal approximation for estimating mean and variance of complex statistics adjusting for model selection}
@@ -3280,10 +3556,12 @@
       }
       \strng{namehash}{3a1ed14de642d633046092942d9b7532}
       \strng{fullhash}{3a1ed14de642d633046092942d9b7532}
+      \strng{bibnamehash}{3a1ed14de642d633046092942d9b7532}
+      \strng{authorbibnamehash}{3a1ed14de642d633046092942d9b7532}
       \strng{authornamehash}{3a1ed14de642d633046092942d9b7532}
       \strng{authorfullhash}{3a1ed14de642d633046092942d9b7532}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{Box-Cox transformation of a covariable;validity of inference for treatment effect when treat exponent for covariable as fixed}
@@ -3315,18 +3593,23 @@
       }
       \strng{namehash}{c49e3fef05187645233e1862e4466989}
       \strng{fullhash}{c49e3fef05187645233e1862e4466989}
+      \strng{bibnamehash}{c49e3fef05187645233e1862e4466989}
+      \strng{authorbibnamehash}{c49e3fef05187645233e1862e4466989}
       \strng{authornamehash}{c49e3fef05187645233e1862e4466989}
       \strng{authorfullhash}{c49e3fef05187645233e1862e4466989}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{JAMA}
-      \field{title}{Differential diagnosis of acute meningitis: {A}n analysis of the predictive value of initial observations}
+      \field{title}{Differential diagnosis of acute meningitis: An analysis of the predictive value of initial observations}
       \field{volume}{262}
       \field{year}{1989}
       \field{pages}{2700\bibrangedash 2707}
       \range{pages}{8}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.262.19.2700
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1001/jama.262.19.2700
       \endverb
@@ -3352,10 +3635,12 @@
       }
       \strng{namehash}{05144d2de5d854581bf55f5042c2db4d}
       \strng{fullhash}{05144d2de5d854581bf55f5042c2db4d}
+      \strng{bibnamehash}{05144d2de5d854581bf55f5042c2db4d}
+      \strng{authorbibnamehash}{05144d2de5d854581bf55f5042c2db4d}
       \strng{authornamehash}{05144d2de5d854581bf55f5042c2db4d}
       \strng{authorfullhash}{05144d2de5d854581bf55f5042c2db4d}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am Heart J}
@@ -3365,6 +3650,9 @@
       \field{year}{2000}
       \field{pages}{745\bibrangedash 751}
       \range{pages}{7}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0002-8703(00)90001-2
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/S0002-8703(00)90001-2
       \endverb
@@ -3414,18 +3702,24 @@
       }
       \strng{namehash}{feecad815ba47bb7960efb58a177608c}
       \strng{fullhash}{feecad815ba47bb7960efb58a177608c}
+      \strng{bibnamehash}{feecad815ba47bb7960efb58a177608c}
+      \strng{authorbibnamehash}{feecad815ba47bb7960efb58a177608c}
       \strng{authornamehash}{feecad815ba47bb7960efb58a177608c}
       \strng{authorfullhash}{feecad815ba47bb7960efb58a177608c}
+      \strng{editorbibnamehash}{feecad815ba47bb7960efb58a177608c}
       \strng{editornamehash}{feecad815ba47bb7960efb58a177608c}
       \strng{editorfullhash}{feecad815ba47bb7960efb58a177608c}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{In computational science, reproducibility requires that researchers make code and data available to others so that the data can be analyzed in a similar manner as in the original publication. Code must be available to be distributed, data must be accessible in a readable format, and a platform must be available for widely distributing the data and code. In addition, both data and code need to be licensed permissively enough so that others can reproduce the work without a substantial legal burden. Implementing Reproducible Research covers many of the elements necessary for conducting and distrib.}}
       \field{isbn}{9781466561595}
       \field{title}{{Implementing Reproducible Research}}
       \field{year}{2014}
+      \verb{urlraw}
+      \verb http://www.worldcat.org/isbn/9781466561595
+      \endverb
       \verb{url}
       \verb http://www.worldcat.org/isbn/9781466561595
       \endverb
@@ -3446,10 +3740,12 @@
       }
       \strng{namehash}{e2962415a9ae553c9e5ad2f9a5952c6a}
       \strng{fullhash}{e2962415a9ae553c9e5ad2f9a5952c6a}
+      \strng{bibnamehash}{e2962415a9ae553c9e5ad2f9a5952c6a}
+      \strng{authorbibnamehash}{e2962415a9ae553c9e5ad2f9a5952c6a}
       \strng{authornamehash}{e2962415a9ae553c9e5ad2f9a5952c6a}
       \strng{authorfullhash}{e2962415a9ae553c9e5ad2f9a5952c6a}
       \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{none demonstrated to have clinical utility;bioinformatics;quality scoring of papers}
@@ -3477,16 +3773,21 @@
       }
       \strng{namehash}{616983f2ba14a1f8c933006442711e25}
       \strng{fullhash}{616983f2ba14a1f8c933006442711e25}
+      \strng{bibnamehash}{616983f2ba14a1f8c933006442711e25}
+      \strng{authorbibnamehash}{616983f2ba14a1f8c933006442711e25}
       \strng{authornamehash}{616983f2ba14a1f8c933006442711e25}
       \strng{authorfullhash}{616983f2ba14a1f8c933006442711e25}
       \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{www.r-project.org}
       \field{isbn}{3-900051-07-0}
       \field{title}{{R: A language and environment for statistical computing}}
       \field{year}{2016}
+      \verb{urlraw}
+      \verb http://www.R-project.org
+      \endverb
       \verb{url}
       \verb http://www.R-project.org
       \endverb
@@ -3494,8 +3795,8 @@
     \endentry
     \entry{tor85how}{article}{}
       \name{author}{3}{}{%
-        {{hash=86a10e0a9da737ef595b7021bd9e1679}{%
-           family={T\"{o}rnqvist},
+        {{hash=411d1e7193c1e14cf9fbc094a974db81}{%
+           family={T{\"{o}}rnqvist},
            familyi={T\bibinitperiod},
            given={L.},
            giveni={L\bibinitperiod}}}%
@@ -3510,12 +3811,14 @@
            given={Y.\bibnamedelimi O.},
            giveni={Y\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
       }
-      \strng{namehash}{19aa7861ac2f082f11075d219eb057b1}
-      \strng{fullhash}{19aa7861ac2f082f11075d219eb057b1}
-      \strng{authornamehash}{19aa7861ac2f082f11075d219eb057b1}
-      \strng{authorfullhash}{19aa7861ac2f082f11075d219eb057b1}
+      \strng{namehash}{f40e4333d7333e9419274c928ff6fe05}
+      \strng{fullhash}{f40e4333d7333e9419274c928ff6fe05}
+      \strng{bibnamehash}{f40e4333d7333e9419274c928ff6fe05}
+      \strng{authorbibnamehash}{f40e4333d7333e9419274c928ff6fe05}
+      \strng{authornamehash}{f40e4333d7333e9419274c928ff6fe05}
+      \strng{authorfullhash}{f40e4333d7333e9419274c928ff6fe05}
       \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Am Statistician}
@@ -3524,6 +3827,9 @@
       \field{year}{1985}
       \field{pages}{43\bibrangedash 46}
       \range{pages}{4}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/00031305.1985.10479385
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1080/00031305.1985.10479385
       \endverb
@@ -3539,10 +3845,12 @@
       }
       \strng{namehash}{26f8106c3e152e61fb92d4a2bd368224}
       \strng{fullhash}{26f8106c3e152e61fb92d4a2bd368224}
+      \strng{bibnamehash}{26f8106c3e152e61fb92d4a2bd368224}
+      \strng{authorbibnamehash}{26f8106c3e152e61fb92d4a2bd368224}
       \strng{authornamehash}{26f8106c3e152e61fb92d4a2bd368224}
       \strng{authorfullhash}{26f8106c3e152e61fb92d4a2bd368224}
       \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{showed that asking clinicians to make up regression coefficients out of thin air is better than not adjusting for covariables}
@@ -3552,6 +3860,9 @@
       \field{year}{1993}
       \field{pages}{266\bibrangedash 285}
       \range{pages}{20}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/0197-2456(93)90225-3
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/0197-2456(93)90225-3
       \endverb
@@ -3587,10 +3898,12 @@
       }
       \strng{namehash}{b6228f9d2660f88fb7d1acde704e9f76}
       \strng{fullhash}{236c851a6178100bd589d778f6b6d419}
+      \strng{bibnamehash}{b6228f9d2660f88fb7d1acde704e9f76}
+      \strng{authorbibnamehash}{b6228f9d2660f88fb7d1acde704e9f76}
       \strng{authornamehash}{b6228f9d2660f88fb7d1acde704e9f76}
       \strng{authorfullhash}{236c851a6178100bd589d778f6b6d419}
       \field{sortinit}{v}
-      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{Objectives We aimed to compare modeling approaches to estimate the individual survival benefit of treatment with either coronary artery bypass graft surgery (CABG) or percutaneous coronary intervention (PCI) for patients with complex coronary artery disease. Study Design and Setting We estimated survival with Cox regression models that included the treatment variable (CABG/PCI) interacting with either an internally developed overall prognostic index (PI) or with individual prognostic factors. We analyzed data of patients who were randomized in the Synergy between Percutaneous Coronary Intervention with Taxus and Cardiac Surg trial (1,800 patients, 178 deaths). Results A negligible interaction with the PI (P = 0.51) led to 4-year survival estimates in favor of CABG for all patients. In contrast, individual interactions indicated substantial relative treatment effect heterogeneity (overall interaction P = 0.004), and estimates of 4-year survival were numerically in favor of CABG for 1,275 of 1,800 patients (71\%; 519 with 95\% confidence). To test the more complex model with individual interactions, we first used penalized regression, resulting in smaller but largely consistent individual estimates of the survival difference between CABG and PCI. Second, strong treatment interactions were confirmed at external validation in 2,891 patients from a multinational registry. Conclusion Modeling strategies that omit interactions may result in misleading estimates of absolute treatment benefit for individual patients with the potential hazard of suboptimal decision making.}}
@@ -3603,6 +3916,9 @@
       \field{year}{2015}
       \field{pages}{1366\bibrangedash 1374}
       \range{pages}{9}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.jclinepi.2015.02.012
+      \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1016/j.jclinepi.2015.02.012
       \endverb
@@ -3618,10 +3934,12 @@
       }
       \strng{namehash}{fe6294041b61109066602d11a9fe297d}
       \strng{fullhash}{fe6294041b61109066602d11a9fe297d}
+      \strng{bibnamehash}{fe6294041b61109066602d11a9fe297d}
+      \strng{authorbibnamehash}{fe6294041b61109066602d11a9fe297d}
       \strng{authornamehash}{fe6294041b61109066602d11a9fe297d}
       \strng{authorfullhash}{fe6294041b61109066602d11a9fe297d}
       \field{sortinit}{V}
-      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{limitations of accuracy metrics;incorporating clinical consequences;nice example of calculation of expected outcome;drawbacks of conventional decision analysis, especially because of the difficulty of eliciting the expected harm of a missed diagnosis;use of a threshold on the probability of disease for taking some action;decision curve;has other good references to decision analysis}
@@ -3654,10 +3972,12 @@
       }
       \strng{namehash}{74a274044beb20f2a9b7e1565a48397e}
       \strng{fullhash}{74a274044beb20f2a9b7e1565a48397e}
+      \strng{bibnamehash}{74a274044beb20f2a9b7e1565a48397e}
+      \strng{authorbibnamehash}{74a274044beb20f2a9b7e1565a48397e}
       \strng{authornamehash}{74a274044beb20f2a9b7e1565a48397e}
       \strng{authorfullhash}{74a274044beb20f2a9b7e1565a48397e}
       \field{sortinit}{V}
-      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{"The act of diagnosis requires that patients be placed in a binary category of either having or not having a certain disease. Accordingly, the diseases of particular concern for industrialized countries---such as type 2 diabetes, obesity, or depression---require that a somewhat arbitrary cut-point be chosen on a continuous scale of measurement (for example, a fasting glucose level $>6.9$ mmol/L [$>125$ mg/dL] for type 2 diabetes). These cut-points do not ade- quately reflect disease biology, may inappropriately treat patients on either side of the cut-point as 2 homogenous risk groups, fail to incorporate other risk factors, and are invariable to patient preference."}
@@ -3679,10 +3999,12 @@
       }
       \strng{namehash}{048f97c34e783f7b503ee1aa339b6b13}
       \strng{fullhash}{048f97c34e783f7b503ee1aa339b6b13}
+      \strng{bibnamehash}{048f97c34e783f7b503ee1aa339b6b13}
+      \strng{authorbibnamehash}{048f97c34e783f7b503ee1aa339b6b13}
       \strng{authornamehash}{048f97c34e783f7b503ee1aa339b6b13}
       \strng{authorfullhash}{048f97c34e783f7b503ee1aa339b6b13}
       \field{sortinit}{W}
-      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{annotation}{can find bins that yield either positive or negative association;especially pertinent when effects are small;"With four parameters, I can fit an elephant; with five, I can make it wiggle its trunk." - John von Neumann}
@@ -3710,10 +4032,12 @@
       }
       \strng{namehash}{1af057ff4e8175db01312ef687a11410}
       \strng{fullhash}{1af057ff4e8175db01312ef687a11410}
+      \strng{bibnamehash}{1af057ff4e8175db01312ef687a11410}
+      \strng{authorbibnamehash}{1af057ff4e8175db01312ef687a11410}
       \strng{authornamehash}{1af057ff4e8175db01312ef687a11410}
       \strng{authorfullhash}{1af057ff4e8175db01312ef687a11410}
       \field{sortinit}{W}
-      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -3738,10 +4062,12 @@
       }
       \strng{namehash}{25ce25b9d444076e0963bcf9fa3a6f92}
       \strng{fullhash}{25ce25b9d444076e0963bcf9fa3a6f92}
+      \strng{bibnamehash}{25ce25b9d444076e0963bcf9fa3a6f92}
+      \strng{authorbibnamehash}{25ce25b9d444076e0963bcf9fa3a6f92}
       \strng{authornamehash}{25ce25b9d444076e0963bcf9fa3a6f92}
       \strng{authorfullhash}{25ce25b9d444076e0963bcf9fa3a6f92}
       \field{sortinit}{X}
-      \field{sortinithash}{755b54a59c4b54d471c87a4486a94349}
+      \field{sortinithash}{b0b62a29ee4a21a0e618fed53a0313cc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{second}
@@ -3765,10 +4091,12 @@
       }
       \strng{namehash}{a6ba0f1f63bc542164606253178d07cf}
       \strng{fullhash}{a6ba0f1f63bc542164606253178d07cf}
+      \strng{bibnamehash}{a6ba0f1f63bc542164606253178d07cf}
+      \strng{authorbibnamehash}{a6ba0f1f63bc542164606253178d07cf}
       \strng{authornamehash}{a6ba0f1f63bc542164606253178d07cf}
       \strng{authorfullhash}{a6ba0f1f63bc542164606253178d07cf}
       \field{sortinit}{Y}
-      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
@@ -3779,7 +4107,7 @@
       \range{pages}{11}
       \keyw{cox-random-effects-model,mixed-effects,multi-center-rct,multi-site-rct,penalized-partial-likelihood,treatment-by-center-interaction,*import}
     \endentry
-  \endsortlist
+  \enddatalist
   \missing{[}
 \endrefsection
 \endinput
