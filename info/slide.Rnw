@@ -3,7 +3,7 @@
 require(Hmisc)
 knitrSet('info', width=80)
 @
-\chapter{Information Loss}
+\chapter{Information Loss}\label{chap:info}
 \quoteit{\ldots wherever nature draws unclear boundaries, humans are
   happy to curate}{Alice Dreger, \emph{Galileo's Middle Finger}}
 
@@ -561,7 +561,7 @@ stripplot(z ~ prognosis, data=w, lwd=1.5,    # Fig. (*\ref{fig:info-spectrum}*)
 @
 \clearpage
 \section{Harm from Ignoring Information}
-\subsection{Case Study: Cardiac Anti-arrhythmic Drugs}
+\subsection{Case Study: Cardiac Anti-arrhythmic Drugs}\label{sec:pvcs}
 \bi
 \item Premature ventricular contractions were observed in patients
 surviving acute myocardial infarction
