@@ -39,9 +39,7 @@ The main \R\ web site is \href{https://www.r-project.org/}{www.r-project.org}.
 \section{Learning \R}
 Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2} and \emph{R Programming Tutorials} from Mike Marin at
 \url{https://www.youtube.com/user/marinstatlectures}.  Or look at
-\url{swirlstats.com} for an interactive way to learn \R.
-A good list of books and other material for learning \R\ may be found at\\
-\url{http://www.revolutionanalytics.com/r-language-resources}.  Those
+\url{swirlstats.com} for an interactive way to learn \R. Those
 who have used SPSS or SAS before will profit from \emph{\R\ for SAS
   and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
 \href{https://www.amazon.com/}{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
