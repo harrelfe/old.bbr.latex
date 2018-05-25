@@ -156,7 +156,7 @@ Population mean $\mu$ is the long-run average (let $n \rightarrow
    well-behaved, the mean often performs better than the median (e.g.,
    mean number of diseased fingers)
  \ei
-\item Geometric mean: hard to interpret and effected by low outliers;
+\item Geometric mean: hard to interpret and affected by low outliers;
   better to use median
 \ei
 
