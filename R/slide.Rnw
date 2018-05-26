@@ -43,7 +43,7 @@ Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2
 who have used SPSS or SAS before will profit from \emph{\R\ for SAS
   and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
 \href{https://www.amazon.com/}{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
-\url{http://www.ats.ucla.edu/stat/r} and
+\url{https://stats.idre.ucla.edu/r/} and
 \url{http://www.introductoryr.co.uk/R_Resources_for_Beginners.html}
 are useful web sites. See also \emph{\R\ in Action, second ed.} by Robert 
 Kabacoff.  The online open source book on statistical modeling by Legler and Roback at
