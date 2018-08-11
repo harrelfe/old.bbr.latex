@@ -59,7 +59,7 @@ all <- character()
 for(w in names(f)) {
   fn <- paste(w, 'm3u', sep='.')
   z <- paste('#EXTINF:-1,Frank Harrell - ', f[w], '\n',
-             'http://data.vanderbilt.edu/fh/bbr/audio/', w, '.mp3\n',
+             'http://hbiostat.org/audio/bbr/', w, '.mp3\n',
              sep='')
   cat(z, file=fn)
   all <- c(all, z)

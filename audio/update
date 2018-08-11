@@ -1,4 +1,5 @@
 cd ..
-rsync -ravzu --delete audio/ data.vanderbilt.edu:/home/www/fh/bbr/audio/
+synchbiostat audio/ audio/bbr/
+# rsync -n -ravzu --delete audio/ data.vanderbilt.edu:/home/www/fh/bbr/audio/
 
 
