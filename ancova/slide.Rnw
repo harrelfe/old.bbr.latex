@@ -138,18 +138,18 @@ with(gustomin,
 \ei
 
 \subsubsection{Simple Logistic Example -- Gail 1986}
-\newcommand{\subtab}[6]{\begin{center}\begin{tabular}{l|c|c|}
+\newcommand{\subtab}[8]{\begin{center}\begin{tabular}{l|c|c|}
     \multicolumn{3}{c}{#1} \\
     & Treatment A   & Treatment B \\ \hline
     $Y=1$ & #2 & #3 \\ \hline
     $Y=0$ & #4 & #5 \\ \hline
-          & 1000 & 1000 \\
+          & #7 & #8 \\
     \end{tabular}
     \\ Odds Ratio: #6
     \end{center}}
-\subtab{Male}{500}{100}{500}{900}{9}
-\subtab{Female}{900}{500}{100}{500}{9}
-\subtab{Pooled}{1400}{600}{600}{1400}{5.44}
+\subtab{Male}{500}{100}{500}{900}{9}{1000}{1000}
+\subtab{Female}{900}{500}{100}{500}{9}{1000}{1000}
+\subtab{Pooled}{1400}{600}{600}{1400}{5.44}{2000}{2000}
 
 From seeing this example one can argue that odds ratios, like hazard
 ratios, were never really designed to be computed on a set of subjects

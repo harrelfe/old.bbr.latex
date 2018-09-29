@@ -142,18 +142,18 @@ with(gustomin,
 \ei
 
 \subsubsection{Simple Logistic Example -- Gail 1986}
-\newcommand{\subtab}[6]{\begin{center}\begin{tabular}{l|c|c|}
+\newcommand{\subtab}[8]{\begin{center}\begin{tabular}{l|c|c|}
     \multicolumn{3}{c}{#1} \\
     & Treatment A   & Treatment B \\ \hline
     $Y=1$ & #2 & #3 \\ \hline
     $Y=0$ & #4 & #5 \\ \hline
-          & 1000 & 1000 \\
+          & #7 & #8 \\
     \end{tabular}
     \\ Odds Ratio: #6
     \end{center}}
-\subtab{Male}{500}{100}{500}{900}{9}
-\subtab{Female}{900}{500}{100}{500}{9}
-\subtab{Pooled}{1400}{600}{600}{1400}{5.44}
+\subtab{Male}{500}{100}{500}{900}{9}{1000}{1000}
+\subtab{Female}{900}{500}{100}{500}{9}{1000}{1000}
+\subtab{Pooled}{1400}{600}{600}{1400}{5.44}{2000}{2000}
 
 From seeing this example one can argue that odds ratios, like hazard
 ratios, were never really designed to be computed on a set of subjects
@@ -802,12 +802,12 @@ d <- upData(d,
             X = factor(X) )
 \end{Sinput}
 \begin{Soutput}
-Input object size:	 17640 bytes;	 2 variables	 300 observations
+Input object size:	 19040 bytes;	 2 variables	 300 observations
 Added variable		risk.standard
 Added variable		risk.new
 Added variable		risk.diff
 Modified variable	X
-New object size:	25664 bytes;	5 variables	300 observations
+New object size:	27152 bytes;	5 variables	300 observations
 \end{Soutput}
 \begin{Sinput}
 ggplot(d, aes(x=risk.standard, y=risk.diff, color=X)) +
