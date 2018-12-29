@@ -45,7 +45,9 @@ who have used SPSS or SAS before will profit from \emph{\R\ for SAS
 \href{https://www.amazon.com/}{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
 \url{https://stats.idre.ucla.edu/r/} and
 \url{http://www.introductoryr.co.uk/R_Resources_for_Beginners.html}
-are useful web sites. See also \emph{\R\ in Action, second ed.} by Robert 
+are useful web sites. 
+An excellent resource is \href{https://r4ds.had.co.nz/}{\R\ for Data Science} by Grolemund and Wickham.
+See also \emph{\R\ in Action, second ed.} by Robert 
 Kabacoff.  The online open source book on statistical modeling by Legler and Roback at
 \url{https://bookdown.org/roback/bookdown-bysh} contains a lot of \R\ code.
 \url{http://stackoverflow.com/tags/r} is the best place for asking
