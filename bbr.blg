@@ -1,18 +1,17 @@
-[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'bbr.blg'
-[31] biber:313> INFO - === Sat Sep 29, 2018, 10:47:36
-[49] Biber.pm:371> INFO - Reading 'bbr.bcf'
-[114] Biber.pm:857> INFO - Found 106 citekeys in bib section 0
-[128] Biber.pm:3981> INFO - Processing section 0
-[138] Biber.pm:4154> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
-[276] bibtex.pm:1468> INFO - LaTeX decoding ...
-[4677] bibtex.pm:1294> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
-[5576] Utils.pm:169> WARN - I didn't find a database entry for '[' (section 0)
-[5679] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[5679] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[5679] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[5679] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[5791] bbl.pm:617> INFO - Writing 'bbr.bbl' with encoding 'ascii'
-[5791] bbl.pm:618> INFO - Converting UTF-8 to TeX macros on output to .bbl
-[5899] bbl.pm:720> INFO - Output to bbr.bbl
-[5899] Biber.pm:110> INFO - WARNINGS: 1
+[49] biber:313> INFO - === Mon Jan 14, 2019, 13:48:35
+[82] Biber.pm:371> INFO - Reading 'bbr.bcf'
+[205] Biber.pm:857> INFO - Found 107 citekeys in bib section 0
+[231] Biber.pm:3976> INFO - Processing section 0
+[248] Biber.pm:4136> INFO - Looking for bibtex format file 'slinks/harrelfe.bib' for section 0
+[483] bibtex.pm:1489> INFO - LaTeX decoding ...
+[9453] bibtex.pm:1305> INFO - Found BibTeX data source 'slinks/harrelfe.bib'
+[11087] Utils.pm:193> WARN - I didn't find a database entry for '[' (section 0)
+[11286] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[11286] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[11286] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[11286] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[11476] bbl.pm:617> INFO - Writing 'bbr.bbl' with encoding 'UTF-8'
+[11538] bbl.pm:720> INFO - Output to bbr.bbl
+[11539] Biber.pm:110> INFO - WARNINGS: 1
