@@ -42,10 +42,10 @@
 \item Eliminate patients in intervals of PS where there is no overlap
   between A and B, or include an interaction between treatment and a
   baseline characteristic\footnote{To quote Gelman and
-    Hill~\cite[Section 10.3]{gel06dat}, ``Ultimately, one good
+    Hill Section 10.3~\cite{gel06dat}, ``Ultimately, one good
     solution may be a multilevel model that includes treatment
-    interactions so that inferences explicitly recognize the decrease
-    precision that can be obtained outside the region of overlap.''}
+    interactions so that inferences explicitly recognize the decreased
+    precision that can be obtained outside the region of overlap.''  For example, if one included an interaction between age and treatment and there were no patients greater than 70 years old receiving treatment B, the B:A difference for age greater than 70 would have an extremely wide confidence interval as it depends on extrapolation.  So the estimates that are based on extrapolation are not misleading; they are just not informative.}
 \item Many researchers stratify the PS into quintiles, get treatment
   differences within the quintiles, and average these to get
   adjustment treatment effects

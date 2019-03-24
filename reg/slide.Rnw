@@ -19,6 +19,20 @@ Regression models are used for
 \item confounder adjustment---getting adjusted estimates of effects
 \item checking that existing summary scores (e.g., BMI) adequately
   summarize their component variables
+  \bi
+  \item fit a model with log height and log weight and see if ratio of
+    coefficients is -2
+  \ei
+\item determining whether change, average, or most recent measurement
+  should be emphasized
+  \bi
+  \item fit a model containing body weight measured 1y ago and at time
+    of treatment initiation
+  \item if simple change score is an adequate summary of the two
+    weights, the ratio of their coefficients will be about -1
+  \item if most recent weight is all-important, coefficient for weight
+    1y ago will be very small
+  \ei
 \item developing new summary scores guided by predicting outcomes
 \ei
 
@@ -1013,6 +1027,12 @@ parameters by minimizing the sum of squared errors used to estimate
 $\sigma^2$ itself.  You can think of the error d.f.\ as the sample
 size penalized for the number of parameters estimated, or as a measure
 of the information base used to fit the model.
+
+Other ways to express the d.f.\ for a hypothesis are:
+\bi
+\item The number of opportunities you give associations to be present (relationships with $Y$ to be non-flat)
+\item The number of restrictions you place on parameters to make the null hypothesis of no association (flat relationships) hold
+\ei
 
 \subsection{Hypothesis Testing} \ems{11.2}\ros{11.9.2}
 \disc{reg-mult-h0}
