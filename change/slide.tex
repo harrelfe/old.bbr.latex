@@ -1,7 +1,7 @@
 % Usage: knitr slide
 
 
-\chapter{Transformations, Measuring Change, and Regression to the Mean}
+\chapter{Transformations, Measuring Change, and Regression to the Mean}\alabel{chap:trans}
 
 \section{Transformations}
 
@@ -250,6 +250,10 @@ plot(Predict(f, y0, treatment))  # plot y0 on x-axis, 2 curves for 2 treatments
 \end{Sinput}
 \end{Schunk}
 
+Kristoffer Magnusson has an excellent paper
+\href{http://rpsychologist.com/treatment-response-subgroup}{Change
+  over time is not ``treatment response''}
+
 \subsection{Special Problems Caused By Non-Monotonic Relationship With Ultimate Outcome}
 Besides the strong assumptions made about how variables are
 transformed before a difference is calculated, there are many types of
@@ -290,8 +294,8 @@ w <- upData(w, labels=c(crea1='Serum Creatinine, Day 1',
             units=c(crea1=u, crea3=u, crea7=u, crea14=u, crea25=u))
 \end{Sinput}
 \begin{Soutput}
-Input object size:	 1656136 bytes;	 17 variables	 10279 observations
-New object size:	1657176 bytes;	17 variables	10279 observations
+Input object size:	 1739440 bytes;	 17 variables	 10279 observations
+New object size:	1740560 bytes;	17 variables	10279 observations
 \end{Soutput}
 \begin{Sinput}
 w <- subset(w, crea1 < 2)

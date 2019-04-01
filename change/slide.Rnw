@@ -191,6 +191,10 @@ plot(Predict(f, y0, treatment))  # plot y0 on x-axis, 2 curves for 2 treatments
 # The above plotted the linear predictor (log odds); can also plot mean
 @
 
+Kristoffer Magnusson has an excellent paper
+\href{http://rpsychologist.com/treatment-response-subgroup}{Change
+  over time is not ``treatment response''}
+
 \subsection{Special Problems Caused By Non-Monotonic Relationship With Ultimate Outcome}
 Besides the strong assumptions made about how variables are
 transformed before a difference is calculated, there are many types of
