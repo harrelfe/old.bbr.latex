@@ -921,6 +921,30 @@ pwr.t2n.test(n1 = 129, n2 = 259, d = delta / s, sig.level = 0.05)
 \end{Schunk}
 \ei
 
+What is the difference in means that would yield a 2-sided $P$-value
+of exactly 0.05 for a two-sample $t$-test with normality and equal
+variances when the sample sizes are both equal to $\frac{n}{2}$?  We
+solve for $\hat{\Delta} = \bar{x}_{1} - \bar{x}_{2}$ such 
+that $t_{n-2,1-\alpha/2} = \frac{\hat{\Delta}}{2s/\sqrt{n}}$, giving
+\beq
+\hat{\Delta} = \frac{2 \times t_{n-2,1-\alpha/2} \times s}{\sqrt{n}}
+\eeq
+For total sample sizes of 10, 50, and 100, the ``magic'' values of the
+observed difference are the following multiples of the observed
+standard deviation $s$:
+\begin{Schunk}
+\begin{Sinput}
+n <- c(10, 50, 100)
+tcrit <- qt(0.975, n-2)
+2 * tcrit / sqrt(n)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.4584451 0.5686934 0.3968935
+\end{Soutput}
+\end{Schunk}
+Note that these thresholds are independent of the power and the effect
+size used in the power calculation.
+
 \subsection{Confidence Interval}  \ros{8.5}\altman{28-35}
 \beq
 \bar{x}_{1}-\bar{x}_{2} \pm t_{n_{1}+n_{2}-2,1-\alpha/2} \times s \times
