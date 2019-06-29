@@ -37,8 +37,10 @@ such widely diverse areas as
 The main \R\ web site is \href{https://www.r-project.org/}{www.r-project.org}.
 
 \section{Learning \R}
-Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2} and \emph{R Programming Tutorials} from Mike Marin at
-\url{https://www.youtube.com/user/marinstatlectures}.  Or look at
+Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2}, \emph{R Programming Tutorials} from Mike Marin at
+\url{https://www.youtube.com/user/marinstatlectures}, or \emph{Fast
+  Lane to Learning R} at \url{https://github.com//matloff/fasteR} by
+Norm Matloff.  Or look at
 \url{swirlstats.com} for an interactive way to learn \R. Those
 who have used SPSS or SAS before will profit from \emph{\R\ for SAS
   and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
