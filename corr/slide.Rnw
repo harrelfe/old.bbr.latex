@@ -327,6 +327,8 @@ abline(h=seq(0, .4, by=0.025),
 @ 
 \ei
 
+See also \href{https://stats.stackexchange.com/questions/415131}{stats.stackexchange.com/questions/415131}.
+
 \subsection{Comparing Two $r$'s}
 \bi
 \item Rarely appropriate
