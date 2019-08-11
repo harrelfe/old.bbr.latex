@@ -481,10 +481,10 @@ f
  {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|}\hline
 &Model Tests&Discrimination\\
 &&Indexes\\\hline
-Obs~\hfill 3000&LR $\chi^{2}$~\hfill 126.48&$R^{2}$~\hfill 0.046\\
-Events~\hfill 456&d.f.~\hfill 8&$D_{xy}$~\hfill 0.292\\
-Center~\hfill 1.5014&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.556\\
-&Score $\chi^{2}$~\hfill 148.58&$g_{r}$~\hfill 1.743\\
+Obs~\hfill 3000&LR $\chi^{2}$~\hfill 130.78&$R^{2}$~\hfill 0.047\\
+Events~\hfill 470&d.f.~\hfill 8&$D_{xy}$~\hfill 0.261\\
+Center~\hfill 2.3448&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.566\\
+&Score $\chi^{2}$~\hfill 156.15&$g_{r}$~\hfill 1.761\\
 &Pr$(>\chi^{2})$~\hfill 0.0000&\\
 \hline
 \end{tabular}
@@ -497,14 +497,14 @@ Center~\hfill 1.5014&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.556\\
  \endhead
  \hline
  \endfoot
- sex=Male&~-0.3794~&~0.0958~&-3.96&\textless 0.0001\tabularnewline
- age&~ 0.0269~&~0.0239~& 1.13&0.2605\tabularnewline
- age'&~ 0.0542~&~0.0587~& 0.92&0.3556\tabularnewline
- age''&~-0.2361~&~0.2315~&-1.02&0.3077\tabularnewline
- treat=B&~ 0.0218~&~1.6648~& 0.01&0.9895\tabularnewline
- age $\times$ treat=B&~-0.0008~&~0.0353~&-0.02&0.9815\tabularnewline
- age' $\times$ treat=B&~-0.0650~&~0.0890~&-0.73&0.4650\tabularnewline
- age'' $\times$ treat=B&~ 0.2525~&~0.3579~& 0.71&0.4805\tabularnewline
+ sex=Male&~-0.3628~&~0.0936~&-3.88&0.0001\tabularnewline
+ age&~ 0.0423~&~0.0283~& 1.50&0.1349\tabularnewline
+ age'&~ 0.0132~&~0.0655~& 0.20&0.8404\tabularnewline
+ age''&~-0.0456~&~0.2499~&-0.18&0.8553\tabularnewline
+ treat=B&~ 1.6377~&~1.6902~& 0.97&0.3326\tabularnewline
+ age $\times$ treat=B&~-0.0335~&~0.0357~&-0.94&0.3479\tabularnewline
+ age' $\times$ treat=B&~ 0.0643~&~0.0892~& 0.72&0.4709\tabularnewline
+ age'' $\times$ treat=B&~-0.4048~&~0.3606~&-1.12&0.2616\tabularnewline
  \hline
  \end{longtable}
  \addtocounter{table}{-1}
@@ -518,18 +518,18 @@ Wald Statistics for \texttt{\smaller S}}\begin{center}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-sex& 15.70&1&\textless 0.0001\tabularnewline
-age  (Factor+Higher Order Factors)& 81.64&6&\textless 0.0001\tabularnewline
-~~\emph{All Interactions}&  9.97&3&0.0188\tabularnewline
-~~\emph{Nonlinear (Factor+Higher Order Factors)}&  1.41&4&0.8430\tabularnewline
-treat  (Factor+Higher Order Factors)& 33.82&4&\textless 0.0001\tabularnewline
-~~\emph{All Interactions}&  9.97&3&0.0188\tabularnewline
-age $\times$ treat  (Factor+Higher Order Factors)&  9.97&3&0.0188\tabularnewline
-~~\emph{Nonlinear}&  0.54&2&0.7651\tabularnewline
-~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  0.54&2&0.7651\tabularnewline
-TOTAL NONLINEAR&  1.41&4&0.8430\tabularnewline
-TOTAL NONLINEAR + INTERACTION& 10.59&5&0.0600\tabularnewline
-TOTAL&134.12&8&\textless 0.0001\tabularnewline
+sex& 15.03&1&0.0001\tabularnewline
+age  (Factor+Higher Order Factors)&102.95&6&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.92&3&0.0002\tabularnewline
+~~\emph{Nonlinear (Factor+Higher Order Factors)}&  6.04&4&0.1961\tabularnewline
+treat  (Factor+Higher Order Factors)& 27.80&4&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.92&3&0.0002\tabularnewline
+age $\times$ treat  (Factor+Higher Order Factors)& 19.92&3&0.0002\tabularnewline
+~~\emph{Nonlinear}&  4.11&2&0.1284\tabularnewline
+~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  4.11&2&0.1284\tabularnewline
+TOTAL NONLINEAR&  6.04&4&0.1961\tabularnewline
+TOTAL NONLINEAR + INTERACTION& 20.80&5&0.0009\tabularnewline
+TOTAL&138.91&8&\textless 0.0001\tabularnewline
 \hline
 \end{tabular}\end{center}
 
@@ -539,8 +539,9 @@ The model fitted above allows for a general age $\times$ treatment interaction. 
 ggplot(Predict(f, age, treat), rdata=data.frame(age, treat))
 ages <- seq(30, 87, length=200)
 k <- contrast(f, list(treat='B', age=ages), list(treat='A', age=ages))
-class(k) <- 'data.frame'
-ggplot(k, aes(x=age, y=exp(Contrast))) + scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(x=age, y=exp(Contrast))) +
+  scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
   geom_ribbon(aes(ymin=exp(Lower), ymax=exp(Upper)), fill='gray80') +
   geom_line() +
   ylab('B:A Hazard Ratio') + xlab('Age')
@@ -566,10 +567,10 @@ g
  {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|}\hline
 &Model Tests&Discrimination\\
 &&Indexes\\\hline
-Obs~\hfill 3000&LR $\chi^{2}$~\hfill 116.79&$R^{2}$~\hfill 0.043\\
-Events~\hfill 456&d.f.~\hfill 6&$D_{xy}$~\hfill 0.285\\
-Center~\hfill 1.3019&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.603\\
-&Score $\chi^{2}$~\hfill 118.46&$g_{r}$~\hfill 1.828\\
+Obs~\hfill 3000&LR $\chi^{2}$~\hfill 108.40&$R^{2}$~\hfill 0.039\\
+Events~\hfill 470&d.f.~\hfill 6&$D_{xy}$~\hfill 0.249\\
+Center~\hfill 1.2565&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.566\\
+&Score $\chi^{2}$~\hfill 110.68&$g_{r}$~\hfill 1.761\\
 &Pr$(>\chi^{2})$~\hfill 0.0000&\\
 \hline
 \end{tabular}
@@ -582,12 +583,12 @@ Center~\hfill 1.3019&Pr$(>\chi^{2})$~\hfill 0.0000&$g$~\hfill 0.603\\
  \endhead
  \hline
  \endfoot
- sex=Male&~-0.3333~&~0.1222~&-2.73&0.0064\tabularnewline
- treat=B&~-0.4351~&~0.1249~&-3.48&0.0005\tabularnewline
- age&~ 0.0264~&~0.0176~& 1.50&0.1337\tabularnewline
- age'&~ 0.0293~&~0.0441~& 0.67&0.5060\tabularnewline
- age''&~-0.1387~&~0.1759~&-0.79&0.4304\tabularnewline
- sex=Male $\times$ treat=B&~-0.1217~&~0.1963~&-0.62&0.5354\tabularnewline
+ sex=Male&~-0.3494~&~0.1234~&-2.83&0.0046\tabularnewline
+ treat=B&~-0.2748~&~0.1222~&-2.25&0.0246\tabularnewline
+ age&~ 0.0228~&~0.0173~& 1.31&0.1890\tabularnewline
+ age'&~ 0.0452~&~0.0435~& 1.04&0.2981\tabularnewline
+ age''&~-0.2088~&~0.1739~&-1.20&0.2301\tabularnewline
+ sex=Male $\times$ treat=B&~-0.0526~&~0.1894~&-0.28&0.7813\tabularnewline
  \hline
  \end{longtable}
  \addtocounter{table}{-1}
@@ -601,22 +602,23 @@ Wald Statistics for \texttt{\smaller S}}\begin{center}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-sex  (Factor+Higher Order Factors)& 16.19&2&0.0003\tabularnewline
-~~\emph{All Interactions}&  0.38&1&0.5354\tabularnewline
-treat  (Factor+Higher Order Factors)& 25.63&2&\textless 0.0001\tabularnewline
-~~\emph{All Interactions}&  0.38&1&0.5354\tabularnewline
-age& 72.80&3&\textless 0.0001\tabularnewline
-~~\emph{Nonlinear}&  0.89&2&0.6420\tabularnewline
-sex $\times$ treat  (Factor+Higher Order Factors)&  0.38&1&0.5354\tabularnewline
-TOTAL NONLINEAR + INTERACTION&  1.27&3&0.7367\tabularnewline
-TOTAL&111.89&6&\textless 0.0001\tabularnewline
+sex  (Factor+Higher Order Factors)& 15.87&2&0.0004\tabularnewline
+~~\emph{All Interactions}&  0.08&1&0.7813\tabularnewline
+treat  (Factor+Higher Order Factors)& 10.18&2&0.0062\tabularnewline
+~~\emph{All Interactions}&  0.08&1&0.7813\tabularnewline
+age& 78.81&3&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear}&  1.85&2&0.3966\tabularnewline
+sex $\times$ treat  (Factor+Higher Order Factors)&  0.08&1&0.7813\tabularnewline
+TOTAL NONLINEAR + INTERACTION&  1.92&3&0.5888\tabularnewline
+TOTAL&104.05&6&\textless 0.0001\tabularnewline
 \hline
 \end{tabular}\end{center}
 \begin{Sinput}
 ggplot(Predict(g, sex, treat))
 k <- contrast(g, list(treat='B', sex=levels(sex)), list(treat='A', sex=levels(sex)))
-class(k) <- 'data.frame'
-ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() +
+  scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
   geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
   xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
 \end{Sinput}
@@ -638,29 +640,30 @@ Wald Statistics for \texttt{\smaller S}}\begin{center}
 \hline\hline
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-treat  (Factor+Higher Order Factors)& 34.18&5&\textless 0.0001\tabularnewline
-~~\emph{All Interactions}& 10.33&4&0.0353\tabularnewline
-age  (Factor+Higher Order Factors)& 81.66&6&\textless 0.0001\tabularnewline
-~~\emph{All Interactions}&  9.94&3&0.0191\tabularnewline
-~~\emph{Nonlinear (Factor+Higher Order Factors)}&  1.36&4&0.8505\tabularnewline
-sex  (Factor+Higher Order Factors)& 16.06&2&0.0003\tabularnewline
-~~\emph{All Interactions}&  0.36&1&0.5502\tabularnewline
-treat $\times$ age  (Factor+Higher Order Factors)&  9.94&3&0.0191\tabularnewline
-~~\emph{Nonlinear}&  0.50&2&0.7788\tabularnewline
-~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  0.50&2&0.7788\tabularnewline
-treat $\times$ sex  (Factor+Higher Order Factors)&  0.36&1&0.5502\tabularnewline
-TOTAL NONLINEAR&  1.36&4&0.8505\tabularnewline
-TOTAL INTERACTION& 10.33&4&0.0353\tabularnewline
-TOTAL NONLINEAR + INTERACTION& 10.95&6&0.0898\tabularnewline
-TOTAL&133.11&9&\textless 0.0001\tabularnewline
+treat  (Factor+Higher Order Factors)& 27.85&5&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.98&4&0.0005\tabularnewline
+age  (Factor+Higher Order Factors)&103.01&6&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.91&3&0.0002\tabularnewline
+~~\emph{Nonlinear (Factor+Higher Order Factors)}&  6.05&4&0.1956\tabularnewline
+sex  (Factor+Higher Order Factors)& 15.08&2&0.0005\tabularnewline
+~~\emph{All Interactions}&  0.06&1&0.8096\tabularnewline
+treat $\times$ age  (Factor+Higher Order Factors)& 19.91&3&0.0002\tabularnewline
+~~\emph{Nonlinear}&  4.10&2&0.1286\tabularnewline
+~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  4.10&2&0.1286\tabularnewline
+treat $\times$ sex  (Factor+Higher Order Factors)&  0.06&1&0.8096\tabularnewline
+TOTAL NONLINEAR&  6.05&4&0.1956\tabularnewline
+TOTAL INTERACTION& 19.98&4&0.0005\tabularnewline
+TOTAL NONLINEAR + INTERACTION& 20.86&6&0.0019\tabularnewline
+TOTAL&138.58&9&\textless 0.0001\tabularnewline
 \hline
 \end{tabular}\end{center}
 \begin{Sinput}
 ggplot(Predict(h, sex, treat, age=50))
 k <- contrast(h, list(treat='B', sex=levels(sex), age=50),
                  list(treat='A', sex=levels(sex), age=50))
-class(k) <- 'data.frame'
-ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() +
+  scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
   geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
   xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
 \end{Sinput}
@@ -1272,6 +1275,8 @@ See the excellent Tweetorial by Darren Dahly
 and
 \href{https://twitter.com/BenYAndrew/status/1117777383606706177}{this}
 supplement to it by Ben Andrew.
+
+\href{http://www.appliedclinicaltrialsonline.com/well-adjusted-statistician-analysis-covariance-explained}{This article} by Stephen Senn is also very helpful.
 
 %\nocite{alt90ran,beg90sig,sen94tes,rob91som,ste00cli,gai84bia,gai86adj,gai88tes,lag84pro,mor86omi,for95mod,aka97pow,sch83sam,sar96hie,and99tes,cpm95bio,har96mul,ver94pen,hau91,kna93cli,ich98,kal97tre,lew95sta,mac98whi,sen97sta,rms,for02rol,poc02sub,her04cov,aus10sub}
 

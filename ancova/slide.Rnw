@@ -471,8 +471,9 @@ The model fitted above allows for a general age $\times$ treatment interaction. 
 ggplot(Predict(f, age, treat), rdata=data.frame(age, treat))
 ages <- seq(30, 87, length=200)
 k <- contrast(f, list(treat='B', age=ages), list(treat='A', age=ages))
-class(k) <- 'data.frame'
-ggplot(k, aes(x=age, y=exp(Contrast))) + scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(x=age, y=exp(Contrast))) +
+  scale_y_log10(minor_breaks=seq(.2, .9, by=.1)) + 
   geom_ribbon(aes(ymin=exp(Lower), ymax=exp(Upper)), fill='gray80') +
   geom_line() +
   ylab('B:A Hazard Ratio') + xlab('Age')
@@ -485,8 +486,9 @@ g
 anova(g)
 ggplot(Predict(g, sex, treat))
 k <- contrast(g, list(treat='B', sex=levels(sex)), list(treat='A', sex=levels(sex)))
-class(k) <- 'data.frame'
-ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() +
+  scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
   geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
   xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
 @
@@ -498,8 +500,9 @@ anova(h)
 ggplot(Predict(h, sex, treat, age=50))
 k <- contrast(h, list(treat='B', sex=levels(sex), age=50),
                  list(treat='A', sex=levels(sex), age=50))
-class(k) <- 'data.frame'
-ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() + scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
+k <- as.data.frame(k[Cs(sex,age,Contrast,Lower,Upper)])
+ggplot(k, aes(y=exp(Contrast), x=sex)) + geom_point() +
+  scale_y_log10(breaks=c(.5, .6, .7, .8, .9, 1, 1.1)) +
   geom_linerange(aes(ymin=exp(Lower), ymax=exp(Upper))) + 
   xlab('Sex') + ylab('B:A Hazard Ratio') + coord_flip()
 @
@@ -969,6 +972,8 @@ See the excellent Tweetorial by Darren Dahly
 and
 \href{https://twitter.com/BenYAndrew/status/1117777383606706177}{this}
 supplement to it by Ben Andrew.
+
+\href{http://www.appliedclinicaltrialsonline.com/well-adjusted-statistician-analysis-covariance-explained}{This article} by Stephen Senn is also very helpful.
 
 %\nocite{alt90ran,beg90sig,sen94tes,rob91som,ste00cli,gai84bia,gai86adj,gai88tes,lag84pro,mor86omi,for95mod,aka97pow,sch83sam,sar96hie,and99tes,cpm95bio,har96mul,ver94pen,hau91,kna93cli,ich98,kal97tre,lew95sta,mac98whi,sen97sta,rms,for02rol,poc02sub,her04cov,aus10sub}
 
