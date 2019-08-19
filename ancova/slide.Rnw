@@ -37,6 +37,12 @@ Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
 
 \section{Covariable Adjustment in Linear
   Models}\sound{anc-1}\disc{ancova-linear} 
+
+\quoteit{If you fail to adjust for pre-specified covariates, the
+  statistical  model's residuals get larger.  Not good for power, but
+  incorporates the uncertainties needed for any possible random
+  baseline imbalances.}{F Harrell 2019}
+
 \bi
 \item   Model: $E(Y | X) = X \beta + \epsilon$
 \item   Continuous response variable $Y$, normal residuals
