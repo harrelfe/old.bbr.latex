@@ -6,6 +6,11 @@
 % Permanent location: hbiostat.org/doc/bbr.pdf
 % Server is updated automatically because of symlink from ~/web/doc
 
+\PassOptionsToPackage{hyphens}{url}
+% Must appear before \usepackage{hyperref} (done by hslide).  See
+% https://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url#3034
+% Also need to put some lines between \begin{sloppypar} ... \end{sloppypar}
+
 \usepackage[bib=slinks/harrelfe.bib]{hslide}
 %\renewcommand{\mpfill}{\hfill}   % see hslide.sty
 
