@@ -12,3 +12,4 @@
 `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 Warning: Removed 1439 rows containing non-finite values (stat_smooth).
 Warning: Removed 1439 rows containing missing values (geom_point).
+Loading required package: mvtnorm

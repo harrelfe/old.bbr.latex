@@ -259,11 +259,18 @@ variability of systolic blood pressure: If Gini's mean difference is
 7mmHg, this means that the average disagreement (absolute difference)
 between any two patients is 7mmHg.
 \clearpage
-\section{Graphics} \ros{2.8}\katz{4.2-4.6}\altman{17-20}\abd{2,3.4}
+\section{Graphics} \label{sec:graphics}\ros{2.8}\katz{4.2-4.6}\altman{17-20}\abd{2,3.4}\bmovie{3}\ddisc{3}
+\movie{https://youtu.be/fSgEeI2Xpdc}
 Cleveland~\cite{cle94ele,cle84sci} is the best source of how-to
 information on making scientific graphs.  Much information may be
 found at \url{http://biostat.mc.vanderbilt.edu/StatGraphCourse},
-especially these notes: \url{http://goo.gl/DHE0a2}.
+especially these notes: \url{http://goo.gl/DHE0a2}.  Information about
+graphics for reporting clinical trials may be found at
+\href{http://biostat.mc.vanderbilt.edu/RCTGraphics}{biostat.mc.vanderbilt.edu/RCTGraphics}.  
+A link to John Rauser's exceptional video about principles of good graphics
+is found on that page as well as in the movie icon in the right margin.
+
+
 Murrell~\cite{mur13inf} has an excellent summary of recommendations:
 \begin{quote}
 \bi
@@ -280,6 +287,10 @@ Murrell~\cite{mur13inf} has an excellent summary of recommendations:
 \ei
 \end{quote}
 
+On the fifth point above, avoid the use of \emph{bars} when
+representing a single number.  Bar widths contain no information and
+get in the way of important information.  This is addressed below.
+
 \R\ has superior graphics implemented in multiple models, including
 \bi
 \item Base graphics such as \Co{plot(), hist(), lines(), points()}
@@ -290,12 +301,29 @@ Murrell~\cite{mur13inf} has an excellent summary of recommendations:
   size, or line type due to having more than one categorizing variable
 \item The \Co{ggplot2} package which is very flexible and has the
   nicest defaults especially for constructing keys (legends/guides)
+\item For semi-interactive graphics inserted into html reports, the
+  \R\ \Co{plotly} package, which uses the \Co{plotly} system
+  (which uses the Javascript \Co{D3} library) is extremely powerful.
+  See \url{https://plot.ly/r/getting-started}. 
+\item Fully interactive graphics can be built using \Co{RShiny} but
+  this requires a server to be running while the graph is viewed.
 \ei
 
 For \Co{ggplot2}, \url{http://www.cookbook-r.com/Graphs} contains a
 nice cookbook.  See also \url{http://learnr.wordpress.com}.  To get
 excellent documentation with examples for any 
 \Co{ggplot2} function, google \Co{ggplot2 \emph{functionname}}.
+\Co{ggplot2} graphs can be converted into \Co{plotly} graphics using
+the \Co{ggplotly} function.  But you will have more control using
+\R\ \Co{plotly} directly.
+
+The older non-interactive graphics models which are useful for
+producing printed and \Co{pdf} output are starting to be superceded
+with interactive graphics.  One of the biggest advantages of the
+latter is the ability to present the most important graphic
+information front-and-center but to allow the user to easily hover the
+mouse over areas in the graphic to see tabular details.
+
 
 \subsection{Graphing Change vs.\ Raw Data}\alabel{sec:descript-change}
 A common mistake in scientific graphics is to cover up subject
@@ -452,7 +480,7 @@ with(esopH, ggfreqScatter(conv, orophar, bins=50, g=20) +
 \end{figure}
 \end{Schunk}
 
-\subsubsection{Distributions}\abd{1.4}
+\subsubsection{Distributions}\abd{1.4}\label{sec:desc-dist}
 \bi
 \item histogram showing relative frequencies
  \bi
@@ -598,6 +626,134 @@ abline(h=c(2 + 3.5)/2, col=gray(.85))
   trend line or regression model fit, with confidence bands
 \ei
 
+\subsubsection{Bar Plots with Error Bars}
+
+\bi
+\item ``Dynamite'' Plots
+\item Height of bar indicates mean, lines represent standard error
+\item High ink:information ratio
+\item Hide the raw data, assume symmetric confidence intervals
+\item Replace with
+  \bi
+   \item Dot plot (smaller sample sizes)
+   \item Box plot (larger sample size)
+  \ei
+\ei
+\begin{Schunk}
+\begin{Sinput}
+getHdata(FEV); set.seed(13)   
+FEV <- subset(FEV, runif(nrow(FEV)) < 1/8)   # 1/8 sample
+require(ggplot2)
+s <- with(FEV, summarize(fev, llist(sex, smoke), smean.cl.normal))
+ggplot(s, aes(x=smoke, y=fev, fill=sex)) +    # Fig. (*\ref{fig:descript-dynamite}*)
+    geom_bar(position=position_dodge(), stat="identity") +
+    geom_errorbar(aes(ymin=Lower, ymax=Upper),
+                  width=.1,
+                  position=position_dodge(.9))
+\end{Sinput}
+\begin{figure}[htbp]
+
+\centerline{\includegraphics[width=\maxwidth]{descript-dynamite-1} }
+
+\caption[Bar plot with error bars---``dynamite plot'']{Bar plot with error bars---``dynamite plot''}\label{fig:descript-dynamite}
+\end{figure}
+\end{Schunk}
+See \url{http://biostat.mc.vanderbilt.edu/DynamitePlots} for a list of
+the many problems caused by dynamite plots, plus some solutions.
+
+Instead of the limited information shown in the bar chart, show the
+raw data along with box plots.  Modify default box plots to replace
+whiskers with the interval between 0.1 and 0.9 quantiles.
+\begin{Schunk}
+\begin{Sinput}
+require(ggplot2)   # Fig. (*\ref{fig:descript-tplot}*)
+stats <- function(x) {
+  z <- quantile(x, probs=c(.1, .25, .5, .75, .9))
+  names(z) <- c('ymin', 'lower', 'middle', 'upper', 'ymax')
+  if(length(x) < 10) z[c(1,5)] <- NA
+  z
+}
+ggplot(FEV, aes(x=sex, y=fev)) +
+  stat_summary(fun.data=stats, geom='boxplot', aes(width=.75), shape=5,
+               position='dodge', col='lightblue') +
+  geom_dotplot(binaxis='y', stackdir='center', position='dodge', alpha=.4) +
+  stat_summary(fun.y=mean, geom='point', shape=5, size=4, color='blue') +
+  facet_grid(~ smoke) +
+  xlab('') + ylab(expression(FEV[1])) + coord_flip()
+\end{Sinput}
+\begin{figure}[htbp]
+
+\centerline{\includegraphics[width=\maxwidth]{descript-tplot-1} }
+
+\caption[Dot plot with superimposed box plots]{Jittered raw data and box plots.  Middle vertical lines indicate medians and diamonds indicate means. Horizontal lines indicate 0.1 to 0.9 quantiles when $n\geq 10$.  The ink:information ratio for this plot is far better than a dynamite plot.}\label{fig:descript-tplot}
+\end{figure}
+\end{Schunk}
+Use a violin plot to show the distribution density estimate (and its
+mirror image) instead of a box plot.
+\begin{Schunk}
+\begin{Sinput}
+ggplot(FEV, aes(x=sex, y=fev)) +
+  geom_violin(width=.6, col='lightblue') +
+  geom_dotplot(binaxis='y', stackdir='center', position='dodge', alpha=.4) +
+  stat_summary(fun.y=median, geom='point', color='blue', shape='+', size=12) +
+  facet_grid(~ smoke) +
+  xlab('') + ylab(expression(FEV[1])) + coord_flip()
+\end{Sinput}
+\begin{figure}[htbp]
+
+\centerline{\includegraphics[width=\maxwidth]{descript-vplot-1} }
+
+\caption[Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}]{Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}}\label{fig:descript-vplot}
+\end{figure}
+\end{Schunk}
+
+% Was
+% ggplot(FEV, aes(x=smoke, y=fev, color=sex)) +
+%   geom_boxplot(alpha=.5, width=.2) + # remove width to overlay boxes on pts
+%   stat_summary(fun.y=mean, geom="point", shape=5, size=2, 
+%                position=position_dodge(width=.15)) +
+%   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
+%   xlab('') + ylab(expression(FEV[1])) + coord_flip() 
+% ggplot(FEV, aes(x=smoke, y=fev, color=sex)) +
+%   stat_summary(fun.data=stats, geom='boxplot', shape=5, position='dodge') +
+%   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
+%   stat_summary(fun.y=mean, geom="point", shape=5, size=2, 
+%                position=position_dodge(width=.2)) +
+%   xlab('') + ylab(expression(FEV[1])) + coord_flip()
+  
+%## Define Tatsuki Koyama's tplot function
+%base <- 'http://biostat.mc.vanderbilt.edu/wiki/pub/Main'
+%source(paste(base, 'TatsukiRcode/TatsukiRcodeTplot.R', sep='/'))
+%par(mar=c(4,9,1,4))
+%tplot(fev ~ smoke, data=FEV, show.n=TRUE, bty='L', type='db',
+%      pch=20, las=1, mean.line=TRUE, horizontal=TRUE, ylab='FEV1',
+%      col=c(female='darkred',male='darkblue')[as.character(FEV$sex)],
+%      dist=.02, boxcol='lightyellow1', boxborder=gray(.8))  # Fig. (*\ref{fig:descript-tplot}*)
+
+\subsubsection{Semi-Interactive Graphics Examples}
+
+These examples are all found in \url{hbiostat.org/talks/rmedicine19.html}.
+
+\bi
+\item \href{https://hbiostat.org/talks/rmedicine19.html}{R for
+  Clinical Trial Reporting}
+\item \href{https://hbiostat.org/talks/rmedicine19.html#11}{Spike
+  histograms with hovertext for overall statistical summary} (slide 11)
+\item \href{https://hbiostat.org/talks/rmedicine19.html#12}{Dot plots}
+  (slide 12)
+\item \href{https://hbiostat.org/talks/rmedicine19.html#13}{Extended
+  box plots} (slide 13)
+\item \href{https://hbiostat.org/talks/rmedicine19.html#15}{Spike
+  histograms with quantiles, mean, dispersion} (slide 15)
+\item \href{https://hbiostat.org/talks/rmedicine19.html#16}{Survival
+  plots with CI for difference, continuous number at risk} (slide 16)
+\item \href{https://hbiostat.org/talks/rmedicine19.html#35}{Example
+  clinical trial reports} (slide 35)
+\ei
+
+Other examples: descriptions of BBR course participants: \href{https://hbiostat.org/bbr/registrants.html}{hbiostat.org/bbr/registrants.html}.
+
+
 \subsection{Graphs for Describing Statistical Model Fits}
 Several types of graphics are useful.  These are all implemented in
 the \R\ \Co{rms} package~\cite{rrms}.
@@ -643,8 +799,6 @@ knots are used to allow age and BMI to act smoothly but nonlinearly.
 Partial effects plots are in Fig.~\ref{fig:descript-rmsa}.
 \begin{Sinput}
 require(rms)
-\end{Sinput}
-\begin{Sinput}
 getHdata(nhgh)   # NHANES data
 dd <- datadist(nhgh); options(datadist='dd')
 g        <- function(x) 0.09 - x ^ - (1 / 1.75)
@@ -803,7 +957,23 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
  an impact although a non-monotonic one.
 
 \clearpage
-\section{Tables}
+
+\section{Tables} \bmovie{3a}\ddisc{3}
+What are tables for?
+\bi
+\item Lookup of details
+\item Not for seeing trends
+\item For displaying a summary of a variable stratified by a truly
+  categorical variable
+\item Not for summarizing how a variable changes across levels of a
+  continuous independent variable
+\ei
+
+Since tables are for lookup, they can be complex.  With modern media,
+a better way to think of a table is as a pop-up when viewing elements
+of a graph.
+
+What to display in a table for different types of response variables:
 \bi
 \item Binary variables: Show proportions first; they should be
   featured because they are normalized for sample size
@@ -819,16 +989,25 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
  E.g., less useful to show proportion of males for patients who lived
  vs.\ those who died than to show proportion of deaths stratified by
  sex.
-\item Continuous variables
+\item Continuous response variables
  \bi
  \item to summarize distributions of raw data: 3 quartiles \\
    recommended format: {\small 35} \textbf{50} {\small 67} or
-   35/50/67
+   35/\textbf{50}/67
  \item summary statistics: mean or median and confidence limits
    (without assuming normality of data if possible)
  \ei
+\item Continuous independent (baseline) variables
+  \bi
+  \item Don't use tables because these requires arbitrary binning
+    (categorization) 
+  \item Use graphs to show smooth relationships
+  \ei
 \item Show number of missing values
 \item Add denominators when feasible
+\item Confidence intervals: in a comparative study, show confidence
+  intervals for differences, not confidence intervals for
+  individual group summaries
 \ei
 
 \begin{table}[!h]
@@ -839,9 +1018,9 @@ estimation with a tensor spline in diastolic $\times$ systolic blood pressure.
 \multicolumn{1}{c}{N}&
 \multicolumn{1}{c}{ }
 \\ \hline
-Age&27&{\scriptsize 28~}{32 }{\scriptsize 52} \\
-C~reactive~protein&27&{\scriptsize  1.0~}{ 1.8 }{\scriptsize 10.1} \\
-Fecal~Calprotectin &26&{\scriptsize  128~}{ 754 }{\scriptsize 2500} \\
+Age&27&{\scriptsize 28~}{\textbf{32} }{\scriptsize 52} \\
+C-reactive~protein&27&{\scriptsize  1.0~}{ \textbf{1.8} }{\scriptsize 10.1} \\
+Fecal~Calprotectin &26&{\scriptsize  128~}{ \textbf{754} }{\scriptsize 2500} \\
 Gender&27&\\
 ~~~~Female&&0.52~{\scriptsize~$\frac{14}{27}$}\\
 Location~of~colitis&27&\\
@@ -853,111 +1032,9 @@ Location~of~colitis&27&\\
 
 \end{center}
 
-\noindent {\scriptsize $a$\ }{$b$\ }{\scriptsize $c$\ } represent the lower quartile $a$, the median $b$, and the upper quartile $c$\ for continuous variables.\\
+\noindent {\scriptsize $a$\ }{$\mathbf{b}$\ }{\scriptsize $c$\ } represent the lower quartile $a$, the median $\mathbf{b}$, and the upper quartile $c$\ for continuous variables.\\
 $N$\ is the number of non--missing values.\\
 
 \end{table}
-\clearpage
-\section{Bar Plots with Error Bars}
 
-\bi
-\item ``Dynamite'' Plots
-\item Height of bar indicates mean, lines represent standard error
-\item High ink:information ratio
-\item Hide the raw data, assume symmetric confidence intervals
-\item Replace with
-  \bi
-   \item Dot plot (smaller sample sizes)
-   \item Box plot (larger sample size)
-  \ei
-\ei
-\begin{Schunk}
-\begin{Sinput}
-getHdata(FEV); set.seed(13)   
-FEV <- subset(FEV, runif(nrow(FEV)) < 1/8)   # 1/8 sample
-require(ggplot2)
-s <- with(FEV, summarize(fev, llist(sex, smoke), smean.cl.normal))
-ggplot(s, aes(x=smoke, y=fev, fill=sex)) +    # Fig. (*\ref{fig:descript-dynamite}*)
-    geom_bar(position=position_dodge(), stat="identity") +
-    geom_errorbar(aes(ymin=Lower, ymax=Upper),
-                  width=.1,
-                  position=position_dodge(.9))
-\end{Sinput}
-\begin{figure}[htbp]
-
-\centerline{\includegraphics[width=\maxwidth]{descript-dynamite-1} }
-
-\caption[Bar plot with error bars---``dynamite plot'']{Bar plot with error bars---``dynamite plot''}\label{fig:descript-dynamite}
-\end{figure}
-\end{Schunk}
-See \url{http://biostat.mc.vanderbilt.edu/DynamitePlots} for a list of
-the many problems caused by dynamite plots, plus some solutions.
-
-Instead of the limited information shown in the bar chart, show the
-raw data along with box plots.  Modify default box plots to replace
-whiskers with the interval between 0.1 and 0.9 quantiles.
-\begin{Schunk}
-\begin{Sinput}
-require(ggplot2)   # Fig. (*\ref{fig:descript-tplot}*)
-stats <- function(x) {
-  z <- quantile(x, probs=c(.1, .25, .5, .75, .9))
-  names(z) <- c('ymin', 'lower', 'middle', 'upper', 'ymax')
-  if(length(x) < 10) z[c(1,5)] <- NA
-  z
-}
-ggplot(FEV, aes(x=sex, y=fev)) +
-  stat_summary(fun.data=stats, geom='boxplot', aes(width=.75), shape=5,
-               position='dodge', col='lightblue') +
-  geom_dotplot(binaxis='y', stackdir='center', position='dodge', alpha=.4) +
-  stat_summary(fun.y=mean, geom='point', shape=5, size=4, color='blue') +
-  facet_grid(~ smoke) +
-  xlab('') + ylab(expression(FEV[1])) + coord_flip()
-\end{Sinput}
-\begin{figure}[htbp]
-
-\centerline{\includegraphics[width=\maxwidth]{descript-tplot-1} }
-
-\caption[Dot plot with superimposed box plots]{Jittered raw data and box plots.  Middle vertical lines indicate medians and diamonds indicate means. Horizontal lines indicate 0.1 to 0.9 quantiles when $n\geq 10$.  The ink:information ratio for this plot is far better than a dynamite plot.}\label{fig:descript-tplot}
-\end{figure}
-\end{Schunk}
-Use a violin plot to show the distribution density estimate (and its
-mirror image) instead of a box plot.
-\begin{Schunk}
-\begin{Sinput}
-ggplot(FEV, aes(x=sex, y=fev)) +
-  geom_violin(width=.6, col='lightblue') +
-  geom_dotplot(binaxis='y', stackdir='center', position='dodge', alpha=.4) +
-  stat_summary(fun.y=median, geom='point', color='blue', shape='+', size=12) +
-  facet_grid(~ smoke) +
-  xlab('') + ylab(expression(FEV[1])) + coord_flip()
-\end{Sinput}
-\begin{figure}[htbp]
-
-\centerline{\includegraphics[width=\maxwidth]{descript-vplot-1} }
-
-\caption[Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}]{Jittered raw data and violin plots with median indicated by \textbf{\textcolor{blue}{+}}}\label{fig:descript-vplot}
-\end{figure}
-\end{Schunk}
-
-% Was
-% ggplot(FEV, aes(x=smoke, y=fev, color=sex)) +
-%   geom_boxplot(alpha=.5, width=.2) + # remove width to overlay boxes on pts
-%   stat_summary(fun.y=mean, geom="point", shape=5, size=2, 
-%                position=position_dodge(width=.15)) +
-%   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
-%   xlab('') + ylab(expression(FEV[1])) + coord_flip() 
-% ggplot(FEV, aes(x=smoke, y=fev, color=sex)) +
-%   stat_summary(fun.data=stats, geom='boxplot', shape=5, position='dodge') +
-%   geom_dotplot(binaxis='y', stackdir='center', position='dodge') +
-%   stat_summary(fun.y=mean, geom="point", shape=5, size=2, 
-%                position=position_dodge(width=.2)) +
-%   xlab('') + ylab(expression(FEV[1])) + coord_flip()
-  
-%## Define Tatsuki Koyama's tplot function
-%base <- 'http://biostat.mc.vanderbilt.edu/wiki/pub/Main'
-%source(paste(base, 'TatsukiRcode/TatsukiRcodeTplot.R', sep='/'))
-%par(mar=c(4,9,1,4))
-%tplot(fev ~ smoke, data=FEV, show.n=TRUE, bty='L', type='db',
-%      pch=20, las=1, mean.line=TRUE, horizontal=TRUE, ylab='FEV1',
-%      col=c(female='darkred',male='darkblue')[as.character(FEV$sex)],
-%      dist=.02, boxcol='lightyellow1', boxborder=gray(.8))  # Fig. (*\ref{fig:descript-tplot}*)
+See also \href{https://hbiostat.org/talks/rmedicine19.html#18}{hbiostat.org/talks/rmedicine19.html\#18}.

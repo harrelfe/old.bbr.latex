@@ -16,6 +16,10 @@
   {}
 \endgroup
 
+\preamble{%
+\ifdefined\DeclarePrefChars\DeclarePrefChars{'\textquoteright{}-}\else\fi%
+}
+
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
@@ -41,9 +45,10 @@
       \field{title}{Sample Size Determination: A Review}
       \field{volume}{46}
       \field{year}{1997}
+      \field{dateera}{ce}
       \field{pages}{261\bibrangedash 283}
       \range{pages}{23}
-      \keyw{sample-size,bayes,bayesian-inference,bayesian-sample-size-estimation,average-coverage-criterion,bayes-factors,mcnemars-test,multinomial-distribution}
+      \keyw{sample-size,bayesian-inference,bayes,bayesian-sample-size-estimation,average-coverage-criterion,bayes-factors,mcnemars-test,multinomial-distribution}
     \endentry
     \entry{aka97pow}{article}{}
       \name{author}{3}{}{%
@@ -77,6 +82,7 @@
       \field{title}{Power of Logrank Test and {{Cox}} Regression Model in Clinical Trials with Heterogeneous Samples}
       \field{volume}{16}
       \field{year}{1997}
+      \field{dateera}{ce}
       \field{pages}{583\bibrangedash 597}
       \range{pages}{15}
       \keyw{simulation-setup,covariable-adjustment,model-misspecification,baseline-characteristics,loss-of-power-of-unadjusted-tests,model-identification,quantifying-prognostic-spectrum-of-adjustors}
@@ -130,6 +136,7 @@
       \field{title}{Factors Influencing the Statistical Power of Complex Data Analysis Protocols for Molecular Signature Development from Microarray Data}
       \field{volume}{4}
       \field{year}{2009}
+      \field{dateera}{ce}
     \endentry
     \entry{alt95abs}{article}{}
       \name{author}{2}{}{%
@@ -158,6 +165,7 @@
       \field{title}{Absence of Evidence Is Not Evidence of Absence}
       \field{volume}{311}
       \field{year}{1995}
+      \field{dateera}{ce}
       \field{pages}{485}
       \range{pages}{1}
       \keyw{teaching-mds,statistical-significance,interpretation-of-negative-or-nonsignificant-findings}
@@ -181,7 +189,7 @@
            giveni={P\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {John Wiley \& Sons, Ltd.}%
+        {John Wiley & Sons, Ltd.}%
       }
       \strng{namehash}{fd62e464b95eaf6b279acb6219abf384}
       \strng{fullhash}{fd62e464b95eaf6b279acb6219abf384}
@@ -195,6 +203,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{Prognostic models are designed to predict a clinical outcome in individuals or groups of individuals with a particular disease or condition. To avoid bias many researchers advocate the use of full models developed by prespecifying predictors. Variable selection is not employed and the resulting models may be large and complicated. In practice more parsimonious models that retain most of the prognostic information may be preferred. We investigate the effect on various performance measures, including mean square error and prognostic classification, of three methods for estimating full models (including penalized estimation and Tibshirani's lasso) and consider two methods (backwards elimination and a new proposal called stepdown) for simplifying full models. Simulation studies based on two medical data sets suggest that simplified models can be found that perform nearly as well as, or sometimes even better than, full models. Optimizing the Akaike information criterion appears to be appropriate for choosing the degree of simplification.}
       \field{annotation}{ordinary backward stepdown worked well when there was a large fraction of truly irrelevant predictors}
+      \field{eprinttype}{pmid}
       \field{issn}{0277-6715}
       \field{journaltitle}{Stat Med}
       \field{month}{12}
@@ -202,12 +211,22 @@
       \field{title}{Simplifying a Prognostic Model: A Simulation Study Based on Clinical Data.}
       \field{volume}{21}
       \field{year}{2002}
+      \field{dateera}{ce}
       \field{pages}{3803\bibrangedash 3822}
       \range{pages}{20}
       \verb{doi}
       \verb 10.1002/sim.1422
       \endverb
-      \keyw{penalization,variable-selection,aic,roc,prognosis,model-approximation,model-simplification,pre-conditioning}
+      \verb{eprint}
+      \verb 12483768
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.1422
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.1422
+      \endverb
+      \keyw{variable-selection,aic,roc,penalization,model-approximation,model-simplification,pre-conditioning,prognosis}
     \endentry
     \entry{amb02sel}{article}{}
       \name{author}{2}{}{%
@@ -223,7 +242,7 @@
            giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Laboratoire Heudiasyc, Unité Mixte de Recherche/Centre National de la Recherche Scientifique 6599, 60200 Compiègne, France.}%
+        {Laboratoire Heudiasyc, Unit\'{e} Mixte de Recherche/Centre National de la Recherche Scientifique 6599, 60200 Compi\`{e}gne, France.}%
       }
       \list{publisher}{1}{%
         {National Academy of Sciences}%
@@ -240,6 +259,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{In the context of cancer diagnosis and treatment, we consider the problem of constructing an accurate prediction rule on the basis of a relatively small number of tumor tissue samples of known type containing the expression data on very many (possibly thousands) genes. Recently, results have been presented in the literature suggesting that it is possible to construct a prediction rule from only a few genes such that it has a negligible prediction error rate. However, in these results the test error or the leave-one-out cross-validated error is calculated without allowance for the selection bias. There is no allowance because the rule is either tested on tissue samples that were used in the first instance to select the genes being used in the rule or because the cross-validation of the rule is not external to the selection process; that is, gene selection is not performed in training the rule at each stage of the cross-validation process. We describe how in practice the selection bias can be assessed and corrected for by either performing a cross-validation or applying the bootstrap external to the selection process. We recommend using 10-fold rather than leave-one-out cross-validation, and concerning the bootstrap, we suggest using the so-called .632+ bootstrap error estimate designed to handle overfitted prediction rules. Using two published data sets, we demonstrate that when correction is made for the selection bias, the cross-validated error is no longer zero for a subset of only a few genes.}
       \field{annotation}{Relied on an improper accuracy score (proportion classified correct) so had to use the .632 bootstrap unnecessarily}
+      \field{eprinttype}{pmid}
       \field{issn}{1091-6490}
       \field{journaltitle}{PNASs}
       \field{month}{5}
@@ -247,10 +267,20 @@
       \field{title}{Selection Bias in Gene Extraction on the Basis of Microarray Gene-Expression Data}
       \field{volume}{99}
       \field{year}{2002}
+      \field{dateera}{ce}
       \field{pages}{6562\bibrangedash 6566}
       \range{pages}{5}
       \verb{doi}
       \verb 10.1073/pnas.102102699
+      \endverb
+      \verb{eprint}
+      \verb 11983868
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1073/pnas.102102699
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1073/pnas.102102699
       \endverb
       \keyw{model-uncertainty,bad-science,bad-biomarker-research,bad-statistics,selection-bias,univariable-screening}
     \endentry
@@ -283,9 +313,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Stat Med}
-      \field{title}{Testing for Centre Effects in Multi-Centre Survival Studies: {{A}} Monte Carlo Comparison of Fixed and Random Effects Tests}
+      \field{title}{Testing for Centre Effects in Multi-Centre Survival Studies: {A} Monte Carlo Comparison of Fixed and Random Effects Tests}
       \field{volume}{18}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{pages}{1489\bibrangedash 1500}
       \range{pages}{12}
       \keyw{multi-center-rct,center-effects,fixed-vs-random-effects,frailty-model,ignoring-center-effects-biases-treatment-effect,see-sar96hie}
@@ -328,6 +359,7 @@
       \field{title}{Development of a {{Crohn}}'s Disease Activity Index}
       \field{volume}{70}
       \field{year}{1976}
+      \field{dateera}{ce}
       \field{pages}{439\bibrangedash 444}
       \range{pages}{6}
     \endentry
@@ -361,10 +393,17 @@
       \field{title}{Comparisons against Baseline within Randomised Groups Are Often Used and Can Be Highly Misleading}
       \field{volume}{12}
       \field{year}{2011}
+      \field{dateera}{ce}
       \field{pages}{264}
       \range{pages}{1}
       \verb{doi}
       \verb 10.1186/1745-6215-12-264
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1745-6215-12-264
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/1745-6215-12-264
       \endverb
       \keyw{rct,change}
     \endentry
@@ -391,6 +430,7 @@
       \field{title}{Statistical Decisionmaking without Math}
       \field{volume}{20}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{pages}{39\bibrangedash 44}
       \range{pages}{6}
       \keyw{graphics,decision-theory,statistical-decision-theory}
@@ -447,9 +487,10 @@
       \field{title}{Using Ordinal Logistic Regression to Estimate the Likelihood of Colorectal Neoplasia}
       \field{volume}{44}
       \field{year}{1991}
+      \field{dateera}{ce}
       \field{pages}{1263\bibrangedash 1270}
       \range{pages}{8}
-      \keyw{teaching-mds,tutorial,multivariable-modelling,nomogram,ordinal-logistic-model,ordinal-response}
+      \keyw{teaching-mds,multivariable-modelling,nomogram,ordinal-logistic-model,ordinal-response,tutorial}
     \endentry
     \entry{bri08ski}{article}{}
       \name{author}{2}{}{%
@@ -474,14 +515,15 @@
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{"statistics such as the AUC are not especially relevant to someone who must make a decision about a particular x\_c. ... ROC curves lack or obscure several quantities that are necessary for evaluating the operational effectiveness of diagnostic tests. ... ROC curves were first used to check how radio $<$i$>$receivers$<$/i$>$ (like radar receivers) operated over a range of frequencies. ... This is not how most ROC curves are used now, particularly in medicine. The receiver of a diagnostic measurement ... wants to make a decision based on some x\_c, and is not especially interested in how well he would have done had he used some different cutoff."; in the discussion David Hand states "when integrating to yield the overall AUC measure, it is necessary to decide what weight to give each value in the integration. The AUC implicitly does this using a weighting derived empirically from the data. This is nonsensical. The relative importance of misclassifying a case as a noncase, compared to the reverse, cannot come from the data itself. It must come externally, from considerations of the severity one attaches to the different kinds of misclassifications."; see Lin, Kvam, Lu Stat in Med 28:798-813;2009}
+      \field{annotation}{"statistics such as the AUC are not especially relevant to someone who must make a decision about a particular x\_c. ... ROC curves lack or obscure several quantities that are necessary for evaluating the operational effectiveness of diagnostic tests. ... ROC curves were first used to check how radio {$<$}i{$>$}receivers{$<$}/i{$>$} (like radar receivers) operated over a range of frequencies. ... This is not how most ROC curves are used now, particularly in medicine. The receiver of a diagnostic measurement ... wants to make a decision based on some x\_c, and is not especially interested in how well he would have done had he used some different cutoff."; in the discussion David Hand states "when integrating to yield the overall AUC measure, it is necessary to decide what weight to give each value in the integration. The AUC implicitly does this using a weighting derived empirically from the data. This is nonsensical. The relative importance of misclassifying a case as a noncase, compared to the reverse, cannot come from the data itself. It must come externally, from considerations of the severity one attaches to the different kinds of misclassifications."; see Lin, Kvam, Lu Stat in Med 28:798-813;2009}
       \field{journaltitle}{Biometrics}
-      \field{title}{The Skill Plot: {{A}} Graphical Technique for Evaluating Continuous Diagnostic Tests (with Discussion)}
+      \field{title}{The Skill Plot: {A} Graphical Technique for Evaluating Continuous Diagnostic Tests (with Discussion)}
       \field{volume}{64}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{250\bibrangedash 261}
       \range{pages}{12}
-      \keyw{predictive-accuracy,diagnosis,sensitivity,diagnostic-accuracy,specificity,roc-curve,skill-plot,skill-score}
+      \keyw{predictive-accuracy,diagnosis,sensitivity,specificity,roc-curve,skill-score,diagnostic-accuracy,skill-plot}
     \endentry
     \entry{cal89}{article}{}
       \true{moreauthor}
@@ -522,6 +564,7 @@
       \field{title}{The Evolution of Medical and Surgical Therapy for Coronary Artery Disease}
       \field{volume}{261}
       \field{year}{1989}
+      \field{dateera}{ce}
       \field{pages}{2077\bibrangedash 2086}
       \range{pages}{10}
     \endentry
@@ -582,8 +625,53 @@
       \field{title}{Prognostic Implications of Ventricular Arrhythmias during 24 Hour Ambulatory Monitoring in Patients Undergoing Cardiac Catheterization for Coronary Artery Disease}
       \field{volume}{50}
       \field{year}{1982}
+      \field{dateera}{ce}
       \field{pages}{23\bibrangedash 31}
       \range{pages}{9}
+    \endentry
+    \entry{cha16pri}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fa23df73c4d611f0d356c9bb50422534}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chapman and Hall/CRC}%
+      }
+      \strng{namehash}{fa23df73c4d611f0d356c9bb50422534}
+      \strng{fullhash}{fa23df73c4d611f0d356c9bb50422534}
+      \strng{bibnamehash}{fa23df73c4d611f0d356c9bb50422534}
+      \strng{authorbibnamehash}{fa23df73c4d611f0d356c9bb50422534}
+      \strng{authornamehash}{fa23df73c4d611f0d356c9bb50422534}
+      \strng{authorfullhash}{fa23df73c4d611f0d356c9bb50422534}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Principles of Scientific Methods focuses on the fundamental principles behind scientific methods. The book refers to "science" in a broad sense, including}
+      \field{day}{19}
+      \field{isbn}{978-0-429-17190-1}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Principles of {{Scientific Methods}}}
+      \field{urlday}{9}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1201/b17167
+      \endverb
+      \verb{urlraw}
+      \verb https://www.taylorfrancis.com/books/9780429171901
+      \endverb
+      \verb{url}
+      \verb https://www.taylorfrancis.com/books/9780429171901
+      \endverb
+      \keyw{scientific-approach,experimental-design}
     \endentry
     \entry{che16too}{article}{}
       \name{author}{6}{}{%
@@ -635,12 +723,71 @@
       \field{title}{Too Many Covariates and Too Few Cases? - A Comparative Study}
       \field{volume}{35}
       \field{year}{2016}
+      \field{dateera}{ce}
       \field{pages}{4546\bibrangedash 4558}
       \range{pages}{13}
       \verb{doi}
       \verb 10.1002/sim.7021
       \endverb
-      \keyw{penalization,penalized-mle,penalized-estimation,covariate-adjustment,propensity-score,covariable-adjustment}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.7021
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.7021
+      \endverb
+      \keyw{penalized-estimation,propensity-score,covariate-adjustment,penalization,covariable-adjustment,penalized-mle}
+    \endentry
+    \entry{cho15elu}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0e8f0492944f8c1be1a0a06f2245ee86}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Leena},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e1645b976c6ba765d0e8f65993983173}{%
+           family={Blume},
+           familyi={B\bibinitperiod},
+           given={Jeffrey\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a650b6aef29395a8edcc25fdd80d715d}{%
+           family={Dupont},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima D.},
+           giveni={W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \strng{fullhash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \strng{bibnamehash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \strng{authorbibnamehash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \strng{authornamehash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \strng{authorfullhash}{3de8b9347a3eb1440152ce5c8064cff7}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To many, the foundations of statistical inference are cryptic and irrelevant to routine statistical practice. The analysis of 2 x 2 contingency tables, omnipresent in the scientific literature, is a case in point. Fisher's exact test is routinely used even though it has been fraught with controversy for over 70 years. The problem, not widely acknowledged, is that several different p-values can be associated with a single table, making scientific inference inconsistent. The root cause of this controversy lies in the table's origins and the manner in which nuisance parameters are eliminated. However, fundamental statistical principles (e.g., sufficiency, ancillarity, conditionality, and likelihood) can shed light on the controversy and guide our approach in using this test. In this paper, we use these fundamental principles to show how much information is lost when the tables origins are ignored and when various approaches are used to eliminate unknown nuisance parameters. We present novel likelihood contours to aid in the visualization of information loss and show that the information loss is often virtually non-existent. We find that problems arising from the discreteness of the sample space are exacerbated by p-value-based inference. Accordingly, methods that are less sensitive to this discreteness - likelihood ratios, posterior probabilities and mid-p-values - lead to more consistent inferences.}
+      \field{journaltitle}{PLoS ONE}
+      \field{month}{4}
+      \field{number}{4}
+      \field{title}{Elucidating the {{Foundations}} of {{Statistical Inference}} with 2 x 2 {{Tables}}}
+      \field{volume}{10}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{e0121263+}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0121263
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1371/journal.pone.0121263
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1371/journal.pone.0121263
+      \endverb
+      \keyw{ctsafac}
     \endentry
     \entry{cle84sci}{article}{}
       \name{author}{1}{}{%
@@ -665,6 +812,7 @@
       \field{title}{Graphs in Scientific Publications}
       \field{volume}{38}
       \field{year}{1984}
+      \field{dateera}{ce}
       \field{pages}{261\bibrangedash 269}
       \range{pages}{9}
       \keyw{teaching-mds,reporting,graphics}
@@ -695,6 +843,7 @@
       \field{labeltitlesource}{title}
       \field{title}{The {{Elements}} of {{Graphing Data}}}
       \field{year}{1994}
+      \field{dateera}{ce}
       \keyw{teaching-mds,graphics}
     \endentry
     \entry{col00sym}{article}{}
@@ -719,6 +868,7 @@
       \field{title}{Sympercents: Symmetric Percentage Differences on the 100 Log e Scale Simplify the Presentation of Log Transformed Data}
       \field{volume}{19}
       \field{year}{2000}
+      \field{dateera}{ce}
       \field{pages}{3109\bibrangedash 3125}
       \range{pages}{17}
       \keyw{teaching-mds,change,measuring-change,quantifying-change}
@@ -743,9 +893,10 @@
       \field{title}{Points to Consider on Adjustment for Baseline Covariates}
       \field{volume}{23}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{pages}{701\bibrangedash 709}
       \range{pages}{9}
-      \keyw{rct,randomized-trials,covariate-adjustment,analysis-of-covariance,baseline-covariates,policy}
+      \keyw{rct,analysis-of-covariance,baseline-covariates,covariate-adjustment,policy,randomized-trials}
     \endentry
     \entry{coo96mul}{article}{}
       \name{author}{2}{}{%
@@ -775,9 +926,10 @@
       \field{title}{Multiplicity Considerations in the Design and Analysis of Clinical Trials}
       \field{volume}{159}
       \field{year}{1996}
+      \field{dateera}{ce}
       \field{pages}{93\bibrangedash 110}
       \range{pages}{18}
-      \keyw{multiple-endpoints,multiplicity,type-i-error,p-value-adjustment,multiple-treatments}
+      \keyw{multiple-endpoints,type-i-error,multiplicity,p-value-adjustment,multiple-treatments}
     \endentry
     \entry{davis-repmeas}{book}{}
       \name{author}{1}{}{%
@@ -805,6 +957,7 @@
       \field{labeltitlesource}{title}
       \field{title}{Statistical {{Methods}} for the {{Analysis}} of {{Repeated Measurements}}}
       \field{year}{2002}
+      \field{dateera}{ce}
     \endentry
     \entry{diggle-longit}{book}{}
       \name{author}{4}{}{%
@@ -848,6 +1001,7 @@
       \field{edition}{second}
       \field{title}{Analysis of {{Longitudinal Data}}}
       \field{year}{2002}
+      \field{dateera}{ce}
     \endentry
     \entry{dupmod}{book}{}
       \name{author}{1}{}{%
@@ -876,6 +1030,7 @@
       \field{edition}{second}
       \field{title}{Statistical {{Modeling}} for {{Biomedical Researchers}}}
       \field{year}{2008}
+      \field{dateera}{ce}
     \endentry
     \entry{edw99mod}{article}{}
       \name{author}{1}{}{%
@@ -905,6 +1060,7 @@
       \field{title}{On Model Pre-Specification in Confirmatory Randomized Studies}
       \field{volume}{18}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{pages}{771\bibrangedash 785}
       \range{pages}{15}
       \keyw{pharmaceutical,analysis-plan,covariable-adjustment-in-rct,statistics-sop}
@@ -937,6 +1093,7 @@
       \field{title}{Stein's Paradox in Statistics}
       \field{volume}{236}
       \field{year}{1977}
+      \field{dateera}{ce}
       \field{pages}{119\bibrangedash 127}
       \range{pages}{9}
       \keyw{shrinkage,baseball-batting-average-example}
@@ -974,12 +1131,19 @@
       \field{title}{Consequences of Dichotomization}
       \field{volume}{8}
       \field{year}{2009}
+      \field{dateera}{ce}
       \field{pages}{50\bibrangedash 61}
       \range{pages}{12}
       \verb{doi}
       \verb 10.1002/pst.331
       \endverb
-      \keyw{teaching-mds,cutpoints,graphics,dichotomization,categorization-of-outcome-variable,continuous-variables,loss-of-information,loss-of-power,response,theoretical-calculations}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/pst.331
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/pst.331
+      \endverb
+      \keyw{teaching-mds,cutpoints,graphics,dichotomization,response,continuous-variables,categorization-of-outcome-variable,loss-of-information,loss-of-power,theoretical-calculations}
     \endentry
     \entry{for95mod}{article}{}
       \name{author}{3}{}{%
@@ -1013,6 +1177,7 @@
       \field{title}{Model Inconsistency, Illustrated by the {{Cox}} Proportional Hazards Model}
       \field{volume}{14}
       \field{year}{1995}
+      \field{dateera}{ce}
       \field{pages}{735\bibrangedash 746}
       \range{pages}{12}
       \keyw{rct,covariable-adjustment,model-misspecification,model-identification,adjusted-estimates,baseline-imbalances}
@@ -1050,6 +1215,7 @@
       \field{title}{Biased Estimates of Treatment Effect in Randomized Experiments with Nonlinear Regressions and Omitted Covariates}
       \field{volume}{71}
       \field{year}{1984}
+      \field{dateera}{ce}
       \field{pages}{431\bibrangedash 444}
       \range{pages}{14}
       \keyw{covariable-adjustment}
@@ -1097,6 +1263,7 @@
       \field{booktitle}{Modern {{Statistical Methods}} in {{Chronic Disease Epidemiology}}}
       \field{title}{Adjusting for Covariates That Have the Same Distribution in Exposed and Unexposed Cohorts}
       \field{year}{1986}
+      \field{dateera}{ce}
       \field{pages}{3\bibrangedash 18}
       \range{pages}{16}
       \keyw{covariable-adjustment,omitted-covariable,multiple-models-studied,power-loss}
@@ -1134,7 +1301,14 @@
       \field{month}{12}
       \field{title}{Data {{Analysis Using Regression}} and {{Multilevel}}/{{Hierarchical Models}}}
       \field{year}{2006}
-      \keyw{causal-inference,hierarchical-model,propensity-score}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20&path=ASIN/052168689X
+      \endverb
+      \verb{url}
+      \verb http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20&path=ASIN/052168689X
+      \endverb
+      \keyw{hierarchical-model,propensity-score,causal-inference}
     \endentry
     \entry{gia14opt}{article}{}
       \name{author}{8}{}{%
@@ -1189,16 +1363,59 @@
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Clinicians are sometimes advised to make decisions using thresholds in measured variables, derived from prognostic studies. We studied why there are conflicting apparently-optimal prognostic thresholds, for example in exercise peak oxygen uptake (pVO2), ejection fraction (EF), and Brain Natriuretic Peptide (BNP) in heart failure (HF). Studies testing pVO2, EF or BNP prognostic thresholds in heart failure, published between 1990 and 2010, listed on Pubmed. First, we examined studies testing pVO2, EF or BNP prognostic thresholds. Second, we created repeated simulations of 1500 patients to identify whether an apparently-optimal prognostic threshold indicates step change in risk. 33 studies (8946 patients) tested a pVO2 threshold. 18 found it prognostically significant: the actual reported threshold ranged widely (10-18 ml/kg/min) but was overwhelmingly controlled by the individual study population's mean pVO2 (r = 0.86, p$<$0.00001). In contrast, the 15 negative publications were testing thresholds 199\% further from their means (p = 0.0001). Likewise, of 35 EF studies (10220 patients), the thresholds in the 22 positive reports were strongly determined by study means (r = 0.90, p$<$0.0001). Similarly, in the 19 positives of 20 BNP studies (9725 patients): r = 0.86 (p$<$0.0001). Second, survival simulations always discovered a "most significant" threshold, even when there was definitely no step change in mortality. With linear increase in risk, the apparently-optimal threshold was always near the sample mean (r = 0.99, p$<$0.001). This study cannot report the best threshold for any of these variables; instead it explains how common clinical research procedures routinely produce false thresholds. First, shifting (and/or disappearance) of an apparently-optimal prognostic threshold is strongly determined by studies' average pVO2, EF or BNP. Second, apparently-optimal thresholds always appear, even with no step in prognosis. Emphatic therapeutic guidance based on thresholds from observational studies may be ill-founded. We should not assume that optimal thresholds, or any thresholds, exist.}
+      \field{abstract}{Clinicians are sometimes advised to make decisions using thresholds in measured variables, derived from prognostic studies. We studied why there are conflicting apparently-optimal prognostic thresholds, for example in exercise peak oxygen uptake (pVO2), ejection fraction (EF), and Brain Natriuretic Peptide (BNP) in heart failure (HF). Studies testing pVO2, EF or BNP prognostic thresholds in heart failure, published between 1990 and 2010, listed on Pubmed. First, we examined studies testing pVO2, EF or BNP prognostic thresholds. Second, we created repeated simulations of 1500 patients to identify whether an apparently-optimal prognostic threshold indicates step change in risk. 33 studies (8946 patients) tested a pVO2 threshold. 18 found it prognostically significant: the actual reported threshold ranged widely (10-18 ml/kg/min) but was overwhelmingly controlled by the individual study population's mean pVO2 (r = 0.86, p{$<$}0.00001). In contrast, the 15 negative publications were testing thresholds 199\% further from their means (p = 0.0001). Likewise, of 35 EF studies (10220 patients), the thresholds in the 22 positive reports were strongly determined by study means (r = 0.90, p{$<$}0.0001). Similarly, in the 19 positives of 20 BNP studies (9725 patients): r = 0.86 (p{$<$}0.0001). Second, survival simulations always discovered a "most significant" threshold, even when there was definitely no step change in mortality. With linear increase in risk, the apparently-optimal threshold was always near the sample mean (r = 0.99, p{$<$}0.001). This study cannot report the best threshold for any of these variables; instead it explains how common clinical research procedures routinely produce false thresholds. First, shifting (and/or disappearance) of an apparently-optimal prognostic threshold is strongly determined by studies' average pVO2, EF or BNP. Second, apparently-optimal thresholds always appear, even with no step in prognosis. Emphatic therapeutic guidance based on thresholds from observational studies may be ill-founded. We should not assume that optimal thresholds, or any thresholds, exist.}
       \field{journaltitle}{PLoS ONE}
       \field{number}{1}
       \field{title}{Do Optimal Prognostic Thresholds in Continuous Physiological Variables Really Exist? {{Analysis}} of Origin of Apparent Thresholds, with Systematic Review for Peak Oxygen Consumption, Ejection Fraction and {{BNP}}}
       \field{volume}{9}
       \field{year}{2014}
+      \field{dateera}{ce}
       \verb{doi}
       \verb 10.1371/journal.pone.0081699
       \endverb
-      \keyw{ctsafac,categorization,categorizing-continuous-variables}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1371/journal.pone.0081699
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1371/journal.pone.0081699
+      \endverb
+      \keyw{categorizing-continuous-variables,categorization,ctsafac}
+    \endentry
+    \entry{gla14exp}{book}{}
+      \name{author}{1}{}{%
+        {{hash=67f5648cd5d0399035a1dd23b6f0a0b5}{%
+           family={Glass},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cold Spring Harbor, New York}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory Press}%
+      }
+      \strng{namehash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \strng{fullhash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \strng{bibnamehash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \strng{authorbibnamehash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \strng{authornamehash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \strng{authorfullhash}{67f5648cd5d0399035a1dd23b6f0a0b5}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The effective design and analysis of experiments in biology are critical to success, yet graduate students in biological and medical sciences typically receive very little formal training in these steps. With feedback from readers of the first edition, colleagues, and students taking the very popular experimental design courses taught by the author, this second edition of Experimental Design for Biologists retains the engaging writing style while organizing the book around the four elements of experimental design: the framework, the system, the experiment, and the model. The approach has been tested in the classroom, where the author has taught numerous graduate students, MD/PhD students, and postdoctoral fellows. The goal of every scientist is to discover something new and with the aid of Experimental Design for Biologists, this task is made a little easier.This handbook explains how to establish the framework for an experimental project, how to set up all of the components of an experimental system, design experiments within that system, determine and use the correct set of controls, and formulate models to test the veracity and resiliency of the data. This thoroughly updated edition of Experimental Design for Biologists is an essential source of theory and practical guidance for designing a research plan.}
+      \field{day}{6}
+      \field{edition}{2 edition}
+      \field{isbn}{978-1-62182-041-3}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{pagetotal}{294}
+      \field{title}{Experimental {{Design}} for {{Biologists}}}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \keyw{experimental-design}
     \endentry
     \entry{gne07str}{article}{}
       \name{author}{2}{}{%
@@ -1228,9 +1445,10 @@
       \field{title}{Strictly Proper Scoring Rules, Prediction, and Estimation}
       \field{volume}{102}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{pages}{359\bibrangedash 378}
       \range{pages}{20}
-      \keyw{brier-score,cross-validation,predictive-distribution,prediction,accuracy,prediction-interval,proper-scoring-rule,skill-score,bayes-factor,coherent,continuous-ranked-probability-score,entropy,kernel-score,loss-function,minimum-contrast-estimation,negative-definite-function,quantile-forecast,strictly-proper,utility-function}
+      \keyw{brier-score,accuracy,cross-validation,prediction,skill-score,entropy,bayes-factor,coherent,continuous-ranked-probability-score,kernel-score,loss-function,minimum-contrast-estimation,negative-definite-function,prediction-interval,predictive-distribution,proper-scoring-rule,quantile-forecast,strictly-proper,utility-function}
     \endentry
     \entry{gov18int}{article}{}
       \name{author}{8}{}{%
@@ -1277,9 +1495,6 @@
            given={Janneke\bibnamedelimb P.\bibnamedelimi C.},
            giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {English}%
-      }
       \strng{namehash}{1d0fe3f593b28b5cca3887b3883f1e9b}
       \strng{fullhash}{95ce586631bd6c6b9434d0719d338f82}
       \strng{bibnamehash}{1d0fe3f593b28b5cca3887b3883f1e9b}
@@ -1290,16 +1505,33 @@
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{$<$h2$>$Abstract$<$/h2$><$h3$>$Objective$<$/h3$><$p$>$To show how prediction models can be incorporated in decision models, to allow for personalized decisions; and to assess the value of this approach using the management of the neck in early stage oral cavity squamous cell carcinoma (OCSCC) as an example.$<$/p$><$h3$>$Study design and setting$<$/h3$><$p$>$In a decision model, three approaches were compared: a 'population-based' approach in which patients undergo the strategy that is optimal for the population; a `perfectly predicted' approach, in which each patient receives the optimal strategy for that specific patient; and a 'prediction model' approach in which each patient receives the strategy that is optimal based on prediction models. The average differences in costs and Quality Adjusted Life Years (QALYs) for the population between these approaches were studied.$<$/p$><$h3$>$Results$<$/h3$><$p$>$The population-based approach resulted on average in 4.9158 QALYs with \texteuro{}8,675 in costs, per patient. The perfectly predicted approach yielded 0.21 more QALYs and saved \texteuro{}1,024 per patient. The prediction model approach yielded 0.0014 more QALYs and saved \texteuro{}152 per patient compared with the population-based approach.$<$/p$><$h3$>$Conclusion$<$/h3$><$p$>$The perfectly predicted approach shows that personalized care is worthwhile. However, current prediction models in the field of OCSCC have limited value. Incorporating prediction models in decision models appears to be a valuable method to assess the value of personalized decision making.$<$/p$>$}
+      \field{abstract}{{$<$}h2{$>$}Abstract{$<$}/h2{$><$}h3{$>$}Objective{$<$}/h3{$><$}p{$>$}To show how prediction models can be incorporated in decision models, to allow for personalized decisions; and to assess the value of this approach using the management of the neck in early stage oral cavity squamous cell carcinoma (OCSCC) as an example.{$<$}/p{$><$}h3{$>$}Study design and setting{$<$}/h3{$><$}p{$>$}In a decision model, three approaches were compared: a 'population-based' approach in which patients undergo the strategy that is optimal for the population; a \textquoteleft{}perfectly predicted' approach, in which each patient receives the optimal strategy for that specific patient; and a 'prediction model' approach in which each patient receives the strategy that is optimal based on prediction models. The average differences in costs and Quality Adjusted Life Years (QALYs) for the population between these approaches were studied.{$<$}/p{$><$}h3{$>$}Results{$<$}/h3{$><$}p{$>$}The population-based approach resulted on average in 4.9158 QALYs with \x{20ac}8,675 in costs, per patient. The perfectly predicted approach yielded 0.21 more QALYs and saved \x{20ac}1,024 per patient. The prediction model approach yielded 0.0014 more QALYs and saved \x{20ac}152 per patient compared with the population-based approach.{$<$}/p{$><$}h3{$>$}Conclusion{$<$}/h3{$><$}p{$>$}The perfectly predicted approach shows that personalized care is worthwhile. However, current prediction models in the field of OCSCC have limited value. Incorporating prediction models in decision models appears to be a valuable method to assess the value of personalized decision making.{$<$}/p{$>$}}
+      \field{day}{28}
+      \field{eprinttype}{pmid}
       \field{issn}{0895-4356, 1878-5921}
       \field{journaltitle}{Journal of Clinical Epidemiology}
+      \field{langid}{english}
       \field{month}{8}
       \field{number}{0}
       \field{title}{Integrated Prediction and Decision Models Are Valuable in Informing Personalized Decision Making}
+      \field{urlday}{1}
+      \field{urlmonth}{9}
+      \field{urlyear}{2018}
       \field{volume}{0}
       \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.jclinepi.2018.08.016
+      \endverb
+      \verb{eprint}
+      \verb 30170106, 30170106
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jclinepi.com/article/S0895-4356(18)30447-5/abstract
+      \endverb
+      \verb{url}
+      \verb https://www.jclinepi.com/article/S0895-4356(18)30447-5/abstract
       \endverb
       \keyw{decision-theory,decision-support-techniques}
     \endentry
@@ -1321,17 +1553,24 @@
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{use of statistics in epidemiology is largely primitive;stepwise variable selection on confounders leaves important confounders uncontrolled;composition matrix;example with far too many significant predictors with many regression coefficients absurdly inflated when overfit;lack of evidence for dietary effects mediated through constituents;shrinkage instead of variable selection;larger effect on confidence interval width than on point estimates with variable selection;uncertainty about variance of random effects is just uncertainty about prior opinion;estimation of variance is pointless;instead the analysis should be repeated using different values;"if one feels compelled to estimate $\tau{}^2$, I would recommend giving it a proper prior concentrated amount contextually reasonable values";claim about ordinary MLE being unbiased is misleading because it assumes the model is correct and is the only model entertained;shrinkage towards compositional model;"models need to be complex to capture uncertainty about the relations...an honest uncertainty assessment requires parameters for all effects that we know may be present. This advice is implicit in an antiparsimony principle often attributed to L. J. Savage 'All models should be as big as an elephant (see Draper, 1995)'". See also gus06per.}
+      \field{annotation}{use of statistics in epidemiology is largely primitive;stepwise variable selection on confounders leaves important confounders uncontrolled;composition matrix;example with far too many significant predictors with many regression coefficients absurdly inflated when overfit;lack of evidence for dietary effects mediated through constituents;shrinkage instead of variable selection;larger effect on confidence interval width than on point estimates with variable selection;uncertainty about variance of random effects is just uncertainty about prior opinion;estimation of variance is pointless;instead the analysis should be repeated using different values;"if one feels compelled to estimate \$\textbackslash{}tau\^\{2\}\$, I would recommend giving it a proper prior concentrated amount contextually reasonable values";claim about ordinary MLE being unbiased is misleading because it assumes the model is correct and is the only model entertained;shrinkage towards compositional model;"models need to be complex to capture uncertainty about the relations...an honest uncertainty assessment requires parameters for all effects that we know may be present. This advice is implicit in an antiparsimony principle often attributed to L. J. Savage 'All models should be as big as an elephant (see Draper, 1995)'". See also gus06per.}
       \field{journaltitle}{Biometrics}
       \field{title}{When Should Epidemiologic Regressions Use Random Coefficients?}
       \field{volume}{56}
       \field{year}{2000}
+      \field{dateera}{ce}
       \field{pages}{915\bibrangedash 921}
       \range{pages}{7}
       \verb{doi}
       \verb 10.1111/j.0006-341X.2000.00915.x
       \endverb
-      \keyw{causal-inference,shrinkage,bayesian-methods,mixed-models,multilevel-modeling,variance-components,random-coefficient-regression,empirical-bayes-estimators,epidemiologic-method,hierarchical-regression}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/j.0006-341X.2000.00915.x
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/j.0006-341X.2000.00915.x
+      \endverb
+      \keyw{bayesian-methods,shrinkage,causal-inference,empirical-bayes-estimators,epidemiologic-method,hierarchical-regression,mixed-models,multilevel-modeling,random-coefficient-regression,variance-components}
     \endentry
     \entry{gre16sta}{article}{}
       \name{author}{7}{}{%
@@ -1371,9 +1610,6 @@
            given={Douglas\bibnamedelima G.},
            giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer Netherlands}%
-      }
       \strng{namehash}{b825a78368fc89b30b758edc176111a0}
       \strng{fullhash}{5cc2896e7eca8765a99d56aeed2d36d7}
       \strng{bibnamehash}{b825a78368fc89b30b758edc176111a0}
@@ -1387,15 +1623,22 @@
       \field{annotation}{Best article on misinterpretation of p-values. Pithy summaries.}
       \field{journaltitle}{Eur J Epi}
       \field{number}{4}
-      \field{title}{Statistical Tests, {{P}} Values, Confidence Intervals, and Power: A Guide to Misinterpretations}
+      \field{title}{Statistical Tests, {P} Values, Confidence Intervals, and Power: A Guide to Misinterpretations}
       \field{volume}{31}
       \field{year}{2016}
+      \field{dateera}{ce}
       \field{pages}{337\bibrangedash 350}
       \range{pages}{14}
       \verb{doi}
       \verb 10.1007/s10654-016-0149-3
       \endverb
-      \keyw{misinterpretation-of-p-values,p-values,general}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s10654-016-0149-3
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s10654-016-0149-3
+      \endverb
+      \keyw{general,p-values,misinterpretation-of-p-values}
     \endentry
     \entry{hac06tra}{article}{}
       \name{author}{2}{}{%
@@ -1425,6 +1668,7 @@
       \field{title}{Translation of Research Evidence from Animals to Humans}
       \field{volume}{296}
       \field{year}{2006}
+      \field{dateera}{ce}
       \field{pages}{1731\bibrangedash 1732}
       \range{pages}{2}
     \endentry
@@ -1446,8 +1690,15 @@
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Hmisc: {{A}} Package of Miscellaneous {{{\textsc{R}}}} Functions}
+      \field{title}{Hmisc: {A} Package of Miscellaneous {{{\textsc{R}}}} Functions}
       \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://biostat.mc.vanderbilt.edu/Hmisc
+      \endverb
+      \verb{url}
+      \verb http://biostat.mc.vanderbilt.edu/Hmisc
+      \endverb
     \endentry
     \entry{rrms}{article}{}
       \name{author}{1}{}{%
@@ -1469,8 +1720,15 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{biostat.mc.vanderbilt.edu/Rrms}
       \field{note}{Implements methods in Regression Modeling Strategies, 2nd edition}
-      \field{title}{Rms: {{R}} Functions for Biostatistical/Epidemiologic Modeling, Testing, Estimation, Validation, Graphics, Prediction, and Typesetting by Storing Enhanced Model Design Attributes in the Fit}
+      \field{title}{Rms: {R} Functions for Biostatistical/Epidemiologic Modeling, Testing, Estimation, Validation, Graphics, Prediction, and Typesetting by Storing Enhanced Model Design Attributes in the Fit}
       \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://biostat.mc.vanderbilt.edu/rms
+      \endverb
+      \verb{url}
+      \verb http://biostat.mc.vanderbilt.edu/rms
+      \endverb
       \keyw{group-rms}
     \endentry
     \entry{har98dev}{article}{}
@@ -1535,9 +1793,16 @@
       \field{title}{Development of a Clinical Prediction Model for an Ordinal Outcome: {{The World Health Organization ARI Multicentre Study}} of Clinical Signs and Etiologic Agents of Pneumonia, Sepsis, and Meningitis in Young Infants}
       \field{volume}{17}
       \field{year}{1998}
+      \field{dateera}{ce}
       \field{pages}{909\bibrangedash 944}
       \range{pages}{36}
-      \keyw{predictive-accuracy,nomogram,ordinal-response,shrinkage,diagnosis,validation,verification-bias,imputation,data-reduction,variable-clustering,cart,proportional-odds-model,model-approximation,scaling,screening,continuation-ratio-model,differential-penalization,penalized-maximum-likelihood-estimation}
+      \verb{urlraw}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0258(19980430)17:8%3C909::AID-SIM753%3E3.0.CO;2-O/abstract
+      \endverb
+      \verb{url}
+      \verb http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0258(19980430)17:8%3C909::AID-SIM753%3E3.0.CO;2-O/abstract
+      \endverb
+      \keyw{predictive-accuracy,nomogram,ordinal-response,shrinkage,diagnosis,validation,cart,imputation,data-reduction,proportional-odds-model,model-approximation,verification-bias,screening,variable-clustering,scaling,continuation-ratio-model,differential-penalization,penalized-maximum-likelihood-estimation}
     \endentry
     \entry{hau98sho}{article}{}
       \name{author}{3}{}{%
@@ -1572,12 +1837,19 @@
       \field{title}{Should We Adjust for Covariates in Nonlinear Regression Analyses of Randomized Trials?}
       \field{volume}{19}
       \field{year}{1998}
+      \field{dateera}{ce}
       \field{pages}{249\bibrangedash 256}
       \range{pages}{8}
       \verb{doi}
       \verb 10.1016/S0197-2456(97)00147-5
       \endverb
-      \keyw{rct,study-design,balance,bias,covariate-adjustment,covariable-adjustment,ancova,baseline,efficiency,attenuation-of-treatment-effect-estimate,subject-specific-vs-population-averaged-estimates}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0197-2456(97)00147-5
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0197-2456(97)00147-5
+      \endverb
+      \keyw{study-design,rct,bias,ancova,covariate-adjustment,baseline,covariable-adjustment,balance,efficiency,attenuation-of-treatment-effect-estimate,subject-specific-vs-population-averaged-estimates}
     \endentry
     \entry{hla09cri}{article}{}
       \name{author}{18}{}{%
@@ -1689,6 +1961,7 @@
       \field{title}{Criteria for Evaluation of Novel Markers of Cardiovascular Risk: A Scientific Statement from the {{American Heart Association}}}
       \field{volume}{119}
       \field{year}{2009}
+      \field{dateera}{ce}
       \field{pages}{2408\bibrangedash 2416}
       \range{pages}{9}
       \keyw{predictive-accuracy,biomarker-research,post--vs-pre-test-probability}
@@ -1740,8 +2013,15 @@
       \field{title}{Factors Affecting the Sensitivity and Specificity of Exercise Electrocardiography. {{Multivariable}} Analysis}
       \field{volume}{77}
       \field{year}{1984}
+      \field{dateera}{ce}
       \field{pages}{64\bibrangedash 71}
       \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934384904376#
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934384904376#
+      \endverb
       \keyw{teaching-mds,diagnosis,sensitivity,specificity,non-constancy-of-sensitivity-and-specificity}
     \endentry
     \entry{hoe48cla}{article}{}
@@ -1767,13 +2047,14 @@
       \field{title}{A Class of Statistics with Asymptotically Normal Distributions}
       \field{volume}{19}
       \field{year}{1948}
+      \field{dateera}{ce}
       \field{pages}{293\bibrangedash 325}
       \range{pages}{33}
     \endentry
     \entry{hol04con}{article}{}
       \name{author}{3}{}{%
         {{hash=923cd712da83011be2cea75f26b079c1}{%
-           family={Holländer},
+           family={Holl\"{a}nder},
            familyi={H\bibinitperiod},
            given={Norbert},
            giveni={N\bibinitperiod}}}%
@@ -1798,17 +2079,80 @@
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{true type I error can be much greater than nominal level;one example where nominal is 0.05 and true is 0.5;minimum P-value method;CART;recursive partitioning;bootstrap method for correcting confidence interval;based on heuristic shrinkage coefficient;"It should be noted, however, that the optimal cutpoint approach has disadvantages. One of these is that in almost every study where this method is applied, another cutpoint will emerge. This makes comparisons across studies extremely difficult or even impossible. Altman et al. point out this problem for studies of the prognostic relevance of the S-phase fraction in breast cancer published in the literature. They identified 19 different cutpoints used in the literature; some of them were solely used because they emerged as the ‘optimal' cutpoint in a specific data set. In a meta-analysis on the relationship between cathepsin-D content and disease-free survival in node-negative breast cancer patients, 12 studies were in included with 12 different cutpoints ... Interestingly, neither cathepsin-D nor the S-phase fraction are recommended to be used as prognostic markers in breast cancer in the recent update of the American Society of Clinical Oncology."; dichotomization; categorizing continuous variables; refs alt94dan, sch94out, alt98sub}
+      \field{annotation}{true type I error can be much greater than nominal level;one example where nominal is 0.05 and true is 0.5;minimum P-value method;CART;recursive partitioning;bootstrap method for correcting confidence interval;based on heuristic shrinkage coefficient;"It should be noted, however, that the optimal cutpoint approach has disadvantages. One of these is that in almost every study where this method is applied, another cutpoint will emerge. This makes comparisons across studies extremely difficult or even impossible. Altman et al. point out this problem for studies of the prognostic relevance of the S-phase fraction in breast cancer published in the literature. They identified 19 different cutpoints used in the literature; some of them were solely used because they emerged as the `optimal' cutpoint in a specific data set. In a meta-analysis on the relationship between cathepsin-D content and disease-free survival in node-negative breast cancer patients, 12 studies were in included with 12 different cutpoints ... Interestingly, neither cathepsin-D nor the S-phase fraction are recommended to be used as prognostic markers in breast cancer in the recent update of the American Society of Clinical Oncology."; dichotomization; categorizing continuous variables; refs alt94dan, sch94out, alt98sub}
       \field{journaltitle}{Stat Med}
-      \field{title}{Confidence Intervals for the Effect of a Prognostic Factor after Selection of an ‘optimal' Cutpoint}
+      \field{title}{Confidence Intervals for the Effect of a Prognostic Factor after Selection of an `optimal' Cutpoint}
       \field{volume}{23}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{pages}{1701\bibrangedash 1713}
       \range{pages}{13}
       \verb{doi}
       \verb 10.1002/sim.1611
       \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.1611
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.1611
+      \endverb
       \keyw{teaching-mds,cutpoints,categorization}
+    \endentry
+    \entry{hul13des}{book}{}
+      \name{author}{5}{}{%
+        {{hash=74f2a44eb280b768d6187f6da6ca8511}{%
+           family={Hulley},
+           familyi={H\bibinitperiod},
+           given={Stephen\bibnamedelima B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=c381f1e3c8970be5b09a74be4232b62f}{%
+           family={Cummings},
+           familyi={C\bibinitperiod},
+           given={Steven\bibnamedelima R},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=39bac5c7dc9c092597d2f2970f0d5469}{%
+           family={Browner},
+           familyi={B\bibinitperiod},
+           given={Warren\bibnamedelima S},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4e9f0dd545555c422368c4ac70e1b16c}{%
+           family={Grady},
+           familyi={G\bibinitperiod},
+           given={Deborah\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7d98ea70c76617137af35b2e01820c00}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={Thomas\bibnamedelima B},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia}%
+      }
+      \list{publisher}{1}{%
+        {LWW}%
+      }
+      \strng{namehash}{a00caf5417c8f07be406ab90f56269fa}
+      \strng{fullhash}{da7af5e5444f4c2af4e9ba338079f9bf}
+      \strng{bibnamehash}{a00caf5417c8f07be406ab90f56269fa}
+      \strng{authorbibnamehash}{a00caf5417c8f07be406ab90f56269fa}
+      \strng{authornamehash}{a00caf5417c8f07be406ab90f56269fa}
+      \strng{authorfullhash}{da7af5e5444f4c2af4e9ba338079f9bf}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Designing Clinical Research has been extensively revised and continues to set the standard as a practical guide for doctors, nurses, pharmacists, and other health professionals involved in all forms of clinical, translational, and public health research. It presents advanced epidemiologic concepts in a reader-friendly way, and suggests common sense approaches to the challenging judgments involved in designing, funding, and implementing.New to this edition:Expanded and updated content in every chapter, with new material on: \textbullet{} non-inferiority trials for comparative effectiveness research \textbullet{} incidence-density case-control studies \textbullet{} confounding and effect modification \textbullet{} diagnostic test studies to inform prediction rules \textbullet{} ethical aspects of whole genome sequencing \textbullet{} automated data management approaches \textbullet{} new NIH grant-writing requirementsColor format, and Electronic access, powered by Inkling as a free companion to the text \textbullet{} viewable through your browser or as a download to tablet or smartphone \textbullet{} the complete text with optimized navigation \textbullet{} note-sharing, highlighting and bookmarking capability \textbullet{} cross-linking of references and content \textbullet{} rapid search options linked to the new glossary}
+      \field{day}{10}
+      \field{edition}{Fourth edition}
+      \field{isbn}{978-1-60831-804-9}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{pagetotal}{378}
+      \field{title}{Designing {{Clinical Research}}}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{study-design}
     \endentry
     \entry{car89pre}{article}{}
       \name{author}{1}{}{%
@@ -1833,6 +2177,7 @@
       \field{title}{Preliminary Report: {{Effect}} of {{Encainide}} and {{Flecainide}} on Mortality in a Randomized Trial of Arrhythmia Suppression after Myocardial Infarction}
       \field{volume}{321}
       \field{year}{1989}
+      \field{dateera}{ce}
       \field{pages}{406\bibrangedash 412}
       \range{pages}{7}
       \keyw{cardiac-arrhythmia-suppression-trial,cast}
@@ -1865,12 +2210,19 @@
       \field{title}{The Impact of High-Risk Patients on the Results of Clinical Trials}
       \field{volume}{50}
       \field{year}{1997}
+      \field{dateera}{ce}
       \field{pages}{1089\bibrangedash 1098}
       \range{pages}{10}
       \verb{doi}
       \verb 10.1016/S0895-4356(97)00149-2
       \endverb
-      \keyw{teaching-mds,rct,reporting,clinical-trials,generalizability,publication-bias}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0895-4356(97)00149-2
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0895-4356(97)00149-2
+      \endverb
+      \keyw{rct,teaching-mds,reporting,clinical-trials,publication-bias,generalizability}
     \endentry
     \entry{ion10exp}{article}{}
       \name{author}{1}{}{%
@@ -1890,14 +2242,15 @@
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{"Each new field has a rapid exponential growth of its literature over 5--8 years (‘new field phase'), followed by an ‘established field' phase when growth rates are more modest, and then an ‘over-maturity' phase, where the rates of growth are similar to the growth of the scientific literature at large or even smaller. There is a parallel in the spread of an infectious epidemic that emerges rapidly and gets established when a large number of scientists (and articles) are infected with these concepts. Then momentum decreases, although many scientists remain infected and continue to work on this field. New omics infections continuously arise in the scientific community.";"A large number of personal genomic tests are already sold in the market, mostly with direct to consumer advertisement and for ‘recreational genomics' purposes (translate: information for the fun of information)."}
+      \field{annotation}{"Each new field has a rapid exponential growth of its literature over 5--8 years (`new field phase'), followed by an `established field' phase when growth rates are more modest, and then an `over-maturity' phase, where the rates of growth are similar to the growth of the scientific literature at large or even smaller. There is a parallel in the spread of an infectious epidemic that emerges rapidly and gets established when a large number of scientists (and articles) are infected with these concepts. Then momentum decreases, although many scientists remain infected and continue to work on this field. New omics infections continuously arise in the scientific community.";"A large number of personal genomic tests are already sold in the market, mostly with direct to consumer advertisement and for `recreational genomics' purposes (translate: information for the fun of information)."}
       \field{journaltitle}{J Clin Epi}
       \field{title}{Expectations, Validity, and Reality in Omics}
       \field{volume}{63}
       \field{year}{2010}
+      \field{dateera}{ce}
       \field{pages}{945\bibrangedash 949}
       \range{pages}{5}
-      \keyw{personalized-medicine,genomics,gene-expression-profiling,metabolomics,omics,pharmacogenomics,proteomics,transcriptomics,validity}
+      \keyw{genomics,personalized-medicine,proteomics,gene-expression-profiling,metabolomics,omics,pharmacogenomics,transcriptomics,validity}
     \endentry
     \entry{kai89}{article}{}
       \name{author}{1}{}{%
@@ -1921,12 +2274,19 @@
       \field{title}{Adjusting for Baseline: {{Change}} or Percentage Change?}
       \field{volume}{8}
       \field{year}{1989}
+      \field{dateera}{ce}
       \field{pages}{1183\bibrangedash 1190}
       \range{pages}{8}
       \verb{doi}
       \verb 10.1002/sim.4780081002
       \endverb
-      \keyw{teaching-mds,measurement,research-methods,change,measuring-change,percent-change,one-sample-problem,miscellaneous}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.4780081002
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.4780081002
+      \endverb
+      \keyw{miscellaneous,measurement,research-methods,teaching-mds,change,measuring-change,percent-change,one-sample-problem}
     \endentry
     \entry{ken07lim}{article}{}
       \name{author}{2}{}{%
@@ -1956,10 +2316,17 @@
       \field{title}{Limitations of Applying Summary Results of Clinical Trials to Individual Patients}
       \field{volume}{298}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{pages}{1209\bibrangedash 1212}
       \range{pages}{4}
       \verb{doi}
       \verb 10.1001/jama.298.10.1209
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.298.10.1209
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.298.10.1209
       \endverb
       \keyw{rct,generalizability}
     \endentry
@@ -2027,15 +2394,22 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{JAMA}
-      \field{title}{The Clinical Evaluation of New Drugs for Sepsis: {{A}} Prospective Study Design Based on Survival Analysis}
+      \field{title}{The Clinical Evaluation of New Drugs for Sepsis: {A} Prospective Study Design Based on Survival Analysis}
       \field{volume}{270}
       \field{year}{1993}
+      \field{dateera}{ce}
       \field{pages}{1233\bibrangedash 1241}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1001/jama.270.10.1233
       \endverb
-      \keyw{bootstrap,rct,study-design,validation,clinical-trials,calibration,interaction,log-normal-model,risk-models}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.270.10.1233
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.270.10.1233
+      \endverb
+      \keyw{study-design,rct,bootstrap,validation,clinical-trials,interaction,calibration,log-normal-model,risk-models}
     \endentry
     \entry{koe78reg}{article}{}
       \name{author}{2}{}{%
@@ -2064,11 +2438,12 @@
       \field{title}{Regression Quantiles}
       \field{volume}{46}
       \field{year}{1978}
+      \field{dateera}{ce}
       \field{pages}{33\bibrangedash 50}
       \range{pages}{18}
       \keyw{quantile-regression}
     \endentry
-    \entry{enc9}{book}{}
+    \entry{enc9}{collection}{}
       \name{editor}{2}{}{%
         {{hash=3e3c22dfe3b36ff075adfaa64ce7661a}{%
            family={Kotz},
@@ -2100,6 +2475,7 @@
       \field{title}{Encyclopedia of {{Statistical Sciences}}}
       \field{volume}{9}
       \field{year}{1988}
+      \field{dateera}{ce}
     \endentry
     \entry{kro93spu}{article}{}
       \name{author}{1}{}{%
@@ -2124,6 +2500,7 @@
       \field{title}{Spurious Correlation and the Fallacy of the Ratio Standard Revisited}
       \field{volume}{156}
       \field{year}{1993}
+      \field{dateera}{ce}
       \field{pages}{379\bibrangedash 392}
       \range{pages}{14}
       \keyw{change,ratio}
@@ -2140,7 +2517,7 @@
         {Krouwer Consulting, 26 Parks Drive, Sherborn, MA 01770, U.S.A.}%
       }
       \list{publisher}{1}{%
-        {John Wiley \& Sons, Ltd.}%
+        {John Wiley & Sons, Ltd.}%
       }
       \strng{namehash}{3df0acf37e7e46643ed46fb45c991e9c}
       \strng{fullhash}{3df0acf37e7e46643ed46fb45c991e9c}
@@ -2152,19 +2529,85 @@
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{pmid}
       \field{issn}{0277-6715}
       \field{journaltitle}{Stat Med}
       \field{month}{2}
       \field{number}{5}
-      \field{title}{Why {{Bland}}-{{Altman}} Plots Should Use {{X}}, Not ({{Y}}+{{X}})/2 When {{X}} Is a Reference Method}
+      \field{title}{Why {{Bland}}-{{Altman}} Plots Should Use {X}, Not ({Y}+{X})/2 When {X} Is a Reference Method}
       \field{volume}{27}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{778\bibrangedash 780}
       \range{pages}{3}
       \verb{doi}
       \verb 10.1002/sim.3086
       \endverb
-      \keyw{smooth-bland-altman-plots,change}
+      \verb{eprint}
+      \verb 17907247
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.3086
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.3086
+      \endverb
+      \keyw{change,smooth-bland-altman-plots}
+    \endentry
+    \entry{lee15wha}{article}{}
+      \name{author}{2}{}{%
+        {{hash=59103744ff80ddb677235c0852fa4e7e}{%
+           family={Leek},
+           familyi={L\bibinitperiod},
+           given={Jeffery\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=fa107819515aa7437aa7efc12d4c54e5}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Roger\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{18b0b89527c7291ed201be88d220bb55}
+      \strng{fullhash}{18b0b89527c7291ed201be88d220bb55}
+      \strng{bibnamehash}{18b0b89527c7291ed201be88d220bb55}
+      \strng{authorbibnamehash}{18b0b89527c7291ed201be88d220bb55}
+      \strng{authornamehash}{18b0b89527c7291ed201be88d220bb55}
+      \strng{authorfullhash}{18b0b89527c7291ed201be88d220bb55}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Mistaking the type of question being considered is the most common error in data analysis Mistaking the type of question being considered is the most common error in data analysis}
+      \field{day}{20}
+      \field{eprinttype}{pmid}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{6228}
+      \field{title}{What Is the Question?}
+      \field{urlday}{27}
+      \field{urlmonth}{9}
+      \field{urlyear}{2019}
+      \field{volume}{347}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1314\bibrangedash 1315}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1126/science.aaa6146
+      \endverb
+      \verb{eprint}
+      \verb 25721505
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/347/6228/1314
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/347/6228/1314
+      \endverb
+      \keyw{study-design,scientific-approach,study-interpretation,design,inference}
     \endentry
     \entry{len01som}{article}{}
       \name{author}{1}{}{%
@@ -2189,12 +2632,70 @@
       \field{title}{Some Practical Guidelines for Effective Sample Size Determination}
       \field{volume}{55}
       \field{year}{2001}
+      \field{dateera}{ce}
       \field{pages}{187\bibrangedash 193}
       \range{pages}{7}
       \verb{doi}
       \verb 10.1198/000313001317098149
       \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1198/000313001317098149
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1198/000313001317098149
+      \endverb
       \keyw{sample-size,teaching-mds,guidelines}
+    \endentry
+    \entry{mac00sci}{article}{}
+      \name{author}{2}{}{%
+        {{hash=74c1454951a4ce4f0cceccaa8e6c623d}{%
+           family={MacKay},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=418c2a96e37dc90baec136d71fdad098}{%
+           family={Oldford},
+           familyi={O\bibinitperiod},
+           given={R.\bibnamedelimi W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b19300e30355396daca42e3c0479aba}
+      \strng{fullhash}{9b19300e30355396daca42e3c0479aba}
+      \strng{bibnamehash}{9b19300e30355396daca42e3c0479aba}
+      \strng{authorbibnamehash}{9b19300e30355396daca42e3c0479aba}
+      \strng{authornamehash}{9b19300e30355396daca42e3c0479aba}
+      \strng{authorfullhash}{9b19300e30355396daca42e3c0479aba}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{What is \textquotedblleft{}statistical method\textquotedblright{}? Is it the same as \textquotedblleft{}scientific method\textquotedblright{}? This paper answers the first question by specifying the elements and procedures common to all statistical investigations and organizing these into a single structure. This structure is illustrated by careful examination of the first scientific study on the speed of light carried out by A. A. Michelson in 1879. Our answer to the second question is negative. To understand this a history on the speed of light up to the time of Michelson\textquoteright{}s study is presented. The larger history and the details of a single study allow us to place the method of statistics within the larger context of science.}
+      \field{day}{1}
+      \field{issn}{0883-4237, 2168-8745}
+      \field{journaltitle}{Statist. Sci.}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Scientific {{Method}}, {{Statistical Method}} and the {{Speed}} of {{Light}}}
+      \field{urlday}{16}
+      \field{urlmonth}{9}
+      \field{urlyear}{2019}
+      \field{volume}{15}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{254\bibrangedash 278}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1214/ss/1009212817
+      \endverb
+      \verb{urlraw}
+      \verb https://projecteuclid.org/euclid.ss/1009212817
+      \endverb
+      \verb{url}
+      \verb https://projecteuclid.org/euclid.ss/1009212817
+      \endverb
+      \keyw{scientific-approach,experimental-design,scientific-thinking}
     \endentry
     \entry{mar85mod}{article}{}
       \name{author}{1}{}{%
@@ -2218,10 +2719,17 @@
       \field{title}{Models and the Use of Signed Rank Tests}
       \field{volume}{4}
       \field{year}{1985}
+      \field{dateera}{ce}
       \field{pages}{145\bibrangedash 153}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1002/sim.4780040205
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.4780040205
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.4780040205
       \endverb
       \keyw{teaching-mds,change,measuring-change,percent-change,one-sample-problem,signed-rank-test}
     \endentry
@@ -2255,12 +2763,19 @@
       \field{title}{Inconsistent Treatment Estimates from Mis-Specified Logistic Regression Analyses of Randomized Trials}
       \field{volume}{34}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{pages}{2681\bibrangedash 2694}
       \range{pages}{14}
       \verb{doi}
       \verb 10.1002/sim.6508
       \endverb
-      \keyw{covariate-adjustment,covariable-adjustment,binary-logistic-model,ancova}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.6508
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.6508
+      \endverb
+      \keyw{ancova,covariate-adjustment,covariable-adjustment,binary-logistic-model}
     \endentry
     \entry{mat90ana}{article}{}
       \name{author}{4}{}{%
@@ -2300,12 +2815,19 @@
       \field{title}{Analysis of Serial Measurements in Medical Research}
       \field{volume}{300}
       \field{year}{1990}
+      \field{dateera}{ce}
       \field{pages}{230\bibrangedash 235}
       \range{pages}{6}
       \verb{doi}
       \verb 10.1136/bmj.300.6719.230
       \endverb
-      \keyw{teaching-mds,serial-data,repeated-measurements,summary-measures,growth-curve,peak-vs-growth-relationships,relating-peak-to-time-to-peak}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1136/bmj.300.6719.230
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1136/bmj.300.6719.230
+      \endverb
+      \keyw{serial-data,teaching-mds,summary-measures,repeated-measurements,growth-curve,peak-vs-growth-relationships,relating-peak-to-time-to-peak}
     \endentry
     \entry{mic05pre}{article}{}
       \name{author}{3}{}{%
@@ -2340,6 +2862,7 @@
       \field{title}{Prediction of Cancer Outcome with Microarrays: A Multiple Random Validation Strategy}
       \field{volume}{365}
       \field{year}{2005}
+      \field{dateera}{ce}
       \field{pages}{488\bibrangedash 492}
       \range{pages}{5}
     \endentry
@@ -2371,22 +2894,25 @@
       \field{title}{Sensitivity and Specificity Should Be De-Emphasized in Diagnostic Accuracy Studies}
       \field{volume}{10}
       \field{year}{2003}
+      \field{dateera}{ce}
       \field{pages}{670\bibrangedash 672}
       \range{pages}{3}
       \keyw{diagnosis,accuracy,reasons-for-avoiding-sensitivity-and-specificity}
     \endentry
-    \entry{moo97lim}{article}{}
+    \entry{moo97lim}{article}{useprefix=true}
       \name{author}{5}{}{%
         {{hash=7f8bdf9fba7c58cef156887ecffced17}{%
            family={Moons},
            familyi={M\bibinitperiod},
            given={Karel\bibnamedelimb G.\bibnamedelimi M.},
            giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=c27dfa0e510ef515a3156f3a68071c91}{%
-           family={{van Es}},
-           familyi={v\bibinitperiod},
+        {{hash=d5e17ad6bcc7442024ca826701b5e238}{%
+           family={Es},
+           familyi={E\bibinitperiod},
            given={Gerrit-Anne},
-           giveni={G\bibinithyphendelim A\bibinitperiod}}}%
+           giveni={G\bibinithyphendelim A\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
         {{hash=ee7e789977f8a3e4e97c8fd061186fb0}{%
            family={Deckers},
            familyi={D\bibinitperiod},
@@ -2404,11 +2930,11 @@
            giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \strng{namehash}{032d1e1f60061588814baa36ba1e32e1}
-      \strng{fullhash}{0a568cce57d8968af239fe5950d15ef6}
+      \strng{fullhash}{9b058b1aea6a332a47ae704f3fd3afa8}
       \strng{bibnamehash}{032d1e1f60061588814baa36ba1e32e1}
       \strng{authorbibnamehash}{032d1e1f60061588814baa36ba1e32e1}
       \strng{authornamehash}{032d1e1f60061588814baa36ba1e32e1}
-      \strng{authorfullhash}{0a568cce57d8968af239fe5950d15ef6}
+      \strng{authorfullhash}{9b058b1aea6a332a47ae704f3fd3afa8}
       \field{sortinit}{M}
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
@@ -2416,12 +2942,13 @@
       \field{annotation}{non-constancy of sensitivity, specificity, likelihood ratio in a real example}
       \field{journaltitle}{Epi}
       \field{number}{1}
-      \field{title}{Limitations of Sensitivity, Specificity, Likelihood Ratio, and {{Bayes}}' Theorem in Assessing Diagnostic Probabilities: {{A}} Clinical Example}
+      \field{title}{Limitations of Sensitivity, Specificity, Likelihood Ratio, and {{Bayes}}' Theorem in Assessing Diagnostic Probabilities: {A} Clinical Example}
       \field{volume}{8}
       \field{year}{1997}
+      \field{dateera}{ce}
       \field{pages}{12\bibrangedash 17}
       \range{pages}{6}
-      \keyw{diagnosis,sensitivity,diagnostic-accuracy,coronary-artery-disease,specificity}
+      \keyw{diagnosis,sensitivity,specificity,diagnostic-accuracy,coronary-artery-disease}
     \endentry
     \entry{moo95dea}{book}{}
       \name{author}{1}{}{%
@@ -2450,6 +2977,7 @@
       \field{note}{review in Stat in Med 16:2507-2510, 1997}
       \field{title}{Deadly {{Medicine}}: {{Why Tens}} of {{Thousands}} of {{Patients Died}} in {{America}}'s {{Worst Drug Disaster}}}
       \field{year}{1995}
+      \field{dateera}{ce}
     \endentry
     \entry{mul83ris}{article}{}
       \name{author}{1}{}{%
@@ -2473,13 +3001,14 @@
       \field{title}{Risk Stratification and Survival after Myocardial Infarction}
       \field{volume}{309}
       \field{year}{1983}
+      \field{dateera}{ce}
       \field{pages}{331\bibrangedash 336}
       \range{pages}{6}
     \endentry
     \entry{mun17man}{article}{}
       \name{author}{10}{}{%
         {{hash=423abeceb7bb0a9dbcc5874043b5e85e}{%
-           family={Munafò},
+           family={Munaf\`{o}},
            familyi={M\bibinitperiod},
            given={Marcus\bibnamedelima R.},
            giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
@@ -2503,9 +3032,9 @@
            familyi={C\bibinitperiod},
            given={Christopher\bibnamedelima D.},
            giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=9c2d869a8345d3c34dd86831627659d5}{%
-           family={{Percie du Sert}},
-           familyi={P\bibinitperiod},
+        {{hash=26e39e0c897058b94fc222eb3b027657}{%
+           family={Percie\bibnamedelimb du\bibnamedelima Sert},
+           familyi={P\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
            given={Nathalie},
            giveni={N\bibinitperiod}}}%
         {{hash=4a557b269a909c0560985e798a1584f6}{%
@@ -2530,11 +3059,11 @@
            giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{b7b050d73b83d586d19d2fde36490727}
-      \strng{fullhash}{829908370f5ec28d2e9e0a526916df3b}
+      \strng{fullhash}{33ee284b99a1f9521ddf85b618a59ca0}
       \strng{bibnamehash}{b7b050d73b83d586d19d2fde36490727}
       \strng{authorbibnamehash}{b7b050d73b83d586d19d2fde36490727}
       \strng{authornamehash}{b7b050d73b83d586d19d2fde36490727}
-      \strng{authorfullhash}{829908370f5ec28d2e9e0a526916df3b}
+      \strng{authorfullhash}{33ee284b99a1f9521ddf85b618a59ca0}
       \field{sortinit}{M}
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
@@ -2546,10 +3075,17 @@
       \field{title}{A Manifesto for Reproducible Science}
       \field{volume}{1}
       \field{year}{2017}
+      \field{dateera}{ce}
       \field{pages}{0021+}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1038/s41562-016-0021
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41562-016-0021
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/s41562-016-0021
       \endverb
       \keyw{reproducibility}
     \endentry
@@ -2577,6 +3113,7 @@
       \field{title}{{{InfoVis}} and Statistical Graphics: {{Comment}}}
       \field{volume}{22}
       \field{year}{2013}
+      \field{dateera}{ce}
       \field{pages}{33\bibrangedash 37}
       \range{pages}{5}
       \verb{doi}
@@ -2584,6 +3121,12 @@
       \endverb
       \verb{eprint}
       \verb http://www.tandfonline.com/doi/pdf/10.1080/10618600.2012.751875
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.751875
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/10618600.2012.751875
       \endverb
     \endentry
     \entry{nag11ana}{article}{}
@@ -2629,16 +3172,23 @@
       \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In medical research analyses, continuous variables are often converted into categoric variables by grouping values into $\geq$2 categories. The simplicity achieved by creating $\geq$2 artificial groups has a cost: Grouping may create rather than avoid problems. In particular, dichotomization leads to a considerable loss of power and incomplete correction for confounding factors. The use of data-derived "optimal" cut-points can lead to serious bias and should at least be tested on independent observations to assess their validity. Both problems are illustrated by the way the results of a registry on unruptured intracranial aneurysms are commonly used. Extreme caution should restrict the application of such results to clinical decision-making. Categorization of continuous data, especially dichotomization, is unnecessary for statistical analysis. Continuous explanatory variables should be left alone in statistical models.}
+      \field{abstract}{In medical research analyses, continuous variables are often converted into categoric variables by grouping values into \x{2265}2 categories. The simplicity achieved by creating \x{2265}2 artificial groups has a cost: Grouping may create rather than avoid problems. In particular, dichotomization leads to a considerable loss of power and incomplete correction for confounding factors. The use of data-derived "optimal" cut-points can lead to serious bias and should at least be tested on independent observations to assess their validity. Both problems are illustrated by the way the results of a registry on unruptured intracranial aneurysms are commonly used. Extreme caution should restrict the application of such results to clinical decision-making. Categorization of continuous data, especially dichotomization, is unnecessary for statistical analysis. Continuous explanatory variables should be left alone in statistical models.}
       \field{journaltitle}{Am J Neuroradiol}
       \field{number}{3}
       \field{title}{Analysis by Categorizing or Dichotomizing Continuous Variables Is Inadvisable: {{An}} Example from the Natural History of Unruptured Aneurysms}
       \field{volume}{32}
       \field{year}{2011}
+      \field{dateera}{ce}
       \field{pages}{437\bibrangedash 440}
       \range{pages}{4}
       \verb{doi}
       \verb 10.3174/ajnr.A2425
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ajnr.org/content/32/3/437.abstract
+      \endverb
+      \verb{url}
+      \verb http://www.ajnr.org/content/32/3/437.abstract
       \endverb
       \keyw{teaching-mds,cutpoints}
     \endentry
@@ -2665,9 +3215,10 @@
       \field{title}{Estimation Efficiency with Omitted Covariates in Generalized Linear Models}
       \field{volume}{93}
       \field{year}{1998}
+      \field{dateera}{ce}
       \field{pages}{1124\bibrangedash 1129}
       \range{pages}{6}
-      \keyw{rct,confounding,model-misspecification,efficiency,omitted-covariable}
+      \keyw{rct,confounding,efficiency,model-misspecification,omitted-covariable}
     \endentry
     \entry{new09evi}{book}{}
       \name{author}{2}{}{%
@@ -2697,8 +3248,10 @@
       \field{labeltitlesource}{title}
       \field{abstract}{Evidence-Based Diagnosis is a textbook about diagnostic, screening, and prognostic tests in clinical medicine. The authors' approach is based on many years of experience teaching physicians in a clinical research training program. Although requiring only a minimum of mathematics knowledge, the quantitative discussions in this book are deeper and more rigorous than in most introductory texts. The book includes numerous worked examples and 60 problems (with answers) based on real clinical situations and journal articles. The book will be helpful and accessible to anyone seeking to select, develop, or market medical tests. Topics covered include: the diagnostic process, test reliability and accuracy, likelihood ratios, and ROC curves, testing and treatment thresholds, critical appraisal of studies of diagnostic, screening and prognostic tests, test independence and methods of combining tests, quantifying treatment benefits using randomized trials and observational studies, Bayesian interpretation of P values and confidence intervals and challenges for evidence-based diagnosis and evidence-based medicine.}
       \field{isbn}{978-0-521-71402-0}
+      \field{pagetotal}{312}
       \field{title}{Evidence-{{Based Diagnosis}}}
       \field{year}{2009}
+      \field{dateera}{ce}
     \endentry
     \entry{nuz15how}{article}{}
       \name{author}{1}{}{%
@@ -2724,6 +3277,7 @@
       \field{title}{How Scientists Fool Themselves --- and How They Can Stop}
       \field{volume}{526}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{pages}{182\bibrangedash 185}
       \range{pages}{4}
       \keyw{bad-science,reproducibility}
@@ -2752,10 +3306,17 @@
       \field{title}{Comparing Two Samples: {{Extensions}} of the t, Rank-Sum, and Log-Rank Test}
       \field{volume}{83}
       \field{year}{1988}
+      \field{dateera}{ce}
       \field{pages}{52\bibrangedash 61}
       \range{pages}{10}
       \verb{doi}
       \verb 10.1080/01621459.1988.10478564
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478564#.U_sn0XVdU3E
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1988.10478564#.U_sn0XVdU3E
       \endverb
       \keyw{multivariate,hotelling,logistic}
     \endentry
@@ -2843,9 +3404,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEJM}
-      \field{title}{Cardiac Troponin {{T}} Levels for Risk Stratification in Acute Myocardial Ischemia}
+      \field{title}{Cardiac Troponin {T} Levels for Risk Stratification in Acute Myocardial Ischemia}
       \field{volume}{335}
       \field{year}{1996}
+      \field{dateera}{ce}
       \field{pages}{1333\bibrangedash 1341}
       \range{pages}{9}
       \keyw{clinical-prediction,medical-paper-examples-of-nonparametric-regression-and-splines}
@@ -2855,7 +3417,7 @@
       \true{morelabelname}
       \name{author}{3}{}{%
         {{hash=67ce14278bc7846127741ffd5b2e7af9}{%
-           family={Paré},
+           family={Par\'{e}},
            familyi={P\bibinitperiod},
            given={Guillaume},
            giveni={G\bibinitperiod}}}%
@@ -2885,6 +3447,7 @@
       \field{title}{Effects of {{CYP2C19}} Genotype on Outcomes of Clopidogrel Treatment}
       \field{volume}{online}
       \field{year}{2010}
+      \field{dateera}{ce}
     \endentry
     \entry{pau08pre}{article}{}
       \name{author}{4}{}{%
@@ -2922,15 +3485,22 @@
       \field{annotation}{develop consistent Y using a latent variable structure, using for example supervised principal components. Then run stepwise regression or lasso predicting Y (lasso worked better). Can run into problems when a predictor has importance in an adjusted sense but has no marginal correlation with Y;model approximation;model simplification}
       \field{journaltitle}{Ann Stat}
       \field{number}{4}
-      \field{title}{``{{Preconditioning}}'' for Feature Selection and Regression in High-Dimensional Problems}
+      \field{title}{\textquotedblleft{}{{Preconditioning}}\textquotedblright{} for Feature Selection and Regression in High-Dimensional Problems}
       \field{volume}{36}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{1595\bibrangedash 1619}
       \range{pages}{25}
       \verb{doi}
       \verb 10.1214/009053607000000578
       \endverb
-      \keyw{lasso,penalized-mle,model-selection,model-approximation,pre-conditioning,pmle,prediction-error,shinkage}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1214/009053607000000578
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1214/009053607000000578
+      \endverb
+      \keyw{model-selection,model-approximation,pre-conditioning,lasso,penalized-mle,pmle,prediction-error,shinkage}
     \endentry
     \entry{pen08eva}{article}{}
       \name{author}{4}{}{%
@@ -2970,9 +3540,10 @@
       \field{title}{Evaluating the Added Predictive Ability of a New Marker: {{From}} Area under the {{ROC}} Curve to Reclassification and Beyond}
       \field{volume}{27}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{157\bibrangedash 172}
       \range{pages}{16}
-      \keyw{auc,biomarker,model-performance,risk-prediction,c-index,discrimination}
+      \keyw{c-index,discrimination,risk-prediction,auc,biomarker,model-performance}
     \endentry
     \entry{pla64str}{article}{}
       \name{author}{1}{}{%
@@ -2997,6 +3568,7 @@
       \field{title}{Strong Inference}
       \field{volume}{146}
       \field{year}{1964}
+      \field{dateera}{ce}
       \field{pages}{347\bibrangedash 353}
       \range{pages}{7}
     \endentry
@@ -3042,6 +3614,7 @@
       \field{title}{Estimating the Likelihood of Significant Coronary Artery Disease}
       \field{volume}{75}
       \field{year}{1983}
+      \field{dateera}{ce}
       \field{pages}{771\bibrangedash 780}
       \range{pages}{10}
     \endentry
@@ -3078,9 +3651,10 @@
       \field{title}{How to Select Covariates to Include in the Analysis of a Clinical Trial}
       \field{volume}{21}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{pages}{330\bibrangedash 342}
       \range{pages}{13}
-      \keyw{rct,covariable-adjustment,ancova}
+      \keyw{rct,ancova,covariable-adjustment}
     \endentry
     \entry{rob91som}{article}{}
       \name{author}{2}{}{%
@@ -3109,6 +3683,7 @@
       \field{title}{Some Surprising Results about Covariate Adjustment in Logistic Regression Models}
       \field{volume}{59}
       \field{year}{1991}
+      \field{dateera}{ce}
       \field{pages}{227\bibrangedash 240}
       \range{pages}{14}
       \keyw{study-design,logistic-model,covariable-adjustment}
@@ -3146,12 +3721,19 @@
       \field{title}{Dichotomizing Continuous Predictors in Multiple Regression: A Bad Idea}
       \field{volume}{25}
       \field{year}{2006}
+      \field{dateera}{ce}
       \field{pages}{127\bibrangedash 141}
       \range{pages}{15}
       \verb{doi}
       \verb 10.1002/sim.2331
       \endverb
-      \keyw{teaching-mds,cutpoints,regression,categorization,dichotomization,efficiency,residual-confounding,clinical-research,continuous-covariates}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.2331
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.2331
+      \endverb
+      \keyw{teaching-mds,cutpoints,dichotomization,categorization,regression,clinical-research,continuous-covariates,efficiency,residual-confounding}
     \endentry
     \entry{rub07des}{article}{}
       \name{author}{1}{}{%
@@ -3175,9 +3757,46 @@
       \field{title}{The Design versus the Analysis of Observational Studies for Causal Effects: {{Parallels}} with the Design of Randomized Studies}
       \field{volume}{26}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{pages}{20\bibrangedash 36}
       \range{pages}{17}
-      \keyw{assignment-mechanism,blinding-as-much-of-the-analysis-to-outcome-data-as-possible,causal-inference,good-review-article,objective-analysis-of-observational-studies,objective-design,propensity-score,tobacco-litigation}
+      \keyw{propensity-score,causal-inference,assignment-mechanism,blinding-as-much-of-the-analysis-to-outcome-data-as-possible,good-review-article,objective-analysis-of-observational-studies,objective-design,tobacco-litigation}
+    \endentry
+    \entry{rux17exp}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b1d7adb9a2843cd8b051e9a20c993439}{%
+           family={{Ruxton, Graeme D.}},
+           familyi={R\bibinitperiod}}}%
+        {{hash=2cf36bc3e9fcbfdbb7214e2e66d94863}{%
+           family={{Colegrave, Nick}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford, New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \strng{fullhash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \strng{bibnamehash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \strng{authorbibnamehash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \strng{authornamehash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \strng{authorfullhash}{8f56adab775e29bbea1e8e69d8ee485f}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The careful design of experiments lies at the core of good research. Experimental Design for the Life Sciences equips you with the skills you need to effectively design experiments, making this essential aspect of the research process readily understandable. It demonstrates how good experimental design relies on clear thinking and biological understanding, not mathematical or statistical complexity. With a refreshingly approachable and articulate style, the book walks you through the considerations that go into designing an experiment in clear, practical terms. Using examples drawn from across the life sciences - from ecology, biochemistry, molecular biology, genetics, and health sciences - the authors illustrate how these concepts are applied within the broad context of real biological research.Online Resource CentreThe Online Resource centre to accompany Experimental Design for the Life Sciences features:For students: DT Self-test questions and answersDT Additional examplesDT Supplementary sections discuss complex concepts and statistical issues in more depthDT Links to useful websites and free softwareFor lecturers:DT Suggested course structures, complete with practical exercisesDT Figures from the book, available to download Previous publication dates October 2010, March 2006, February 2003}
+      \field{day}{15}
+      \field{edition}{Fourth Edition}
+      \field{isbn}{978-0-19-871735-5}
+      \field{month}{10}
+      \field{pagetotal}{208}
+      \field{title}{Experimental {{Design}} for the {{Life Sciences}}}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \keyw{experimental-design}
     \endentry
     \entry{sar96hie}{unpublished}{}
       \name{author}{2}{}{%
@@ -3205,7 +3824,8 @@
       \field{note}{Presented at the Joint Statistical Meetings, Chicago; see and99tes}
       \field{title}{A Hierarchical Model Method for Subgroup Analysis of Time-to-Event Data in the {{Cox}} Regression Setting}
       \field{year}{1996}
-      \keyw{shrinkage,cox-model,subgroup-analysis,differential-treatment-effect,mmc,shrinkage-of-treatment-by-covariable-interaction}
+      \field{dateera}{ce}
+      \keyw{shrinkage,cox-model,differential-treatment-effect,mmc,shrinkage-of-treatment-by-covariable-interaction,subgroup-analysis}
     \endentry
     \entry{sch83sam}{article}{}
       \name{author}{1}{}{%
@@ -3229,6 +3849,7 @@
       \field{title}{Sample Size Formulae for the Proportional Hazards Regression Model}
       \field{volume}{39}
       \field{year}{1983}
+      \field{dateera}{ce}
       \field{pages}{499\bibrangedash 503}
       \range{pages}{5}
       \keyw{sample-size,study-design,cox-model}
@@ -3255,9 +3876,10 @@
       \field{title}{General Linear Models for Multicenter Clinical Trials}
       \field{volume}{21}
       \field{year}{2000}
+      \field{dateera}{ce}
       \field{pages}{21\bibrangedash 29}
       \range{pages}{9}
-      \keyw{interaction,multicenter-rct,pooling,treatment-by-center-interaction,treatment-by-site,type-ii-ss,type-iii-ss}
+      \keyw{interaction,treatment-by-center-interaction,multicenter-rct,pooling,treatment-by-site,type-ii-ss,type-iii-ss}
     \endentry
     \entry{sen04con}{article}{}
       \name{author}{1}{}{%
@@ -3277,17 +3899,24 @@
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{p. 3735: "in the pharmaceutical industry, in analyzing the data, if a linear model is employed, it is usual to fit centre as a factor but unusual to fit block.";p. 3739: a large trial "is not less vulnerable to chance covariate imbalance";p. 3741:"There is no place, in my view, for classical minimization" (vs. the method of Atkinson);"If an investigator uses such [allocation based on covariates] schemes, she or he is honour bound, in my opinion, as a very minimum, to adjust for the factors used to balance, since the fact that they are being used to balance is an implicit declaration that they will have prognostic value.";"The point of view is sometimes defended that analyses that ignore covariates are superior because they are simpler. I do not accept this. A value of $\pi$=3 is a simple one and accurate to one significant figure ... However very few would seriously maintain that if should generally be adopted by engineers.";p. 3742: "as Fisher pointed out ... if we balance by a predictive covariate but do not fit the covariate in the model, not only do we not exploit the covariate, we actually increase the expected declared standard error."; p. 3744:"I would like to see standard errors for group means abolished."; p. 3744:"A common habit, however, in analyzing trials with three or more arms is to pool the variances from all arms when calculating the standard error of a given contrast. In my view this is a curious practice ... it relies on an assumption of additivity of $<$i$>$all$<$/all$>$ treatments when comparing only $<$i$>$two$<$/i$>$. ... a classical t-test is robust to heteroscedasticity provide that sample sizes are equal in the groups being compared and that the variance is internal to those two groups but is not robust where an external estimate is being used."; p. 3745: "By adjusting main effects for interactions a type III analysis is similarly illogical to Neyman's hypothesis test."; "Guyatt $<$i$>$et al.$<$/i$>$ ... found a 'method for estimating the proportion of patients who benefit from a treatment ... In fact they had done no such thing."; p. 3746: "When I checked the Web of Science on 29 June 2003, the paper by Horwitz $<$i$>$et al.$<$/i$>$ had been cited 28 times and that by Guyatt $<$i$>$et al.$<$/i$>$ had been cited 79 times. The letters pointing out the fallacies had been cited only 8 and 5 times respectively."; "if we pool heterogeneous strata, the odds ratio of the treatment effect will be different from that in every stratum, even if from stratum to stratum it does not vary."; p. 3747: "Part of the problem with Poisson, proportional hazard and logistic regression approaches is that they use a single parameter, the linear predictor, with no equivalent of the variance parameter in the Normal case. This means that lack of fit impacts on the estimate of the predictor. ... what is the value of randomization if, in all except the Normal case, we cannot guarantee to have unbiased estimates. My view ... was that the form of analysis envisaged (that is to say, which factors and covariates should be fitted) justified the allocation and $<$i$>$not vice versa$<$/a$>$."; "use the additive measure at the point of analysis and transform to the relevant scale at the point of implementation. This transformation at the point of medical decision-making will require auxiliary information on the level of background risk of the patient."; p. 3748:"The decision to fit prognostic factors has a far more dramatic effect on the precision of our inferences than the choice of an allocation based on covariates or randomization approach and one of my chief objections to the allocation based on covariates approach is that trialists have tended to use the fact that they have balanced as an excuse for not fitting. This is a grave mistake."}
+      \field{annotation}{p. 3735: "in the pharmaceutical industry, in analyzing the data, if a linear model is employed, it is usual to fit centre as a factor but unusual to fit block.";p. 3739: a large trial "is not less vulnerable to chance covariate imbalance";p. 3741:"There is no place, in my view, for classical minimization" (vs. the method of Atkinson);"If an investigator uses such [allocation based on covariates] schemes, she or he is honour bound, in my opinion, as a very minimum, to adjust for the factors used to balance, since the fact that they are being used to balance is an implicit declaration that they will have prognostic value.";"The point of view is sometimes defended that analyses that ignore covariates are superior because they are simpler. I do not accept this. A value of \$\textbackslash{}pi=3\$ is a simple one and accurate to one significant figure ... However very few would seriously maintain that if should generally be adopted by engineers.";p. 3742: "as Fisher pointed out ... if we balance by a predictive covariate but do not fit the covariate in the model, not only do we not exploit the covariate, we actually increase the expected declared standard error."; p. 3744:"I would like to see standard errors for group means abolished."; p. 3744:"A common habit, however, in analyzing trials with three or more arms is to pool the variances from all arms when calculating the standard error of a given contrast. In my view this is a curious practice ... it relies on an assumption of additivity of {$<$}i{$>$}all{$<$}/all{$>$} treatments when comparing only {$<$}i{$>$}two{$<$}/i{$>$}. ... a classical t-test is robust to heteroscedasticity provide that sample sizes are equal in the groups being compared and that the variance is internal to those two groups but is not robust where an external estimate is being used."; p. 3745: "By adjusting main effects for interactions a type III analysis is similarly illogical to Neyman's hypothesis test."; "Guyatt {$<$}i{$>$}et al.{$<$}/i{$>$} ... found a 'method for estimating the proportion of patients who benefit from a treatment ... In fact they had done no such thing."; p. 3746: "When I checked the Web of Science on 29 June 2003, the paper by Horwitz {$<$}i{$>$}et al.{$<$}/i{$>$} had been cited 28 times and that by Guyatt {$<$}i{$>$}et al.{$<$}/i{$>$} had been cited 79 times. The letters pointing out the fallacies had been cited only 8 and 5 times respectively."; "if we pool heterogeneous strata, the odds ratio of the treatment effect will be different from that in every stratum, even if from stratum to stratum it does not vary."; p. 3747: "Part of the problem with Poisson, proportional hazard and logistic regression approaches is that they use a single parameter, the linear predictor, with no equivalent of the variance parameter in the Normal case. This means that lack of fit impacts on the estimate of the predictor. ... what is the value of randomization if, in all except the Normal case, we cannot guarantee to have unbiased estimates. My view ... was that the form of analysis envisaged (that is to say, which factors and covariates should be fitted) justified the allocation and {$<$}i{$>$}not vice versa{$<$}/i{$>$}."; "use the additive measure at the point of analysis and transform to the relevant scale at the point of implementation. This transformation at the point of medical decision-making will require auxiliary information on the level of background risk of the patient."; p. 3748:"The decision to fit prognostic factors has a far more dramatic effect on the precision of our inferences than the choice of an allocation based on covariates or randomization approach and one of my chief objections to the allocation based on covariates approach is that trialists have tended to use the fact that they have balanced as an excuse for not fitting. This is a grave mistake."}
       \field{journaltitle}{Stat Med}
       \field{title}{Controversies Concerning Randomization and Additivity in Clinical Trials}
       \field{volume}{23}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{pages}{3729\bibrangedash 3753}
       \range{pages}{25}
       \verb{doi}
       \verb 10.1002/sim.2074
       \endverb
-      \keyw{rct,study-design,randomization,covariate-adjustment,covariable-adjustment,baseline,additivity}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/sim.2074
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/sim.2074
+      \endverb
+      \keyw{study-design,rct,randomization,covariate-adjustment,additivity,baseline,covariable-adjustment}
     \endentry
     \entry{sensta}{book}{}
       \name{author}{1}{}{%
@@ -3316,6 +3945,7 @@
       \field{edition}{Second}
       \field{title}{Statistical {{Issues}} in {{Drug Development}}}
       \field{year}{2008}
+      \field{dateera}{ce}
     \endentry
     \entry{sen05dic}{inproceedings}{}
       \name{author}{1}{}{%
@@ -3341,7 +3971,14 @@
       \field{booktitle}{Proceedings of the {{International Statistical Institute}}, 55th {{Session}}}
       \field{title}{Dichotomania: An Obsessive Compulsive Disorder That Is Badly Affecting the Quality of Analysis of Pharmaceutical Trials}
       \field{year}{2005}
-      \keyw{categorization,categorizing-continuous-variables,dichotomization,dichotomizing-continuous-variables}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://hbiostat.org/papers/Senn/dichotomania.pdf
+      \endverb
+      \verb{url}
+      \verb http://hbiostat.org/papers/Senn/dichotomania.pdf
+      \endverb
+      \keyw{categorizing-continuous-variables,dichotomization,categorization,dichotomizing-continuous-variables}
     \endentry
     \entry{sen10com}{article}{}
       \name{author}{3}{}{%
@@ -3376,9 +4013,10 @@
       \field{title}{Comparisons of Minimization and {{Atkinson}}'s Algorithm}
       \field{volume}{29}
       \field{year}{2010}
+      \field{dateera}{ce}
       \field{pages}{721\bibrangedash 730}
       \range{pages}{10}
-      \keyw{rct,randomization,clniical-trials,covariate-balance,covariates,dynamic-allocation,optimal-design}
+      \keyw{rct,randomization,covariate-balance,optimal-design,clniical-trials,covariates,dynamic-allocation}
     \endentry
     \entry{sen00rep}{article}{}
       \name{author}{3}{}{%
@@ -3412,12 +4050,19 @@
       \field{title}{Repeated Measures in Clinical Trials: {{Simple}} Strategies for Analysis Using Summary Measures}
       \field{volume}{19}
       \field{year}{2000}
+      \field{dateera}{ce}
       \field{pages}{861\bibrangedash 877}
       \range{pages}{17}
       \verb{doi}
-      \verb 10.1002/(SICI)1097-0258(20000330)19:6\\\%3C861::AID-SIM407\\\%3E3.0.CO;2-F
+      \verb 10.1002/(SICI)1097-0258(20000330)19:6\\%3C861::AID-SIM407\\%3E3.0.CO;2-F
       \endverb
-      \keyw{teaching-mds,serial-data,auc,repeated-measures,summary-measures,slope}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/(SICI)1097-0258(20000330)19:6%3C861::AID-SIM407%3E3.0.CO;2-F
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/(SICI)1097-0258(20000330)19:6%3C861::AID-SIM407%3E3.0.CO;2-F
+      \endverb
+      \keyw{serial-data,teaching-mds,repeated-measures,summary-measures,auc,slope}
     \endentry
     \entry{she04inf}{article}{}
       \name{author}{3}{}{%
@@ -3452,6 +4097,7 @@
       \field{title}{Inference after Model Selection}
       \field{volume}{99}
       \field{year}{2004}
+      \field{dateera}{ce}
       \field{pages}{751\bibrangedash 762}
       \range{pages}{12}
       \keyw{model-selection,variable-selection,model-uncertainty,model-approximation,pre-conditioning}
@@ -3484,6 +4130,7 @@
       \field{title}{Treatment Effects in a Logistic Model Involving the {{Box}}-{{Cox}} Transformation}
       \field{volume}{94}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{pages}{240\bibrangedash 246}
       \range{pages}{7}
     \endentry
@@ -3519,10 +4166,17 @@
       \field{title}{Differential Diagnosis of Acute Meningitis: {{An}} Analysis of the Predictive Value of Initial Observations}
       \field{volume}{262}
       \field{year}{1989}
+      \field{dateera}{ce}
       \field{pages}{2700\bibrangedash 2707}
       \range{pages}{8}
       \verb{doi}
       \verb 10.1001/jama.262.19.2700
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.262.19.2700
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.262.19.2700
       \endverb
       \keyw{multivariable-modeling,diagnosis,logistic-model,meningitis}
     \endentry
@@ -3544,17 +4198,31 @@
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Accurate prediction of medical outcomes is important for diagnosis and prognosis. The standard requirement in major medical journals is nowadays that validity outside the development sample needs to be shown. Is such data splitting an example of a waste of resources? In large samples, interest should shift to assessment of heterogeneity in model performance across settings. In small samples, cross-validation and bootstrapping are more efficient approaches. In conclusion, random data splitting should be abolished for validation of prediction models.}
-      \field{issn}{0895-4356}
+      \field{day}{28}
+      \field{issn}{0895-4356, 1878-5921}
       \field{journaltitle}{Journal of Clinical Epidemiology}
+      \field{langid}{english}
       \field{month}{7}
+      \field{number}{0}
       \field{shorttitle}{Validation in Prediction Research}
-      \field{title}{Validation in Prediction Research: The Waste by Data Splitting}
+      \field{title}{Validation in Prediction Research: The Waste by Data-Splitting}
+      \field{urlday}{30}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{volume}{0}
       \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1016/j.jclinepi.2018.07.010
       \endverb
-      \keyw{validation}
+      \verb{urlraw}
+      \verb https://www.jclinepi.com/article/S0895-4356(18)30485-2/abstract
+      \endverb
+      \verb{url}
+      \verb https://www.jclinepi.com/article/S0895-4356(18)30485-2/abstract
+      \endverb
+      \keyw{sample-size,validation,external-validation}
     \endentry
     \entry{ste00cli}{article}{}
       \name{author}{3}{}{%
@@ -3589,12 +4257,19 @@
       \field{title}{Clinical Trials in Acute Myocardial Infarction: {{Should}} We Adjust for Baseline Characteristics?}
       \field{volume}{139}
       \field{year}{2000}
+      \field{dateera}{ce}
       \field{pages}{745\bibrangedash 751}
       \range{pages}{7}
       \verb{doi}
       \verb 10.1016/S0002-8703(00)90001-2
       \endverb
-      \keyw{covariable-adjustment,ancova}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/S0002-8703(00)90001-2
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/S0002-8703(00)90001-2
+      \endverb
+      \keyw{ancova,covariable-adjustment}
     \endentry
     \entry{irr}{book}{}
       \name{author}{3}{}{%
@@ -3654,7 +4329,14 @@
       \field{isbn}{978-1-4665-6159-5}
       \field{title}{Implementing {{Reproducible Research}}}
       \field{year}{2014}
-      \keyw{statistical-computing,reporting,statistical-report,reproducibility}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.worldcat.org/isbn/9781466561595
+      \endverb
+      \verb{url}
+      \verb http://www.worldcat.org/isbn/9781466561595
+      \endverb
+      \keyw{reporting,reproducibility,statistical-computing,statistical-report}
     \endentry
     \entry{sub10gen}{article}{}
       \name{author}{2}{}{%
@@ -3684,9 +4366,10 @@
       \field{title}{Gene Expression-Based Prognostic Signatures in Lung Cancer: {{Ready}} for Clinical Use?}
       \field{volume}{102}
       \field{year}{2010}
+      \field{dateera}{ce}
       \field{pages}{464\bibrangedash 474}
       \range{pages}{11}
-      \keyw{biomarker,bioinformatics,genomic-signatures,quality-assessment}
+      \keyw{bioinformatics,biomarker,genomic-signatures,quality-assessment}
     \endentry
     \entry{R}{book}{}
       \name{author}{1}{}{%
@@ -3714,14 +4397,21 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{www.r-project.org}
       \field{isbn}{3-900051-07-0}
-      \field{title}{R: {{A}} Language and Environment for Statistical Computing}
+      \field{title}{R: {A} Language and Environment for Statistical Computing}
       \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://www.R-project.org
+      \endverb
+      \verb{url}
+      \verb http://www.R-project.org
+      \endverb
       \keyw{group-rms}
     \endentry
     \entry{tor85how}{article}{}
       \name{author}{3}{}{%
         {{hash=86a10e0a9da737ef595b7021bd9e1679}{%
-           family={Törnqvist},
+           family={T\"{o}rnqvist},
            familyi={T\bibinitperiod},
            given={L.},
            giveni={L\bibinitperiod}}}%
@@ -3750,10 +4440,17 @@
       \field{title}{How Should Relative Changes Be Measured?}
       \field{volume}{39}
       \field{year}{1985}
+      \field{dateera}{ce}
       \field{pages}{43\bibrangedash 46}
       \range{pages}{4}
       \verb{doi}
       \verb 10.1080/00031305.1985.10479385
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/00031305.1985.10479385
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/00031305.1985.10479385
       \endverb
       \keyw{teaching-mds,change,measuring-change,percent-change,one-sample-problem}
     \endentry
@@ -3780,20 +4477,29 @@
       \field{title}{Tightening the {{Clinical Trial}}}
       \field{volume}{14}
       \field{year}{1993}
+      \field{dateera}{ce}
       \field{pages}{266\bibrangedash 285}
       \range{pages}{20}
       \verb{doi}
       \verb 10.1016/0197-2456(93)90225-3
       \endverb
-      \keyw{rct,randomization,regression,covariable-adjustment,ancova,baseline}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/0197-2456(93)90225-3
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/0197-2456(93)90225-3
+      \endverb
+      \keyw{rct,randomization,ancova,baseline,covariable-adjustment,regression}
     \endentry
-    \entry{plo14mod}{article}{}
+    \entry{plo14mod}{article}{useprefix=true}
       \name{author}{3}{}{%
-        {{hash=4d3e65a78dbf207d714df84554c74b60}{%
-           family={{van der Ploeg}},
-           familyi={v\bibinitperiod},
+        {{hash=02ab92f55f43a659d5c77fa29b9e02ce}{%
+           family={Ploeg},
+           familyi={P\bibinitperiod},
            given={Tjeerd},
-           giveni={T\bibinitperiod}}}%
+           giveni={T\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
         {{hash=75a10493fc2b731a3c226b9f6cf23a43}{%
            family={Austin},
            familyi={A\bibinitperiod},
@@ -3808,18 +4514,19 @@
       \list{publisher}{1}{%
         {BioMed Central Ltd}%
       }
-      \strng{namehash}{e658c6b3a54e5aff521ebf43cf4758df}
-      \strng{fullhash}{e658c6b3a54e5aff521ebf43cf4758df}
-      \strng{bibnamehash}{e658c6b3a54e5aff521ebf43cf4758df}
-      \strng{authorbibnamehash}{e658c6b3a54e5aff521ebf43cf4758df}
-      \strng{authornamehash}{e658c6b3a54e5aff521ebf43cf4758df}
-      \strng{authorfullhash}{e658c6b3a54e5aff521ebf43cf4758df}
+      \strng{namehash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{fullhash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{bibnamehash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{authorbibnamehash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{authornamehash}{803f1a26a69e8c98973b748ea156398e}
+      \strng{authorfullhash}{803f1a26a69e8c98973b748ea156398e}
       \field{sortinit}{v}
       \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Modern modelling techniques may potentially provide more accurate predictions of binary outcomes than classical techniques. We aimed to study the predictive performance of different modelling techniques in relation to the effective sample size (``data hungriness'').}
+      \field{abstract}{Modern modelling techniques may potentially provide more accurate predictions of binary outcomes than classical techniques. We aimed to study the predictive performance of different modelling techniques in relation to the effective sample size (\textquotedblleft{}data hungriness\textquotedblright{}).}
       \field{annotation}{Would be better to use proper accuracy scores in the assessment. Too much emphasis on optimism as opposed to final discrimination measure. But much good practical information. Recursive partitioning fared poorly.}
+      \field{eprinttype}{pmid}
       \field{issn}{1471-2288}
       \field{journaltitle}{BMC medical research methodology}
       \field{month}{12}
@@ -3827,20 +4534,32 @@
       \field{title}{Modern Modelling Techniques Are Data Hungry: A Simulation Study for Predicting Dichotomous Endpoints.}
       \field{volume}{14}
       \field{year}{2014}
+      \field{dateera}{ce}
       \field{pages}{137+}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1186/1471-2288-14-137
       \endverb
-      \keyw{study-design,validation,rms,recursive-partitioning,events-per-variable,random-forest,svm}
+      \verb{eprint}
+      \verb 25532820
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1186/1471-2288-14-137
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1186/1471-2288-14-137
+      \endverb
+      \keyw{study-design,validation,events-per-variable,random-forest,recursive-partitioning,rms,svm}
     \endentry
-    \entry{kla15est}{article}{}
+    \entry{kla15est}{article}{useprefix=true}
       \name{author}{5}{}{%
-        {{hash=3da70746f6f3c8df26806588262ea487}{%
-           family={{van Klaveren}},
-           familyi={v\bibinitperiod},
+        {{hash=c57beb1682ea1cab681cbc8af148aa8b}{%
+           family={Klaveren},
+           familyi={K\bibinitperiod},
            given={David},
-           giveni={D\bibinitperiod}}}%
+           giveni={D\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
         {{hash=374198228024f1dcce426097584ba9a3}{%
            family={Vergouwe},
            familyi={V\bibinitperiod},
@@ -3862,12 +4581,12 @@
            given={Ewout\bibnamedelima W.},
            giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \strng{namehash}{b6228f9d2660f88fb7d1acde704e9f76}
-      \strng{fullhash}{236c851a6178100bd589d778f6b6d419}
-      \strng{bibnamehash}{b6228f9d2660f88fb7d1acde704e9f76}
-      \strng{authorbibnamehash}{b6228f9d2660f88fb7d1acde704e9f76}
-      \strng{authornamehash}{b6228f9d2660f88fb7d1acde704e9f76}
-      \strng{authorfullhash}{236c851a6178100bd589d778f6b6d419}
+      \strng{namehash}{5c895589532526228849a78a59eeb04e}
+      \strng{fullhash}{4769f18e365739fb8e8256d51eda8376}
+      \strng{bibnamehash}{5c895589532526228849a78a59eeb04e}
+      \strng{authorbibnamehash}{5c895589532526228849a78a59eeb04e}
+      \strng{authornamehash}{5c895589532526228849a78a59eeb04e}
+      \strng{authorfullhash}{4769f18e365739fb8e8256d51eda8376}
       \field{sortinit}{v}
       \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
@@ -3880,12 +4599,19 @@
       \field{title}{Estimates of Absolute Treatment Benefit for Individual Patients Required Careful Modeling of Statistical Interactions}
       \field{volume}{68}
       \field{year}{2015}
+      \field{dateera}{ce}
       \field{pages}{1366\bibrangedash 1374}
       \range{pages}{9}
       \verb{doi}
       \verb 10.1016/j.jclinepi.2015.02.012
       \endverb
-      \keyw{interaction,absolute-benefit,absolute-vs-relative-treatment-effect}
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.jclinepi.2015.02.012
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.jclinepi.2015.02.012
+      \endverb
+      \keyw{interaction,absolute-vs-relative-treatment-effect,absolute-benefit}
     \endentry
     \entry{vic08dec}{article}{}
       \name{author}{1}{}{%
@@ -3911,6 +4637,7 @@
       \field{title}{Decision Analysis for the Evaluation of Diagnostic Tests, Prediction Models, and Molecular Markers}
       \field{volume}{62}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{314\bibrangedash 320}
       \range{pages}{7}
       \keyw{prognosis,decision-theory,decision-support-techniques,outcome-assessment}
@@ -3943,11 +4670,12 @@
       \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{"The act of diagnosis requires that patients be placed in a binary category of either having or not having a certain disease. Accordingly, the diseases of particular concern for industrialized countries---such as type 2 diabetes, obesity, or depression---require that a somewhat arbitrary cut-point be chosen on a continuous scale of measurement (for example, a fasting glucose level $>$6.9 mmol/L [$>$125 mg/dL] for type 2 diabetes). These cut-points do not ade- quately reflect disease biology, may inappropriately treat patients on either side of the cut-point as 2 homogenous risk groups, fail to incorporate other risk factors, and are invariable to patient preference."}
+      \field{annotation}{"The act of diagnosis requires that patients be placed in a binary category of either having or not having a certain disease. Accordingly, the diseases of particular concern for industrialized countries---such as type 2 diabetes, obesity, or depression---require that a somewhat arbitrary cut-point be chosen on a continuous scale of measurement (for example, a fasting glucose level {$>$}6.9 mmol/L [{$>$}125 mg/dL] for type 2 diabetes). These cut-points do not ade- quately reflect disease biology, may inappropriately treat patients on either side of the cut-point as 2 homogenous risk groups, fail to incorporate other risk factors, and are invariable to patient preference."}
       \field{journaltitle}{Ann Int Med}
       \field{title}{Against Diagnosis}
       \field{volume}{149}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{pages}{200\bibrangedash 203}
       \range{pages}{4}
     \endentry
@@ -3975,6 +4703,7 @@
       \field{title}{Finding What Is Not There through the Unfortunate Binning of Results: {{The Mendel}} Effect}
       \field{volume}{19}
       \field{year}{2006}
+      \field{dateera}{ce}
       \field{pages}{49\bibrangedash 56}
       \range{pages}{8}
       \keyw{teaching-mds,cutpoints,bad}
@@ -4006,9 +4735,103 @@
       \field{title}{Adjusting for Partially Missing Baseline Measurements in Randomized Trials}
       \field{volume}{24}
       \field{year}{2005}
+      \field{dateera}{ce}
       \field{pages}{993\bibrangedash 1007}
       \range{pages}{15}
-      \keyw{rct,power,randomized-trials,imputation,ancova,analysis-of-covariance,missing-baseline,missing-covariate,statistical-analysis-plan}
+      \keyw{rct,power,imputation,ancova,analysis-of-covariance,randomized-trials,missing-baseline,missing-covariate,statistical-analysis-plan}
+    \endentry
+    \entry{whi93sam}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7fd99bce81f95bd57c41f388be9be231}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fd99bce81f95bd57c41f388be9be231}
+      \strng{fullhash}{7fd99bce81f95bd57c41f388be9be231}
+      \strng{bibnamehash}{7fd99bce81f95bd57c41f388be9be231}
+      \strng{authorbibnamehash}{7fd99bce81f95bd57c41f388be9be231}
+      \strng{authornamehash}{7fd99bce81f95bd57c41f388be9be231}
+      \strng{authorfullhash}{7fd99bce81f95bd57c41f388be9be231}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stat Med}
+      \field{note}{See letter to editor SM 15:1065-6 for binary case;see errata in SM 13:871 1994;see kol95com, jul96sam}
+      \field{title}{Sample Size Calculations for Ordered Categorical Data}
+      \field{volume}{12}
+      \field{year}{1993}
+      \field{dateera}{ce}
+      \field{pages}{2257\bibrangedash 2271}
+      \range{pages}{15}
+      \keyw{sample-size,study-design,ordinal-logistic-model,scales}
+    \endentry
+    \entry{wil13avo}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f15b723b84f15d248337857dc6a42b1c}{%
+           family={Wilcox},
+           familyi={W\bibinitperiod},
+           given={Rand},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4e89c74ca2ccbcbdd3edaa9f0316009d}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3cb422e012a30c1aa2c0835a1aeff45e}{%
+           family={Azen},
+           familyi={A\bibinitperiod},
+           given={Stan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1ae93d54f3614692a761636d5b0f29c0}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Florence},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{d83a446d8022f82967f979a24b1f8a1b}
+      \strng{fullhash}{6bc60e64bd8315768b937be4f5aed42d}
+      \strng{bibnamehash}{d83a446d8022f82967f979a24b1f8a1b}
+      \strng{authorbibnamehash}{d83a446d8022f82967f979a24b1f8a1b}
+      \strng{authornamehash}{d83a446d8022f82967f979a24b1f8a1b}
+      \strng{authorfullhash}{6bc60e64bd8315768b937be4f5aed42d}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{$<$}h2{$>$}Abstract{$<$}/h2{$><$}h3{$>$}Objectives{$<$}/h3{$><$}p{$>$}Recently, there have been major advances in statistical techniques for assessing central tendency and measures of association. The practical utility of modern methods has been documented extensively in the statistics literature, but they remain underused and relatively unknown in clinical trials. Our objective was to address this issue.{$<$}/p{$><$}h3{$>$}Study Design and Purpose{$<$}/h3{$><$}p{$>$}The first purpose was to review common problems associated with standard methodologies (low power, lack of control over type I errors, and incorrect assessments of the strength of the association). The second purpose was to summarize some modern methods that can be used to circumvent such problems. The third purpose was to illustrate the practical utility of modern robust methods using data from the Well Elderly 2 randomized controlled trial.{$<$}/p{$><$}h3{$>$}Results{$<$}/h3{$><$}p{$>$}In multiple instances, robust methods uncovered differences among groups and associations among variables that were not detected by classic techniques. In particular, the results demonstrated that details of the nature and strength of the association were sometimes overlooked when using ordinary least squares regression and Pearson correlation.{$<$}/p{$><$}h3{$>$}Conclusion{$<$}/h3{$><$}p{$>$}Modern robust methods can make a practical difference in detecting and describing differences between groups and associations between variables. Such procedures should be applied more frequently when analyzing trial-based data.{$<$}/p{$>$}}
+      \field{day}{1}
+      \field{eprinttype}{pmid}
+      \field{issn}{0895-4356, 1878-5921}
+      \field{journaltitle}{Journal of Clinical Epidemiology}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{Avoid Lost Discoveries, Because of Violations of Standard Assumptions, by Using Modern Robust Statistical Methods}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{volume}{66}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{319\bibrangedash 329}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.jclinepi.2012.09.003
+      \endverb
+      \verb{eprint}
+      \verb 23195918
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jclinepi.com/article/S0895-4356(12)00275-2/abstract
+      \endverb
+      \verb{url}
+      \verb https://www.jclinepi.com/article/S0895-4356(12)00275-2/abstract
+      \endverb
+      \keyw{robustness,power,nonparametric,robust-methods,clt}
     \endentry
     \entry{knitrbook}{book}{}
       \name{author}{1}{}{%
@@ -4033,8 +4856,9 @@
       \field{labeltitlesource}{title}
       \field{edition}{second}
       \field{isbn}{978-1-4987-1696-3}
-      \field{title}{Dynamic {{Documents}} with {{R}} and Knitr, Second Edition}
+      \field{title}{Dynamic {{Documents}} with {R} and Knitr, Second Edition}
       \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
     \entry{yam99inv}{article}{}
       \name{author}{2}{}{%
@@ -4063,12 +4887,12 @@
       \field{title}{Investigating Centre Effects in a Multi-Centre Clinical Trial of Superficial Bladder Cancer}
       \field{volume}{18}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{pages}{1961\bibrangedash 1971}
       \range{pages}{11}
-      \keyw{penalized-partial-likelihood,treatment-by-center-interaction,cox-random-effects-model,mixed-effects,multi-center-rct,multi-site-rct}
+      \keyw{multi-center-rct,treatment-by-center-interaction,penalized-partial-likelihood,cox-random-effects-model,mixed-effects,multi-site-rct}
     \endentry
   \enddatalist
-  \missing{[}
 \endrefsection
 \endinput
 

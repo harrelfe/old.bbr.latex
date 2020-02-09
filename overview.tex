@@ -1,4 +1,5 @@
 \chapter{General Overview of Biostatistics} \katz{1-3}  \ems{2} \abd{1.1,p.23-4}\label{chap:overview}
+\bmovie{1}\ddisc{1}
 
 \quoteit{There are no routine statistical questions, only questionable
   statistical routines.}{Sir David R.\ Cox}
@@ -15,12 +16,22 @@
 \item Attempt to remove bias or find alternative explanations to those
   posited by researchers with vested interests
 \item Experimental design, measurement, description, statistical graphics,
-  data analysis, inference
-\ei
+  data analysis, inference, prediction
+  \ei
 
 To optimize its value, biostatistics needs to be fully integrated into
 biomedical research and we must recognize that experimental design and
 execution (e.g., randomization and masking) are all important.
+
+\subsection{Branches of Statistics}
+\bi
+\item Frequentist (traditional)
+\item Bayesian
+\item Likelihoodist (a bit like Bayes without priors)
+\ei
+
+See Section~\ref{sec:htest-branches}.
+
 
 \subsection{Fundamental Principles of Statistics}
 \bi
@@ -41,11 +52,143 @@ execution (e.g., randomization and masking) are all important.
     conditions on full information and uses for example predicted risk
     rather than whether or not the predicted risk is high.}) that
   optimize decisions
+  \bi
+   \item Not directly actionable: probabilities that condition on the
+     future to predict the past/present, i.e, those conditioning on
+     the unknown
+     \bi
+     \item sensitivity and specificity ($P(\textrm{test result} |
+       \textrm{disease status})$)\\
+       Sensitivity irrelevant once it is known that the test is +
+     \item $p$-values (condition on effect being zero)
+     \ei
+  \ei
 \item Present information in ways that are intuitive, maximize
   information content, and are correctly perceived
 \ei
 
+\section{What Can Statistics Do?}
+\bi
+\item Refine measurements
+\item Experimental design
+  \bi
+  \item Make sure design answers the question
+  \item Take into account sources of variability
+  \item Identify sources of bias
+  \item Developing sequential or adaptive designs
+  \item Avoid wasting subjects
+    \ei
+\item {\smaller (in strong collaboration with epidemiologists)} Observational
+  study design
+\item {\smaller (in strong collaboration with epidemiologists and
+  philosophers)} Causal inference
+\item Use methods that preserve all relevant information in data
+\item Robust analysis optimizing power, minimizing assumptions
+\item Estimating magnitude of effects
+\item Estimating \textbf{shapes} of effects of continuous predictors
+\item Quantifying causal evidence for effects if the design is appropriate
+\item Adjusting for confounders
+\item Properly model effect modification (interaction) / heterogeneity
+  of treatment effect
+\item Developing and validating predictive models
+\item Choosing optimum measures of predictive accuracy
+\item Quantify information added by new measurements / medical tests
+\item Handling missing data or measurements below detection limits
+\item Risk-adjusted scorecards (e.g., health provider profiling)
+\item Visual presentation of results taken into account graphical
+  perception
+\item Finding alternate explanations for observed phenomena
+\item Foster reproducible research
+\ei   
 
+See
+\href{http://biostat.mc.vanderbilt.edu/BenefitsBasicSci}{biostat.mc.vanderbilt.edu/BenefitsBasicSci}
+for more benefits of biostatistics.
+
+\subsection{Statistical Scientific Method}
+\bi
+\item Statistics is not a bag of tools and math formulas but an
+  evidence-based way of thinking 
+\item It is all important to
+  \bi
+   \item understand the problem
+   \item properly frame the question to address it
+   \item understand and optimize the measurements
+   \item understand sources of variability
+   \item much more
+     \ei
+\item MacKay \& Oldford~\cite{mac00sci} developed a 5-stage
+  representation of the statistical method applied to scientific
+  investigation: \textbf{\emph{Problem, Plan, Data, Analysis,
+      Conclusion}} having the elements below:
+  \ei
+
+{\tszs
+  \begin{center}
+    \begin{tabular}{ll} \hline
+    \textbf{Problem} & Units \& Target Population (Process)\\
+    & Response Variate(s)\\
+    & Explanatory Variates\\
+    & Population Attribute(s)\\
+    & Problem Aspect(s) – causative, descriptive, predictive\\
+    & \\
+    \textbf{Plan} & Study Population (Process)\\
+    & ~~~(Units, Variates, Attributes)\\
+    & Selecting the response variate(s)\\
+    & Dealing with explanatory variates\\
+    & Sampling Protocol\\
+    & Measuring process\\
+    & Data Collection Protocol\\
+    & \\
+\textbf{Data} & Execute the Plan\\
+    & ~~~and record all departures\\
+    & Data Monitoring\\
+    & Data Examination\\
+    & ~~~for internal consistency\\
+    & Data storage\\
+    & \\
+\textbf{Analysis} & Data Summary\\
+    & ~~~numerical and graphical\\
+    & Model construction\\
+    & ~~~build, fit, criticize cycle\\
+    & Formal analysis\\
+    & \\
+\textbf{Conclusion} & Synthesis\\
+    & ~~~plain language, effective presentation graphics\\
+    & Limitations of study\\
+    & ~~~discussion of potential errors\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\textbf{Recommended Reading for Experimental Design}
+
+Glass~\cite{gla14exp}, Ruxton and Colegrave~\cite{rux17exp}, and
+Chang~\cite{cha16pri}.
+
+\textbf{Recommended Reading for Clinical Study Design}
+
+Hulley~\etal~\cite{hul13des}.
+
+\subsubsection{Pointers for Observational Study Design}   %NEW SINCE VIDEO
+\bi
+\item Understand the problem and formulate a pertinent question
+\item Figure out and be able to defend observaton periods and ``time zero''
+\item Carefully define subject inclusion/exclusion criteria
+\item Determine which measurements are required for answering the
+  question while accounting for alternative explanations.  Do this
+  \textbf{before} examining existing datasets so as to not engage in
+  rationalization bias.
+\item Collect these measurements or verify that an already existing
+  dataset contains all of them
+\item Make sure that the measurements are not missing too often and
+  that measurement error is under control.  This is even slightly more
+  important for inclusion/exclusion criteria.
+\item Make sure the use of observational data respects causal
+  pathways.  For example don't use outcome/response/late-developing
+  medical complications as if they were independent variables.
+\ei
+  
 \section{Types of Data Analysis and Inference}\label{sec:overview-datatypes}
  \bi
  \item Description: what happened to \emph{past} patients
@@ -54,11 +197,27 @@ execution (e.g., randomization and masking) are all important.
   \item Hypothesis testing: test a hypothesis about population or
    long-run effects
   \item Estimation: approximate a population or long term average
-   quantity
-  \item Prediction: predict the responses of other patients \emph{like yours}
+    quantity
+    \ei
+  \item Bayesian inference
+    \bi
+    \item Data may not be a sample from a population
+    \item May be impossible to obtain another sample
+    \item Seeks knowledge of hidden process generating \textbf{this}
+      sample (generalization of inference to population)
+    \ei
+ \item Prediction: predict the responses of other patients \emph{like yours}
    based on analysis of patterns of responses in your patients
-  \ei
-\ei
+   \ei
+
+Leek and Peng~\cite{lee15wha} created a nice data analysis flowchart.
+
+\begin{center}\includegraphics[width=.8\textwidth]{lee15wha.png}\end{center}
+
+They also have a succinct summary of common statistical mistakes
+originating from a failure to match the question with the analysis.
+
+\begin{center}\includegraphics[width=.6\textwidth]{lee15wha2.png}\end{center}
 
 \section{Types of Measurements by Their Role in the Study} \katz{3} \abd{1.3}\label{sec:overview-measurement-role}
 \bi
@@ -98,7 +257,7 @@ interpret, but which contain several hidden problems:
 \bi
 \item $Y$ may be a categorization/dichotomization of an underlying
   continuous response variable.  The cutpoint used for the
-  dichtomization is never consistent with data (see
+  dichotomization is never consistent with data (see
   Figure~\ref{fig:info-thresholds}), 
   is arbitrary (P.~\pageref{pg:info-gia14opt}), and causes a huge loss of
   statistical information and power (P.~\pageref{pg:info-fed09con}).
@@ -130,8 +289,8 @@ A proper response variable that optimizes power is one that
 \section{Types of Measurements According to Coding} \katz{3} \ems{2.2}\abd{1.3}\label{sec:overview-coding}
 \bi
  \item Binary: yes/no, present/absent
- \item Categorical (nominal, polytomous, discrete): more than 2 values
-   that are not necessarily in special order
+ \item Categorical (aka nominal, polytomous, discrete, multinomial):
+   more than 2 values that are not necessarily in special order
  \item Ordinal: a categorical variable whose possible values are in a
    special order, e.g., by severity of symptom or disease; spacing
    between categories is not assumed to be useful
@@ -180,6 +339,10 @@ effective sample size.
       average 5 readings 
     \ei
   \item Intermediate: ordinal $Y$ with a few well-populated levels
+  \item Exploration of power vs.\ number of ordinal $Y$ levels and
+    degree of balance in frequencies of levels: \href{https://fharrell.com/post/ordinal-info}{fharrell.com/post/ordinal-info}
+  \item See Section \ref{sec:htest-mult} for examples of ordinal outcome scales and interpretation of results
+  % Above not on video
   \ei
 
 \subsection{Information Content}\label{sec:overview-info-content}
@@ -218,7 +381,7 @@ effective sample size.
     of power can be massive, i.e., may have to increase sample size
     $\times 4$
   \item See Sections \ref{sec:info-catoutcomes} and \ref{sec:crohn}
-  \item Avoid ``responder analysis''
+  \item Avoid ``responder analysis'' (see \href{http://datamethods.org/t/responder-analysis-loser-x-4}{datamethods.org/t/responder-analysis-loser-x-4})
   \item Serious ethical issues
   \item Dumbing-down $Y$ in the quest for clinical interpretability is
     a mistake.  Example:
@@ -286,7 +449,7 @@ effective sample size.
 \ei
 See also Section~\ref{sec:descript-change}.
 
-\section{Random Variables}\label{sec:overview-rv}
+\section{Random Variables}\label{sec:overview-rv}\bmovie{2}\ddisc{2}
 \bi
 \item A potential measurement $X$
 \item $X$ might mean a blood pressure that will be measured on a
@@ -296,13 +459,45 @@ See also Section~\ref{sec:descript-change}.
 \item Statistics often uses $X$ to denote a potentially observed value
   from some population and $x$ for an already-observed value (i.e., a
   constant)
-\ei
+  \ei
+
+\textbf{But} think about the clearer terminology of
+\href{https://youtu.be/yakg94HyWdE?t=2890}{Richard McElreath}\footnote{\url{https://youtu.be/yakg94HyWdE?t=2890}}:
+
+\begin{center}
+  \begin{tabular}{cc}
+    Convention & Proposal \\ \hline
+    Data & Observed variable \\
+    Parameter & Unobserved variable \\
+    Likelihood & Distribution \\
+    Prior & Distribution \\
+    Posterior & Conditional distribution \\
+    Estimate & \emph{banished} \\
+    Random & \emph{banished}
+  \end{tabular}
+  \end{center}
 
 \section{Probability}\label{sec:prob}
 \movie{https://youtu.be/CBnGs9t6RxY}%
 \movie{https://youtu.be/CDwZKyxk6Q4}%
 \movie{https://youtu.be/GC-l345c1FY}%
 \movie{https://youtu.be/cwADSMeiIoE}
+
+\bi
+\item \emph{Probability} traditionally taken as long-run relative
+  frequency
+\item Example: batting average of a baseball player (long-term
+  proportion of at-bat opportunities resulting in a hit)
+\item \textbf{Not so fast}: The batting average
+  \bi
+   \item depends on pitcher faced
+   \item may drop over a season as player tires or is injured
+   \item drops over years as the player ages
+   \ei
+\item Getting a hit may be better thought of as a one-time event for
+  which batting average is an approximation of the probability
+\ei
+     
 As described below, the meaning of \emph{probability} is in the mind
 of the beholder.  It can easily be taken to be a long-run relative
 frequency, a degree of belief, or any metric that is between 0 and 1
@@ -311,9 +506,17 @@ that obeys certain basic rules (axioms) such as those of Kolmogorov:
 \item A probability is not negative.
 \item The probability that at least one of the events in the exhaustive list of
   possible events occurs is 1.
+  \bi
+  \item Example: possible events death, nonfatal myocardial infarction
+    (heart attack), or neither
+  \item P(at least one of these occurring) = 1
+  \ei
 \item The probability that at least one of a sequence of mutually
   exclusive events occurs equals the sum of the individual
-  probabilities of the events occuring.
+  probabilities of the events occurring.
+  \bi
+  \item P(death or nonfatal MI) = P(death) + P(nonfatal MI)
+  \ei
 \ee
 
 Let $A$ and $B$ denote events, or assertions about which we seek the
@@ -376,7 +579,7 @@ probability is $P$ for the event.
 
 As IJ Good has written, the axioms defining the ``rules'' under which probabilities
 must operate (e.g., a probability is between 0 and 1) do not define
-what a probability actually means.  He also summizes that all
+what a probability actually means.  He also surmises that all
 probabilities are subjective, because they depend on the knowledge of
 the particular observer.
 
@@ -408,9 +611,9 @@ probability that $B$ happens.  Bayes' rule follows immediately from
 the law of conditional probability, which states that $P(A | B) =
 \frac{P(A \cap B)}{P(B)}$.
 
-The entire machinary of Bayesian inference derives from only Bayes'
+The entire machinery of Bayesian inference derives from only Bayes'
 theorem and the basic axioms of probability.  In contrast, frequentist
-inference requires an enormous amount of extra machinary related to
+inference requires an enormous amount of extra machinery related to
 the sample space, sufficient statistics, ancillary statistics, large
 sample theory, and if taking more then one data look, stochastic
 processes.  For many problems we still do not know how to 

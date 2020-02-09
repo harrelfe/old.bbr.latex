@@ -1,9 +1,9 @@
 % Usage: knitr slide
 <<echo=FALSE>>=
 require(Hmisc)
-knitrSet('prop')
+knitrSet('prop', cache=TRUE)
 @
-\chapter{Comparing Two Proportions} \ros{10.1-10.3, 10.5}\katz{5.2}
+\chapter{Comparing Two Proportions} \ros{10.1-10.3, 10.5}\katz{5.2}\bmovie{8}\ddisc{8}
 
 \section{Overview}
 
@@ -15,11 +15,11 @@ knitrSet('prop')
   \ei
  \item Continuous outcomes often dichotomized for analysis (bad idea)
   \bi
-  \item Consider $t$-tests (Chapter 3) or Non-parameteric methods (Chaper 5)
+  \item Consider $t$-tests (Chapter 5) or Non-parameteric methods (Chapter 7)
   \ei
 \ei
 
-\section{Normal-Theory Test}
+\section{Normal-Approximation Test}
 \bi
 \item Two independent samples
 
@@ -167,13 +167,21 @@ statistic, so the sign is lost.
   exactly, with no normal approximation, but only after changing what
   is being tested to condition on the number of events and non-events
 \item Because frequencies are discrete and because of the
-  conditioning, the test is conservative
-\item The ordinary Pearson $\chi^2$ works fine (even in most cases
-  where an expected cell frequency $< 5$, contrary to popular belief)
+  conditioning, the test is conservative ($P$-values too large)
+\item Is exact only in the sense that actual type I error probability will not \textbf{exceed} the nominal level
+\item The ordinary Pearson $\chi^2$ works fine (even when
+  an expected cell frequency is as low as 1.0, contrary to popular belief)
 \item We don't use Yates' continuity correction because it was
   developed to make the normal approximation test yield $P$-values
   that are more similar to Fisher's test, i.e., to be more
   conservative
+\item The attempt to obtain exact unconditional $P$-values for the simple $2\times 2$ contingency table has stumped frequentist statisticians for many decades~\cite{cho15elu}
+\item By contrast, Bayesian posterior probabilities for the true unconditional quantity of interest are exact
+ \bi
+ \item Frequentist confidence limits and $P$-values are approximate because they use the sample space, and the sample space is discrete when the response variable is categorical
+ \item Bayes does not consider the sample space, only the parameter space, which is almost always continuous
+ \ei
+\item See \href{https://stats.stackexchange.com/questions/14226}{stats.stackexchange.com/questions/14226} for discussion
 \ei
 
 \section{Sample Size and Power for Comparing Two Independent Samples}
@@ -189,7 +197,7 @@ statistic, so the sign is lost.
   variance that is almost independent of $p$ \altman{45-50}
 \item Example:  \\
 
-Using current therapy, 0.5 of the population is free of infection at 24 hours.  Adding a new drug to the standard of care is expected to increase the percentage infection-free to 0.7.  If we randomly sample 100 subjects to receive standard care and 100 subjects to receive the new therapy, what is the probabilty that we will be able to detect a signficant different between the two therapies at the end of the study?
+Using current therapy, 0.5 of the population is free of infection at 24 hours.  Adding a new drug to the standard of care is expected to increase the percentage infection-free to 0.7.  If we randomly sample 100 subjects to receive standard care and 100 subjects to receive the new therapy, what is the probabilty that we will be able to detect a certain difference between the two therapies at the end of the study?
 
 \beq
 p_{1}=.5, p_{2}=.7, n_{1}=n_{2}=100
@@ -210,7 +218,7 @@ bpower(.5, .7, n1=100, n2=100)
 \item Required sample size is a function of both $p_{1}$ and $p_{2}$
 \item Example:
 
-How many subjects are needed to detect a 0.8 fold decrease in the probability of colorectal cancer if the baseline probability of cancer is $0.0015$?  Use a power of 0.8 and a type-I error rate of 0.05.
+How many subjects are needed to detect a 0.8 fold decrease in the probability of colorectal cancer if the baseline probability of cancer is $0.0015$?  Use a power of 0.8 and a type-I error probability of 0.05.
 
 \beqa
 p_{1}=0.0015, p_{2}=0.8\times p_{1}=0.0012, \alpha=0.05, \beta=0.2 \\
@@ -221,6 +229,9 @@ n_{1}=n_{2}=235,147
 <<bsamsize>>=
 bsamsize(.0015, 0.8 * .0015, alpha=0.05, power=0.8)
 @ 
+
+Formulas for power and sample size may be seen as \R\ code found at\\
+\href{https://github.com/harrelfe/Hmisc/blob/master/R/bpower.s}{github.com/harrelfe/Hmisc/blob/master/R/bpower.s}.
 
 \section{Confidence Interval}
 An approximate $1-\alpha$ 2-sided CL is given by
@@ -234,7 +245,7 @@ The CL for the number of patients needed to be treated to save one
 event may simply be obtained by taking the reciprocal of the two
 confidence limits.\footnote{If a negative risk reduction is included
   in the confidence interval, set the NNT to $\infty$ for that limit
-  instead of quoting a negative NNT.}
+  instead of quoting a negative NNT.  There is more to this; see \href{http://bit.ly/datamethods-nnt}{bit.ly/datamethods-nnt}.}
 
 \section{Sample Size for a Given Precision}
 
@@ -245,10 +256,10 @@ confidence limits.\footnote{If a negative risk reduction is included
   \delta = z_{1-\alpha/2} \times\sqrt{\frac{\hat{p}_{1}(1-\hat{p}_{1})}{n_{1}}+\frac{\hat{p}_{2}(1-\hat{p}_{2})}{n_{2}}}
   \eeq
  \item Basing the sample size calculations on the margin of error can lead to a study that gives \textit{scientifically} relevant results even if the results are not \textit{statistically} significant.
-  \item Example: Suppose that the infection rate in a population is $0.5$ and a reduction to $0.4$ is believed to be a large enough reduction that it would lead to a change in procedures.  A study of a new treatment is planned so that enough subjects will be enrolled for the margin of error is $0.05$.  Consider these two possible outcomes:
+  \item Example: Suppose that the infection risk in a population is $0.5$ and a reduction to $0.4$ is believed to be a large enough reduction that it would lead to a change in procedures.  A study of a new treatment is planned so that enough subjects will be enrolled for the margin of error is $0.05$.  Consider these two possible outcomes:
   \begin{enumerate}
-  \item The new treatment is found to decrease infections by $0.06$ ($0.95$ CI: $[0.11, 0.01]$).  The confidence interval does not contain $0$, so we conclude the new treatment is effective at reducing infections.  $0.1$ is also within the confidence interval limits.
-  \item The new treatment decreases infections by only $0.04$ ($0.95$ CI: $[0.09, -0.01]$).  The confidence interval now contains $0$, so we do not have enough evidence to show that there is an effect of the treatment on reducing infections. However, the confidence interval also does not contain $0.10$, so we are able to rule out a \textit{scientifically} relevant decrease in infections.
+  \item The new treatment is observed to decrease infections by $0.06$ ($0.95$ CI: $[0.11, 0.01]$).  The confidence interval does not contain $0$, so we have indirect evidence\footnote{To obtain direct evidence requires Bayesian posterior probabilities.} that the new treatment is effective at reducing infections.  $0.1$ is also within the confidence interval limits.
+  \item The new treatment is observed to decrease infections by only $0.04$ ($0.95$ CI: $[0.09, -0.01]$).  The confidence interval now contains $0$, so we do not have enough evidence to reject the supposition that there is no effect of the treatment on reducing infections if we are bound to an arbitrary $\alpha=0.05$. However, the confidence interval also does not contain $0.10$, so we are able to indirectly rule out a \textit{scientifically} relevant decrease in infections.
   \end{enumerate}
 
 
@@ -418,7 +429,7 @@ x <- matrix(c(6, 19, 11, 100), nrow=2, byrow=TRUE)
 x
 chisq.test(x, correct=FALSE)
 @ 
-Ignore the warning about the $\chi^2$ approximation.
+% Ignore the warning about the $\chi^2$ approximation.
 \bi
 \item Interpretation
  \bi
@@ -426,7 +437,7 @@ Ignore the warning about the $\chi^2$ approximation.
    $\left(\frac{\hat{p}_1}{1-\hat{p}_1}\right)$ to odds of death in
    non-emergency group  $\left(\frac{\hat{p}_2}{1-\hat{p}_2}\right)$ 
  \item Emergency cases have \Sexpr{tcls} fold
-   increased odds times of death during surgery compared to
+   increased odds of death during surgery compared to
    non-emergency cases. 
  \ei
 \ei
@@ -447,7 +458,7 @@ Other & $c$ & $d$ &  $111$ \\ \cline{2-3}
 \bi
 \item $p$-value: Probability of observing data as extreme or more extreme than we collected in this experiment
 \ei
-\item Exact test: $p$-value can be calculated ``exactly'' (not using the Chi-squared distribution to approximate the $p$-value)
+\item Exact test: $p$-value can be calculated ``exactly'' (not using the $\chi^2$ distribution to approximate the $p$-value)
 \\
 <<fet>>=
 fisher.test(x)
@@ -459,3 +470,308 @@ likelihood estimate we obtained earlier.
   (larger $P$-value) 
 \ei
 
+\section{Logistic Regression for Comparing Proportions}\bmovie{9}\ddisc{9}
+\bi
+\item When comparing $\geq 2$ groups on the probability that a categorical outcome variable will have a certain value observed (e.g., $P(Y=1)$), one can use the Pearson $\chi^2$ test for a contengency table (or the less powerful Fisher's ``exact'' test)
+\item Such analyses can also be done with a variety of regression models
+\item It is necessary to use a regression model when one desires to analyze more than the grouping variable, e.g.
+  \bi
+  \item analyze effects of two grouping variables
+  \item adjust for covariates
+  \ei
+\item For full generality, the regression model needs to have no restrictions on the regression coefficients
+  \bi
+  \item Probabilities are restricted to be in the interval $[0,1]$ so an additive risk model cannot fit over a broad risk range
+  \item Odds ($\frac{p}{1-p}$) are restricted to be in $[0, \infty]$
+  \item Log odds have no restrictions since they can be in $[-\infty, \infty]$
+  \ei
+\item So log odds is a good basis for regression analysis of categorical $Y$
+ \bi
+ \item default assumption of additivity of effects needs no restrictions
+ \item will still translate to probabilities in $[0,1]$
+ \ei
+\item The binary logistic regression model is a model to estimate the probability of an event as a flexible function of covariates
+\item Let the outcome variable $Y$ have the values $Y=0$ (non-event) or $Y=1$ (event)
+\begin{equation}
+  \textrm{Prob}(Y = 1 | X) = \frac{1}{1 + \exp(-(\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \ldots))}
+\end{equation}
+\item The sum inside the inner () is called the linear predictor (LP)
+\item The binary logistic model relates LP (with no restrictions) to the event probability as so:
+<<lrmshape>>=
+lp <- seq(-5, 5, length=150)
+plot(lp, plogis(lp), xlab='Linear Predictor', ylab='P(Y=1)', type='l')
+@
+\item Notes about LP:
+ \bi 
+ \item for a given problem the range may be much narrower than $[-4,4]$
+ \item when any predictor $X_j$ with a non-zero $\beta_j$ is categorical, LP cannot take on all possible values within its range, so the above plot will have gaps
+ \ei
+\item As a special case the model can estimate and compare two probabilities as done above, through an odds ratio
+\item Logistic regression seems like an overkill here, but it sets the stage for more complex frequentist analysis as well as Bayesian analysis
+\item For our case the model is as follows
+\item Consider groups A and B, A = reference group\\
+  $[x]$ denotes 1 if $x$ is true, 0 if $x$ is false\\
+  Define the expit function as the inverse of the logit function, or expit$(x) = \frac{1}{1 + \exp(-x)}$
+\beqa
+P(Y = 1 | \textrm{group}) &=& \frac{1}{1 + \exp(-(\beta_0 + \beta_1 [\textrm{group } B]))} \\
+ &=& \textrm{expit}(\beta_0 + \beta_1 [\textrm{group } B])\\
+P(Y = 1 | \textrm{group A}) &=& \textrm{expit}(\beta_0)\\
+P(Y = 1 | \textrm{group B}) &=& \textrm{expit}(\beta_0 + \beta_1)
+\eeqa
+$\beta_0 =$ log odds of probability of event in group A $= \log(\frac{p_1}{1 - p_1}) = \textrm{logit}(p_1)$\\
+$\beta_1 =$ increase in log odds in going from group A to group B = \\ $\log(\frac{p_2}{1 - p_2}) - \log(\frac{p_1}{1 - p_1}) = \textrm{logit}(p_2) - \textrm{logit}(p_1)$\\
+$\exp(\beta_1) =$ group B : group A odds ratio $= \frac{\frac{p_2}{1 - p_2}}{\frac{p_1}{1 - p_1}}$ \\
+expit$(\beta_0) = p_1$ \\
+expit$(\beta_0 + \beta_1) = p_2$
+\item Once the $\beta$s are estimated, one quickly gets the B:A odds ratio and $\hat{p}_1$ and $\hat{p}_2$
+\item This model is \textbf{saturated}
+ \bi
+ \item has the maximum number of parameters needed to fully describe the situation (here, 2 since 2 groups)
+ \item saturated models \textbf{must} fit the data if the distributional and independence assumptions are met 
+ \item logistic model has no distributional assumption
+ \ei 
+\item Logistic regression is more general and flexible than the specialized tests for proportions
+ \bi
+ \item allows testing association on continuous characteristics
+ \item easily extends to more than two groups
+ \item allows adjustment for covariates
+ \ei
+\item Examples:\\
+  \bi
+  \item assess effects of subjects' sex and country (Canada vs.\ US) on $P(Y=1)$ denoted by $p$\\
+  logit $p$ = constant + logit male effect + logit Canada effect
+  \item same but allow for interaction\\
+  logit $p$ = constant + logit male effect + logit Canada effect + special effect of being male if Canadian
+  \item latter model is saturated with 3 d.f.\ so fits as well as a model with 4 proportions
+    \bi
+    \item unlike the overall Pearson $\chi^2$ test, allows testing interaction and
+    \item separate effects of sex and country (e.g., 2 d.f.\ chunk test for whether there is a sex difference for either country, allowing for the sex effect to differ by country)
+    \ei
+  \ei
+\ei
+
+\subsection{Test Statistics}
+For frequentist logistic models there are 3 types of $\chi^2$ test statistics for testing the same hypothesis:
+  \bi
+  \item likelihood ratio (LR) test (usually the most accurate) and is scale invariant\footnote{The LR test statistic is the same whether testing for an absolute risk difference of 0.0, or for an odds or risk ratio of 1.0.}
+   \bi
+   \item Can obtain the likelihood ratio $\chi^2$ statistic from either the logistic model or from a logarithmic equation in the two proportions and sample sizes
+   \ei
+  \item Score test (identical to Pearson test for overall model if model is saturated)
+  \item Wald test (square of $\frac{\hat{\beta}}{\textrm{s.e.}}$ in the one parameter case; misbehaves for extremely large effects)
+  \item Wald test is the easiest to compute but $P$-values and confidence intervals from it are not as accurate.  The score test is the way to exactly reproduce the Pearson $\chi^2$ statistic from the logistic model.
+  \item As with $t$-test vs.\ a linear model, the special case tests are not needed once you use the logistic model framework
+  \item Three usages of any of these test statistics:
+    \bi
+    \item individual test, e.g. sex effect in sex-country model without interaction
+    \item chunk test, e.g. sex + sex $\times$ country interaction 2 d.f.\ test\\tests overall sex effect
+    \item global test of no association, e.g. 3 d.f.\ test for whether sex or country is associated with $Y$
+    \ei
+  \ei
+ 
+\subsection{Frequentist Analysis Example}
+ \bi
+ \item Consider again our emergency surgery example
+ \item String the observations out to get one row = one patient, binary $Y$
+ \ei
+
+<<lrmprop,cache=FALSE>>=
+require(rms)
+options(prType='latex')
+priority <- factor(c(rep('emergency', 25), rep('other', 111)), c('other', 'emergency'))
+death <- c(rep(0, 19), rep(1, 6), rep(0, 100), rep(1, 11))
+table(priority, death)
+@
+<<lrmprop2, results='asis', cache=FALSE>>=
+d  <- data.frame(priority, death)
+dd <- datadist(d); options(datadist='dd')
+# rms package needs covariate summaries computed by datadist
+f <- lrm(death ~ priority)
+f
+@
+\bi 
+\item Compare the LR $\chi^2$ of 3.2 with the earlier Pearson $\chi^2$ of 3.70
+\item The likelihood ratio (LR) $\chi^2$ test statistic and its $P$-value are usually a little more accurate than the other association tests
+ \bi
+ \item but $\chi^2$ distribution is still only an approximation to the true sampling distribution
+ \ei
+\item See that we can recover the simple proportions from the fitted logistic model:\\
+$\hat{p}_1 = \frac{11}{111} = 0.099 = \textrm{expit}(-2.2073)$\\
+$\hat{p}_2 = \frac{6}{25} = 0.24 = \textrm{expit}(-2.2073 + 1.0546)$
+\ei 
+
+<<lrmprop3, results='asis'>>=
+summary(f)
+@
+
+\bi
+\item The point estimate and CLs for the odds ratio is the same as what we obtained earlier.
+\ei
+
+Add a random binary variable to the logistic model---one that is correlated with the surgical priorty---to see the effect on the estimate of the priority effect
+
+<<lrmpropr>>=
+set.seed(10)
+randomUniform <- runif(length(priority))
+random <- ifelse(priority == 'emergency', randomUniform < 1/3,
+                                          randomUniform > 1/3) * 1
+d$random <- random
+table(priority, random)
+@
+<<lrmpropr2, results='asis'>>=
+lrm(death ~ priority + random)
+@
+
+The effect of emergency status is diminished, and the random grouping variable, created to have no relation to death in the population, has a large apparent effect.
+
+\subsection{Bayesian Logistic Regression Analysis}
+
+\bi
+\item Has several advantages
+ \bi
+ \item All calculations are exact (to within simulation error) without changing the model
+ \item Can incorporate external information
+ \item Intuitive measures of evidence
+ \item Automatically handles zero-frequency cells (priors shrink probabilities a bit away from 0.0)
+ \ei
+\item Simple to use beta priors for each of the two probabilities
+\item But we'd need to incorporate a complex dependency in the two priors because we know more about how the two probabilities relate to each other than we know about each absolute risk
+\item Simpler to have a wide prior on $p_1$ and to have a non-flat prior on the log odds ratio
+  \bi
+  \item could backsolve and show dependency between knowledge of $p_1$ and $p_2$
+  \ei
+\item Use the same data model as above
+\item As before we use the \R\ \co{brms} package which makes standard modeling easy
+\item Need two priors: for intercept $\beta_0$ and for log odds ratio $\beta_1$
+\item $\beta_0$: use a normal distribution that makes $p_1 = 0.05$ the most likely value (put mean at logit(0.05) = -2.944) and allows only a 0.1 chance that $p_1 > 0.2$; solve for SD $\sigma$ that accomplishes that
+<<normsolve>>=
+# Given mu and value, solve for SD so that the tail area of the normal distribution beyond value is prob
+normsolve <- function(mu, value, prob) (value - mu) / qnorm(1 - prob)
+normsolve(qlogis(0.05), qlogis(0.2), 0.1)  # qlogis is R logit()
+@
+\item We round $\sigma$ to 1.216
+\item For $\beta_1$ put a prior that has equal chance for OR $< 1$ as for OR $> 1$, i.e., mean for log OR of zero\\
+  Put a chance of only 0.1 that OR $> 3$
+<<normsolve2>>=
+normsolve(0, log(3), 0.1)
+@  
+\item Round to 0.857
+\ei
+Compute the correlation between prior evidence for $p_1$ and $p_2$ by drawing 100,000 samples from the prior distributions.  Also verify that prior probability $p_2 > p_1$ is $\frac{1}{2} =$ prob.\ OR $> 1$.
+<<priorcorr>>=
+b0 <- rnorm(100000, qlogis(0.05), 1.216)
+b1 <- rnorm(100000, 0, 0.857)
+p1 <- plogis(b0)
+p2 <- plogis(b0 + b1)
+cor(b0, b1, method='spearman')
+cor(p1, p2, method='spearman')
+
+# Define functions for posterior probability operator and posterior mode
+P <- mean   # proportion of posterior draws for which a condition holds
+pmode <- function(x) {
+  z <- density(x)
+  z$x[which.max(z$y)]
+  }
+
+P(p2 > p1)
+P(b1 > 0)
+P(exp(b1) > 1)
+@
+
+To show that prior knowledge about $p_1$ and $p_2$ is uncorrelated when we don't know anything about the odds ratio, repeat the above calculation use a SD of 1000 for the log odds ratio:
+<<priorcorr2>>=
+b1 <- rnorm(100000, 0, 1000)
+p2 <- plogis(b0 + b1)
+cor(p1, p2, method='spearman')
+@
+
+Now do Bayesian logistic regression analysis.
+
+<<bayesprop0, cache=FALSE>>=
+require(brms)
+# Tell brms/Stan to use all available CPU cores
+options(mc.cores=parallel::detectCores())
+@
+
+<<bayesprop>>=
+p <- c(prior(normal(-2.944, 1.216), class='Intercept'),
+       prior(normal(0, 0.857),      class='b'))
+f <- brm(death ~ priority, data=d, prior=p, family='bernoulli', seed=123)
+@
+
+<<bayesprop2,h=6,w=6>>=
+f
+plot(f)
+@
+
+<<bayesprop3>>=
+# Bring out posterior draws
+w <- as.data.frame(f)
+b0 <- w[, 'b_Intercept']
+b1 <- w[, 'b_priorityemergency']
+r  <- rbind(c(mean(b0), median(b0), pmode(b0)),
+            c(mean(b1), median(b1), pmode(b1)),
+            c(mean(exp(b1)), median(exp(b1)), pmode(exp(b1))))
+colnames(r) <- c('Posterior Mean', 'Posterior Median', 'Posterior Mode')
+rownames(r) <- c('b0', 'b1', 'OR')
+round(r, 3)
+@
+
+Because the prior on the OR is conservative, the Bayesian posterior mode for the OR is smaller than the frequentist maximum likelihood estimate of 2.87.  
+
+Below notice how easy it is to do Bayesian inference on derived quantities p1 and p2 which are functions of b0 and b1.
+
+<<bayesprop4>>=
+# 0.95 credible interval for log odds ratio and odds ratio
+quantile(b1, c(0.025, 0.975))
+quantile(exp(b1), c(.025, 0.975))
+exp(quantile(b1,  c(0.025, 0.975)))
+# Posterior density of emergency:other odds ratio
+plot(density(exp(b1)), xlab='OR', main='')
+abline(v=c(1, pmode(exp(b1))), col=gray(0.85))
+# Probability that OR > 1
+P(exp(b1) > 1)
+# Probability it is > 1.5
+P(exp(b1) > 1.5)
+# Probability that risk with emergency surgery exceeds that of
+# non-emergency (same as P(OR > 1))
+# plogis in R is 1/(1 + exp(-x))
+P(plogis(b0 + b1) > plogis(b0))
+# Prob. that risk with emergency surgery elevated by more than 0.03
+P(plogis(b0 + b1) > plogis(b0) + 0.03)
+@
+
+Even though the priors for the intercept and log odds ratio are independent, the connection of these two parameters in the data likelihood makes the posteriors dependent as shown with Spearman correlations of the posterior draws below.  Also get the correlation between evidence for the two probabilities.  These have correlated priors even though they are unconnected in the likelihood function.  Posteriors for $p_1$ and $p_2$ are less correlated than their priors.
+
+<<bayesprop2c>>=
+cor(b0, b1, method='spearman')
+cor(plogis(b0), plogis(b0 + b1), method='spearman')
+@
+
+
+To demonstrate the effect of a skeptical prior:
+\bi
+\item Add random grouping to model as we did with the frequentist analysis
+\item Make use of prior information that this variable is unlikely to be important
+\item Put a prior on the log OR for this variable centered at zero with chance that the OR $> 1.25$ of only 0.05
+\ei
+
+<<bayesprop5>>=
+normsolve(0, log(1.25), 0.05)
+
+p <- c(prior(normal(-2.944, 1.216), class='Intercept'),
+       prior(normal(0, 0.857),      class='b', coef='priorityemergency'),
+       prior(normal(0, 0.136),      class='b', coef='random'))
+
+f2 <- brm(death ~ priority + random, data=d, prior=p, family='bernoulli',
+          seed=121, refresh=FALSE)
+f2
+@
+
+\bi
+\item Effect of \co{random} is greatly discounted
+\item Posterior mean priority effect and its credible interval is virtually the same as the model that excluded \co{random}
+\ei
+
+James Rae and Nils Reimer have written a nice tutorial on using the \R~\co{brms} package for binary logistic regression available at
+\href{http://bit.ly/brms-lrm}{bit.ly/brms-lrm}

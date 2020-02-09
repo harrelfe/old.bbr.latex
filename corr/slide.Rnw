@@ -2,8 +2,9 @@
 <<echo=FALSE>>=
 require(Hmisc)
 knitrSet('corr')
+ord <- markupSpecs$latex$ord   # function to typeset ordinal integers
 @
-\chapter{Correlation}
+\chapter{Correlation}\bmovie{12}\ddisc{12}
 \section{Overview}
 
 \begin{center}
@@ -334,4 +335,227 @@ See also \href{https://stats.stackexchange.com/questions/415131}{stats.stackexch
 \item Rarely appropriate
 \item Two $r$'s can be the same even though slopes may differ
 \item Usually better to compare effects on a real scale (slopes)
+\ei
+
+\section{Avoiding Overinterpretation}
+\bi
+\item Often researchers 
+ \bi
+ \item compute many correlations then
+ \item make a big deal out of the largest observed correlation
+ \ei
+\item This is \emph{double dipping}: using the same dataset to tell you which features to test, then testing those features
+\item This is a ranking and selection problem, and the data seldom contain enough information to be reliable in the choices
+\ei
+
+\subsection{Simulate Data}
+\bi
+\item For our analysis experiments, simulate a sample of size 50 from a 10-variate normal distribution with a known correlation matrix
+\item To specify this correlation matrix take the easy way out: compute an observed correlation matrix from a small sample where all correlations in the population are zero
+\item The usual sample noise will generate some large observed correlations
+<<simrdat>>=
+require(Hmisc)
+require(mvtnorm)
+# Get a population correlation matrix by getting sample correlations
+# on a random normal sample with N=20 and all true correlations=0
+# then pretend these sample correlations were real population values
+set.seed(3)
+x <- rmvnorm(20, sigma=diag(10))
+R <- rcorr(x)$r
+# True correlations we will simulate from:
+round(R, 2)
+
+# Get a huge sample from a multivariate normal distribution to see
+# that it mimics the real correlation matrix R
+x <- rmvnorm(50000, sigma=R)
+table(round(R - rcorr(x)$r, 2))
+
+# Now sample from the population to get our dataset with N=50
+x <- rmvnorm(50, sigma=R)
+rorig <- rcorr(x)$r
+round(rorig, 2)
+@
+\ei
+
+\subsection{Margin of Error for a Single $r$}
+\bi
+\item First compute the margin of error in estimating a single $r$ from $n=50$
+\item This is the spacing between $r$ and it's lower 0.95 CL or the spacing between $r$ and its upper CL whichever is greatest
+\item CL based on Fisher's $z$-transformation described earlier
+\item Compute this for 4 hypothetical true $r$: 0 0.25 0.5 0.75
+<<rmoe>>=
+r <- (0 : 3) / 4
+n <- 50
+zcrit <- qnorm(0.975)
+z <- 0.5 * log( (1 + r) / (1 - r))
+lo <- z - zcrit/sqrt(n-3)
+hi <- z + zcrit/sqrt(n-3)
+rlo <- (exp(2*lo)-1)/(exp(2*lo)+1)
+rhi <- (exp(2*hi)-1)/(exp(2*hi)+1)
+w <- rbind(r=r, 'Margin of Error'=pmax(rhi - r, r - rlo))
+prmatrix(round(w, 2), collab=rep('', 4))
+@
+\item If the true correlation is 0.5, the margin of error in estimating it is $\pm 0.24$ with $n=50$
+\ei
+
+\subsection{Bootstrapping the Correlation Selection Process}
+\bi
+\item Can use the bootstrap to document the difficulty of the task
+\item Steps:
+ \be 
+ \item form a matrix with $N$ rows and $p$ columns where $N$ is the number of observations and $p$ is the number of variables being correlated with each other
+ \item draw a sample of size $N$ from this matrix by sampling its rows
+ \item compute all the correlation coefficients as was done previously
+ \item re-run the same selection process as was done on the original dataset
+ \item repeat 1000 times
+ \item examine the distribution of the selections over the 1000 repeats
+ \ee
+\ei
+
+\subsection{Bootstrapping Bias in Largest Observed $r$}
+\bi
+\item Start with something simpler than ranking all the $r$s in the matrix: estimate the bias in the largest observed $r$
+\item Draw a sample with replacement from rows of the data matrix
+\item For each of these bootstrap samples find which pair of variables has the highest $r$
+\item Track this variable pair and compute $r$ in the original sample
+\item Compute the dropoff in $r$ from the bootstrap sample to the original sample
+\item This simulates the \emph{process} used to find the largest $r$
+\item Example: use data simulated above with 10 standard normal random variables \& known correlation matrix on 50 subjects
+\item Sample correlation matrix has $\frac{10 \times 9}{2} = 45$ distinct coefficients
+<<bootmax>>=
+# Function to retrieve the upper triangle of a symmetric matrix
+# ignoring the diagnonal terms
+up <- function(z) z[upper.tri(z)]
+rorigu <- up(rorig)
+max(rorigu)   # .685 = [2,10] element; 0.604 in population
+which.max(rorigu)
+# is the 38th element in the upper triangle
+
+# Tabulate the difference between sample r estimates and true values
+Ru <- up(R)
+mean(abs(Ru - rorigu))
+table(round(Ru - rorigu, 1))
+
+# Repeat the "finding max r" procedure for 1000 bootstrap samples
+# Sample from x 1000 times with replacement, each time computing
+# a new correlation matrix
+samepair <- dropsum <- 0
+for(i in 1 : 1000) {
+  b  <- sample(1 : 50, replace=TRUE)
+  xb <- x[b, ]   # sample with replacement from rows
+  r  <- rcorr(xb)$r
+  ru <- up(r)
+  wmax <- which.max(ru)
+  if(wmax == 38) samepair <- samepair + 1
+  # Compute correlation for the bootstrap best pair in the original sample
+  origr <- rorigu[wmax]
+  # Compute dropoff in best r
+  dropoff <- ru[wmax] - origr
+  dropsum <- dropsum + dropoff
+}
+cat('Number of bootstaps selecting the original most correlated pair:',
+    samepair, 'out of 1000', '\n')
+cat('Mean dropoff for max r:', round(dropsum / 1000, 3), '\n')
+@
+
+\item For our dataset with $n=50$ we expect that the maximum observed $r$ out of 45 $r$s is biased high by 0.071
+ \bi
+ \item Could subtact 0.071 to debias the observed max $r$ although this will worsen its precision
+ \ei
+\ei
+
+\subsection{Bootstrapping Ranks of All $r$s}
+\bi
+\item Do a more comprehensive assessment that quantifies the difficulty of the task in ranking all the $r$s
+\item Quantity uncertainties in the ranks of the original correlation coefficients
+\item Apparent ``winner'' was the one receiving the highest ranking
+  $q$ among all $r$s
+\item What is the distribution of $q$ over the 1000 bootstrap samples?
+\item Can easily compute a 0.95 bootstrap nonparametric percentile confidence interval for the true unknown ranking of that feature combination and for ranking all the examined feature correlations
+\item Bootstrap the correlation matrix and re-rank the coefficients
+\item For each pair of variables compute the 0.95 confidence interval for the rank of its correlation from among the 45
+
+<<bootcorr>>=
+# For each observed correlation compute its rank among 45 distinct pairs
+orig.ranks <- rank(up(rorig))
+# Sample from x 1000 times with replacement, each time computing
+# a new correlation matrix
+Rm <- matrix(NA, nrow=1000, ncol=45)
+for(i in 1 : 1000) {
+  b  <- sample(1 : 50, replace=TRUE)
+  xb <- x[b, ]
+  r  <- rcorr(xb)$r
+  Rm[i, ] <- rank(up(r))
+}
+# Over bootstrap correlations compute quantiles of ranks
+low  <- apply(Rm, 2, quantile, probs=0.025)
+high <- apply(Rm, 2, quantile, probs=0.975)
+round(cbind('Original Rank'=orig.ranks, Lower=low, Upper=high))
+@
+
+\item Highest observed $r$ (rank 45) has 0.95 CI $[40,45]$
+\item Data are consistent with it being the \Sexpr{ord(6)} highest
+\item Smallest observed value (rank 1; most impressive negative
+  correlation) has CI $[1, 2]$ for rank; data consistent with that
+  pair of variables being the best or \Sexpr{ord(2)}
+\item The $r$ originally ranked \Sexpr{ord(36)} has a 0.95 CI of $[28, 43]$ so the data are consistent with it being in the top 3
+\ei
+
+\subsection{Monte Carlo Simulation to Get A Rank Interval}
+\bi
+\item For comparison with the bootstrap, get the frequency distribution of ranks in repeated studies of the apparently highest $r$ in our $n=50$ study
+\item Repeated studies will also have $n=50$ and will be generated from the population correlation matrix
+\item Recall that original max $r$ was the \Sexpr{ord(38)} element of the strung-out $r$ matrix from our sample
+<<mc>>=
+ranks <- integer(1000)
+for(i in 1 : 1000) {
+  xs <- rmvnorm(50, sigma=R)
+  rsim <- up(rcorr(xs)$r)
+  ranks[i] <- rank(rsim)[38]
+}
+table(ranks)   # freqs. of ranks of 38th element in new samples
+quantile(ranks, c(0.025, 0.975))
+@
+\item This interval is a bit wider than the bootstrap interval
+\item \textbf{Note}: both the bootstrap and the Monte Carlo simulated interval would be \textbf{far wider} had the number of correlation coefficients estimated been much greater than the sample size
+\item Example: consider 1000 possible associations with a single $Y$
+\item This time the potential predictors $X$ will be independent in the population and they will be conditioned on (held constant over simulations at the original $X$ values)
+\item The true importance of the $X$s is $1, 2, \ldots, 10$ for the first 10 and all remaining are irrelevant in the population
+<<bigp>>=
+set.seed(8)
+n <- 50
+p <- 1000
+x <- matrix(rnorm(n * p), ncol=p)
+Ey <- x[,1] + 2 * x[,2] + 3 * x[,3] + 4 * x[,4] + 5 * x[,5] + 6 * x[,6] +
+      7 * x[,7] + 8 * x[,8] + 9 * x[,9] + 10 * x[,10]
+y <- Ey + rnorm(n) * 20
+ro <- cor(x, y)
+# First 10 correlations and tabulate all others
+round(ro[1:10], 2)
+table(round(ro[-(1:10)], 1))
+
+# Find which of the 1000 correlation against Y is largest
+wmax <- which.max(ro)
+wmax     # correct according to population
+ro[wmax]   # original rank=1000
+
+# Simulate 1000 repeats of sample with new y but keeping x the same
+# See how original highest correlating variable ranks among 1000
+# correlations in new samples
+
+ranks <- numeric(1000)
+for(i in 1 : 1000) {
+  ys <- Ey + rnorm(n) * 20
+  rs <- cor(x, ys)
+  ranks[i] <- rank(rs)[wmax]
+}
+
+table(round(ranks, -1))   # round to nearest 10
+quantile(ranks, c(0.025, 0.975))
+sum(ranks > 998)
+@
+
+\item The apparent winning variable could fairly easily be the \Sexpr{ord(771)} largest instead of the \Sexpr{ord(1000)} ranked correlation
+\item The winning variable was in the top two in only 139 out of 1000 simulations
+\item See Chapter~\ref{chap:hdata} for more ways to quantify limitations of high-dimensional data analysis, including the $p > N$ case
 \ei

@@ -52,6 +52,9 @@ An excellent resource is \href{https://r4ds.had.co.nz/}{\R\ for Data Science} by
 See also \emph{\R\ in Action, second ed.} by Robert 
 Kabacoff.  The online open source book on statistical modeling by Legler and Roback at
 \url{https://bookdown.org/roback/bookdown-bysh} contains a lot of \R\ code.
+Jenny Bryan's \href{https://stat545.com}{STAT 545} \emph{Data
+  Wrangling, Exploration, and Analysis with \R} course at
+\url{stat545.com} is an excellent resource.
 \url{http://stackoverflow.com/tags/r} is the best place for asking
 questions about the language and for learning from answers to past questions
 asked (see also the \Co{R-help} email list).

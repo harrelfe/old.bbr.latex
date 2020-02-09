@@ -524,8 +524,6 @@ Total      & $n-1$   & $SST$ & $MST = SST/(n-1)$   & \\ \hline
 \begin{Schunk}
 \begin{Sinput}
 require(rms)
-\end{Sinput}
-\begin{Sinput}
 x1 <- c( 1,  3,  5,  6,  7,  9,  11)
 y  <- c( 5, 10, 70, 58, 85, 89, 135)
 dd <- datadist(x1, n.unique=5); options(datadist='dd')
@@ -1054,8 +1052,6 @@ d
 getRs('r2stata.r', put='source')
 dubois <- d
 r2stata(dubois)
-\end{Sinput}
-\begin{Sinput}
 # Exclude subject measured using adhesive plaster method
 d <- d[-7, ]
 \end{Sinput}

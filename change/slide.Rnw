@@ -194,6 +194,10 @@ plot(Predict(f, y0, treatment))  # plot y0 on x-axis, 2 curves for 2 treatments
 Kristoffer Magnusson has an excellent paper
 \href{http://rpsychologist.com/treatment-response-subgroup}{Change
   over time is not ``treatment response''}
+  
+Stephen Senn~\cite{sensta} Chapter 7 has a very useful graphical summary of the large-sample variances (inefficiency) of change scores vs.\ ANCOVA vs.\ ignoring baseline completely, as a function of the (assumed linear) correlation between baseline and outcome.
+
+\centerline{\includegraphics[width=0.7\textwidth]{sennChange.jpg}}
 
 \subsection{Special Problems Caused By Non-Monotonic Relationship With Ultimate Outcome}
 Besides the strong assumptions made about how variables are

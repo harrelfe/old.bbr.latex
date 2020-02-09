@@ -20,13 +20,13 @@
 %\usepackage{fontenc}
 %\usepackage[utf8]{inputenc}   % see ~/bib/notes.txt
 
-%\newcommand{\sound}[1]{\marginpar{\hfill\textattachfile{#1.mp3}{\includegraphics[width=0.6cm]{sound.png}}}}
-
 \newcommand{\sound}[1]{\marginpar{\href{http://hbiostat.org/audio/bbr/#1.m3u}{\includegraphics[width=0.45cm]{sound.png}}}}
 
 \newcommand{\movie}[1]{\marginpar{\href{#1}{\includegraphics[width=0.6cm]{movie.png}}}}
+\newcommand{\bmovie}[1]{\marginpar{\href{http://bit.ly/yt-bbr#1}{\includegraphics[width=0.6cm]{movie.png}}}}
 
 \newcommand{\disc}[1]{\marginpar{\href{http://vbiostatcourse.slack.com/messages/bbr/search/#1}{\rotatebox{270}{\fbox{\small\textcolor{blue}{#1}}}}}}
+\newcommand{\ddisc}[1]{\marginpar{\href{http://bit.ly/datamethods-bbr#1}{\includegraphics[width=0.6cm]{discourse.png}}}}
 
 \newcommand{\blog}[1]{\marginpar{\href{http://fharrell.com/post/#1}{\rotatebox{270}{\fbox{\small\textcolor{blue}{blog}}}}}}
 
@@ -37,7 +37,7 @@
 
 % Runs both \label{foo} and \hypertarget{foo}{} so that can link to
 % places from browsers using
-% e.g. fharrell.com/docs/bbr.pdf#nameddest=foo
+% e.g. hbiostat.org/doc/bbr.pdf#nameddest=foo
 % \newcommand{\alabel}[1]{\label{#1}\hypertarget{#1}{}}
 \newcommand{\alabel}[1]{\label{#1}}
 
@@ -59,6 +59,8 @@
 
 \newcommand{\Co}[1]{\texttt{\smaller #1}}
 \newcommand{\co}[1]{\texttt{\smaller #1}}
+
+\newcommand{\head}[1]{~\\\textbf{\smaller[-1]#1}\\}
 
 \newcommand{\ignore}[1]{}
 
@@ -99,6 +101,7 @@
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
+% Note: in htest/slide.Rnw counter set back to 1 because hit footnote z
 
 \newcommand{\sfbox}[1]{%
 \setlength{\fboxrule}{0.05pt}\setlength{\fboxsep}{1pt}%
@@ -135,7 +138,7 @@
 
 \begin{flushright}
 \Huge
-\textsc{Biostatistics for\\Biomedical Research}\\[2ex]
+\includegraphics[width=3.5in]{logo.png}\hfill\textsc{Biostatistics for\\Biomedical Research}\\[2ex]
 %Sessions 1, 3--4, 6, 7 \\[2ex]
 \huge Frank E Harrell Jr \\ James C Slaughter \\
 \Large
@@ -143,11 +146,14 @@ Department of Biostatistics \\
 Vanderbilt University School of Medicine \\
 \texttt{f.harrell@vanderbilt.edu} \\ \texttt{james.c.slaughter@vanderbilt.edu}
 \\[2ex] \href{http://biostat.mc.vanderbilt.edu/wiki/Main/ClinStat}{biostat.mc.vanderbilt.edu/ClinStat}\\
-Questions/discussions:\\Slack channel \texttt{bbr} in 
-\href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
-\R\ code in text: \href{http://fharrell.com/code/bbr.zip}{fharrell.com/code/bbr.zip}\\
+Questions/discussions/topic suggestions: \\\href{http://datamethods.org/t/bbr-video-course}{\url{datamethods.org/t/bbr-video-course}}\\
+%\\Slack channel \texttt{bbr} in 
+%\href{http://vbiostatcourse.slack.com}{vbiostatcourse.slack.com}\\
+Web course: \href{https://hbiostat.org/bbr}{\texttt{hbiostat.org/bbr}}\\
+\R\ code in text: \href{http://hbiostat.org/bbr/code.zip}{hbiostat.org/bbr/code.zip}\\
+Glossary of statistical terms: \url{bit.ly/stat-glossary}\\
 Blog: \href{http://fharrell.com}{fharrell.com}\\
-{\smaller \verb|@f2harrell|}
+{\smaller \verb|@f2harrell     #bbrcourse|}
 \\[2ex]
 \small
 \end{flushright}
@@ -156,7 +162,7 @@ Blog: \href{http://fharrell.com}{fharrell.com}\\
 \begin{center}
 \vspace{.5in}
 \small
-Copyright 2001-2018 FE Harrell \& JC Slaughter ~~~ All Rights Reserved
+Copyright 2001-2020 FE Harrell \& JC Slaughter ~~~ All Rights Reserved
 \\ \hfill \scriptsize Updated \today
 \end{center}
 
@@ -193,7 +199,7 @@ Copyright 2001-2017 FE Harrell \& JC Slaughter \& L Choi ~~~ All Rights Reserved
 \pagestyle{headings}
 
 \setcounter{tocdepth}{1}
-%{\smaller \textbf{Glossary of statistical terms}:
+{\smaller \textbf{Glossary of statistical terms}: \url{bit.ly/stat-glossary}}
 %\url{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ClinStat/glossary.pdf}}
 
 
@@ -291,8 +297,30 @@ code.zip&            & Updated\\
 5.8.2   & 2019-06-21 & Example of needed observed differences in means\\
 1.2     & 2019-06-29 & Link to Norm Matloff material for learning R\\
 13      & 2019-08-11 & Added link to Senn article, fixed plotting\\
-                     & contrasts as.data.frame\\
-  \hline
+        &            & contrasts as.data.frame\\
+3       & 2019-08-25 & many\\
+4.3     & 2019-08-30 & reference RCTGraphics wiki\\
+3.2.1   & 2019-09-16 & new section\\
+3.8     & 2019-10-10 & added McElreath's terminology\\
+3.9     & 2019-10-10 & added baseball batting average example\\
+3.2.1.1 & 2019-10-15 & new section on planning observational research\\
+4.3     & 2019-10-15 & new links, more info about interactive graphics\\
+4.5     & 2019-10-16 & moved to 4.3.4\\
+4.3.4   & 2019-10-16 & new section on semi-interactive graphics\\
+4.4     & 2019-10-19 & new opinions about tables\\
+5       & 2019-10-22 & many changes for BBR course\\
+5.1.1   & 2019-10-24 & new section on central limit theorem\\
+5.5     & 2019-10-27 & new section on interval estimation\\
+5.6     & 2019-11-09 & added Bayes\\
+5.9     & 2019-12-02 & added Bayes, many other changes\\
+        & 2019-12-07 & added hyperlinks for YouTube BBR sessions and datamethods.org\\
+5.12    & 2019-12-09 & many\\
+6       & 2019-12-11 & added frequentist and Bayesian logistic model\\
+7       & 2019-12-30 & several minor changes\\
+7.6-7.8 & 2020-01-19 & new sections on PO model and power\\
+8       & 2020-01-25 & new sections on bootstrapping correlation matrices\\
+14.4.1  & 2020-02-03 & Added S Senn change from baseline graph\\
+\hline
 \end{tabular}\end{center}
 \else
 \fi
@@ -311,6 +339,13 @@ Modeling Strategies, 2nd ed.} by FE Harrell, Springer, 2015.
 
 \includegraphics[width=0.6cm]{movie.png} in the right margin indicates
 a hyperlink to a YouTube video related to the subject.
+
+There is a YouTube channel (\texttt{BBRcourse}) for these notes at
+\href{http://bit.ly/yt-bbr}{bit.ly/yt-bbr}
+or by searching for YouTube channel \texttt{BBRcourse}.  A discussion
+board about the overall course is at \href{http://datamethods.org/t/bbr-video-course}{\url{datamethods.org/t/bbr-video-course}}.  You can go directly to a YouTube video for BBR Session n by going to \url{bit.ly/yt-bbrn}.
+
+\includegraphics[width=0.5cm]{discourse.png} in the right margin is a hyperlink to the discussion topic in \url{datamethods.org} devoted to the specific YouTube video session.  You can go directly to the discussion about session n by going to \url{bit.ly/datamethods-bbrn}.  Some of the session on YouTube also had live chat which you can select to replay while watching the video.
 
 \includegraphics[width=0.6cm]{sound.png} in the right margin is a
 hyperlink to an audio file\footnote{The first time you click on one of
@@ -334,7 +369,7 @@ and the posting should be marked to \co{slack} as threaded.  The
 mnemonic in the right margin is also a hyperlink to a search in the
 \verb|bbr| channel for messages containing the mnemonic.  When you
 click on it the relevant messages will appear in the search results on
-the right side of the \co{slack} browser window.
+the right side of the \co{slack} browser window.  Note: Slack is not being used for new discussions.  Use \url{datamethods.org} topics devoted to BBR video sessions instead, or open a new topic for topics that are not part of the BBR web course.
 
 Members of
 the \verb|slack| group can also create submnemonics for subsections or
@@ -346,6 +381,11 @@ notes related to \verb|yourkey|.
 
 Several longer and more discussed subsections in the text have already
 been given short keys in these notes.
+
+Beginning in 2019, the use of \verb|slack| for questions, answers, and
+discussion is no longer recommended.  Instead use
+\verb|datamethods.org| where separate special topics are created for
+some of the chapters in these notes.
 
 \textcolor{blue}{blog} in the right margin is a link to a blog entry
 that further discusses the topic.

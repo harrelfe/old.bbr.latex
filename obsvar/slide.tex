@@ -182,22 +182,21 @@ with(d, mad(y, observer, subject))
 \end{Schunk}
 Zhouwen Liu in the Vanderbilt Department of Biostatistics has
 developed much more general purpose software for this in \R.  Its web
-page is
-\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}.
+pages are
+\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}
+and \url{https://github.com/harrelfe/rscripts}.
 The following example loads the source code and runs the above
 example.  The \R\ functions implement bootstrap nonparametric
 percentile confidence limits for mean absolute discrepency measures.
 \begin{Schunk}
 \begin{Sinput}
-source(paste('http://biostat.mc.vanderbilt.edu/wiki/pub/Main',
-             'AnalysisOfObserverVariability/observerVariability_3_3.R',
-             sep='/'))
+require(Hmisc)
+getRs('observerVariability.r', put='source')
 \end{Sinput}
 \begin{Soutput}
 YOU ARE RUNNING A DEMO VERSION 3_2 
 \end{Soutput}
 \begin{Sinput}
-require(Hmisc)
 with(d, {
   intra <- intraVar(subject, observer, y)
   print(intra)
@@ -268,11 +267,11 @@ Variability quantile:
 0%:  1.25   25%:  1.375   50%:  1.5   75%:  1.75   100%:  2 
     2.5%    97.5% 
 1.166667 1.916667 
-Input object size:	 3320 bytes;	 9 variables	 12 observations
+Input object size:	 3624 bytes;	 9 variables	 12 observations
 Renamed variable	 rater 	to rater1 
 Renamed variable	 disagreement 	to variability 
 Dropped variables	diff,std,auxA1,auxA2
-New object size:	1472 bytes;	5 variables	12 observations
+New object size:	1592 bytes;	5 variables	12 observations
 Inter-Variability 
 
 Measures for All Pairs of Raters
@@ -326,6 +325,10 @@ Variability quantile:
     2.5%    97.5% 
 1.333333 3.208333 
 \end{Soutput}
+\begin{Sinput}
+# To load a demo file into an RStudio script editor window, type
+# getRs('observerVariability_example.r')
+\end{Sinput}
 \end{Schunk}
 From the above output, the 0.95 CL for the mean absolute
 intra-observer difference is $[1.17, 1.92]$ and is $[1.33, 3.21]$ for the

@@ -419,6 +419,9 @@ classifications
  treating physician
 \item Sensitivity and specificity are also improper scoring rules
 \ei
+See
+\href{https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1425-3}{bit.ly/risk-thresholds}:
+Three Myths About Risk Thresholds for Prediction Models by Wynants~\etal
 
 
 \subsection{Example: Damage Caused by Improper Scoring Rule}

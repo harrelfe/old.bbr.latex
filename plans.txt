@@ -15,3 +15,32 @@ Frank Harrell Jr, Chair of the Department of Biostatistics, Vanderbilt School of
 Course notes are available at http://biostat.mc.vanderbilt.edu/ClinStat.
 
  
+
+----------------------------- Twitter Suggestions for Webcast Topics
+
+It's intended both for consumers of research (understand study design,
+stat methods, stat interpretation) and those doing research (slightly
+more so for those who work with statisticians).  Hope that
+statisticians also enjoy it.
+
+
+Covariate adjustment in RCTs and writing stat plans for same
+Prediction and decision making in medicine
+graphics
+interactions
+power calculation
+RCT Table
+Most common errors in RCT interpretation
+
+Confounders, variable selection, multicollinearity, the use of data
+transformation, inferences vs prediction
+
+simulation based power calculations and use of AUC/C-statistic to assess predictive utility of models (esp how NOT to interpret them/misuse).
+
+measurement error and misclassifiction in covariates
+
+
+you might want to feature studies in the news at that moment and give verdicts on their methods, and conclusions...
+
+
+https://t.co/3sqpRjjYqo

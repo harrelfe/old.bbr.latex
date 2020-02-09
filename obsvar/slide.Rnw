@@ -144,16 +144,15 @@ with(d, mad(y, observer, subject))
 @ 
 Zhouwen Liu in the Vanderbilt Department of Biostatistics has
 developed much more general purpose software for this in \R.  Its web
-page is
-\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}.
+pages are
+\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}
+and \url{https://github.com/harrelfe/rscripts}.
 The following example loads the source code and runs the above
 example.  The \R\ functions implement bootstrap nonparametric
 percentile confidence limits for mean absolute discrepency measures.
 <<robs>>=
-source(paste('http://biostat.mc.vanderbilt.edu/wiki/pub/Main',
-             'AnalysisOfObserverVariability/observerVariability_3_3.R',
-             sep='/'))
 require(Hmisc)
+getRs('observerVariability.r', put='source')
 with(d, {
   intra <- intraVar(subject, observer, y)
   print(intra)
@@ -169,6 +168,8 @@ with(d, {
   # Get 0.95 CL for mean absolute inter-observer difference
   print(quantile(b, c(0.025, 0.975)))
 })
+# To load a demo file into an RStudio script editor window, type
+# getRs('observerVariability_example.r')
 @ 
 From the above output, the 0.95 CL for the mean absolute
 intra-observer difference is $[1.17, 1.92]$ and is $[1.33, 3.21]$ for the
