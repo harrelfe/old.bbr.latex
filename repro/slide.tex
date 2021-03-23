@@ -1,4 +1,4 @@
-\chapter{Reproducible Research}\alabel{chap:repro}
+\chapter{Reproducible Research}\alabel{chap:repro} \ddisc{20}
 \quoteit{Disconfirmation bias: giving expected results a relatively
   free pass but rigorously checking non-intuitive results}{\citet{nuz15how}}
 
@@ -6,7 +6,10 @@ An excellent article on how to do reproducible research is
 \cite{mun17man} for which the pdf file is openly available.  The link
 to an excellent video by Garrett Grolemund is on the right. \movie{https://resources.rstudio.com/rstudio-conf-2019/r-markdown-the-bigger-picture}
 
+\href{https://journals.sagepub.com/doi/full/10.1177/0146167217729162}{this article} by Gelman discussed the role that statistical ``significance'' plays in non-reproducible research.
+
 \section{Non-reproducible Research}
+\soundm{rr-1}
 \bi
 \item Misunderstanding statistics
 \item ``Investigator'' moving the target
@@ -28,6 +31,7 @@ to an excellent video by Garrett Grolemund is on the right. \movie{https://resou
 \ei
 
 \section{General Importance of Sound Methodology}
+\soundm{rr-2}
 \subsection{Translation of Research Evidence from Animals to Humans}
 \bi
 \item Screened articles having preventive or therapeutic intervention
@@ -43,6 +47,7 @@ replication $\times$ 1.28 (0.95 CL 0.97--1.69)
 Note: The article misinterpreted $P$-values
 
 \subsection{Other Problems}
+\soundm{rr-3}
 \bi
 \item Rhine and ESP: ``the student's extra-sensory perception ability
 has gone through a marked decline''
@@ -62,6 +67,7 @@ has gone through a marked decline''
 \ei
 
 \subsection{What's Gone Wrong with Omics \& Biomarkers?}
+\soundm{rr-4}
 \bi
 \item Gene expression-based
 prognostic signatures in lung cancer: Ready for clinical use? (\citet{sub10gen})
@@ -81,6 +87,7 @@ utility
 \ei
 
 \subsection{Failure of Replication in Preclinical Cancer Research}
+\soundm{rr-5}
 \bi
 \item Scientists at Amgen tried to confirm published findings related
   to a line of research, before launching development
@@ -105,12 +112,13 @@ infected with these concepts.  Then momentum decreases, although many
 scientists remain infected and continue to work on this field.  New
 omics infections continuously arise in the scientific community.}{\citet{ion10exp}}
 
-\includegraphics[width=\textwidth]{nytimes.png}
+\includegraphics[width=\textwidth]{nytimes.png}\soundm{rr-6}
 
 \section{System Forces}
 \includegraphics[width=\textwidth]{../slinks/sysqual.pdf}
 
 \section{Strong Inference}
+\soundm{rr-7}
 \quoteit{Cognitive biases are hitting the accelerator of science: the
   process spotting potentially important scientific relationships.
   Countering those biases comes down to strengthening the `brake': the
@@ -136,6 +144,7 @@ these alternatives.''\cite{pla64str}
 
 
 \section{Pre-Specified Analytic Plans}
+\soundm{rr-8}
 \quoteit{I have enormous flexibility in how I analyze my data and what
   I choose to report.  This creates a conflict of interest.  The only
   way to avoid this is for me to tie my hands in advance.
@@ -159,6 +168,7 @@ documented (when, why, what)
 
 
 \section{Summary}
+\soundm{rr-9}
 Methodologic experts have much to offer:
 \bi
 \item Biostatisticians and clinical epidemiologists play important
@@ -178,6 +188,7 @@ roles in
 \ei
 
 \section{Software}\alabel{sec:repro-software}
+\soundm{rr-10}
 \subsection{Goals of Reproducible Analysis/Reporting}
 \bi
 \item Be able to reproduce your own results
@@ -195,9 +206,10 @@ a single system command when changes occur in:
 \item Save time
 \item Provide the ultimate documentation of work done for a paper
 \ei
-See \url{http://biostat.mc.vanderbilt.edu/StatReport}
+See \url{http://hbiostat.org/rr}
 
 \subsection{History of Literate Programming}
+\soundm{rr-11}
 \bi
 \item Donald Knuth found his own programming to be sub-optimal
 \item Reasons for programming attack not documented in code; code hard to read
@@ -235,6 +247,7 @@ etc.), drawing commands, etc.
 \end{center}\end{figure}
 
 \subsection{\co{knitr} Approach}
+\soundm{rr-12}
 \bi
 \item \co{knitr} is an \R\ package on CRAN
 \item Uses \co{noweb} and an \co{sweave} style in \LaTeX; see
@@ -259,6 +272,7 @@ to be given to clients
 \ei
 
 \subsection{\co{knitr} Features}
+\soundm{rr-13}
 \bi
 \item \R\ code set off by lines containing only \verb|<<>>=|
 \item \LaTeX\ text starts with a line containing only \verb|@|
@@ -276,13 +290,13 @@ to be given to clients
   as automatically creating a \LaTeX\ \co{figure} environment if a
   caption is given in the chunk header
 \item Setup for advanced features, including code pretty-printing,
-  shown at \url{http://biostat.mc.vanderbilt.edu/KnitrHowto}
+  shown at \url{https://biostat.app.vumr.org/KnitrHowto}
 \item Simplified interface to \co{tikz} graphics
 \item Simplified implementation of caching
 \item More automatic pretty--printing; support
   for \LaTeX\ \co{listings} package built--in
 \ei
-See  \url{http://biostat.mc.vanderbilt.edu/KnitrHowto}
+See  \url{http://hbiostat.org/rr/index.html#template}
 
 \subsubsection{Summary}
 {\smaller[2]
@@ -332,9 +346,7 @@ An excellent book is \citet{irr}.  See also
 \item \url{reproducibleresearch.net}
 \item \url{cran.r-project.org/web/views/ReproducibleResearch.html}
 \item \url{www.nature.com/nature/focus/reproducibility}
-\item \url{biostat.mc.vanderbilt.edu/ReproducibleResearchTutorial}
-\item \url{biostat.mc.vanderbilt.edu/KnitrHowto}
-\item \url{biostat.mc.vanderbilt.edu/StatReport}
+\item \url{hbiostat.org/rr}
 \item \url{groups.google.com/forum/#!forum/reproducible-research}
 \item \url{resources.rstudio.com/rstudio-conf-2019/r-markdown-the-bigger-picture}
 \ei
