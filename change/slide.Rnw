@@ -6,44 +6,48 @@ knitrSet('change', width=80)
 
 \chapter{Transformations, Measuring Change, and Regression to the Mean}\alabel{chap:trans}
 
-\section{Transformations}
+\section{Transformations} \soundm{change-1}
 
 \bi
- \item Normality assumption will not always hold
+ \item Need to transform continuous variables properly for parametric
+   statistical methods to work well
+ \item Normality assumption often does not hold and the central limit
+   theorem is irrelevant for non-huge datasets
  \bi
   \item Skewed distribution
   \item Different standard deviation in different groups
  \ei
  \item Transforming data can be a simple method to overcome these problems
- \item Non-parametric methods (Wilcoxon signed rank, Wilcoxon rank
-   sum) another good option
+ \item Non-parametric methods (Wilcoxon signed rank, Wilcoxon rank sum) another good option
+ \item Transformations are also needed when you combine variables
+   \bi
+   \item subtraction as with change scores
+   \item addition (e.g. don't add ratios that are not proportions)
+   \ei
 \ei
 
 
-\section{Logarithmic Transformation}
+\section{Logarithmic Transformation}  \soundm{change-2}
 
 \bi
 \item Replace individual value by its logarithm
   \bi
    \item $u = log(x)$
   \ei
-\item In statistics, always use the \textit{natural} logarithm (base
-  $e$; $ln(x)$)
+\item In statistics, always use the \textit{natural} logarithm (base $e$; $ln(x)$)
 \item Algebra reminders
   \bi
   \item $log(ab) = log(a) + log(b)$
   \item $log\left(\frac{a}{b}\right) = log(a) - log(b)$
-  \item Inverse of the log function is $exp(u) = x$, where $exp(u) =
-    e^{u}$ and $e$ is a constant ($e = 2.718282 ...$)
+  \item Inverse of the log function is $\exp(u) = x$, where $\exp(u) = e^{u}$ and $e$ is a constant ($e = 2.718282 ...$)
   \ei
 \ei
 
-\subsection{Example Dataset}
+\subsection{Example Dataset} \soundm{change-3}
 
 \bi
   \item From Essential Medical Statistics, 13.2 (pre data only)
-  \item Response: Urinary $\beta$-thromboglobulin ($\beta$-TG)
-    excretion in 24 subjects
+  \item Response: Urinary $\beta$-thromboglobulin ($\beta$-TG) excretion in 24 subjects
   \item 24 total subjects: 12 diabetic, 12 normal
 \ei
 
@@ -73,7 +77,7 @@ p2 <- ggplot(d, aes(x=status, y=btg)) +
 arrGrob(p1, p2, ncol=2)
 @
 \bi
- \item Original scale
+ \item Original scale  \soundm{change-4}
   \bi
    \item Normal: $\overline{x}_1 = 13.53$, $s_1 = 9.194$, $n_1 = 12$
    \item Diabetic: $\overline{x}_2 = 35.28$, $s_2 = 20.27$, $n_2 = 12$
@@ -97,8 +101,7 @@ arrGrob(p1, p2, ncol=2)
         0.95 \textrm{ CI } & = & 2.433 - 2.074 \times \frac{0.595}{\sqrt{12}} \textrm{ to } 2.433 + 2.074 \frac{0.595}{\sqrt{12}} \\
                          & = & 2.08 \textrm{ to } 2.79
       \eeqa
-     \item Can transform back to original scale by using the antilog
-       function $e(u)$ to estimate \textbf{medians}
+     \item Can transform back to original scale by using the antilog function $e(u)$ to estimate \textbf{medians}
 	\beqa
             \textrm{Geometric mean} & = & e^{2.433} = 11.39 \\
             0.95 \textrm{ CI } & = & e^{2.08} \textrm{ to } e^{2.79} \\
@@ -118,7 +121,7 @@ wilcox.test(log(btg) ~ status, data=d)
 \ei
 
 
-\subsection{Limitations of log transformations}
+\subsection{Limitations of log transformations}  \soundm{change-5}
 \bi
   \item Can only be used on positive numbers
    \bi
@@ -126,35 +129,31 @@ wilcox.test(log(btg) ~ status, data=d)
    \ei
   \item Is very arbitrary to the choice of the origin
   \item Not always useful or the best transformation
-  \item Sometimes use a dimensionality argument, e.g., take cube root
-    of volume measurements or per unit of volume counts like blood counts
+  \item Sometimes use a dimensionality argument, e.g., take cube root of volume measurements or per unit of volume counts like blood counts
   \item Cube and square roots are fine with zeros
 \ei
 
-\section{Analysis of Paired Observations}
+\section{Analysis of Paired Observations}  \soundm{change-6}
 \bi
-\item   Frequently one makes multiple observations on same
-experimental unit
+\item   Frequently one makes multiple observations on same experimental unit
 \item   Can't analyze as if independent
-\item   When two observations made on each unit (e.g., pre--post),
-        it is common to summarize each pair using a measure of effect
-        $\rightarrow$ analyze effects as if (unpaired) raw data
+\item   When two observations made on each unit (e.g., pre--post), it is common to summarize each pair using a measure of effect $\rightarrow$ analyze effects as if (unpaired) raw data
 \item   Most common: simple difference, ratio, percent change
 \item   Can't take effect measure for granted
-\item   Subjects having large initial values may have largest
-        differences
-\item   Subjects having very small initial values may have
-        largest post/pre ratios
+\item   Subjects having large initial values may have largest differences
+\item   Subjects having very small initial values may have largest post/pre ratios
 \ei
 
-\section{What's Wrong with Change in General?}\alabel{sec:changegen}
-\subsection{Change from Baseline in Randomized Studies}
+\section{What's Wrong with Change in General?}\alabel{sec:changegen} 
+\subsection{Change from Baseline in Randomized Studies} \soundm{change-7}
 Many authors and pharmaceutical clinical trialists make the mistake of analyzing change from baseline instead of making the raw follow-up measurements the primary outcomes, covariate-adjusted for baseline.  The purpose of a parallel-group randomized clinical trial is to compare the parallel groups, not to compare a patient with herself at baseline. The central question is for two patients with the same pre measurement value of x, one given treatment A and the other treatment B, will the patients tend to have different post-treatment values? This is exactly what analysis of covariance assesses.  Within-patient change is affected strongly by regression to the mean and measurement error.  When the baseline value is one of the patient inclusion/exclusion criteria, the only meaningful change score requires one to have a second baseline measurement post patient qualification to cancel out much of the regression to the mean effect.  It is the second baseline that would be subtracted from the follow-up measurement.
 
 The savvy researcher knows that analysis of covariance is required to ``rescue'' a change score analysis. This effectively cancels out the change score and gives the right answer even if the slope of post on pre is not 1.0. But this works only in the linear model case, and it can be confusing to have the pre variable on both the left and right hand sides of the statistical model. And if $Y$ is ordinal but not interval-scaled, the difference in two ordinal variables is no longer even ordinal.  Think of how meaningless difference from baseline in ordinal pain categories are. A major problem in the use of change score summaries, even when a correct analysis of covariance has been done, is that many papers and drug product labels still quote change scores out of context.  Patient-reported outcome scales with floor or ceiling effects are particularly problematic.  Analysis of change loses the opportunity to do a robust, powerful analysis using a covariate-adjusted ordinal response model such as the proportional odds or proportional hazards model.  Such ordinal response models do not require one to be correct in how to transform $Y$.
 
 
-Not only is it very problematic to analyze change scores in parallel group designs; it is problematic to even compute them.  To compute change scores requires many assumptions to hold, e.g.:
+Not only is it very problematic to analyze change scores in parallel
+group designs; it is problematic to even compute them.  To compute
+change scores requires many assumptions to hold, e.g.:  \soundm{change-8}
 \be
 \item the variable is not used as an inclusion/exclusion criterion for the study, otherwise regression to the mean will be strong
 \item if the variable is used to select patients for the study, a second post-enrollment baseline is measured and this baseline is the one used for all subsequent analysis
@@ -165,15 +164,44 @@ Not only is it very problematic to analyze change scores in parallel group desig
 \item the slope of the pre value vs.\ the follow-up measurement must be close to 1.0 when both variables are properly transformed (using the same transformation on both)
 \ee
 
-Details about problems with analyzing change may be found \href{http://biostat.mc.vanderbilt.edu/MeasureChange}{here}, and references may be found \href{http://www.citeulike.org/user/harrelfe/tag/change}{here}.
+Details about problems with analyzing change may be found \href{https://hbiostat.org/bbr/md/change.html}{here}, and references may be found \href{https://hbiostat.org/bib/change.html}{here}.
 
-Regarding 3. above, if pre is not linearly related to post, there is no transformation that can make a change score work.  Two unpublished examples illustrate this problem.  In a large degression study using longitudinal measurements of the Hamilton-D depression scale, there was a strong nonlinear relationship between baseline Hamilton D and the final measurement.  The form of the relationship was a flattening of the effect for larger Ham D, indicating there are patients with severe depression at baseline who can achieve much larger reductions in depression than an average change score would represent (and likewise, patients with mild to moderate depression at baseline would have a reduction in depression symptoms that is far less than the average change indicates).  Doing an ordinal ANCOVA adjusting for a smooth nonlinear effect of baseline using a spline function would have been a much better analysis than the change from baseline analysis done by study leaders.  In the second example, a similar result was found for a quality of life measure, KCCQ.  Again, a flattening relationship for large KCCQ indicated that subtracting from baseline provided a nearly meaningless average change score.
+Regarding 3. above, if pre is not linearly related to post, there is \soundm{change-9}
+no transformation that can make a change score work.  Two unpublished
+examples illustrate this problem.  In a large degression study using
+longitudinal measurements of the Hamilton-D depression scale, there
+was a strong nonlinear relationship between baseline Hamilton D and
+the final measurement.  The form of the relationship was a flattening
+of the effect for larger Ham D, indicating there are patients with
+severe depression at baseline who can achieve much larger reductions
+in depression than an average change score would represent (and
+likewise, patients with mild to moderate depression at baseline would
+have a reduction in depression symptoms that is far less than the
+average change indicates).  Doing an ordinal ANCOVA adjusting for a
+smooth nonlinear effect of baseline using a spline function would have
+been a much better analysis than the change from baseline analysis
+done by study leaders.  In the second example, a similar result was
+found for a quality of life measure, KCCQ.  Again, a flattening
+relationship for large KCCQ indicated that subtracting from baseline
+provided a nearly meaningless average change score. 
 
 Regarding 7. above, often the baseline is not as relevant as thought and the slope will be less than 1.  When the treatment can cure every patient, the slope will be zero.  When the baseline variable is irrelevant, ANCOVA will estimate a slope of approximately zero and will effectively ignore the baseline.  Change will baseline will make the change score more noisy than just analyzing the final raw measurement.  In general, when the relationship between pre and post is linear, the correlation between the two must exceed 0.5 for the change score to have lower variance than the raw measurement.
 
 Bland and Altman~\cite{bla11com} have an excellent \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3286439}{article} about how misleading change from baseline is for clinical trials.  \href{http://www.fharrell.com/post/errmed#change}{This} blog article has several examples of problematic change score analyses in the clinical trials literature.
 
-The following \R\ code exemplifies how to do a powerful, robust analysis without computing change from baseline.  This analysis addresses the fundamental treatment question posed at the top of this section.  This example uses a semiparametric ANCOVA that utilizes only the ranks of $Y$ and that provides the same test statistic no matter how $Y$ is transformed.  It uses the proportional odds model, with no binning of $Y$, using the \co{rms} package \co{orm} function\footnote{\co{orm} can easily handle thousands of intercepts (thousands of distinct $Y$ values).}.  This is a generalization of the Wilcoxon test---it would be almost identical to the Wilcoxon test had the baseline effect been exactly flat.  Note that the proportional odds assumption is more likely to be satisfied than the normal residual, equal variance assumption of the ordinary linear model.
+The following \R\ code exemplifies how to do a powerful, robust
+analysis without computing change from baseline.  This analysis
+addresses the fundamental treatment question posed at the top of this
+section.  This example uses a semiparametric ANCOVA that utilizes only
+the ranks of $Y$ and that provides the same test statistic no matter
+how $Y$ is transformed.  It uses the proportional odds model, with no
+binning of $Y$, using the \co{rms} package \co{orm}
+function\footnote{\co{orm} can easily handle thousands of intercepts
+  (thousands of distinct $Y$ values).}.  This is a generalization of
+the Wilcoxon test---it would be almost identical to the Wilcoxon test
+had the baseline effect been exactly flat.  Note that the proportional
+odds assumption is more likely to be satisfied than the normal
+residual, equal variance assumption of the ordinary linear model. \soundm{change-10}
 
 <<orm, eval=FALSE>>=
 require(rms)
@@ -195,7 +223,10 @@ Kristoffer Magnusson has an excellent paper
 \href{http://rpsychologist.com/treatment-response-subgroup}{Change
   over time is not ``treatment response''}
   
-Stephen Senn~\cite{sensta} Chapter 7 has a very useful graphical summary of the large-sample variances (inefficiency) of change scores vs.\ ANCOVA vs.\ ignoring baseline completely, as a function of the (assumed linear) correlation between baseline and outcome.
+Stephen Senn~\cite{sensta} Chapter 7 has a very useful graphical
+summary of the large-sample variances (inefficiency) of change scores
+vs.\ ANCOVA vs.\ ignoring baseline completely, as a function of the
+(assumed linear) correlation between baseline and outcome.  \soundm{change-11}
 
 \centerline{\includegraphics[width=0.7\textwidth]{sennChange.jpg}}
 
@@ -209,13 +240,8 @@ example is the improper definitions of acute kidney injury (AKI) that have
 been accepted without question.  Many of the definitions are based on
 change in serum creatinine (SCr).  Problems with the definitions include
 \be
-\item The non-monotonic relationship between SCr and mortality
-  demonstrates that it is not healthy to have very low SCr.  This implies
-  that increases in SCr for very low starting SCr may not be harmful as assumed in definitions of AKI.
-\item Given an earlier SCr measurement and a current SCr, the earlier
-  measurement is not very important in predicting mortality once one
-  adjusts for the last measurement.  Hence a change in SCr is not very
-  predictive and the current SCr is all-important.
+\item The non-monotonic relationship between SCr and mortality demonstrates that it is not healthy to have very low SCr.  This implies that increases in SCr for very low starting SCr may not be harmful as assumed in definitions of AKI.
+\item Given an earlier SCr measurement and a current SCr, the earlier measurement is not very important in predicting mortality once one adjusts for the last measurement.  Hence a change in SCr is not very predictive and the current SCr is all-important.
 \ee
 As an example consider the estimated relationship between baseline SCr
 and mortality in critically ill ICU patients.
@@ -244,6 +270,7 @@ h <- lrm(hospdead ~ sex * rcs(crea3, 5), data=w)
 p <- Predict(h, crea3, sex, fun=plogis)
 ggplot(p, ylab='Risk of Hospital Death')    # Fig. (*\ref{fig:change-suppcr}*)
 @
+ \soundm{change-12}
 We see that the relationship is very non-monotonic so that it is
 impossible for change in SCr to be relevant by itself unless the study
 excludes all patients with SCr $< 1.05$.  To put this in perspective,
@@ -251,7 +278,7 @@ in the NHANES study of asymptomatic subjects, a very significant
 proportion of subjects have SCr $< 1$.
 
 
-\section{What's Wrong with Percent Change?}
+\section{What's Wrong with Percent Change?} \soundm{change-13}
 \bi
 \item   Definition
 
@@ -269,8 +296,7 @@ proportion of subjects have SCr $< 1$.
    \item      Treatment A reduced proportion of stroke by 44\%
    \item      Treatment B increased proportion by 80\%
   \ei
-\item   Two increases of 50\% result in a total increase of 125\%, not
-        100\%
+\item   Two increases of 50\% result in a total increase of 125\%, not 100\%
   \bi
    \item Math details: If $x$ is your original amount, two increases of 50\% is $x*1.5*1.5$. Then, \% change = $(1.5*1.5* x - x) / x = x*(1.5*1.5 - 1) / x = 1.25$, or a 125\% increase
   \ei
@@ -292,30 +318,16 @@ proportion of subjects have SCr $< 1$.
 \item   Simple difference or log ratio are symmetric
 \ei
 
-\section{Objective Method for Choosing Effect Measure}
+\section{Objective Method for Choosing Effect Measure} \soundm{change-14}
 \bi
-\item   Goal: Measure of effect should be as independent of
-        baseline value as possible\footnote{Because of regression to
-        the mean, it may be impossible to make the measure of change
-        truly independent of the initial value.  A high initial value
-        may be that way because of measurement error.  The high value will
-        cause the change to be less than it would have been had the
-        initial value been measured without error.  Plotting
-        differences against averages rather than against initial
-        values will help reduce the effect of regression to the mean.}
-\item   Plot difference in pre and post values vs. the pre values.  If this shows no trend, the simple
-        differences are adequate summaries of the effects, i.e., they
-        are independent of initial measurements.
-\item   If a systematic pattern is observed, consider repeating the
-        previous step after taking logs of both the pre and post
-        values.  If this removes any systematic relationship between
-        the baseline and the difference in logs, summarize the data
-        using logs, i.e., take the effect measure as the log ratio.
+\item   Goal: Measure of effect should be as independent of baseline value as possible\footnote{Because of regression to the mean, it may be impossible to make the measure of change truly independent of the initial value.  A high initial value may be that way because of measurement error.  The high value will cause the change to be less than it would have been had the initial value been measured without error.  Plotting differences against averages rather than against initialvalues will help reduce the effect of regression to the mean.}
+\item   Plot difference in pre and post values vs. the pre values.  If this shows no trend, the simple differences are adequate summaries of the effects, i.e., they are independent of initial measurements.
+\item   If a systematic pattern is observed, consider repeating the previous step after taking logs of both the pre and post values.  If this removes any systematic relationship between the baseline and the difference in logs, summarize the data using logs, i.e., take the effect measure as the log ratio.
 \item   Other transformations may also need to be examined
 \ei
 
 
-\section{Example Analysis: Paired Observations}
+\section{Example Analysis: Paired Observations}  \soundm{change-15}
 
 \subsection{Dataset description}
 \bi
@@ -361,43 +373,28 @@ difference measure.
 \nocite{kai89,tor85how,mar85mod,kro93spu,col00sym}
 
 \section{Regression to the Mean}\alabel{sec:change-rttm}\movie{https://youtu.be/yWoKLDy8IQA}
+\soundm{change-16}
 \bi
 \item One of the most important of all phenomena regarding data and estimation
 \item Occurs when subjects are selected because of their values
 \item Examples:
  \be
- \item Intersections with frequent traffic accidents will have fewer accidents in the next observation
-  period if no changes are made to the intersection
- \item The surgeon with the highest operative mortality will have a
-   significant decrease in mortality in the following year
- \item Subjects screened for high cholesterol to qualify for a clinical trial will have lower
-  cholesterol once they are enrolled
+ \item Intersections with frequent traffic accidents will have fewer accidents in the next observation period if no changes are made to the intersection
+ \item The surgeon with the highest operative mortality will have a significant decrease in mortality in the following year
+ \item Subjects screened for high cholesterol to qualify for a clinical trial will have lower cholesterol once they are enrolled
  \ee
 \item Observations from a randomly chosen subject are unbiased for that subject
-\item But subjects \emph{selected} because they are running high or low are selected partially because
-  their measurements are atypical for themselves (i.e., selected \emph{because} of measurement error)
+\item But subjects \emph{selected} because they are running high or low are selected partially because their measurements are atypical for themselves (i.e., selected \emph{because} of measurement error)
 \item Future measurements will ``regress to the mean'' because measurement errors are random
-\item For a classic misattribution of regression to the mean to a
-  treatment effect see
-  \href{https://www.advisory.com/Daily-Briefing/2013/09/30/How-a-hospital-used-social-workers-to-cut-readmissions}{this}\footnote{In
-    their original study, the social workers enrolled patients having 10 or 
-  more hospital admissions in the previous year and showed that after
-  their counseling, the number of admissions in the next year was less than
-  10.  The same effect might have been observed had the social workers
-  given the patients horoscopes or weather forecasts.  This was
-  reported in an abstract for the AHA meeting that has since been
-  taken down from \url{circ.ahajournals.org}.}.
+\item For a classic misattribution of regression to the mean to a treatment effect see \href{https://www.advisory.com/Daily-Briefing/2013/09/30/How-a-hospital-used-social-workers-to-cut-readmissions}{this}\footnote{In their original study, the social workers enrolled patients having 10 or more hospital admissions in the previous year and showed that after their counseling, the number of admissions in the next year was less than 10.  The same effect might have been observed had the social workers given the patients horoscopes or weather forecasts.  This was reported in an abstract for the AHA meeting that has since been taken down from \url{circ.ahajournals.org}.}.
 \ei
 
 Classic paper on shrinkage: Efron \& Morris~\cite{efr77sti}
 \bi
 \item Shrinkage is a way of discounting observed variation that accounts for regression to the mean
-\item In their example you can see that the variation in batting averages for the first 45 at bats is
-  unrealistically large
-\item Shrunken estimates (middle) have too little variation but this discounting made the estimates closer
-  to the truth (final batting averages at the end of the season)
-\item You can see the regression to the mean for the \emph{apparently}
-  very hot and very cold hitters
+\item In their example you can see that the variation in batting averages for the first 45 at bats is unrealistically large
+\item Shrunken estimates (middle) have too little variation but this discounting made the estimates closer to the truth (final batting averages at the end of the season)
+\item You can see the regression to the mean for the \emph{apparently} very hot and very cold hitters
 \ei
 <<baseball,w=5.5,h=4.5,bot=1,left=-3,rt=.5,cap='Initial batting averages as estimates of final batting averages for players, along with shrunken estimates that account for regression to the mean',scap='Baseball batting averages and regression to the mean'>>=
 nam <- c('Roberto Clemente','Frank Robinson','Frank Howard','Jay Johnstone',

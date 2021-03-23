@@ -2,8 +2,7 @@
 
 
 \def\apacue{1}
-\chapter{Introduction to the \R\ \co{rms} Package:
-  The Linear Model}\alabel{chap:rmsintro}
+\chapter{Introduction to the \R\ \co{rms} Package: The Linear Model}\alabel{chap:rmsintro}
 Some of the purposes of the \co{rms} package are to
 \bi
 \item make everyday statistical modeling easier to do
@@ -14,7 +13,7 @@ Some of the purposes of the \co{rms} package are to
   
 \section{Formula Language and Fitting Function}%\sound{rrms-1}
 \bi
-\item Statistical formula in S:
+\item Statistical formula in \R:
 \begin{Schunk}
 \begin{Sinput}
 y ~ x1 + x2 + x3
@@ -129,14 +128,14 @@ dd <- datadist(dd, cholesterol, height)
 \end{Sinput}
 \end{Schunk}
 
-\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
+\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}\bmovie{15}\ddisc{15}
 Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
   of Biostatistics} and originally from Landrigan PJ~\emph{et al}, Lancet
 1:708-715, March 29, 1975.  The study was of psychological and
 neurologic well-being of children who lived near a lead smelting
 plant.  The primary outcome measures are the Wechsler full-scale IQ
 score (\co{iqf}) and the finger-wrist tapping score \co{maxfwt}.  The
-dataset is available at \url{biostat.mc.vanderbilt.edu/DataSets}
+dataset is available at \url{hbiostat.org/data}
 and can be automatically downloaded and \co{load()}'d into \R\ using
 the \co{Hmisc} package \co{getHdata} function.  For now we just
 analyze lead exposure levels in 1972 and 1973, age, and
@@ -168,9 +167,9 @@ lead <- upData(lead,
                units=c(age='years', ld72='mg/100*ml', ld73='mg/100*ml'))
 \end{Sinput}
 \begin{Soutput}
-Input object size:	 50832 bytes;	 39 variables	 124 observations
+Input object size:	 53928 bytes;	 39 variables	 124 observations
 Kept variables	ld72,ld73,age,maxfwt
-New object size:	12824 bytes;	4 variables	124 observations
+New object size:	14096 bytes;	4 variables	124 observations
 \end{Soutput}
 \begin{Sinput}
 contents(lead)
@@ -193,7 +192,7 @@ describe(lead)   # (*\ipacue*)
 lead 
 
  4  Variables      124  Observations
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 age : Age [years] 
        n  missing distinct     Info     Mean      Gmd      .05      .10 
      124        0       73        1    8.935    4.074    3.929    4.333 
@@ -202,7 +201,7 @@ age : Age [years]
 
 lowest :  3.750000  3.833333  3.916667  4.000000  4.166667
 highest: 14.250000 15.000000 15.250000 15.416667 15.916667
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 ld72 : Blood Lead Levels, 1972 [mg/100*ml] 
        n  missing distinct     Info     Mean      Gmd      .05      .10 
      124        0       47    0.999    36.16    17.23    18.00    21.00 
@@ -210,7 +209,7 @@ ld72 : Blood Lead Levels, 1972 [mg/100*ml]
    27.00    34.00    43.00    57.00    61.85 
 
 lowest :  1  2 10 14 18, highest: 62 64 66 68 99
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 ld73 : Blood Lead Levels, 1973 [mg/100*ml] 
        n  missing distinct     Info     Mean      Gmd      .05      .10 
      124        0       37    0.998    31.71    11.06    18.15    21.00 
@@ -218,7 +217,7 @@ ld73 : Blood Lead Levels, 1973 [mg/100*ml]
    24.00    30.50    37.00    47.00    50.85 
 
 lowest : 15 16 18 19 20, highest: 52 53 54 57 58
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 maxfwt : Maximum mean finger-wrist tapping score 
        n  missing distinct     Info     Mean      Gmd      .05      .10 
       99       25       40    0.998    51.96     13.8     33.2     38.0 
@@ -226,7 +225,7 @@ maxfwt : Maximum mean finger-wrist tapping score
     46.0     52.0     59.0     65.0     72.2 
 
 lowest : 13 14 23 26 34, highest: 74 76 79 83 84
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 \end{Soutput}
 \begin{Sinput}
 dd <- datadist(lead); options(datadist='dd')
@@ -257,8 +256,8 @@ Linear Regression Model
  ols(formula = maxfwt ~ age + ld72 + ld73, data = lead)
  
  
-                Model Likelihood     Discrimination    
-                   Ratio Test           Indexes        
+                 Model Likelihood    Discrimination    
+                       Ratio Test           Indexes    
  Obs      99    LR chi2     62.25    R2       0.467    
  sigma9.5221    d.f.            3    R2 adj   0.450    
  d.f.     95    Pr(> chi2) 0.0000    g       10.104    
@@ -315,7 +314,7 @@ function (age = 8.375, ld72 = 34, ld73 = 30.5)
     34.105855 + 2.607845 * age - 0.024597799 * ld72 - 0.23896951 * 
         ld73
 }
-<environment: 0x55e0eb2b2668>
+<environment: 0x55daa37b6f40>
 \end{Soutput}
 \begin{Sinput}
 # Estimate mean maxfwt at age 10, .1 quantiles of ld72, ld73 and .9 quantile of ld73

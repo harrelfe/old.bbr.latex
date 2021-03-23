@@ -145,7 +145,7 @@ with(d, mad(y, observer, subject))
 Zhouwen Liu in the Vanderbilt Department of Biostatistics has
 developed much more general purpose software for this in \R.  Its web
 pages are
-\url{http://biostat.mc.vanderbilt.edu/AnalysisOfObserverVariability}
+\url{http://biostat.app.vumc.org/AnalysisOfObserverVariability}
 and \url{https://github.com/harrelfe/rscripts}.
 The following example loads the source code and runs the above
 example.  The \R\ functions implement bootstrap nonparametric

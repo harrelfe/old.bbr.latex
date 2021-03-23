@@ -109,7 +109,7 @@ segments(x, 0, x, y)
 @ 
 The \co{getHdata} function in the \co{Hmisc} package~\cite{Hmisc}
 finds, downloads, and \co{load()}s datasets from
-\href{http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets}{biostat.mc.vanderbilt.edu/DataSets}.
+\href{https://hbiostat.org/data}{hbiostat.org/data}.
 <<ordc,cap='Distribution of serum creatinine where the patient requiring dialysis is taken to have the worst renal function.  The variable is mostly continuous but is best analyzed as ordinal so that no assumption is made about how to score dialysis except for being worse than all non-dialysis patients. Data taken from NHANES where no patients were actually dialyzed.',scap='Continuous distribution with clumping at the end'>>=
 require(Hmisc)
 getHdata(nhgh)   # NHANES dataset    Fig. (*\ref{fig:descript-ordc}*):
@@ -219,12 +219,14 @@ between any two patients is 7mmHg.
 \movie{https://youtu.be/fSgEeI2Xpdc}
 Cleveland~\cite{cle94ele,cle84sci} is the best source of how-to
 information on making scientific graphs.  Much information may be
-found at \url{http://biostat.mc.vanderbilt.edu/StatGraphCourse},
-especially these notes: \url{http://goo.gl/DHE0a2}.  Information about
+found at \url{https://biostat.app.vumc.org/StatGraphCourse},
+especially these notes: \url{https://hbiostat.org/doc/graphscourse.pdf}.  Information about
 graphics for reporting clinical trials may be found at
-\href{http://biostat.mc.vanderbilt.edu/RCTGraphics}{biostat.mc.vanderbilt.edu/RCTGraphics}.  
+\href{http://biostat.app.vumc.org/RCTGraphics}{biostat.app.vumc.org/RCTGraphics}
+and \href{https://hbiostat.org/R/hreport}{hbiostat.org/R/hreport}.  
 A link to John Rauser's exceptional video about principles of good graphics
 is found on that page as well as in the movie icon in the right margin.
+See \href{https://discourse.datamethods.org/t/journal-graphics}{datamethods.org/t/journal-graphics} for graphical methods for journal articles.
 
 
 Murrell~\cite{mur13inf} has an excellent summary of recommendations:
@@ -342,7 +344,7 @@ ggplot(d, aes(x=Freq, y=agec)) + geom_point() +
 \figs{aevents}{Dot chart showing proportion of subjects having adverse
   events by treatment, sorted by risk difference, produced by the \R\
   \co{greport} package.  See \co{test.Rnw}
-  at \protect\url{biostat.mc.vanderbilt.edu/Greport}}{1}
+  at \protect\url{hbiostat.org/R/greport}}{1}
 
   \bi
   \item multi-panel display for multiple major categorizations
@@ -521,7 +523,7 @@ ggplot(s, aes(x=smoke, y=fev, fill=sex)) +    # Fig. (*\ref{fig:descript-dynamit
                   width=.1,
                   position=position_dodge(.9))
 @ 
-See \url{http://biostat.mc.vanderbilt.edu/DynamitePlots} for a list of
+See \url{http://biostat.app.vumc.org/DynamitePlots} for a list of
 the many problems caused by dynamite plots, plus some solutions.
 
 Instead of the limited information shown in the bar chart, show the

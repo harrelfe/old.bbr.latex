@@ -5,8 +5,7 @@ knitrSet('rmsintro', width=80)
 @
 
 \def\apacue{1}
-\chapter{Introduction to the \R\ \co{rms} Package:
-  The Linear Model}\alabel{chap:rmsintro}
+\chapter{Introduction to the \R\ \co{rms} Package: The Linear Model}\alabel{chap:rmsintro}
 Some of the purposes of the \co{rms} package are to
 \bi
 \item make everyday statistical modeling easier to do
@@ -17,7 +16,7 @@ Some of the purposes of the \co{rms} package are to
   
 \section{Formula Language and Fitting Function}%\sound{rrms-1}
 \bi
-\item Statistical formula in S:
+\item Statistical formula in \R:
 <<eval=FALSE>>=
 y ~ x1 + x2 + x3
 @
@@ -122,14 +121,14 @@ dd <- datadist(dd, cholesterol, height)
 # Adds or replaces cholesterol, height summary stats in dd
 @
 
-\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}
+\section{Short Example}\alabel{sec:rmsintro-leadcontinuous}\ipacue\sound{rrms-4}\bmovie{15}\ddisc{15}
 Consider the lead exposure dataset from B.\ Rosner \emph{Fundamentals
   of Biostatistics} and originally from Landrigan PJ~\emph{et al}, Lancet
 1:708-715, March 29, 1975.  The study was of psychological and
 neurologic well-being of children who lived near a lead smelting
 plant.  The primary outcome measures are the Wechsler full-scale IQ
 score (\co{iqf}) and the finger-wrist tapping score \co{maxfwt}.  The
-dataset is available at \url{biostat.mc.vanderbilt.edu/DataSets}
+dataset is available at \url{hbiostat.org/data}
 and can be automatically downloaded and \co{load()}'d into \R\ using
 the \co{Hmisc} package \co{getHdata} function.  For now we just
 analyze lead exposure levels in 1972 and 1973, age, and

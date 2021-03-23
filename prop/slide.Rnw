@@ -324,9 +324,20 @@ qnorm(.975)^2 / 2 / (diff ^ 2)
 \item To show the multiplicative margins of error\footnote{Value by
     which to multiply the observed odds ratio to obtain the upper 0.95
     confidence limit or to divide the observed odds ratio to obtain
-    the lower 0.95 limit} for a range of sample sizes and values of
-  $p$.  For each scenario, the margin of error assumes that both
-  unknown probability estimates equal $p$.
+    the lower 0.95 limit.  The confidence interval for a ratio should
+    always be constructed on the log scale (unless using the excellent
+    profile likelihood interval which is transformation-invariant).
+    We compute the margin of error on the log ratio scale just as we
+    do for means.  The margin of error can be defined as $\frac{1}{2}$
+    of the width of the confidence interval for the log ratio. If you
+    antilog that margin of error you get the multiplicative factor,
+    i.e., the multiplicative margin of error.  Suppose that the MMOE
+    is 1.5. This means that you can get the 0.95 confidence interval
+    for the ratio by taking the ratio’s point estimate and dividing it
+    by 1.5 and then multiplying it by 1.5. You can loosely say that
+    our point estimate can easily be off by a factor of 1.5.} for a
+  range of sample sizes and values of $p$.  For each scenario, the
+  margin of error assumes that both unknown probability estimates equal $p$.
 \ei
 <<mmeor,w=7,h=6,cap='Multiplicative margin of error related to 0.95 confidence limits of an odds ratio, for varying $n$ and $p$ (different curves), assuming the unknown true probability in each group is no lower than $p$',scap='Multiplicative margin of error for odds ratios'>>=
 require(ggplot2)

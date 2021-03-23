@@ -3,7 +3,7 @@
 
 \def\apacue{1}
 \chapter{Serial Data}
-\section{Introduction}\sound{serial-1}\ipacue
+\section{Introduction}\soundm{serial-1}\ipacue
 Serial data, also called longitudinal data, repeated measures, or
 panel data,
 present a special challenge in that the response variable is
@@ -44,8 +44,7 @@ There are several overall approaches to the analysis of serial
 measurements.  Some of the older approaches such as multiple $t$-tests
 and repeated measures ANOVA are
 now considered obsolete because of the availability of better methods that are
-more flexible and robust\footnote{Repeated measures ANOVA makes stringent
-assumptions and requires complex adjustments for within-subject correlation.}.
+more flexible and robust\footnote{Repeated measures ANOVA makes stringent assumptions and requires complex adjustments for within-subject correlation.}.
 Separate $t$-tests at each time point do not make good use of
 available information, use an inefficient estimate of $\sigma^2$, do
 not interpolate time points, and have multiple comparison problems.
@@ -56,8 +55,7 @@ type II error, but in this case the sacrifice is too severe.
 In addition, investigators are frequently confused by the $t$-test being
 ``significant'' at one time point and not at another, and make the
 unwarranted claim that the treatment is effective only at the first
-time.  Besides not recognizing the \emph{absence of evidence is not
-  evidence for absence} problem, the investigator can be mislead by
+time.  Besides not recognizing the \emph{absence of evidence is not evidence for absence} problem, the investigator can be mislead by
 increased variability in response at the second time point driving
 the $t$ ratio towards zero.  This variability may not even be real but
 may reflect instability in estimating $\sigma$ separately at each time
@@ -94,6 +92,13 @@ have different trajectories.  Mixed effects models can be generalized
 to binary and other endpoints but lose their full likelihood status
 somewhat when these extensions are used, unless a Bayesian approach is used.
 
+\bi
+\item Mixed effects model have random effects (random intercepts and possibly also random slopes or random shapes) for subjects
+\item These allow estimation of the trajectory for an individual subject
+\item When the interest is instead on group-level effects (e.g., average difference between treatments, over subjects), GLS squares models may be more appropriate
+\item The generalization of GLS to non-normally distributed $Y$ is \emph{marginalized models} (marginalized over subject-level effects)
+\ei
+
 Generalized least squares, formerly called growth curve models, is the
 oldest approach and has excellent performance when $Y$ is
 conditionally normally distributed.
@@ -111,7 +116,7 @@ $P$-values and confidence intervals to be accurate.  An advantage of GEE is
 that it extends easily to every type of response variable, including binary,
 ordinal, polytomous, and time-to-event responses.
 
-\subsection{Summary Measures}\sound{serial-2}\ipacue
+\subsection{Summary Measures}\soundm{serial-2}\ipacue
 A simple and frequently effective approach is to summarize the serial
 measures from each subject using one or two measures, then to analyze
 these measures using traditional statistical methods that capitalize
@@ -132,10 +137,9 @@ coefficient of time squared when fitting each subject's data with a
 quadratic equation.  This allows detailed analyses of curve shapes.
 
 \section{Case Study}
-\subsection{Data and Summary Measures}\sound{serial-3}\ipacue
+\subsection{Data and Summary Measures}\soundm{serial-3}\ipacue
 Consider the isoproterenol dose-response analysis of \citet{dupmod} of
-the original data from Lang\footnote{CC Lang~\etal\ NEJM
-  333:155-60, 1995}.  Twenty two normotensive men were studied, 9 of
+the original data from Lang\footnote{CC Lang~\etal\ NEJM 333:155-60, 1995}.  Twenty two normotensive men were studied, 9 of
 them black and 13 white.  Blood flow was measured before the drug was
 given, and at escalating doses of isoproterenol.  Most subjects had 7
 measurements, and these are not independent.
@@ -146,19 +150,17 @@ require(data.table)   # elegant handling of aggregation
 \end{Sinput}
 \begin{Sinput}
 require(ggplot2)
-d <- csv.get(paste('http://biostat.mc.vanderbilt.edu',
-                   'dupontwd/wddtext/data/11.2.Long.Isoproterenol.csv',
-                   sep='/'))
+d <- csv.get('https://hbiostat.org/data/repo/11.2.Long.Isoproterenol.csv')
 d <- upData(d, keep=c('id', 'dose', 'race', 'fbf'),
             race  =factor(race, 1:2, c('white', 'black')),
             labels=c(fbf='Forearm Blood Flow'),
             units=c(fbf='ml/min/dl'))
 \end{Sinput}
 \begin{Soutput}
-Input object size:	 12680 bytes;	 8 variables	 154 observations
-Modified variable	 race 
-Kept variables	 id,dose,race,fbf 
-New object size:	 6216 bytes;	 4 variables	 154 observations
+Input object size:	 13168 bytes;	 8 variables	 154 observations
+Modified variable	race
+Kept variables	id,dose,race,fbf
+New object size:	6496 bytes;	4 variables	154 observations
 \end{Soutput}
 \begin{Sinput}
 d <- data.table(d)
@@ -175,6 +177,7 @@ setkey(d, id, race)
 require(rms)
 \end{Sinput}
 \begin{Sinput}
+options(prType='latex')
 g <- function(x, y, what=c('curve', 'coef', 'area')) {
   what <- match.arg(what)   # 'curve' is default
   knots <- c(20, 60, 150)
@@ -214,7 +217,7 @@ ggplot(d, aes(x=dose, y=fbf, color=factor(id))) +   # Fig. (*\ref{fig:serial-spa
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-spag-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-spag-1} }
 
 \caption[Spaghetti plots for isoproterenol data]{Spaghetti plots for isoproterenol data showing raw data stratified by race.  Next to each curve is the area under the curve divided by 400 to estimate the mean response function.  The area is computed analytically from a restricted cubic spline function fitted separately to each subject's dose-response curve.  Shadowing the raw data are faint lines depicting spline fits for each subject}\label{fig:serial-spag}
 \end{figure}
@@ -229,7 +232,7 @@ ggplot(a, aes(x=tarea, y=area, color=race)) + geom_point() +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-auctwo-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-auctwo-1} }
 
 \caption[AUC by curve fitting and by trapezoidal rule]{AUC by curve fitting and by trapezoidal rule}\label{fig:serial-auctwo}
 \end{figure}
@@ -255,14 +258,14 @@ ggplot(a, aes(x=race, y=area)) +    # Fig. (*\ref{fig:serial-auc}\ipacue*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-auc-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-auc-1} }
 
 \caption[Mean blood flow by race]{Mean blood flow computed from the areas under the spline curves, stratified by race, along with box plots}\label{fig:serial-auc}
 \end{figure}
 \end{Schunk}
-\clearpage
+%\clearpage
 
-\subsection{Nonparametric Test of Race Differences in AUC}\sound{serial-4}\ipacue
+\subsection{Nonparametric Test of Race Differences in AUC}\soundm{serial-4}\ipacue
 A minimal-assumption approach to testing for differences in
 isoproterenol dose-response between races is to apply the Wilcoxon
 test to the normalized AUCs (mean response functions).
@@ -272,7 +275,7 @@ wilcox.test(area ~ race, data=a, conf.int=TRUE)
 \end{Sinput}
 \begin{Soutput}
 
-	Wilcoxon rank sum test
+	Wilcoxon rank sum exact test
 
 data:  area by race
 W = 112, p-value = 7.639e-05
@@ -333,47 +336,41 @@ h
 \end{Schunk}
 \begin{Sinput}
 f <- lrm(race ~ b0 + b1 + b2, data=h, x=TRUE, y=TRUE)
-print(f, latex=TRUE)
+f
 \end{Sinput}
 
-\vspace{1ex}
-
-\centerline{\textbf{Logistic Regression Model}}
-\vspace{1ex}
-
-\begin{verbatim}
-lrm(formula = race ~ b0 + b1 + b2, data = h, x = TRUE, y = TRUE)
-\end{verbatim}
-\centerline{\begin{tabular}{|c|c|c|c|}\hline
-&Model Likelihood&Discrimination&Rank Discrim.\\ 
-&Ratio Test& Indexes&Indexes\\ 
+ \noindent \textbf{Logistic Regression Model}
+ 
+ \begin{verbatim}
+ lrm(formula = race ~ b0 + b1 + b2, data = h, x = TRUE, y = TRUE)
+ \end{verbatim}
+ 
+ {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|c|c|}\hline
+&Model Likelihood&Discrimination&Rank Discrim.\\
+&Ratio Test&Indexes&Indexes\\\hline
+Obs~\hfill 22&LR $\chi^{2}$~\hfill 19.73&$R^{2}$~\hfill 0.798&$C$~\hfill 0.957\\
+~~white~\hfill 13&d.f.~\hfill 3&$g$~\hfill 6.783&$D_{xy}$~\hfill 0.915\\
+~~black~\hfill 9&Pr$(>\chi^{2})$~\hfill 0.0002&$g_{r}$~\hfill 882.952&$\gamma$~\hfill 0.915\\
+$\max|\frac{\partial\log L}{\partial \beta}|$~\hfill $8\!\times\!10^{-7}$&&$g_{p}$~\hfill 0.471&$\tau_{a}$~\hfill 0.463\\
+&&Brier~\hfill 0.080&\\
 \hline
-Obs~\hfill 22&LR $\chi^{2}$~\hfill 19.73&$R^{2}$~\hfill 0.798&$C$~\hfill 0.957\\ 
-~~white~\hfill 13&d.f.~\hfill 3&$g$~\hfill 6.783&$D_{xy}$~\hfill 0.915\\ 
-~~black~\hfill 9&Pr$(>\chi^{2})$~\hfill 0.0002&$g_{r}$~\hfill 882.952&$\gamma$~\hfill 0.915\\ 
-$\max|\frac{\partial\log L}{\partial \beta}|$~\hfill $8\!\times\!10^{-7}$&&$g_{p}$~\hfill 0.471&$\tau_{a}$~\hfill 0.463\\ 
-&&Brier~\hfill 0.080&\\ 
-\hline
-\end{tabular}}
-
-
-\vspace{1ex}
-
-%latex.default(U, file = file, first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", math.col.names = TRUE, append = TRUE)%
-\setlongtables\begin{longtable}{lrrrr}\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\textrm{~Coef~}$}&\multicolumn{1}{c}{$\textrm{~S.E.~}$}&\multicolumn{1}{c}{$\textrm{Wald~} Z$}&\multicolumn{1}{c}{$\textrm{Pr}(>|Z|)$}\tabularnewline
-\hline
-\endhead
-\hline
-\endfoot
-Intercept&~   3.6618~&~ 4.1003~& 0.89&0.3718\tabularnewline
-b0&~   1.3875~&~ 2.5266~& 0.55&0.5829\tabularnewline
-b1&~-165.3481~&~92.7864~&-1.78&0.0747\tabularnewline
-b2&~-101.1667~&~63.1549~&-1.60&0.1092\tabularnewline
-\hline
-\end{longtable}
-\addtocounter{table}{-1}
-
+\end{tabular}
+\end{center}}
+ 
+ %latex.default(U, file = "", first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", already.math.col.names = TRUE,     append = TRUE)%
+ \setlongtables\begin{longtable}{lrrrr}\hline
+ \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\hat{\beta}$}&\multicolumn{1}{c}{S.E.}&\multicolumn{1}{c}{Wald $Z$}&\multicolumn{1}{c}{Pr$(>|Z|)$}\tabularnewline
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ Intercept&~   3.6618~&~ 4.1003~& 0.89&0.3718\tabularnewline
+ b0&~   1.3875~&~ 2.5266~& 0.55&0.5829\tabularnewline
+ b1&~-165.3481~&~92.7864~&-1.78&0.0747\tabularnewline
+ b2&~-101.1667~&~63.1549~&-1.60&0.1092\tabularnewline
+ \hline
+ \end{longtable}
+ \addtocounter{table}{-1}
 
 The likelihood ratio $\chi^{2}_{3}=19.73$ has $P=0.0002$ \ipacue
 indicating strong evidence that the races have different averages,
@@ -386,9 +383,9 @@ set.seed(2)
 v <- validate(f, B=1000)
 \end{Sinput}
 
-Divergence or singularity in 302 samples
+Divergence or singularity in 271 samples
 \begin{Sinput}
-latex(v, file='')
+latex(v)
 \end{Sinput}
 \Needspace{2in}
 \begin{center}\normalsize
@@ -398,25 +395,24 @@ latex(v, file='')
 \multicolumn{1}{l}{Index}&\multicolumn{1}{c}{Original}&\multicolumn{1}{c}{Training}&\multicolumn{1}{c}{Test}&\multicolumn{1}{c}{Optimism}&\multicolumn{1}{c}{Corrected}&\multicolumn{1}{c}{$n$}\tabularnewline
 &\multicolumn{1}{c}{{\normalsize Sample}}&\multicolumn{1}{c}{{\normalsize Sample}}&\multicolumn{1}{c}{{\normalsize Sample}}&&\multicolumn{1}{c}{{\normalsize Index}}&\tabularnewline
 \hline
-$D_{xy}$&$ 0.9145$&$ 0.9529$&$ 0.8476$&$ 0.1053$&$  0.8092$&$698$\tabularnewline
-$R^{2}$&$ 0.7985$&$ 0.8987$&$ 0.6707$&$ 0.2280$&$  0.5705$&$698$\tabularnewline
-Intercept&$ 0.0000$&$ 0.0000$&$ 0.1102$&$-0.1102$&$  0.1102$&$698$\tabularnewline
-Slope&$ 1.0000$&$ 1.0000$&$ 0.4625$&$ 0.5375$&$  0.4625$&$698$\tabularnewline
-$E_{\max}$&$ 0.0000$&$ 0.0000$&$ 0.1880$&$ 0.1880$&$  0.1880$&$698$\tabularnewline
-$D$&$ 0.8513$&$ 1.0572$&$ 0.6556$&$ 0.4016$&$  0.4498$&$698$\tabularnewline
-$U$&$-0.0909$&$-0.0909$&$ 2.4183$&$-2.5092$&$  2.4183$&$698$\tabularnewline
-$Q$&$ 0.9422$&$ 1.1481$&$-1.7626$&$ 2.9107$&$ -1.9685$&$698$\tabularnewline
-$B$&$ 0.0803$&$ 0.0345$&$ 0.0781$&$-0.0436$&$  0.1239$&$698$\tabularnewline
-$g$&$ 6.7833$&$22.2084$&$ 4.5453$&$17.6631$&$-10.8798$&$698$\tabularnewline
-$g_{p}$&$ 0.4712$&$ 0.4629$&$ 0.4288$&$ 0.0341$&$  0.4371$&$698$\tabularnewline
+$D_{xy}$&$ 0.9145$&$ 0.9589$&$ 0.8423$&$ 0.1166$&$  0.7980$&$729$\tabularnewline
+$R^{2}$&$ 0.7985$&$ 0.9096$&$ 0.6617$&$ 0.2479$&$  0.5506$&$729$\tabularnewline
+Intercept&$ 0.0000$&$ 0.0000$&$ 0.1150$&$-0.1150$&$  0.1150$&$729$\tabularnewline
+Slope&$ 1.0000$&$ 1.0000$&$ 0.4259$&$ 0.5741$&$  0.4259$&$729$\tabularnewline
+$E_{\max}$&$ 0.0000$&$ 0.0000$&$ 0.2056$&$ 0.2056$&$  0.2056$&$729$\tabularnewline
+$D$&$ 0.8513$&$ 1.0728$&$ 0.6434$&$ 0.4294$&$  0.4219$&$729$\tabularnewline
+$U$&$-0.0909$&$-0.0909$&$ 2.6080$&$-2.6989$&$  2.6080$&$729$\tabularnewline
+$Q$&$ 0.9422$&$ 1.1637$&$-1.9646$&$ 3.1283$&$ -2.1861$&$729$\tabularnewline
+$B$&$ 0.0803$&$ 0.0310$&$ 0.0773$&$-0.0463$&$  0.1266$&$729$\tabularnewline
+$g$&$ 6.7833$&$23.8206$&$ 4.4145$&$19.4061$&$-12.6228$&$729$\tabularnewline
+$g_{p}$&$ 0.4712$&$ 0.4629$&$ 0.4255$&$ 0.0373$&$  0.4339$&$729$\tabularnewline
 \hline
 \end{tabular}
 \end{center}
 
-The overfitting-corrected $c$-index is $c = \frac{D_{xy} + 1}{2}$ =
-0.9.
+The overfitting-corrected $c$-index is $c = \frac{D_{xy} + 1}{2}$ = 0.9.
 
-\subsection{Model-Based Analysis: Generalized Least Squares}\sound{serial-5}\ipacue
+\subsection{Model-Based Analysis: Generalized Least Squares}\soundm{serial-5}\ipacue
 Generalized least squares (GLS) is the first generalization of ordinary
 least squares (multiple linear regression).  It is described in detail
 in \emph{Regression Modeling Strategies} Chapter~7 where a
@@ -473,7 +469,7 @@ plot(fitted(a), resid(a))   # Fig. (*\ref{fig:serial-glsa}\ipacue*)
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-glsa-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-glsa-1} }
 
 \caption[Residual plot for generalized least squares fit on untransformed  \co{fbf}]{Residual plot for generalized least squares fit on untransformed  \co{fbf}}\label{fig:serial-glsa}
 \end{figure}
@@ -484,29 +480,30 @@ transformation requires a very arbitrary adjustment to dose to handle zeros.
 \begin{Sinput}
 a <- Gls(log(fbf) ~ race * rcs(log(dose + 1), log(c(20,60,150)+1)), data=d,
          correlation=corCAR1(form = ~ dose | id))
-latex(anova(a), file='', table.env=FALSE)
+anova(a)
 \end{Sinput}
-%latex.default(dstats, cdec = dig, title = title, caption = if (table.env) caption else NULL,     rowlabel = "", col.just = rep("r", length(sn)), table.env = table.env,     ...)%
-\begin{center}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Wald Statistics for \texttt{\smaller log(fbf)}}\begin{center}
 \begin{tabular}{lrrr}
 \hline\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^2$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-race  (Factor+Higher Order Factors)&$ 99.54$&$3$&$<0.0001$\tabularnewline
-~~{\it All Interactions}&$ 19.30$&$2$&~0.0001\tabularnewline
-dose  (Factor+Higher Order Factors)&$312.10$&$4$&$<0.0001$\tabularnewline
-~~{\it All Interactions}&$ 19.30$&$2$&~0.0001\tabularnewline
-~~{\it Nonlinear (Factor+Higher Order Factors)}&$  2.01$&$2$&~0.3667\tabularnewline
-race $\times$ dose  (Factor+Higher Order Factors)&$ 19.30$&$2$&~0.0001\tabularnewline
-~~{\it Nonlinear}&$  0.07$&$1$&~0.7969\tabularnewline
-~~{\it Nonlinear Interaction : f(A,B) vs. AB}&$  0.07$&$1$&~0.7969\tabularnewline
-TOTAL NONLINEAR&$  2.01$&$2$&~0.3667\tabularnewline
-TOTAL NONLINEAR + INTERACTION&$ 21.16$&$3$&~0.0001\tabularnewline
-TOTAL&$391.48$&$5$&$<0.0001$\tabularnewline
+race  (Factor+Higher Order Factors)& 99.54&3&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.30&2&\textless 0.0001\tabularnewline
+dose  (Factor+Higher Order Factors)&312.10&4&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 19.30&2&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear (Factor+Higher Order Factors)}&  2.01&2&0.3667\tabularnewline
+race $\times$ dose  (Factor+Higher Order Factors)& 19.30&2&\textless 0.0001\tabularnewline
+~~\emph{Nonlinear}&  0.07&1&0.7969\tabularnewline
+~~\emph{Nonlinear Interaction : f(A,B) vs. AB}&  0.07&1&0.7969\tabularnewline
+TOTAL NONLINEAR&  2.01&2&0.3667\tabularnewline
+TOTAL NONLINEAR + INTERACTION& 21.16&3&\textless 0.0001\tabularnewline
+TOTAL&391.48&5&\textless 0.0001\tabularnewline
 \hline
 \end{tabular}\end{center}
 
-There is little evidence for a nonlinear dose effect on the log scale, \sound{serial-6}
+There is little evidence for a nonlinear dose effect on the log scale, \soundm{serial-6}
 implying that the underlying model is exponential on the original $X$
 and $Y$ scales.  This is consistent with \citet{dupmod}.  Re-fit the
 model as linear in the logs.  Before taking this as the final model,
@@ -533,67 +530,64 @@ structure is far superior to dose-based.  We will used the second
 model for the remainder of the analysis.  But first we check some of
 the model assumptions.
 \begin{Sinput}
-print(b, latex=TRUE)
+b
 \end{Sinput}
 
-\vspace{1ex}
-
-\centerline{\textbf{Generalized Least Squares Fit by REML}}
-\vspace{1ex}
-
-\begin{verbatim}
-Gls(model = log(fbf) ~ race * log(dose + 1), data = d, correlation = corCAR1(form = ~time | 
-    id))
-\end{verbatim}
-\centerline{\begin{tabular}{|c|c|}\hline
-Obs~\hfill 150&Log-restricted-likelihood ~\hfill -74.69\\ 
-Clusters~\hfill 22&Model d.f.~\hfill 3\\ 
-$g$~\hfill 0.755&$\sigma$~\hfill 0.5023\\ 
-&d.f.~\hfill 146\\ 
+ \noindent \textbf{Generalized Least Squares Fit by REML}
+ 
+ \begin{verbatim}
+ Gls(model = log(fbf) ~ race * log(dose + 1), data = d, correlation = corCAR1(form = ~time | 
+     id))
+ \end{verbatim}
+ 
+ {\fontfamily{phv}\selectfont \begin{center}\begin{tabular}{|c|c|}\hline
+&\\\hline
+Obs~\hfill 150&Log-restricted-likelihood ~\hfill -74.69\\
+Clusters~\hfill 22&Model d.f.~\hfill 3\\
+$g$~\hfill 0.755&$\sigma$~\hfill 0.5023\\
+&d.f.~\hfill 146\\
 \hline
-\end{tabular}}
-
-
-\vspace{1ex}
-
-%latex.default(U, file = file, first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", math.col.names = TRUE, append = TRUE)%
-\setlongtables\begin{longtable}{lrrrr}\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\textrm{~Coef~}$}&\multicolumn{1}{c}{$\textrm{~S.E.~}$}&\multicolumn{1}{c}{$t$}&\multicolumn{1}{c}{$\textrm{Pr}(>|t|)$}\tabularnewline
-\hline
-\endhead
-\hline
-\endfoot
-Intercept&~ 0.9851~&~0.1376~& 7.16&$<0.0001$\tabularnewline
-race=black&~-0.2182~&~0.2151~&-1.01&0.3120\tabularnewline
-dose&~ 0.3251~&~0.0286~&11.38&$<0.0001$\tabularnewline
-race=black * dose&~-0.1421~&~0.0446~&-3.19&0.0018\tabularnewline
-\hline
-\end{longtable}
-\addtocounter{table}{-1}
-\begin{verbatim}
-Correlation Structure: Continuous AR(1)
- Formula: ~time | id 
- Parameter estimate(s):
-      Phi 
-0.6886846 
-
-\end{verbatim}
-
+\end{tabular}
+\end{center}}
+ 
+ %latex.default(U, file = "", first.hline.double = FALSE, table = FALSE,     longtable = TRUE, lines.page = lines.page, col.just = rep("r",         ncol(U)), rowlabel = "", already.math.col.names = TRUE,     append = TRUE)%
+ \setlongtables\begin{longtable}{lrrrr}\hline
+ \multicolumn{1}{l}{}&\multicolumn{1}{c}{$\hat{\beta}$}&\multicolumn{1}{c}{S.E.}&\multicolumn{1}{c}{$t$}&\multicolumn{1}{c}{Pr$(>|t|)$}\tabularnewline
+ \hline
+ \endhead
+ \hline
+ \endfoot
+ Intercept&~ 0.9851~&~0.1376~& 7.16&\textless 0.0001\tabularnewline
+ race=black&~-0.2182~&~0.2151~&-1.01&0.3120\tabularnewline
+ dose&~ 0.3251~&~0.0286~&11.38&\textless 0.0001\tabularnewline
+ race=black $\times$ dose&~-0.1421~&~0.0446~&-3.19&0.0018\tabularnewline
+ \hline
+ \end{longtable}
+ \addtocounter{table}{-1}
+ \begin{verbatim}
+ Correlation Structure: Continuous AR(1)
+  Formula: ~time | id 
+  Parameter estimate(s):
+       Phi 
+ 0.6886846 
+ \end{verbatim}
+ 
 \begin{Sinput}
-latex(anova(b), file='', table.env=FALSE)
+anova(b)
 \end{Sinput}
-%latex.default(dstats, cdec = dig, title = title, caption = if (table.env) caption else NULL,     rowlabel = "", col.just = rep("r", length(sn)), table.env = table.env,     ...)%
-\begin{center}
+%latex.default(dstats, title = title, caption = if (table.env) caption else NULL,     insert.top = if (length(caption) && !table.env) paste0("\\Needspace{2in}\n",         caption), rowlabel = "", col.just = rep("r", length(sn)),     table.env = table.env, ...)%
+\textbf{\Needspace{2in}
+Wald Statistics for \texttt{\smaller log(fbf)}}\begin{center}
 \begin{tabular}{lrrr}
 \hline\hline
-\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^2$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{$\chi^{2}$}&\multicolumn{1}{c}{d.f.}&\multicolumn{1}{c}{$P$}\tabularnewline
 \hline
-race  (Factor+Higher Order Factors)&$ 32.45$&$2$&$<0.0001$\tabularnewline
-~~{\it All Interactions}&$ 10.16$&$1$&~0.0014\tabularnewline
-dose  (Factor+Higher Order Factors)&$158.11$&$2$&$<0.0001$\tabularnewline
-~~{\it All Interactions}&$ 10.16$&$1$&~0.0014\tabularnewline
-race $\times$ dose  (Factor+Higher Order Factors)&$ 10.16$&$1$&~0.0014\tabularnewline
-TOTAL&$180.17$&$3$&$<0.0001$\tabularnewline
+race  (Factor+Higher Order Factors)& 32.45&2&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 10.16&1&0.0014\tabularnewline
+dose  (Factor+Higher Order Factors)&158.11&2&\textless 0.0001\tabularnewline
+~~\emph{All Interactions}& 10.16&1&0.0014\tabularnewline
+race $\times$ dose  (Factor+Higher Order Factors)& 10.16&1&0.0014\tabularnewline
+TOTAL&180.17&3&\textless 0.0001\tabularnewline
 \hline
 \end{tabular}\end{center}
 \begin{Sinput}
@@ -604,7 +598,7 @@ gridExtra::grid.arrange(p1, p2, ncol=2)   # Figure (*\ref{fig:serial-glsc}\ipacu
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-glsc-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-glsc-1} }
 
 \caption[Checking assumptions of GLS model]{Checking assumptions of the GLS model that is linear after logging dose and blood flow.  The graph on the right is a QQ-plot to check normality of the residuals from the model, where linearity implies normality.}\label{fig:serial-glsc}
 \end{figure}
@@ -616,23 +610,16 @@ with the less parametric approach using the logistic model above.  But
 the logistic model also tests for an overall shift in distributions
 due to race, and the more efficient test for the combined race main
 effect and dose interaction effect from GLS is more significant
-with a Wald $\chi^{2}_{2} = 32.45$\footnote{The $\chi^2$ for race with
-  the dose-based correlation structure was a whopping 100 indicating
-  that lack of fit of the correlation structure can have a significant
-  effect on the rest of the GLS model.}. The
+with a Wald $\chi^{2}_{2} = 32.45$\footnote{The $\chi^2$ for race with the dose-based correlation structure was a whopping 100 indicating that lack of fit of the correlation structure can have a significant effect on the rest of the GLS model.}. The
 estimate of the correlation between two log blood flows measured on
 the same subject one time unit apart is 0.69.
 
 The equal variance and normality assumptions appear to be well met as
 judged by Figure~\ref{fig:serial-glsc}.
 
-Now estimate the dose-response curves by race, with pointwise \sound{serial-7}
+Now estimate the dose-response curves by race, with pointwise \soundm{serial-7}
 confidence intervals and simultaneous intervals that allow one to make
-statements about the entire curves\footnote{Since the model is linear
-  in log dose there are two parameters involving dose---the dose main
-  effect and the race $\times$ dose interaction effect.  The
-  simultaneous inference adjustment only needs to reflect simultaneity in two
-  dimensions.}.  Anti-log the predicted values to
+statements about the entire curves\footnote{Since the model is linear in log dose there are two parameters involving dose---the dose main effect and the race $\times$ dose interaction effect.  The simultaneous inference adjustment only needs to reflect simultaneity in two dimensions.}.  Anti-log the predicted values to
 get predictions on the original blood flow scale.  Anti-logging
 predictions from a model that assumes a normal distribution on the
 logged values results in estimates of the median response.
@@ -647,7 +634,7 @@ ggplot(ps, ylab=expression(paste('Median Forearm Blood Flow,  ',
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-glsd-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-glsd-1} }
 
 \caption[Confidence bands for median dose-response curves]{Pointwise and simultaneous confidence bands for median dose-response curves by race}\label{fig:serial-glsd}
 \end{figure}
@@ -667,9 +654,9 @@ ggplot(k, aes(x=dose, y=exp(Contrast))) + geom_line() +
 \end{Sinput}
 \begin{figure}[htbp]
 
-\centerline{\includegraphics{serial-glse-1} }
+\centerline{\includegraphics[width=\maxwidth]{serial-glse-1} }
 
-\caption[White]{White:black fold change for median response as a function of dose, with simultaneous confidence band}\label{fig:serial-glse}
+\caption[White:black fold change for median response as a function of dose, with simultaneous confidence band]{White:black fold change for median response as a function of dose, with simultaneous confidence band}\label{fig:serial-glse}
 \end{figure}
 \end{Schunk}
 By comparing the simultaneous confidence binds to the red horizontal

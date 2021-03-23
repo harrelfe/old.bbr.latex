@@ -8,6 +8,52 @@ options(prType='latex')
 \def\apacue{1}
 \chapter{Analysis of Covariance in Randomized Studies}\alabel{chap:ancova}
 
+{\smaller[-1] \textbf{Introduction}}
+
+\bi
+\item Fundamental clinical question: if I were to give \textbf{this patient} treatment B instead of treatment A would I expect the clinical outcome to be better?
+\item A gold-standard design is a 6-period 2-treatment randomized crossover study; the patient actually receives both treatments and her responses can be compared
+\item Studies of identical twins come somewhat close to that
+\item Short of these designs, the best we can do is to ask this fundamental question: \\ If two patients differ at baseline (with respect to available measurements, and on the average with respect to unmeasured covariates) only with regard to assigned treatment, how do their expected outcomes differ?
+\item Covariate adjustment does that
+\item Analysis of covariance is classical terminology from linear models but we often use the term also for nonlinear models
+\item Covariate adjustment means to condition on important facts known about the patients before treatment is given
+\item We treat baseline values as known constants and do not model their distributions
+\item Doing a comparison of outcomes that is equalized on baseline characteristics accounts for outcome heterogeneity \textbf{within} treatment groups
+\item Accounting for easily accountable (baseline measurements) outcome heterogeneity either
+  \bi
+  \item maximizes power and precision (in linear models, by reducing residual variance), or
+  \item gets the model ``right'' which prevents power loss caused by unexplained outcome heterogeneity (in nonlinear models, by making the model much more correct than assuming identical outcome tendencies for all subjects in a treatment group)
+  \ei
+\ei
+
+The model to use depends on the nature of the outcome variable Y, and
+different models have different effect measures:
+
+\bi
+\item Continuous Y: we often use difference in means; 2-sample $t$-test assumes all observations in a treatment group have the same mean
+  \bi
+  \item analyzing heterogeneous Y as if homogeneous (using $t$-test instead of ANCOVA) lowers power and precision by expanding $\sigma^2$, but does not bias the difference in means
+  \ei
+\item Binary Y: classic $2\times 2$ table assumes every person on treatment T has the same probability of outcome
+  \bi
+  \item risk difference is only a useful measure in this homogeneous case
+  \item without covariate adjustment, odds ratios only apply to the homogenous case; in heterogeneous case the unadjusted odds ratio may apply to no one (see
+    \href{https://www.fharrell.com/post/marg}{fharrell.com/post/marg})
+  \ei
+\item Time to event: Cox proportional hazards model and its special case the logrank test
+  \bi 
+  \item without covariate adjustment assumes homogeneity within treatment group
+  \item unadjusted hazard ratio does not estimate a useful quantity if there is heterogeneity
+  \item non-proportional hazards is more likely without covariate adjustment than with it
+    \bi
+    \item without adjustment the failure time distribution is really a mixture of multiple distributions
+    \ei
+  \ei
+\ei
+    
+\bigskip
+
 {\smaller[-1] \textbf{Hierarchy of Causal Inference for Treatment Efficacy}}
 
 \bigskip
@@ -46,17 +92,8 @@ Real-world physician practice & $P_{1}^{A}$ vs $P_{2}^{B}$ \\
 \bi
 \item   Model: $E(Y | X) = X \beta + \epsilon$
 \item   Continuous response variable $Y$, normal residuals
-\item   Statistical testing for baseline differences is scientifically
-        incorrect (Altman \& Dor\'{e} 1990, Begg 1990, Senn 1994,
-        Austin~\etal\ 2010); as Bland and Altman
-        stated~\cite{bla11com}, statistical tests draw inferences
-        about \emph{populations}, and the population model here would
-        involve a repeat of the randomization to the whole population
-        hence balance would be perfect.  Therefore the null hypothesis of no
-        difference in baseline distributions between treatment groups
-        is automatically true.
-\item   If we are worried about baseline imbalance we need to search
-        patient records for counter-- balancing factors
+\item   Statistical testing for baseline differences is scientifically incorrect (Altman \& Dor\'{e} 1990, Begg 1990, Senn 1994, Austin~\etal\ 2010); as Bland and Altman stated~\cite{bla11com}, statistical tests draw inferences about \emph{populations}, and the population model here would involve a repeat of the randomization to the whole population hence balance would be perfect.  Therefore the null hypothesis of no difference in baseline distributions between treatment groups is automatically true.
+\item   If we are worried about baseline imbalance we need to search patient records for counter-- balancing factors
 \item   \ra imbalance is not the reason to adjust for covariables
 \item   Adjust to gain efficiency by subtracting explained variation
 \item   Relative efficiency of unadjusted treatment comparison is $1-\rho^2$
@@ -73,27 +110,20 @@ treatment in ``Table 1.''
 \section{Covariable Adjustment in Nonlinear Models}\sound{anc-2}\disc{ancova-nonlin}
 \subsection{Hidden Assumptions in $2 \times 2$ Tables}
 \bi
-\item   Traditional presentation of 2--treatment clinical trial with a
-        binary response: $2 \times 2$ table
+\item   Traditional presentation of 2--treatment clinical trial with a binary response: $2 \times 2$ table
 \item   Parameters: $P_{1}, P_{2}$ for treatments 1, 2
-\item   Test of goodness of fit: $H_0$: all patients in one treatment
-        group have same probability of positive response ($P_j$ constant)
+\item   Test of goodness of fit: $H_0$: all patients in one treatment group have same probability of positive response ($P_j$ constant)
 \item   \ra $H_0$: no risk factors exist
 \item   Need to account for patient heterogeneity
-\item   \cite{mat15inc} has a method for estimating the bias in
-  unadjusted the log odds ratio and also has excellent background information
+\item   \cite{mat15inc} has a method for estimating the bias in unadjusted the log odds ratio and also has excellent background information
 \ei
 
 \subsection{Models for Binary Response}
 \bi
-\item   Model for probability of event must be nonlinear in predictors
-        unless risk range is tiny
+\item   Model for probability of event must be nonlinear in predictors unless risk range is tiny
 \item   Useful summary of relative treatment effect is the odds ratio (OR)
-\item   Use of binary logistic model for covariable adjustment will
-        result in an {\bf increase} in the S.E. of the treatment
-        effect (log odds ratio) (Robinson \& Jewell, \cite{rob91som})
-\item   But even with perfect balance, adjusted OR $\neq$ unadjusted
-        OR
+\item   Use of binary logistic model for covariable adjustment will result in an {\bf increase} in the S.E. of the treatment effect (log odds ratio) (Robinson \& Jewell, \cite{rob91som})
+\item   But even with perfect balance, adjusted OR $\neq$ unadjusted OR
 \item   Adjusted OR will be greater than unadjusted OR
 \ei
 
@@ -128,26 +158,23 @@ ST elevation    &   ~37.3   & ~37.8 \\ \hline
 \subsubsection{Unadjusted / Adj.\ Logistic Estimates}
 \bi
 \item   With and without adjusting for 17 baseline characteristics
+  
 \btable{lccc}{Unadjusted and Adjusted GUSTO Analyses} \hline\hline
 Type of Analysis    &   Log OR          &   S.E.    & $\chi^2$ \\ \hline
 Unadjusted          &   -0.159          &   0.049   & 10.8 \\
 Adjusted            &   -0.198          &   0.053   & 14.0 \\ \hline
 \etable
 \item   Percent reduction in odds of death: 15\% vs.\ 18\%
-\item   -0.159 (15\%) is a biased estimate
+\item   -0.159 (15\%) is a biased estimate\footnote{Some disagree that the word \emph{bias} is the appropropriate word.  This could be called \emph{attenuation of the parameter estimate due to an ill-fitting model.}}
 \item   Increase in S.E.\ more than offset by increase in treatment effect
-\item   Adjusted comparison based on 19\% fewer patients would have
-        given same power as unadjusted test
+\item   Adjusted comparison based on 19\% fewer patients would have given same power as unadjusted test
 <<gustohistrisk,cap='Distribution of baseline risk in GUSTO-I.  Kernel density estimate of risk distribution for SK treatment.  Average risk is 0.07.  See also \\cite{ioa97imp}.',scap='Distribution of baseline risk in GUSTO-I'>>=
 load('gustomin.rda')
 with(gustomin,
      plot(density(p.sk), xlim=c(0, .4), xlab='Baseline Expected Risk',
           ylab='Probability Density', main='') )    # Fig. (*\ref{fig:ancova-gustohistrisk}*)
 @
-\item   Robinson \& Jewell: ``It is always more efficient to adjust \ipacue
-        for predictive covariates when logistic models are used, and thus in
-        this regard the behavior of logistic regression is the same as that of
-        classic linear regression.''
+\item   Robinson \& Jewell: ``It is always more efficient to adjust \ipacue for predictive covariates when logistic models are used, and thus in this regard the behavior of logistic regression is the same as that of classic linear regression.''
 \ei
 
 \subsubsection{Simple Logistic Example -- Gail 1986}
@@ -166,35 +193,24 @@ with(gustomin,
 
 From seeing this example one can argue that odds ratios, like hazard
 ratios, were never really designed to be computed on a set of subjects
-having heterogeneity in their expected outcomes.
+having heterogeneity in their expected outcomes.  See
+\href{https://www.fharrell.com/post/marg}{fharrell.com/post/marg} for more.
 
 \subsection{Nonlinear Models, General}\sound{anc-4}
 \bi
-\item   Gail, Wieand, Piantadosi~\cite{gai84bia} showed that for unadjusted
-        treatment estimates to be unbiased, regression must be linear
-        or exponential
-\item   Gail~\cite{gai86adj} showed that for logistic, Cox, and paired survival
-        models unadjusted treatment effects are asymptotically biased
-        low in absolute value
+\item   Gail, Wieand, Piantadosi~\cite{gai84bia} showed that for unadjusted treatment estimates to be unbiased, regression must be linear or exponential
+\item   Gail~\cite{gai86adj} showed that for logistic, Cox, and paired survival models unadjusted treatment effects are asymptotically biased low in absolute value
 \item   Gail also studied normal, exponential, additive risk, Poisson
 \ei
-\quoteit{Part of the problem with
-Poisson, proportional hazard and logistic regression approaches is
-that they use a single parameter, the linear predictor, with no
-equivalent of the variance parameter in the Normal case.  This means
-that lack of fit impacts on the estimate of the
-predictor.}{\citet{sen04con}, p. 3747}
+\quoteit{Part of the problem with Poisson, proportional hazard and logistic regression approaches is that they use a single parameter, the linear predictor, with no equivalent of the variance parameter in the Normal case.  This means that lack of fit impacts on the estimate of the predictor.}{\citet{sen04con}, p. 3747}
 
 
 \section{Cox / Log--Rank Test for Time to
   Event}\disc{ancova-efficiency} 
 \bi
-\item   Lagakos \& Schoenfeld 1984 showed that type I error is
-        preserved if don't adjust
-\item   If hazards are proportional conditional on covariables, they
-        are not proportional if omit covariables
-\item   Morgan 1986 derived asymptotic relative efficiencies (ARE) of
-        unadjusted log--rank test if a binary covariable is omitted
+\item   Lagakos \& Schoenfeld 1984 showed that type I probability is preserved if don't adjust
+\item   If hazards are proportional conditional on covariables, they are not proportional if omit covariables
+\item   Morgan 1986 derived asymptotic relative efficiencies (ARE) of unadjusted log--rank test if a binary covariable is omitted
 \item   If prevalence of covariable $X$ is 0.5:
 \ei
 \btable{cc}{Efficiency of Unadjusted Log--Rank Test} \hline\hline
@@ -205,11 +221,9 @@ $X=1 : X=0$ Hazard Ratio    & ARE \\ \hline
 3.0 &   0.72    \\ \hline
 \etable
 \bi
-\item   Ford, Norrie, Ahmadi~\cite{for95mod}: Treatment effect does not have the
-        same interpretation under unadjusted and adjusted models
+\item   Ford, Norrie, Ahmadi~\cite{for95mod}: Treatment effect does not have the same interpretation under unadjusted and adjusted models
 \item   No reason for the two hazard ratios to have the same value
-\item   Akazawa, Nakamura, Palesch~\cite{aka97pow}: Power of unadjusted and
-        stratified log--rank test
+\item   Akazawa, Nakamura, Palesch~\cite{aka97pow}: Power of unadjusted and stratified log--rank test
 \ei
 \btable{cccc}{Power With and Without Adjustment} \hline\hline
 Number      &   Range of    &   \multicolumn{2}{c}{Power} \\
@@ -224,17 +238,15 @@ of Strata   &   Log Hazards &   Unadj.      &   Adjusted \\ \hline
 
 \subsection{Sample Size Calculation Issues}
 \bi
-\item   Schoenfeld~\cite{sch83sam} implies that covariable adjustment can only
-        $\uparrow$ sample size in randomized trials
+\item   Schoenfeld~\cite{sch83sam} implies that covariable adjustment can only $\uparrow$ sample size in randomized trials
 \item   Need to recognize ill--definition of unadjusted hazard ratios
 \ei
 
 \section{Why are Adjusted Estimates
   Right?}\sound{anc-5}\disc{ancova-meaning} 
 \bi
-\item   Hauck, Anderson, Marcus~\cite{hau98sho}, who have an excellent
-        review of covariable adjustment in nonlinear models, state:
-\begin{quote}\smaller
+\item   Hauck, Anderson, Marcus~\cite{hau98sho}, who have an excellent review of covariable adjustment in nonlinear models, state:
+\begin{quote}{\smaller
 ``For use in a clinician--patient
 context, there is only a single person, that
 patient, of interest.  The subject-specific measure
@@ -250,26 +262,20 @@ patients.  The groups being compared are determined
 by whatever covariates are included in the model.
 The treatment effect is then a comparison of average
 outcomes, where the averaging is over all omitted
-covariates.''
+covariates.''}
 \end{quote}
 \ei
 
 \section{How Many Covariables to Use?}\disc{ancova-plan}
 \bi
-\item   Try to adjust for the bulk of the variation in
-        outcome \cite{hau98sho,tuk93tig}
-\item   Neuhaus \cite{neu98est}: ``to improve the efficiency of
-                  estimated covariate effects of interest, analysts of
-                  randomized clinical trial data should adjust for
-                  covariates that are strongly associated with the
-                  outcome''
+\item   Try to adjust for the bulk of the variation in outcome \cite{hau98sho,tuk93tig}
+\item   Neuhaus \cite{neu98est}: ``to improve the efficiency of estimated covariate effects of interest, analysts of randomized clinical trial data should adjust for covariates that are strongly associated with the outcome''
 \item Raab~\etal~\cite{raa00how} have more guidance for choosing covariables and provide a formula for linear model that shows how the value of adding a covariable depends on the sample size
 \ei
 
 \section{Differential and Absolute Treatment Effects}\label{sec:txeffects}\sound{anc-6}
 \subsection{Modeling Differential Treatment Effect}\blog{rct-mimic}\disc{ancova-hte}
-Differential treatment effect is often called \emph{heterogeneity of
-  treatment effect} or HTE.  As opposed to the natural expansion of
+Differential treatment effect is often called \emph{heterogeneity of treatment effect} or HTE.  As opposed to the natural expansion of
 absolute treatment effect with underlying subject risk, differential
 treatment effect is usually based on analyses of relative effects, especially
 when the outcome is binary.
@@ -281,56 +287,24 @@ subgroup analysis.
 
 \subsubsection{Problems With Subgroup Analysis}
 \bi
-\item   Subgroup analysis is widely practiced and widely derided in
-  RCTs (as well as in observational studies)
-\item Construction of a subgroup from underlying factors that are
-  continuous in nature (e.g., ``older'' = age $\geq 65$) assumes that
-  the treatment effect is like falling off a cliff, i.e.,
-  all-or-nothing.  Discontinuous treatment effects, like discontinuous
-  main effects, have not been found and validated but have always been
-  shown to have been an artificial construct driven by opinion and not data.
-\item Given a subgroup a simple label such as ``class IV heart
-  failure'' may seem to be meaningful but subgrouping carries along other
-  subject characteristics that are correlated with the subgrouping
-  variable.  So the subgroup's treatment effect estimate has a more
-  complex interpretation than what is thought.
-\item Researchers who don't understand that ``absence of evidence is
-  not evidence for absence'' interpret a significant effect in one
-  subgroup but not in another as the treatment being effective in the
-  first but ineffective in the second.  The second $P$-value may be
-  large because of increased variability in the second subgroup or
-  because of a smaller effective sample size in that group.
-\item Testing the treatment effect in a subgroup does not carry along
-  with it the covariate adjustment needed and assumes there is no
-  residual HTE \emph{within} the subgroup.
-\item When treatment interacts with factors not used in forming the
-  subgroup, or when the subgrouping variable interacts with an
-  ignored patient characteristic, the subgroup
-  treatment effect may be grossly misleading.  As an example, in
-  GUSTO-I there was a strong interaction between Killip class and
-  age.  Unadjusted analysis of treatment effect within older subjects was
-  partially an analysis of Killip class.  And the treatment effect was
-  not ``significant'' in older patients, leading many readers to
-  conclude $t$--PA should not be given to them.  In fact
-  there was no evidence that age interacted with treatment, and the
-  absolute risk reduction due to $t$--PA \emph{increased} with age.
+\item   Subgroup analysis is widely practiced and widely derided in RCTs (as well as in observational studies)
+\item Construction of a subgroup from underlying factors that are continuous in nature (e.g., ``older'' = age $\geq 65$) assumes that the treatment effect is like falling off a cliff, i.e., all-or-nothing.  Discontinuous treatment effects, like discontinuous main effects, have not been found and validated but have always been shown to have been an artificial construct driven by opinion and not data.
+\item Given a subgroup a simple label such as ``class IV heart failure'' may seem to be meaningful but subgrouping carries along other subject characteristics that are correlated with the subgrouping variable.  So the subgroup's treatment effect estimate has a more complex interpretation than what is thought.
+\item Researchers who don't understand that ``absence of evidence is not evidence for absence'' interpret a significant effect in one subgroup but not in another as the treatment being effective in the first but ineffective in the second.  The second $P$-value may be large because of increased variability in the second subgroup or because of a smaller effective sample size in that group.
+\item Testing the treatment effect in a subgroup does not carry along with it the covariate adjustment needed and assumes there is no residual HTE \emph{within} the subgroup.
+\item When treatment interacts with factors not used in forming the subgroup, or when the subgrouping variable interacts with an ignored patient characteristic, the subgroup treatment effect may be grossly misleading.  As an example, in GUSTO-I there was a strong interaction between Killip class and age.  Unadjusted analysis of treatment effect within older subjects was partially an analysis of Killip class.  And the treatment effect was not ``significant'' in older patients, leading many readers to conclude $t$--PA should not be given to them.  In fact there was no evidence that age interacted with treatment, and the absolute risk reduction due to $t$--PA \emph{increased} with age.
 \ei
 
 \subsubsection{Specifying Interactions}\sound{anc-7}
 \bi
-\item   Assessing differential treatment effect best done with formal
-        interaction tests rather than subgroup analysis
+\item   Assessing differential treatment effect best done with formal interaction tests rather than subgroup analysis
 \item   Pre--specify sensible effect modifiers
     \bi
     \item   interactions between treatment and extent of disease
-    \item   ``learned'' interventions: interaction between treatment
-            and duration of use by physician
+    \item   ``learned'' interventions: interaction between treatment and duration of use by physician
     \ei
 \item   Interactions with center are not necessarily sensible
-\item   Need to use penalized estimation (e.g., interaction effects as
-        random effects) to get sufficient precision of differential
-        treatment effects, if \# interaction d.f. $> 4$ for example
-        \cite{sar96hie,yam99inv} \ipacue
+\item   Need to use penalized estimation (e.g., interaction effects as random effects) to get sufficient precision of differential treatment effects, if \# interaction d.f. $> 4$ for example \cite{sar96hie,yam99inv} \ipacue
 \ei
 \figs{cox-cabg-hazard-ratio}{A display of an interaction between treatment, extent of disease, and calendar year of start of treatment \cite{cal89}}{1}
 
@@ -338,89 +312,27 @@ subgroup analysis.
 The broad strategy that is recommended is based on the following:
 \bi
 \item Anything resembling subgroup analysis should be avoided
-\item Anything that assumes that the treatment effect has a
-  discontinuity in a continuous variable should be avoided.
-  Differential effects should be smooth dose-response effects.
-\item Anything that results in a finding that has a simpler alternate
-  explanation should be avoided
+\item Anything that assumes that the treatment effect has a discontinuity in a continuous variable should be avoided.  Differential effects should be smooth dose-response effects.
+\item Anything that results in a finding that has a simpler alternate explanation should be avoided
   \bi
-  \item Specify models so that an apparent interaction is not just a
-    stand-in for an omitted main effect
+  \item Specify models so that an apparent interaction is not just a stand-in for an omitted main effect
   \ei
 \ei
 Particulars of the strategy are:
 \bi
-\item Formulate a subject-matter driven covariate model, including all
-  covariates understood to have strong effects on the outcome.  Ensure
-  that these covariates are adjusted for in every HTE analysis context.
-\item Main effects need to be flexibly modeled (e.g., using regression
-  splines) so as to not assume linearity.  False linearity assumptions
-  can inflate apparent interaction effects because the interaction may
-  be co-linear with omitted nonlinear main effects.
-\item If the sample size allows, also model interaction effects as
-  smooth nonlinear functions.  As with main effects, it is not
-  uncommon for interaction effects to be nonlinear, e.g., the effect
-  of treatment is small for age $<70$ then starts to expand rapidly
-  after age 70\footnote{This does not imply that age should be modeled
-    as a categorical variable to estimate the interaction; that would
-    result in unexplained HTE in the age $\geq 70$ interval.}.  As a
-  compromise, force interactions to be linear even if main effects are
-  not, if the effective sample size does not permit estimating
-  parameters for nonlinear differential effects.
-\item Consider effect modifiers that are somewhat uncorrelated with
-  each other.  Add the main effects corresponding to each potential
-  effect modifier into the model described in the previous point.  For
-  example if the primary analysis uses a model containing age, sex,
-  and severity of disease and one is interested in assessing HTE by
-  race and by geographical region, add \emph{both} race and region to the
-  main effects that are adjusted for in \emph{all} later models.  This
-  will result in proper covariate adjustment and will handle the case
-  where an apparent interaction is partially explained by an omitted
-  main effect that is co-linear with one of the interacting factors.
-\item Carry out a joint (chunk) likelihood ratio or $F$-test for all \ipacue
-  potential interaction effects combined.  This test has a perfect
-  multiplicity adjustment and will not be ``brought down'' by the
-  potential interactions being co-linear with each other.  The
-  $P$-value from this joint test with multiple degrees of freedom will
-  place the tests described in the next step in context.  But note
-  that with many d.f.\ the test may lack power.
-\item Consider each potential interaction one-at-a-time by adding that
-  interaction term to the \emph{comprehensive} main effects model.  In
-  the example given above, main effects simultaneously adjusted for
-  would include treatment, age, sex, severity of disease, race, and
-  region.  Then treatment $\times$ race is added to the model and
-  tested.  Then the race interaction term (but not its main effect) is
-  removed from the model and is replaced by region interactions.
+\item Formulate a subject-matter driven covariate model, including all covariates understood to have strong effects on the outcome.  Ensure that these covariates are adjusted for in every HTE analysis context.
+\item Main effects need to be flexibly modeled (e.g., using regression splines) so as to not assume linearity.  False linearity assumptions can inflate apparent interaction effects because the interaction may be co-linear with omitted nonlinear main effects.
+\item If the sample size allows, also model interaction effects as smooth nonlinear functions.  As with main effects, it is not uncommon for interaction effects to be nonlinear, e.g., the effect of treatment is small for age $<70$ then starts to expand rapidly after age 70\footnote{This does not imply that age should be modeled as a categorical variable to estimate the interaction; that would result in unexplained HTE in the age $\geq 70$ interval.}.  As a compromise, force interactions to be linear even if main effects are not, if the effective sample size does not permit estimating parameters for nonlinear differential effects.
+\item Consider effect modifiers that are somewhat uncorrelated with each other.  Add the main effects corresponding to each potential effect modifier into the model described in the previous point.  For example if the primary analysis uses a model containing age, sex, and severity of disease and one is interested in assessing HTE by race and by geographical region, add \emph{both} race and region to the main effects that are adjusted for in \emph{all} later models.  This will result in proper covariate adjustment and will handle the case where an apparent interaction is partially explained by an omitted main effect that is co-linear with one of the interacting factors.
+\item Carry out a joint (chunk) likelihood ratio or $F$-test for all \ipacue potential interaction effects combined.  This test has a perfect multiplicity adjustment and will not be ``brought down'' by the potential interactions being co-linear with each other.  The $P$-value from this joint test with multiple degrees of freedom will place the tests described in the next step in context.  But note that with many d.f.\ the test may lack power.
+\item Consider each potential interaction one-at-a-time by adding that interaction term to the \emph{comprehensive} main effects model.  In the example given above, main effects simultaneously adjusted for would include treatment, age, sex, severity of disease, race, and region.  Then treatment $\times$ race is added to the model and tested.  Then the race interaction term (but not its main effect) is removed from the model and is replaced by region interactions.
 \ei
-Concerning the last step, we must really recognize that there are two
-purposes for the analysis of differential treatment effect:
+Concerning the last step, we must really recognize that there are two purposes for the analysis of differential treatment effect:
 \be
-\item Understanding which subject characteristics are associated with
-  alterations in efficacy
+\item Understanding which subject characteristics are associated with alterations in efficacy
 \item Predicting the efficacy for an individual subject
 \ee
-For the latter purpose, one might include all potential treatment
-interactions in the statistical model, whether interactions for
-multiple baseline variables are co-linear or not.  Such co-linearities
-do not hurt predictions or confidence intervals for predictions.  For
-the former purpose, interactions can make one effect modifier compete
-with another, and neither modifier will be significant when adjusted
-for the other.  As an example, suppose that the model had main effects
-for treatment, age, sex, and systolic and diastolic blood pressure
-(SBP, DBP) and we entertained effect modification due to one or both
-of SBP, DBP.  Because of the correlation between SBP and DBP, the main
-effects for these variables are co-linear and their statistical
-significance is weakened because they estimate, for example, the
-effect of increasing SBP holding DBP constant (which is difficult to
-do).  Likewise, treatment $\times$ SBP and treatment $\times$ DBP
-interactions are co-linear with each other, making statistical tests
-for interaction have low power.  We may find that neither SBP nor DBP
-interaction is ``significant'' after adjusting for the other, but that
-the combined chunk test for SBP or DBP interaction is highly
-significant.  Someone who does not perform the chunk test may falsely
-conclude that SBP does not modify the treatment effect.
-This problem is more acute when more than two factors are allowed to
-interact with treatment.
+For the latter purpose, one might include all potential treatment interactions in the statistical model, whether interactions for multiple baseline variables are co-linear or not.  Such co-linearities do not hurt predictions or confidence intervals for predictions.  For the former purpose, interactions can make one effect modifier compete with another, and neither modifier will be significant when adjusted for the other.  As an example, suppose that the model had main effects for treatment, age, sex, and systolic and diastolic blood pressure (SBP, DBP) and we entertained effect modification due to one or both of SBP, DBP.  Because of the correlation between SBP and DBP, the main effects for these variables are co-linear and their statistical significance is weakened because they estimate, for example, the effect of increasing SBP holding DBP constant (which is difficult to do).  Likewise, treatment $\times$ SBP and treatment $\times$ DBP interactions are co-linear with each other, making statistical tests for interaction have low power.  We may find that neither SBP nor DBP interaction is ``significant'' after adjusting for the other, but that the combined chunk test for SBP or DBP interaction is highly significant.  Someone who does not perform the chunk test may falsely conclude that SBP does not modify the treatment effect. This problem is more acute when more than two factors are allowed to interact with treatment.
 
 Note that including interaction terms in the model makes all treatment
 effect estimates conditional on specific covariate values, effectively
@@ -432,26 +344,11 @@ terms lowers bias but greatly increases variance.
 
 Another way to state the HTE estimation strategy is as follows.
 \be
-\item Pick a model for which it is mathematically possible that there
-  be no interactions (no restrictions on model parameters)
-\item Develop a model with ample flexibly-modeled main effects and
-  clinically pre-specified interactions.  Use a Bayesian skeptical
-  prior or penalized maximum likelihood estimate to shrink the
-  interaction terms if the effective sample size does not support the
-  pre-specified number of interaction parameters.  Be sure to model
-  interaction effects as continuous if they come from variables of an
-  underlying continuous nature.
-\item Display and explain relative effects (e.g., odds ratios) as a
-  function of interacting factors and link that to what is known about
-  the mechanism of treatment effect.
-\item Put all this in a context (like Figure~\ref{fig:ancova-ordiff})
-  that shows absolute treatment benefit (e.g., risk scale) as a
-  function of background risk and of interacting factors.
-\item State clearly that background risk comes from all non-treatment
-  factors and is a risk-difference accelerator that would increase
-  risk differences for any risk factor, not just treatment.  Possibly
-  provide a risk calculator to estimate background risk to plug into
-  the $x$-axis.
+\item Pick a model for which it is mathematically possible that there be no interactions (no restrictions on model parameters)
+\item Develop a model with ample flexibly-modeled main effects and clinically pre-specified interactions.  Use a Bayesian skeptical prior or penalized maximum likelihood estimate to shrink the interaction terms if the effective sample size does not support the pre-specified number of interaction parameters.  Be sure to model interaction effects as continuous if they come from variables of an underlying continuous nature.
+\item Display and explain relative effects (e.g., odds ratios) as a function of interacting factors and link that to what is known about the mechanism of treatment effect.
+\item Put all this in a context (like Figure~\ref{fig:ancova-ordiff}) that shows absolute treatment benefit (e.g., risk scale) as a function of background risk and of interacting factors.
+\item State clearly that background risk comes from all non-treatment factors and is a risk-difference accelerator that would increase risk differences for any risk factor, not just treatment.  Possibly provide a risk calculator to estimate background risk to plug into the $x$-axis.
 \ee
 
 Consider simulated two-treatment clinical trial data to illustrate the ``always adjust for all main effects but consider interactions one at a time'' approach to analyzing and displaying evidence for differential treatment effec.  After that we will illustrate a simultaneous interaction analysis.  Simulate time-to-event data from an exponential distribution, and fit Cox proportional hazards models to estimate the interaction between age and treatment and between sex and treatment.  The true age effect is simulated as linear in the log hazard and the treatment effect on the log relative hazard scale is proportional to how far above 60 years is a patient's age, with no treatment benefit before age 60.  This is a non-simple interaction that could be exactly modeled with a linear spline function, but assume that the analyst does not know the true form of the interaction so she allows for a more general smooth form using a restricted cubic spline function.  The data are simulated so that there is no sex interaction.
@@ -541,34 +438,14 @@ Because of this, additive risk models are not recommended for modeling
 outcomes or estimating differential treatment effects on an absolute
 scale.  This logic leads to the following recommended strategy:
 \be
-\item Base all inference and predicted risk estimation on a model most
-  likely to fit the data (e.g., logistic risk model; Cox model).
-  Choose the model so that it is \emph{possible} that there may be no
-  interactions, i.e., a model that does not place a restriction on
-  regression coefficients.
+\item Base all inference and predicted risk estimation on a model most likely to fit the data (e.g., logistic risk model; Cox model).  Choose the model so that it is \emph{possible} that there may be no interactions, i.e., a model that does not place a restriction on regression coefficients.
 \item Pre-specify sensible possible interactions as described earlier
-\item Use estimates from this model to estimate relative differential
-  treatment effects, which should be smooth functions of continuous
-  baseline variables
-\item Use the same model to estimate absolute risk differences (as in
-  the next section) as a function both of interacting factors and of
-  baseline variables in the model that do not interact with treatment
-  (but will still expand the absolute treatment effect)
-\item Even better: since expansion of risk differences is a general
-  function of overall risk and not of individual risk factors only
-  display effects of individual risk factors that interact with
-  treatment (interacting on the scale that would have allowed them not
-  to interact---the relative scale such as log odds) and show the
-  general risk difference expansion as in Figures
-  \ref{fig:ancova-or-diff} (think of the ``risk factor'' as treatment)
-  and \ref{fig:ancova-gusto-nomogram}
+\item Use estimates from this model to estimate relative differential treatment effects, which should be smooth functions of continuous baseline variables
+\item Use the same model to estimate absolute risk differences (as in the next section) as a function both of interacting factors and of baseline variables in the model that do not interact with treatment (but will still expand the absolute treatment effect)
+\item Even better: since expansion of risk differences is a general function of overall risk and not of individual risk factors only display effects of individual risk factors that interact with treatment (interacting on the scale that would have allowed them not to interact---the relative scale such as log odds) and show the general risk difference expansion as in Figures \ref{fig:ancova-or-diff} (think of the ``risk factor'' as treatment) and \ref{fig:ancova-gusto-nomogram}
 \ee
 
-\quoteit{To translate the results of clinical trials into practice may
-  require a lot of work involving modelling and further background
-  information.  `Additive at the point of analysis but relevant at the
-  point of application' should be the motto.}{Stephen Senn in
-\url{http://errorstatistics.com/2013/04/19/stephen-senn-when-relevance-is-irrelevant}}
+\quoteit{To translate the results of clinical trials into practice may require a lot of work involving modelling and further background information.  `Additive at the point of analysis but relevant at the point of application' should be the motto.}{Stephen Senn in \url{http://errorstatistics.com/2013/04/19/stephen-senn-when-relevance-is-irrelevant}}
 
 \subsection{Estimating Absolute Treatment
   Effects}\sound{anc-10}\disc{ancova-absolute}
@@ -576,13 +453,11 @@ scale.  This logic leads to the following recommended strategy:
 \item   Absolute efficacy measures:
     \bi
     \item   Risk difference ($\delta$)
-    \item   number needed to treat (reciprocal of risk
-        difference)
+    \item   number needed to treat (reciprocal of risk difference)
     \item   Years of life saved
     \item   Quality--adjusted life years saved
     \ei
-\item   Binary response, no interactions with treatment, risk for
-        control patient $P$: \\
+\item   Binary response, no interactions with treatment, risk for control patient $P$: \\
         $\delta = P - \frac{P}{P + (1-P)/OR}$
 \item   $\delta$ is dominated by $P$
 \ei
@@ -656,9 +531,7 @@ $[0,1]$ range.
 \subsubsection{Absolute Treatment Effects for GUSTO--I}\sound{anc-12}
 \bi
 \item   No evidence for interactions with treatment
-\item   Misleading subgroup analysis showed that elderly patients not
-        benefit from $t$--PA; result of strong age $\times$ Killip
-        class interaction
+\item   Misleading subgroup analysis showed that elderly patients not benefit from $t$--PA; result of strong age $\times$ Killip class interaction
 \item   Wide variation in absolute benefit of $t$--PA \ipacue
 <<gusto-histdelt,w=5,h=4,cap='Distribution of absolute risk reduction with $t$--PA vs.\\ SK',scap='Absolute benefit vs.\\ baseline risk'>>=
 delta <- with(gustomin, p.sk - p.tpa)
@@ -707,8 +580,7 @@ plot(n, varname.label.sep=' ', xfrac=.27, lmgp=.2, cex.axis=.6)
 \bi
 \item   Cox PH model
 \item   Modeling can uncover time course of treatment effect
-\item   $X_1$ = treatment, $A={X_{2},\ldots,X_{p}}$ adjustment
-        variables
+\item   $X_1$ = treatment, $A={X_{2},\ldots,X_{p}}$ adjustment variables
 \item   Survival difference is \\ $S(t | X_{1}=1, A) - S(t | X_{1}=0, A)$
 \\ $ = S(t | X_{1}=0, A)^{HR} - S(t | X_{1}=0, A)$
 <<hr-vs-surv,w=5.5,h=4,cap='Relationship between baseline risk, relative treatment effect (hazard ratio --- numbers above curves) and absolute treatment effect.',scap='Baseline risk, hazard ratio, and absolute effect'>>=
@@ -734,11 +606,9 @@ for(h in hr) {
 \section{Cost--Effectiveness Ratios}\sound{anc-14}\disc{ancova-ceratio}
 \bi
 \item   Effectiveness E (denominator of C--E ratio) is always absolute
-\item   Absolute treatment effectiveness varies greatly with patient
-        characteristics
+\item   Absolute treatment effectiveness varies greatly with patient characteristics
 \item   \ra C--E ratio varies greatly
-\item   A C--E ratio based on average E and average C
-        may not apply to any existing patient!
+\item   A C--E ratio based on average E and average C may not apply to any existing patient!
 \item   Need a model to estimate E
 \item   C may also depend on patient characteristics
 <<gusto-histcost,w=5,h=4,cap='Distribution of cost per life saved in GUSTO--I'>>=
@@ -756,20 +626,12 @@ text(m,.01,'Cost using\n  average\n    reduction',srt=45,adj=0)
   Trials}\disc{ancova-sites}
 \bi
 \item   Primary model: covariables, treatment, site main effects
-\item   Planned secondary model to assess consistency of treatment
-        effects over sites (add site $\times$ treatment interactions)
-\item   Advantages for considering sites as random effects (or use
-        penalized MLE to shrink site effects, especially for small sites).
-        See \cite{and99tes} for a random effects Cox model and a
-        demonstration that treatment effects may be inconsistent when
-        non--zero site main effects are ignored in the Cox model.  See
-        also \cite{yam99inv}.
-\item   Types of tests / contrasts when interactions are included \ipacue
-  \cite{sch00gen}:
+\item   Planned secondary model to assess consistency of treatment effects over sites (add site $\times$ treatment interactions)
+\item   Advantages for considering sites as random effects (or use penalized MLE to shrink site effects, especially for small sites). See \cite{and99tes} for a random effects Cox model and a demonstration that treatment effects may be inconsistent when non--zero site main effects are ignored in the Cox model.  See also \cite{yam99inv}.
+\item   Types of tests / contrasts when interactions are included \ipacue \cite{sch00gen}:
     \bi
     \item   Type I: not adjusted for center
-    \item   Type II: average treatment effect, weighted by size of
-            sites \\
+    \item   Type II: average treatment effect, weighted by size of sites \\
     \texttt{R} \co{rms} package command:
 <<contrast,eval=FALSE>>=
 sites <- levels(site)
@@ -785,92 +647,36 @@ contrast(fit, list(treat='b', site=sites),
     Low precision; studies are not powered for Type III tests.
     \ei
 
-\item   Another interesting test: combined effects of treatment and
-        site $\times$ treatment interaction; tests whether treatment
-        was effective at {\em any} site.
+\item   Another interesting test: combined effects of treatment and site $\times$ treatment interaction; tests whether treatment was effective at {\em any} site.
 \ei
 
 \section{Statistical Plan for Randomized Trials}\disc{ancova-plan}
 \bi
-\item   When a relevant dataset is available before the trial begins,
-        develop the model from the dataset and use the predicted value as a
-        single adjustment covariable in the trial (Knaus et al.~\cite{kna93cli})
-\item   Otherwise: CPMP Working Party: Finalize choice of model,
-        transformations, interactions before merging treatment assignment
-        into analysis dataset. \\
-        Edwards \cite{edw99mod}: Pre--specify family of models that
-        will be used, along with
-        the strategy for selecting the particular model. \\
+\item   When a relevant dataset is available before the trial begins, develop the model from the dataset and use the predicted value as a single adjustment covariable in the trial (Knaus et al.~\cite{kna93cli})
+\item   Otherwise: CPMP Working Party: Finalize choice of model, transformations, interactions before merging treatment assignment into analysis dataset. \\
+        Edwards \cite{edw99mod}: Pre--specify family of models that will be used, along with the strategy for selecting the particular model. \\
         Masked model derivation does not bias treatment effect.
 \item CPMP guidance~\cite{cpmp04poi}
   \begin{quote}
     \begin{itemize}
 \smaller
-\item ``Stratification may be used to ensure balance of treatments across
-covariates; it may also be used for administrative reasons.  The factors
-that are the basis of stratification should normally be included as
-covariates in the primary model.
-\item Variables known a priori to be strongly, or at least moderately,
-associated with the primary outcome and/or variables for which there is
-a strong clinical rationale for such an association should also be
-considered as covariates in the primary analysis.  The variables
-selected on this basis should be pre-specified in the protocol or the
-statistical analysis plan.
-\item Baseline imbalance observed post hoc should not be considered an
-appropriate reason for including a variable as a covariate in the
-primary analysis.
-\item Variables measured after randomization and so potentially affected by
-the treatment should not normally be included as covariates in the
-primary analysis.
-\item If a baseline value of a continuous outcome measure is available, then
-this should usually be included as a covariate.  This applies whether
-the primary outcome variable is defined as the 'raw outcome' or as the
-'change from baseline'.
-\item Only a few covariates should be included in a primary analysis.
-Although larger data sets may support more covariates than smaller ones,
-justification for including each of the covariates should be
-provided. (???)
-\item In the absence of prior knowledge, a simple functional form (usually
-either linearity or dichotomising a continuous scale) should be assumed
-for the relationship between a continuous covariate and the outcome
-variable. (???)
-\item The validity of the model assumptions must be checked when assessing
-the results.  This is particularly important for generalized linear or
-non-linear models where mis-specification could lead to incorrect
-estimates of the treatment effect.  Even under ordinary linear models,
-some attention should be paid to the possible influence of extreme
-outlying values.
-\item Whenever adjusted analyses are presented, results of the treatment
-effect in subgroups formed by the covariates (appropriately categorised,
-if relevant) should be presented to enable an assessment of the validity
-of the model assumptions. (???)
-\item Sensitivity analyses should be pre-planned and presented to
-investigate the robustness of the primary results.  Discrepancies should
-be discussed and explained.  In the presence of important differences
-that cannot be logically explained-for example, between the results of
-adjusted and unadjusted analyses-the interpretation of the trial could
-be seriously affected.
-\item The primary model should not include treatment by covariate
-interactions.  If substantial interactions are expected a priori, the
-trial should be designed to allow separate estimates of the treatment
-effects in specific subgroups.
-\item Exploratory analyses may be carried out to improve the understanding
-of covariates not included in the primary analysis, and to help the
-sponsor with the ongoing development of the drug.
-\item A primary analysis, unambiguously pre-specified in the protocol or
-statistical analysis plan, correctly carried out and interpreted, should
-support the conclusions which are drawn from the trial.  Since there may
-be a number of alternative valid analyses, results based on
-pre-specified analyses will carry most credibility.''
+\item ``Stratification may be used to ensure balance of treatments across covariates; it may also be used for administrative reasons.  The factors that are the basis of stratification should normally be included as covariates in the primary model.
+\item Variables known a priori to be strongly, or at least moderately, associated with the primary outcome and/or variables for which there is a strong clinical rationale for such an association should also be considered as covariates in the primary analysis.  The variables selected on this basis should be pre-specified in the protocol or the statistical analysis plan.
+\item Baseline imbalance observed post hoc should not be considered an appropriate reason for including a variable as a covariate in the primary analysis.
+\item Variables measured after randomization and so potentially affected by the treatment should not normally be included as covariates in the primary analysis.
+\item If a baseline value of a continuous outcome measure is available, then this should usually be included as a covariate.  This applies whether the primary outcome variable is defined as the 'raw outcome' or as the 'change from baseline'.
+\item Only a few covariates should be included in a primary analysis.  Although larger data sets may support more covariates than smaller ones, justification for including each of the covariates should be provided. (???)
+\item In the absence of prior knowledge, a simple functional form (usually either linearity or dichotomising a continuous scale) should be assumed for the relationship between a continuous covariate and the outcome variable. (???)
+\item The validity of the model assumptions must be checked when assessing the results.  This is particularly important for generalized linear or non-linear models where mis-specification could lead to incorrect estimates of the treatment effect.  Even under ordinary linear models, some attention should be paid to the possible influence of extreme outlying values.
+\item Whenever adjusted analyses are presented, results of the treatment effect in subgroups formed by the covariates (appropriately categorised, if relevant) should be presented to enable an assessment of the validity of the model assumptions. (???)
+\item Sensitivity analyses should be pre-planned and presented to investigate the robustness of the primary results.  Discrepancies should be discussed and explained.  In the presence of important differences that cannot be logically explained-for example, between the results of adjusted and unadjusted analyses-the interpretation of the trial could be seriously affected.
+\item The primary model should not include treatment by covariate interactions.  If substantial interactions are expected a priori, the trial should be designed to allow separate estimates of the treatment effects in specific subgroups.
+\item Exploratory analyses may be carried out to improve the understanding of covariates not included in the primary analysis, and to help the sponsor with the ongoing development of the drug.
+\item A primary analysis, unambiguously pre-specified in the protocol or statistical analysis plan, correctly carried out and interpreted, should support the conclusions which are drawn from the trial.  Since there may be a number of alternative valid analyses, results based on pre-specified analyses will carry most credibility.''
 \end{itemize}
   \end{quote}
 
-\quoteit{In confirmatory trials, a model is pre-specified, and it is
-necessary to pretend that it is true.  In most other statistical
-applications, the choice of model is data--driven, but it is necessary
-to pretend that it is not.}{\citet{edw99mod}}
-
-        See also Siqueira and Taylor~\cite{sig99tre}.
+\quoteit{In confirmatory trials, a model is pre-specified, and it is necessary to pretend that it is true.  In most other statistical applications, the choice of model is data--driven, but it is necessary to pretend that it is not.}{\citet{edw99mod}} See also Siqueira and Taylor~\cite{sig99tre}.
 \item   Choose predictors based on expert opinion \ipacue
 \item   Impute missing values rather than discarding observations
 \item   Keep all pre--specified predictors in model, regardless of $P$--value
@@ -878,8 +684,7 @@ to pretend that it is not.}{\citet{edw99mod}}
 %       confidence limits, $P$--values, etc.
 %\item  Extract maximum information from (objective) continuous
 %       predictors using regression splines or nonparametric smoothers
-\item   Use shrinkage (penalized maximum likelihood estimation) to
-        avoid over--adjustment
+\item   Use shrinkage (penalized maximum likelihood estimation) to avoid over--adjustment
 %\item  Shrink regression coefficients for adjustment variables
 %       (but not treatment!) with maximum validation of model in mind
 %       (AIC) (Verweij and van Houwelingen 1994)
@@ -893,42 +698,24 @@ to pretend that it is not.}{\citet{edw99mod}}
 %\item  Optimum shrinkage will tell the statistician how many
 %       regression d.f. the dataset can reliably support
 %\item  Use the bootstrap to validate the model using all patients
-\item Some guidance for handling missing baseline data in RCTs is in
-  White \& Thompson~\cite{whi05adj}
+\item Some guidance for handling missing baseline data in RCTs is in White \& Thompson~\cite{whi05adj}
 \ei
 
 \subsection{Sites vs.\ Covariables}\disc{ancova-sites}
 \bi
-\item Site effects (main or interaction) are almost always trivial in
-  comparison with patient-specific covariable effects
-\item It is not sensible to include site in the model when important
-  covariables are omitted
-\item The most logical and usually the most strong interaction with
-  treatment is not site but is the severity of disease being treated
+\item Site effects (main or interaction) are almost always trivial in comparison with patient-specific covariable effects
+\item It is not sensible to include site in the model when important covariables are omitted
+\item The most logical and usually the most strong interaction with treatment is not site but is the severity of disease being treated
 \ei
 
 \subsection{Covariable Adjustment vs.\ Allocation Based on
   Covariates}\ipacue \disc{ancova-plan}
-\quoteit{The decision to fit prognostic factors has a far
-more dramatic effect on the precision of our inferences than the choice
-of an allocation based on covariates or randomization approach and one
-of my chief objections to the allocation based on covariates approach
-is that trialists have tended to use the fact that they have balanced
-as an excuse for not fitting.  This is a grave
-mistake.}{\citet{sen04con}, p.\ 3748; see also \citet{sen10com}}
+\quoteit{The decision to fit prognostic factors has a far more dramatic effect on the precision of our inferences than the choice of an allocation based on covariates or randomization approach and one of my chief objections to the allocation based on covariates approach is that trialists have tended to use the fact that they have balanced as an excuse for not fitting.  This is a grave mistake.}{\citet{sen04con}, p.\ 3748; see also \citet{sen10com}}
 
-\quoteit{My view \ldots was that the
-form of analysis envisaged (that is to say, which factors and
-covariates should be fitted) justified the allocation and \emph{not
-vice versa}.}{\citet{sen04con}, p.\ 3747}
+\quoteit{My view \ldots was that the form of analysis envisaged (that is to say, which factors and covariates should be fitted) justified the allocation and \emph{not vice versa}.}{\citet{sen04con}, p.\ 3747}
 
 \section{Summary}
-\quoteit{The point of view is sometimes
-defended that analyses that ignore covariates are superior because
-they are simpler. I do not accept this.  A value of $\pi=3$ is a
-simple one and accurate to one significant figure \ldots However very few
-would seriously maintain that if should generally be adopted by
-engineers.}{\citet{sen04con}, p.\ 3741}
+\quoteit{The point of view is sometimes defended that analyses that ignore covariates are superior because they are simpler. I do not accept this.  A value of $\pi=3$ is a simple one and accurate to one significant figure \ldots However very few would seriously maintain that if should generally be adopted by engineers.}{\citet{sen04con}, p.\ 3741}
 
 \bi
 \item  As opposed to simple treatment group comparisons, modeling can
@@ -939,11 +726,9 @@ engineers.}{\citet{sen04con}, p.\ 3741}
    \item   Uncover outcome patterns, shapes of effects
    \item   Test/estimate differential treatment benefit
    \item   Determine whether some patients are too sick or too well to benefit
-   \item   Estimate absolute clinical benefit as a function of
-           severity of illness
+   \item   Estimate absolute clinical benefit as a function of severity of illness
    \item   Estimate meaningful cost--effectiveness ratios
-   \item   Help design the next clinical trial (optimize risk
-           distribution for maximum power)
+   \item   Help design the next clinical trial (optimize risk distribution for maximum power)
    \ei
 \item  Modeling strategy must be well thought--out \ipacue
    \bi

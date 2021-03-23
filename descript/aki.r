@@ -1,0 +1,5 @@
+scr1 <- seq(0, 5, length=200)
+scr2 <- pmin(scr1 + 0.3, 1.5 * scr1)
+plot(scr1, scr2, type='l', xlab='Baseline SCr', ylab='Cutoff for 48h SCr')
+abline(a=0, b=1, col=gray(.9))
+text(1, 4, 'AKI', cex=2.5)

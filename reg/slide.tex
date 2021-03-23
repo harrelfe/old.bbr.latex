@@ -2,7 +2,7 @@
 
 
 \chapter{Simple and Multiple Regression Models}
-{\larger\textbf{Background}}\sound{reg-1}
+{\larger\textbf{Background}}\sound{reg-1}\bmovie{13}\ddisc{13}
 
 Regression models are used for
 \bi
@@ -11,7 +11,7 @@ Regression models are used for
 \item prediction
 \item increasing power and precision for assessing the effect of one
   variable by adjusting for other variables that partially explain the outcome
-  variable $Y$
+  variable $Y$ (even in a randomized experiment with perfect covariate balance)
 \item confounder adjustment---getting adjusted estimates of effects
 \item checking that existing summary scores (e.g., BMI) adequately
   summarize their component variables
@@ -87,7 +87,7 @@ is age, and older patients tend to get treatment B
     $Y'$ is $Y$ after the $x_1$ effect is subtracted from it
   \ei
 \item Stratification and matching are not effective when $x_1$ is
-  continuous are there are many $x$'s to hold constant
+  continuous as there are many $x$'s to hold constant
 \item Matching may be useful \emph{before} data acquisition is
   complete or when sample is too small to allow for regression
   adjustment for $>1$ variable
@@ -149,28 +149,15 @@ a nice chapter on matching.
 
 \bigskip
 
-\quoteit{Most folk behave and thoughtlessly believe that the objective of
-analysis with statistical tools is to find / identify features in the
-data---period.\\
+\quoteit{Most folk behave and thoughtlessly believe that the objective of analysis with statistical tools is to find / identify features in the data—period. \\
 
-They assume and have too much faith that (1) the data effectively
-reflect nature and not noise, and (2) that statistical tools can
-`auto-magically' divine causal relations.\\
+They assume and have too much faith that (1) the data effectively reflect nature and not noise, and (2) that statistical tools can `auto-magically' divine causal relations. \\
 
-They do not acknowledge that the objective of analysis should be to
-find interesting features of nature (which to the extent that they
-indicate causal effects will be reproducible), represent them well,
-and use these features to make reliable decisions about future
-cases/situations.\\
+They do not acknowledge that the objective of analysis should be to find interesting features inherent in nature (which to the extent that they indicate causal effects should  be reproducible); represent these well; and use these features to make reliable decisions about future cases/situations. \\ 
 
-Too often the $p$-value 'satisfices', for the intent of the latter.\\
+Too often the p-value `satisfices' for the intent of making reliable decisions about future cases/situations. \\
 
-I also think that hypothesis testing and effect estimation are really
-forms of ersatz prediction---ways of identifying and singling out a
-factor that allows them to make prediction in a simplistic manner
-(again satisficing for cognitive ease). Therefore full, well
-formulated prediction modeling is to be preferred to achieve this
-unacknowledged goal on these grounds.}{Drew Levy\\Genentech\\March 2015}\\
+I also think that hypothesis testing and even point estimates for individual effects are really ersatz forms of prediction: ways of identifying and singling out a factor that allows people to make a prediction (and a decision) in a simple (simplistic) and expedient manner (again typically satisficing for cognitive ease). Well formulated prediction modeling is to be preferred to achieve this unacknowledged goal of making reliable decisions about future cases/situations on these grounds.}{Drew Levy\\ \texttt{@DrewLevy}\\March 2020}\\
 
 \bi
 \item Hypothesis testing
@@ -457,8 +444,8 @@ Total      & $n-1$   & $SST$ & $MST = SST/(n-1)$   & \\ \hline
 \item $t^{2} \equiv F$ when $p=1$
 \item $t_{n-2} \equiv \sqrt{F_{1, n-2}}$
 \item $t$ identical to 2-sample $t$-test ($x$ has two values)
-\item If $x$ takes on only the values 0 and 1, $b$ equals $\bar{y}$
-  when $x=1$ minus   $\bar{y}$ when $x=0$
+\item If $x$ takes on only the values 0 and 1, $b$ equals ($\bar{y}$
+  when $x=1$) minus ($\bar{y}$ when $x=0$)
 \ei
 
 \subsection{Interval Estimation}\ros{11.5}\sound{reg-5}
@@ -551,8 +538,8 @@ Assumptions:
 \item   Linearity
 \item   $\sigma^2$ is constant, independent of $x$
 \item   Observations ($e$'s) are independent of each other
-\item   For proper statistical inference (CI, $P$-values), $y$ ($e$)
-        is normal conditional on $x$
+\item   For proper statistical inference (CI, $P$-values), $e$ is
+  normal, or equivalently, $y$ is normal conditional on $x$
 \ee
 Verifying some of the assumptions:
 \bi
@@ -577,15 +564,19 @@ x <- runif(n)
 y <- exp(log(x) + res)
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))    # Fig. (*\ref{fig:reg-exresid}*)
+rl <- function() abline(h=0, col=gray(0.8))
+rl()
 # Fit a linear model that should have been quadratic
 x <- runif(n, -1, 1)
 y <- x ^ 2 + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
+rl()
 # Fit a correctly assumed linear model
 y <- x + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
+rl()
 # Q-Q plot to check normality of residuals
 qqnorm(resid(f)); qqline(resid(f))
 \end{Sinput}
@@ -611,8 +602,8 @@ Assumptions:
 \item	Linearity
 \item	$\sigma^2$ is constant, independent of $x$
 \item	Observations ($e$'s) are independent of each other
-\item	For proper statistical inference (CI, $P$--values), $y$ ($e$)
-		is normal conditional on $x$
+\item	For proper statistical inference (CI, $P$--values), $e$ is
+  normal, or equivalently $y$ is normal conditional on $x$
 \ee
 Verifying some of the assumptions:
 \be
@@ -760,7 +751,7 @@ Notes about distributions:
 }   % end ignore
 
 \section{Proper Transformations and Percentiling}\sound{reg-7}
-\disc{reg-percentiling}
+\disc{reg-percentiling}\bmovie{14}\ddisc{14}
 \bi
 \item All parametric and semi-parametric regression models make
   assumptions about the shape of the relationship between predictor
@@ -775,7 +766,7 @@ Notes about distributions:
   distribution of $X$ (e.g., how many persons have BMI similar to a
   subject) instead of through physics, physiology, or anatomy
 \item Also allows definitions to change as the population accommodates
-\item Example: assume BMI is normal with mean 28 and SD 2\ipacue
+\item Example: assume BMI is normal with mean 28 and SD 2 \ipacue
 \item Figure~\ref{fig:reg-bmi} upper left panel shows this distribution
 \item Upper right: percentile of BMI vs.\ raw BMI
 \item Lower left: supposed relationship between BMI and disease risk
@@ -1056,14 +1047,14 @@ r2stata(dubois)
 d <- d[-7, ]
 \end{Sinput}
 \end{Schunk}
-Fit a multiple regression model in the logs of all 3 variables\ipacue
+Fit a multiple regression model in the logs of all 3 variables \ipacue
 \begin{Sinput}
 dd <- datadist(d); options(datadist='dd')
 f <- ols(log10(bsa) ~ log10(weight) + log10(height), data=d)
 f
 \end{Sinput}
 
- \centerline{\textbf{Linear Regression Model}}
+ \noindent \textbf{Linear Regression Model}
  
  \begin{verbatim}
  ols(formula = log10(bsa) ~ log10(weight) + log10(height), data = d)
@@ -1262,8 +1253,8 @@ Assumptions:
 \item   Linearity of each predictor against $y$ holding others constant
 \item   $\sigma^2$ is constant, independent of $x$
 \item   Observations ($e$'s) are independent of each other
-\item   For proper statistical inference (CI, $P$-values), $y$ ($e$)
-        is normal conditional on $x$
+\item   For proper statistical inference (CI, $P$-values), $e$ is
+  normal, or equivalently, $y$ is normal conditional on $x$
 \item $x$'s act additively; effect of $x_{j}$ does not depend on the
   other $x$'s (\textbf{But} note that the $x$'s may be correlated with
   each other without affecting what we are doing.)
@@ -1279,7 +1270,7 @@ Verifying some of the assumptions:
         $\Delta x_{2}=1$ in this simple case.
 \begin{Schunk}
 \begin{Sinput}
-# Generate 25 observations for each group, with true beta1=.05, true beta2=3
+# Generate 25 observations for each group, with true beta1=.2, true beta2=3
 d <- expand.grid(x1=1:25, x2=c(0, 1))
 set.seed(3)
 d$y <- with(d, .2*x1 + 3*x2 + rnorm(50, sd=.5))
@@ -1405,7 +1396,7 @@ r &=& \frac{L{xy}}{\sqrt{L_{xx}L_{yy}}} \\
 \item $r^2$ is the proportion of variation in $y$ explained by
   conditioning on $x$
 \item $(n-2) \frac{r^{2}}{1-r^{2}} = F_{1,n-2} = \frac{MSR}{MSE}$
-\item For multiple regression in general we use $R^2$ to denote the\ipacue
+\item For multiple regression in general we use $R^2$ to denote the \ipacue
   fraction of variation in $y$ explained jointly by all the $x$'s
   (variation in $y$ explained by the whole model)
 \item $R^{2} = \frac{SSR}{SST} = 1 - \frac{SSE}{SST} = 1 $ minus
@@ -1459,7 +1450,7 @@ f <- ols(maxfwt ~ group, data=lead)
 f
 \end{Sinput}
 
- \centerline{\textbf{Linear Regression Model}}
+ \noindent \textbf{Linear Regression Model}
  
  \begin{verbatim}
  ols(formula = maxfwt ~ group, data = lead)
@@ -1574,7 +1565,7 @@ fa <- ols(maxfwt ~ age + group, data=lead)
 fa
 \end{Sinput}
 
- \centerline{\textbf{Linear Regression Model}}
+ \noindent \textbf{Linear Regression Model}
  
  \begin{verbatim}
  ols(formula = maxfwt ~ age + group, data = lead)
@@ -1688,7 +1679,7 @@ group& 2& 1600.088&800.0442&5.28&0.0067\tabularnewline
 Subtract SSR or SSE from these two models to get the treatment effect with 2 d.f.
 \ei
 
-\subsection{Continuous Analysis of Lead Exposure}
+\subsection{Continuous Analysis of Lead Exposure}\bmovie{15}\ddisc{15}
 See \ref{sec:rmsintro-leadcontinuous}.
 
 \subsection{Two-Way ANOVA} \ros{12.6}\sound{reg-18}
@@ -1704,7 +1695,8 @@ See \ref{sec:rmsintro-leadcontinuous}.
 \item Assumes effects of diet and sex are additive (separable) and not
   synergistic
 \item $\beta_{1} = SV - NOR$ mean difference holding sex constant \\
-  $\beta_{3} = male - female$ effect holding diet constant
+  $\beta_{2} =$ LV - NOR mean difference holding sex constant \\ 
+  $\beta_{3} =$ male - female effect holding diet constant
 \item Test of diet effect controlling for sex effect: \\
  $H_{0}:\beta_{1}=\beta_{2}=0$ \\
  $H_{a}: \beta_{1} \neq 0$ or $\beta_{2} \neq 0$
@@ -1771,7 +1763,7 @@ pharmacogenomics in acute coronary syndrome (the CURE study~\cite{par10eff}).
   Cox models it is the ratio of ratios
 \item Interactions are harder to assess than main effects (wider
   confidence intervals, lower power)
-\item Carriers for loss-of-function CYP2C19 alleles:\ipacue
+\item Carriers for loss-of-function CYP2C19 alleles: \ipacue
 reduced conversion of clopidogrel to active metabolite
 \item Suggested that clop.\ less effective in reducing CV death, MI,
 stroke
@@ -1821,6 +1813,27 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
 \item[$\beta_{3}$]: increment in slope in going from females to males
 \ed
 
+\begin{Schunk}
+\begin{Sinput}
+# Generate 25 observations for each group, with true beta1=.05, true beta2=3
+d <- expand.grid(x1=1:25, x2=c(0, 1))
+set.seed(3)
+d$y <- with(d, 0.2*x1 + 3*x2 + 0.3*x1*x2 + rnorm(50, sd=.5))
+with(d, plot(x1, y, xlab=expression(x[1]), ylab=expression(y)))
+abline(a=0, b=.2)    # Fig. (*\ref{fig:reg-mult-reg-assume-twovar-ia}*)
+abline(a=3, b=.5)
+text(13, 1,  expression(y==alpha + beta[1]*x[1]), srt=16, cex=1.3)
+text(13, 12, expression(y==alpha + beta[2] + (beta[1] + beta[3])*x[1]),
+     srt=33, cex=1.3)
+\end{Sinput}
+\begin{figure}[htbp]
+
+\centerline{\includegraphics[width=\maxwidth]{reg-mult-reg-assume-twovar-ia-1} }
+
+\caption[Two predictors with interaction]{Data exhibiting linearity in age but with interaction of age and sex.  The $x_{2}=1$ group has a new intercept, $\alpha+\beta_2$ and its own slope $\beta_{1} + \beta_{3}$.}\label{fig:reg-mult-reg-assume-twovar-ia}
+\end{figure}
+\end{Schunk}
+
 \section{Internal vs.\ External Model Validation}\sound{reg-21}
 \disc{reg-val}\label{reg-val}
 \blog{split-val}
@@ -1841,7 +1854,7 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
   opportunity for modeling secular and geographic trends, and often
   results in failure to validate when in fact there are interesting
   group differences or time trends that could have easily been modeled
-\item One should use all data available at analysis time\ipacue
+\item One should use all data available at analysis time \ipacue
 \item External validation is left for newly collected data not
   available at publication time
 \item Rigorous internal validation should be done first
@@ -1875,7 +1888,7 @@ depending on how he predictive model is fitted:
   \item the process doesn't recognize that the model being validated
     is nothing more than an ``example'' model
   \ei
-\item Resampling for rigorous internal validation validates the\ipacue
+\item Resampling for rigorous internal validation validates the \ipacue
   \emph{process} used to derive the ``final'' model
   \bi
   \item as a byproduct estimates the likely future performance of that model
@@ -1906,7 +1919,7 @@ frequently make the mistake of labeling data splitting from a single
 sequence of patients as external validation when in fact this is a
 particularly low-precision form of internal validation better done
 using resampling (see below).  On the other hand, external validation
-carried out by by splitting in time (temporal validation) or by place,
+carried out by splitting in time (temporal validation) or by place,
 is better replaced by considering interactions in the full dataset.  For
 example, if a model developed on Canadians is found to be poorly
 calibrated for Germans, it is far better to develop an international
@@ -2009,10 +2022,10 @@ the class of predictive methods used:
   models selected across the resamples.  For the bootstrap this
   usually involves 300 or more resamples, and for cross-validation 50
   or more repeats of 10-fold cross-validation.  The ``final'' model
-  should be describe as an example of an entire array of models, and
+  should be described as an example of an entire array of models, and
   the likely future performance of this example model is estimated
   from the resampling procedure just described.  Resampling alerts the
-  analyst alert to arbitrariness and reduces the tendency to cherry
+  analyst to arbitrariness and reduces the tendency to cherry
   pick good validations when split-sample or external validation is used.
 \ei
 

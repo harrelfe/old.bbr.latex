@@ -1,5 +1,43 @@
 \chapter{Modeling for Observational Treatment Comparisons}
+
+\ddisc{18}
+\soundm{ps-1}
+
+The randomized clinical trial is the gold standard for developing
+evidence about treatment effects, but on rare occasion an RCT is not
+feasible, or one needs to make clinical decisions while waiting years
+for an RCT to complete.  Observational treatment comparisons can
+sometimes help, though many published ones provide information that is
+worse than having no information at all due to missing confounder
+variables or poor statistical practice.
+
+\section{Challenges}
+\soundm{ps-2}
+\bi
+\item Attempt to estimate the effect of a treatment A using data on
+  patients who \emph{happen} to get the treatment or a comparator B
+\item Confounding by indication
+  \bi
+  \item indications exist for prescribing A; not a random process
+  \item those getting A (or B) may have failed an earlier treatment
+  \item they may be less sick, or more sick
+  \item what makes them sicker may not be measured
+    \ei
+\item Many researchers have attempted to use data collected for other
+  purposes to compare A and B
+  \bi
+  \item they rationalize adequacy of the data after seeing what is
+    available
+  \item they do not design the study prospectively, guided by unbiased
+    experts who understand the therapeutic decisions
+    \ei
+\item If the data are adequate for the task, goal is to adjust for all
+  potential confounders as measured in those data
+\item Easy to lose sight of parallel goal: adjust for outcome heterogeneity
+\ei
+  
 \section{Propensity Score}\label{sec:propens}
+\soundm{ps-3}
 \bi
 \item In observational studies comparing treatments, need to adjust
   for nonrandom treatment selection
@@ -13,13 +51,12 @@
   actually received (e.g., logistic model allowing nonlinear effects)
 \item \textbf{Propensity score} (PS) = estimated probability of getting
   treatment B vs.\ treatment A
-\item Use of the PS allows one to aggressively
-  adjust for confounders by simulating a randomized trial if all
-  confounders are in the PS model
+\item Use of the PS allows one to aggressively adjust for measured
+  potential confounders
 \item Doing an adjusted analysis where the adjustment variable is the
   PS simultaneously adjusts for all the variables in the
-  score \emph{insofar} as confounding is concerned (but \textbf{not
-    with regard to outcome heterogeneity})
+  score \emph{insofar} as confounding is concerned
+  (but \textbf{not with regard to outcome heterogeneity})
 \item If after adjusting for the score there were a residual imbalance
   for one of the variables, that would imply that the variable was
   not correctly modeled in the PS
@@ -35,9 +72,46 @@
   treatment A than what would be expected from the effects of age and
   sex alone, adjustment for the additive propensity would not
   adequately balance for age and sex. 
+  \ei
+
+A nice discussion of problems with propensity scores is at \href{https://stats.stackexchange.com/questions/481110}{stats.stackexchange.com/questions/481110}.
+
+\section{Misunderstandings About Propensity Scores}
+\soundm{ps-4}  
+\bi
+\item PS can be used as a building block to causal inference but PS is not a
+  causal inference tool \emph{per se}
+\item PS is a \emph{confounding focuser}
+\item It is a \emph{data reduction} tool that may reduce the number of
+  parameters in the outcome model
+\item PS analysis is not a simulated randomized trial
+  \bi
+  \item randomized trials depend only on chance for treatment
+    assignment
+  \item RCTs do not depend on measuring all relevant variables
+  \ei
+\item Adjusting for PS is adequate for adjusting for \textbf{measured}
+  confounding if the PS model fits observed treatment selection
+  patterns well
+\item But adjusting only for PS is inadequate
+  \bi
+  \item to get proper conditioning so that the treatment effect can
+    generalize to a population with a different covariate mix, one
+    must condition on important prognostic factors
+  \item non-collapsibility of hazard and odds ratios is not addressed
+    by PS adjustment
+  \ei
+\item PS is not necessary if the effective sample size (e.g. number of
+  outcome events) $>$ e.g. $5p$ where $p$ is the number of measured covariates
+\item Stratifying for PS does not remove all the measured confounding
+\item Adjusting only for PS can hide interactions with treatment
+\item When judging covariate balance (as after PS matching) it is
+  \textbf{not} sufficient to examine the mean covariate value in the
+  treatment groups
 \ei
 
 \section{Assessing Treatment Effect}
+\soundm{ps-5}
 \bi
 \item Eliminate patients in intervals of PS where there is no overlap
   between A and B, or include an interaction between treatment and a
@@ -54,6 +128,8 @@
 \item Can do a matched pairs analysis but depends on matching
   tolerance and many patients will be discarded when their case has
   already been matched
+\item Inverse probability weighting by PS is a high variance/low power
+  approach, like matching
 \item Usually better to adjust for PS in a regression model
 \item Model: $Y = \textrm{treat} + \log\frac{PS}{1-PS} +$
   nonlinear functions of $\log\frac{PS}{1-PS} +$ important prognostic
@@ -70,6 +146,7 @@
 \ei
 
 \subsection{Problems with Propensity Score Matching}\label{sec:psmatch}
+\soundm{ps-6}
 \bi
 \item The choice of the matching algorithm is not principle-based so
   is mainly arbitrary.  Most matching algorithms are dependent on the
@@ -97,9 +174,11 @@ treat, must less entertain the thought of individual patient
 characteristics interacting with treatment.
 
 \section{Recommended Statistical Analysis Plan}
+\soundm{ps-7}
 \be
 \item Be very liberal in selecting a large list of potential
-  confounder variables that are measured pre-treatment.
+  confounder variables that are measured pre-treatment.  But respect
+  causal pathways and avoid collider and other biases.
 \item If the number of potential confounders is not large in
   comparison with the effective sample size, use direct covariate
   adjustment instead of propensity score adjustment.  For example, if
@@ -119,7 +198,8 @@ characteristics interacting with treatment.
   partitioning can be used to predict membership in the non-overlap
   region from baseline characteristics so that the research findings
   with regard to applicability/generalizability can be better
-  understood. 
+  understood.
+\item Overlap must be judged on absolute sample sizes, not proportions.
 \item Use covariate adjustment for propensity score for subjects in
   the overlap region.  Expand logit propensity using a restricted
   cubic spline so as to not assume linearity in the logit in relating
@@ -131,7 +211,7 @@ characteristics interacting with treatment.
   is an interaction with logit propensity to treat and actual treatment.
   For example, one may find that physicians are correctly judging that
   one subset of patients should usually be treated a certain way.
-\item Instead of removing subjects outside the overlap region, you
+\item Instead of removing subjects outside the overlap region, you \soundm{ps-8}
   could allow
   propensity or individual predictors to interact with treatment.
   Treatment effect estimates in the presence of interactions are
@@ -153,7 +233,11 @@ characteristics interacting with treatment.
   treatment effect estimate would be valid.  So one can say that not
   having comparable subjects on both treatments for some intervals of
   covariates means that either (1) inference should be restricted to
-  the overlap region, or (2) the inference is based on model assumptions.
+  the overlap region, or (2) the inference is based on model
+  assumptions.
+  \item See \href{https://fharrell.com/post/ia}{fharrell.com/post/ia}
+    for details about interaction, confidence interval width, and
+    relationship to generalizability. 
   \ee
 
 Using a full regression analysis allows interactions to be explored,
@@ -171,16 +255,18 @@ treatment for patients that actually get the most benefit from the
 treatment, this will be apparent from the plot.
 
 \section{Reasons for Failure of Propensity Analysis}
-Propensity analysis may not sufficiently adjust for confounding in nonrandomized studies when
+\soundm{ps-9}
+Propensity analysis may not sufficiently adjust for confounding in non-randomized studies when
 \bi
 \item prognostic factors that are confounders are not measured and are not highly correlated with factors that are measured
-\item the propensity modeling was too parsimoneous (e.g., if the researchers excluded baseline variables just because they were insignificant)
+\item the propensity modeling was too parsimonious (e.g., if the researchers excluded baseline variables just because they were insignificant)
 \item the propensity model assumed linearity of effects when some were really nonlinear (this would cause an imbalance in something other than the mean to not be handled)
 \item the propensity model should have had important interaction terms that were not included (e.g., if there is only an age imbalance in males)
 \item the researchers attempted to extrapolate beyond ranges of overlap in propensity scores in the two groups (this happens with covariate adjustment sometimes, but can happen with quantile stratification if outer quantiles are very imbalanced)
 \ei
 
 \section{Sensitivity Analysis}
+\soundm{ps-10}
 \bi
 \item For $n$ patients in the analysis, generate $n$ random values of
   a hypothetical unmeasured confounder $U$
@@ -197,13 +283,17 @@ Propensity analysis may not sufficiently adjust for confounding in nonrandomized
 See the \R\ \co{rms} package \co{sensuc} function.
 
 \section{Reasons To Not Use Propensity Analysis}
+\soundm{ps-11}
 Chen et al.~\cite{che16too} demonstrated advantages of using a unified
 regression model to adjust for ``too many'' predictors by using
 penalized maximum likelihood estimation, where the exposure variable
 coefficients are not penalized but all the adjustment variable
-coefficients have a quandratic (ridge) penalty.
+coefficients have a quadratic (ridge) penalty.
 
 \section{Further Reading}
 \href{http://www.stat.columbia.edu/~gelman/arm/chap10.pdf}{Gelman} has
 a nice chapter on causal inference and matching from Gelman and
-Hill~\cite{gel06dat}. 
+Hill~\cite{gel06dat}.
+
+Gary King as expressed a number of reservations about PS
+matching; see\\ \href{https://gking.harvard.edu/files/gking/files/psnot.pdf}{gking.harvard.edu/files/gking/files/psnot.pdf}.

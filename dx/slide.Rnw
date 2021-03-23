@@ -217,7 +217,8 @@ See
 \item \url{https:bit.ly/datamethods-dm}
 \item \url{http://en.wikipedia.org/wiki/Optimal_decision}
 \item \url{http://www.statsathome.com/2017/10/12/bayesian-decision-theory-made-ridiculously-simple}
-\item \url{https://twitter.com/jim_savage_/status/989524417649807360}
+%\item \url{https://twitter.com/jim_savage_/status/989524417649807360}
+%BROKEN LINK
 \item Govers~\etal~\cite{gov18int}
 \item \url{https://stats.stackexchange.com/questions/368949}
 \ei

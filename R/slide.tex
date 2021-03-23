@@ -35,12 +35,10 @@ The main \R\ web site is \href{https://www.r-project.org/}{www.r-project.org}.
 
 \section{Learning \R}
 Start with \emph{R Tutorials} at \url{http://www.r-bloggers.com/how-to-learn-r-2}, \emph{R Programming Tutorials} from Mike Marin at
-\url{https://www.youtube.com/user/marinstatlectures}, or \emph{Fast
-  Lane to Learning R} at \url{https://github.com//matloff/fasteR} by
+\url{https://www.youtube.com/user/marinstatlectures}, or \emph{Fast Lane to Learning R} at \url{https://github.com//matloff/fasteR} by
 Norm Matloff.  Or look at
 \url{swirlstats.com} for an interactive way to learn \R. Those
-who have used SPSS or SAS before will profit from \emph{\R\ for SAS
-  and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
+who have used SPSS or SAS before will profit from \emph{\R\ for SAS and SPSS Users} by Robert Muenchen.  A current list of \R\ books on
 \href{https://www.amazon.com/}{amazon.com} may be found at \url{http://amzn.to/15URiF6}.
 \url{https://stats.idre.ucla.edu/r/} and
 \url{http://www.introductoryr.co.uk/R_Resources_for_Beginners.html}
@@ -49,8 +47,7 @@ An excellent resource is \href{https://r4ds.had.co.nz/}{\R\ for Data Science} by
 See also \emph{\R\ in Action, second ed.} by Robert 
 Kabacoff.  The online open source book on statistical modeling by Legler and Roback at
 \url{https://bookdown.org/roback/bookdown-bysh} contains a lot of \R\ code.
-Jenny Bryan's \href{https://stat545.com}{STAT 545} \emph{Data
-  Wrangling, Exploration, and Analysis with \R} course at
+Jenny Bryan's \href{https://stat545.com}{STAT 545} \emph{Data Wrangling, Exploration, and Analysis with \R} course at
 \url{stat545.com} is an excellent resource.
 \url{http://stackoverflow.com/tags/r} is the best place for asking
 questions about the language and for learning from answers to past questions
@@ -282,7 +279,7 @@ save the original column names as variable labels.
 Here is an example of importing a \co{csv} file into \R.  First of all
 make sure your spreadsheet is a ``spreadsheet from heaven'' and not a
 ``spreadsheet from hell'' by reading
-\url{http://biostat.mc.vanderbilt.edu/DataTransmissionProcedures}.
+\url{http://biostat.app.vumc.org/DataTransmissionProcedures}.
 Then use your spreadsheet software to export a single worksheet to
 create a \co{csv} file.  Small \co{csv} files may be pasted into your
 \R\ script as is done in the following example, but in most cases you
@@ -311,20 +308,12 @@ contents(d)
 Data frame:d	3 observations and 5 variables    Maximum # NAs:1
 
 
-                   Labels Levels   Class Storage NAs
-age.in.years Age in Years        integer integer   1
-sex                   sex      2         integer   0
-race                 race      2         integer   0
-visit.date     visit date           Date  double   0
-m.s                   m/s        numeric  double   0
-
-+--------+------+
-|Variable|Levels|
-+--------+------+
-|  sex   |  f,m |
-+--------+------+
-|  race  |  b,w |
-+--------+------+
+                   Labels     Class   Storage NAs
+age.in.years Age in Years   integer   integer   1
+sex                   sex character character   0
+race                 race character character   0
+visit.date     visit date      Date    double   0
+m.s                   m/s   numeric    double   0
 \end{Soutput}
 \begin{Sinput}
 d
@@ -381,18 +370,12 @@ contents(d)  # show labels created by csv.get
 Data frame:d	4 observations and 5 variables    Maximum # NAs:0
 
 
-       Labels Levels   Class Storage
-age       age        integer integer
-sys.bp sys bp        integer integer
-sex       sex      2         integer
-junk     junk        integer integer
-state   state        integer integer
-
-+--------+-----------+
-|Variable|Levels     |
-+--------+-----------+
-|   sex  |female,male|
-+--------+-----------+
+       Labels     Class   Storage
+age       age   integer   integer
+sys.bp sys bp   integer   integer
+sex       sex character character
+junk     junk   integer   integer
+state   state   integer   integer
 \end{Soutput}
 \begin{Sinput}
 d <- upData(d,
@@ -404,11 +387,11 @@ d <- upData(d,
    units=c(sbp='mmHg'))
 \end{Sinput}
 \begin{Soutput}
-Input object size:	 4192 bytes;	 5 variables	 4 observations
+Input object size:	 4040 bytes;	 5 variables	 4 observations
 Renamed variable	 sys.bp 	to sbp 
 Modified variable	state
 Dropped variable	junk
-New object size:	3760 bytes;	4 variables	4 observations
+New object size:	3608 bytes;	4 variables	4 observations
 \end{Soutput}
 \begin{Sinput}
 contents(d)
@@ -418,16 +401,14 @@ contents(d)
 Data frame:d	4 observations and 4 variables    Maximum # NAs:0
 
 
-                       Labels Units Levels   Class Storage
-age                       Age              integer integer
-sbp   Systolic Blood Pressure  mmHg        integer integer
-sex                       sex            2         integer
-state                                    2         integer
+                       Labels Units Levels     Class   Storage
+age                       Age                integer   integer
+sbp   Systolic Blood Pressure  mmHg          integer   integer
+sex                       sex              character character
+state                                    2             integer
 
 +--------+--------------+
 |Variable|Levels        |
-+--------+--------------+
-|  sex   |female,male   |
 +--------+--------------+
 |  state |Alabama,Alaska|
 +--------+--------------+
@@ -439,7 +420,7 @@ describe(d)
 d 
 
  4  Variables      4  Observations
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 age : Age 
        n  missing distinct     Info     Mean      Gmd 
        4        0        4        1    36.75    11.83 
@@ -447,7 +428,7 @@ age : Age
 Value        23   37   42   45
 Frequency     1    1    1    1
 Proportion 0.25 0.25 0.25 0.25
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 sbp : Systolic Blood Pressure [mmHg] 
        n  missing distinct     Info     Mean      Gmd 
        4        0        4        1    134.8      8.5 
@@ -455,7 +436,7 @@ sbp : Systolic Blood Pressure [mmHg]
 Value       127  131  140  141
 Frequency     1    1    1    1
 Proportion 0.25 0.25 0.25 0.25
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 sex 
        n  missing distinct 
        4        0        2 
@@ -463,7 +444,7 @@ sex
 Value      female   male
 Frequency       2      2
 Proportion    0.5    0.5
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 state 
        n  missing distinct 
        4        0        2 
@@ -471,7 +452,7 @@ state
 Value      Alabama  Alaska
 Frequency        2       2
 Proportion     0.5     0.5
----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 \end{Soutput}
 \begin{Sinput}
 dim(d); nrow(d); ncol(d); length(d)  # length is no. of variables
@@ -500,12 +481,7 @@ d <- data.frame(age=c(10,20,30), sex=c('male','female','male'),
 \end{Sinput}
 \end{Schunk}
 
-Large files may be stored in \R\ binary format using \co{save(...,
-  compress=TRUE)}, which creates an incredibly compact representation
-of the data in a file usually suffixed with \co{.rda}.  This allows
-extremely fast loading of the data frame in your next \R\ session
-using \co{load(...)}.  The \co{Hmisc} \co{Save} and \co{Load}
-functions make this even easier.
+Large files may be stored in \R\ binary format using \co{save(..., compress=TRUE)}, which creates an incredibly compact representation of the data in a file usually suffixed with \co{.rda}.  This allows extremely fast loading of the data frame in your next \R\ session using \co{load(...)}.  The \co{Hmisc} \co{Save} and \co{Load} functions make this even easier.
 
 \section{Suggestions for Initial Data Look}
 The \co{datadensity} function in the \co{Hmisc} package gives an

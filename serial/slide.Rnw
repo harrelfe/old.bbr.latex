@@ -6,7 +6,7 @@ knitrSet('serial', width=80)
 
 \def\apacue{1}
 \chapter{Serial Data}
-\section{Introduction}\sound{serial-1}\ipacue
+\section{Introduction}\soundm{serial-1}\ipacue
 Serial data, also called longitudinal data, repeated measures, or
 panel data,
 present a special challenge in that the response variable is
@@ -47,8 +47,7 @@ There are several overall approaches to the analysis of serial
 measurements.  Some of the older approaches such as multiple $t$-tests
 and repeated measures ANOVA are
 now considered obsolete because of the availability of better methods that are
-more flexible and robust\footnote{Repeated measures ANOVA makes stringent
-assumptions and requires complex adjustments for within-subject correlation.}.
+more flexible and robust\footnote{Repeated measures ANOVA makes stringent assumptions and requires complex adjustments for within-subject correlation.}.
 Separate $t$-tests at each time point do not make good use of
 available information, use an inefficient estimate of $\sigma^2$, do
 not interpolate time points, and have multiple comparison problems.
@@ -59,8 +58,7 @@ type II error, but in this case the sacrifice is too severe.
 In addition, investigators are frequently confused by the $t$-test being
 ``significant'' at one time point and not at another, and make the
 unwarranted claim that the treatment is effective only at the first
-time.  Besides not recognizing the \emph{absence of evidence is not
-  evidence for absence} problem, the investigator can be mislead by
+time.  Besides not recognizing the \emph{absence of evidence is not evidence for absence} problem, the investigator can be mislead by
 increased variability in response at the second time point driving
 the $t$ ratio towards zero.  This variability may not even be real but
 may reflect instability in estimating $\sigma$ separately at each time
@@ -97,6 +95,13 @@ have different trajectories.  Mixed effects models can be generalized
 to binary and other endpoints but lose their full likelihood status
 somewhat when these extensions are used, unless a Bayesian approach is used.
 
+\bi
+\item Mixed effects model have random effects (random intercepts and possibly also random slopes or random shapes) for subjects
+\item These allow estimation of the trajectory for an individual subject
+\item When the interest is instead on group-level effects (e.g., average difference between treatments, over subjects), GLS squares models may be more appropriate
+\item The generalization of GLS to non-normally distributed $Y$ is \emph{marginalized models} (marginalized over subject-level effects)
+\ei
+
 Generalized least squares, formerly called growth curve models, is the
 oldest approach and has excellent performance when $Y$ is
 conditionally normally distributed.
@@ -114,7 +119,7 @@ $P$-values and confidence intervals to be accurate.  An advantage of GEE is
 that it extends easily to every type of response variable, including binary,
 ordinal, polytomous, and time-to-event responses.
 
-\subsection{Summary Measures}\sound{serial-2}\ipacue
+\subsection{Summary Measures}\soundm{serial-2}\ipacue
 A simple and frequently effective approach is to summarize the serial
 measures from each subject using one or two measures, then to analyze
 these measures using traditional statistical methods that capitalize
@@ -135,10 +140,9 @@ coefficient of time squared when fitting each subject's data with a
 quadratic equation.  This allows detailed analyses of curve shapes.
 
 \section{Case Study}
-\subsection{Data and Summary Measures}\sound{serial-3}\ipacue
+\subsection{Data and Summary Measures}\soundm{serial-3}\ipacue
 Consider the isoproterenol dose-response analysis of \citet{dupmod} of
-the original data from Lang\footnote{CC Lang~\etal\ NEJM
-  333:155-60, 1995}.  Twenty two normotensive men were studied, 9 of
+the original data from Lang\footnote{CC Lang~\etal\ NEJM 333:155-60, 1995}.  Twenty two normotensive men were studied, 9 of
 them black and 13 white.  Blood flow was measured before the drug was
 given, and at escalating doses of isoproterenol.  Most subjects had 7
 measurements, and these are not independent.
@@ -146,9 +150,7 @@ measurements, and these are not independent.
 require(Hmisc)
 require(data.table)   # elegant handling of aggregation
 require(ggplot2)
-d <- csv.get(paste('http://biostat.mc.vanderbilt.edu',
-                   'dupontwd/wddtext/data/11.2.Long.Isoproterenol.csv',
-                   sep='/'))
+d <- csv.get('https://hbiostat.org/data/repo/11.2.Long.Isoproterenol.csv')
 d <- upData(d, keep=c('id', 'dose', 'race', 'fbf'),
             race  =factor(race, 1:2, c('white', 'black')),
             labels=c(fbf='Forearm Blood Flow'),
@@ -163,6 +165,7 @@ setkey(d, id, race)
 # subject's fitted curve over a regular grid of 150 doses
 # Area under curve is divided by 400 to get a mean function
 require(rms)
+options(prType='latex')
 g <- function(x, y, what=c('curve', 'coef', 'area')) {
   what <- match.arg(what)   # 'curve' is default
   knots <- c(20, 60, 150)
@@ -225,9 +228,9 @@ ggplot(a, aes(x=race, y=area)) +    # Fig. (*\ref{fig:serial-auc}\ipacue*)
   geom_boxplot(alpha=.5, width=.25) + geom_point() + coord_flip() +
   ylab(expression(paste('Mean Forearm Blood Flow,  ', scriptstyle(ml/min/dl))))
 @
-\clearpage
+%\clearpage
 
-\subsection{Nonparametric Test of Race Differences in AUC}\sound{serial-4}\ipacue
+\subsection{Nonparametric Test of Race Differences in AUC}\soundm{serial-4}\ipacue
 A minimal-assumption approach to testing for differences in
 isoproterenol dose-response between races is to apply the Wilcoxon
 test to the normalized AUCs (mean response functions).
@@ -255,7 +258,7 @@ h
 @
 <<lrm,results='asis'>>=
 f <- lrm(race ~ b0 + b1 + b2, data=h, x=TRUE, y=TRUE)
-print(f, latex=TRUE)
+f
 @
 The likelihood ratio $\chi^{2}_{3}=19.73$ has $P=0.0002$ \ipacue
 indicating strong evidence that the races have different averages,
@@ -266,12 +269,11 @@ the bootstrap to get an overfitting-corrected index.
 <<boot,results='asis'>>=
 set.seed(2)
 v <- validate(f, B=1000)
-latex(v, file='')
+latex(v)
 @
-The overfitting-corrected $c$-index is $c = \frac{D_{xy} + 1}{2}$ =
-\Sexpr{round((v['Dxy','index.corrected'] + 1) / 2, 2)}.
+The overfitting-corrected $c$-index is $c = \frac{D_{xy} + 1}{2}$ = \Sexpr{round((v['Dxy','index.corrected'] + 1) / 2, 2)}.
 
-\subsection{Model-Based Analysis: Generalized Least Squares}\sound{serial-5}\ipacue
+\subsection{Model-Based Analysis: Generalized Least Squares}\soundm{serial-5}\ipacue
 Generalized least squares (GLS) is the first generalization of ordinary
 least squares (multiple linear regression).  It is described in detail
 in \emph{Regression Modeling Strategies} Chapter~7 where a
@@ -329,9 +331,9 @@ transformation requires a very arbitrary adjustment to dose to handle zeros.
 <<glsb,results='asis'>>=
 a <- Gls(log(fbf) ~ race * rcs(log(dose + 1), log(c(20,60,150)+1)), data=d,
          correlation=corCAR1(form = ~ dose | id))
-latex(anova(a), file='', table.env=FALSE)
+anova(a)
 @
-There is little evidence for a nonlinear dose effect on the log scale, \sound{serial-6}
+There is little evidence for a nonlinear dose effect on the log scale, \soundm{serial-6}
 implying that the underlying model is exponential on the original $X$
 and $Y$ scales.  This is consistent with \citet{dupmod}.  Re-fit the
 model as linear in the logs.  Before taking this as the final model,
@@ -350,8 +352,8 @@ structure is far superior to dose-based.  We will used the second
 model for the remainder of the analysis.  But first we check some of
 the model assumptions.
 <<glsc,results='asis',w=6,h=4,cap='Checking assumptions of the GLS model that is linear after logging dose and blood flow.  The graph on the right is a QQ-plot to check normality of the residuals from the model, where linearity implies normality.',scap='Checking assumptions of GLS model'>>=
-print(b, latex=TRUE)
-latex(anova(b), file='', table.env=FALSE)
+b
+anova(b)
 w <- data.frame(residual=resid(b), fitted=fitted(b))
 p1 <- ggplot(w, aes(x=fitted, y=residual)) + geom_point()
 p2 <- ggplot(w, aes(sample=residual)) + stat_qq()
@@ -364,23 +366,16 @@ with the less parametric approach using the logistic model above.  But
 the logistic model also tests for an overall shift in distributions
 due to race, and the more efficient test for the combined race main
 effect and dose interaction effect from GLS is more significant
-with a Wald $\chi^{2}_{2} = 32.45$\footnote{The $\chi^2$ for race with
-  the dose-based correlation structure was a whopping 100 indicating
-  that lack of fit of the correlation structure can have a significant
-  effect on the rest of the GLS model.}. The
+with a Wald $\chi^{2}_{2} = 32.45$\footnote{The $\chi^2$ for race with the dose-based correlation structure was a whopping 100 indicating that lack of fit of the correlation structure can have a significant effect on the rest of the GLS model.}. The
 estimate of the correlation between two log blood flows measured on
 the same subject one time unit apart is 0.69.
 
 The equal variance and normality assumptions appear to be well met as
 judged by Figure~\ref{fig:serial-glsc}.
 
-Now estimate the dose-response curves by race, with pointwise \sound{serial-7}
+Now estimate the dose-response curves by race, with pointwise \soundm{serial-7}
 confidence intervals and simultaneous intervals that allow one to make
-statements about the entire curves\footnote{Since the model is linear
-  in log dose there are two parameters involving dose---the dose main
-  effect and the race $\times$ dose interaction effect.  The
-  simultaneous inference adjustment only needs to reflect simultaneity in two
-  dimensions.}.  Anti-log the predicted values to
+statements about the entire curves\footnote{Since the model is linear in log dose there are two parameters involving dose---the dose main effect and the race $\times$ dose interaction effect.  The simultaneous inference adjustment only needs to reflect simultaneity in two dimensions.}.  Anti-log the predicted values to
 get predictions on the original blood flow scale.  Anti-logging
 predictions from a model that assumes a normal distribution on the
 logged values results in estimates of the median response.

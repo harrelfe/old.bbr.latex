@@ -6,7 +6,7 @@ options(prType='latex')
 @
 
 \chapter{Simple and Multiple Regression Models}
-{\larger\textbf{Background}}\sound{reg-1}
+{\larger\textbf{Background}}\sound{reg-1}\bmovie{13}\ddisc{13}
 
 Regression models are used for
 \bi
@@ -15,7 +15,7 @@ Regression models are used for
 \item prediction
 \item increasing power and precision for assessing the effect of one
   variable by adjusting for other variables that partially explain the outcome
-  variable $Y$
+  variable $Y$ (even in a randomized experiment with perfect covariate balance)
 \item confounder adjustment---getting adjusted estimates of effects
 \item checking that existing summary scores (e.g., BMI) adequately
   summarize their component variables
@@ -91,7 +91,7 @@ is age, and older patients tend to get treatment B
     $Y'$ is $Y$ after the $x_1$ effect is subtracted from it
   \ei
 \item Stratification and matching are not effective when $x_1$ is
-  continuous are there are many $x$'s to hold constant
+  continuous as there are many $x$'s to hold constant
 \item Matching may be useful \emph{before} data acquisition is
   complete or when sample is too small to allow for regression
   adjustment for $>1$ variable
@@ -146,35 +146,14 @@ These problems combine to make post-sample-collection matching unsatisfactory fr
 \href{http://www.stat.columbia.edu/~gelman/arm/chap10.pdf}{Gelman} has
 a nice chapter on matching.
 
-\section{Purposes of Statistical Models}\rms{1.1}\disc{reg-purpose}
+\rms{1.1}\disc{reg-purpose}
+\section{Purposes of Statistical Models}
 
-\quoteit{Statisticians, like artists, have the bad habit of falling in
-  love with their models.}{George E.\ P.\ Box}
+\quoteit{Statisticians, like artists, have the bad habit of falling in love with their models.}{George E.\ P.\ Box}
 
 \bigskip
 
-\quoteit{Most folk behave and thoughtlessly believe that the objective of
-analysis with statistical tools is to find / identify features in the
-data---period.\\
-
-They assume and have too much faith that (1) the data effectively
-reflect nature and not noise, and (2) that statistical tools can
-`auto-magically' divine causal relations.\\
-
-They do not acknowledge that the objective of analysis should be to
-find interesting features of nature (which to the extent that they
-indicate causal effects will be reproducible), represent them well,
-and use these features to make reliable decisions about future
-cases/situations.\\
-
-Too often the $p$-value 'satisfices', for the intent of the latter.\\
-
-I also think that hypothesis testing and effect estimation are really
-forms of ersatz prediction---ways of identifying and singling out a
-factor that allows them to make prediction in a simplistic manner
-(again satisficing for cognitive ease). Therefore full, well
-formulated prediction modeling is to be preferred to achieve this
-unacknowledged goal on these grounds.}{Drew Levy\\Genentech\\March 2015}\\
+\quoteit{Most folk behave and thoughtlessly believe that the objective of analysis with statistical tools is to find / identify features in the data—period. \\ \\They assume and have too much faith that (1) the data effectively reflect nature and not noise, and (2) that statistical tools can `auto-magically' divine causal relations. \\ \\ They do not acknowledge that the objective of analysis should be to find interesting features inherent in nature (which to the extent that they indicate causal effects should  be reproducible); represent these well; and use these features to make reliable decisions about future cases/situations. \\ \\ Too often the p-value `satisfices' for the intent of making reliable decisions about future cases/situations. \\ \\ I also think that hypothesis testing and even point estimates for individual effects are really ersatz forms of prediction: ways of identifying and singling out a factor that allows people to make a prediction (and a decision) in a simple (simplistic) and expedient manner (again typically satisficing for cognitive ease). Well formulated prediction modeling is to be preferred to achieve this unacknowledged goal of making reliable decisions about future cases/situations on these grounds.}{Drew Levy\\ \texttt{@DrewLevy}\\March 2020}\\
 
 \bi
 \item Hypothesis testing
@@ -239,8 +218,8 @@ Statistical estimation is usually model-based
 \begin{center}\begin{tabular}{rrrrrr} \hline
 $X$: & 1 & 2 & 3 & 5 & 8 \\
 $Y$: & 2.1 & 3.8 & 5.7 & 11.1 & 17.2 \\ \hline
-\end{tabular}\end{center}
-\ipacue\beqa
+\end{tabular}\end{center}   % the next \ipacue didn't take
+\ipacue\beqa     
 \hat{E}(Y | X=2) &=& \frac{2.1+3.8+5.7}{3} \\
 \hat{E}(Y | X=\frac{2+3+5}{3}) &=& \frac{3.8+5.7+11.1}{3}
 \eeqa
@@ -251,8 +230,7 @@ $Y$: & 2.1 & 3.8 & 5.7 & 11.1 & 17.2 \\ \hline
  \ei
 \item Moving linear regression far superior to moving avg.\ (moving
   flat line)
-\item  Cleveland's moving linear regression smoother {\em
-  loess} (locally weighted least squares) is the most popular
+\item  Cleveland's moving linear regression smoother \emph{loess} (locally weighted least squares) is the most popular
   smoother
 \item  Example: differential diagnosis of acute bacterial meningitis
   vs.\ viral meningitis
@@ -435,8 +413,8 @@ Total      & $n-1$   & $SST$ & $MST = SST/(n-1)$   & \\ \hline
 \item $t^{2} \equiv F$ when $p=1$
 \item $t_{n-2} \equiv \sqrt{F_{1, n-2}}$
 \item $t$ identical to 2-sample $t$-test ($x$ has two values)
-\item If $x$ takes on only the values 0 and 1, $b$ equals $\bar{y}$
-  when $x=1$ minus   $\bar{y}$ when $x=0$
+\item If $x$ takes on only the values 0 and 1, $b$ equals ($\bar{y}$
+  when $x=1$) minus ($\bar{y}$ when $x=0$)
 \ei
 
 \subsection{Interval Estimation}\ros{11.5}\sound{reg-5}
@@ -444,16 +422,13 @@ Total      & $n-1$   & $SST$ & $MST = SST/(n-1)$   & \\ \hline
 \item 2-sided $1-\alpha$ CI for $\beta$: $b \pm t_{n-2,1-\alpha/2}
   \widehat{se}(b)$
 \item CI for \emph{predictions} depend on what you want to predict
-  even though $\hat{y}$ estimates both $y$ \footnote{With a normal
-    distribution, the least dangerous guess for an individual $y$ is the
-    estimated mean of $y$.}  and $E(y|x)$
+  even though $\hat{y}$ estimates both $y$ \footnote{With a normal distribution, the least dangerous guess for an individual $y$ is the estimated mean of $y$.}  and $E(y|x)$
 \item Notation for these two goals: $\hat{y}$ and $\hat{E}(y|x)$
  \bi
  \item Predicting $y$ with $\hat{y}$ :\ipacue \\
    $\widehat{s.e.}(\hat{y}) = s_{y \cdot x} \sqrt{1 + \frac{1}{n} +
    \frac{(x-\bar{x})^{2}}{L_{xx}}}$ \\
-   \textbf{Note}: This s.e.\ $\rightarrow s_{y\cdot x}$ as $n
-   \rightarrow \infty$
+   \textbf{Note}: This s.e.\ $\rightarrow s_{y\cdot x}$ as $n \rightarrow \infty$
    \bi
    \item As $n\rightarrow \infty$, $\widehat{s.e.}(\hat{y}) \rightarrow s_{y \cdot x}$ which is $> 0$
    \item Fits with thinking of a predicted individual value being the
@@ -466,16 +441,7 @@ Total      & $n-1$   & $SST$ & $MST = SST/(n-1)$   & \\ \hline
    \ei
  \item Predicting $\hat{E}(y|x)$ with $\hat{y}$:\ipacue \\
    $\widehat{s.e.}(\hat{E}(y|x)) = s_{y \cdot x} \sqrt{\frac{1}{n} +
-   \frac{(x-\bar{x})^{2}}{L_{xx}}}$ See footnote\footnote{$n$ here is
-   the grand
-     total number of observations because we are borrowing information
-     about neighboring $x$-points, i.e., using interpolation.  If we
-     didn't assume anything and just computed mean $y$ at each
-     separate $x$, the standard error would instead by estimated by
-     $s_{y\cdot x}\sqrt{\frac{1}{m}}$, where $m$ is the number of
-     original observations with $x$ exactly equal to the $x$ for which
-     we are obtaining the prediction.  The latter s.e.\ is much larger
-     than the one from the linear model.} \\
+   \frac{(x-\bar{x})^{2}}{L_{xx}}}$ See footnote\footnote{$n$ here is the grand total number of observations because we are borrowing information about neighboring $x$-points, i.e., using interpolation.  If we didn't assume anything and just computed mean $y$ at each separate $x$, the standard error would instead by estimated by $s_{y\cdot x}\sqrt{\frac{1}{m}}$, where $m$ is the number of original observations with $x$ exactly equal to the $x$ for which we are obtaining the prediction.  The latter s.e.\ is much larger than the one from the linear model.} \\
    \textbf{Note}: This s.e.\ shrinks to 0 as $n \rightarrow \infty$
  \ei
 \item $1-\alpha$ 2-sided CI for either one: \\
@@ -521,8 +487,8 @@ Assumptions:
 \item   Linearity
 \item   $\sigma^2$ is constant, independent of $x$
 \item   Observations ($e$'s) are independent of each other
-\item   For proper statistical inference (CI, $P$-values), $y$ ($e$)
-        is normal conditional on $x$
+\item   For proper statistical inference (CI, $P$-values), $e$ is
+  normal, or equivalently, $y$ is normal conditional on $x$
 \ee
 Verifying some of the assumptions:
 \bi
@@ -546,15 +512,19 @@ x <- runif(n)
 y <- exp(log(x) + res)
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))    # Fig. (*\ref{fig:reg-exresid}*)
+rl <- function() abline(h=0, col=gray(0.8))
+rl()
 # Fit a linear model that should have been quadratic
 x <- runif(n, -1, 1)
 y <- x ^ 2 + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
+rl()
 # Fit a correctly assumed linear model
 y <- x + res
 f <- ols(y ~ x)
 plot(fitted(f), resid(f))
+rl()
 # Q-Q plot to check normality of residuals
 qqnorm(resid(f)); qqline(resid(f))
 @
@@ -573,8 +543,8 @@ Assumptions:
 \item	Linearity
 \item	$\sigma^2$ is constant, independent of $x$
 \item	Observations ($e$'s) are independent of each other
-\item	For proper statistical inference (CI, $P$--values), $y$ ($e$)
-		is normal conditional on $x$
+\item	For proper statistical inference (CI, $P$--values), $e$ is
+  normal, or equivalently $y$ is normal conditional on $x$
 \ee
 Verifying some of the assumptions:
 \be
@@ -684,12 +654,11 @@ Hypothesis tests with $p>1$:
 
 Notes about distributions:
 \bi
-\item	If $t \sim t_{b}, \quad t \dot{\sim} $ normal for large $b$ and $t^{2}
-\dot{\sim} \chi^{2}_{1},$ so [$\frac{b}{\widehat{s.e.}(b)}]^{2} \dot{\sim} \chi^{2}_{1}$
+\item	If $t \sim t_{b}, \quad t \dot{\sim} $ normal for large $b$ and $t^{2} \dot{\sim} \chi^{2}_{1},$ so [$\frac{b}{\widehat{s.e.}(b)}]^{2} \dot{\sim} \chi^{2}_{1}$
 \item	If $F \sim F_{a,b}, \quad a \times F \dot{\sim} \chi^{2}_{a}$ for large $b$
 \item	If $F \sim F_{1,b}, \quad \sqrt{F} \sim t_{b}$
 \item	If $t \sim t_{b}, \quad t^{2} \sim F_{1,b}$
-\item	If $z \sim $ normal,$ \quad z^{2} \sim \chi^{2}_{1}$
+\item	If $z \sim $ normal, $\quad z^{2} \sim \chi^{2}_{1}$
 \item	$y \sim D$ means $y$ is distributed as the distribution $D$
 \item	$y \dot{\sim} D$ means that $y$ is approximately distributed
 		as $D$ for large $n$
@@ -722,7 +691,7 @@ Notes about distributions:
 }   % end ignore
 
 \section{Proper Transformations and Percentiling}\sound{reg-7}
-\disc{reg-percentiling}
+\disc{reg-percentiling}\bmovie{14}\ddisc{14}
 \bi
 \item All parametric and semi-parametric regression models make
   assumptions about the shape of the relationship between predictor
@@ -737,7 +706,7 @@ Notes about distributions:
   distribution of $X$ (e.g., how many persons have BMI similar to a
   subject) instead of through physics, physiology, or anatomy
 \item Also allows definitions to change as the population accommodates
-\item Example: assume BMI is normal with mean 28 and SD 2\ipacue
+\item Example: assume BMI is normal with mean 28 and SD 2 \ipacue
 \item Figure~\ref{fig:reg-bmi} upper left panel shows this distribution
 \item Upper right: percentile of BMI vs.\ raw BMI
 \item Lower left: supposed relationship between BMI and disease risk
@@ -749,8 +718,7 @@ $Y$.  The typical default assumption is linearity in $X$ vs.\ some
 transformation of $Y$ (e.g., log odds, log hazard or in ordinary
 regression the identify function).  Regression splines are one of the
 best approaches for allowing for smooth, flexible regression function
-shapes.  Splines are described in detail in the \emph{Regression
-  Modeling Strategies} book and course notes.
+shapes.  Splines are described in detail in the \emph{Regression Modeling Strategies} book and course notes.
 
 Some researchers and government agencies get the idea that continuous
 variables should be modeled through percentiling.  This is a rather
@@ -807,10 +775,8 @@ is to properly model the predictor.
   numbers is discontinuous with variable step widths
 \ei
 
-In epidemiology a common practice is even more problematic.  One often
-\ipacue
-sees smoothly-acting continuous variables such as BMI broken into
-discontinuous quintile \emph{groups}, the groups numbered from 1~to~5,
+In epidemiology a common practice is even more problematic.  One often \ipacue sees smoothly-acting continuous variables such as BMI broken into
+discontinuous quintile \emph{groups}, the groups numbered from 1 to 5,
 and a linear regression of correlation fitted to the 1--5 variable
 (``test for trend'').
 This is not only hugely wasteful of information and power, but results
@@ -873,9 +839,7 @@ for(i in 1 : 5) {
 \item Solve for $a, b_{1}, b_{2}$ to minimize $SSE$
 \item When $p>1$, least squares estimates require complex
 formulas; still all of the coefficient estimates are weighted
-combinations of the $y$'s, $\sum w_{i}y_{i}$\footnote{When $p=1$, the
-  $w_i$ for estimating $\beta$ are
-  $\frac{x_{i}-\bar{x}}{\sum(x_{i}-\bar{x})^{2}}$}.
+combinations of the $y$'s, $\sum w_{i}y_{i}$\footnote{When $p=1$, the $w_i$ for estimating $\beta$ are $\frac{x_{i}-\bar{x}}{\sum(x_{i}-\bar{x})^{2}}$}.
 \ei
 
 \subsection{Interpretation of Parameters}\sound{reg-9}
@@ -907,10 +871,7 @@ combinations of the $y$'s, $\sum w_{i}y_{i}$\footnote{When $p=1$, the
    different blood pressures
  \item Or we can envision what would be the expected response had
    \emph{this} subject's blood pressure been 1mmHg greater at the
-   outset\footnote{This setup is the basis for randomized controlled
-     trials and randomized animal experiments.  Drug effects may be
-     estimated with between-patient group differences under a
-     statistical model.}
+   outset\footnote{This setup is the basis for randomized controlled trials and randomized animal experiments.  Drug effects may be estimated with between-patient group differences under a statistical model.}
  \item We are not speaking of longitudinal changes in a single
    person's blood pressure
  \item We can use subtraction to get the adjusted (partial) effect of
@@ -942,11 +903,8 @@ combinations of the $y$'s, $\sum w_{i}y_{i}$\footnote{When $p=1$, the
 
 \subsection{Example: Estimation of Body Surface Area}\sound{reg-9a}
 DuBois \& DuBois developed an equation in log height and log
-weight in 1916 that is still used\footnote{DuBois D, DuBois EF: A
-  formula to estimate the approximate surface area if height and
-  weight be known.  \emph{Arch Int Medicine} \textbf{17}(6):863-71,
-  1916.}.  We use the main data they used\footnote{A Stata data file
-  \co{dubois.dta} is available \href{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/dubois.dta}{here}.}.
+weight in 1916 that is still used\footnote{DuBois D, DuBois EF: A formula to estimate the approximate surface area if height and weight be known.  \emph{Arch Int Medicine} \textbf{17}(6):863-71, 1916.}.  We use the main data they used
+\footnote{A Stata data file \co{dubois.dta} is available \href{http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/dubois.dta}{here}.}.
 
 <<dubois>>=
 require(rms)
@@ -973,7 +931,7 @@ r2stata(dubois)
 # Exclude subject measured using adhesive plaster method
 d <- d[-7, ]
 @
-Fit a multiple regression model in the logs of all 3 variables\ipacue
+Fit a multiple regression model in the logs of all 3 variables \ipacue
 <<dreg,results='asis'>>=
 dd <- datadist(d); options(datadist='dd')
 f <- ols(log10(bsa) ~ log10(weight) + log10(height), data=d)
@@ -1033,6 +991,8 @@ Other ways to express the d.f.\ for a hypothesis are:
 \item The number of opportunities you give associations to be present (relationships with $Y$ to be non-flat)
 \item The number of restrictions you place on parameters to make the null hypothesis of no association (flat relationships) hold
 \ei
+
+See also \href{http://hbiostat.org/doc/glossary.pdf}{hbiostat.org/doc/glossary.pdf}. 
 
 \subsection{Hypothesis Testing} \ems{11.2}\ros{11.9.2}
 \disc{reg-mult-h0}
@@ -1121,8 +1081,8 @@ Assumptions:
 \item   Linearity of each predictor against $y$ holding others constant
 \item   $\sigma^2$ is constant, independent of $x$
 \item   Observations ($e$'s) are independent of each other
-\item   For proper statistical inference (CI, $P$-values), $y$ ($e$)
-        is normal conditional on $x$
+\item   For proper statistical inference (CI, $P$-values), $e$ is
+  normal, or equivalently, $y$ is normal conditional on $x$
 \item $x$'s act additively; effect of $x_{j}$ does not depend on the
   other $x$'s (\textbf{But} note that the $x$'s may be correlated with
   each other without affecting what we are doing.)
@@ -1137,7 +1097,7 @@ Verifying some of the assumptions:
         just the difference in means for $x_{2}=1$ vs.\ $x_{2}=0$ as
         $\Delta x_{2}=1$ in this simple case.
 <<mult-reg-assume-twovar,w=4.5,h=3.5,cap='Data satisfying all the assumptions of simple multiple linear regression in two predictors.  Note equal spread of points around the population regression lines for the $x_{2}=1$ and $x_{2}=0$ groups (upper and lower lines, respectively) and the equal spread across $x_1$.  The $x_{2}=1$ group has a new intercept, $\\alpha+\\beta_2$, as the $x_2$ effect is $\\beta_2$.  On the $y$ axis you can clearly see the difference between the two true population regression lines is $\\beta_{2} = 3$.',scap='Assumptions for two predictors'>>=
-# Generate 25 observations for each group, with true beta1=.05, true beta2=3
+# Generate 25 observations for each group, with true beta1=.2, true beta2=3
 d <- expand.grid(x1=1:25, x2=c(0, 1))
 set.seed(3)
 d$y <- with(d, .2*x1 + 3*x2 + rnorm(50, sd=.5))
@@ -1256,7 +1216,7 @@ r &=& \frac{L{xy}}{\sqrt{L_{xx}L_{yy}}} \\
 \item $r^2$ is the proportion of variation in $y$ explained by
   conditioning on $x$
 \item $(n-2) \frac{r^{2}}{1-r^{2}} = F_{1,n-2} = \frac{MSR}{MSE}$
-\item For multiple regression in general we use $R^2$ to denote the\ipacue
+\item For multiple regression in general we use $R^2$ to denote the \ipacue
   fraction of variation in $y$ explained jointly by all the $x$'s
   (variation in $y$ explained by the whole model)
 \item $R^{2} = \frac{SSR}{SST} = 1 - \frac{SSE}{SST} = 1 $ minus
@@ -1310,9 +1270,7 @@ f <- ols(maxfwt ~ group, data=lead)
 f
 ggplot(Predict(f))
 <<olslead2>>=
-options(prType='plain')
-summary(f)
-options(prType='latex')
+options(prType='plain'); summary(f); options(prType='latex')
 @
 \bi
 \item In general requires $k-1$ dummies to describe $k$ categories
@@ -1320,9 +1278,7 @@ options(prType='latex')
   irrelevant
 \item Does matter for interpreting individual coefficients
 \item Modern statistical programs automatically generate indicator
-  variables from categorical or character predictors\footnote{In
-    \R\ indicators are generated automatically any time a \Co{factor}
-    or \Co{category} variable is in the model.}
+  variables from categorical or character predictors\footnote{In \R\ indicators are generated automatically any time a \Co{factor} or \Co{category} variable is in the model.}
 \item In \R\ never generate indicator variables yourself; just provide a \co{factor} or \co{character} predictor.
 \ei
 \clearpage
@@ -1354,9 +1310,7 @@ fa
 ggplot(Predict(fa, age, group))
 @ 
 <<<leadgrage2>>=
-options(prType='plain')
-summary(fa)
-options(prType='latex')
+options(prType='plain'); summary(fa); options(prType='latex')
 @ 
 <<leadgrage3,results='asis'>>=
 anova(fa)
@@ -1365,7 +1319,7 @@ anova(f)    # reduced model (without age)
 Subtract SSR or SSE from these two models to get the treatment effect with 2 d.f.
 \ei
 
-\subsection{Continuous Analysis of Lead Exposure}
+\subsection{Continuous Analysis of Lead Exposure}\bmovie{15}\ddisc{15}
 See \ref{sec:rmsintro-leadcontinuous}.
 
 \subsection{Two-Way ANOVA} \ros{12.6}\sound{reg-18}
@@ -1381,7 +1335,8 @@ See \ref{sec:rmsintro-leadcontinuous}.
 \item Assumes effects of diet and sex are additive (separable) and not
   synergistic
 \item $\beta_{1} = SV - NOR$ mean difference holding sex constant \\
-  $\beta_{3} = male - female$ effect holding diet constant
+  $\beta_{2} =$ LV - NOR mean difference holding sex constant \\ 
+  $\beta_{3} =$ male - female effect holding diet constant
 \item Test of diet effect controlling for sex effect: \\
  $H_{0}:\beta_{1}=\beta_{2}=0$ \\
  $H_{a}: \beta_{1} \neq 0$ or $\beta_{2} \neq 0$
@@ -1440,26 +1395,20 @@ until first major cardiovascular event.  The application is targeted
 pharmacogenomics in acute coronary syndrome (the CURE study~\cite{par10eff}).
 
 \bi
-\item Subgroup analysis is virtually worthless for learning about
-  differential treatment effects
-\item Instead a proper assessment of interaction must be used, with
-  liberal adjustment for main effects
-\item An interaction effect is a double difference; for logistic and
-  Cox models it is the ratio of ratios
-\item Interactions are harder to assess than main effects (wider
-  confidence intervals, lower power)
-\item Carriers for loss-of-function CYP2C19 alleles:\ipacue
-reduced conversion of clopidogrel to active metabolite
-\item Suggested that clop.\ less effective in reducing CV death, MI,
-stroke
+\item Subgroup analysis is virtually worthless for learning about differential treatment effects
+\item Instead a proper assessment of interaction must be used, with liberal adjustment for main effects
+\item An interaction effect is a double difference; for logistic and Cox models it is the ratio of ratios
+\item Interactions are harder to assess than main effects (wider confidence intervals, lower power)
+\item Carriers for loss-of-function CYP2C19 alleles: \ipacue reduced conversion of clopidogrel to active metabolite
+\item Suggested that clop.\ less effective in reducing CV death, MI, stroke
 \item 12,562 (clop.\ HR 0.8); 5059 genotyped (clop.\ HR 0.7)
 \ei
 
 \begin{center}\begin{tabular}{lccc} \hline
 & Carrier & & Non-Carrier\\ \hline
 HR & 0.69 {\smaller (0.49, 0.98)} & & 0.72 {\smaller (0.59, 0.87)} \\ \hline
-Ratio & & 0.96 {\smaller (0.64, 1.43)} & \\
-of HRs & & {\smaller ($P=0.8$)} & \\ \hline
+Ratio of HRs & & 0.96 {\smaller (0.64, 1.43)} & \\
+             & & {\smaller (P=0.8)} & \\ \hline
 \end{tabular}\end{center}
 
 \bi
@@ -1498,13 +1447,21 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
 \item[$\beta_{3}$]: increment in slope in going from females to males
 \ed
 
-\section{Internal vs.\ External Model Validation}\sound{reg-21}
-\disc{reg-val}\label{reg-val}
-\blog{split-val}
-\quoteit{External validation or validation on a holdout sample, when
-  the predictive method was developed using feature selection, model
-  selection, or machine learning, produces a non-unique \emph{example}
-  validation of a non-unique \emph{example} model.}{FE Harrell, 2015}
+<<mult-reg-assume-twovar-ia,w=4.5,h=3.5,cap='Data exhibiting linearity in age but with interaction of age and sex.  The $x_{2}=1$ group has a new intercept, $\\alpha+\\beta_2$ and its own slope $\\beta_{1} + \\beta_{3}$.',scap='Two predictors with interaction'>>=
+# Generate 25 observations for each group, with true beta1=.05, true beta2=3
+d <- expand.grid(x1=1:25, x2=c(0, 1))
+set.seed(3)
+d$y <- with(d, 0.2*x1 + 3*x2 + 0.3*x1*x2 + rnorm(50, sd=.5))
+with(d, plot(x1, y, xlab=expression(x[1]), ylab=expression(y)))
+abline(a=0, b=.2)    # Fig. (*\ref{fig:reg-mult-reg-assume-twovar-ia}*)
+abline(a=3, b=.5)
+text(13, 1,  expression(y==alpha + beta[1]*x[1]), srt=16, cex=1.3)
+text(13, 12, expression(y==alpha + beta[2] + (beta[1] + beta[3])*x[1]),
+     srt=33, cex=1.3)
+@ 
+
+\section{Internal vs.\ External Model Validation}\label{reg-val}\sound{reg-21}\disc{reg-val}\blog{split-val}
+\quoteit{External validation or validation on a holdout sample, when the predictive method was developed using feature selection, model selection, or machine learning, produces a non-unique \emph{example} validation of a non-unique \emph{example} model.}{FE Harrell, 2015}
 
 \bi
 \item Many researchers assume that ``external'' validation of model
@@ -1518,7 +1475,7 @@ E(y|age, sex=m) &=& \alpha + \beta_{1}age + \beta_{2} + \beta_{3}age \\
   opportunity for modeling secular and geographic trends, and often
   results in failure to validate when in fact there are interesting
   group differences or time trends that could have easily been modeled
-\item One should use all data available at analysis time\ipacue
+\item One should use all data available at analysis time \ipacue
 \item External validation is left for newly collected data not
   available at publication time
 \item Rigorous internal validation should be done first
@@ -1552,7 +1509,7 @@ depending on how he predictive model is fitted:
   \item the process doesn't recognize that the model being validated
     is nothing more than an ``example'' model
   \ei
-\item Resampling for rigorous internal validation validates the\ipacue
+\item Resampling for rigorous internal validation validates the \ipacue
   \emph{process} used to derive the ``final'' model
   \bi
   \item as a byproduct estimates the likely future performance of that model
@@ -1576,14 +1533,13 @@ There is much controversy about the need for, definition of, and
 timing of external validation.
 A prognostic model should be valid outside the specifics of the sample
 where the model is developed. Ideally, a model is shown to predict
-accurately across a wide range of settings (Justice et al, \emph{Ann Int
-		Med} 1999).  Evidence of such external validity requires evaluation by
+accurately across a wide range of settings (Justice et al, \emph{Ann Int Med} 1999).  Evidence of such external validity requires evaluation by
 different research groups and may take several years.  Researchers
 frequently make the mistake of labeling data splitting from a single
 sequence of patients as external validation when in fact this is a
 particularly low-precision form of internal validation better done
 using resampling (see below).  On the other hand, external validation
-carried out by by splitting in time (temporal validation) or by place,
+carried out by splitting in time (temporal validation) or by place,
 is better replaced by considering interactions in the full dataset.  For
 example, if a model developed on Canadians is found to be poorly
 calibrated for Germans, it is far better to develop an international
@@ -1686,10 +1642,10 @@ the class of predictive methods used:
   models selected across the resamples.  For the bootstrap this
   usually involves 300 or more resamples, and for cross-validation 50
   or more repeats of 10-fold cross-validation.  The ``final'' model
-  should be describe as an example of an entire array of models, and
+  should be described as an example of an entire array of models, and
   the likely future performance of this example model is estimated
   from the resampling procedure just described.  Resampling alerts the
-  analyst alert to arbitrariness and reduces the tendency to cherry
+  analyst to arbitrariness and reduces the tendency to cherry
   pick good validations when split-sample or external validation is used.
 \ei
 
@@ -1738,9 +1694,8 @@ Use external validation if
 
 \subsection{Other Resources}
 \bi
-\item
-  \href{http://www.cecilejanssens.org/wp-content/uploads/2018/01/PredictionManual2.0.pdf}{Prediction Research Manual} by Cecile Janssens and Forike Martens
-  \item Steyerberg paper on the waste by data splitting~\cite{ste18vala}.
+\item \href{http://www.cecilejanssens.org/wp-content/uploads/2018/01/PredictionManual2.0.pdf}{Prediction Research Manual} by Cecile Janssens and Forike Martens
+\item Steyerberg paper on the waste by data splitting~\cite{ste18vala}.
 \ei
 
 \def\apacue{0}
